@@ -141,9 +141,8 @@ function App() {
       </div>
       <p style={{ color: defaultColor }}>2010 dreams</p>
       <p style={{ color: otherColor }}>2020 dreams</p>
-      <img alt="hi" src={"images/graph.jpg"} />
-      <img alt="bye" src={"images/onclick.jpg"} />
-      <img />
+      <img alt="graph figure" src={"images/graph.jpg"} />
+      <img alt="onclick figure" src={"images/onclick.jpg"} />
     </div>
   );
 }
