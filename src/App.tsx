@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.css";
+import useComponentSize from "@rehooks/component-size";
+import { scaleLinear } from "d3";
+
+const MILLISECONDS_IN_YEAR = 31536000000;
 
 type DreamRecord = {
   text: String;
@@ -75,10 +79,56 @@ const createFakeData = (): Comparison[] => {
 
 const fakeData = createFakeData();
 
-console.log(fakeData);
+// const height =
 
 function App() {
-  return <div className="App">Dreams 2020 Chart test</div>;
+  const chartContainerRef = useRef<HTMLDivElement>(null);
+  let { width } = useComponentSize(chartContainerRef);
+  const height: number = width ? Math.floor(width * 0.6) : 0;
+
+  const scaleY = scaleLinear()
+    .domain([0, 2 * MILLISECONDS_IN_YEAR])
+    .range([0, height]);
+  const scaleX = scaleLinear().domain([0, 1]).range([0, width]);
+
+  const defaultColor = "red";
+  const LINE_WIDTH = 1;
+
+  return (
+    <div className="App">
+      <h1>Dreams 2020 Chart test</h1>
+      <div ref={chartContainerRef} style={{ width: "90%" }}>
+        <svg width={width} height={height}>
+          {fakeData.map((comparison, i) => {
+            return (
+              <circle
+                key={i}
+                cx={scaleX(comparison.score)}
+                cy={scaleY(
+                  Math.abs(
+                    comparison.dream.date.getTime() -
+                      comparison.news.date.getTime()
+                  )
+                )}
+                r={5}
+                stroke={defaultColor}
+                strokeWidth={LINE_WIDTH}
+                fill={"white"}
+              />
+            );
+          })}
+          {/* <circle
+            cx={scaleX(0.5)}
+            cy={scaleY(MILLISECONDS_IN_YEAR)}
+            r={50}
+            stroke={defaultColor}
+            strokeWidth={LINE_WIDTH}
+            fill={"white"}
+          /> */}
+        </svg>
+      </div>
+    </div>
+  );
 }
 
 export default App;
