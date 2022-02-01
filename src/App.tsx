@@ -9,11 +9,13 @@ type DreamRecord = {
   text: String;
   date: Date;
   year: number;
+  length: number;
 };
 
 type NewsRecord = {
   text: String;
   date: Date;
+  length: number;
 };
 
 type Comparison = {
@@ -30,6 +32,7 @@ const createNewsData = (): NewsRecord[] => {
     return {
       text: `News from ${date}`,
       date: date,
+      length: Math.random(),
     };
   });
 };
@@ -42,6 +45,7 @@ const createDreamsData = (year: number): DreamRecord[] => {
       text: `Dream from ${date}`,
       date: date,
       year: year,
+      length: Math.random(),
     };
   });
 };
@@ -49,7 +53,8 @@ const createDreamsData = (year: number): DreamRecord[] => {
 const createComparisons = (
   dreamData: DreamRecord[],
   newsData: NewsRecord[],
-  dataLabel: string
+  dataLabel: string,
+  weight: number
 ): Comparison[] => {
   let comparisons: Comparison[] = [];
   for (let i = 0; i < dreamData.length; i++) {
@@ -57,7 +62,7 @@ const createComparisons = (
     for (let j = 0; j < newsData.length; j++) {
       const news = newsData[j];
       const comparison: Comparison = {
-        score: Math.random(),
+        score: Math.random() * weight,
         dream: dream,
         news: news,
         dataLabel: dataLabel,
@@ -72,8 +77,18 @@ const createFakeData = (): Comparison[] => {
   const newsData = createNewsData();
   const dreams2020Data = createDreamsData(2020);
   const dreams2010Data = createDreamsData(2010);
-  const comparisons2020 = createComparisons(dreams2020Data, newsData, "2020");
-  const comparisons2010 = createComparisons(dreams2010Data, newsData, "2010");
+  const comparisons2020 = createComparisons(
+    dreams2020Data,
+    newsData,
+    "2020",
+    2
+  );
+  const comparisons2010 = createComparisons(
+    dreams2010Data,
+    newsData,
+    "2010",
+    1
+  );
   return [...comparisons2020, ...comparisons2010];
 };
 
@@ -89,9 +104,10 @@ function App() {
   const scaleY = scaleLinear()
     .domain([0, 2 * MILLISECONDS_IN_YEAR])
     .range([0, height]);
-  const scaleX = scaleLinear().domain([0, 1]).range([0, width]);
+  const scaleX = scaleLinear().domain([0, 2]).range([0, width]);
 
   const defaultColor = "red";
+  const otherColor = "blue";
   const LINE_WIDTH = 1;
 
   return (
@@ -110,23 +126,22 @@ function App() {
                       comparison.news.date.getTime()
                   )
                 )}
-                r={5}
-                stroke={defaultColor}
+                r={Math.floor(
+                  comparison.dream.length + comparison.news.length * 10
+                )}
+                stroke={
+                  comparison.dataLabel === "2020" ? defaultColor : otherColor
+                }
                 strokeWidth={LINE_WIDTH}
                 fill={"white"}
               />
             );
           })}
-          {/* <circle
-            cx={scaleX(0.5)}
-            cy={scaleY(MILLISECONDS_IN_YEAR)}
-            r={50}
-            stroke={defaultColor}
-            strokeWidth={LINE_WIDTH}
-            fill={"white"}
-          /> */}
         </svg>
       </div>
+      <img src={"images/graph.jpg"} />
+      <img src={"images/onclick.jpg"} />
+      <img />
     </div>
   );
 }
