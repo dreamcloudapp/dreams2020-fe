@@ -139,8 +139,8 @@ function App() {
           })}
         </svg>
       </div>
-      <p style={{ color: defaultColor }}>2010 dreams</p>
-      <p style={{ color: otherColor }}>2020 dreams</p>
+      <p style={{ color: otherColor }}>2010 dreams</p>
+      <p style={{ color: defaultColor }}>2020 dreams</p>
       <img alt="graph figure" src={"images/graph.jpg"} />
       <img alt="onclick figure" src={"images/onclick.jpg"} />
     </div>
