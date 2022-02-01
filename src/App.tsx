@@ -113,7 +113,7 @@ function App() {
   return (
     <div className="App">
       <h1>Dreams 2020 Chart test</h1>
-      <div ref={chartContainerRef} style={{ width: "90%" }}>
+      <div ref={chartContainerRef} style={{ width: "90%", margin: "auto" }}>
         <svg width={width} height={height}>
           {fakeData.map((comparison, i) => {
             return (
