@@ -112,8 +112,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Dreams 2020 Chart test</h1>
-      <div ref={chartContainerRef} style={{ width: "90%", margin: "auto" }}>
+      <div
+        ref={chartContainerRef}
+        style={{ width: "95%", margin: "2rem auto" }}
+      >
         <svg width={width} height={height}>
           {fakeData.map((comparison, i) => {
             return (
@@ -141,8 +143,6 @@ function App() {
       </div>
       <p style={{ color: otherColor }}>2010 dreams</p>
       <p style={{ color: defaultColor }}>2020 dreams</p>
-      <img alt="graph figure" src={"images/graph.jpg"} />
-      <img alt="onclick figure" src={"images/onclick.jpg"} />
     </div>
   );
 }
