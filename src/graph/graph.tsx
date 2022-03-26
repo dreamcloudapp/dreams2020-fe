@@ -1,11 +1,11 @@
-import { MouseEvent, MouseEventHandler, useRef } from "react";
+import { useRef } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
 import { ComparisonData } from "../modules/types";
 import {
   useTooltip,
   useTooltipInPortal,
-  TooltipWithBounds,
+  //   TooltipWithBounds,
 } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 
