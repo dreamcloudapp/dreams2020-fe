@@ -1,7 +1,13 @@
-import { useRef } from "react";
+import { MouseEvent, MouseEventHandler, useRef } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
 import { ComparisonData } from "../modules/types";
+import {
+  useTooltip,
+  useTooltipInPortal,
+  TooltipWithBounds,
+} from "@visx/tooltip";
+import { localPoint } from "@visx/event";
 
 const MILLISECONDS_IN_YEAR = 31536000000;
 
@@ -25,13 +31,40 @@ function Graph({ data }: GraphProps) {
   const otherColor = "blue";
   const LINE_WIDTH = 1;
 
+  const {
+    tooltipData,
+    tooltipLeft,
+    tooltipTop,
+    tooltipOpen,
+    showTooltip,
+    hideTooltip,
+  } = useTooltip();
+
+  // If you don't want to use a Portal, simply replace `TooltipInPortal` below with
+  // `Tooltip` or `TooltipWithBounds` and remove `containerRef`
+  const { containerRef, TooltipInPortal } = useTooltipInPortal({
+    // use TooltipWithBounds
+    detectBounds: true,
+    // when tooltip containers are scrolled, this will correctly update the Tooltip position
+    scroll: true,
+  });
+
+  const handleMouseOver = (event: any, datum: any) => {
+    const coords = localPoint(event.target.ownerSVGElement, event);
+    showTooltip({
+      tooltipLeft: coords?.x,
+      tooltipTop: coords?.y,
+      tooltipData: datum,
+    });
+  };
+
   return (
     <div>
       <div
         ref={chartContainerRef}
         style={{ width: "95%", margin: "2rem auto" }}
       >
-        <svg width={width} height={height}>
+        <svg width={width} height={height} ref={containerRef}>
           {data.comparisons.map((comparison, i) => {
             const dream = data.dreams[comparison.dreamId];
             const news = data.news[comparison.newsId];
@@ -48,6 +81,10 @@ function Graph({ data }: GraphProps) {
                 }
                 strokeWidth={LINE_WIDTH}
                 fill={"white"}
+                onMouseOver={(e) => {
+                  (handleMouseOver as any)(e, dream.text);
+                }}
+                onMouseOut={hideTooltip}
               />
             );
           })}
@@ -55,6 +92,19 @@ function Graph({ data }: GraphProps) {
       </div>
       <p style={{ color: otherColor }}>2010 dreams</p>
       <p style={{ color: defaultColor }}>2020 dreams</p>
+
+      {tooltipOpen && (
+        <TooltipInPortal
+          // set this to random so it correctly updates with parent bounds
+          key={Math.random()}
+          top={tooltipTop}
+          left={tooltipLeft}
+        >
+          <div style={{ maxWidth: 300 }}>
+            <strong>{tooltipData}</strong>
+          </div>
+        </TooltipInPortal>
+      )}
     </div>
   );
 }
