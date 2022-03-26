@@ -10,6 +10,7 @@ import {
 import { localPoint } from "@visx/event";
 
 const MILLISECONDS_IN_YEAR = 31536000000;
+const Y_AXIS_PADDING = 50;
 
 type GraphProps = {
   data: ComparisonData;
@@ -60,11 +61,27 @@ function Graph({ data }: GraphProps) {
 
   return (
     <div>
-      <div
-        ref={chartContainerRef}
-        style={{ width: "95%", margin: "2rem auto" }}
-      >
+      <div ref={chartContainerRef}>
         <svg width={width} height={height} ref={containerRef}>
+          {/* x-Axis */}
+          <line
+            x1={0 + Y_AXIS_PADDING}
+            y1={height / 2}
+            x2={width}
+            y2={height / 2}
+            stroke={"#000"}
+            strokeWidth={LINE_WIDTH}
+          />
+          {/* y-Axis */}
+          <line
+            x1={0 + Y_AXIS_PADDING}
+            y1={0}
+            x2={0 + Y_AXIS_PADDING}
+            y2={height}
+            stroke={"#000"}
+            strokeWidth={LINE_WIDTH}
+          />
+
           {data.comparisons.map((comparison, i) => {
             const dream = data.dreams[comparison.dreamId];
             const news = data.news[comparison.newsId];
