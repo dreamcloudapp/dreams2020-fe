@@ -8,9 +8,11 @@ import {
   //   TooltipWithBounds,
 } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
+import Axes from "./axes";
 
 const MILLISECONDS_IN_YEAR = 31536000000;
 const Y_AXIS_PADDING = 50;
+const TRIANGLE_HEIGHT = 10;
 
 type GraphProps = {
   data: ComparisonData;
@@ -63,23 +65,13 @@ function Graph({ data }: GraphProps) {
     <div>
       <div ref={chartContainerRef}>
         <svg width={width} height={height} ref={containerRef}>
-          {/* x-Axis */}
-          <line
-            x1={0 + Y_AXIS_PADDING}
-            y1={height / 2}
-            x2={width}
-            y2={height / 2}
-            stroke={"#000"}
+          <Axes
+            height={height}
+            width={width}
             strokeWidth={LINE_WIDTH}
-          />
-          {/* y-Axis */}
-          <line
-            x1={0 + Y_AXIS_PADDING}
-            y1={0}
-            x2={0 + Y_AXIS_PADDING}
-            y2={height}
-            stroke={"#000"}
-            strokeWidth={LINE_WIDTH}
+            paddingLeft={Y_AXIS_PADDING}
+            triangleHeight={TRIANGLE_HEIGHT}
+            strokeColor={"#333"}
           />
 
           {data.comparisons.map((comparison, i) => {
@@ -102,6 +94,7 @@ function Graph({ data }: GraphProps) {
                   (handleMouseOver as any)(e, dream.text);
                 }}
                 onMouseOut={hideTooltip}
+                style={{ cursor: "pointer" }}
               />
             );
           })}
