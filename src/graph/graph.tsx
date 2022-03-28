@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
 import { ComparisonSets } from "../modules/types";
@@ -22,8 +22,21 @@ const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 // const height =
 
 function Graph({ data }: GraphProps) {
+  const comparisonSetLabels: String[] = data.comparisonSets.map((s) => s.label);
+
+  const [checkedState, setCheckedState] = useState(
+    [...new Array(comparisonSetLabels.length)].map((_) => true)
+  );
+
+  const handleOnChange = (position: number) => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      index === position ? !item : item
+    );
+
+    setCheckedState(updatedCheckedState);
+  };
+
   const chartContainerRef = useRef<HTMLDivElement>(null);
-  //   let { width, height } = useComponentSize(chartContainerRef);
   let { width, height } = useComponentSize(chartContainerRef);
 
   console.log("height:", height);
@@ -103,39 +116,61 @@ function Graph({ data }: GraphProps) {
             yAxisTextLeft={5}
           />
 
-          {data.comparisonSets.map((comparisonSet) => {
-            return comparisonSet.comparisons.map((comparison, i) => {
-              const dream =
-                comparisonSet.dreamCollection.dreams[comparison.dreamId];
-              const news = comparisonSet.newsCollection.news[comparison.newsId];
-              return (
-                <circle
-                  key={i}
-                  cx={scaleX(comparison.score)}
-                  cy={getYAxisPosition(
-                    dream.date.getTime(),
-                    news.date.getTime()
-                  )}
-                  r={Math.floor((dream.text.length + news.text.length) / 100)}
-                  stroke={
-                    comparison.dataLabel === "2020" ? defaultColor : otherColor
-                  }
-                  strokeWidth={LINE_WIDTH}
-                  fill={"white"}
-                  onMouseOver={(e) => {
-                    (handleMouseOver as any)(e, dream.text);
-                  }}
-                  onMouseOut={hideTooltip}
-                  style={{ cursor: "pointer" }}
-                />
-              );
-            });
-          })}
+          {data.comparisonSets
+            .filter((_, i) => checkedState[i])
+            .map((comparisonSet) => {
+              return comparisonSet.comparisons.map((comparison, i) => {
+                const dream =
+                  comparisonSet.dreamCollection.dreams[comparison.dreamId];
+                const news =
+                  comparisonSet.newsCollection.news[comparison.newsId];
+                return (
+                  <circle
+                    key={i}
+                    cx={scaleX(comparison.score)}
+                    cy={getYAxisPosition(
+                      dream.date.getTime(),
+                      news.date.getTime()
+                    )}
+                    r={Math.floor((dream.text.length + news.text.length) / 100)}
+                    stroke={
+                      comparison.dataLabel === "2020"
+                        ? defaultColor
+                        : otherColor
+                    }
+                    strokeWidth={LINE_WIDTH}
+                    fill={"white"}
+                    onMouseOver={(e) => {
+                      (handleMouseOver as any)(e, dream.text);
+                    }}
+                    onMouseOut={hideTooltip}
+                    style={{ cursor: "pointer" }}
+                  />
+                );
+              });
+            })}
         </svg>
       </div>
       {/* Legend */}
       {data.comparisonSets.map((s, i) => {
-        return <p style={{ color: colorSets[i] }}>{s.label}</p>;
+        return (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "auto",
+            }}
+          >
+            <input
+              type="checkbox"
+              id={`custom-checkbox-${i}`}
+              checked={checkedState[i]}
+              onChange={() => handleOnChange(i)}
+            />
+            <p style={{ color: colorSets[i] }}>{s.label}</p>
+          </div>
+        );
       })}
 
       {tooltipOpen && (
