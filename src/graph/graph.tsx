@@ -97,8 +97,8 @@ function Graph({ data }: GraphProps) {
             padding={graphPadding}
             triangleHeight={TRIANGLE_HEIGHT}
             strokeColor={"#333"}
-            yAxisTopLabel={"12 Months before"}
-            yAxisBottomLabel={"12 Months after"}
+            yAxisTopLabel={"Dream earlier in the year than news"}
+            yAxisBottomLabel={"Dream later in the year than news"}
             xAxisRightLabel={"Similarity"}
             yAxisTextLeft={5}
           />

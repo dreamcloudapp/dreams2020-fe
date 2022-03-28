@@ -131,14 +131,14 @@ export const createFakeData = (): ComparisonSets => {
   };
 
   const comparisonSet1: ComparisonSet = {
-    label: "2010 Dreams vs 2020 News",
+    label: "2010 Dreams vs 2020 News Items",
     comparisons: comparisons2010,
     dreamCollection: dreams2010Collection,
     newsCollection: newsCollection,
   };
 
   const comparisonSet2: ComparisonSet = {
-    label: "2020 Dreams vs 2020 News",
+    label: "2020 Dreams vs 2020 News Items",
     comparisons: comparisons2020,
     dreamCollection: dreams2020Collection,
     newsCollection: newsCollection,
