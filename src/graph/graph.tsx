@@ -73,7 +73,6 @@ function Graph({ data }: GraphProps) {
     // If this number is negative, the dream happened before the news
     // If it's positive, the dream happened after the news
     const distance = dreamDateTime - newsDateTime;
-    const multiplier = distance < 0 ? -1 : 1;
     const absoluteGraphDistance = scaleY(distance);
     // if (Math.random() > 0.999) {
     //   console.log(absoluteGraphDistance);
