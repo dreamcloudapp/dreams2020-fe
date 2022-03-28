@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div style={{ padding: 20 }}>
-      <div className="App" style={{ height: 800, border: "1px solid red" }}>
+      <div className="App" style={{ height: 600, border: "1px solid red" }}>
         <Graph data={data} />
       </div>
     </div>
