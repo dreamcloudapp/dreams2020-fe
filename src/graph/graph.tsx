@@ -9,14 +9,15 @@ import {
 } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import Axes from "./axes";
-
-const MILLISECONDS_IN_YEAR = 31536000000;
-const TRIANGLE_HEIGHT = 10;
-const graphPadding = { LEFT: 50, RIGHT: 20, TOP: 20, BOTTOM: 20 };
+import { Padding } from "../modules/ui-types";
 
 type GraphProps = {
   data: ComparisonData;
 };
+
+const MILLISECONDS_IN_YEAR = 31536000000;
+const TRIANGLE_HEIGHT = 10;
+const graphPadding: Padding = { LEFT: 60, RIGHT: 20, TOP: 30, BOTTOM: 30 };
 
 // const height =
 
@@ -92,9 +93,12 @@ function Graph({ data }: GraphProps) {
             height={height}
             width={width}
             strokeWidth={LINE_WIDTH}
-            paddingLeft={graphPadding.LEFT}
+            padding={graphPadding}
             triangleHeight={TRIANGLE_HEIGHT}
             strokeColor={"#333"}
+            yAxisTopLabel={"12 Months before"}
+            yAxisBottomLabel={"12 Months after"}
+            yAxisTextLeft={5}
           />
 
           {data.comparisons.map((comparison, i) => {
