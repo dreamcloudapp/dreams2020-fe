@@ -11,8 +11,8 @@ import { localPoint } from "@visx/event";
 import Axes from "./axes";
 
 const MILLISECONDS_IN_YEAR = 31536000000;
-const Y_AXIS_PADDING = 50;
 const TRIANGLE_HEIGHT = 10;
+const graphPadding = { LEFT: 50, RIGHT: 20, TOP: 20, BOTTOM: 20 };
 
 type GraphProps = {
   data: ComparisonData;
@@ -22,13 +22,20 @@ type GraphProps = {
 
 function Graph({ data }: GraphProps) {
   const chartContainerRef = useRef<HTMLDivElement>(null);
-  let { width } = useComponentSize(chartContainerRef);
-  const height: number = width ? Math.floor(width * 0.6) : 0;
+  //   let { width, height } = useComponentSize(chartContainerRef);
+  let { width, height } = useComponentSize(chartContainerRef);
 
+  console.log("height:", height);
+
+  // For scaleY, the time difference between a dream and a news source is max one year
+  // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
   const scaleY = scaleLinear()
-    .domain([0, 2 * MILLISECONDS_IN_YEAR])
+    .domain([MILLISECONDS_IN_YEAR * -1, MILLISECONDS_IN_YEAR])
     .range([0, height]);
-  const scaleX = scaleLinear().domain([0, 2]).range([0, width]);
+
+  const scaleX = scaleLinear()
+    .domain([0, 2])
+    .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
 
   const defaultColor = "red";
   const otherColor = "blue";
@@ -61,29 +68,43 @@ function Graph({ data }: GraphProps) {
     });
   };
 
+  const getYAxisPosition = (dreamDateTime: number, newsDateTime: number) => {
+    // If this number is negative, the dream happened before the news
+    // If it's positive, the dream happened after the news
+    const distance = dreamDateTime - newsDateTime;
+    const multiplier = distance < 0 ? -1 : 1;
+    const absoluteGraphDistance = scaleY(distance);
+    // if (Math.random() > 0.999) {
+    //   console.log(absoluteGraphDistance);
+    // }
+    // if (Math.abs(distance) > MILLISECONDS_IN_YEAR) {
+    //   console.log("WTFFFF");
+    // }
+
+    return absoluteGraphDistance;
+  };
+
   return (
-    <div>
-      <div ref={chartContainerRef}>
+    <div style={{ height: "100%" }}>
+      <div ref={chartContainerRef} style={{ height: "100%" }}>
         <svg width={width} height={height} ref={containerRef}>
           <Axes
             height={height}
             width={width}
             strokeWidth={LINE_WIDTH}
-            paddingLeft={Y_AXIS_PADDING}
+            paddingLeft={graphPadding.LEFT}
             triangleHeight={TRIANGLE_HEIGHT}
             strokeColor={"#333"}
           />
 
           {data.comparisons.map((comparison, i) => {
-            const dream = data.dreams[comparison.dreamId];
-            const news = data.news[comparison.newsId];
+            const dream = data.dreamCollection.dreams[comparison.dreamId];
+            const news = data.newsCollection.news[comparison.newsId];
             return (
               <circle
                 key={i}
                 cx={scaleX(comparison.score)}
-                cy={scaleY(
-                  Math.abs(dream.date.getTime() - news.date.getTime())
-                )}
+                cy={getYAxisPosition(dream.date.getTime(), news.date.getTime())}
                 r={Math.floor((dream.text.length + news.text.length) / 100)}
                 stroke={
                   comparison.dataLabel === "2020" ? defaultColor : otherColor
@@ -102,7 +123,6 @@ function Graph({ data }: GraphProps) {
       </div>
       <p style={{ color: otherColor }}>2010 dreams</p>
       <p style={{ color: defaultColor }}>2020 dreams</p>
-
       {tooltipOpen && (
         <TooltipInPortal
           // set this to random so it correctly updates with parent bounds

@@ -20,6 +20,18 @@ export type NewsRecordDictionary = {
   [key: number]: NewsRecord;
 };
 
+export type DreamCollection = {
+  startDate: Date;
+  endDate: Date;
+  dreams: DreamRecordDictionary;
+};
+
+export type NewsCollection = {
+  startDate: Date;
+  endDate: Date;
+  news: NewsRecordDictionary;
+};
+
 export type Comparison = {
   score: number;
   dreamId: number;
@@ -29,6 +41,6 @@ export type Comparison = {
 
 export type ComparisonData = {
   comparisons: Comparison[];
-  dreams: DreamRecordDictionary;
-  news: NewsRecordDictionary;
+  dreamCollection: DreamCollection;
+  newsCollection: NewsCollection;
 };

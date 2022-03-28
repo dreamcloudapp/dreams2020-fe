@@ -57,8 +57,6 @@ export const Triangle = ({
     return acc + (i === 0 ? p : ` ${p}`);
   }, "");
 
-  console.log(points, pointsString);
-
   return (
     <polygon
       points={pointsString}

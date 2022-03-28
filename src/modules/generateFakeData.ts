@@ -5,6 +5,8 @@ import {
   ComparisonData,
   DreamRecordDictionary,
   NewsRecordDictionary,
+  DreamCollection,
+  NewsCollection,
 } from "./types";
 
 // 100 word dummy text
@@ -73,7 +75,7 @@ export const createFakeData = (): ComparisonData => {
     2
   );
 
-  const d: DreamRecordDictionary = [
+  const dreamRecordDictionary: DreamRecordDictionary = [
     ...dreams2020Data,
     ...dreams2010Data,
   ].reduce((acc, curr) => {
@@ -83,12 +85,27 @@ export const createFakeData = (): ComparisonData => {
     };
   }, {} as DreamRecordDictionary);
 
-  const n: NewsRecordDictionary = newsData.reduce((acc, curr) => {
-    return {
-      ...acc,
-      [curr.id]: curr,
-    };
-  }, {} as NewsRecordDictionary);
+  const newsRecordDictionary: NewsRecordDictionary = newsData.reduce(
+    (acc, curr) => {
+      return {
+        ...acc,
+        [curr.id]: curr,
+      };
+    },
+    {} as NewsRecordDictionary
+  );
+
+  const dreamCollection: DreamCollection = {
+    startDate: new Date(),
+    endDate: new Date(),
+    dreams: dreamRecordDictionary,
+  };
+
+  const newsCollection: NewsCollection = {
+    startDate: new Date(),
+    endDate: new Date(),
+    news: newsRecordDictionary,
+  };
 
   const comparisons2010 = createComparisons(
     dreams2010Data,
@@ -97,8 +114,8 @@ export const createFakeData = (): ComparisonData => {
     1
   );
   return {
-    dreams: d,
-    news: n,
+    dreamCollection: dreamCollection,
+    newsCollection: newsCollection,
     comparisons: [...comparisons2020, ...comparisons2010],
   };
 };

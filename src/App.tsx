@@ -9,8 +9,10 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Graph data={data} />
+    <div style={{ padding: 20 }}>
+      <div className="App" style={{ height: 800, border: "1px solid red" }}>
+        <Graph data={data} />
+      </div>
     </div>
   );
 }
