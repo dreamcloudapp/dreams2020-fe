@@ -10,6 +10,7 @@ type AxesProps = {
   strokeColor?: string;
   yAxisTopLabel?: string;
   yAxisBottomLabel?: string;
+  xAxisRightLabel?: string;
   yAxisTextLeft?: number;
 };
 
@@ -23,16 +24,17 @@ function Axes({
   yAxisBottomLabel,
   padding,
   yAxisTextLeft,
+  xAxisRightLabel,
 }: AxesProps) {
   const yAxisTextLeftPadding = yAxisTextLeft || 0;
 
   return (
     <>
-      {/* x-Axis */}
+      {/* x-Axis section before label */}
       <line
         x1={padding.LEFT}
         y1={height / 2}
-        x2={width}
+        x2={width - padding.RIGHT}
         y2={height / 2}
         stroke={strokeColor || "#000"}
         strokeWidth={strokeWidth}
@@ -56,6 +58,7 @@ function Axes({
       >
         {yAxisTopLabel}
       </text>
+      {/* yAxisBottomLabel */}
       <text
         x={yAxisTextLeftPadding}
         y={height - 10}
@@ -65,6 +68,17 @@ function Axes({
         fill={strokeColor}
       >
         {yAxisBottomLabel}
+      </text>
+      {/* xAxisRightLabel */}
+      <text
+        x={width - padding.RIGHT + 5}
+        y={height / 2 + 5}
+        fontFamily="Arial"
+        fontSize="16"
+        fontWeight={500}
+        fill={strokeColor}
+      >
+        {xAxisRightLabel}
       </text>
       {/* Top y-Axis triangle */}
       <Triangle
@@ -89,7 +103,7 @@ function Axes({
         height={triangleHeight}
         width={triangleHeight}
         orientation={"E"}
-        x={width - triangleHeight}
+        x={width - triangleHeight - padding.RIGHT}
         y={height / 2 - triangleHeight / 2}
         fill={strokeColor || "#000"}
       />

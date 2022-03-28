@@ -17,7 +17,7 @@ type GraphProps = {
 
 const MILLISECONDS_IN_YEAR = 31536000000;
 const TRIANGLE_HEIGHT = 10;
-const graphPadding: Padding = { LEFT: 60, RIGHT: 20, TOP: 30, BOTTOM: 30 };
+const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 
 // const height =
 
@@ -98,6 +98,7 @@ function Graph({ data }: GraphProps) {
             strokeColor={"#333"}
             yAxisTopLabel={"12 Months before"}
             yAxisBottomLabel={"12 Months after"}
+            xAxisRightLabel={"Similarity"}
             yAxisTextLeft={5}
           />
 
