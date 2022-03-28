@@ -159,7 +159,7 @@ function Graph({ data }: GraphProps) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              margin: "auto",
+              margin: "10px 0px",
             }}
           >
             <input
@@ -168,7 +168,7 @@ function Graph({ data }: GraphProps) {
               checked={checkedState[i]}
               onChange={() => handleOnChange(i)}
             />
-            <p style={{ color: colorSets[i] }}>{s.label}</p>
+            <span style={{ color: colorSets[i] }}>{s.label}</span>
           </div>
         );
       })}
