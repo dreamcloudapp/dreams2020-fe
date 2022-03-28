@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
-import { ComparisonData } from "../modules/types";
+import { ComparisonSets } from "../modules/types";
 import {
   useTooltip,
   useTooltipInPortal,
@@ -12,7 +12,7 @@ import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 
 type GraphProps = {
-  data: ComparisonData;
+  data: ComparisonSets;
 };
 
 const MILLISECONDS_IN_YEAR = 31536000000;
@@ -41,6 +41,8 @@ function Graph({ data }: GraphProps) {
   const defaultColor = "red";
   const otherColor = "blue";
   const LINE_WIDTH = 1;
+
+  const colorSets = [defaultColor, otherColor];
 
   const {
     tooltipData,
@@ -101,32 +103,41 @@ function Graph({ data }: GraphProps) {
             yAxisTextLeft={5}
           />
 
-          {data.comparisons.map((comparison, i) => {
-            const dream = data.dreamCollection.dreams[comparison.dreamId];
-            const news = data.newsCollection.news[comparison.newsId];
-            return (
-              <circle
-                key={i}
-                cx={scaleX(comparison.score)}
-                cy={getYAxisPosition(dream.date.getTime(), news.date.getTime())}
-                r={Math.floor((dream.text.length + news.text.length) / 100)}
-                stroke={
-                  comparison.dataLabel === "2020" ? defaultColor : otherColor
-                }
-                strokeWidth={LINE_WIDTH}
-                fill={"white"}
-                onMouseOver={(e) => {
-                  (handleMouseOver as any)(e, dream.text);
-                }}
-                onMouseOut={hideTooltip}
-                style={{ cursor: "pointer" }}
-              />
-            );
+          {data.comparisonSets.map((comparisonSet) => {
+            return comparisonSet.comparisons.map((comparison, i) => {
+              const dream =
+                comparisonSet.dreamCollection.dreams[comparison.dreamId];
+              const news = comparisonSet.newsCollection.news[comparison.newsId];
+              return (
+                <circle
+                  key={i}
+                  cx={scaleX(comparison.score)}
+                  cy={getYAxisPosition(
+                    dream.date.getTime(),
+                    news.date.getTime()
+                  )}
+                  r={Math.floor((dream.text.length + news.text.length) / 100)}
+                  stroke={
+                    comparison.dataLabel === "2020" ? defaultColor : otherColor
+                  }
+                  strokeWidth={LINE_WIDTH}
+                  fill={"white"}
+                  onMouseOver={(e) => {
+                    (handleMouseOver as any)(e, dream.text);
+                  }}
+                  onMouseOut={hideTooltip}
+                  style={{ cursor: "pointer" }}
+                />
+              );
+            });
           })}
         </svg>
       </div>
-      <p style={{ color: otherColor }}>2010 dreams</p>
-      <p style={{ color: defaultColor }}>2020 dreams</p>
+      {/* Legend */}
+      {data.comparisonSets.map((s, i) => {
+        return <p style={{ color: colorSets[i] }}>{s.label}</p>;
+      })}
+
       {tooltipOpen && (
         <TooltipInPortal
           // set this to random so it correctly updates with parent bounds

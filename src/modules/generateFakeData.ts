@@ -2,11 +2,12 @@ import {
   DreamRecord,
   NewsRecord,
   Comparison,
-  ComparisonData,
   DreamRecordDictionary,
   NewsRecordDictionary,
   DreamCollection,
   NewsCollection,
+  ComparisonSet,
+  ComparisonSets,
 } from "./types";
 
 // 100 word dummy text
@@ -17,28 +18,51 @@ const createDummyText = (wordLength: number): string => {
   return LOREM.split(" ").slice(0, wordLength).join(" ");
 };
 
-const createNewsData = (): NewsRecord[] => {
+const createNewsData = (collectionLabel: String): NewsRecord[] => {
   const day1 = new Date("2020-01-01T09:00:00");
   return [...new Array(56)].map((_, i) => {
     const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
     return {
       text: createDummyText(Math.random() * 100),
       date: date,
+      label: collectionLabel,
       id: i,
     };
   });
 };
 
-const createDreamsData = (year: number): DreamRecord[] => {
+const createDreamsData = (
+  year: number,
+  collectionLabel: String
+): DreamRecord[] => {
   const day1 = new Date(`${year}-01-01T09:00:00`);
   return [...new Array(56)].map((_, i) => {
     const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
     return {
       text: createDummyText(Math.random() * 100),
       date: date,
+      label: collectionLabel,
       id: i,
     };
   });
+};
+
+const dreamsToDictionary = (dreams: DreamRecord[]): DreamRecordDictionary => {
+  return dreams.reduce((acc, curr) => {
+    return {
+      ...acc,
+      [curr.id]: curr,
+    };
+  }, {} as DreamRecordDictionary);
+};
+
+const newsToDictionary = (news: NewsRecord[]): NewsRecordDictionary => {
+  return news.reduce((acc, curr) => {
+    return {
+      ...acc,
+      [curr.id]: curr,
+    };
+  }, {} as NewsRecordDictionary);
 };
 
 const createComparisons = (
@@ -64,58 +88,63 @@ const createComparisons = (
   return comparisons;
 };
 
-export const createFakeData = (): ComparisonData => {
-  const newsData = createNewsData();
-  const dreams2020Data = createDreamsData(2020);
-  const dreams2010Data = createDreamsData(2010);
+export const createFakeData = (): ComparisonSets => {
+  const newsData = createNewsData("2020 News");
+  const dreams2020Data = createDreamsData(2020, "2020 Dreams");
+  const dreams2010Data = createDreamsData(2010, "2010 Dreams");
   const comparisons2020 = createComparisons(
     dreams2020Data,
     newsData,
     "2020",
     2
   );
-
-  const dreamRecordDictionary: DreamRecordDictionary = [
-    ...dreams2020Data,
-    ...dreams2010Data,
-  ].reduce((acc, curr) => {
-    return {
-      ...acc,
-      [curr.id]: curr,
-    };
-  }, {} as DreamRecordDictionary);
-
-  const newsRecordDictionary: NewsRecordDictionary = newsData.reduce(
-    (acc, curr) => {
-      return {
-        ...acc,
-        [curr.id]: curr,
-      };
-    },
-    {} as NewsRecordDictionary
-  );
-
-  const dreamCollection: DreamCollection = {
-    startDate: new Date(),
-    endDate: new Date(),
-    dreams: dreamRecordDictionary,
-  };
-
-  const newsCollection: NewsCollection = {
-    startDate: new Date(),
-    endDate: new Date(),
-    news: newsRecordDictionary,
-  };
-
   const comparisons2010 = createComparisons(
     dreams2010Data,
     newsData,
     "2010",
     1
   );
-  return {
-    dreamCollection: dreamCollection,
+
+  const dreams2010Dictionary = dreamsToDictionary(dreams2010Data);
+  const dreams2020Dictionary = dreamsToDictionary(dreams2020Data);
+  const newsRecordDictionary = newsToDictionary(newsData);
+
+  const dreams2020Collection: DreamCollection = {
+    startDate: new Date(),
+    endDate: new Date(),
+    label: "Dreams 2020",
+    dreams: dreams2020Dictionary,
+  };
+
+  const dreams2010Collection: DreamCollection = {
+    startDate: new Date(),
+    endDate: new Date(),
+    label: "Dreams 2010",
+    dreams: dreams2010Dictionary,
+  };
+
+  const newsCollection: NewsCollection = {
+    startDate: new Date(),
+    endDate: new Date(),
+    label: "News 2020",
+    news: newsRecordDictionary,
+  };
+
+  const comparisonSet1: ComparisonSet = {
+    label: "2010 Dreams vs 2020 News",
+    comparisons: comparisons2010,
+    dreamCollection: dreams2010Collection,
     newsCollection: newsCollection,
-    comparisons: [...comparisons2020, ...comparisons2010],
+  };
+
+  const comparisonSet2: ComparisonSet = {
+    label: "2020 Dreams vs 2020 News",
+    comparisons: comparisons2020,
+    dreamCollection: dreams2020Collection,
+    newsCollection: newsCollection,
+  };
+
+  return {
+    comparisonSets: [comparisonSet1, comparisonSet2],
   };
 };
