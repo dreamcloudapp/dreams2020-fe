@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
 import { ComparisonSets } from "../modules/types";
@@ -10,7 +10,6 @@ import {
 import { localPoint } from "@visx/event";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
-import { millisecondsToYear } from "../modules/dateHelpers";
 import { changeHslLightness } from "../modules/colorHelpers";
 
 type GraphProps = {
@@ -18,14 +17,9 @@ type GraphProps = {
   maxTimeDistance: number; // We only show comparisons that fall within this range
 };
 
+const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
-
-const defaultColor = "red";
-const otherColor = "blue";
-const LINE_WIDTH = 2;
-
-const colorSets = [defaultColor, otherColor];
 
 function Graph({ data, maxTimeDistance }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
