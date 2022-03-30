@@ -1,3 +1,4 @@
+import { yearEndDate, yearStartDate } from "./dateHelpers";
 import {
   DreamRecord,
   NewsRecord,
@@ -19,9 +20,18 @@ const createDummyText = (wordLength: number): string => {
 };
 
 const createNewsData = (collectionLabel: String): NewsRecord[] => {
-  const day1 = new Date("2020-01-01T09:00:00");
-  return [...new Array(56)].map((_, i) => {
-    const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
+  return [...new Array(51)].map((_, i) => {
+    // Need to declare this in the loop
+    const day1 = new Date("2020-01-01T09:00:00");
+    const numDaysToAdd = i * 7;
+
+    const date = new Date(day1.setUTCDate(day1.getUTCDate() + numDaysToAdd));
+
+    if (i > 48) {
+      console.log("day 1", day1);
+      console.log("date", date);
+      console.log("numDaysToAdd", numDaysToAdd);
+    }
     return {
       text: createDummyText(Math.random() * 100),
       date: date,
@@ -32,8 +42,8 @@ const createNewsData = (collectionLabel: String): NewsRecord[] => {
 };
 
 const createDreamsData = (year: number, collectionLabel: String): DreamRecord[] => {
-  const day1 = new Date(`${year}-01-01T09:00:00`);
   return [...new Array(56)].map((_, i) => {
+    const day1 = new Date(`${year}-01-01T09:00:00`);
     const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
     return {
       text: createDummyText(Math.random() * 100),
@@ -60,14 +70,6 @@ const newsToDictionary = (news: NewsRecord[]): NewsRecordDictionary => {
       [curr.id]: curr,
     };
   }, {} as NewsRecordDictionary);
-};
-
-const yearStartDate = (year: String): Date => {
-  return new Date(`${year}-01-01T00:00:01`);
-};
-
-const yearEndDate = (year: String): Date => {
-  return new Date(`${year}-12-31T23:59:59`);
 };
 
 const createComparisons = (
@@ -105,6 +107,7 @@ export const createFakeData = (): ComparisonSets => {
   const newsRecordDictionary = newsToDictionary(newsData);
 
   const dreams2020Collection: DreamCollection = {
+    year: "2020",
     timePeriodStartDate: yearStartDate("2020"),
     timePeriodEndDate: yearEndDate("2020"),
     collectionStartDate: new Date(Math.min(...dreams2020Data.map(d => d.date.getTime()))),
@@ -114,6 +117,7 @@ export const createFakeData = (): ComparisonSets => {
   };
 
   const dreams2010Collection: DreamCollection = {
+    year: "2010",
     timePeriodStartDate: yearStartDate("2010"),
     timePeriodEndDate: yearEndDate("2010"),
     collectionStartDate: new Date(Math.min(...dreams2010Data.map(d => d.date.getTime()))),
@@ -123,6 +127,7 @@ export const createFakeData = (): ComparisonSets => {
   };
 
   const newsCollection: NewsCollection = {
+    year: "2020",
     timePeriodStartDate: yearStartDate("2020"),
     timePeriodEndDate: yearEndDate("2020"),
     collectionStartDate: new Date(Math.min(...newsData.map(d => d.date.getTime()))),

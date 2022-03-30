@@ -10,6 +10,7 @@ import {
 import { localPoint } from "@visx/event";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
+import { millisecondsToYear } from "../modules/dateHelpers";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -23,6 +24,8 @@ const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 
 function Graph({ data, maxTimeDistance }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
+
+  // console.log(`max time distance is ${millisecondsToYear(maxTimeDistance)} year(s)`);
 
   const [checkedState, setCheckedState] = useState(
     [...new Array(comparisonSetLabels.length)].map(_ => true)
@@ -78,16 +81,42 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
     });
   };
 
-  const getYAxisPosition = (dreamDateTime: number, newsDateTime: number) => {
+  // Basically we need to:
+  // 1) Get the distance between the news and its year start
+  // 2) Get the distance between the dream and its year start
+  // 3) Get the distance between these distances
+  const getYAxisPosition = (
+    dreamDateTime: number,
+    newsDateTime: number,
+    dreamCollectionTimePeriodStart: number,
+    newsCollectionTimePeriodStart: number
+  ) => {
+    // 1) Get the distance between the news and its year start
+    const newsTimeDistance = newsDateTime - newsCollectionTimePeriodStart;
+    // if (Math.random() > 0.999) {
+    //   console.log(`News distance is ${millisecondsToYear(newsTimeDistance)} year(s)`);
+    //   console.log(
+    //     `news date: ${new Date(newsDateTime)}, period start: ${new Date(
+    //       newsCollectionTimePeriodStart
+    //     )}`
+    //   );
+    // }
+
+    // 2) Get the distance between the dream and its year start
+    const dreamTimeDistance = dreamDateTime - dreamCollectionTimePeriodStart;
+
+    // 3) Get the distance between these distances
+
     // If this number is negative, the dream happened before the news
     // If it's positive, the dream happened after the news
-    const distance = dreamDateTime - newsDateTime;
+    const distance = dreamTimeDistance - newsTimeDistance;
+
     const absoluteGraphDistance = scaleY(distance);
     // if (Math.random() > 0.999) {
-    //   console.log(absoluteGraphDistance);
+    //   console.log(`WTF distance is ${millisecondsToYear(distance)} year(s)`);
     // }
-    // if (Math.abs(distance) > MILLISECONDS_IN_YEAR) {
-    //   console.log("WTFFFF");
+    // if (Math.abs(distance) > maxTimeDistance) {
+    //   console.log(`WTF distance is ${millisecondsToYear(distance)} year(s)`);
     // }
 
     return absoluteGraphDistance;
@@ -114,13 +143,20 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
             .filter((_, i) => checkedState[i])
             .map(comparisonSet => {
               return comparisonSet.comparisons.map((comparison, i) => {
-                const dream = comparisonSet.dreamCollection.dreams[comparison.dreamId];
-                const news = comparisonSet.newsCollection.news[comparison.newsId];
+                const { dreamCollection, newsCollection } = comparisonSet;
+
+                const dream = dreamCollection.dreams[comparison.dreamId];
+                const news = newsCollection.news[comparison.newsId];
                 return (
                   <circle
                     key={i}
                     cx={scaleX(comparison.score)}
-                    cy={getYAxisPosition(dream.date.getTime(), news.date.getTime())}
+                    cy={getYAxisPosition(
+                      dream.date.getTime(),
+                      news.date.getTime(),
+                      dreamCollection.timePeriodStartDate.getTime(),
+                      newsCollection.timePeriodStartDate.getTime()
+                    )}
                     r={Math.floor((dream.text.length + news.text.length) / 100)}
                     stroke={comparison.dataLabel === "2020" ? defaultColor : otherColor}
                     strokeWidth={LINE_WIDTH}
@@ -140,6 +176,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
       {data.comparisonSets.map((s, i) => {
         return (
           <div
+            key={`legend-${i}`}
             style={{
               display: "flex",
               alignItems: "center",

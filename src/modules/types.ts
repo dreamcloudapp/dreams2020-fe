@@ -28,6 +28,7 @@ export type DreamCollection = {
   collectionEndDate: Date;
   timePeriodStartDate: Date;
   timePeriodEndDate: Date;
+  year: String;
   dreams: DreamRecordDictionary;
 };
 
@@ -37,6 +38,7 @@ export type NewsCollection = {
   collectionEndDate: Date;
   timePeriodStartDate: Date;
   timePeriodEndDate: Date;
+  year: String;
   news: NewsRecordDictionary;
 };
 
