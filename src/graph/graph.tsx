@@ -19,7 +19,7 @@ type GraphProps = {
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
-const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
+const graphPadding: Padding = { LEFT: 80, RIGHT: 90, TOP: 30, BOTTOM: 30 };
 
 function Graph({ data, maxTimeDistance }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
@@ -45,7 +45,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
   // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
   const scaleY = scaleLinear()
     .domain([maxTimeDistance * -1, maxTimeDistance])
-    .range([0, height]);
+    .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
   const scaleX = scaleLinear()
     .domain([0, 2])
@@ -142,12 +142,15 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
                   <circle
                     key={i}
                     cx={scaleX(comparison.score)}
-                    cy={getYAxisPosition(
-                      dream.date.getTime(),
-                      news.date.getTime(),
-                      dreamCollection.timePeriodStartDate.getTime(),
-                      newsCollection.timePeriodStartDate.getTime()
-                    )}
+                    cy={
+                      graphPadding.TOP +
+                      getYAxisPosition(
+                        dream.date.getTime(),
+                        news.date.getTime(),
+                        dreamCollection.timePeriodStartDate.getTime(),
+                        newsCollection.timePeriodStartDate.getTime()
+                      )
+                    }
                     r={Math.floor((dream.text.length + news.text.length) / 100)}
                     stroke={changeHslLightness(comparisonSet.color, -10)}
                     strokeWidth={LINE_WIDTH}
@@ -180,6 +183,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
               id={`custom-checkbox-${i}`}
               checked={checkedState[i]}
               onChange={() => handleOnChange(i)}
+              style={{ marginRight: 10 }}
             />
             <span style={{ color: s.color }}>{s.label}</span>
           </div>
@@ -193,7 +197,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
           top={tooltipTop}
           left={tooltipLeft}
         >
-          <div style={{ maxWidth: 300 }}>
+          <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
             <strong>{tooltipData}</strong>
           </div>
         </TooltipInPortal>
