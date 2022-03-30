@@ -10,13 +10,7 @@ type TriangleProps = {
   fill?: string;
 };
 
-const getPoints = ({
-  width,
-  height,
-  orientation,
-  x,
-  y,
-}: TriangleProps): Coords[] => {
+const getPoints = ({ width, height, orientation, x, y }: TriangleProps): Coords[] => {
   const topLeft: Coords = { x: x, y: y };
   const topRight: Coords = { x: x + width, y: y };
   const bottomLeft: Coords = { x: x, y: y + height };
@@ -43,14 +37,7 @@ const getPoints = ({
   }
 };
 
-export const Triangle = ({
-  width,
-  height,
-  orientation,
-  x,
-  y,
-  fill,
-}: TriangleProps) => {
+export const Triangle = ({ width, height, orientation, x, y, fill }: TriangleProps) => {
   const points = getPoints({ width, height, orientation, x, y });
   const pointsString: string = points.reduce((acc, curr, i) => {
     const p = `${curr.x},${curr.y}`;

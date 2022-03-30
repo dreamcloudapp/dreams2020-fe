@@ -7,7 +7,7 @@ module.exports = (webpackConfig, { env, paths }) => {
   webpackConfig.output.filename = "static/js/[name].js";
   // Main css bundle should be the same spot too
   const cssPlugin = webpackConfig.plugins.find(
-    (plugin) => plugin instanceof MiniCssExtractPlugin
+    plugin => plugin instanceof MiniCssExtractPlugin
   );
   if (cssPlugin) {
     cssPlugin.options.filename = "static/css/[name].css";

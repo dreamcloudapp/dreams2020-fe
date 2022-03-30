@@ -22,10 +22,10 @@ const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 // const height =
 
 function Graph({ data, maxTimeDistance }: GraphProps) {
-  const comparisonSetLabels: String[] = data.comparisonSets.map((s) => s.label);
+  const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
 
   const [checkedState, setCheckedState] = useState(
-    [...new Array(comparisonSetLabels.length)].map((_) => true)
+    [...new Array(comparisonSetLabels.length)].map(_ => true)
   );
 
   const handleOnChange = (position: number) => {
@@ -57,14 +57,8 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
 
   const colorSets = [defaultColor, otherColor];
 
-  const {
-    tooltipData,
-    tooltipLeft,
-    tooltipTop,
-    tooltipOpen,
-    showTooltip,
-    hideTooltip,
-  } = useTooltip();
+  const { tooltipData, tooltipLeft, tooltipTop, tooltipOpen, showTooltip, hideTooltip } =
+    useTooltip();
 
   // If you don't want to use a Portal, simply replace `TooltipInPortal` below with
   // `Tooltip` or `TooltipWithBounds` and remove `containerRef`
@@ -118,29 +112,20 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
 
           {data.comparisonSets
             .filter((_, i) => checkedState[i])
-            .map((comparisonSet) => {
+            .map(comparisonSet => {
               return comparisonSet.comparisons.map((comparison, i) => {
-                const dream =
-                  comparisonSet.dreamCollection.dreams[comparison.dreamId];
-                const news =
-                  comparisonSet.newsCollection.news[comparison.newsId];
+                const dream = comparisonSet.dreamCollection.dreams[comparison.dreamId];
+                const news = comparisonSet.newsCollection.news[comparison.newsId];
                 return (
                   <circle
                     key={i}
                     cx={scaleX(comparison.score)}
-                    cy={getYAxisPosition(
-                      dream.date.getTime(),
-                      news.date.getTime()
-                    )}
+                    cy={getYAxisPosition(dream.date.getTime(), news.date.getTime())}
                     r={Math.floor((dream.text.length + news.text.length) / 100)}
-                    stroke={
-                      comparison.dataLabel === "2020"
-                        ? defaultColor
-                        : otherColor
-                    }
+                    stroke={comparison.dataLabel === "2020" ? defaultColor : otherColor}
                     strokeWidth={LINE_WIDTH}
                     fill={"white"}
-                    onMouseOver={(e) => {
+                    onMouseOver={e => {
                       (handleMouseOver as any)(e, dream.text);
                     }}
                     onMouseOut={hideTooltip}

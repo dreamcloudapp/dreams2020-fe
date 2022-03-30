@@ -1,159 +1,151 @@
 import {
-    DreamRecord,
-    NewsRecord,
-    Comparison,
-    DreamRecordDictionary,
-    NewsRecordDictionary,
-    DreamCollection,
-    NewsCollection,
-    ComparisonSet,
-    ComparisonSets,
+  DreamRecord,
+  NewsRecord,
+  Comparison,
+  DreamRecordDictionary,
+  NewsRecordDictionary,
+  DreamCollection,
+  NewsCollection,
+  ComparisonSet,
+  ComparisonSets,
 } from "./types";
 
 // 100 word dummy text
 const LOREM =
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? ";
+  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? ";
 
 const createDummyText = (wordLength: number): string => {
-    return LOREM.split(" ").slice(0, wordLength).join(" ");
+  return LOREM.split(" ").slice(0, wordLength).join(" ");
 };
 
 const createNewsData = (collectionLabel: String): NewsRecord[] => {
-    const day1 = new Date("2020-01-01T09:00:00");
-    return [...new Array(56)].map((_, i) => {
-        const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
-        return {
-            text: createDummyText(Math.random() * 100),
-            date: date,
-            label: collectionLabel,
-            id: i,
-        };
-    });
+  const day1 = new Date("2020-01-01T09:00:00");
+  return [...new Array(56)].map((_, i) => {
+    const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
+    return {
+      text: createDummyText(Math.random() * 100),
+      date: date,
+      label: collectionLabel,
+      id: i,
+    };
+  });
 };
 
 const createDreamsData = (year: number, collectionLabel: String): DreamRecord[] => {
-    const day1 = new Date(`${year}-01-01T09:00:00`);
-    return [...new Array(56)].map((_, i) => {
-        const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
-        return {
-            text: createDummyText(Math.random() * 100),
-            date: date,
-            label: collectionLabel,
-            id: i,
-        };
-    });
+  const day1 = new Date(`${year}-01-01T09:00:00`);
+  return [...new Array(56)].map((_, i) => {
+    const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
+    return {
+      text: createDummyText(Math.random() * 100),
+      date: date,
+      label: collectionLabel,
+      id: i,
+    };
+  });
 };
 
 const dreamsToDictionary = (dreams: DreamRecord[]): DreamRecordDictionary => {
-    return dreams.reduce((acc, curr) => {
-        return {
-            ...acc,
-            [curr.id]: curr,
-        };
-    }, {} as DreamRecordDictionary);
+  return dreams.reduce((acc, curr) => {
+    return {
+      ...acc,
+      [curr.id]: curr,
+    };
+  }, {} as DreamRecordDictionary);
 };
 
 const newsToDictionary = (news: NewsRecord[]): NewsRecordDictionary => {
-    return news.reduce((acc, curr) => {
-        return {
-            ...acc,
-            [curr.id]: curr,
-        };
-    }, {} as NewsRecordDictionary);
+  return news.reduce((acc, curr) => {
+    return {
+      ...acc,
+      [curr.id]: curr,
+    };
+  }, {} as NewsRecordDictionary);
 };
 
 const yearStartDate = (year: String): Date => {
-    return new Date(`${year}-01-01T00:00:01`);
+  return new Date(`${year}-01-01T00:00:01`);
 };
 
 const yearEndDate = (year: String): Date => {
-    return new Date(`${year}-12-31T23:59:59`);
+  return new Date(`${year}-12-31T23:59:59`);
 };
 
 const createComparisons = (
-    dreamData: DreamRecord[],
-    newsData: NewsRecord[],
-    dataLabel: string,
-    weight: number
+  dreamData: DreamRecord[],
+  newsData: NewsRecord[],
+  dataLabel: string,
+  weight: number
 ): Comparison[] => {
-    let comparisons: Comparison[] = [];
-    for (let i = 0; i < dreamData.length; i++) {
-        const dream = dreamData[i];
-        for (let j = 0; j < newsData.length; j++) {
-            const news = newsData[j];
-            const comparison: Comparison = {
-                score: Math.random() * weight,
-                dreamId: dream.id,
-                newsId: news.id,
-                dataLabel: dataLabel,
-            };
-            comparisons.push(comparison);
-        }
+  let comparisons: Comparison[] = [];
+  for (let i = 0; i < dreamData.length; i++) {
+    const dream = dreamData[i];
+    for (let j = 0; j < newsData.length; j++) {
+      const news = newsData[j];
+      const comparison: Comparison = {
+        score: Math.random() * weight,
+        dreamId: dream.id,
+        newsId: news.id,
+        dataLabel: dataLabel,
+      };
+      comparisons.push(comparison);
     }
-    return comparisons;
+  }
+  return comparisons;
 };
 
 export const createFakeData = (): ComparisonSets => {
-    const newsData = createNewsData("2020 News");
-    const dreams2020Data = createDreamsData(2020, "2020 Dreams");
-    const dreams2010Data = createDreamsData(2010, "2010 Dreams");
-    const comparisons2020 = createComparisons(dreams2020Data, newsData, "2020", 2);
-    const comparisons2010 = createComparisons(dreams2010Data, newsData, "2010", 1);
+  const newsData = createNewsData("2020 News");
+  const dreams2020Data = createDreamsData(2020, "2020 Dreams");
+  const dreams2010Data = createDreamsData(2010, "2010 Dreams");
+  const comparisons2020 = createComparisons(dreams2020Data, newsData, "2020", 2);
+  const comparisons2010 = createComparisons(dreams2010Data, newsData, "2010", 1);
 
-    const dreams2010Dictionary = dreamsToDictionary(dreams2010Data);
-    const dreams2020Dictionary = dreamsToDictionary(dreams2020Data);
-    const newsRecordDictionary = newsToDictionary(newsData);
+  const dreams2010Dictionary = dreamsToDictionary(dreams2010Data);
+  const dreams2020Dictionary = dreamsToDictionary(dreams2020Data);
+  const newsRecordDictionary = newsToDictionary(newsData);
 
-    const dreams2020Collection: DreamCollection = {
-        timePeriodStartDate: yearStartDate("2020"),
-        timePeriodEndDate: yearEndDate("2020"),
-        collectionStartDate: new Date(
-            Math.min(...dreams2020Data.map(d => d.date.getTime()))
-        ),
-        collectionEndDate: new Date(
-            Math.max(...dreams2020Data.map(d => d.date.getTime()))
-        ),
-        label: "Dreams 2020",
-        dreams: dreams2020Dictionary,
-    };
+  const dreams2020Collection: DreamCollection = {
+    timePeriodStartDate: yearStartDate("2020"),
+    timePeriodEndDate: yearEndDate("2020"),
+    collectionStartDate: new Date(Math.min(...dreams2020Data.map(d => d.date.getTime()))),
+    collectionEndDate: new Date(Math.max(...dreams2020Data.map(d => d.date.getTime()))),
+    label: "Dreams 2020",
+    dreams: dreams2020Dictionary,
+  };
 
-    const dreams2010Collection: DreamCollection = {
-        timePeriodStartDate: yearStartDate("2010"),
-        timePeriodEndDate: yearEndDate("2010"),
-        collectionStartDate: new Date(
-            Math.min(...dreams2010Data.map(d => d.date.getTime()))
-        ),
-        collectionEndDate: new Date(
-            Math.max(...dreams2010Data.map(d => d.date.getTime()))
-        ),
-        label: "Dreams 2010",
-        dreams: dreams2010Dictionary,
-    };
+  const dreams2010Collection: DreamCollection = {
+    timePeriodStartDate: yearStartDate("2010"),
+    timePeriodEndDate: yearEndDate("2010"),
+    collectionStartDate: new Date(Math.min(...dreams2010Data.map(d => d.date.getTime()))),
+    collectionEndDate: new Date(Math.max(...dreams2010Data.map(d => d.date.getTime()))),
+    label: "Dreams 2010",
+    dreams: dreams2010Dictionary,
+  };
 
-    const newsCollection: NewsCollection = {
-        timePeriodStartDate: yearStartDate("2020"),
-        timePeriodEndDate: yearEndDate("2020"),
-        collectionStartDate: new Date(Math.min(...newsData.map(d => d.date.getTime()))),
-        collectionEndDate: new Date(Math.max(...newsData.map(d => d.date.getTime()))),
-        label: "News 2020",
-        news: newsRecordDictionary,
-    };
+  const newsCollection: NewsCollection = {
+    timePeriodStartDate: yearStartDate("2020"),
+    timePeriodEndDate: yearEndDate("2020"),
+    collectionStartDate: new Date(Math.min(...newsData.map(d => d.date.getTime()))),
+    collectionEndDate: new Date(Math.max(...newsData.map(d => d.date.getTime()))),
+    label: "News 2020",
+    news: newsRecordDictionary,
+  };
 
-    const comparisonSet1: ComparisonSet = {
-        label: "2010 Dreams vs 2020 News Items",
-        comparisons: comparisons2010,
-        dreamCollection: dreams2010Collection,
-        newsCollection: newsCollection,
-    };
+  const comparisonSet1: ComparisonSet = {
+    label: "2010 Dreams vs 2020 News Items",
+    comparisons: comparisons2010,
+    dreamCollection: dreams2010Collection,
+    newsCollection: newsCollection,
+  };
 
-    const comparisonSet2: ComparisonSet = {
-        label: "2020 Dreams vs 2020 News Items",
-        comparisons: comparisons2020,
-        dreamCollection: dreams2020Collection,
-        newsCollection: newsCollection,
-    };
+  const comparisonSet2: ComparisonSet = {
+    label: "2020 Dreams vs 2020 News Items",
+    comparisons: comparisons2020,
+    dreamCollection: dreams2020Collection,
+    newsCollection: newsCollection,
+  };
 
-    return {
-        comparisonSets: [comparisonSet1, comparisonSet2],
-    };
+  return {
+    comparisonSets: [comparisonSet1, comparisonSet2],
+  };
 };
