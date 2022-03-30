@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
 import { ComparisonSets } from "../modules/types";
@@ -13,15 +13,15 @@ import { Padding } from "../modules/ui-types";
 
 type GraphProps = {
   data: ComparisonSets;
+  maxTimeDistance: number; // We only show comparisons that fall within this range
 };
 
-const MILLISECONDS_IN_YEAR = 31536000000;
 const TRIANGLE_HEIGHT = 10;
 const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 
 // const height =
 
-function Graph({ data }: GraphProps) {
+function Graph({ data, maxTimeDistance }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map((s) => s.label);
 
   const [checkedState, setCheckedState] = useState(
@@ -44,7 +44,7 @@ function Graph({ data }: GraphProps) {
   // For scaleY, the time difference between a dream and a news source is max one year
   // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
   const scaleY = scaleLinear()
-    .domain([MILLISECONDS_IN_YEAR * -1, MILLISECONDS_IN_YEAR])
+    .domain([maxTimeDistance * -1, maxTimeDistance])
     .range([0, height]);
 
   const scaleX = scaleLinear()

@@ -24,15 +24,19 @@ export type NewsRecordDictionary = {
 // E.g. "2020 Dreams"
 export type DreamCollection = {
   label: String;
-  startDate: Date;
-  endDate: Date;
+  collectionStartDate: Date;
+  collectionEndDate: Date;
+  timePeriodStartDate: Date;
+  timePeriodEndDate: Date;
   dreams: DreamRecordDictionary;
 };
 
 export type NewsCollection = {
   label: String;
-  startDate: Date;
-  endDate: Date;
+  collectionStartDate: Date;
+  collectionEndDate: Date;
+  timePeriodStartDate: Date;
+  timePeriodEndDate: Date;
   news: NewsRecordDictionary;
 };
 

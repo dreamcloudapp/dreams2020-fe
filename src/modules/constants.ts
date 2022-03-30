@@ -1,0 +1,1 @@
+export const MILLISECONDS_IN_YEAR = 31536000000;
