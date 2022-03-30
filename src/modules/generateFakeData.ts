@@ -1,4 +1,5 @@
 import { yearEndDate, yearStartDate } from "./dateHelpers";
+import { ColorTheme } from "./theme";
 import {
   DreamRecord,
   NewsRecord,
@@ -20,10 +21,10 @@ const createDummyText = (wordLength: number): string => {
 };
 
 const createNewsData = (collectionLabel: String): NewsRecord[] => {
-  return [...new Array(51)].map((_, i) => {
+  return [...new Array(12)].map((_, i) => {
     // Need to declare this in the loop
     const day1 = new Date("2020-01-01T09:00:00");
-    const numDaysToAdd = i * 7;
+    const numDaysToAdd = i * 30;
 
     const date = new Date(day1.setUTCDate(day1.getUTCDate() + numDaysToAdd));
 
@@ -42,9 +43,9 @@ const createNewsData = (collectionLabel: String): NewsRecord[] => {
 };
 
 const createDreamsData = (year: number, collectionLabel: String): DreamRecord[] => {
-  return [...new Array(56)].map((_, i) => {
+  return [...new Array(12)].map((_, i) => {
     const day1 = new Date(`${year}-01-01T09:00:00`);
-    const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 7));
+    const date = new Date(day1.setUTCDate(day1.getUTCDate() + i * 30));
     return {
       text: createDummyText(Math.random() * 100),
       date: date,
@@ -139,6 +140,7 @@ export const createFakeData = (): ComparisonSets => {
   const comparisonSet1: ComparisonSet = {
     label: "2010 Dreams vs 2020 News Items",
     comparisons: comparisons2010,
+    color: ColorTheme.RED,
     dreamCollection: dreams2010Collection,
     newsCollection: newsCollection,
   };
@@ -146,6 +148,7 @@ export const createFakeData = (): ComparisonSets => {
   const comparisonSet2: ComparisonSet = {
     label: "2020 Dreams vs 2020 News Items",
     comparisons: comparisons2020,
+    color: ColorTheme.BLUE,
     dreamCollection: dreams2020Collection,
     newsCollection: newsCollection,
   };

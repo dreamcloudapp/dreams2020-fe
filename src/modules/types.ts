@@ -1,3 +1,6 @@
+import { Color } from "d3";
+import { ColorTheme } from "./theme";
+
 export type DreamRecord = {
   id: number;
   text: String;
@@ -54,6 +57,7 @@ export type Comparison = {
 export type ComparisonSet = {
   label: String;
   comparisons: Comparison[];
+  color: ColorTheme;
   dreamCollection: DreamCollection;
   newsCollection: NewsCollection;
 };

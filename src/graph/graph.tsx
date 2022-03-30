@@ -20,7 +20,11 @@ type GraphProps = {
 const TRIANGLE_HEIGHT = 10;
 const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 
-// const height =
+const defaultColor = "red";
+const otherColor = "blue";
+const LINE_WIDTH = 1;
+
+const colorSets = [defaultColor, otherColor];
 
 function Graph({ data, maxTimeDistance }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
@@ -42,8 +46,6 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
   const chartContainerRef = useRef<HTMLDivElement>(null);
   let { width, height } = useComponentSize(chartContainerRef);
 
-  console.log("height:", height);
-
   // For scaleY, the time difference between a dream and a news source is max one year
   // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
   const scaleY = scaleLinear()
@@ -53,12 +55,6 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
   const scaleX = scaleLinear()
     .domain([0, 2])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
-
-  const defaultColor = "red";
-  const otherColor = "blue";
-  const LINE_WIDTH = 1;
-
-  const colorSets = [defaultColor, otherColor];
 
   const { tooltipData, tooltipLeft, tooltipTop, tooltipOpen, showTooltip, hideTooltip } =
     useTooltip();
@@ -141,7 +137,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
 
           {data.comparisonSets
             .filter((_, i) => checkedState[i])
-            .map(comparisonSet => {
+            .map((comparisonSet, setIndex) => {
               return comparisonSet.comparisons.map((comparison, i) => {
                 const { dreamCollection, newsCollection } = comparisonSet;
 
@@ -158,9 +154,9 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
                       newsCollection.timePeriodStartDate.getTime()
                     )}
                     r={Math.floor((dream.text.length + news.text.length) / 100)}
-                    stroke={comparison.dataLabel === "2020" ? defaultColor : otherColor}
+                    stroke={comparisonSet.color}
                     strokeWidth={LINE_WIDTH}
-                    fill={"white"}
+                    fill={comparisonSet.color}
                     onMouseOver={e => {
                       (handleMouseOver as any)(e, dream.text);
                     }}
@@ -190,7 +186,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
               checked={checkedState[i]}
               onChange={() => handleOnChange(i)}
             />
-            <span style={{ color: colorSets[i] }}>{s.label}</span>
+            <span style={{ color: s.color }}>{s.label}</span>
           </div>
         );
       })}
