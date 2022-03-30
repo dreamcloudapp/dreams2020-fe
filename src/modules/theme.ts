@@ -1,4 +1,4 @@
 export enum ColorTheme {
-  RED = "hsl(10, 90%, 50%)",
-  BLUE = "hsl(220, 90%, 50%)",
+  RED = "hsl(10, 90%, 60%)",
+  BLUE = "hsl(220, 90%, 60%)",
 }

@@ -11,6 +11,7 @@ import { localPoint } from "@visx/event";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { millisecondsToYear } from "../modules/dateHelpers";
+import { changeHslLightness } from "../modules/colorHelpers";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -22,7 +23,7 @@ const graphPadding: Padding = { LEFT: 60, RIGHT: 70, TOP: 30, BOTTOM: 30 };
 
 const defaultColor = "red";
 const otherColor = "blue";
-const LINE_WIDTH = 1;
+const LINE_WIDTH = 2;
 
 const colorSets = [defaultColor, otherColor];
 
@@ -154,7 +155,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
                       newsCollection.timePeriodStartDate.getTime()
                     )}
                     r={Math.floor((dream.text.length + news.text.length) / 100)}
-                    stroke={comparisonSet.color}
+                    stroke={changeHslLightness(comparisonSet.color, -10)}
                     strokeWidth={LINE_WIDTH}
                     fill={comparisonSet.color}
                     onMouseOver={e => {
