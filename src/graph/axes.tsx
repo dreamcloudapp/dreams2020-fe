@@ -51,7 +51,7 @@ function Axes({
       <text
         x={yAxisTextLeftPadding}
         y={20}
-        fontFamily="Arial"
+        fontFamily="Lato"
         fontSize="16"
         fontWeight={500}
         fill={strokeColor}
@@ -62,7 +62,7 @@ function Axes({
       <text
         x={yAxisTextLeftPadding}
         y={height - 10}
-        fontFamily="Arial"
+        fontFamily="Lato"
         fontSize="16"
         fontWeight={500}
         fill={strokeColor}
@@ -73,7 +73,7 @@ function Axes({
       <text
         x={width - padding.RIGHT + 5}
         y={height / 2 + 5}
-        fontFamily="Arial"
+        fontFamily="Lato"
         fontSize="16"
         fontWeight={500}
         fill={strokeColor}
