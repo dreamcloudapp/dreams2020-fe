@@ -11,6 +11,7 @@ import { localPoint } from "@visx/event";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
+import Legend from "./legend";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -167,28 +168,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
         </svg>
       </div>
       {/* Legend */}
-      {data.comparisonSets.map((s, i) => {
-        return (
-          <div
-            key={`legend-${i}`}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              margin: "10px 0px",
-            }}
-          >
-            <input
-              type="checkbox"
-              id={`custom-checkbox-${i}`}
-              checked={checkedState[i]}
-              onChange={() => handleOnChange(i)}
-              style={{ marginRight: 10 }}
-            />
-            <span style={{ color: s.color }}>{s.label}</span>
-          </div>
-        );
-      })}
+      <Legend data={data} handleCheck={handleOnChange} checkedState={checkedState} />
 
       {tooltipOpen && (
         <TooltipInPortal
