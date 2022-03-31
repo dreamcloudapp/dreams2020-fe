@@ -15,6 +15,9 @@ function App() {
         width: "100%",
         height: 600,
         padding: window.location.href.includes("localhost") ? 20 : 0,
+        maxWidth: window.location.href.includes("localhost")
+          ? "calc(100% - 40px)"
+          : "90rem",
       }}
     >
       <div
