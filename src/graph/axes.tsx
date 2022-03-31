@@ -1,3 +1,5 @@
+import { ScaleLinear } from "d3";
+import { changeHslLightness } from "../modules/colorHelpers";
 import { Padding } from "../modules/ui-types";
 import { Triangle } from "./triangle";
 
@@ -12,11 +14,13 @@ type AxesProps = {
   strokeWidth: number;
   padding: Padding;
   triangleHeight: number;
-  strokeColor?: string;
+  strokeColor: string;
   yAxisTopLabel?: string;
   yAxisBottomLabel?: string;
   xAxisRightLabel?: string;
   yAxisTextLeft?: number;
+  maxTimeDistance: number;
+  tickScale: ScaleLinear<number, number, never>;
 };
 
 function Axes({
@@ -30,6 +34,8 @@ function Axes({
   padding,
   yAxisTextLeft,
   xAxisRightLabel,
+  maxTimeDistance,
+  tickScale,
 }: AxesProps) {
   const yAxisTextLeftPadding = yAxisTextLeft || 0;
 
@@ -44,18 +50,38 @@ function Axes({
         y1={height / 2}
         x2={width - padding.RIGHT}
         y2={height / 2}
-        stroke={strokeColor || "#000"}
+        stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
       {/* y-Axis */}
       <line
-        x1={0 + padding.LEFT}
+        x1={padding.LEFT}
         y1={padding.TOP}
-        x2={0 + padding.LEFT}
+        x2={padding.LEFT}
         y2={height - padding.BOTTOM}
-        stroke={strokeColor || "#000"}
+        stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
+      {/* Ticks */}
+      {[...new Array(23)].map((_, i) => {
+        const tickDistance = tickScale(maxTimeDistance / 12);
+
+        // No tick in zero position, there's an arrow there
+        const tickPosition = padding.TOP + (i + 1) * tickDistance;
+
+        return (
+          <line
+            key={`tick-${i}`}
+            x1={padding.LEFT - 7}
+            y1={tickPosition}
+            x2={padding.LEFT}
+            y2={tickPosition}
+            stroke={changeHslLightness(strokeColor, 40)}
+            strokeWidth={strokeWidth}
+          />
+        );
+      })}
+
       {/* yAxisTopLabel */}
       {topLabels.map((label, i) => {
         return (

@@ -34,6 +34,11 @@ function Graph({
     .domain([maxTimeDistance * -1, maxTimeDistance])
     .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
+  // Same as scale y, but all positive inputs
+  const tickScale = scaleLinear()
+    .domain([0, maxTimeDistance * 2])
+    .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
+
   const scaleX = scaleLinear()
     .domain([0, 2])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
@@ -71,11 +76,13 @@ function Graph({
         strokeWidth={LINE_WIDTH}
         padding={graphPadding}
         triangleHeight={TRIANGLE_HEIGHT}
-        strokeColor={"#333"}
+        strokeColor={"hsl(0, 0%, 20%)"}
         yAxisTopLabel={"Dream earlier in the year than news"}
         yAxisBottomLabel={"Dream later in the year than news"}
         xAxisRightLabel={"Similarity"}
         yAxisTextLeft={30}
+        maxTimeDistance={maxTimeDistance}
+        tickScale={tickScale}
       />
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
@@ -104,7 +111,7 @@ function Graph({
             <Ball
               startPoint={startPoint}
               endPoint={[endX, endY]}
-              key={comparison.dreamId + comparison.newsId}
+              key={i}
               r={Math.floor((dream.text.length + news.text.length) / 100)}
               stroke={changeHslLightness(comparisonSet.color, -10)}
               strokeWidth={LINE_WIDTH}
