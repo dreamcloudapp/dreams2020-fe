@@ -1,6 +1,8 @@
 import { Color } from "d3";
 import { ColorTheme } from "./theme";
 
+export type Point = [number, number];
+
 export type DreamRecord = {
   id: number;
   text: String;

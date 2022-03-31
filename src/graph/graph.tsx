@@ -12,6 +12,7 @@ import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import Legend from "./legend";
+import { Ball } from "./ball";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -131,40 +132,46 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
             yAxisTextLeft={30}
           />
 
-          {data.comparisonSets
-            .filter((_, i) => checkedState[i])
-            .map((comparisonSet, setIndex) => {
-              return comparisonSet.comparisons.map((comparison, i) => {
-                const { dreamCollection, newsCollection } = comparisonSet;
+          {data.comparisonSets.map((comparisonSet, setIndex) => {
+            return comparisonSet.comparisons.map((comparison, i) => {
+              const { dreamCollection, newsCollection } = comparisonSet;
 
-                const dream = dreamCollection.dreams[comparison.dreamId];
-                const news = newsCollection.news[comparison.newsId];
-                return (
-                  <circle
-                    key={i}
-                    cx={scaleX(comparison.score)}
-                    cy={
-                      graphPadding.TOP +
-                      getYAxisPosition(
-                        dream.date.getTime(),
-                        news.date.getTime(),
-                        dreamCollection.timePeriodStartDate.getTime(),
-                        newsCollection.timePeriodStartDate.getTime()
-                      )
-                    }
-                    r={Math.floor((dream.text.length + news.text.length) / 100)}
-                    stroke={changeHslLightness(comparisonSet.color, -10)}
-                    strokeWidth={LINE_WIDTH}
-                    fill={comparisonSet.color}
-                    onMouseOver={e => {
-                      (handleMouseOver as any)(e, dream.text);
-                    }}
-                    onMouseOut={hideTooltip}
-                    style={{ cursor: "pointer" }}
-                  />
+              const dream = dreamCollection.dreams[comparison.dreamId];
+              const news = newsCollection.news[comparison.newsId];
+
+              const endX = scaleX(comparison.score);
+              const endY =
+                graphPadding.TOP +
+                getYAxisPosition(
+                  dream.date.getTime(),
+                  news.date.getTime(),
+                  dreamCollection.timePeriodStartDate.getTime(),
+                  newsCollection.timePeriodStartDate.getTime()
                 );
-              });
-            })}
+
+              // const startPoint: [number, number] = [width / 2, height / 2];
+              const startPoint: [number, number] = [536.5, 300];
+
+              // console.log(startPoint);
+
+              return (
+                <Ball
+                  startPoint={startPoint}
+                  endPoint={[endX, endY]}
+                  key={comparison.dreamId + comparison.newsId}
+                  r={Math.floor((dream.text.length + news.text.length) / 100)}
+                  stroke={changeHslLightness(comparisonSet.color, -10)}
+                  strokeWidth={LINE_WIDTH}
+                  fill={comparisonSet.color}
+                  onMouseOver={e => {
+                    (handleMouseOver as any)(e, dream.text);
+                  }}
+                  opacity={checkedState[setIndex] ? 1 : 0}
+                  onMouseOut={hideTooltip}
+                />
+              );
+            });
+          })}
         </svg>
       </div>
       {/* Legend */}
