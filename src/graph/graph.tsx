@@ -1,48 +1,33 @@
-import { useRef, useState } from "react";
-import useComponentSize from "@rehooks/component-size";
 import { scaleLinear } from "d3";
 import { ComparisonSets } from "../modules/types";
-import {
-  useTooltip,
-  useTooltipInPortal,
-  //   TooltipWithBounds,
-} from "@visx/tooltip";
-import { localPoint } from "@visx/event";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
-import Legend from "./legend";
 import { Ball } from "./ball";
 
 type GraphProps = {
   data: ComparisonSets;
   maxTimeDistance: number; // We only show comparisons that fall within this range
+  width: number;
+  height: number;
+  handleMouseOver: (event: any, datum: any) => void;
+  checkedState: boolean[];
+  hideTooltip: () => void;
 };
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 50, BOTTOM: 50 };
 
-function Graph({ data, maxTimeDistance }: GraphProps) {
-  const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
-
-  // console.log(`max time distance is ${millisecondsToYear(maxTimeDistance)} year(s)`);
-
-  const [checkedState, setCheckedState] = useState(
-    [...new Array(comparisonSetLabels.length)].map(_ => true)
-  );
-
-  const handleOnChange = (position: number) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      index === position ? !item : item
-    );
-
-    setCheckedState(updatedCheckedState);
-  };
-
-  const chartContainerRef = useRef<HTMLDivElement>(null);
-  let { width, height } = useComponentSize(chartContainerRef);
-
+function Graph({
+  data,
+  width,
+  height,
+  maxTimeDistance,
+  handleMouseOver,
+  checkedState,
+  hideTooltip,
+}: GraphProps) {
   // For scaleY, the time difference between a dream and a news source is max one year
   // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
   const scaleY = scaleLinear()
@@ -52,27 +37,6 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
   const scaleX = scaleLinear()
     .domain([0, 2])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
-
-  const { tooltipData, tooltipLeft, tooltipTop, tooltipOpen, showTooltip, hideTooltip } =
-    useTooltip();
-
-  // If you don't want to use a Portal, simply replace `TooltipInPortal` below with
-  // `Tooltip` or `TooltipWithBounds` and remove `containerRef`
-  const { containerRef, TooltipInPortal } = useTooltipInPortal({
-    // use TooltipWithBounds
-    detectBounds: true,
-    // when tooltip containers are scrolled, this will correctly update the Tooltip position
-    scroll: true,
-  });
-
-  const handleMouseOver = (event: any, datum: any) => {
-    const coords = localPoint(event.target.ownerSVGElement, event);
-    showTooltip({
-      tooltipLeft: coords?.x,
-      tooltipTop: coords?.y,
-      tooltipData: datum,
-    });
-  };
 
   // Basically we need to:
   // 1) Get the distance between the news and its year start
@@ -86,110 +50,75 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
   ) => {
     // 1) Get the distance between the news and its year start
     const newsTimeDistance = newsDateTime - newsCollectionTimePeriodStart;
-    // if (Math.random() > 0.999) {
-    //   console.log(`News distance is ${millisecondsToYear(newsTimeDistance)} year(s)`);
-    //   console.log(
-    //     `news date: ${new Date(newsDateTime)}, period start: ${new Date(
-    //       newsCollectionTimePeriodStart
-    //     )}`
-    //   );
-    // }
 
     // 2) Get the distance between the dream and its year start
     const dreamTimeDistance = dreamDateTime - dreamCollectionTimePeriodStart;
 
     // 3) Get the distance between these distances
-
     // If this number is negative, the dream happened before the news
     // If it's positive, the dream happened after the news
     const distance = dreamTimeDistance - newsTimeDistance;
 
     const absoluteGraphDistance = scaleY(distance);
-    // if (Math.random() > 0.999) {
-    //   console.log(`WTF distance is ${millisecondsToYear(distance)} year(s)`);
-    // }
-    // if (Math.abs(distance) > maxTimeDistance) {
-    //   console.log(`WTF distance is ${millisecondsToYear(distance)} year(s)`);
-    // }
-
     return absoluteGraphDistance;
   };
 
   return (
-    <div style={{ height: "100%" }}>
-      <div ref={chartContainerRef} style={{ height: "100%" }}>
-        <svg width={width} height={height} ref={containerRef}>
-          <Axes
-            height={height}
-            width={width}
-            strokeWidth={LINE_WIDTH}
-            padding={graphPadding}
-            triangleHeight={TRIANGLE_HEIGHT}
-            strokeColor={"#333"}
-            yAxisTopLabel={"Dream earlier in the year than news"}
-            yAxisBottomLabel={"Dream later in the year than news"}
-            xAxisRightLabel={"Similarity"}
-            yAxisTextLeft={30}
-          />
+    <svg width={width} height={height}>
+      <Axes
+        height={height}
+        width={width}
+        strokeWidth={LINE_WIDTH}
+        padding={graphPadding}
+        triangleHeight={TRIANGLE_HEIGHT}
+        strokeColor={"#333"}
+        yAxisTopLabel={"Dream earlier in the year than news"}
+        yAxisBottomLabel={"Dream later in the year than news"}
+        xAxisRightLabel={"Similarity"}
+        yAxisTextLeft={30}
+      />
 
-          {data.comparisonSets.map((comparisonSet, setIndex) => {
-            return comparisonSet.comparisons.map((comparison, i) => {
-              const { dreamCollection, newsCollection } = comparisonSet;
+      {data.comparisonSets.map((comparisonSet, setIndex) => {
+        return comparisonSet.comparisons.map((comparison, i) => {
+          const { dreamCollection, newsCollection } = comparisonSet;
 
-              const dream = dreamCollection.dreams[comparison.dreamId];
-              const news = newsCollection.news[comparison.newsId];
+          const dream = dreamCollection.dreams[comparison.dreamId];
+          const news = newsCollection.news[comparison.newsId];
 
-              const endX = scaleX(comparison.score);
-              const endY =
-                graphPadding.TOP +
-                getYAxisPosition(
-                  dream.date.getTime(),
-                  news.date.getTime(),
-                  dreamCollection.timePeriodStartDate.getTime(),
-                  newsCollection.timePeriodStartDate.getTime()
-                );
+          const endX = scaleX(comparison.score);
+          const endY =
+            graphPadding.TOP +
+            getYAxisPosition(
+              dream.date.getTime(),
+              news.date.getTime(),
+              dreamCollection.timePeriodStartDate.getTime(),
+              newsCollection.timePeriodStartDate.getTime()
+            );
 
-              // const startPoint: [number, number] = [width / 2, height / 2];
-              const startPoint: [number, number] = [536.5, 300];
+          const startPoint: [number, number] = [width / 2, height / 2];
+          // const startPoint: [number, number] = [536.5, 300];
 
-              // console.log(startPoint);
+          // console.log(startPoint);
 
-              return (
-                <Ball
-                  startPoint={startPoint}
-                  endPoint={[endX, endY]}
-                  key={comparison.dreamId + comparison.newsId}
-                  r={Math.floor((dream.text.length + news.text.length) / 100)}
-                  stroke={changeHslLightness(comparisonSet.color, -10)}
-                  strokeWidth={LINE_WIDTH}
-                  fill={comparisonSet.color}
-                  onMouseOver={e => {
-                    (handleMouseOver as any)(e, dream.text);
-                  }}
-                  opacity={checkedState[setIndex] ? 1 : 0}
-                  onMouseOut={hideTooltip}
-                />
-              );
-            });
-          })}
-        </svg>
-      </div>
-      {/* Legend */}
-      <Legend data={data} handleCheck={handleOnChange} checkedState={checkedState} />
-
-      {tooltipOpen && (
-        <TooltipInPortal
-          // set this to random so it correctly updates with parent bounds
-          key={Math.random()}
-          top={tooltipTop}
-          left={tooltipLeft}
-        >
-          <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
-            <strong>{tooltipData}</strong>
-          </div>
-        </TooltipInPortal>
-      )}
-    </div>
+          return (
+            <Ball
+              startPoint={startPoint}
+              endPoint={[endX, endY]}
+              key={comparison.dreamId + comparison.newsId}
+              r={Math.floor((dream.text.length + news.text.length) / 100)}
+              stroke={changeHslLightness(comparisonSet.color, -10)}
+              strokeWidth={LINE_WIDTH}
+              fill={comparisonSet.color}
+              onMouseOver={e => {
+                (handleMouseOver as any)(e, dream.text);
+              }}
+              opacity={checkedState[setIndex] ? 1 : 0}
+              onMouseOut={hideTooltip}
+            />
+          );
+        });
+      })}
+    </svg>
   );
 }
 
