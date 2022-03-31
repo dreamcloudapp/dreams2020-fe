@@ -1,6 +1,11 @@
 import { Padding } from "../modules/ui-types";
 import { Triangle } from "./triangle";
 
+const splitLabel = (text: string): string[] => {
+  const parts = text.split(" ");
+  return [parts.slice(0, 4).join(" "), parts.slice(4, parts.length).join(" ")];
+};
+
 type AxesProps = {
   height: number;
   width: number;
@@ -28,6 +33,9 @@ function Axes({
 }: AxesProps) {
   const yAxisTextLeftPadding = yAxisTextLeft || 0;
 
+  const topLabels = splitLabel(yAxisTopLabel || "");
+  const bottomLabels = splitLabel(yAxisBottomLabel || "");
+
   return (
     <>
       {/* x-Axis section before label */}
@@ -48,27 +56,40 @@ function Axes({
         stroke={strokeColor || "#000"}
         strokeWidth={strokeWidth}
       />
-      <text
-        x={yAxisTextLeftPadding}
-        y={20}
-        fontFamily="Lato"
-        fontSize="16"
-        fontWeight={500}
-        fill={strokeColor}
-      >
-        {yAxisTopLabel}
-      </text>
+      {/* yAxisTopLabel */}
+      {topLabels.map((label, i) => {
+        return (
+          <text
+            key={i}
+            x={yAxisTextLeftPadding}
+            y={20 * (i + 1)}
+            fontFamily="Lato"
+            fontSize="16"
+            fontWeight={500}
+            fill={strokeColor}
+          >
+            {label}
+          </text>
+        );
+      })}
+
       {/* yAxisBottomLabel */}
-      <text
-        x={yAxisTextLeftPadding}
-        y={height - 10}
-        fontFamily="Lato"
-        fontSize="16"
-        fontWeight={500}
-        fill={strokeColor}
-      >
-        {yAxisBottomLabel}
-      </text>
+      {bottomLabels.map((label, i) => {
+        return (
+          <text
+            key={i}
+            x={yAxisTextLeftPadding}
+            y={height - 30 + 20 * i}
+            fontFamily="Lato"
+            fontSize="16"
+            fontWeight={500}
+            fill={strokeColor}
+          >
+            {label}
+          </text>
+        );
+      })}
+
       {/* xAxisRightLabel */}
       <text
         x={width - padding.RIGHT + 5}

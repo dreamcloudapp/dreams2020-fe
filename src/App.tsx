@@ -10,7 +10,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: window.location.href.includes("localhost") ? 20 : 0 }}>
       <div className="App" style={{ height: 600, border: "1px solid #EEE" }}>
         <Graph data={data} maxTimeDistance={MILLISECONDS_IN_YEAR} />
       </div>

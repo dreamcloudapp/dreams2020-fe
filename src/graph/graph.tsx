@@ -20,7 +20,7 @@ type GraphProps = {
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
-const graphPadding: Padding = { LEFT: 80, RIGHT: 90, TOP: 30, BOTTOM: 30 };
+const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 50, BOTTOM: 50 };
 
 function Graph({ data, maxTimeDistance }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
@@ -128,7 +128,7 @@ function Graph({ data, maxTimeDistance }: GraphProps) {
             yAxisTopLabel={"Dream earlier in the year than news"}
             yAxisBottomLabel={"Dream later in the year than news"}
             xAxisRightLabel={"Similarity"}
-            yAxisTextLeft={5}
+            yAxisTextLeft={30}
           />
 
           {data.comparisonSets
