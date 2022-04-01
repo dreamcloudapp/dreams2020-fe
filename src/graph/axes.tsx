@@ -23,6 +23,9 @@ type AxesProps = {
   tickScale: ScaleLinear<number, number, never>;
 };
 
+const MONTHS_IN_YEAR = 12;
+const APPROX_WEEKS_IN_MONTH = 4;
+
 function Axes({
   height,
   width,
@@ -42,8 +45,28 @@ function Axes({
   const topLabels = splitLabel(yAxisTopLabel || "");
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
 
+  const monthTick = tickScale(maxTimeDistance / MONTHS_IN_YEAR);
+  const weekTick = tickScale(maxTimeDistance / (MONTHS_IN_YEAR * APPROX_WEEKS_IN_MONTH));
+
+  const numMonthGridLines = 25;
+
   return (
     <>
+      {/* Grid */}
+      {/* hGrid */}
+      {[...new Array(numMonthGridLines)].map((_, i) => {
+        const linePosition = padding.TOP + i * monthTick;
+        return (
+          <line
+            x1={padding.LEFT}
+            y1={linePosition}
+            x2={width - padding.RIGHT}
+            y2={linePosition}
+            stroke={changeHslLightness(strokeColor, 70)}
+          />
+        );
+      })}
+
       {/* x-Axis section before label */}
       <line
         x1={padding.LEFT}
@@ -62,25 +85,56 @@ function Axes({
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
+
       {/* Ticks */}
       {[...new Array(23)].map((_, i) => {
-        const tickDistance = tickScale(maxTimeDistance / 12);
-
         // No tick in zero position, there's an arrow there
-        const tickPosition = padding.TOP + (i + 1) * tickDistance;
+        const tickPosition = padding.TOP + (i + 1) * monthTick;
 
         return (
-          <line
-            key={`tick-${i}`}
-            x1={padding.LEFT - 7}
-            y1={tickPosition}
-            x2={padding.LEFT}
-            y2={tickPosition}
-            stroke={changeHslLightness(strokeColor, 40)}
-            strokeWidth={strokeWidth}
-          />
+          <g key={`tick-${i}`}>
+            <line
+              x1={padding.LEFT - 7}
+              y1={tickPosition}
+              x2={padding.LEFT}
+              y2={tickPosition}
+              stroke={changeHslLightness(strokeColor, 40)}
+              strokeWidth={strokeWidth}
+            />
+            <text
+              key={i}
+              x={padding.LEFT - 30}
+              y={tickPosition + 3} // + 3 to account for text centring
+              fontFamily="Lato"
+              fontSize="12"
+              fontWeight={300}
+              fill={strokeColor}
+            >
+              x
+            </text>
+          </g>
         );
       })}
+
+      {[...new Array(95)].map((_, i) => {
+        // No tick in zero position, there's an arrow there
+        const tickPosition = padding.TOP + (i + 1) * weekTick;
+
+        return (
+          <g key={`tick-${i}`}>
+            <line
+              x1={padding.LEFT - 3}
+              y1={tickPosition}
+              x2={padding.LEFT}
+              y2={tickPosition}
+              stroke={changeHslLightness(strokeColor, 40)}
+              strokeWidth={strokeWidth}
+            />
+          </g>
+        );
+      })}
+
+      {/* const weekTick = tickScale(monthTick / 4); */}
 
       {/* yAxisTopLabel */}
       {topLabels.map((label, i) => {
@@ -90,7 +144,7 @@ function Axes({
             x={yAxisTextLeftPadding}
             y={20 * (i + 1)}
             fontFamily="Lato"
-            fontSize="16"
+            fontSize="14"
             fontWeight={500}
             fill={strokeColor}
           >
@@ -107,7 +161,7 @@ function Axes({
             x={yAxisTextLeftPadding}
             y={height - 30 + 20 * i}
             fontFamily="Lato"
-            fontSize="16"
+            fontSize="14"
             fontWeight={500}
             fill={strokeColor}
           >
@@ -118,10 +172,10 @@ function Axes({
 
       {/* xAxisRightLabel */}
       <text
-        x={width - padding.RIGHT + 5}
+        x={width - padding.RIGHT + triangleHeight + 5}
         y={height / 2 + 5}
         fontFamily="Lato"
-        fontSize="16"
+        fontSize="14"
         fontWeight={500}
         fill={strokeColor}
       >
@@ -133,7 +187,7 @@ function Axes({
         width={triangleHeight}
         orientation={"N"}
         x={padding.LEFT - triangleHeight / 2}
-        y={padding.TOP}
+        y={padding.TOP - triangleHeight}
         fill={strokeColor || "#000"}
       />
       {/* Bottom y-Axis triangle */}
@@ -142,7 +196,7 @@ function Axes({
         width={triangleHeight}
         orientation={"S"}
         x={padding.LEFT - triangleHeight / 2}
-        y={height - triangleHeight - padding.BOTTOM}
+        y={height - padding.BOTTOM}
         fill={strokeColor || "#000"}
       />
       {/* x-Axis triangle */}
@@ -150,7 +204,7 @@ function Axes({
         height={triangleHeight}
         width={triangleHeight}
         orientation={"E"}
-        x={width - triangleHeight - padding.RIGHT}
+        x={width - padding.RIGHT}
         y={height / 2 - triangleHeight / 2}
         fill={strokeColor || "#000"}
       />

@@ -17,7 +17,7 @@ type GraphProps = {
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
-const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 50, BOTTOM: 50 };
+const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 60, BOTTOM: 60 };
 
 function Graph({
   data,

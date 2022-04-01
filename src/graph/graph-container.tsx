@@ -5,13 +5,13 @@ import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import Legend from "./legend";
 import Graph from "./graph";
+import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 
 type GraphProps = {
   data: ComparisonSets;
-  maxTimeDistance: number; // We only show comparisons that fall within this range
 };
 
-function GraphContainer({ data, maxTimeDistance }: GraphProps) {
+function GraphContainer({ data }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
 
   // console.log(`max time distance is ${millisecondsToYear(maxTimeDistance)} year(s)`);
@@ -19,6 +19,11 @@ function GraphContainer({ data, maxTimeDistance }: GraphProps) {
   const [checkedState, setCheckedState] = useState(
     [...new Array(comparisonSetLabels.length)].map(_ => true)
   );
+
+  // We only show comparisons that fall within this range
+  const [maxTimeDistance, setMaxTimeDistance] = useState<number>(MILLISECONDS_IN_YEAR);
+
+  console.log(setMaxTimeDistance);
 
   const handleOnChange = (position: number) => {
     const updatedCheckedState = checkedState.map((item, index) =>
