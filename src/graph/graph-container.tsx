@@ -6,6 +6,7 @@ import { localPoint } from "@visx/event";
 import Legend from "./legend";
 import Graph from "./graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
+import { ZoomControl } from "./zoom-control";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -60,7 +61,10 @@ function GraphContainer({ data }: GraphProps) {
   return (
     <div style={{ height: "100%", width: "100%" }}>
       <div ref={chartContainerRef} style={{ height: "100%", width: "100%" }}>
-        <div style={{ height: "100%", width: "100%" }} ref={containerRef}>
+        <div
+          style={{ height: "100%", width: "100%", position: "relative" }}
+          ref={containerRef}
+        >
           {width > 0 && height > 0 && (
             <Graph
               data={data}
@@ -72,6 +76,9 @@ function GraphContainer({ data }: GraphProps) {
               hideTooltip={hideTooltip}
             />
           )}
+          <div style={{ position: "absolute", right: 10, bottom: 10 }}>
+            <ZoomControl onZoomInClick={() => {}} onZoomOutClick={() => {}} />
+          </div>
         </div>
       </div>
       {/* Legend */}

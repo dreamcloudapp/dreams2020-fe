@@ -24,10 +24,7 @@ type AxesProps = {
   tickScale: ScaleLinear<number, number, never>;
 };
 
-const MONTHS_IN_YEAR = 12;
 const APPROX_MONTH_TIME = MILLISECONDS_IN_YEAR / 12;
-
-const APPROX_WEEKS_IN_MONTH = 4;
 
 function Axes({
   height,
