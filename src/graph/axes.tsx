@@ -1,5 +1,6 @@
 import { ScaleLinear } from "d3";
 import { changeHslLightness } from "../modules/colorHelpers";
+import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Padding } from "../modules/ui-types";
 import { Triangle } from "./triangle";
 
@@ -24,6 +25,8 @@ type AxesProps = {
 };
 
 const MONTHS_IN_YEAR = 12;
+const APPROX_MONTH_TIME = MILLISECONDS_IN_YEAR / 12;
+
 const APPROX_WEEKS_IN_MONTH = 4;
 
 function Axes({
@@ -40,13 +43,18 @@ function Axes({
   maxTimeDistance,
   tickScale,
 }: AxesProps) {
+  const leftGraphEdge = padding.LEFT;
+  const rightGraphEdge = width - padding.RIGHT;
+  const topGraphEdge = padding.TOP;
+  const bottomGraphEdge = height - padding.BOTTOM;
+
   const yAxisTextLeftPadding = yAxisTextLeft || 0;
 
   const topLabels = splitLabel(yAxisTopLabel || "");
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
 
-  const monthTick = tickScale(maxTimeDistance / MONTHS_IN_YEAR);
-  const weekTick = tickScale(maxTimeDistance / (MONTHS_IN_YEAR * APPROX_WEEKS_IN_MONTH));
+  const monthTick = tickScale(APPROX_MONTH_TIME);
+  const weekTick = tickScale(MONTHS_IN_YEAR / (MONTHS_IN_YEAR * APPROX_WEEKS_IN_MONTH));
 
   const numMonthGridLines = 25;
 
@@ -55,12 +63,12 @@ function Axes({
       {/* Grid */}
       {/* hGrid */}
       {[...new Array(numMonthGridLines)].map((_, i) => {
-        const linePosition = padding.TOP + i * monthTick;
+        const linePosition = topGraphEdge + i * monthTick;
         return (
           <line
-            x1={padding.LEFT}
+            x1={leftGraphEdge}
             y1={linePosition}
-            x2={width - padding.RIGHT}
+            x2={rightGraphEdge}
             y2={linePosition}
             stroke={changeHslLightness(strokeColor, 70)}
           />
@@ -69,63 +77,75 @@ function Axes({
 
       {/* x-Axis section before label */}
       <line
-        x1={padding.LEFT}
+        x1={leftGraphEdge}
         y1={height / 2}
-        x2={width - padding.RIGHT}
+        x2={rightGraphEdge}
         y2={height / 2}
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
       {/* y-Axis */}
       <line
-        x1={padding.LEFT}
-        y1={padding.TOP}
-        x2={padding.LEFT}
-        y2={height - padding.BOTTOM}
+        x1={leftGraphEdge}
+        y1={topGraphEdge}
+        x2={leftGraphEdge}
+        y2={bottomGraphEdge}
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
 
-      {/* Ticks */}
-      {[...new Array(23)].map((_, i) => {
+      {/* Month ticks */}
+      {[...new Array(25)].map((_, i) => {
         // No tick in zero position, there's an arrow there
-        const tickPosition = padding.TOP + (i + 1) * monthTick;
+        const tickPosition = topGraphEdge + i * monthTick;
+
+        const midPoint = Math.floor(25 / 2);
+
+        const axisNum = Math.abs(i - midPoint);
+        const sameMonth = axisNum === 0;
+
+        const text = sameMonth ? "Same time" : `${axisNum} months`;
 
         return (
           <g key={`tick-${i}`}>
-            <line
-              x1={padding.LEFT - 7}
-              y1={tickPosition}
-              x2={padding.LEFT}
-              y2={tickPosition}
-              stroke={changeHslLightness(strokeColor, 40)}
-              strokeWidth={strokeWidth}
-            />
-            <text
-              key={i}
-              x={padding.LEFT - 30}
-              y={tickPosition + 3} // + 3 to account for text centring
-              fontFamily="Lato"
-              fontSize="12"
-              fontWeight={300}
-              fill={strokeColor}
-            >
-              x
-            </text>
+            {i > 0 && i < 24 && (
+              <line
+                x1={leftGraphEdge - 7}
+                y1={tickPosition}
+                x2={leftGraphEdge}
+                y2={tickPosition}
+                stroke={changeHslLightness(strokeColor, 40)}
+                strokeWidth={strokeWidth}
+              />
+            )}
+            {i % 2 === 0 && (
+              <text
+                key={i}
+                x={sameMonth ? 20 : leftGraphEdge - (axisNum > 9 ? 70 : 65)}
+                y={tickPosition + 3} // + 3 to account for text centring
+                fontFamily="Lato"
+                fontSize="11"
+                fontWeight={300}
+                fill={changeHslLightness(strokeColor, 30)}
+                // color={changeHslLightness(strokeColor, 40)}
+              >
+                {text}
+              </text>
+            )}
           </g>
         );
       })}
 
       {[...new Array(95)].map((_, i) => {
         // No tick in zero position, there's an arrow there
-        const tickPosition = padding.TOP + (i + 1) * weekTick;
+        const tickPosition = topGraphEdge + (i + 1) * weekTick;
 
         return (
           <g key={`tick-${i}`}>
             <line
-              x1={padding.LEFT - 3}
+              x1={leftGraphEdge - 3}
               y1={tickPosition}
-              x2={padding.LEFT}
+              x2={leftGraphEdge}
               y2={tickPosition}
               stroke={changeHslLightness(strokeColor, 40)}
               strokeWidth={strokeWidth}
@@ -172,7 +192,7 @@ function Axes({
 
       {/* xAxisRightLabel */}
       <text
-        x={width - padding.RIGHT + triangleHeight + 5}
+        x={rightGraphEdge + triangleHeight + 5}
         y={height / 2 + 5}
         fontFamily="Lato"
         fontSize="14"
@@ -186,27 +206,27 @@ function Axes({
         height={triangleHeight}
         width={triangleHeight}
         orientation={"N"}
-        x={padding.LEFT - triangleHeight / 2}
-        y={padding.TOP - triangleHeight}
-        fill={strokeColor || "#000"}
+        x={leftGraphEdge - triangleHeight / 2}
+        y={topGraphEdge - triangleHeight}
+        fill={strokeColor}
       />
       {/* Bottom y-Axis triangle */}
       <Triangle
         height={triangleHeight}
         width={triangleHeight}
         orientation={"S"}
-        x={padding.LEFT - triangleHeight / 2}
-        y={height - padding.BOTTOM}
-        fill={strokeColor || "#000"}
+        x={leftGraphEdge - triangleHeight / 2}
+        y={bottomGraphEdge}
+        fill={strokeColor}
       />
       {/* x-Axis triangle */}
       <Triangle
         height={triangleHeight}
         width={triangleHeight}
         orientation={"E"}
-        x={width - padding.RIGHT}
+        x={rightGraphEdge}
         y={height / 2 - triangleHeight / 2}
-        fill={strokeColor || "#000"}
+        fill={strokeColor}
       />
     </>
   );
