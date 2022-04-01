@@ -54,7 +54,7 @@ function Axes({
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
 
   const monthTick = tickScale(APPROX_MONTH_TIME);
-  const weekTick = tickScale(MONTHS_IN_YEAR / (MONTHS_IN_YEAR * APPROX_WEEKS_IN_MONTH));
+  const weekTick = tickScale(APPROX_MONTH_TIME / 4);
 
   const numMonthGridLines = 25;
 
