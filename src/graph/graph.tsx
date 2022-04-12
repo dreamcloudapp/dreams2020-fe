@@ -135,6 +135,7 @@ function Graph({
                 setFocusedComparison({
                   x: endX,
                   y: endY,
+                  color: comparisonSet.color,
                   concepts: comparisonSet.comparisons[0].topCommonConceptIds,
                   startRadius: getRadius(dream.text.length + news.text.length),
                 });
@@ -150,9 +151,9 @@ function Graph({
           endPoint={[width / 2, height / 2]}
           startRadius={focusedComparison.startRadius}
           endRadius={Math.floor(height / 4)}
-          stroke={"green"}
+          stroke={changeHslLightness(focusedComparison.color, -10)}
           strokeWidth={LINE_WIDTH}
-          fill={"green"}
+          fill={focusedComparison.color}
           onMouseOver={() => {}}
           onMouseOut={() => {}}
           opacity={1}

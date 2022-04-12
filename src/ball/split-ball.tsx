@@ -37,36 +37,50 @@ export const SplitBall = ({
   const moveProps = useSpring({
     to: { cx: endX, cy: endY, r: endRadius },
     from: { cx: startX, cy: startY, r: startRadius },
-    config: { mass: 10, tension: 500, friction: 65, clamp: false },
+    config: { mass: 10, tension: 500, friction: 65, clamp: false, delay: 1000 },
     ref: moveRef,
   });
 
   const moveLeftRef = useSpringRef();
 
   const moveLeftProps = useSpring({
-    // to: { cx: 100, cy: 100, r: endRadius / 2 },
-    // from: { cx: 1, cy: 2, r: endRadius },
-    to: { transform: "translateX(-500px)" },
-    from: { transform: "translateX(0px)" },
-    config: { mass: 10, tension: 500, friction: 65, clamp: false },
+    to: { transform: "translateX(-5%) scale(0.7) translateY(20%)" },
+    from: { transform: "translateX(0%) scale(1) translateY(0%)" },
+    config: { mass: 10, tension: 500, friction: 85, clamp: false },
     ref: moveLeftRef,
   });
 
-  useChain([moveRef, moveLeftRef], [0, 1]);
+  const moveRightRef = useSpringRef();
+
+  const moveRightProps = useSpring({
+    to: { transform: "translateX(30%) scale(0.7) translateY(20%)" },
+    from: { transform: "translateX(0%) scale(1) translateY(0%)" },
+    config: { mass: 10, tension: 500, friction: 85, clamp: false },
+    ref: moveRightRef,
+  });
+
+  useChain([moveRef, moveLeftRef, moveRightRef], [0, 1, 1]);
 
   return (
     <>
       <animated.circle
-        // ref={circle1Ref}
         {...moveProps}
         style={moveLeftProps}
         stroke={stroke}
         strokeWidth={strokeWidth}
         fill={fill}
-        // opacity={opacity}
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
-        // style={{ cursor: "pointer" }}
+        onClick={onClick}
+      />
+      <animated.circle
+        {...moveProps}
+        style={moveRightProps}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        fill={fill}
+        onMouseOver={onMouseOver}
+        onMouseOut={onMouseOut}
         onClick={onClick}
       />
     </>

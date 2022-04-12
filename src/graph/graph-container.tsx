@@ -17,6 +17,7 @@ export type FakeComparison = {
   y: number;
   concepts: string[];
   startRadius: number;
+  color: string;
 };
 
 function GraphContainer({ data }: GraphProps) {
