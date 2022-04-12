@@ -12,8 +12,17 @@ type GraphProps = {
   data: ComparisonSets;
 };
 
+export type FakeComparison = {
+  x: number;
+  y: number;
+  concepts: string[];
+  startRadius: number;
+};
+
 function GraphContainer({ data }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
+
+  const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
 
   // console.log(`max time distance is ${millisecondsToYear(maxTimeDistance)} year(s)`);
 
@@ -51,6 +60,7 @@ function GraphContainer({ data }: GraphProps) {
 
   const handleMouseOver = (event: any, datum: any) => {
     const coords = localPoint(event.target.ownerSVGElement, event);
+
     showTooltip({
       tooltipLeft: coords?.x,
       tooltipTop: coords?.y,
@@ -74,6 +84,8 @@ function GraphContainer({ data }: GraphProps) {
               handleMouseOver={handleMouseOver}
               checkedState={checkedState}
               hideTooltip={hideTooltip}
+              focusedComparison={focusedComparison}
+              setFocusedComparison={setFocusedComparison}
             />
           )}
           <div style={{ position: "absolute", right: 10, bottom: 10 }}>
@@ -84,7 +96,7 @@ function GraphContainer({ data }: GraphProps) {
       {/* Legend */}
       <Legend data={data} handleCheck={handleOnChange} checkedState={checkedState} />
 
-      {tooltipOpen && (
+      {tooltipOpen && !focusedComparison && (
         <TooltipInPortal
           // set this to random so it correctly updates with parent bounds
           key={Math.random()}

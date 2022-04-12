@@ -52,6 +52,17 @@ export type Comparison = {
   dreamId: number;
   newsId: number;
   dataLabel: string;
+  topCommonConceptIds: string[];
+};
+
+export type WikipediaConcept = {
+  title: string;
+  link: string;
+};
+
+// Set of wikipedia articles keyed by title
+export type WikipediaConceptDictionary = {
+  [key: string]: WikipediaConcept;
 };
 
 // A comparison set should be between one dream collection one news collection

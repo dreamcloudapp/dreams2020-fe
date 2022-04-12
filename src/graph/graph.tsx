@@ -4,6 +4,8 @@ import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Ball } from "./ball";
+import { SplitBall } from "../ball/split-ball";
+import { FakeComparison } from "./graph-container";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -13,7 +15,13 @@ type GraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
   checkedState: boolean[];
   hideTooltip: () => void;
+  focusedComparison: FakeComparison | null;
+  setFocusedComparison: React.Dispatch<React.SetStateAction<FakeComparison | null>>;
 };
+
+function getRadius(wordLength: number): number {
+  return Math.floor(wordLength / 100);
+}
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
@@ -27,6 +35,8 @@ function Graph({
   handleMouseOver,
   checkedState,
   hideTooltip,
+  focusedComparison,
+  setFocusedComparison,
 }: GraphProps) {
   // For scaleY, the time difference between a dream and a news source is max one year
   // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
@@ -112,19 +122,43 @@ function Graph({
               startPoint={startPoint}
               endPoint={[endX, endY]}
               key={i}
-              r={Math.floor((dream.text.length + news.text.length) / 100)}
+              r={getRadius(dream.text.length + news.text.length)}
               stroke={changeHslLightness(comparisonSet.color, -10)}
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
               onMouseOver={e => {
                 (handleMouseOver as any)(e, dream.text);
               }}
-              opacity={checkedState[setIndex] ? 1 : 0}
+              opacity={checkedState[setIndex] ? (focusedComparison ? 0.2 : 1) : 0}
               onMouseOut={hideTooltip}
+              onClick={() => {
+                setFocusedComparison({
+                  x: endX,
+                  y: endY,
+                  concepts: comparisonSet.comparisons[0].topCommonConceptIds,
+                  startRadius: getRadius(dream.text.length + news.text.length),
+                });
+              }}
             />
           );
         });
       })}
+      {focusedComparison && (
+        <SplitBall
+          key={`${focusedComparison.x}-${focusedComparison.y}`}
+          startPoint={[focusedComparison.x, focusedComparison.y]}
+          endPoint={[width / 2, height / 2]}
+          startRadius={focusedComparison.startRadius}
+          endRadius={Math.floor(height / 4)}
+          stroke={"green"}
+          strokeWidth={LINE_WIDTH}
+          fill={"green"}
+          onMouseOver={() => {}}
+          onMouseOut={() => {}}
+          opacity={1}
+          onClick={() => {}}
+        />
+      )}
     </svg>
   );
 }

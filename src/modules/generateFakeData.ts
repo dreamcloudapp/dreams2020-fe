@@ -10,6 +10,7 @@ import {
   NewsCollection,
   ComparisonSet,
   ComparisonSets,
+  WikipediaConceptDictionary,
 } from "./types";
 
 // 100 word dummy text
@@ -89,6 +90,7 @@ const createComparisons = (
         dreamId: dream.id,
         newsId: news.id,
         dataLabel: dataLabel,
+        topCommonConceptIds: ["dog", "cat", "Donald Trump"],
       };
       comparisons.push(comparison);
     }
@@ -156,4 +158,19 @@ export const createFakeData = (): ComparisonSets => {
   return {
     comparisonSets: [comparisonSet1, comparisonSet2],
   };
+};
+
+export const wikipediaConceptDictionary: WikipediaConceptDictionary = {
+  "Donald Trump": {
+    title: "Donald Trump",
+    link: "https://en.wikipedia.org/wiki/Donald_Trump",
+  },
+  Dog: {
+    title: "Dog",
+    link: "https://en.wikipedia.org/wiki/Dog",
+  },
+  Cat: {
+    title: "Cat",
+    link: "https://en.wikipedia.org/wiki/Cat",
+  },
 };

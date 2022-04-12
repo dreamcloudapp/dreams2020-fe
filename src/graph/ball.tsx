@@ -8,6 +8,7 @@ type BallProps = {
   strokeWidth: number;
   onMouseOver: (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => void;
   onMouseOut: () => void;
+  onClick: (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => void;
   startPoint: Point;
   endPoint: Point;
   opacity: number;
@@ -23,11 +24,12 @@ export const Ball = ({
   startPoint,
   endPoint,
   opacity,
+  onClick,
 }: BallProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
 
-  const props = useSpring({
+  const moveIntoPlaceSpring = useSpring({
     to: { cx: endX, cy: endY },
     from: { cx: startX, cy: startY },
     config: { mass: 5, tension: 500, friction: 65, clamp: false },
@@ -35,7 +37,7 @@ export const Ball = ({
 
   return (
     <animated.circle
-      {...props}
+      {...moveIntoPlaceSpring}
       r={r}
       stroke={stroke}
       strokeWidth={strokeWidth}
@@ -44,6 +46,7 @@ export const Ball = ({
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
       style={{ cursor: "pointer" }}
+      onClick={onClick}
     />
   );
 };
