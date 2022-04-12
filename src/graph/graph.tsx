@@ -93,6 +93,7 @@ function Graph({
         yAxisTextLeft={30}
         maxTimeDistance={maxTimeDistance}
         tickScale={tickScale}
+        opacity={focusedComparison ? 0.2 : 1}
       />
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
@@ -158,6 +159,8 @@ function Graph({
           onMouseOut={() => {}}
           opacity={1}
           onClick={() => {}}
+          topCommonConcepts={focusedComparison.concepts}
+          graphHeight={height}
         />
       )}
     </svg>

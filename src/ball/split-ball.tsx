@@ -1,8 +1,9 @@
 import { Point } from "../modules/types";
 import { animated, useSpring, useChain, useSpringRef } from "react-spring";
 import React from "react";
+import { AnimatedText } from "./animated-text";
 
-type BallProps = {
+type SplitBallProps = {
   stroke: string;
   fill: string;
   strokeWidth: number;
@@ -14,6 +15,8 @@ type BallProps = {
   opacity: number;
   startRadius: number;
   endRadius: number;
+  topCommonConcepts: string[];
+  graphHeight: number;
 };
 
 export const SplitBall = ({
@@ -28,7 +31,9 @@ export const SplitBall = ({
   endPoint,
   opacity,
   onClick,
-}: BallProps) => {
+  topCommonConcepts,
+  graphHeight,
+}: SplitBallProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
 
@@ -53,13 +58,17 @@ export const SplitBall = ({
   const moveRightRef = useSpringRef();
 
   const moveRightProps = useSpring({
-    to: { transform: "translateX(30%) scale(0.7) translateY(20%)" },
+    to: { transform: "translateX(34%) scale(0.7) translateY(20%)" },
     from: { transform: "translateX(0%) scale(1) translateY(0%)" },
     config: { mass: 10, tension: 500, friction: 85, clamp: false },
     ref: moveRightRef,
   });
 
   useChain([moveRef, moveLeftRef, moveRightRef], [0, 1, 1]);
+
+  const ySpread = graphHeight * 0.5;
+  const ySpreadStart = endY - ySpread / 2;
+  const spreadInterval = ySpread / (topCommonConcepts.length - 1);
 
   return (
     <>
@@ -73,6 +82,20 @@ export const SplitBall = ({
         onMouseOut={onMouseOut}
         onClick={onClick}
       />
+
+      {topCommonConcepts.map((concept, i) => {
+        return (
+          <AnimatedText
+            startPoint={[endX, endY]}
+            endPoint={[endX, ySpreadStart + i * spreadInterval]}
+            fill={fill}
+            conceptText={concept}
+            key={i}
+            fontSize={24}
+          />
+        );
+      })}
+
       <animated.circle
         {...moveProps}
         style={moveRightProps}

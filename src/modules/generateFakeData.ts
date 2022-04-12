@@ -90,7 +90,14 @@ const createComparisons = (
         dreamId: dream.id,
         newsId: news.id,
         dataLabel: dataLabel,
-        topCommonConceptIds: ["dog", "cat", "Donald Trump"],
+        topCommonConceptIds: [
+          "dog",
+          "cat",
+          "Donald Trump",
+          "COVID-19",
+          "Al Gore",
+          "Internet",
+        ],
       };
       comparisons.push(comparison);
     }
@@ -172,5 +179,17 @@ export const wikipediaConceptDictionary: WikipediaConceptDictionary = {
   Cat: {
     title: "Cat",
     link: "https://en.wikipedia.org/wiki/Cat",
+  },
+  "COVID-19": {
+    title: "COVID-19",
+    link: "https://en.wikipedia.org/wiki/COVID-19",
+  },
+  "Al Gore": {
+    title: "Al Gore",
+    link: "https://en.wikipedia.org/wiki/Al_Gore",
+  },
+  Internet: {
+    title: "Internet",
+    link: "https://en.wikipedia.org/wiki/Internet",
   },
 };

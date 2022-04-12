@@ -22,6 +22,7 @@ type AxesProps = {
   yAxisTextLeft?: number;
   maxTimeDistance: number;
   tickScale: ScaleLinear<number, number, never>;
+  opacity: number;
 };
 
 const APPROX_MONTH_TIME = MILLISECONDS_IN_YEAR / 12;
@@ -39,6 +40,7 @@ function Axes({
   xAxisRightLabel,
   maxTimeDistance,
   tickScale,
+  opacity,
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
   const rightGraphEdge = width - padding.RIGHT;
@@ -56,7 +58,7 @@ function Axes({
   const numMonthGridLines = 25;
 
   return (
-    <>
+    <g opacity={opacity}>
       {/* Grid */}
       {/* hGrid */}
       {[...new Array(numMonthGridLines)].map((_, i) => {
@@ -225,7 +227,7 @@ function Axes({
         y={height / 2 - triangleHeight / 2}
         fill={strokeColor}
       />
-    </>
+    </g>
   );
 }
 
