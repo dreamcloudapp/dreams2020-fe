@@ -145,6 +145,19 @@ function Graph({
           );
         });
       })}
+      {/* Transparent overlay */}
+      {focusedComparison && (
+        <rect
+          x={0}
+          y={0}
+          width={width}
+          height={height}
+          fill={"rgba(255,255,255,0.2)"}
+          onClick={() => {
+            setFocusedComparison(null);
+          }}
+        />
+      )}
       {focusedComparison && (
         <SplitBall
           key={`${focusedComparison.x}-${focusedComparison.y}`}
@@ -161,6 +174,7 @@ function Graph({
           onClick={() => {}}
           topCommonConcepts={focusedComparison.concepts}
           graphHeight={height}
+          graphWidth={width}
         />
       )}
     </svg>

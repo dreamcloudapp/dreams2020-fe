@@ -17,6 +17,7 @@ type SplitBallProps = {
   endRadius: number;
   topCommonConcepts: string[];
   graphHeight: number;
+  graphWidth: number;
 };
 
 export const SplitBall = ({
@@ -33,6 +34,7 @@ export const SplitBall = ({
   onClick,
   topCommonConcepts,
   graphHeight,
+  graphWidth,
 }: SplitBallProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
@@ -42,7 +44,7 @@ export const SplitBall = ({
   const moveProps = useSpring({
     to: { cx: endX, cy: endY, r: endRadius },
     from: { cx: startX, cy: startY, r: startRadius },
-    config: { mass: 10, tension: 500, friction: 65, clamp: false, delay: 1000 },
+    config: { mass: 8, tension: 500, friction: 65, clamp: false, delay: 1000 },
     ref: moveRef,
   });
 
@@ -92,6 +94,8 @@ export const SplitBall = ({
             conceptText={concept}
             key={i}
             fontSize={24}
+            fontWeight={500}
+            graphWidth={graphWidth}
           />
         );
       })}
