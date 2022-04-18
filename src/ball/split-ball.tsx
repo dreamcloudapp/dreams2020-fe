@@ -57,13 +57,22 @@ export const SplitBall = ({
   const positions = {
     unfocused: {
       moveIntoPlace: { cx: startX, cy: startY, r: startRadius },
-      leftBallMove: { transform: "translateX(0%) scale(1) translateY(0%)" },
-      rightBallMove: { transform: "translateX(0%) scale(1) translateY(0%)" },
+      leftBallMove: { transform: "translateX(0%) scale(1) translateY(0%)", stroke: fill },
+      rightBallMove: {
+        transform: "translateX(0%) scale(1) translateY(0%)",
+        stroke: fill,
+      },
     },
     focused: {
       moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
-      leftBallMove: { transform: "translateX(-5%) scale(0.7) translateY(20%)" },
-      rightBallMove: { transform: "translateX(34%) scale(0.7) translateY(20%)" },
+      leftBallMove: {
+        transform: "translateX(-5%) scale(0.7) translateY(20%)",
+        stroke: stroke,
+      },
+      rightBallMove: {
+        transform: "translateX(34%) scale(0.7) translateY(20%)",
+        stroke: stroke,
+      },
     },
   };
 
@@ -72,7 +81,7 @@ export const SplitBall = ({
   const moveIntoPlaceProps = useSpring({
     from: positions[startFocus].moveIntoPlace,
     to: positions[endFocus].moveIntoPlace,
-    config: { mass: 8, tension: 500, friction: 65, clamp: false },
+    config: { mass: 8, tension: 500, friction: 75, clamp: false },
     ref: moveRef,
   });
 
@@ -81,7 +90,7 @@ export const SplitBall = ({
   const leftBallMoveProps = useSpring({
     from: positions[startFocus].leftBallMove,
     to: positions[endFocus].leftBallMove,
-    config: { mass: 10, tension: 500, friction: 85, clamp: false },
+    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 95, clamp: false },
     ref: leftBallMoveRef,
   });
 
@@ -90,7 +99,7 @@ export const SplitBall = ({
   const rightBallMoveProps = useSpring({
     from: positions[startFocus].rightBallMove,
     to: positions[endFocus].rightBallMove,
-    config: { mass: 10, tension: 500, friction: 85, clamp: false },
+    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 95, clamp: false },
     ref: rightBallMoveRef,
   });
 
@@ -155,19 +164,17 @@ export const SplitBall = ({
       <animated.circle
         {...moveIntoPlaceProps}
         style={leftBallMoveProps}
-        stroke={stroke}
         strokeWidth={strokeWidth}
-        fill={fill}
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
         onClick={onClick}
+        fill={fill}
       />
 
       {/* Right ball */}
       <animated.circle
         {...moveIntoPlaceProps}
         style={rightBallMoveProps}
-        stroke={stroke}
         strokeWidth={strokeWidth}
         fill={fill}
         onMouseOver={onMouseOver}
