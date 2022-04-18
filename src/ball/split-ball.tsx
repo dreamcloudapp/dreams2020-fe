@@ -1,4 +1,4 @@
-import { Point } from "../modules/types";
+import { Focus, Point } from "../modules/types";
 import { animated, useSpring, useChain, useSpringRef } from "react-spring";
 import React from "react";
 import { AnimatedText } from "./animated-text";
@@ -19,6 +19,7 @@ type SplitBallProps = {
   topCommonConcepts: string[];
   graphHeight: number;
   graphWidth: number;
+  isFocused: boolean;
 };
 
 export const SplitBall = ({
@@ -36,7 +37,13 @@ export const SplitBall = ({
   topCommonConcepts,
   graphHeight,
   graphWidth,
+  isFocused,
 }: SplitBallProps) => {
+  // If the ball is focused, we want to make it bigger and have it fade in
+  // If the ball is not focused, we want to make it smaller and have it fade out
+  const startFocus: Focus = isFocused ? "unfocused" : "focused";
+  const endFocus: Focus = isFocused ? "focused" : "unfocused";
+
   const ballSpreadPercentage = 0.5;
   const ballDistance = Math.floor(graphWidth * ballSpreadPercentage);
   const textRectWidth = Math.floor(graphWidth * 0.15);
@@ -47,34 +54,52 @@ export const SplitBall = ({
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
 
+  const positions = {
+    unfocused: {
+      moveIntoPlace: { cx: startX, cy: startY, r: startRadius },
+      leftBallMove: { transform: "translateX(0%) scale(1) translateY(0%)" },
+      rightBallMove: { transform: "translateX(0%) scale(1) translateY(0%)" },
+    },
+    focused: {
+      moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
+      leftBallMove: { transform: "translateX(-5%) scale(0.7) translateY(20%)" },
+      rightBallMove: { transform: "translateX(34%) scale(0.7) translateY(20%)" },
+    },
+  };
+
   const moveRef = useSpringRef();
 
   const moveIntoPlaceProps = useSpring({
-    to: { cx: endX, cy: endY, r: endRadius },
-    from: { cx: startX, cy: startY, r: startRadius },
+    from: positions[startFocus].moveIntoPlace,
+    to: positions[endFocus].moveIntoPlace,
     config: { mass: 8, tension: 500, friction: 65, clamp: false },
     ref: moveRef,
   });
 
-  const moveLeftRef = useSpringRef();
+  const leftBallMoveRef = useSpringRef();
 
-  const moveLeftProps = useSpring({
-    from: { transform: "translateX(0%) scale(1) translateY(0%)" },
-    to: { transform: "translateX(-5%) scale(0.7) translateY(20%)" },
+  const leftBallMoveProps = useSpring({
+    from: positions[startFocus].leftBallMove,
+    to: positions[endFocus].leftBallMove,
     config: { mass: 10, tension: 500, friction: 85, clamp: false },
-    ref: moveLeftRef,
+    ref: leftBallMoveRef,
   });
 
-  const moveRightRef = useSpringRef();
+  const rightBallMoveRef = useSpringRef();
 
-  const moveRightProps = useSpring({
-    from: { transform: "translateX(0%) scale(1) translateY(0%)" },
-    to: { transform: "translateX(34%) scale(0.7) translateY(20%)" },
+  const rightBallMoveProps = useSpring({
+    from: positions[startFocus].rightBallMove,
+    to: positions[endFocus].rightBallMove,
     config: { mass: 10, tension: 500, friction: 85, clamp: false },
-    ref: moveRightRef,
+    ref: rightBallMoveRef,
   });
 
-  useChain([moveRef, moveLeftRef, moveRightRef], [0, 1, 1]);
+  const refOrder = isFocused
+    ? [moveRef, leftBallMoveRef, rightBallMoveRef]
+    : [rightBallMoveRef, leftBallMoveRef, moveRef];
+  const animationOrder = isFocused ? [0, 1, 1] : [0, 0, 1];
+
+  useChain(refOrder, animationOrder);
 
   const ySpread = graphHeight * 0.5;
   const ySpreadStart = endY - ySpread / 2;
@@ -82,52 +107,54 @@ export const SplitBall = ({
 
   return (
     <>
-      {topCommonConcepts.map((concept, i) => {
-        return (
-          <g>
-            {/* Lines that lead from the left ball to the text */}
-            <AnimatedLine
-              leftStart={[endX, endY]}
-              rightStart={[endX, endY]}
-              leftEnd={[endX - lineLength, endY]}
-              rightEnd={[
-                endX - textRectWidth / 2,
-                ySpreadStart + i * spreadInterval + rectHeight / 2,
-              ]}
-              stroke={"black"}
-              clampLeft={false}
-              clampRight={true}
-            />
-            {/* Lines that lead from the right ball to the text */}
-            <AnimatedLine
-              leftStart={[endX, endY]}
-              rightStart={[endX, endY]}
-              leftEnd={[
-                endX + textRectWidth / 2,
-                ySpreadStart + i * spreadInterval + rectHeight / 2,
-              ]}
-              rightEnd={[endX + lineLength, endY]}
-              stroke={"black"}
-              clampLeft={true}
-              clampRight={false}
-            />
-            <AnimatedText
-              startPoint={[endX, endY]}
-              endPoint={[endX, ySpreadStart + i * spreadInterval]}
-              fill={fill}
-              conceptText={concept}
-              key={i}
-              fontSize={24}
-              fontWeight={500}
-              rectWidth={textRectWidth}
-              rectHeight={rectHeight}
-            />
-          </g>
-        );
-      })}
+      {isFocused &&
+        topCommonConcepts.map((concept, i) => {
+          return (
+            <g>
+              {/* Lines that lead from the left ball to the text */}
+              <AnimatedLine
+                leftStart={[endX, endY]}
+                rightStart={[endX, endY]}
+                leftEnd={[endX - lineLength, endY]}
+                rightEnd={[
+                  endX - textRectWidth / 2,
+                  ySpreadStart + i * spreadInterval + rectHeight / 2,
+                ]}
+                stroke={"black"}
+                clampLeft={false}
+                clampRight={true}
+              />
+              {/* Lines that lead from the right ball to the text */}
+              <AnimatedLine
+                leftStart={[endX, endY]}
+                rightStart={[endX, endY]}
+                leftEnd={[
+                  endX + textRectWidth / 2,
+                  ySpreadStart + i * spreadInterval + rectHeight / 2,
+                ]}
+                rightEnd={[endX + lineLength, endY]}
+                stroke={"black"}
+                clampLeft={true}
+                clampRight={false}
+              />
+              <AnimatedText
+                startPoint={[endX, endY]}
+                endPoint={[endX, ySpreadStart + i * spreadInterval]}
+                fill={fill}
+                conceptText={concept}
+                key={i}
+                fontSize={24}
+                fontWeight={500}
+                rectWidth={textRectWidth}
+                rectHeight={rectHeight}
+              />
+            </g>
+          );
+        })}
+      {/* Left ball */}
       <animated.circle
         {...moveIntoPlaceProps}
-        style={moveLeftProps}
+        style={leftBallMoveProps}
         stroke={stroke}
         strokeWidth={strokeWidth}
         fill={fill}
@@ -136,9 +163,10 @@ export const SplitBall = ({
         onClick={onClick}
       />
 
+      {/* Right ball */}
       <animated.circle
         {...moveIntoPlaceProps}
-        style={moveRightProps}
+        style={rightBallMoveProps}
         stroke={stroke}
         strokeWidth={strokeWidth}
         fill={fill}

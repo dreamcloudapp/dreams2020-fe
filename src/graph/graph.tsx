@@ -16,7 +16,9 @@ type GraphProps = {
   checkedState: boolean[];
   hideTooltip: () => void;
   focusedComparison: FakeComparison | null;
+  prevFocusedComparison: FakeComparison | null;
   setFocusedComparison: React.Dispatch<React.SetStateAction<FakeComparison | null>>;
+  setPrevFocusedComparison: React.Dispatch<React.SetStateAction<FakeComparison | null>>;
 };
 
 function getRadius(wordLength: number): number {
@@ -36,7 +38,9 @@ function Graph({
   checkedState,
   hideTooltip,
   focusedComparison,
+  prevFocusedComparison,
   setFocusedComparison,
+  setPrevFocusedComparison,
 }: GraphProps) {
   // For scaleY, the time difference between a dream and a news source is max one year
   // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
@@ -154,8 +158,29 @@ function Graph({
           height={height}
           fill={"rgba(255,255,255,0.2)"}
           onClick={() => {
+            setPrevFocusedComparison(focusedComparison);
             setFocusedComparison(null);
           }}
+        />
+      )}
+      {prevFocusedComparison && (
+        <SplitBall
+          key={`${prevFocusedComparison.x}-${prevFocusedComparison.y}`}
+          startPoint={[prevFocusedComparison.x, prevFocusedComparison.y]}
+          endPoint={[width / 2, height / 2]}
+          startRadius={prevFocusedComparison.startRadius}
+          endRadius={Math.floor(height / 4)}
+          stroke={changeHslLightness(prevFocusedComparison.color, -10)}
+          strokeWidth={LINE_WIDTH}
+          fill={prevFocusedComparison.color}
+          onMouseOver={() => {}}
+          onMouseOut={() => {}}
+          opacity={1}
+          onClick={() => {}}
+          topCommonConcepts={prevFocusedComparison.concepts}
+          graphHeight={height}
+          graphWidth={width}
+          isFocused={false}
         />
       )}
       {focusedComparison && (
@@ -175,6 +200,7 @@ function Graph({
           topCommonConcepts={focusedComparison.concepts}
           graphHeight={height}
           graphWidth={width}
+          isFocused={true}
         />
       )}
     </svg>

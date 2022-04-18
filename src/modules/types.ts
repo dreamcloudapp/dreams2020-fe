@@ -2,6 +2,7 @@ import { Color } from "d3";
 import { ColorTheme } from "./theme";
 
 export type Point = [number, number];
+export type Focus = "focused" | "unfocused";
 
 export type DreamRecord = {
   id: number;

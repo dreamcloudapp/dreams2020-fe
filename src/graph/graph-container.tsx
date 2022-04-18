@@ -24,6 +24,8 @@ function GraphContainer({ data }: GraphProps) {
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
 
   const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
+  const [prevFocusedComparison, setPrevFocusedComparison] =
+    useState<FakeComparison | null>(null);
 
   // console.log(`max time distance is ${millisecondsToYear(maxTimeDistance)} year(s)`);
 
@@ -86,7 +88,9 @@ function GraphContainer({ data }: GraphProps) {
               checkedState={checkedState}
               hideTooltip={hideTooltip}
               focusedComparison={focusedComparison}
+              prevFocusedComparison={prevFocusedComparison}
               setFocusedComparison={setFocusedComparison}
+              setPrevFocusedComparison={setPrevFocusedComparison}
             />
           )}
           <div style={{ position: "absolute", right: 10, bottom: 10 }}>
