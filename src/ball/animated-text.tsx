@@ -8,7 +8,8 @@ type AnimatedTextProps = {
   fill: string;
   fontSize: number;
   fontWeight: number;
-  graphWidth: number;
+  rectWidth: number;
+  rectHeight: number;
 };
 
 export const AnimatedText = ({
@@ -18,18 +19,18 @@ export const AnimatedText = ({
   fill,
   fontSize,
   fontWeight,
-  graphWidth,
+  rectWidth,
+  rectHeight,
 }: AnimatedTextProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
-
-  const rectWidth = Math.floor(graphWidth * 0.15);
+  const textOffset = fontSize * 1.1;
 
   const moveTextSpringRef = useSpringRef();
   const moveRectSpringRef = useSpringRef();
 
   const moveTextProps = useSpring({
-    to: { x: endX, y: endY + fontSize * 1.1 }, // why * 1.1?
+    to: { x: endX, y: endY + textOffset }, // why * 1.1?
     from: { x: startX, y: startY },
     config: { mass: 10, tension: 500, friction: 85, clamp: false, delay: 3000 },
     ref: moveTextSpringRef,
@@ -58,7 +59,7 @@ export const AnimatedText = ({
         {...moveRectProps}
         {...fadeInProps}
         width={rectWidth}
-        height={40}
+        height={rectHeight}
         fill={"white"}
         stroke={"black"}
       />
