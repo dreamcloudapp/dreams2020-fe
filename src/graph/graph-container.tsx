@@ -6,7 +6,6 @@ import { localPoint } from "@visx/event";
 import Legend from "./legend";
 import Graph from "./graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
-import { ZoomControl } from "./zoom-control";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -94,7 +93,10 @@ function GraphContainer({ data }: GraphProps) {
             />
           )}
           <div style={{ position: "absolute", right: 10, bottom: 10 }}>
-            <ZoomControl onZoomInClick={() => {}} onZoomOutClick={() => {}} />
+            <span>View: </span>
+            <button>Months</button>
+            <button>Weeks</button>
+            <button>Days</button>
           </div>
         </div>
       </div>

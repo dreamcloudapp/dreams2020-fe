@@ -90,7 +90,7 @@ export const SplitBall = ({
   const leftBallMoveProps = useSpring({
     from: positions[startFocus].leftBallMove,
     to: positions[endFocus].leftBallMove,
-    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 95, clamp: false },
+    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: leftBallMoveRef,
   });
 
@@ -99,7 +99,7 @@ export const SplitBall = ({
   const rightBallMoveProps = useSpring({
     from: positions[startFocus].rightBallMove,
     to: positions[endFocus].rightBallMove,
-    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 95, clamp: false },
+    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: rightBallMoveRef,
   });
 
