@@ -1,4 +1,4 @@
-import { Point } from "../modules/types";
+import { Point } from "../../types/types";
 import { animated, useChain, useSpring, useSpringRef } from "react-spring";
 
 type AnimatedLineProps = {

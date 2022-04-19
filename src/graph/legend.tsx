@@ -1,4 +1,4 @@
-import { ComparisonSets } from "../modules/types";
+import { ComparisonSets } from "../../types/types";
 
 type LegendProps = {
   data: ComparisonSets;

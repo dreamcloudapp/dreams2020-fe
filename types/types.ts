@@ -1,5 +1,5 @@
 import { Color } from "d3";
-import { ColorTheme } from "./theme";
+import { ColorTheme } from "../src/modules/theme";
 
 export type Point = [number, number];
 export type Focus = "focused" | "unfocused";

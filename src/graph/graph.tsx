@@ -1,5 +1,5 @@
 import { scaleLinear } from "d3";
-import { ComparisonSets } from "../modules/types";
+import { ComparisonSets } from "../../types/types";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";

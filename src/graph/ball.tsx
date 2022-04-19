@@ -1,4 +1,4 @@
-import { Point } from "../modules/types";
+import { Point } from "../../types/types";
 import { animated, useSpring } from "react-spring";
 
 type BallProps = {

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import useComponentSize from "@rehooks/component-size";
-import { ComparisonSets } from "../modules/types";
+import { ComparisonSets } from "../../types/types";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import Legend from "./legend";

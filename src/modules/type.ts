@@ -3,6 +3,18 @@ export type WikipediaConcept = {
   link: string;
 };
 
+// Dream Record or News Record
+export type Record = {
+  id: number;
+  text: String;
+  date: Date;
+};
+
+// Set of records keyed by id
+export type RecordDictionary = {
+  [key: number]: Record;
+};
+
 export type DateTimeRange = {
   startDate: Date;
   endDate: Date;

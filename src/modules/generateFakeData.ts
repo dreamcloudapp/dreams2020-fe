@@ -11,7 +11,7 @@ import {
   ComparisonSet,
   ComparisonSets,
   WikipediaConceptDictionary,
-} from "./types";
+} from "../../types/types";
 
 // 100 word dummy text
 const LOREM =

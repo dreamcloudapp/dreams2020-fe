@@ -1,4 +1,4 @@
-import { Focus, Point } from "../modules/types";
+import { Focus, Point } from "../../types/types";
 import { animated, useSpring, useChain, useSpringRef } from "react-spring";
 import React from "react";
 import { AnimatedText } from "./animated-text";
