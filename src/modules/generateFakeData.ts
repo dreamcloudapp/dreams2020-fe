@@ -110,7 +110,7 @@ export const createFakeData = (): ComparisonSets => {
   const dreams2020Data = createDreamsData(2020, "2020 Dreams");
   const dreams2010Data = createDreamsData(2010, "2010 Dreams");
   const comparisons2020 = createComparisons(dreams2020Data, newsData, "2020", 2);
-  const comparisons2010 = createComparisons(dreams2010Data, newsData, "2010", 1);
+  const comparisons2010 = createComparisons(dreams2010Data, newsData, "2010", 1.5);
 
   const dreams2010Dictionary = dreamsToDictionary(dreams2010Data);
   const dreams2020Dictionary = dreamsToDictionary(dreams2020Data);

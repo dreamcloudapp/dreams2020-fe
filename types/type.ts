@@ -20,7 +20,7 @@ export type DateTimeRange = {
   endDate: Date;
 };
 
-export type Comparison = {
+export type RecordComparison = {
   score: number;
   dreamId: number;
   newsId: number;
@@ -28,10 +28,11 @@ export type Comparison = {
 };
 
 export type ComparisonSet = {
+  id: number;
   label: string; // e.g. "March 2020 Dreams vs. March 2020 News"
   dreamDates: DateTimeRange;
   newsDates: DateTimeRange;
   similarity: number;
-  examples: Comparison[];
+  examples: RecordComparison[];
   relatedConcepts: WikipediaConcept[];
 };
