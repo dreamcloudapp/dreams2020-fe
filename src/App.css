@@ -3,19 +3,18 @@
   font-family: "Lato";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background-color: white;
+  border: 2px solid #333;
+  font-family: inherit;
+  font-size: 1rem;
+  display: inline-flex;
+  margin: 0.125rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button.selected {
+  background-color: #333;
   color: white;
 }

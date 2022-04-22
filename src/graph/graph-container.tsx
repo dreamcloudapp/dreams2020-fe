@@ -6,6 +6,7 @@ import { localPoint } from "@visx/event";
 import Legend from "./legend";
 import Graph from "./graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
+import { Granularity } from "../../types/type";
 
 type GraphProps = {
   data: ComparisonSets;
@@ -19,7 +20,16 @@ export type FakeComparison = {
   color: string;
 };
 
+const timeLabels: { key: Granularity; label: string }[] = [
+  { key: "year", label: "Years" },
+  { key: "month", label: "Months" },
+  { key: "week", label: "Weeks" },
+  { key: "day", label: "Days" },
+];
+
 function GraphContainer({ data }: GraphProps) {
+  const [activeTimePeriod, setActiveTimePeriod] = useState<Granularity>("month");
+
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
 
   const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
@@ -92,11 +102,23 @@ function GraphContainer({ data }: GraphProps) {
               setPrevFocusedComparison={setPrevFocusedComparison}
             />
           )}
+          {/* Select active time period */}
           <div style={{ position: "absolute", right: 10, bottom: 10 }}>
             <span>View: </span>
-            <button>Months</button>
-            <button>Weeks</button>
-            <button>Days</button>
+            {timeLabels.map(({ key, label }) => {
+              const isActive = key === activeTimePeriod;
+              return (
+                <button
+                  key={key}
+                  className={isActive ? "selected" : "unselected"}
+                  onClick={() => {
+                    setActiveTimePeriod(key);
+                  }}
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
