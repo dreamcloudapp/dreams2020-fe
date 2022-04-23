@@ -1,9 +1,10 @@
 const fs = require("fs");
 const {
-  dummyWikipediaConcepts,
+  FAKE_WIKI_CONCEPTS,
   MONTHS,
   LAST_WEEK_OF_YEAR_INDEX,
   LOREM,
+  SHORT_MONTHS,
 } = require("./fakeConstants");
 
 /////////////// TYPES ///////////////
@@ -79,6 +80,7 @@ function generateTimePeriodLabel(
         if (index < 9) {
           firstDayOfWeek = addDays(firstDayOfExampleLeapYear, index * 7);
           lastDayOfWeek = addDays(firstDayOfWeek, 6);
+          console.log(firstDayOfWeek, lastDayOfWeek);
         } else if (index === 9) {
           firstDayOfWeek = addDays(firstDayOfExampleLeapYear, index * 7);
           lastDayOfWeek = addDays(firstDayOfWeek, 7);
@@ -87,7 +89,11 @@ function generateTimePeriodLabel(
           lastDayOfWeek = addDays(firstDayOfWeek, isLastWeekOfYear ? 6 : 7);
         }
       }
-      return `${firstDayOfWeek.getDay()}/${firstDayOfWeek.getMonth()} - ${lastDayOfWeek.getDay()}/${lastDayOfWeek.getMonth()}, ${yearLabel}`;
+
+      const firstDayOfWeekMonth = SHORT_MONTHS[firstDayOfWeek.getMonth()];
+      const lastDayOfWeekMonth = SHORT_MONTHS[lastDayOfWeek.getMonth()];
+
+      return `${firstDayOfWeek.getDate()} ${firstDayOfWeekMonth}. - ${lastDayOfWeek.getDate()} ${lastDayOfWeekMonth}, ${yearLabel}`;
     case "month":
       return `${MONTHS[index]} ${yearLabel}`; // Just the name of the month, e.g. "January 2005"
     case "year":
@@ -219,14 +225,14 @@ const generateComparisons = (
         i,
         collection1Params.yearArray
       );
-      const collectionLabel1 = `${timeLabel1} ${collection1Params.label}`;
+      const collectionLabel1 = `${collection1Params.label} from ${timeLabel1}`;
       // 2) Generate the label for the second collection, e.g. "April 2020 News"
       const timeLabel2 = generateTimePeriodLabel(
         granularity,
         j,
         collection2Params.yearArray
       );
-      const collectionLabel2 = `${timeLabel2} ${collection2Params.label}`;
+      const collectionLabel2 = `${collection2Params.label} from ${timeLabel2}`;
       // Then combine them to generate the label for the comparison
       const collectionLabel = `${collectionLabel1} vs. ${collectionLabel2}`;
 
@@ -248,7 +254,7 @@ const generateComparisons = (
       };
       const similarity = Math.random();
       const examples: RecordComparison[] = [];
-      const concepts: WikipediaConcept[] = dummyWikipediaConcepts;
+      const concepts: WikipediaConcept[] = FAKE_WIKI_CONCEPTS;
 
       comparisons.push({
         id: `${granularity}-${i}-${j}`,
@@ -267,6 +273,26 @@ const generateComparisons = (
 
 /////////////// MAIN ///////////////
 
+// Everything we want to compare
+// All the granularities ("day", "week", "month", "year")
+const granularities: Granularity[] = ["week", "month", "year"];
+// All the dream collections
+const dreams: CollectionParameters[] = [
+  {
+    label: "Dreams",
+    yearArray: [2020],
+  },
+  {
+    label: "Dreams",
+    yearArray: [2005, 2006, 2007, 2008, 2009, 2010],
+  },
+];
+// All the news
+const news: CollectionParameters = {
+  label: "News",
+  yearArray: [2020],
+};
+
 const generateData = async () => {
   // Generate record dictionaries
 
@@ -274,57 +300,59 @@ const generateData = async () => {
     from: new Date(2020, 0, 1),
     to: new Date(2020, 11, 31),
   };
-  const dateRange2005_2015: DateTimeRange = {
+  const dateRange2005_2010: DateTimeRange = {
     from: new Date(2005, 0, 1),
-    to: new Date(2015, 11, 31),
+    to: new Date(2010, 11, 31),
   };
 
   const dream2020Records = generateRecordDictionary(2000, dateRange2020);
-  const dream2005_2015Records = generateRecordDictionary(2000, dateRange2005_2015);
+  const dream2005_2010Records = generateRecordDictionary(2000, dateRange2005_2010);
   const newsRecords = generateRecordDictionary(2000, dateRange2020);
 
-  // First, generate a set of fake month-by-month comparisons
-  const monthComparisons2020_2020: ComparisonSet[] = generateComparisons(
-    { label: "Dreams", yearArray: [2020] },
-    { label: "News", yearArray: [2020] },
-    "month"
+  // Generate comparisons
+  // We want to generate a set of comparisons for every granularity (day, week, month, year)
+  // and each combination of dreams and news (there is only one set of news)
+  const comparisonSets: { [key in Granularity]: ComparisonSet[] } = granularities.reduce(
+    (acc, granularity) => {
+      // Compare dreams to news
+      const dreamComparisonSets = dreams.map(dreamParams =>
+        generateComparisons(dreamParams, news, granularity)
+      );
+      return {
+        ...acc,
+        [granularity]: dreamComparisonSets.flat(),
+      };
+    },
+    {} as { [key in Granularity]: ComparisonSet[] }
   );
 
-  const monthComparisonsEarly_vs_2020: ComparisonSet[] = generateComparisons(
-    { label: "Dreams", yearArray: [2005, 2006, 2007] },
-    { label: "News", yearArray: [2020] },
-    "month"
-  );
-
-  // Then, generate a set of fake week-by-week comparisons
-  const weekComparisons2020_2020: ComparisonSet[] = generateComparisons(
-    { label: "Dreams", yearArray: [2020] },
-    { label: "News", yearArray: [2020] },
-    "week"
-  );
-
-  const weekComparisonsEarly_vs_2020: ComparisonSet[] = generateComparisons(
-    { label: "Dreams", yearArray: [2005, 2006, 2007] },
-    { label: "News", yearArray: [2020] },
-    "week"
-  );
+  const { week, month, year } = comparisonSets;
 
   return {
     dreamsTest: dream2020Records,
-    dreamsControl: dream2005_2015Records,
+    dreamsControl: dream2005_2010Records,
     news: newsRecords,
-    monthComparisons: [...monthComparisons2020_2020, ...monthComparisonsEarly_vs_2020],
-    weekComparisons: [...weekComparisons2020_2020, ...weekComparisonsEarly_vs_2020],
+    monthComparisons: month,
+    weekComparisons: week,
+    yearComparisons: year,
   };
 };
 
 generateData().then(data => {
-  const { dreamsTest, dreamsControl, news, monthComparisons, weekComparisons } = data;
+  const {
+    dreamsTest,
+    dreamsControl,
+    news,
+    monthComparisons,
+    weekComparisons,
+    yearComparisons,
+  } = data;
   fs.writeFileSync("data/dreams-test.json", JSON.stringify(dreamsTest));
   fs.writeFileSync("data/dreams-control.json", JSON.stringify(dreamsControl));
   fs.writeFileSync("data/news.json", JSON.stringify(news));
   fs.writeFileSync("data/monthComparisons.json", JSON.stringify(monthComparisons));
   fs.writeFileSync("data/weekComparisons.json", JSON.stringify(weekComparisons));
+  fs.writeFileSync("data/yearComparisons.json", JSON.stringify(yearComparisons));
 });
 
 export {};
