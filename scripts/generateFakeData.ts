@@ -80,7 +80,6 @@ function generateTimePeriodLabel(
         if (index < 9) {
           firstDayOfWeek = addDays(firstDayOfExampleLeapYear, index * 7);
           lastDayOfWeek = addDays(firstDayOfWeek, 6);
-          console.log(firstDayOfWeek, lastDayOfWeek);
         } else if (index === 9) {
           firstDayOfWeek = addDays(firstDayOfExampleLeapYear, index * 7);
           lastDayOfWeek = addDays(firstDayOfWeek, 7);
@@ -93,7 +92,9 @@ function generateTimePeriodLabel(
       const firstDayOfWeekMonth = SHORT_MONTHS[firstDayOfWeek.getMonth()];
       const lastDayOfWeekMonth = SHORT_MONTHS[lastDayOfWeek.getMonth()];
 
-      return `${firstDayOfWeek.getDate()} ${firstDayOfWeekMonth}. - ${lastDayOfWeek.getDate()} ${lastDayOfWeekMonth}, ${yearLabel}`;
+      return `Week ${
+        index + 1
+      } ${yearLabel} (${firstDayOfWeekMonth} ${firstDayOfWeek.getDate()} - ${lastDayOfWeekMonth} ${lastDayOfWeek.getDate()})`;
     case "month":
       return `${MONTHS[index]} ${yearLabel}`; // Just the name of the month, e.g. "January 2005"
     case "year":
