@@ -13,6 +13,8 @@ declare global {
 }
 
 window.embedDreamChart = function (htmlTagId: keyof HTMLElementTagNameMap) {
+  console.log(`public url: "${process.env.PUBLIC_URL}"`);
+
   const el = document.querySelector(htmlTagId);
   const render = () => {
     ReactDOM.render(

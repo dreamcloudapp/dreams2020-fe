@@ -107,6 +107,8 @@ export function fetchMonths(): AppThunk {
     const response = await fetch(url);
     const data = await response.json();
 
+    console.log("data", data);
+
     dispatch(dataSlice.actions.setMonths(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
