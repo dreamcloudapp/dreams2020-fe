@@ -43,9 +43,11 @@ function GraphContainer({ data }: GraphProps) {
   );
 
   // We only show comparisons that fall within this range
-  const [maxTimeDistance, setMaxTimeDistance] = useState<number>(MILLISECONDS_IN_YEAR);
+  // const [maxTimeDistance, setMaxTimeDistance] = useState<number>(MILLISECONDS_IN_YEAR);
 
-  console.log(setMaxTimeDistance);
+  const maxTimeDistance = MILLISECONDS_IN_YEAR;
+
+  // console.log(setMaxTimeDistance);
 
   const handleOnChange = (position: number) => {
     const updatedCheckedState = checkedState.map((item, index) =>

@@ -11,6 +11,15 @@ const {
 
 type Granularity = "day" | "week" | "month" | "year";
 
+// The maximum time index distance for a given granularity
+// E.g. for granularity "month", the max distance is 11
+const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
+  day: 2, // 2 days max between day comparisons
+  week: 4, // 3 weeks max between week comparisons
+  month: 12, // 12 months max between month comparisons
+  year: 30, // 30 years max between year comparisons
+};
+
 // It's an interesting question how to compare time periods across years
 // For months, it's easy -> just compare the month number
 // For weeks, we compare the week number, but we have to know that Feb. 29 creates an "8 day week", as does December 31.
@@ -58,14 +67,20 @@ function generateTimePeriodLabel(
 
   switch (granularity) {
     case "day":
-      // In the case of a leap year, we want to treat Feb. 28-29 as a "day"
       if (hasLeapYear && (index === 29 || index === 30)) {
+        // In the case of a leap year, we want to treat Feb. 28-29 as a "day"
+        // Though theoretically this function doesn't get passed Feb 29, it's handled in the calling function
         return `Feb 28-29 ${yearLabel}`;
       } else if (hasLeapYear && index > 30) {
-        return `Feb 29 ${yearLabel}`;
+        // -1 because we just combined Feb 28 and Feb 29 into a single day
+        const day = addDays(firstDayOfExampleLeapYear, index - 1);
+        return `${SHORT_MONTHS[day.getMonth()]} ${day.getDate()} ${yearLabel}`;
+      } else {
+        // Leap year / non leap year doesn't matter before Feb 28
+        const day = addDays(firstDayOfExampleNonLeapYear, index);
+        return `${SHORT_MONTHS[day.getMonth()]} ${day.getDate()} ${yearLabel}`;
       }
 
-      return `${index}`;
     case "week":
       const isLastWeekOfYear = index === LAST_WEEK_OF_YEAR_INDEX;
       let firstDayOfWeek: Date;
@@ -206,11 +221,13 @@ const generateRecordDictionary = (numRecords: number, dateRange: DateTimeRange) 
 type CollectionParameters = {
   label: string;
   yearArray: number[];
+  fakeSimilarityWeighting: number;
 };
 const generateComparisons = (
   collection1Params: CollectionParameters,
   collection2Params: CollectionParameters,
-  granularity: Granularity
+  granularity: Granularity,
+  weighting: number
 ): ComparisonSet[] => {
   const numIntervalsInPeriod = NUM_STOPS_IN_TIME_PERIOD[granularity];
 
@@ -218,6 +235,16 @@ const generateComparisons = (
 
   for (let i = 0; i < numIntervalsInPeriod; i++) {
     for (let j = 0; j < numIntervalsInPeriod; j++) {
+      // If the time interval is greater than the max distance, we don't want to compare
+      // e.g. if granularity is "day", we don't want to compare Jan 1 vs. Dec 31
+      if (Math.abs(i - j) > MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity]) {
+        continue;
+      }
+      // We ignore Feb 29 in a leap year, it's combined with Feb 28
+      if ((granularity === "day" && i === 30) || j === 30) {
+        continue;
+      }
+
       // First create the label for the collection
       // E.g. "March 2020 Dreams vs. April 2020 News"
       // 1) Generate the label for the first collection, e.g. "March 2020 Dreams"
@@ -253,7 +280,7 @@ const generateComparisons = (
           identifier: timeLabel2,
         },
       };
-      const similarity = Math.random();
+      const similarity = Math.random() * weighting;
       const examples: RecordComparison[] = [];
       const concepts: WikipediaConcept[] = FAKE_WIKI_CONCEPTS;
 
@@ -276,22 +303,25 @@ const generateComparisons = (
 
 // Everything we want to compare
 // All the granularities ("day", "week", "month", "year")
-const granularities: Granularity[] = ["week", "month", "year"];
+const granularities: Granularity[] = ["day", "week", "month", "year"];
 // All the dream collections
 const dreams: CollectionParameters[] = [
   {
     label: "Dreams",
     yearArray: [2020],
+    fakeSimilarityWeighting: 1,
   },
   {
     label: "Dreams",
     yearArray: [2005, 2006, 2007, 2008, 2009, 2010],
+    fakeSimilarityWeighting: 0.5,
   },
 ];
 // All the news
 const news: CollectionParameters = {
   label: "News",
   yearArray: [2020],
+  fakeSimilarityWeighting: 1,
 };
 
 const generateData = async () => {
@@ -317,7 +347,12 @@ const generateData = async () => {
     (acc, granularity) => {
       // Compare dreams to news
       const dreamComparisonSets = dreams.map(dreamParams =>
-        generateComparisons(dreamParams, news, granularity)
+        generateComparisons(
+          dreamParams,
+          news,
+          granularity,
+          dreamParams.fakeSimilarityWeighting
+        )
       );
       return {
         ...acc,
@@ -327,7 +362,7 @@ const generateData = async () => {
     {} as { [key in Granularity]: ComparisonSet[] }
   );
 
-  const { week, month, year } = comparisonSets;
+  const { week, month, year, day } = comparisonSets;
 
   return {
     dreamsTest: dream2020Records,
@@ -336,6 +371,7 @@ const generateData = async () => {
     monthComparisons: month,
     weekComparisons: week,
     yearComparisons: year,
+    dayComparisons: day,
   };
 };
 
@@ -347,6 +383,7 @@ generateData().then(data => {
     monthComparisons,
     weekComparisons,
     yearComparisons,
+    dayComparisons,
   } = data;
   fs.writeFileSync("data/dreams-test.json", JSON.stringify(dreamsTest));
   fs.writeFileSync("data/dreams-control.json", JSON.stringify(dreamsControl));
@@ -354,6 +391,7 @@ generateData().then(data => {
   fs.writeFileSync("data/monthComparisons.json", JSON.stringify(monthComparisons));
   fs.writeFileSync("data/weekComparisons.json", JSON.stringify(weekComparisons));
   fs.writeFileSync("data/yearComparisons.json", JSON.stringify(yearComparisons));
+  fs.writeFileSync("data/dayComparisons.json", JSON.stringify(dayComparisons));
 });
 
 export {};
