@@ -6,14 +6,15 @@ const {
   LOREM,
   SHORT_MONTHS,
 } = require("./fakeConstants");
+import { Granularity } from "@kannydennedy/dreams-2020-types";
 
 /////////////// TYPES ///////////////
 
-type Granularity = "day" | "week" | "month" | "year";
+// type Granularity = "day" | "week" | "month" | "year";
 
 // The maximum time index distance for a given granularity
 // E.g. for granularity "month", the max distance is 11
-const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
+export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
   day: 2, // 2 days max between day comparisons
   week: 4, // 3 weeks max between week comparisons
   month: 12, // 12 months max between month comparisons
@@ -162,15 +163,26 @@ type CollectionParams = {
   timePeriod: TimePeriod;
 };
 
+export enum ColorTheme {
+  RED = "hsl(10, 90%, 60%)",
+  BLUE = "hsl(220, 90%, 60%)",
+}
+
 type ComparisonSet = {
   id: string;
   granularity: Granularity; // "day", "week", "month", "year"
   label: string; // E.g. "March 2020 Dreams vs. April 2020 News"
   collection1: CollectionParams;
   collection2: CollectionParams;
-  similarity: number;
+  score: number;
+  wordCount: number;
   examples: RecordComparison[];
   concepts: WikipediaConcept[];
+};
+
+type ComparisonSets = {
+  granularity: Granularity;
+  comparisonSets: ComparisonSet[];
 };
 
 /////////////// CONSTANTS ///////////////
@@ -220,8 +232,10 @@ const generateRecordDictionary = (numRecords: number, dateRange: DateTimeRange) 
 // Generate fake comparisons for a given time period
 type CollectionParameters = {
   label: string;
+  collectionLabel: string;
   yearArray: number[];
   fakeSimilarityWeighting: number;
+  color: ColorTheme;
 };
 const generateComparisons = (
   collection1Params: CollectionParameters,
@@ -280,7 +294,8 @@ const generateComparisons = (
           identifier: timeLabel2,
         },
       };
-      const similarity = Math.random() * weighting;
+      const score = Math.random() * weighting * 2;
+      const wordCount = Math.floor(Math.random() * 100); // Need to make this different depending on the granularity
       const examples: RecordComparison[] = [];
       const concepts: WikipediaConcept[] = FAKE_WIKI_CONCEPTS;
 
@@ -290,7 +305,8 @@ const generateComparisons = (
         label: collectionLabel,
         collection1,
         collection2,
-        similarity,
+        score,
+        wordCount,
         examples,
         concepts,
       });
@@ -305,23 +321,29 @@ const generateComparisons = (
 // All the granularities ("day", "week", "month", "year")
 const granularities: Granularity[] = ["day", "week", "month", "year"];
 // All the dream collections
-const dreams: CollectionParameters[] = [
+const dreamCollectionParams: CollectionParameters[] = [
   {
     label: "Dreams",
+    collectionLabel: "2020 Dreams",
     yearArray: [2020],
     fakeSimilarityWeighting: 1,
+    color: ColorTheme.BLUE,
   },
   {
     label: "Dreams",
+    collectionLabel: "2005-2010 Dreams",
     yearArray: [2005, 2006, 2007, 2008, 2009, 2010],
     fakeSimilarityWeighting: 0.5,
+    color: ColorTheme.RED,
   },
 ];
 // All the news
 const news: CollectionParameters = {
   label: "News",
+  collectionLabel: "2020 News Items",
   yearArray: [2020],
   fakeSimilarityWeighting: 1,
+  color: ColorTheme.RED,
 };
 
 const generateData = async () => {
@@ -338,35 +360,73 @@ const generateData = async () => {
 
   const dream2020Records = generateRecordDictionary(2000, dateRange2020);
   const dream2005_2010Records = generateRecordDictionary(2000, dateRange2005_2010);
+  const allDreamRecords: RecordDictionary = {
+    ...dream2020Records,
+    ...dream2005_2010Records,
+  };
   const newsRecords = generateRecordDictionary(2000, dateRange2020);
+
+  // type ComparisonCollection = {
+  //   label: string;
+  //   color: ColorTheme;
+  //   granularities: { [key in Granularity]: ComparisonSet[] };
+  // };
+
+  // type ComparisonSets = {
+  //   granularity: Granularity;
+  //   comparisonSets: ComparisonSet[];
+  // };
+
+  type Thing = {
+    label: string;
+    color: ColorTheme;
+    comparisons: ComparisonSet[];
+  };
+
+  type BigThing = {
+    granularity: Granularity;
+    comparisonSets: Thing[];
+  };
 
   // Generate comparisons
   // We want to generate a set of comparisons for every granularity (day, week, month, year)
   // and each combination of dreams and news (there is only one set of news)
-  const comparisonSets: { [key in Granularity]: ComparisonSet[] } = granularities.reduce(
+  const comparisonSets: { [key in Granularity]: BigThing } = granularities.reduce(
     (acc, granularity) => {
       // Compare dreams to news
-      const dreamComparisonSets = dreams.map(dreamParams =>
-        generateComparisons(
+      // There's only one news set, but multiple dream sets
+      const dreamComparisonSets = dreamCollectionParams.map(dreamParams => {
+        const comparisons = generateComparisons(
           dreamParams,
           news,
           granularity,
           dreamParams.fakeSimilarityWeighting
-        )
-      );
+        );
+        const ret: Thing = {
+          label: `${dreamParams.collectionLabel} vs ${news.collectionLabel}`,
+          color: dreamParams.color,
+          comparisons: comparisons,
+        };
+        return ret;
+      });
+
+      const dataForGranularity: BigThing = {
+        granularity: granularity,
+        comparisonSets: dreamComparisonSets,
+      };
+
       return {
         ...acc,
-        [granularity]: dreamComparisonSets.flat(),
+        [granularity]: dataForGranularity,
       };
     },
-    {} as { [key in Granularity]: ComparisonSet[] }
+    {} as { [key in Granularity]: BigThing }
   );
 
   const { week, month, year, day } = comparisonSets;
 
   return {
-    dreamsTest: dream2020Records,
-    dreamsControl: dream2005_2010Records,
+    dreams: allDreamRecords,
     news: newsRecords,
     monthComparisons: month,
     weekComparisons: week,
@@ -377,21 +437,19 @@ const generateData = async () => {
 
 generateData().then(data => {
   const {
-    dreamsTest,
-    dreamsControl,
+    dreams,
     news,
     monthComparisons,
     weekComparisons,
     yearComparisons,
     dayComparisons,
   } = data;
-  fs.writeFileSync("data/dreams-test.json", JSON.stringify(dreamsTest));
-  fs.writeFileSync("data/dreams-control.json", JSON.stringify(dreamsControl));
-  fs.writeFileSync("data/news.json", JSON.stringify(news));
-  fs.writeFileSync("data/monthComparisons.json", JSON.stringify(monthComparisons));
-  fs.writeFileSync("data/weekComparisons.json", JSON.stringify(weekComparisons));
-  fs.writeFileSync("data/yearComparisons.json", JSON.stringify(yearComparisons));
-  fs.writeFileSync("data/dayComparisons.json", JSON.stringify(dayComparisons));
+  fs.writeFileSync("public/data/dreams-test.json", JSON.stringify(dreams));
+  fs.writeFileSync("public/data/news.json", JSON.stringify(news));
+  fs.writeFileSync("public/data/monthComparisons.json", JSON.stringify(monthComparisons));
+  fs.writeFileSync("public/data/weekComparisons.json", JSON.stringify(weekComparisons));
+  fs.writeFileSync("public/data/yearComparisons.json", JSON.stringify(yearComparisons));
+  fs.writeFileSync("public/data/dayComparisons.json", JSON.stringify(dayComparisons));
 });
 
 export {};

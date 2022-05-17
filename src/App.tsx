@@ -1,18 +1,18 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import "./App.css";
-import { createFakeData } from "./modules/generateFakeData";
 import GraphContainer from "./graph/graph-container";
 import { useSelector } from "./ducks/root-reducer";
-import { fetchMonths, selectIsLoading } from "./ducks/data";
+import { BigThing, fetchMonths, selectComparisons, selectIsLoading } from "./ducks/data";
 import { useDispatch } from "react-redux";
 
 function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
+  const allComparisons = useSelector(selectComparisons);
 
-  const data = useMemo(() => {
-    return createFakeData();
-  }, []);
+  const monthData = allComparisons
+    ? allComparisons.month
+    : ({ granularity: "month", comparisonSets: [] } as BigThing);
 
   // Initial data fetch
   useEffect(() => {
@@ -34,7 +34,7 @@ function App() {
         className="App"
         style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
       >
-        {isLoading ? <div>Loading...</div> : <GraphContainer data={data} />}
+        {isLoading ? <div>Loading...</div> : <GraphContainer data={monthData} />}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
-import { ComparisonSets } from "../../types/types";
+import { BigThing } from "../ducks/data";
 
 type LegendProps = {
-  data: ComparisonSets;
+  data: BigThing;
   handleCheck: (index: number) => void;
   checkedState: Array<boolean>;
 };

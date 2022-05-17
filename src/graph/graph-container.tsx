@@ -1,15 +1,18 @@
 import { useRef, useState } from "react";
 import useComponentSize from "@rehooks/component-size";
-import { ComparisonSets } from "../../types/types";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import Legend from "./legend";
 import Graph from "./graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Granularity } from "../../types/type";
+import { BigThing } from "../ducks/data";
+import { useSelector } from "../ducks/root-reducer";
+import { selectActiveGranularity, setActiveGranularity } from "../ducks/ui";
+import { useDispatch } from "react-redux";
 
 type GraphProps = {
-  data: ComparisonSets;
+  data: BigThing;
 };
 
 export type FakeComparison = {
@@ -28,7 +31,8 @@ const timeLabels: { key: Granularity; label: string }[] = [
 ];
 
 function GraphContainer({ data }: GraphProps) {
-  const [activeTimePeriod, setActiveTimePeriod] = useState<Granularity>("month");
+  const dispatch = useDispatch();
+  const activeGranularity = useSelector(selectActiveGranularity);
 
   const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
 
@@ -108,13 +112,13 @@ function GraphContainer({ data }: GraphProps) {
           <div style={{ position: "absolute", right: 10, bottom: 10 }}>
             <span>View: </span>
             {timeLabels.map(({ key, label }) => {
-              const isActive = key === activeTimePeriod;
+              const isActive = key === activeGranularity;
               return (
                 <button
                   key={key}
                   className={isActive ? "selected" : "unselected"}
                   onClick={() => {
-                    setActiveTimePeriod(key);
+                    dispatch(setActiveGranularity(key));
                   }}
                 >
                   {label}

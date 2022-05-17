@@ -65,6 +65,7 @@ function Axes({
         const linePosition = topGraphEdge + i * monthTick;
         return (
           <line
+            key={i}
             x1={leftGraphEdge}
             y1={linePosition}
             x2={rightGraphEdge}

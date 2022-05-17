@@ -1,14 +1,17 @@
 import { scaleLinear } from "d3";
-import { ComparisonSets } from "../../types/types";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Ball } from "./ball";
 import { SplitBall } from "../ball/split-ball";
 import { FakeComparison } from "./graph-container";
+import { BigThing, MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
+import { Granularity } from "@kannydennedy/dreams-2020-types";
+import { useSelector } from "../ducks/root-reducer";
+import { selectActiveGranularity } from "../ducks/ui";
 
 type GraphProps = {
-  data: ComparisonSets;
+  data: BigThing;
   maxTimeDistance: number; // We only show comparisons that fall within this range
   width: number;
   height: number;
@@ -24,6 +27,11 @@ type GraphProps = {
 function getRadius(wordLength: number): number {
   return Math.floor(wordLength / 100);
 }
+
+const getDomain = (granularity: Granularity): [number, number] => {
+  const maxDist = MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity];
+  return [maxDist * -1, maxDist];
+};
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
@@ -42,11 +50,10 @@ function Graph({
   setFocusedComparison,
   setPrevFocusedComparison,
 }: GraphProps) {
-  // For scaleY, the time difference between a dream and a news source is max one year
-  // So we only scale for that, but just reflect it around the X axis in getYAxisPosition
-  const scaleY = scaleLinear()
-    .domain([maxTimeDistance * -1, maxTimeDistance])
-    .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
+  // We need to know the active granularity to determine the scale
+  const activeGranularity = useSelector(selectActiveGranularity);
+  const domain = getDomain(activeGranularity);
+  // const numStopsAboveAxis = getDomain(activeGranularity);
 
   // Same as scale y, but all positive inputs
   const tickScale = scaleLinear()
@@ -57,30 +64,9 @@ function Graph({
     .domain([0, 2])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
 
-  // Basically we need to:
-  // 1) Get the distance between the news and its year start
-  // 2) Get the distance between the dream and its year start
-  // 3) Get the distance between these distances
-  const getYAxisPosition = (
-    dreamDateTime: number,
-    newsDateTime: number,
-    dreamCollectionTimePeriodStart: number,
-    newsCollectionTimePeriodStart: number
-  ) => {
-    // 1) Get the distance between the news and its year start
-    const newsTimeDistance = newsDateTime - newsCollectionTimePeriodStart;
-
-    // 2) Get the distance between the dream and its year start
-    const dreamTimeDistance = dreamDateTime - dreamCollectionTimePeriodStart;
-
-    // 3) Get the distance between these distances
-    // If this number is negative, the dream happened before the news
-    // If it's positive, the dream happened after the news
-    const distance = dreamTimeDistance - newsTimeDistance;
-
-    const absoluteGraphDistance = scaleY(distance);
-    return absoluteGraphDistance;
-  };
+  const scaleYDiscrete = scaleLinear()
+    .domain(domain)
+    .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
   return (
     <svg width={width} height={height}>
@@ -102,37 +88,28 @@ function Graph({
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
         return comparisonSet.comparisons.map((comparison, i) => {
-          const { dreamCollection, newsCollection } = comparisonSet;
+          const { collection1, collection2, score, wordCount } = comparison;
 
-          const dream = dreamCollection.dreams[comparison.dreamId];
-          const news = newsCollection.news[comparison.newsId];
+          console.log(comparison);
 
-          const endX = scaleX(comparison.score);
-          const endY =
-            graphPadding.TOP +
-            getYAxisPosition(
-              dream.date.getTime(),
-              news.date.getTime(),
-              dreamCollection.timePeriodStartDate.getTime(),
-              newsCollection.timePeriodStartDate.getTime()
-            );
+          const index1 = collection1.timePeriod.index;
+          const index2 = collection2.timePeriod.index;
 
           const startPoint: [number, number] = [width / 2, height / 2];
-          // const startPoint: [number, number] = [536.5, 300];
-
-          // console.log(startPoint);
+          const endX = scaleX(score);
+          const endY = graphPadding.TOP + scaleYDiscrete(index1 - index2);
 
           return (
             <Ball
               startPoint={startPoint}
               endPoint={[endX, endY]}
               key={i}
-              r={getRadius(dream.text.length + news.text.length)}
+              r={getRadius(wordCount * 10)} // TODO: Make this a function of the word length
               stroke={changeHslLightness(comparisonSet.color, -10)}
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
               onMouseOver={e => {
-                (handleMouseOver as any)(e, dream.text);
+                (handleMouseOver as any)(e, comparison.label);
               }}
               opacity={checkedState[setIndex] ? (focusedComparison ? 0.2 : 1) : 0}
               onMouseOut={hideTooltip}
@@ -141,13 +118,57 @@ function Graph({
                   x: endX,
                   y: endY,
                   color: comparisonSet.color,
-                  concepts: comparisonSet.comparisons[0].topCommonConceptIds,
-                  startRadius: getRadius(dream.text.length + news.text.length),
+                  concepts: comparisonSet.comparisons[0].concepts.map(c => c.title),
+                  startRadius: getRadius(wordCount * 10), // TODO
                 });
               }}
             />
           );
         });
+
+        // return comparisonSet.comparisons.map((comparison, i) => {
+        //   const { collection1: dreamCollection, collection2: newsCollection } =
+        //     comparisonSet;
+        //   const dream = dreamCollection.dreams[comparison.dreamId];
+        //   const news = newsCollection.news[comparison.newsId];
+        //   const endX = scaleX(comparison.score);
+        //   const endY =
+        //     graphPadding.TOP +
+        //     getYAxisPosition(
+        //       dream.date.getTime(),
+        //       news.date.getTime(),
+        //       dreamCollection.timePeriodStartDate.getTime(),
+        //       newsCollection.timePeriodStartDate.getTime()
+        //     );
+        //   const startPoint: [number, number] = [width / 2, height / 2];
+        //   // const startPoint: [number, number] = [536.5, 300];
+        //   // console.log(startPoint);
+        //   return (
+        //     <Ball
+        //       startPoint={startPoint}
+        //       endPoint={[endX, endY]}
+        //       key={i}
+        //       r={getRadius(dream.text.length + news.text.length)}
+        //       stroke={changeHslLightness(comparisonSet.color, -10)}
+        //       strokeWidth={LINE_WIDTH}
+        //       fill={comparisonSet.color}
+        //       onMouseOver={e => {
+        //         (handleMouseOver as any)(e, dream.text);
+        //       }}
+        //       opacity={checkedState[setIndex] ? (focusedComparison ? 0.2 : 1) : 0}
+        //       onMouseOut={hideTooltip}
+        //       onClick={() => {
+        //         setFocusedComparison({
+        //           x: endX,
+        //           y: endY,
+        //           color: comparisonSet.color,
+        //           concepts: comparisonSet.comparisons[0].topCommonConceptIds,
+        //           startRadius: getRadius(dream.text.length + news.text.length),
+        //         });
+        //       }}
+        //     />
+        //   );
+        // });
       })}
       {/* Transparent overlay */}
       {focusedComparison && (

@@ -17,5 +17,6 @@
     "jsx": "react-jsx",
     "module": "commonjs"
   },
+  "esModuleInterop": true,
   "include": ["src", "types/types.ts", "types/type.ts"]
 }

@@ -1,4 +1,5 @@
 import { ColorTheme } from "../src/modules/theme";
+import { Granularity } from "@kannydennedy/dreams-2020-types";
 
 export type Point = [number, number];
 export type Focus = "focused" | "unfocused";
@@ -77,5 +78,6 @@ export type ComparisonSet = {
 
 //
 export type ComparisonSets = {
+  granularity: Granularity;
   comparisonSets: ComparisonSet[];
 };

@@ -163,6 +163,7 @@ export const createFakeData = (): ComparisonSets => {
   };
 
   return {
+    granularity: "month",
     comparisonSets: [comparisonSet1, comparisonSet2],
   };
 };
