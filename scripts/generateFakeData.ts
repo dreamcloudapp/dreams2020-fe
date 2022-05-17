@@ -17,7 +17,7 @@ import { Granularity } from "@kannydennedy/dreams-2020-types";
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
   day: 2, // 2 days max between day comparisons
   week: 4, // 3 weeks max between week comparisons
-  month: 12, // 12 months max between month comparisons
+  month: 11, // 11 months max between month comparisons (since we only compare January to December, not January to January)
   year: 30, // 30 years max between year comparisons
 };
 

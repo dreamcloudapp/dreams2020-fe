@@ -40,8 +40,6 @@ function GraphContainer({ data }: GraphProps) {
   const [prevFocusedComparison, setPrevFocusedComparison] =
     useState<FakeComparison | null>(null);
 
-  // console.log(`max time distance is ${millisecondsToYear(maxTimeDistance)} year(s)`);
-
   const [checkedState, setCheckedState] = useState(
     [...new Array(comparisonSetLabels.length)].map(_ => true)
   );

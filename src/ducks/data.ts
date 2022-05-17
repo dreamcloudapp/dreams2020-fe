@@ -85,7 +85,7 @@ export type ComparisonSets = {
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
   day: 2, // 2 days max between day comparisons
   week: 4, // 3 weeks max between week comparisons
-  month: 12, // 12 months max between month comparisons
+  month: 11, // 11 months max between month comparisons (since we only compare January to December, not January to January)
   year: 30, // 30 years max between year comparisons
 };
 
@@ -119,6 +119,21 @@ export default dataSlice;
 
 export const selectComparisons = (state: RootState): BigBigThing | undefined => {
   return state?.data.comparisons;
+};
+
+// Get the comparison sets for a given granularity
+export const selectComparisonsByGranularity = (
+  granularity: Granularity,
+  state: RootState
+): BigThing => {
+  if (state.data.comparisons) {
+    return state.data.comparisons[granularity];
+  } else {
+    return {
+      granularity: granularity,
+      comparisonSets: [],
+    };
+  }
 };
 
 export const selectIsLoading = (state: RootState): boolean => {
