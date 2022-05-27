@@ -90,6 +90,9 @@ const mergeComparisonDictionaries = (
 // and combine them in memory
 const files = fs.readdirSync(path.join(__dirname, "../source-data"));
 
+var maxSimilarity = 0;
+var minSimilarity = 1;
+
 const data: ComparisonDictionary = files.reduce(
   (dataAcc: ComparisonDictionary, file: any) => {
     // Read the file
@@ -112,6 +115,10 @@ const data: ComparisonDictionary = files.reduce(
       // For a given file, the records may belong to different "coloured collections"
       const comparisonDictionary: ComparisonDictionary = comparisonSets.reduce(
         (acc, set) => {
+          // Not pretty, but let's update the max and min similarity here
+          if (set.score > maxSimilarity) maxSimilarity = set.score;
+          if (set.score < minSimilarity) minSimilarity = set.score;
+
           const key = getColouredCollectionKey(
             set.collection2.timePeriod.start,
             colouredCollectionRanges
@@ -138,6 +145,8 @@ const data: ComparisonDictionary = files.reduce(
 // Convert our dictionary to a big fat GranularityComparisonCollection
 const bigCollection: GranularityComparisonCollection = {
   granularity: "day",
+  maxSimilarity: maxSimilarity,
+  minSimilarity: minSimilarity,
   comparisonSets: [],
 };
 

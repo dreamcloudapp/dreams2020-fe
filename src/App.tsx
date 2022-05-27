@@ -16,6 +16,8 @@ function App() {
   // For when allComparisons hasn't loaded yet
   const defaultData: GranularityComparisonCollection = {
     comparisonSets: [],
+    maxSimilarity: 1,
+    minSimilarity: 0,
     granularity: activeGranularity,
   };
 

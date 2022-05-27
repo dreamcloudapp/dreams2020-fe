@@ -12,7 +12,7 @@ import {
   WikipediaConcept,
   ExampleRecordComparison,
   ComparisonSet,
-  CollectionWithinGranularity,
+  ColoredSetWithinGranularity,
   GranularityComparisonCollection,
   DateTimeRange,
 } from "@kannydennedy/dreams-2020-types";
@@ -333,7 +333,7 @@ const generateData = async () => {
           granularity,
           dreamParams.fakeSimilarityWeighting
         );
-        const ret: CollectionWithinGranularity = {
+        const ret: ColoredSetWithinGranularity = {
           label: `${dreamParams.collectionLabel} vs ${news.collectionLabel}`,
           color: dreamParams.color,
           comparisons: comparisons,
@@ -343,6 +343,8 @@ const generateData = async () => {
 
       const dataForGranularity: GranularityComparisonCollection = {
         granularity: granularity,
+        maxSimilarity: 2,
+        minSimilarity: 0,
         comparisonSets: dreamComparisonSets,
       };
 

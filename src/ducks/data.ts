@@ -67,6 +67,8 @@ export const selectComparisonsByGranularity = (
   } else {
     return {
       granularity: granularity,
+      maxSimilarity: 1,
+      minSimilarity: 0,
       comparisonSets: [],
     };
   }

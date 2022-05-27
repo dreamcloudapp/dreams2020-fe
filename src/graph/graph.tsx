@@ -64,7 +64,7 @@ function Graph({
     .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
   const scaleX = scaleLinear()
-    .domain([0, 2])
+    .domain([0, data.maxSimilarity])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
 
   const scaleYDiscrete = scaleLinear()
@@ -126,50 +126,6 @@ function Graph({
             />
           );
         });
-
-        // return comparisonSet.comparisons.map((comparison, i) => {
-        //   const { collection1: dreamCollection, collection2: newsCollection } =
-        //     comparisonSet;
-        //   const dream = dreamCollection.dreams[comparison.dreamId];
-        //   const news = newsCollection.news[comparison.newsId];
-        //   const endX = scaleX(comparison.score);
-        //   const endY =
-        //     graphPadding.TOP +
-        //     getYAxisPosition(
-        //       dream.date.getTime(),
-        //       news.date.getTime(),
-        //       dreamCollection.timePeriodStartDate.getTime(),
-        //       newsCollection.timePeriodStartDate.getTime()
-        //     );
-        //   const startPoint: [number, number] = [width / 2, height / 2];
-        //   // const startPoint: [number, number] = [536.5, 300];
-        //   // console.log(startPoint);
-        //   return (
-        //     <Ball
-        //       startPoint={startPoint}
-        //       endPoint={[endX, endY]}
-        //       key={i}
-        //       r={getRadius(dream.text.length + news.text.length)}
-        //       stroke={changeHslLightness(comparisonSet.color, -10)}
-        //       strokeWidth={LINE_WIDTH}
-        //       fill={comparisonSet.color}
-        //       onMouseOver={e => {
-        //         (handleMouseOver as any)(e, dream.text);
-        //       }}
-        //       opacity={checkedState[setIndex] ? (focusedComparison ? 0.2 : 1) : 0}
-        //       onMouseOut={hideTooltip}
-        //       onClick={() => {
-        //         setFocusedComparison({
-        //           x: endX,
-        //           y: endY,
-        //           color: comparisonSet.color,
-        //           concepts: comparisonSet.comparisons[0].topCommonConceptIds,
-        //           startRadius: getRadius(dream.text.length + news.text.length),
-        //         });
-        //       }}
-        //     />
-        //   );
-        // });
       })}
       {/* Transparent overlay */}
       {focusedComparison && (
