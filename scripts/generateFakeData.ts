@@ -16,6 +16,7 @@ import {
   GranularityComparisonCollection,
   DateTimeRange,
 } from "@kannydennedy/dreams-2020-types";
+const { isLeapYear, addDays } = require("./modules/time-helpers");
 
 /////////////// TYPES ///////////////
 
@@ -34,18 +35,6 @@ export enum ColorTheme {
   RED = "hsl(10, 90%, 60%)",
   BLUE = "hsl(220, 90%, 60%)",
 }
-
-// Determine if a year is a leap year
-const isLeapYear = (year: number): boolean => {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-};
-
-// Add a specified number of days to a date
-const addDays = (date: Date, days: number): Date => {
-  const newDate = new Date(date);
-  newDate.setDate(newDate.getDate() + days);
-  return newDate;
-};
 
 // Given a granularity, index and year range, return a string representing the time period
 // E.g:

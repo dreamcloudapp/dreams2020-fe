@@ -1,13 +1,13 @@
 import {
   ComparisonSet,
   CollectionParams,
-  GranularityComparisonCollection,
   WikipediaConcept,
   ExampleRecordComparison,
   SheldonConcept,
   SheldonExample,
   SheldonRecord,
 } from "@kannydennedy/dreams-2020-types";
+const { getDayIndexFromDate } = require("./time-helpers");
 
 // Function to capitalise the first letter of a string
 const capitalizeFirstLetter = (string: string): string => {
@@ -28,18 +28,25 @@ function sheldonConceptToWikipediaConcept(
 
 // Convert Sheldon Example to ExampleRecordComparison
 const sheldonExampleToExampleRecordComparison = (
-  sheldonExample: SheldonExample
+  sheldonExample: SheldonExample,
+  numConceptsPerComparison: number
 ): ExampleRecordComparison => {
   return {
     dreamText: sheldonExample.doc1Id, // TODO
     newsText: sheldonExample.doc2Id, // TODO
     score: sheldonExample.score,
-    concepts: sheldonExample.topConcepts.map(sheldonConceptToWikipediaConcept),
+    concepts: sheldonExample.topConcepts
+      .slice(0, numConceptsPerComparison)
+      .map(sheldonConceptToWikipediaConcept),
   };
 };
 
 // Convert a SheldonRecord to a ComparisonSet
-const convertSheldonRecordToComparisonSet = (record: SheldonRecord): ComparisonSet => {
+export const convertSheldonRecordToComparisonSet = (
+  record: SheldonRecord,
+  numConceptsPerComparison: number,
+  numExamplesPerComparison: number
+): ComparisonSet => {
   // Get dates of set1 and set2
   const set1Date = new Date(record.set1Date);
   const set2Date = new Date(record.set2Date);
@@ -51,7 +58,7 @@ const convertSheldonRecordToComparisonSet = (record: SheldonRecord): ComparisonS
     label: "Dreams",
     timePeriod: {
       granularity: "day",
-      index: 1, // Gammin
+      index: getDayIndexFromDate(set1Date),
       identifier: record.set1Date + " - " + record.set1Name,
       start: set1Date,
       end: set1Date,
@@ -61,14 +68,18 @@ const convertSheldonRecordToComparisonSet = (record: SheldonRecord): ComparisonS
     label: "News",
     timePeriod: {
       granularity: "day",
-      index: 1, // Gammin
+      index: getDayIndexFromDate(set2Date),
       identifier: record.set2Date + " - " + record.set2Name,
       start: set2Date,
       end: set2Date,
     },
   };
-  const concepts = record.topConcepts.map(sheldonConceptToWikipediaConcept);
-  const examples = record.examples.map(sheldonExampleToExampleRecordComparison);
+  const concepts = record.topConcepts
+    .slice(0, numConceptsPerComparison)
+    .map(sheldonConceptToWikipediaConcept);
+  const examples = record.examples
+    .slice(0, numExamplesPerComparison)
+    .map(e => sheldonExampleToExampleRecordComparison(e, numConceptsPerComparison));
 
   return {
     id: record.set1Date + " - " + record.set2Date,
@@ -82,5 +93,3 @@ const convertSheldonRecordToComparisonSet = (record: SheldonRecord): ComparisonS
     wordCount: record.wordCount,
   };
 };
-
-module.exports = { convertSheldonRecordToComparisonSet };

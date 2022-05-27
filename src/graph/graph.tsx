@@ -93,8 +93,6 @@ function Graph({
         return comparisonSet.comparisons.map((comparison, i) => {
           const { collection1, collection2, score, wordCount } = comparison;
 
-          console.log(comparison);
-
           const index1 = collection1.timePeriod.index;
           const index2 = collection2.timePeriod.index;
 
