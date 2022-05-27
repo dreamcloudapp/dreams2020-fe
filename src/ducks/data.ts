@@ -3,77 +3,13 @@ import { createSlice, PayloadAction, Dispatch } from "@reduxjs/toolkit";
 // import { debounce } from "lodash/fp";
 import { AppThunk } from "./store";
 import { RootState } from "./root-reducer";
-import { Granularity } from "@kannydennedy/dreams-2020-types";
-import { ColorTheme } from "../modules/theme";
+import {
+  Granularity,
+  ComparisonSet,
+  GranularityComparisonCollection,
+} from "@kannydennedy/dreams-2020-types";
 
-// It's an interesting question how to compare time periods across years
-// For months, it's easy -> just compare the month number
-// For weeks, we compare the week number, but we have to know that Feb. 29 creates an "8 day week", as does December 31.
-// For days, we say that February 28-29 is the same day.
-type TimePeriod = {
-  granularity: Granularity;
-  identifier: string; // something that uniquely identifies the time period. E.g. "March", "Week 40", or "Feb 27"
-  index: number; // e.g. 0 for January, 1 for February, 1 for the first of the month, etc.
-};
-
-type WikipediaConcept = {
-  title: string;
-  link: string;
-};
-
-type Thing = {
-  label: string;
-  color: ColorTheme;
-  comparisons: ComparisonSet[];
-};
-
-export type BigThing = {
-  granularity: Granularity;
-  comparisonSets: Thing[];
-};
-
-export type BigBigThing = { [key in Granularity]: BigThing };
-
-// Dream Record or News Record
-// type ItemRecord = {
-//   id: number;
-//   text: String;
-//   date: Date;
-// };
-
-// Set of records keyed by id
-// type RecordDictionary = {
-//   [key: number]: ItemRecord;
-// };
-
-// type DateTimeRange = {
-//   from: Date;
-//   to: Date;
-// };
-
-type RecordComparison = {
-  score: number;
-  dreamId: number;
-  newsId: number;
-  concepts: WikipediaConcept[];
-};
-
-type CollectionParams = {
-  label: string;
-  timePeriod: TimePeriod;
-};
-
-type ComparisonSet = {
-  id: string;
-  granularity: Granularity; // "day", "week", "month", "year"
-  label: string; // E.g. "March 2020 Dreams vs. April 2020 News"
-  collection1: CollectionParams;
-  collection2: CollectionParams;
-  score: number;
-  wordCount: number;
-  examples: RecordComparison[];
-  concepts: WikipediaConcept[];
-};
+export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
 
 export type ComparisonSets = {
   granularity: Granularity;
@@ -125,7 +61,7 @@ export const selectComparisons = (state: RootState): BigBigThing | undefined => 
 export const selectComparisonsByGranularity = (
   granularity: Granularity,
   state: RootState
-): BigThing => {
+): GranularityComparisonCollection => {
   if (state.data.comparisons) {
     return state.data.comparisons[granularity];
   } else {

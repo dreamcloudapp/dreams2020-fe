@@ -5,13 +5,16 @@ import { changeHslLightness } from "../modules/colorHelpers";
 import { Ball } from "./ball";
 import { SplitBall } from "../ball/split-ball";
 import { FakeComparison } from "./graph-container";
-import { BigThing, MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
-import { Granularity } from "@kannydennedy/dreams-2020-types";
+import { MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
+import {
+  Granularity,
+  GranularityComparisonCollection,
+} from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
 import { selectActiveGranularity } from "../ducks/ui";
 
 type GraphProps = {
-  data: BigThing;
+  data: GranularityComparisonCollection;
   maxTimeDistance: number; // We only show comparisons that fall within this range
   width: number;
   height: number;

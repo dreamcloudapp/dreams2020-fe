@@ -6,13 +6,13 @@ import Legend from "./legend";
 import Graph from "./graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Granularity } from "../../types/type";
-import { BigThing } from "../ducks/data";
+import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
 import { selectActiveGranularity, setActiveGranularity } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 
 type GraphProps = {
-  data: BigThing;
+  data: GranularityComparisonCollection;
 };
 
 export type FakeComparison = {

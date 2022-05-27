@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import "./App.css";
 import GraphContainer from "./graph/graph-container";
 import { useSelector } from "./ducks/root-reducer";
-import { BigThing, fetchMonths, selectComparisons, selectIsLoading } from "./ducks/data";
+import { fetchMonths, selectComparisons, selectIsLoading } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import { selectActiveGranularity } from "./ducks/ui";
+import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 
 function App() {
   const dispatch = useDispatch();
@@ -13,12 +14,14 @@ function App() {
   const activeGranularity = useSelector(selectActiveGranularity);
 
   // For when allComparisons hasn't loaded yet
-  const defaultData: BigThing = {
+  const defaultData: GranularityComparisonCollection = {
     comparisonSets: [],
     granularity: activeGranularity,
   };
 
-  const data: BigThing = allComparisons ? allComparisons[activeGranularity] : defaultData;
+  const data: GranularityComparisonCollection = allComparisons
+    ? allComparisons[activeGranularity]
+    : defaultData;
 
   // Initial data fetch
   useEffect(() => {

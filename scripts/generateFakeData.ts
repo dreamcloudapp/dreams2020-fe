@@ -5,31 +5,35 @@ const {
   LAST_WEEK_OF_YEAR_INDEX,
   LOREM,
   SHORT_MONTHS,
+  FAKE_EXAMPLE_COMPARISONS,
 } = require("./fakeConstants");
-import { Granularity } from "@kannydennedy/dreams-2020-types";
+import {
+  Granularity,
+  WikipediaConcept,
+  ExampleRecordComparison,
+  ComparisonSet,
+  CollectionWithinGranularity,
+  GranularityComparisonCollection,
+  DateTimeRange,
+} from "@kannydennedy/dreams-2020-types";
 
 /////////////// TYPES ///////////////
 
-// type Granularity = "day" | "week" | "month" | "year";
-
 // The maximum time index distance for a given granularity
 // E.g. for granularity "month", the max distance is 11
-export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
+export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: {
+  [key in Granularity]: number;
+} = {
   day: 2, // 2 days max between day comparisons
   week: 4, // 3 weeks max between week comparisons
   month: 11, // 11 months max between month comparisons (since we only compare January to December, not January to January)
   year: 30, // 30 years max between year comparisons
 };
 
-// It's an interesting question how to compare time periods across years
-// For months, it's easy -> just compare the month number
-// For weeks, we compare the week number, but we have to know that Feb. 29 creates an "8 day week", as does December 31.
-// For days, we say that February 28-29 is the same day.
-type TimePeriod = {
-  granularity: Granularity;
-  identifier: string; // something that uniquely identifies the time period. E.g. "March", "Week 40", or "Feb 27"
-  index: number; // e.g. 0 for January, 1 for February, 1 for the first of the month, etc.
-};
+export enum ColorTheme {
+  RED = "hsl(10, 90%, 60%)",
+  BLUE = "hsl(220, 90%, 60%)",
+}
 
 // Determine if a year is a leap year
 const isLeapYear = (year: number): boolean => {
@@ -129,11 +133,6 @@ const getDateFromWeekNumber = (year: number, weekNumber: number): Date => {
   return d;
 };
 
-type WikipediaConcept = {
-  title: string;
-  link: string;
-};
-
 // Dream Record or News Record
 type ItemRecord = {
   id: number;
@@ -144,45 +143,6 @@ type ItemRecord = {
 // Set of records keyed by id
 type RecordDictionary = {
   [key: number]: ItemRecord;
-};
-
-type DateTimeRange = {
-  from: Date;
-  to: Date;
-};
-
-type RecordComparison = {
-  score: number;
-  dreamId: number;
-  newsId: number;
-  concepts: WikipediaConcept[];
-};
-
-type CollectionParams = {
-  label: string;
-  timePeriod: TimePeriod;
-};
-
-export enum ColorTheme {
-  RED = "hsl(10, 90%, 60%)",
-  BLUE = "hsl(220, 90%, 60%)",
-}
-
-type ComparisonSet = {
-  id: string;
-  granularity: Granularity; // "day", "week", "month", "year"
-  label: string; // E.g. "March 2020 Dreams vs. April 2020 News"
-  collection1: CollectionParams;
-  collection2: CollectionParams;
-  score: number;
-  wordCount: number;
-  examples: RecordComparison[];
-  concepts: WikipediaConcept[];
-};
-
-type ComparisonSets = {
-  granularity: Granularity;
-  comparisonSets: ComparisonSet[];
 };
 
 /////////////// CONSTANTS ///////////////
@@ -284,6 +244,8 @@ const generateComparisons = (
           granularity: granularity,
           index: i,
           identifier: timeLabel1,
+          start: new Date(), // TODO: make this real
+          end: new Date(),
         },
       };
       const collection2 = {
@@ -292,11 +254,13 @@ const generateComparisons = (
           granularity: granularity,
           index: j,
           identifier: timeLabel2,
+          start: new Date(),
+          end: new Date(),
         },
       };
       const score = Math.random() * weighting * 2;
       const wordCount = Math.floor(Math.random() * 100); // Need to make this different depending on the granularity
-      const examples: RecordComparison[] = [];
+      const examples: ExampleRecordComparison[] = FAKE_EXAMPLE_COMPARISONS;
       const concepts: WikipediaConcept[] = FAKE_WIKI_CONCEPTS;
 
       comparisons.push({
@@ -366,33 +330,11 @@ const generateData = async () => {
   };
   const newsRecords = generateRecordDictionary(2000, dateRange2020);
 
-  // type ComparisonCollection = {
-  //   label: string;
-  //   color: ColorTheme;
-  //   granularities: { [key in Granularity]: ComparisonSet[] };
-  // };
-
-  // type ComparisonSets = {
-  //   granularity: Granularity;
-  //   comparisonSets: ComparisonSet[];
-  // };
-
-  type Thing = {
-    label: string;
-    color: ColorTheme;
-    comparisons: ComparisonSet[];
-  };
-
-  type BigThing = {
-    granularity: Granularity;
-    comparisonSets: Thing[];
-  };
-
   // Generate comparisons
   // We want to generate a set of comparisons for every granularity (day, week, month, year)
   // and each combination of dreams and news (there is only one set of news)
-  const comparisonSets: { [key in Granularity]: BigThing } = granularities.reduce(
-    (acc, granularity) => {
+  const comparisonSets: { [key in Granularity]: GranularityComparisonCollection } =
+    granularities.reduce((acc, granularity) => {
       // Compare dreams to news
       // There's only one news set, but multiple dream sets
       const dreamComparisonSets = dreamCollectionParams.map(dreamParams => {
@@ -402,7 +344,7 @@ const generateData = async () => {
           granularity,
           dreamParams.fakeSimilarityWeighting
         );
-        const ret: Thing = {
+        const ret: CollectionWithinGranularity = {
           label: `${dreamParams.collectionLabel} vs ${news.collectionLabel}`,
           color: dreamParams.color,
           comparisons: comparisons,
@@ -410,7 +352,7 @@ const generateData = async () => {
         return ret;
       });
 
-      const dataForGranularity: BigThing = {
+      const dataForGranularity: GranularityComparisonCollection = {
         granularity: granularity,
         comparisonSets: dreamComparisonSets,
       };
@@ -419,9 +361,7 @@ const generateData = async () => {
         ...acc,
         [granularity]: dataForGranularity,
       };
-    },
-    {} as { [key in Granularity]: BigThing }
-  );
+    }, {} as { [key in Granularity]: GranularityComparisonCollection });
 
   const { week, month, year, day } = comparisonSets;
 

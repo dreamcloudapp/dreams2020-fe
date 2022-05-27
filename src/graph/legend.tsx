@@ -1,7 +1,7 @@
-import { BigThing } from "../ducks/data";
+import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 
 type LegendProps = {
-  data: BigThing;
+  data: GranularityComparisonCollection;
   handleCheck: (index: number) => void;
   checkedState: Array<boolean>;
 };

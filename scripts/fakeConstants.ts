@@ -1,23 +1,60 @@
-const FAKE_WIKI_CONCEPTS = [
+import {
+  WikipediaConcept,
+  ExampleRecordComparison,
+} from "@kannydennedy/dreams-2020-types";
+
+const FAKE_WIKI_CONCEPTS: WikipediaConcept[] = [
   {
     title: "COVID-19",
     link: "https://en.wikipedia.org/wiki/COVID-19",
+    score: 0.5,
   },
   {
     title: "Donald Trump",
     link: "https://en.wikipedia.org/wiki/Donald_Trump",
+    score: 0.6,
   },
   {
-    title: "Dog",
-    link: "https://en.wikipedia.org/wiki/Dog",
+    title: "USA",
+    link: "https://en.wikipedia.org/wiki/USA",
+    score: 0.7,
   },
   {
-    title: "Cat",
-    link: "https://en.wikipedia.org/wiki/Cat",
+    title: "Joe Biden",
+    link: "https://en.wikipedia.org/wiki/Joe_Biden",
+    score: 0.8,
   },
   {
     title: "Al Gore",
     link: "https://en.wikipedia.org/wiki/Al_Gore",
+    score: 0.9,
+  },
+];
+
+const FAKE_WIKI_CONCEPTS_2: WikipediaConcept[] = [
+  {
+    title: "Dog",
+    link: "https://en.wikipedia.org/wiki/Dog",
+    score: 0.7,
+  },
+  {
+    title: "Cat",
+    link: "https://en.wikipedia.org/wiki/Cat",
+    score: 0.8,
+  },
+  {
+    title: "Park",
+    link: "https://en.wikipedia.org/wiki/Park",
+    score: 0.4,
+  },
+];
+
+export const FAKE_EXAMPLE_COMPARISONS: ExampleRecordComparison[] = [
+  {
+    dreamText: "I dreamt about a dog.",
+    newsText: "A news article about a dog.",
+    score: 0.6,
+    concepts: FAKE_WIKI_CONCEPTS_2,
   },
 ];
 
