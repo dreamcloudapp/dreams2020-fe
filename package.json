@@ -35,8 +35,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "generate": "npx ts-node scripts/generateFakeData.ts",
-    "data": "npx ts-node scripts/generateRealDataFromFiles.ts"
+    "fakedata": "npx ts-node scripts/generateFakeData.ts",
+    "realdata": "npx ts-node scripts/generateRealData.ts"
   },
   "eslintConfig": {
     "extends": [

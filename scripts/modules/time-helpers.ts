@@ -1,5 +1,6 @@
 const MILLISECONDS_IN_DAY = 1000 * 60 * 60 * 24;
 const FEB_28_INDEX = 58;
+const LAST_DAY_OF_YEAR_INDEX = 364;
 
 // Determine if a year is a leap year
 export const isLeapYear = (year: number): boolean => {
@@ -41,4 +42,21 @@ export const getDayIndexFromDate = (date: Date): number => {
   } else {
     return dayIndex;
   }
+};
+
+// Basically, get "what number week in the year is this date?" (0-52)
+export const getWeekIndexFromDate = (date: Date): number => {
+  const dayIndex = getDayIndexFromDate(date);
+
+  // 365 days in a year (366 in a leap year, but this is normalised by getDayIndexFromDate)
+  // 364 is divisible by 7, so we just need to count December 30 and 31 as one 'day'.
+  const normalisedDayIndex =
+    dayIndex === LAST_DAY_OF_YEAR_INDEX ? LAST_DAY_OF_YEAR_INDEX - 1 : dayIndex;
+
+  return Math.floor(normalisedDayIndex / 7);
+};
+
+// Get "what number month in the year is this date?" (0-11)
+export const getMonthIndexFromDate = (date: Date): number => {
+  return date.getMonth();
 };

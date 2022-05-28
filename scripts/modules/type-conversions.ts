@@ -14,6 +14,14 @@ const capitalizeFirstLetter = (string: string): string => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+// Print dates like "Jan 1 2020"
+const prettyPrintDate = (date: Date): string => {
+  const month = capitalizeFirstLetter(date.toLocaleString("en-us", { month: "long" }));
+  const day = date.getDate();
+  const year = date.getFullYear();
+  return `${month} ${day} ${year}`;
+};
+
 // Convert a SheldonConcept to a WikipediaConcept
 function sheldonConceptToWikipediaConcept(
   sheldonConcept: SheldonConcept
@@ -74,6 +82,11 @@ export const convertSheldonRecordToComparisonSet = (
       end: set2Date,
     },
   };
+
+  const label = `Dreams from ${prettyPrintDate(set1Date)} vs. news from ${prettyPrintDate(
+    set2Date
+  )}`;
+
   const concepts = record.topConcepts
     .slice(0, numConceptsPerComparison)
     .map(sheldonConceptToWikipediaConcept);
@@ -82,9 +95,9 @@ export const convertSheldonRecordToComparisonSet = (
     .map(e => sheldonExampleToExampleRecordComparison(e, numConceptsPerComparison));
 
   return {
-    id: record.set1Date + " - " + record.set2Date,
+    id: record.set1Date + "_" + record.set2Date,
     granularity: "day",
-    label: record.set1Date + " - " + record.set2Date,
+    label: label,
     collection1: collection1,
     collection2: collection2,
     concepts: concepts,
