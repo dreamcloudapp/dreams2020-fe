@@ -11,7 +11,7 @@ import {
   GranularityComparisonCollection,
 } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
-import { selectActiveGranularity } from "../ducks/ui";
+import { selectActiveGranularity, CollectionCheck } from "../ducks/ui";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
@@ -19,7 +19,7 @@ type GraphProps = {
   width: number;
   height: number;
   handleMouseOver: (event: any, datum: any) => void;
-  checkedState: boolean[];
+  checkedCollections: CollectionCheck[];
   hideTooltip: () => void;
   focusedComparison: FakeComparison | null;
   prevFocusedComparison: FakeComparison | null;
@@ -42,12 +42,12 @@ function Graph({
   height,
   maxTimeDistance,
   handleMouseOver,
-  checkedState,
   hideTooltip,
   focusedComparison,
   prevFocusedComparison,
   setFocusedComparison,
   setPrevFocusedComparison,
+  checkedCollections,
 }: GraphProps) {
   // We need to know the active granularity to determine the scale
   const activeGranularity = useSelector(selectActiveGranularity);
@@ -122,7 +122,13 @@ function Graph({
                   </div>
                 );
               }}
-              opacity={checkedState[setIndex] ? (focusedComparison ? 0.2 : 1) : 0}
+              opacity={
+                checkedCollections.find(c => c.label === comparisonSet.label)?.checked
+                  ? focusedComparison
+                    ? 0.2
+                    : 1
+                  : 0
+              }
               onMouseOut={hideTooltip}
               onClick={() => {
                 setFocusedComparison({

@@ -1,12 +1,13 @@
 import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
+import { CollectionCheck } from "../ducks/ui";
 
 type LegendProps = {
   data: GranularityComparisonCollection;
-  handleCheck: (index: number) => void;
-  checkedState: Array<boolean>;
+  handleCheck: (labelToToggle: string) => void;
+  checkedCollections: CollectionCheck[];
 };
 
-const Legend = ({ data, handleCheck, checkedState }: LegendProps) => {
+const Legend = ({ data, handleCheck, checkedCollections }: LegendProps) => {
   return (
     <div>
       {data.comparisonSets.map((s, i) => {
@@ -23,8 +24,8 @@ const Legend = ({ data, handleCheck, checkedState }: LegendProps) => {
             <input
               type="checkbox"
               id={`custom-checkbox-${i}`}
-              checked={checkedState[i]}
-              onChange={() => handleCheck(i)}
+              checked={checkedCollections.find(c => c.label === s.label)?.checked}
+              onChange={() => handleCheck(s.label)}
               style={{ marginRight: 10 }}
             />
             <span style={{ color: s.color }}>{s.label}</span>

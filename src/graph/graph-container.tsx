@@ -13,6 +13,8 @@ import {
   setActiveGranularity,
   setCheckedCollections,
   CollectionCheck,
+  toggleCollectionChecked,
+  selectCheckedCollections,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 
@@ -38,6 +40,7 @@ const timeLabels: { key: Granularity; label: string }[] = [
 function GraphContainer({ data }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
+  const checkedCollections = useSelector(selectCheckedCollections);
 
   const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
   const [prevFocusedComparison, setPrevFocusedComparison] =
@@ -52,24 +55,13 @@ function GraphContainer({ data }: GraphProps) {
     dispatch(setCheckedCollections(checkedCollections));
   }, [dispatch, data.comparisonSets]);
 
-  const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
-  const [checkedState, setCheckedState] = useState(
-    [...new Array(comparisonSetLabels.length)].map(_ => true)
-  );
-
   // We only show comparisons that fall within this range
   // const [maxTimeDistance, setMaxTimeDistance] = useState<number>(MILLISECONDS_IN_YEAR);
 
   const maxTimeDistance = MILLISECONDS_IN_YEAR;
 
-  // console.log(setMaxTimeDistance);
-
-  const handleOnChange = (position: number) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      index === position ? !item : item
-    );
-
-    setCheckedState(updatedCheckedState);
+  const handleOnChange = (labelToToggle: string) => {
+    dispatch(toggleCollectionChecked(labelToToggle));
   };
 
   const chartContainerRef = useRef<HTMLDivElement>(null);
@@ -107,11 +99,11 @@ function GraphContainer({ data }: GraphProps) {
           {width > 0 && height > 0 && (
             <Graph
               data={data}
+              checkedCollections={checkedCollections}
               maxTimeDistance={maxTimeDistance}
               width={width}
               height={height}
               handleMouseOver={handleMouseOver}
-              checkedState={checkedState}
               hideTooltip={hideTooltip}
               focusedComparison={focusedComparison}
               prevFocusedComparison={prevFocusedComparison}
@@ -140,7 +132,11 @@ function GraphContainer({ data }: GraphProps) {
         </div>
       </div>
       {/* Legend */}
-      <Legend data={data} handleCheck={handleOnChange} checkedState={checkedState} />
+      <Legend
+        data={data}
+        handleCheck={handleOnChange}
+        checkedCollections={checkedCollections}
+      />
 
       {tooltipOpen && !focusedComparison && (
         <TooltipInPortal
