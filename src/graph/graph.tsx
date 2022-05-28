@@ -27,10 +27,6 @@ type GraphProps = {
   setPrevFocusedComparison: React.Dispatch<React.SetStateAction<FakeComparison | null>>;
 };
 
-function getRadius(wordLength: number): number {
-  return Math.floor(wordLength / 100);
-}
-
 const getDomain = (granularity: Granularity): [number, number] => {
   const maxDist = MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity];
   return [maxDist * -1, maxDist];
@@ -117,7 +113,14 @@ function Graph({
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
               onMouseOver={e => {
-                (handleMouseOver as any)(e, comparison.label);
+                (handleMouseOver as any)(
+                  e,
+                  <div>
+                    <p>{comparison.label}</p>
+                    <p>Similarity: {comparison.score.toFixed(6)}</p>
+                    <p>Total words: {comparison.wordCount}</p>
+                  </div>
+                );
               }}
               opacity={checkedState[setIndex] ? (focusedComparison ? 0.2 : 1) : 0}
               onMouseOut={hideTooltip}
@@ -127,7 +130,7 @@ function Graph({
                   y: endY,
                   color: comparisonSet.color,
                   concepts: comparisonSet.comparisons[0].concepts.map(c => c.title),
-                  startRadius: getRadius(wordCount * 10), // TODO
+                  startRadius: scaleBallSize(wordCount),
                 });
               }}
             />
