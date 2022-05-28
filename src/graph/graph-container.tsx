@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
@@ -8,7 +8,12 @@ import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Granularity } from "../../types/type";
 import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
-import { selectActiveGranularity, setActiveGranularity } from "../ducks/ui";
+import {
+  selectActiveGranularity,
+  setActiveGranularity,
+  setCheckedCollections,
+  CollectionCheck,
+} from "../ducks/ui";
 import { useDispatch } from "react-redux";
 
 type GraphProps = {
@@ -34,12 +39,20 @@ function GraphContainer({ data }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
 
-  const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
-
   const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
   const [prevFocusedComparison, setPrevFocusedComparison] =
     useState<FakeComparison | null>(null);
 
+  // Set checked collections on mount
+  useEffect(() => {
+    const checkedCollections: CollectionCheck[] = data.comparisonSets.map(s => ({
+      label: s.label,
+      checked: true,
+    }));
+    dispatch(setCheckedCollections(checkedCollections));
+  }, [dispatch, data.comparisonSets]);
+
+  const comparisonSetLabels: String[] = data.comparisonSets.map(s => s.label);
   const [checkedState, setCheckedState] = useState(
     [...new Array(comparisonSetLabels.length)].map(_ => true)
   );
