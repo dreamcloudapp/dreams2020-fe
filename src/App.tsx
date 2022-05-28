@@ -18,6 +18,8 @@ function App() {
     comparisonSets: [],
     maxSimilarity: 1,
     minSimilarity: 0,
+    maxWordCount: 100,
+    minWordCount: 1,
     granularity: activeGranularity,
   };
 

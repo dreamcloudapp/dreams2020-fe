@@ -345,6 +345,8 @@ const generateData = async () => {
         granularity: granularity,
         maxSimilarity: 2,
         minSimilarity: 0,
+        maxWordCount: 100,
+        minWordCount: 1,
         comparisonSets: dreamComparisonSets,
       };
 

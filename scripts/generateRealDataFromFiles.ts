@@ -10,6 +10,7 @@ const { convertSheldonRecordToComparisonSet } = require("./modules/type-conversi
 
 const NUM_CONCEPTS_PER_COMPARISON = 5;
 const NUM_EXAMPLES_PER_COMPARISON = 1;
+const VERY_LARGE_NUMBER = 999 * 999 * 999;
 
 // Check if file is a dot file
 const isDotPath = (filePath: string): boolean => {
@@ -90,8 +91,10 @@ const mergeComparisonDictionaries = (
 // and combine them in memory
 const files = fs.readdirSync(path.join(__dirname, "../source-data"));
 
-var maxSimilarity = 0;
-var minSimilarity = 1;
+let maxSimilarity = 0;
+let minSimilarity = 1;
+let maxWordCount = 0;
+let minWordCount = VERY_LARGE_NUMBER;
 
 const data: ComparisonDictionary = files.reduce(
   (dataAcc: ComparisonDictionary, file: any) => {
@@ -115,9 +118,11 @@ const data: ComparisonDictionary = files.reduce(
       // For a given file, the records may belong to different "coloured collections"
       const comparisonDictionary: ComparisonDictionary = comparisonSets.reduce(
         (acc, set) => {
-          // Not pretty, but let's update the max and min similarity here
+          // Not pretty, but let's update the max and min similarity/wordcount here
           if (set.score > maxSimilarity) maxSimilarity = set.score;
           if (set.score < minSimilarity) minSimilarity = set.score;
+          if (set.wordCount > maxWordCount) maxWordCount = set.wordCount;
+          if (set.wordCount < minWordCount) minWordCount = set.wordCount;
 
           const key = getColouredCollectionKey(
             set.collection2.timePeriod.start,
@@ -147,6 +152,8 @@ const bigCollection: GranularityComparisonCollection = {
   granularity: "day",
   maxSimilarity: maxSimilarity,
   minSimilarity: minSimilarity,
+  maxWordCount: maxWordCount,
+  minWordCount: minWordCount,
   comparisonSets: [],
 };
 
@@ -160,7 +167,7 @@ Object.entries(data).forEach(([key, comparisonSets]) => {
 
 // Now write all the data to a big new file
 fs.writeFileSync(
-  path.join(__dirname, "../real-data.json"),
+  path.join(__dirname, "../public/data/real/dayComparisons.json"),
   JSON.stringify(bigCollection, null, 2),
   "utf8"
 );

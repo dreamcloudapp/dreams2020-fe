@@ -69,6 +69,8 @@ export const selectComparisonsByGranularity = (
       granularity: granularity,
       maxSimilarity: 1,
       minSimilarity: 0,
+      maxWordCount: 100,
+      minWordCount: 1,
       comparisonSets: [],
     };
   }

@@ -71,6 +71,13 @@ function Graph({
     .domain(domain)
     .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
+  // Size of the balls is determined by the number of words in the comparison
+  // And the height of the graph
+  // TODO - think about width too
+  const scaleBallSize = scaleLinear()
+    .domain([0, data.maxWordCount])
+    .range([0, height / 40]);
+
   return (
     <svg width={width} height={height}>
       <Axes
@@ -105,7 +112,7 @@ function Graph({
               startPoint={startPoint}
               endPoint={[endX, endY]}
               key={i}
-              r={getRadius(wordCount * 10)} // TODO: Make this a function of the word length
+              r={scaleBallSize(wordCount)}
               stroke={changeHslLightness(comparisonSet.color, -10)}
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
