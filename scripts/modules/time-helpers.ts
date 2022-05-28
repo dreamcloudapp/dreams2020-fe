@@ -21,7 +21,7 @@ export const addDays = (date: Date, days: number): Date => {
 
 // Basically, get "what number day in the year is this date?" (0-365)
 // Except, Feb 28-29 are counted as index 58
-export const getDayIndexFromDate = (date: Date): number => {
+export const dayIndexFromDate = (date: Date): number => {
   // Determine if the date is a leap year
   const year = date.getFullYear();
   const isLeap = isLeapYear(year);
@@ -45,8 +45,8 @@ export const getDayIndexFromDate = (date: Date): number => {
 };
 
 // Basically, get "what number week in the year is this date?" (0-52)
-export const getWeekIndexFromDate = (date: Date): number => {
-  const dayIndex = getDayIndexFromDate(date);
+export const weekIndexFromDate = (date: Date): number => {
+  const dayIndex = dayIndexFromDate(date);
 
   // 365 days in a year (366 in a leap year, but this is normalised by getDayIndexFromDate)
   // 364 is divisible by 7, so we just need to count December 30 and 31 as one 'day'.
@@ -57,6 +57,6 @@ export const getWeekIndexFromDate = (date: Date): number => {
 };
 
 // Get "what number month in the year is this date?" (0-11)
-export const getMonthIndexFromDate = (date: Date): number => {
+export const monthIndexFromDate = (date: Date): number => {
   return date.getMonth();
 };

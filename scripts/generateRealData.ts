@@ -5,7 +5,13 @@ import {
   DateTimeRange,
   ComparisonSet,
   GranularityComparisonCollection,
+  ColoredSetWithinGranularity,
 } from "@kannydennedy/dreams-2020-types";
+import { weekIndexFromDate } from "./modules/time-helpers";
+import {
+  consolidateExampleList,
+  consolidateWikipediaConceptList,
+} from "./modules/mergers";
 const { convertSheldonRecordToComparisonSet } = require("./modules/type-conversions");
 const { isDotPath } = require("./modules/file-felpers");
 
@@ -156,28 +162,146 @@ const data: ComparisonDictionary = files.reduce(
   {} as ComparisonDictionary
 );
 
+// Turn comparison dictionary into array
+const dayComparisonDictionaries: ColoredSetWithinGranularity[] = Object.entries(data).map(
+  ([key, value], i) => {
+    return {
+      label: colouredCollections[key as CollectionKey].label,
+      color: colouredCollections[key as CollectionKey].color,
+      comparisons: value,
+    };
+  }
+);
+
+// Turn the day comparison dictionaries into week comparison dictionaries
+let weekMaxSimilarity = 0;
+let weekMinSimilarity = 1;
+let weekMaxWordCount = 0;
+let weekMinWordCount = VERY_LARGE_NUMBER;
+const weekComparisonDictionaries: ColoredSetWithinGranularity[] =
+  dayComparisonDictionaries.map(dict => {
+    // Label and color are the same between day, week and month
+    // Just need to change the comparisons
+    // We need an object keyed by index-index (dream week index, news week index)
+    // We can just concat the top concepts and examples for now,
+    // Then deal with ordering and consolidating them later
+    const consolidatedDictionary: { [key: string]: ComparisonSet } =
+      dict.comparisons.reduce((acc, comparison) => {
+        const dreamWeekIndex = weekIndexFromDate(comparison.collection1.timePeriod.start);
+        const newsWeekIndex = weekIndexFromDate(comparison.collection2.timePeriod.start);
+        const key = `week-${dreamWeekIndex}-${newsWeekIndex}`;
+
+        if (!acc[key]) {
+          // If we don't have this key yet, add a new comparison
+          const weekComparison: ComparisonSet = {
+            id: key,
+            granularity: "week",
+            label: `Dreams from Week ${
+              dreamWeekIndex + 1
+            } (collection name) vs. news from week ${newsWeekIndex}`,
+            collection1: {
+              label: "Dreams",
+              timePeriod: {
+                granularity: "week",
+                index: 0,
+                identifier: `Week ${dreamWeekIndex}`,
+                start: new Date(), // TODO
+                end: new Date(), // TODO
+              },
+            },
+            collection2: {
+              label: "News",
+              timePeriod: {
+                granularity: "week",
+                index: 0,
+                identifier: `Week ${newsWeekIndex}`,
+                start: new Date(), // TODO
+                end: new Date(), // TODO
+              },
+            },
+            score: comparison.score,
+            wordCount: comparison.wordCount,
+            examples: [...comparison.examples],
+            concepts: [...comparison.concepts],
+          };
+
+          return {
+            ...acc,
+            [key]: weekComparison,
+          };
+        } else {
+          // We already have a week comparison here, we need to consolidate it
+          const compToMerge = acc[key];
+
+          const mergedComp: ComparisonSet = {
+            ...compToMerge,
+            score: compToMerge.score + comparison.score, // TODO?
+            wordCount: compToMerge.wordCount + comparison.wordCount,
+            concepts: [...compToMerge.concepts, ...comparison.concepts],
+            examples: [...compToMerge.examples, ...comparison.examples],
+          };
+
+          return {
+            ...acc,
+            [key]: mergedComp,
+          };
+        }
+      }, {} as { [key: string]: ComparisonSet });
+
+    // Now we just squash down those pesky long lists
+    const longComparisons: ComparisonSet[] = Object.values(consolidatedDictionary);
+
+    const shortenedComparisons = longComparisons.map(comp => {
+      // Ugly!
+      if (comp.score > weekMaxSimilarity) weekMaxSimilarity = comp.score;
+      if (comp.score < weekMinSimilarity) weekMinSimilarity = comp.score;
+      if (comp.wordCount > weekMaxWordCount) weekMaxWordCount = comp.wordCount;
+      if (comp.wordCount < weekMinWordCount) weekMinWordCount = comp.wordCount;
+
+      return {
+        ...comp,
+        concepts: consolidateWikipediaConceptList(comp.concepts),
+        examples: consolidateExampleList(comp.examples, NUM_EXAMPLES_PER_COMPARISON),
+      };
+    });
+
+    return {
+      label: dict.label,
+      color: dict.color,
+      comparisons: shortenedComparisons,
+    };
+  });
+
 // Convert our dictionary to a big fat GranularityComparisonCollection
-const bigCollection: GranularityComparisonCollection = {
+const dayComparisonsCollection: GranularityComparisonCollection = {
   granularity: "day",
   maxSimilarity: maxSimilarity,
   minSimilarity: minSimilarity,
   maxWordCount: maxWordCount,
   minWordCount: minWordCount,
-  comparisonSets: [],
+  comparisonSets: dayComparisonDictionaries,
 };
 
-Object.entries(data).forEach(([key, comparisonSets]) => {
-  bigCollection.comparisonSets.push({
-    label: colouredCollections[key as CollectionKey].label,
-    color: colouredCollections[key as CollectionKey].color,
-    comparisons: comparisonSets,
-  });
-});
+const weekComparisonsCollection: GranularityComparisonCollection = {
+  granularity: "week",
+  maxSimilarity: weekMaxSimilarity,
+  minSimilarity: weekMinSimilarity,
+  maxWordCount: weekMaxWordCount,
+  minWordCount: weekMinWordCount,
+  comparisonSets: weekComparisonDictionaries,
+};
 
-// Now write all the data to a big new file
+// Now write all the day data to a big new file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/dayComparisons.json"),
-  JSON.stringify(bigCollection, null, 2),
+  JSON.stringify(dayComparisonsCollection, null, 2),
+  "utf8"
+);
+
+// Now write all the week data to a big new file
+fs.writeFileSync(
+  path.join(__dirname, "../public/data/weekComparisons.json"),
+  JSON.stringify(weekComparisonsCollection, null, 2),
   "utf8"
 );
 

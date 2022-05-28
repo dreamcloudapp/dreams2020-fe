@@ -7,7 +7,7 @@ import {
   SheldonExample,
   SheldonRecord,
 } from "@kannydennedy/dreams-2020-types";
-const { getDayIndexFromDate } = require("./time-helpers");
+const { dayIndexFromDate } = require("./time-helpers");
 
 // Function to capitalise the first letter of a string
 const capitalizeFirstLetter = (string: string): string => {
@@ -66,7 +66,7 @@ export const convertSheldonRecordToComparisonSet = (
     label: "Dreams",
     timePeriod: {
       granularity: "day",
-      index: getDayIndexFromDate(set1Date),
+      index: dayIndexFromDate(set1Date),
       identifier: record.set1Date + " - " + record.set1Name,
       start: set1Date,
       end: set1Date,
@@ -76,7 +76,7 @@ export const convertSheldonRecordToComparisonSet = (
     label: "News",
     timePeriod: {
       granularity: "day",
-      index: getDayIndexFromDate(set2Date),
+      index: dayIndexFromDate(set2Date),
       identifier: record.set2Date + " - " + record.set2Name,
       start: set2Date,
       end: set2Date,
