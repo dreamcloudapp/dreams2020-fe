@@ -12,15 +12,15 @@
         {
           "id": "week-4-7",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 7",
+          "label": "Dreams from week 5 (collection name) vs. news from week 7",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.835Z",
+              "end": "2022-05-30T14:12:16.835Z"
             }
           },
           "collection2": {
@@ -28,9 +28,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.835Z",
+              "end": "2022-05-30T14:12:16.835Z"
             }
           },
           "score": 0.005833953388999998,
@@ -100,15 +100,15 @@
         {
           "id": "week-4-8",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 8",
+          "label": "Dreams from week 5 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "collection2": {
@@ -116,9 +116,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "score": 0.003673291266,
@@ -188,15 +188,15 @@
         {
           "id": "week-4-6",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 6",
+          "label": "Dreams from week 5 (collection name) vs. news from week 6",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "collection2": {
@@ -204,9 +204,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "score": 0.004195699319,
@@ -276,15 +276,15 @@
         {
           "id": "week-4-4",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 4",
+          "label": "Dreams from week 5 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "collection2": {
@@ -292,9 +292,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "score": 0.0026107512809999994,
@@ -364,15 +364,15 @@
         {
           "id": "week-4-5",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 5",
+          "label": "Dreams from week 5 (collection name) vs. news from week 5",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "collection2": {
@@ -380,9 +380,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.816Z",
-              "end": "2022-05-30T13:40:30.816Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.836Z",
+              "end": "2022-05-30T14:12:16.836Z"
             }
           },
           "score": 0.004854465496999999,
@@ -452,15 +452,15 @@
         {
           "id": "week-5-7",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 7",
+          "label": "Dreams from week 6 (collection name) vs. news from week 7",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "collection2": {
@@ -468,9 +468,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "score": 0.010698028907999998,
@@ -540,15 +540,15 @@
         {
           "id": "week-5-8",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 8",
+          "label": "Dreams from week 6 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "collection2": {
@@ -556,9 +556,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "score": 0.006852664775999998,
@@ -628,15 +628,15 @@
         {
           "id": "week-5-6",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 6",
+          "label": "Dreams from week 6 (collection name) vs. news from week 6",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "collection2": {
@@ -644,9 +644,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "score": 0.008172555123,
@@ -716,15 +716,15 @@
         {
           "id": "week-5-4",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 4",
+          "label": "Dreams from week 6 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "collection2": {
@@ -732,9 +732,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "score": 0.004896854724999999,
@@ -804,15 +804,15 @@
         {
           "id": "week-5-5",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 5",
+          "label": "Dreams from week 6 (collection name) vs. news from week 5",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "collection2": {
@@ -820,9 +820,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.817Z",
-              "end": "2022-05-30T13:40:30.817Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.837Z",
+              "end": "2022-05-30T14:12:16.837Z"
             }
           },
           "score": 0.009012093787999999,
@@ -892,15 +892,15 @@
         {
           "id": "week-6-7",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 7",
+          "label": "Dreams from week 7 (collection name) vs. news from week 7",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "collection2": {
@@ -908,9 +908,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "score": 0.009454225534999998,
@@ -980,15 +980,15 @@
         {
           "id": "week-6-8",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 8",
+          "label": "Dreams from week 7 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "collection2": {
@@ -996,9 +996,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "score": 0.006108244846,
@@ -1068,15 +1068,15 @@
         {
           "id": "week-6-6",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 6",
+          "label": "Dreams from week 7 (collection name) vs. news from week 6",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "collection2": {
@@ -1084,9 +1084,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "score": 0.006969864604000001,
@@ -1156,15 +1156,15 @@
         {
           "id": "week-6-4",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 4",
+          "label": "Dreams from week 7 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "collection2": {
@@ -1172,9 +1172,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "score": 0.004231217756,
@@ -1244,15 +1244,15 @@
         {
           "id": "week-6-5",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 5",
+          "label": "Dreams from week 7 (collection name) vs. news from week 5",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "collection2": {
@@ -1260,9 +1260,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.836Z",
-              "end": "2022-05-30T13:40:30.836Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.840Z",
+              "end": "2022-05-30T14:12:16.840Z"
             }
           },
           "score": 0.008119210908000002,
@@ -1332,15 +1332,15 @@
         {
           "id": "week-7-7",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 7",
+          "label": "Dreams from week 8 (collection name) vs. news from week 7",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.838Z",
-              "end": "2022-05-30T13:40:30.838Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "collection2": {
@@ -1348,9 +1348,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.838Z",
-              "end": "2022-05-30T13:40:30.838Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "score": 0.009629734058000002,
@@ -1420,15 +1420,15 @@
         {
           "id": "week-7-8",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 8",
+          "label": "Dreams from week 8 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.838Z",
-              "end": "2022-05-30T13:40:30.838Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "collection2": {
@@ -1436,9 +1436,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.838Z",
-              "end": "2022-05-30T13:40:30.838Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "score": 0.006108086953,
@@ -1508,15 +1508,15 @@
         {
           "id": "week-7-6",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 6",
+          "label": "Dreams from week 8 (collection name) vs. news from week 6",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.838Z",
-              "end": "2022-05-30T13:40:30.838Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "collection2": {
@@ -1524,9 +1524,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.838Z",
-              "end": "2022-05-30T13:40:30.838Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "score": 0.007031035830000001,
@@ -1596,15 +1596,15 @@
         {
           "id": "week-7-4",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 4",
+          "label": "Dreams from week 8 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.839Z",
-              "end": "2022-05-30T13:40:30.839Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "collection2": {
@@ -1612,9 +1612,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.839Z",
-              "end": "2022-05-30T13:40:30.839Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "score": 0.004410850664,
@@ -1684,15 +1684,15 @@
         {
           "id": "week-7-5",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 5",
+          "label": "Dreams from week 8 (collection name) vs. news from week 5",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.839Z",
-              "end": "2022-05-30T13:40:30.839Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "collection2": {
@@ -1700,9 +1700,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.839Z",
-              "end": "2022-05-30T13:40:30.839Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.843Z",
+              "end": "2022-05-30T14:12:16.843Z"
             }
           },
           "score": 0.008042319823,
@@ -1772,15 +1772,15 @@
         {
           "id": "week-8-7",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 7",
+          "label": "Dreams from week 9 (collection name) vs. news from week 7",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "collection2": {
@@ -1788,9 +1788,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "score": 0.00469030036,
@@ -1860,15 +1860,15 @@
         {
           "id": "week-8-8",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 8",
+          "label": "Dreams from week 9 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "collection2": {
@@ -1876,9 +1876,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "score": 0.003033633855,
@@ -1948,15 +1948,15 @@
         {
           "id": "week-8-6",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 6",
+          "label": "Dreams from week 9 (collection name) vs. news from week 6",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "collection2": {
@@ -1964,9 +1964,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "score": 0.003470211479,
@@ -2036,15 +2036,15 @@
         {
           "id": "week-8-4",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 4",
+          "label": "Dreams from week 9 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "collection2": {
@@ -2052,9 +2052,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "score": 0.00212528292,
@@ -2124,15 +2124,15 @@
         {
           "id": "week-8-5",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 5",
+          "label": "Dreams from week 9 (collection name) vs. news from week 5",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "collection2": {
@@ -2140,9 +2140,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.841Z",
-              "end": "2022-05-30T13:40:30.841Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.848Z",
+              "end": "2022-05-30T14:12:16.848Z"
             }
           },
           "score": 0.003982900676,
@@ -2218,15 +2218,15 @@
         {
           "id": "week-4-1",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 1",
+          "label": "Dreams from week 5 (collection name) vs. news from week 1",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "collection2": {
@@ -2234,9 +2234,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 1,
-              "identifier": "Week 1",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 1",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "score": 0.004772855722000001,
@@ -2306,15 +2306,15 @@
         {
           "id": "week-4-2",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 2",
+          "label": "Dreams from week 5 (collection name) vs. news from week 2",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "collection2": {
@@ -2322,9 +2322,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 2,
-              "identifier": "Week 2",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 2",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "score": 0.005796514515000002,
@@ -2394,15 +2394,15 @@
         {
           "id": "week-4-0",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 0",
+          "label": "Dreams from week 5 (collection name) vs. news from week 0",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "collection2": {
@@ -2410,9 +2410,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 0,
-              "identifier": "Week 0",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 0",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "score": 0.002410067217,
@@ -2482,15 +2482,15 @@
         {
           "id": "week-4-3",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 3",
+          "label": "Dreams from week 5 (collection name) vs. news from week 3",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "collection2": {
@@ -2498,9 +2498,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 3,
-              "identifier": "Week 3",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 3",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "score": 0.005730949158999999,
@@ -2570,15 +2570,15 @@
         {
           "id": "week-4-4",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 4",
+          "label": "Dreams from week 5 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "collection2": {
@@ -2586,9 +2586,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.850Z",
+              "end": "2022-05-30T14:12:16.850Z"
             }
           },
           "score": 0.00324542982,
@@ -2658,15 +2658,15 @@
         {
           "id": "week-5-1",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 1",
+          "label": "Dreams from week 6 (collection name) vs. news from week 1",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "collection2": {
@@ -2674,9 +2674,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 1,
-              "identifier": "Week 1",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 1",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "score": 0.005243739259,
@@ -2746,15 +2746,15 @@
         {
           "id": "week-5-2",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 2",
+          "label": "Dreams from week 6 (collection name) vs. news from week 2",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "collection2": {
@@ -2762,9 +2762,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 2,
-              "identifier": "Week 2",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 2",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "score": 0.011124304275999999,
@@ -2834,15 +2834,15 @@
         {
           "id": "week-5-0",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 0",
+          "label": "Dreams from week 6 (collection name) vs. news from week 0",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "collection2": {
@@ -2850,9 +2850,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 0,
-              "identifier": "Week 0",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 0",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "score": 0.00027396076,
@@ -2922,15 +2922,15 @@
         {
           "id": "week-5-3",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 3",
+          "label": "Dreams from week 6 (collection name) vs. news from week 3",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "collection2": {
@@ -2938,9 +2938,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 3,
-              "identifier": "Week 3",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 3",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "score": 0.010833190920000001,
@@ -3010,15 +3010,15 @@
         {
           "id": "week-5-4",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 4",
+          "label": "Dreams from week 6 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "collection2": {
@@ -3026,9 +3026,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.842Z",
-              "end": "2022-05-30T13:40:30.842Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.851Z",
+              "end": "2022-05-30T14:12:16.851Z"
             }
           },
           "score": 0.005937961939999999,
@@ -3098,15 +3098,15 @@
         {
           "id": "week-6-1",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 1",
+          "label": "Dreams from week 7 (collection name) vs. news from week 1",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "collection2": {
@@ -3114,9 +3114,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 1,
-              "identifier": "Week 1",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 1",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "score": 0.00019976292,
@@ -3186,15 +3186,15 @@
         {
           "id": "week-6-2",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 2",
+          "label": "Dreams from week 7 (collection name) vs. news from week 2",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "collection2": {
@@ -3202,9 +3202,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 2,
-              "identifier": "Week 2",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 2",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "score": 0.006117968115999999,
@@ -3274,15 +3274,15 @@
         {
           "id": "week-6-3",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 3",
+          "label": "Dreams from week 7 (collection name) vs. news from week 3",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "collection2": {
@@ -3290,9 +3290,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 3,
-              "identifier": "Week 3",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 3",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "score": 0.009668572420000006,
@@ -3362,15 +3362,15 @@
         {
           "id": "week-6-4",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 4",
+          "label": "Dreams from week 7 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "collection2": {
@@ -3378,9 +3378,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.853Z",
+              "end": "2022-05-30T14:12:16.853Z"
             }
           },
           "score": 0.00533231113,
@@ -3450,15 +3450,15 @@
         {
           "id": "week-7-2",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 2",
+          "label": "Dreams from week 8 (collection name) vs. news from week 2",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.854Z",
+              "end": "2022-05-30T14:12:16.854Z"
             }
           },
           "collection2": {
@@ -3466,9 +3466,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 2,
-              "identifier": "Week 2",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 2",
+              "start": "2022-05-30T14:12:16.854Z",
+              "end": "2022-05-30T14:12:16.854Z"
             }
           },
           "score": 0.00023189482,
@@ -3538,15 +3538,15 @@
         {
           "id": "week-7-3",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 3",
+          "label": "Dreams from week 8 (collection name) vs. news from week 3",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.854Z",
+              "end": "2022-05-30T14:12:16.854Z"
             }
           },
           "collection2": {
@@ -3554,9 +3554,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 3,
-              "identifier": "Week 3",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 3",
+              "start": "2022-05-30T14:12:16.854Z",
+              "end": "2022-05-30T14:12:16.854Z"
             }
           },
           "score": 0.005920085700000002,
@@ -3626,15 +3626,15 @@
         {
           "id": "week-7-4",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 4",
+          "label": "Dreams from week 8 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.854Z",
+              "end": "2022-05-30T14:12:16.854Z"
             }
           },
           "collection2": {
@@ -3642,9 +3642,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.843Z",
-              "end": "2022-05-30T13:40:30.843Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.854Z",
+              "end": "2022-05-30T14:12:16.854Z"
             }
           },
           "score": 0.005301167589999999,
@@ -3714,15 +3714,15 @@
         {
           "id": "week-8-4",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 4",
+          "label": "Dreams from week 9 (collection name) vs. news from week 4",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "collection2": {
@@ -3730,9 +3730,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "score": 0.0023192976399999997,
@@ -3802,15 +3802,15 @@
         {
           "id": "week-8-3",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 3",
+          "label": "Dreams from week 9 (collection name) vs. news from week 3",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "collection2": {
@@ -3818,9 +3818,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 3,
-              "identifier": "Week 3",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 3",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "score": 0.00025715705,
@@ -3896,15 +3896,15 @@
         {
           "id": "week-4-8",
           "granularity": "week",
-          "label": "Dreams from Week 5 (collection name) vs. news from week 8",
+          "label": "Dreams from week 5 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 4,
-              "identifier": "Week 4",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 4",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "collection2": {
@@ -3912,9 +3912,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "score": 0.0017367036099999998,
@@ -3984,15 +3984,15 @@
         {
           "id": "week-5-8",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 8",
+          "label": "Dreams from week 6 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "collection2": {
@@ -4000,9 +4000,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "score": 0.006250401094999999,
@@ -4072,15 +4072,15 @@
         {
           "id": "week-5-9",
           "granularity": "week",
-          "label": "Dreams from Week 6 (collection name) vs. news from week 9",
+          "label": "Dreams from week 6 (collection name) vs. news from week 9",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 5,
-              "identifier": "Week 5",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 5",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "collection2": {
@@ -4088,9 +4088,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 9,
-              "identifier": "Week 9",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 9",
+              "start": "2022-05-30T14:12:16.855Z",
+              "end": "2022-05-30T14:12:16.855Z"
             }
           },
           "score": 0.006408185236999999,
@@ -4160,15 +4160,15 @@
         {
           "id": "week-6-8",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 8",
+          "label": "Dreams from week 7 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.880Z",
+              "end": "2022-05-30T14:12:16.880Z"
             }
           },
           "collection2": {
@@ -4176,9 +4176,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.880Z",
+              "end": "2022-05-30T14:12:16.880Z"
             }
           },
           "score": 0.005515713646,
@@ -4248,15 +4248,15 @@
         {
           "id": "week-6-9",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 9",
+          "label": "Dreams from week 7 (collection name) vs. news from week 9",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.880Z",
+              "end": "2022-05-30T14:12:16.880Z"
             }
           },
           "collection2": {
@@ -4264,9 +4264,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 9,
-              "identifier": "Week 9",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 9",
+              "start": "2022-05-30T14:12:16.880Z",
+              "end": "2022-05-30T14:12:16.880Z"
             }
           },
           "score": 0.010256257193999998,
@@ -4336,15 +4336,15 @@
         {
           "id": "week-6-10",
           "granularity": "week",
-          "label": "Dreams from Week 7 (collection name) vs. news from week 10",
+          "label": "Dreams from week 7 (collection name) vs. news from week 10",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 6,
-              "identifier": "Week 6",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 6",
+              "start": "2022-05-30T14:12:16.880Z",
+              "end": "2022-05-30T14:12:16.880Z"
             }
           },
           "collection2": {
@@ -4352,9 +4352,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 10,
-              "identifier": "Week 10",
-              "start": "2022-05-30T13:40:30.844Z",
-              "end": "2022-05-30T13:40:30.844Z"
+              "identifier": "week 10",
+              "start": "2022-05-30T14:12:16.880Z",
+              "end": "2022-05-30T14:12:16.880Z"
             }
           },
           "score": 0.005817954474999999,
@@ -4424,15 +4424,15 @@
         {
           "id": "week-7-8",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 8",
+          "label": "Dreams from week 8 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.881Z",
+              "end": "2022-05-30T14:12:16.881Z"
             }
           },
           "collection2": {
@@ -4440,9 +4440,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.881Z",
+              "end": "2022-05-30T14:12:16.881Z"
             }
           },
           "score": 0.005657918293999999,
@@ -4512,15 +4512,15 @@
         {
           "id": "week-7-9",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 9",
+          "label": "Dreams from week 8 (collection name) vs. news from week 9",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.882Z",
+              "end": "2022-05-30T14:12:16.882Z"
             }
           },
           "collection2": {
@@ -4528,9 +4528,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 9,
-              "identifier": "Week 9",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 9",
+              "start": "2022-05-30T14:12:16.882Z",
+              "end": "2022-05-30T14:12:16.882Z"
             }
           },
           "score": 0.01060587214,
@@ -4600,15 +4600,15 @@
         {
           "id": "week-7-10",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 10",
+          "label": "Dreams from week 8 (collection name) vs. news from week 10",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.882Z",
+              "end": "2022-05-30T14:12:16.882Z"
             }
           },
           "collection2": {
@@ -4616,9 +4616,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 10,
-              "identifier": "Week 10",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 10",
+              "start": "2022-05-30T14:12:16.882Z",
+              "end": "2022-05-30T14:12:16.882Z"
             }
           },
           "score": 0.01124877163,
@@ -4688,15 +4688,15 @@
         {
           "id": "week-7-11",
           "granularity": "week",
-          "label": "Dreams from Week 8 (collection name) vs. news from week 11",
+          "label": "Dreams from week 8 (collection name) vs. news from week 11",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 7,
-              "identifier": "Week 7",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 7",
+              "start": "2022-05-30T14:12:16.882Z",
+              "end": "2022-05-30T14:12:16.882Z"
             }
           },
           "collection2": {
@@ -4704,9 +4704,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 11,
-              "identifier": "Week 11",
-              "start": "2022-05-30T13:40:30.845Z",
-              "end": "2022-05-30T13:40:30.845Z"
+              "identifier": "week 11",
+              "start": "2022-05-30T14:12:16.882Z",
+              "end": "2022-05-30T14:12:16.882Z"
             }
           },
           "score": 0.0071228088899999995,
@@ -4776,15 +4776,15 @@
         {
           "id": "week-8-8",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 8",
+          "label": "Dreams from week 9 (collection name) vs. news from week 8",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "collection2": {
@@ -4792,9 +4792,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "score": 0.0027550548660000003,
@@ -4864,15 +4864,15 @@
         {
           "id": "week-8-9",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 9",
+          "label": "Dreams from week 9 (collection name) vs. news from week 9",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "collection2": {
@@ -4880,9 +4880,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 9,
-              "identifier": "Week 9",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 9",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "score": 0.005602635860000001,
@@ -4952,15 +4952,15 @@
         {
           "id": "week-8-10",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 10",
+          "label": "Dreams from week 9 (collection name) vs. news from week 10",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "collection2": {
@@ -4968,9 +4968,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 10,
-              "identifier": "Week 10",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 10",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "score": 0.0062718137940000005,
@@ -5040,15 +5040,15 @@
         {
           "id": "week-8-11",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 11",
+          "label": "Dreams from week 9 (collection name) vs. news from week 11",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "collection2": {
@@ -5056,9 +5056,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 11,
-              "identifier": "Week 11",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 11",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "score": 0.006280806870000002,
@@ -5128,15 +5128,15 @@
         {
           "id": "week-8-12",
           "granularity": "week",
-          "label": "Dreams from Week 9 (collection name) vs. news from week 12",
+          "label": "Dreams from week 9 (collection name) vs. news from week 12",
           "collection1": {
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
               "index": 8,
-              "identifier": "Week 8",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 8",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "collection2": {
@@ -5144,9 +5144,9 @@
             "timePeriod": {
               "granularity": "week",
               "index": 12,
-              "identifier": "Week 12",
-              "start": "2022-05-30T13:40:30.846Z",
-              "end": "2022-05-30T13:40:30.846Z"
+              "identifier": "week 12",
+              "start": "2022-05-30T14:12:16.884Z",
+              "end": "2022-05-30T14:12:16.884Z"
             }
           },
           "score": 0.00202999523,
