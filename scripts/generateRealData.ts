@@ -6,13 +6,8 @@ import {
   ComparisonSet,
   GranularityComparisonCollection,
   ColoredSetWithinGranularity,
-  Granularity,
 } from "@kannydennedy/dreams-2020-types";
-import { weekIndexFromDate } from "./modules/time-helpers";
-import {
-  consolidateExampleList,
-  consolidateWikipediaConceptList,
-} from "./modules/mergers";
+import { monthIndexFromDate, weekIndexFromDate } from "./modules/time-helpers";
 const { convertSheldonRecordToComparisonSet } = require("./modules/type-conversions");
 const { isDotPath } = require("./modules/file-felpers");
 const { getBroaderGranularity } = require("./modules/get-broader-granularity");
@@ -185,9 +180,16 @@ const dayComparisonsCollection: GranularityComparisonCollection = {
   comparisonSets: dayComparisonDictionaries,
 };
 
-const weekComparisonsCollection2 = getBroaderGranularity(
+const weekComparisonsCollection = getBroaderGranularity(
   "week",
   weekIndexFromDate,
+  dayComparisonDictionaries,
+  NUM_EXAMPLES_PER_COMPARISON
+);
+
+const monthComparisonsCollection = getBroaderGranularity(
+  "month",
+  monthIndexFromDate,
   dayComparisonDictionaries,
   NUM_EXAMPLES_PER_COMPARISON
 );
@@ -202,7 +204,14 @@ fs.writeFileSync(
 // Now write all the week data to a big new file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/weekComparisons.json"),
-  JSON.stringify(weekComparisonsCollection2, null, 2),
+  JSON.stringify(weekComparisonsCollection, null, 2),
+  "utf8"
+);
+
+// Now write all the month data to a big new file
+fs.writeFileSync(
+  path.join(__dirname, "../public/data/monthComparisons.json"),
+  JSON.stringify(monthComparisonsCollection, null, 2),
   "utf8"
 );
 
