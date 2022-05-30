@@ -203,7 +203,7 @@ const weekComparisonDictionaries: ColoredSetWithinGranularity[] =
               label: "Dreams",
               timePeriod: {
                 granularity: "week",
-                index: 0,
+                index: dreamWeekIndex,
                 identifier: `Week ${dreamWeekIndex}`,
                 start: new Date(), // TODO
                 end: new Date(), // TODO
@@ -213,7 +213,7 @@ const weekComparisonDictionaries: ColoredSetWithinGranularity[] =
               label: "News",
               timePeriod: {
                 granularity: "week",
-                index: 0,
+                index: newsWeekIndex,
                 identifier: `Week ${newsWeekIndex}`,
                 start: new Date(), // TODO
                 end: new Date(), // TODO

@@ -20,7 +20,7 @@ export type ComparisonSets = {
 // E.g. for granularity "month", the max distance is 11
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
   day: 30, // 2 days max between day comparisons
-  week: 4, // 3 weeks max between week comparisons
+  week: 5, // 3 weeks max between week comparisons
   month: 11, // 11 months max between month comparisons (since we only compare January to December, not January to January)
   year: 30, // 30 years max between year comparisons
 };

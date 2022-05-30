@@ -17,20 +17,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "score": 0.005833953388999998,
@@ -105,20 +105,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "score": 0.003673291266,
@@ -193,20 +193,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "score": 0.004195699319,
@@ -281,20 +281,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.880Z",
-              "end": "2022-05-28T18:00:15.880Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "score": 0.0026107512809999994,
@@ -369,20 +369,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.816Z",
+              "end": "2022-05-30T13:40:30.816Z"
             }
           },
           "score": 0.004854465496999999,
@@ -457,20 +457,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "score": 0.010698028907999998,
@@ -545,20 +545,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "score": 0.006852664775999998,
@@ -633,20 +633,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "score": 0.008172555123,
@@ -721,20 +721,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "score": 0.004896854724999999,
@@ -809,20 +809,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.881Z",
-              "end": "2022-05-28T18:00:15.881Z"
+              "start": "2022-05-30T13:40:30.817Z",
+              "end": "2022-05-30T13:40:30.817Z"
             }
           },
           "score": 0.009012093787999999,
@@ -897,20 +897,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "score": 0.009454225534999998,
@@ -985,20 +985,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "score": 0.006108244846,
@@ -1073,20 +1073,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "score": 0.006969864604000001,
@@ -1161,20 +1161,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "score": 0.004231217756,
@@ -1249,20 +1249,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.900Z",
-              "end": "2022-05-28T18:00:15.900Z"
+              "start": "2022-05-30T13:40:30.836Z",
+              "end": "2022-05-30T13:40:30.836Z"
             }
           },
           "score": 0.008119210908000002,
@@ -1337,20 +1337,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.838Z",
+              "end": "2022-05-30T13:40:30.838Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.838Z",
+              "end": "2022-05-30T13:40:30.838Z"
             }
           },
           "score": 0.009629734058000002,
@@ -1425,20 +1425,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.838Z",
+              "end": "2022-05-30T13:40:30.838Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.838Z",
+              "end": "2022-05-30T13:40:30.838Z"
             }
           },
           "score": 0.006108086953,
@@ -1513,20 +1513,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.838Z",
+              "end": "2022-05-30T13:40:30.838Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.838Z",
+              "end": "2022-05-30T13:40:30.838Z"
             }
           },
           "score": 0.007031035830000001,
@@ -1601,20 +1601,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.839Z",
+              "end": "2022-05-30T13:40:30.839Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.839Z",
+              "end": "2022-05-30T13:40:30.839Z"
             }
           },
           "score": 0.004410850664,
@@ -1689,20 +1689,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.839Z",
+              "end": "2022-05-30T13:40:30.839Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.903Z",
-              "end": "2022-05-28T18:00:15.903Z"
+              "start": "2022-05-30T13:40:30.839Z",
+              "end": "2022-05-30T13:40:30.839Z"
             }
           },
           "score": 0.008042319823,
@@ -1777,20 +1777,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "score": 0.00469030036,
@@ -1865,20 +1865,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "score": 0.003033633855,
@@ -1953,20 +1953,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "score": 0.003470211479,
@@ -2041,20 +2041,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "score": 0.00212528292,
@@ -2129,20 +2129,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.905Z",
-              "end": "2022-05-28T18:00:15.905Z"
+              "start": "2022-05-30T13:40:30.841Z",
+              "end": "2022-05-30T13:40:30.841Z"
             }
           },
           "score": 0.003982900676,
@@ -2223,20 +2223,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 1,
               "identifier": "Week 1",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.004772855722000001,
@@ -2311,20 +2311,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 2,
               "identifier": "Week 2",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.005796514515000002,
@@ -2399,10 +2399,10 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
@@ -2411,8 +2411,8 @@
               "granularity": "week",
               "index": 0,
               "identifier": "Week 0",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.002410067217,
@@ -2487,20 +2487,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 3,
               "identifier": "Week 3",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.005730949158999999,
@@ -2575,20 +2575,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.906Z",
-              "end": "2022-05-28T18:00:15.906Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.00324542982,
@@ -2663,20 +2663,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 1,
               "identifier": "Week 1",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.005243739259,
@@ -2751,20 +2751,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 2,
               "identifier": "Week 2",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.011124304275999999,
@@ -2839,10 +2839,10 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
@@ -2851,8 +2851,8 @@
               "granularity": "week",
               "index": 0,
               "identifier": "Week 0",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.00027396076,
@@ -2927,20 +2927,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 3,
               "identifier": "Week 3",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.010833190920000001,
@@ -3015,20 +3015,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.842Z",
+              "end": "2022-05-30T13:40:30.842Z"
             }
           },
           "score": 0.005937961939999999,
@@ -3103,20 +3103,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 1,
               "identifier": "Week 1",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.00019976292,
@@ -3191,20 +3191,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 2,
               "identifier": "Week 2",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.006117968115999999,
@@ -3279,20 +3279,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 3,
               "identifier": "Week 3",
-              "start": "2022-05-28T18:00:15.907Z",
-              "end": "2022-05-28T18:00:15.907Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.009668572420000006,
@@ -3367,20 +3367,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.00533231113,
@@ -3455,20 +3455,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 2,
               "identifier": "Week 2",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.00023189482,
@@ -3543,20 +3543,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 3,
               "identifier": "Week 3",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.005920085700000002,
@@ -3631,20 +3631,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.843Z",
+              "end": "2022-05-30T13:40:30.843Z"
             }
           },
           "score": 0.005301167589999999,
@@ -3719,20 +3719,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.0023192976399999997,
@@ -3807,20 +3807,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 3,
               "identifier": "Week 3",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.00025715705,
@@ -3901,20 +3901,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 4,
               "identifier": "Week 4",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.0017367036099999998,
@@ -3989,20 +3989,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.006250401094999999,
@@ -4077,20 +4077,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 5,
               "identifier": "Week 5",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 9,
               "identifier": "Week 9",
-              "start": "2022-05-28T18:00:15.908Z",
-              "end": "2022-05-28T18:00:15.908Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.006408185236999999,
@@ -4165,20 +4165,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.005515713646,
@@ -4253,20 +4253,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 9,
               "identifier": "Week 9",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.010256257193999998,
@@ -4341,20 +4341,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 6,
               "identifier": "Week 6",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 10,
               "identifier": "Week 10",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.844Z",
+              "end": "2022-05-30T13:40:30.844Z"
             }
           },
           "score": 0.005817954474999999,
@@ -4429,20 +4429,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "score": 0.005657918293999999,
@@ -4517,20 +4517,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 9,
               "identifier": "Week 9",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "score": 0.01060587214,
@@ -4605,20 +4605,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 10,
               "identifier": "Week 10",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "score": 0.01124877163,
@@ -4693,20 +4693,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 7,
               "identifier": "Week 7",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 11,
               "identifier": "Week 11",
-              "start": "2022-05-28T18:00:15.909Z",
-              "end": "2022-05-28T18:00:15.909Z"
+              "start": "2022-05-30T13:40:30.845Z",
+              "end": "2022-05-30T13:40:30.845Z"
             }
           },
           "score": 0.0071228088899999995,
@@ -4781,20 +4781,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "score": 0.0027550548660000003,
@@ -4869,20 +4869,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 9,
               "identifier": "Week 9",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "score": 0.005602635860000001,
@@ -4957,20 +4957,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 10,
               "identifier": "Week 10",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "score": 0.0062718137940000005,
@@ -5045,20 +5045,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 11,
               "identifier": "Week 11",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "score": 0.006280806870000002,
@@ -5133,20 +5133,20 @@
             "label": "Dreams",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 8,
               "identifier": "Week 8",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "collection2": {
             "label": "News",
             "timePeriod": {
               "granularity": "week",
-              "index": 0,
+              "index": 12,
               "identifier": "Week 12",
-              "start": "2022-05-28T18:00:15.911Z",
-              "end": "2022-05-28T18:00:15.911Z"
+              "start": "2022-05-30T13:40:30.846Z",
+              "end": "2022-05-30T13:40:30.846Z"
             }
           },
           "score": 0.00202999523,
