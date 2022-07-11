@@ -1,5 +1,5 @@
 import { DifferenceRecord } from "@kannydennedy/dreams-2020-types";
-import { Padding } from "../modules/ui-types";
+// import { Padding } from "../modules/ui-types";
 
 type GraphProps = {
   data: DifferenceRecord[];
@@ -10,7 +10,7 @@ type GraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
 };
 
-const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 60, BOTTOM: 60 };
+// const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 60, BOTTOM: 60 };
 
 export function ColumnGraph({
   data,
