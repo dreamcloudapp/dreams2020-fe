@@ -5,7 +5,6 @@ import {
   ExampleRecordComparison,
   SheldonConcept,
   SheldonExample,
-  SheldonRecord,
   NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
 const { dayIndexFromDate } = require("./time-helpers");
