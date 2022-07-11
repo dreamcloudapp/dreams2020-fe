@@ -4,10 +4,18 @@ import {
   ColoredSetWithinGranularity,
   Granularity,
 } from "@kannydennedy/dreams-2020-types";
-
 import { consolidateExampleList, consolidateWikipediaConceptList } from "./mergers";
 
 const VERY_LARGE_NUMBER = 999 * 999 * 999;
+// The maximum time index distance for a given granularity
+// E.g. month: 6 would be 6 months
+// This is duplicated in ducks/data.ts
+export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
+  day: 2,
+  week: 6,
+  month: 6,
+  year: 30,
+};
 
 // We have the 'day comparisons', and we need to change these
 // to week comparisons or month comparisons
@@ -97,7 +105,15 @@ export const getBroaderGranularity = (
       // Now we just squash down those pesky long lists
       const longComparisons: ComparisonSet[] = Object.values(consolidatedDictionary);
 
-      const shortenedComparisons = longComparisons.map(comp => {
+      // Now, we filter out anything that's too far apart
+      const filteredComparisons = longComparisons.filter(comp => {
+        const absDistance = Math.abs(
+          comp.collection1.timePeriod.index - comp.collection2.timePeriod.index
+        );
+        return !(absDistance > MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity]);
+      });
+
+      const shortenedComparisons = filteredComparisons.map(comp => {
         // Ugly!
         if (comp.score > maxTimePeriodSimilarity) maxTimePeriodSimilarity = comp.score;
         if (comp.score < minSimilarity) minSimilarity = comp.score;
