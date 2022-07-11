@@ -7,6 +7,7 @@ import {
   Granularity,
   ComparisonSet,
   GranularityComparisonCollection,
+  DifferenceByGranularity,
 } from "@kannydennedy/dreams-2020-types";
 
 export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
@@ -28,11 +29,13 @@ export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number }
 export type DataState = {
   loading: boolean;
   comparisons?: BigBigThing;
+  differences?: DifferenceByGranularity;
 };
 
 const initialState: DataState = {
   loading: true,
   comparisons: undefined,
+  differences: undefined,
 };
 
 const dataSlice = createSlice({
@@ -45,6 +48,9 @@ const dataSlice = createSlice({
     setComparisons(state, action: PayloadAction<BigBigThing>) {
       state.comparisons = action.payload;
     },
+    setDifferences(state, action: PayloadAction<DifferenceByGranularity>) {
+      state.differences = action.payload;
+    },
   },
 });
 
@@ -55,6 +61,12 @@ export default dataSlice;
 
 export const selectComparisons = (state: RootState): BigBigThing | undefined => {
   return state?.data.comparisons;
+};
+
+export const selectDifferences = (
+  state: RootState
+): DifferenceByGranularity | undefined => {
+  return state?.data.differences;
 };
 
 // Get the comparison sets for a given granularity
@@ -125,6 +137,21 @@ export function fetchMonths(): AppThunk {
     }, {} as BigBigThing);
 
     dispatch(dataSlice.actions.setComparisons(allComparisonsMap));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+const differencesFile = "differences.json";
+
+// Loads the differences from the file
+export function fetchDifferences(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${differencesFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setDifferences(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }

@@ -1,0 +1,1818 @@
+{
+  "day": {
+    "differences": [
+      {
+        "difference": -179,
+        "averageSimilarity": 0.0002959429932326205,
+        "recordCount": 187
+      },
+      {
+        "difference": -178,
+        "averageSimilarity": 0.00027167637869148945,
+        "recordCount": 188
+      },
+      {
+        "difference": -177,
+        "averageSimilarity": 0.0002672792242619047,
+        "recordCount": 189
+      },
+      {
+        "difference": -176,
+        "averageSimilarity": 0.0002725062381315789,
+        "recordCount": 190
+      },
+      {
+        "difference": -175,
+        "averageSimilarity": 0.00026531980613088993,
+        "recordCount": 191
+      },
+      {
+        "difference": -174,
+        "averageSimilarity": 0.00026401611792708357,
+        "recordCount": 192
+      },
+      {
+        "difference": -173,
+        "averageSimilarity": 0.00025896556384974093,
+        "recordCount": 193
+      },
+      {
+        "difference": -172,
+        "averageSimilarity": 0.0002782332762525773,
+        "recordCount": 194
+      },
+      {
+        "difference": -171,
+        "averageSimilarity": 0.0002851241913871792,
+        "recordCount": 195
+      },
+      {
+        "difference": -170,
+        "averageSimilarity": 0.0002857151945280611,
+        "recordCount": 196
+      },
+      {
+        "difference": -169,
+        "averageSimilarity": 0.00029149968282385765,
+        "recordCount": 197
+      },
+      {
+        "difference": -168,
+        "averageSimilarity": 0.00030519843983838367,
+        "recordCount": 198
+      },
+      {
+        "difference": -167,
+        "averageSimilarity": 0.0003155925369648242,
+        "recordCount": 199
+      },
+      {
+        "difference": -166,
+        "averageSimilarity": 0.00032984106295349966,
+        "recordCount": 200
+      },
+      {
+        "difference": -165,
+        "averageSimilarity": 0.0003369201531343283,
+        "recordCount": 201
+      },
+      {
+        "difference": -164,
+        "averageSimilarity": 0.00034163272776336663,
+        "recordCount": 202
+      },
+      {
+        "difference": -163,
+        "averageSimilarity": 0.00035181084684827584,
+        "recordCount": 203
+      },
+      {
+        "difference": -162,
+        "averageSimilarity": 0.00033261521216960814,
+        "recordCount": 204
+      },
+      {
+        "difference": -161,
+        "averageSimilarity": 0.0003296240862292685,
+        "recordCount": 205
+      },
+      {
+        "difference": -160,
+        "averageSimilarity": 0.0003256733981087375,
+        "recordCount": 206
+      },
+      {
+        "difference": -159,
+        "averageSimilarity": 0.00033405786694685997,
+        "recordCount": 207
+      },
+      {
+        "difference": -158,
+        "averageSimilarity": 0.00031694979289038444,
+        "recordCount": 208
+      },
+      {
+        "difference": -157,
+        "averageSimilarity": 0.0003096643290909093,
+        "recordCount": 209
+      },
+      {
+        "difference": -156,
+        "averageSimilarity": 0.0003025530292238095,
+        "recordCount": 210
+      },
+      {
+        "difference": -155,
+        "averageSimilarity": 0.00029603265847393337,
+        "recordCount": 211
+      },
+      {
+        "difference": -154,
+        "averageSimilarity": 0.00027684528873207553,
+        "recordCount": 212
+      },
+      {
+        "difference": -153,
+        "averageSimilarity": 0.0002775209332652581,
+        "recordCount": 213
+      },
+      {
+        "difference": -152,
+        "averageSimilarity": 0.0002643663182710285,
+        "recordCount": 214
+      },
+      {
+        "difference": -151,
+        "averageSimilarity": 0.00026508721520697665,
+        "recordCount": 215
+      },
+      {
+        "difference": -150,
+        "averageSimilarity": 0.00026818925834027767,
+        "recordCount": 216
+      },
+      {
+        "difference": -149,
+        "averageSimilarity": 0.0002637843990299537,
+        "recordCount": 217
+      },
+      {
+        "difference": -148,
+        "averageSimilarity": 0.0002588541285825689,
+        "recordCount": 218
+      },
+      {
+        "difference": -147,
+        "averageSimilarity": 0.0002695722156232875,
+        "recordCount": 219
+      },
+      {
+        "difference": -146,
+        "averageSimilarity": 0.00027063491181590946,
+        "recordCount": 220
+      },
+      {
+        "difference": -145,
+        "averageSimilarity": 0.0002849237583190049,
+        "recordCount": 221
+      },
+      {
+        "difference": -144,
+        "averageSimilarity": 0.00026927587374774806,
+        "recordCount": 222
+      },
+      {
+        "difference": -143,
+        "averageSimilarity": 0.0002667673239910314,
+        "recordCount": 223
+      },
+      {
+        "difference": -142,
+        "averageSimilarity": 0.0002543702274196427,
+        "recordCount": 224
+      },
+      {
+        "difference": -141,
+        "averageSimilarity": 0.00024135952490666663,
+        "recordCount": 225
+      },
+      {
+        "difference": -140,
+        "averageSimilarity": 0.0002523249127411506,
+        "recordCount": 226
+      },
+      {
+        "difference": -139,
+        "averageSimilarity": 0.00023677815581233476,
+        "recordCount": 227
+      },
+      {
+        "difference": -138,
+        "averageSimilarity": 0.00025153123175438634,
+        "recordCount": 228
+      },
+      {
+        "difference": -137,
+        "averageSimilarity": 0.0002372414296899563,
+        "recordCount": 229
+      },
+      {
+        "difference": -136,
+        "averageSimilarity": 0.00023200094946956498,
+        "recordCount": 230
+      },
+      {
+        "difference": -135,
+        "averageSimilarity": 0.00023577305279004295,
+        "recordCount": 231
+      },
+      {
+        "difference": -134,
+        "averageSimilarity": 0.00022308951085603444,
+        "recordCount": 232
+      },
+      {
+        "difference": -133,
+        "averageSimilarity": 0.0002308872779828328,
+        "recordCount": 233
+      },
+      {
+        "difference": -132,
+        "averageSimilarity": 0.000241570260568376,
+        "recordCount": 234
+      },
+      {
+        "difference": -131,
+        "averageSimilarity": 0.00021612780277659578,
+        "recordCount": 235
+      },
+      {
+        "difference": -130,
+        "averageSimilarity": 0.00022321334534576278,
+        "recordCount": 236
+      },
+      {
+        "difference": -129,
+        "averageSimilarity": 0.00022806120582700407,
+        "recordCount": 237
+      },
+      {
+        "difference": -128,
+        "averageSimilarity": 0.00022959563972731095,
+        "recordCount": 238
+      },
+      {
+        "difference": -127,
+        "averageSimilarity": 0.00022618293695690384,
+        "recordCount": 239
+      },
+      {
+        "difference": -126,
+        "averageSimilarity": 0.0002155461106291665,
+        "recordCount": 240
+      },
+      {
+        "difference": -125,
+        "averageSimilarity": 0.0002260683649460582,
+        "recordCount": 241
+      },
+      {
+        "difference": -124,
+        "averageSimilarity": 0.00023304027798966937,
+        "recordCount": 242
+      },
+      {
+        "difference": -123,
+        "averageSimilarity": 0.0002422884742769547,
+        "recordCount": 243
+      },
+      {
+        "difference": -122,
+        "averageSimilarity": 0.00021956145622540992,
+        "recordCount": 244
+      },
+      {
+        "difference": -121,
+        "averageSimilarity": 0.0002267581088918367,
+        "recordCount": 245
+      },
+      {
+        "difference": -120,
+        "averageSimilarity": 0.00023345132552398382,
+        "recordCount": 246
+      },
+      {
+        "difference": -119,
+        "averageSimilarity": 0.00022246508933684213,
+        "recordCount": 247
+      },
+      {
+        "difference": -118,
+        "averageSimilarity": 0.00022713249528749996,
+        "recordCount": 248
+      },
+      {
+        "difference": -117,
+        "averageSimilarity": 0.00023071686150200762,
+        "recordCount": 249
+      },
+      {
+        "difference": -116,
+        "averageSimilarity": 0.00025756332144799977,
+        "recordCount": 250
+      },
+      {
+        "difference": -115,
+        "averageSimilarity": 0.00023445974744302779,
+        "recordCount": 251
+      },
+      {
+        "difference": -114,
+        "averageSimilarity": 0.000234866615702381,
+        "recordCount": 252
+      },
+      {
+        "difference": -113,
+        "averageSimilarity": 0.00023112740183794473,
+        "recordCount": 253
+      },
+      {
+        "difference": -112,
+        "averageSimilarity": 0.00023517968158070837,
+        "recordCount": 254
+      },
+      {
+        "difference": -111,
+        "averageSimilarity": 0.0002265494383176469,
+        "recordCount": 255
+      },
+      {
+        "difference": -110,
+        "averageSimilarity": 0.0002403924338281251,
+        "recordCount": 256
+      },
+      {
+        "difference": -109,
+        "averageSimilarity": 0.00023564842019844356,
+        "recordCount": 257
+      },
+      {
+        "difference": -108,
+        "averageSimilarity": 0.0002669354157403104,
+        "recordCount": 258
+      },
+      {
+        "difference": -107,
+        "averageSimilarity": 0.00020808657422393838,
+        "recordCount": 259
+      },
+      {
+        "difference": -106,
+        "averageSimilarity": 0.0002109885446961538,
+        "recordCount": 260
+      },
+      {
+        "difference": -105,
+        "averageSimilarity": 0.00020439260006896546,
+        "recordCount": 261
+      },
+      {
+        "difference": -104,
+        "averageSimilarity": 0.00021155929106870215,
+        "recordCount": 262
+      },
+      {
+        "difference": -103,
+        "averageSimilarity": 0.00022195320000760447,
+        "recordCount": 263
+      },
+      {
+        "difference": -102,
+        "averageSimilarity": 0.00021227407328787878,
+        "recordCount": 264
+      },
+      {
+        "difference": -101,
+        "averageSimilarity": 0.00021022537891132075,
+        "recordCount": 265
+      },
+      {
+        "difference": -100,
+        "averageSimilarity": 0.00020776717813157896,
+        "recordCount": 266
+      },
+      {
+        "difference": -99,
+        "averageSimilarity": 0.00020880380874681648,
+        "recordCount": 267
+      },
+      {
+        "difference": -98,
+        "averageSimilarity": 0.00021135586642276119,
+        "recordCount": 268
+      },
+      {
+        "difference": -97,
+        "averageSimilarity": 0.00022983317855018587,
+        "recordCount": 269
+      },
+      {
+        "difference": -96,
+        "averageSimilarity": 0.0002327973508333331,
+        "recordCount": 270
+      },
+      {
+        "difference": -95,
+        "averageSimilarity": 0.00025133781060147583,
+        "recordCount": 271
+      },
+      {
+        "difference": -94,
+        "averageSimilarity": 0.00022110858666176477,
+        "recordCount": 272
+      },
+      {
+        "difference": -93,
+        "averageSimilarity": 0.00022257593506593408,
+        "recordCount": 273
+      },
+      {
+        "difference": -92,
+        "averageSimilarity": 0.00021961495139781017,
+        "recordCount": 274
+      },
+      {
+        "difference": -91,
+        "averageSimilarity": 0.0002296591121727273,
+        "recordCount": 275
+      },
+      {
+        "difference": -90,
+        "averageSimilarity": 0.00022921669955797076,
+        "recordCount": 276
+      },
+      {
+        "difference": -89,
+        "averageSimilarity": 0.00024352724211913355,
+        "recordCount": 277
+      },
+      {
+        "difference": -88,
+        "averageSimilarity": 0.0002275962201654675,
+        "recordCount": 278
+      },
+      {
+        "difference": -87,
+        "averageSimilarity": 0.0002176160448512547,
+        "recordCount": 279
+      },
+      {
+        "difference": -86,
+        "averageSimilarity": 0.00022027281243571433,
+        "recordCount": 280
+      },
+      {
+        "difference": -85,
+        "averageSimilarity": 0.0002151184976512455,
+        "recordCount": 281
+      },
+      {
+        "difference": -84,
+        "averageSimilarity": 0.00021863658232978728,
+        "recordCount": 282
+      },
+      {
+        "difference": -83,
+        "averageSimilarity": 0.00023063090448763264,
+        "recordCount": 283
+      },
+      {
+        "difference": -82,
+        "averageSimilarity": 0.0002334825441038733,
+        "recordCount": 284
+      },
+      {
+        "difference": -81,
+        "averageSimilarity": 0.00023681661683508766,
+        "recordCount": 285
+      },
+      {
+        "difference": -80,
+        "averageSimilarity": 0.0002322495642755243,
+        "recordCount": 286
+      },
+      {
+        "difference": -79,
+        "averageSimilarity": 0.0002294895546832753,
+        "recordCount": 287
+      },
+      {
+        "difference": -78,
+        "averageSimilarity": 0.00022769384130972214,
+        "recordCount": 288
+      },
+      {
+        "difference": -77,
+        "averageSimilarity": 0.00022489759388581292,
+        "recordCount": 289
+      },
+      {
+        "difference": -76,
+        "averageSimilarity": 0.00023363534687586199,
+        "recordCount": 290
+      },
+      {
+        "difference": -75,
+        "averageSimilarity": 0.00023769579660206172,
+        "recordCount": 291
+      },
+      {
+        "difference": -74,
+        "averageSimilarity": 0.00023205607294520528,
+        "recordCount": 292
+      },
+      {
+        "difference": -73,
+        "averageSimilarity": 0.00022330586337372007,
+        "recordCount": 293
+      },
+      {
+        "difference": -72,
+        "averageSimilarity": 0.00022036766810544227,
+        "recordCount": 294
+      },
+      {
+        "difference": -71,
+        "averageSimilarity": 0.0002171934220305084,
+        "recordCount": 295
+      },
+      {
+        "difference": -70,
+        "averageSimilarity": 0.00022342197664527,
+        "recordCount": 296
+      },
+      {
+        "difference": -69,
+        "averageSimilarity": 0.0002259456118754212,
+        "recordCount": 297
+      },
+      {
+        "difference": -68,
+        "averageSimilarity": 0.00023097968272818797,
+        "recordCount": 298
+      },
+      {
+        "difference": -67,
+        "averageSimilarity": 0.00023881465806688967,
+        "recordCount": 299
+      },
+      {
+        "difference": -66,
+        "averageSimilarity": 0.0002450446919933335,
+        "recordCount": 300
+      },
+      {
+        "difference": -65,
+        "averageSimilarity": 0.00023623674204983382,
+        "recordCount": 301
+      },
+      {
+        "difference": -64,
+        "averageSimilarity": 0.00023242701670529817,
+        "recordCount": 302
+      },
+      {
+        "difference": -63,
+        "averageSimilarity": 0.00023514211783498345,
+        "recordCount": 303
+      },
+      {
+        "difference": -62,
+        "averageSimilarity": 0.000270448861174342,
+        "recordCount": 304
+      },
+      {
+        "difference": -61,
+        "averageSimilarity": 0.00028577031559672125,
+        "recordCount": 305
+      },
+      {
+        "difference": -60,
+        "averageSimilarity": 0.0002895164114248365,
+        "recordCount": 306
+      },
+      {
+        "difference": -59,
+        "averageSimilarity": 0.0003139108340749185,
+        "recordCount": 307
+      },
+      {
+        "difference": -58,
+        "averageSimilarity": 0.0003123655014642856,
+        "recordCount": 308
+      },
+      {
+        "difference": -57,
+        "averageSimilarity": 0.00032355093195145625,
+        "recordCount": 309
+      },
+      {
+        "difference": -56,
+        "averageSimilarity": 0.0003248256953516128,
+        "recordCount": 310
+      },
+      {
+        "difference": -55,
+        "averageSimilarity": 0.00033273076605466235,
+        "recordCount": 311
+      },
+      {
+        "difference": -54,
+        "averageSimilarity": 0.0003446784955064101,
+        "recordCount": 312
+      },
+      {
+        "difference": -53,
+        "averageSimilarity": 0.000330668612258786,
+        "recordCount": 313
+      },
+      {
+        "difference": -52,
+        "averageSimilarity": 0.0003365048369140129,
+        "recordCount": 314
+      },
+      {
+        "difference": -51,
+        "averageSimilarity": 0.00035080614347936506,
+        "recordCount": 315
+      },
+      {
+        "difference": -50,
+        "averageSimilarity": 0.0003555472966829112,
+        "recordCount": 316
+      },
+      {
+        "difference": -49,
+        "averageSimilarity": 0.0003704611965110409,
+        "recordCount": 317
+      },
+      {
+        "difference": -48,
+        "averageSimilarity": 0.0003397107142610063,
+        "recordCount": 318
+      },
+      {
+        "difference": -47,
+        "averageSimilarity": 0.00037698913688244515,
+        "recordCount": 319
+      },
+      {
+        "difference": -46,
+        "averageSimilarity": 0.00035786846988125,
+        "recordCount": 320
+      },
+      {
+        "difference": -45,
+        "averageSimilarity": 0.0003529100604984425,
+        "recordCount": 321
+      },
+      {
+        "difference": -44,
+        "averageSimilarity": 0.0003665894012484472,
+        "recordCount": 322
+      },
+      {
+        "difference": -43,
+        "averageSimilarity": 0.00039834200388854497,
+        "recordCount": 323
+      },
+      {
+        "difference": -42,
+        "averageSimilarity": 0.00036411581741049365,
+        "recordCount": 324
+      },
+      {
+        "difference": -41,
+        "averageSimilarity": 0.0003651509456492304,
+        "recordCount": 325
+      },
+      {
+        "difference": -40,
+        "averageSimilarity": 0.0004274074940889572,
+        "recordCount": 326
+      },
+      {
+        "difference": -39,
+        "averageSimilarity": 0.0003726187710030581,
+        "recordCount": 327
+      },
+      {
+        "difference": -38,
+        "averageSimilarity": 0.0003883553726173777,
+        "recordCount": 328
+      },
+      {
+        "difference": -37,
+        "averageSimilarity": 0.00044180497966990907,
+        "recordCount": 329
+      },
+      {
+        "difference": -36,
+        "averageSimilarity": 0.0003868882488121213,
+        "recordCount": 330
+      },
+      {
+        "difference": -35,
+        "averageSimilarity": 0.0003750482794181271,
+        "recordCount": 331
+      },
+      {
+        "difference": -34,
+        "averageSimilarity": 0.0003584735345527109,
+        "recordCount": 332
+      },
+      {
+        "difference": -33,
+        "averageSimilarity": 0.0003998115379459458,
+        "recordCount": 333
+      },
+      {
+        "difference": -32,
+        "averageSimilarity": 0.0003877155904461078,
+        "recordCount": 334
+      },
+      {
+        "difference": -31,
+        "averageSimilarity": 0.00036843700568656694,
+        "recordCount": 335
+      },
+      {
+        "difference": -30,
+        "averageSimilarity": 0.0003787335398720239,
+        "recordCount": 336
+      },
+      {
+        "difference": -29,
+        "averageSimilarity": 0.0003394554883103859,
+        "recordCount": 337
+      },
+      {
+        "difference": -28,
+        "averageSimilarity": 0.0003449382967233728,
+        "recordCount": 338
+      },
+      {
+        "difference": -27,
+        "averageSimilarity": 0.0003438315535589968,
+        "recordCount": 339
+      },
+      {
+        "difference": -26,
+        "averageSimilarity": 0.0003636453533264706,
+        "recordCount": 340
+      },
+      {
+        "difference": -25,
+        "averageSimilarity": 0.0003644742564017596,
+        "recordCount": 341
+      },
+      {
+        "difference": -24,
+        "averageSimilarity": 0.00035654449426169584,
+        "recordCount": 342
+      },
+      {
+        "difference": -23,
+        "averageSimilarity": 0.00036156505346005794,
+        "recordCount": 343
+      },
+      {
+        "difference": -22,
+        "averageSimilarity": 0.0003463352645087211,
+        "recordCount": 344
+      },
+      {
+        "difference": -21,
+        "averageSimilarity": 0.0003486041885623189,
+        "recordCount": 345
+      },
+      {
+        "difference": -20,
+        "averageSimilarity": 0.000369269870612717,
+        "recordCount": 346
+      },
+      {
+        "difference": -19,
+        "averageSimilarity": 0.00041102146803746433,
+        "recordCount": 347
+      },
+      {
+        "difference": -18,
+        "averageSimilarity": 0.0003826895555057468,
+        "recordCount": 348
+      },
+      {
+        "difference": -17,
+        "averageSimilarity": 0.0003991069398295129,
+        "recordCount": 349
+      },
+      {
+        "difference": -16,
+        "averageSimilarity": 0.00037414453700857116,
+        "recordCount": 350
+      },
+      {
+        "difference": -15,
+        "averageSimilarity": 0.00040496812499430187,
+        "recordCount": 351
+      },
+      {
+        "difference": -14,
+        "averageSimilarity": 0.00039590464417897756,
+        "recordCount": 352
+      },
+      {
+        "difference": -13,
+        "averageSimilarity": 0.000372061858783286,
+        "recordCount": 353
+      },
+      {
+        "difference": -12,
+        "averageSimilarity": 0.0003711091636737281,
+        "recordCount": 354
+      },
+      {
+        "difference": -11,
+        "averageSimilarity": 0.00036315298923239445,
+        "recordCount": 355
+      },
+      {
+        "difference": -10,
+        "averageSimilarity": 0.00036870257558567433,
+        "recordCount": 356
+      },
+      {
+        "difference": -9,
+        "averageSimilarity": 0.00036625814881792717,
+        "recordCount": 357
+      },
+      {
+        "difference": -8,
+        "averageSimilarity": 0.0004873782912765362,
+        "recordCount": 358
+      },
+      {
+        "difference": -7,
+        "averageSimilarity": 0.00040463502997632316,
+        "recordCount": 359
+      },
+      {
+        "difference": -6,
+        "averageSimilarity": 0.00042621718348472226,
+        "recordCount": 360
+      },
+      {
+        "difference": -5,
+        "averageSimilarity": 0.00045610658724376773,
+        "recordCount": 361
+      },
+      {
+        "difference": -4,
+        "averageSimilarity": 0.0004701389245773485,
+        "recordCount": 362
+      },
+      {
+        "difference": -3,
+        "averageSimilarity": 0.00046346657825068854,
+        "recordCount": 363
+      },
+      {
+        "difference": -2,
+        "averageSimilarity": 0.0004317933019972532,
+        "recordCount": 364
+      },
+      {
+        "difference": -1,
+        "averageSimilarity": 0.0004862751617260274,
+        "recordCount": 365
+      },
+      {
+        "difference": 0,
+        "averageSimilarity": 0.00044622600493989087,
+        "recordCount": 366
+      },
+      {
+        "difference": 1,
+        "averageSimilarity": 0.00044244977229863024,
+        "recordCount": 365
+      },
+      {
+        "difference": 2,
+        "averageSimilarity": 0.00047926481773351705,
+        "recordCount": 364
+      },
+      {
+        "difference": 3,
+        "averageSimilarity": 0.000465881107095042,
+        "recordCount": 363
+      },
+      {
+        "difference": 4,
+        "averageSimilarity": 0.0004908602363544201,
+        "recordCount": 362
+      },
+      {
+        "difference": 5,
+        "averageSimilarity": 0.0005413933577950137,
+        "recordCount": 361
+      },
+      {
+        "difference": 6,
+        "averageSimilarity": 0.000446034532755556,
+        "recordCount": 360
+      },
+      {
+        "difference": 7,
+        "averageSimilarity": 0.00046873648113231165,
+        "recordCount": 359
+      },
+      {
+        "difference": 8,
+        "averageSimilarity": 0.0004747277504273745,
+        "recordCount": 358
+      },
+      {
+        "difference": 9,
+        "averageSimilarity": 0.0004675479902296917,
+        "recordCount": 357
+      },
+      {
+        "difference": 10,
+        "averageSimilarity": 0.00048304420764747204,
+        "recordCount": 356
+      },
+      {
+        "difference": 11,
+        "averageSimilarity": 0.0004564609011845071,
+        "recordCount": 355
+      },
+      {
+        "difference": 12,
+        "averageSimilarity": 0.0004980898409887002,
+        "recordCount": 354
+      },
+      {
+        "difference": 13,
+        "averageSimilarity": 0.00047058290832011334,
+        "recordCount": 353
+      },
+      {
+        "difference": 14,
+        "averageSimilarity": 0.0004579922852568181,
+        "recordCount": 352
+      },
+      {
+        "difference": 15,
+        "averageSimilarity": 0.0004635057230170943,
+        "recordCount": 351
+      },
+      {
+        "difference": 16,
+        "averageSimilarity": 0.00048762732804285766,
+        "recordCount": 350
+      },
+      {
+        "difference": 17,
+        "averageSimilarity": 0.00045689744376217734,
+        "recordCount": 349
+      },
+      {
+        "difference": 18,
+        "averageSimilarity": 0.00046780094550431063,
+        "recordCount": 348
+      },
+      {
+        "difference": 19,
+        "averageSimilarity": 0.0005187156997244961,
+        "recordCount": 347
+      },
+      {
+        "difference": 20,
+        "averageSimilarity": 0.0004991082041445088,
+        "recordCount": 346
+      },
+      {
+        "difference": 21,
+        "averageSimilarity": 0.000547211375037681,
+        "recordCount": 345
+      },
+      {
+        "difference": 22,
+        "averageSimilarity": 0.0005114492347790697,
+        "recordCount": 344
+      },
+      {
+        "difference": 23,
+        "averageSimilarity": 0.0005893328904760933,
+        "recordCount": 343
+      },
+      {
+        "difference": 24,
+        "averageSimilarity": 0.0005654980935160825,
+        "recordCount": 342
+      },
+      {
+        "difference": 25,
+        "averageSimilarity": 0.0005307564354325515,
+        "recordCount": 341
+      },
+      {
+        "difference": 26,
+        "averageSimilarity": 0.0005301302924794118,
+        "recordCount": 340
+      },
+      {
+        "difference": 27,
+        "averageSimilarity": 0.0006039446103805311,
+        "recordCount": 339
+      },
+      {
+        "difference": 28,
+        "averageSimilarity": 0.0005166645168994082,
+        "recordCount": 338
+      },
+      {
+        "difference": 29,
+        "averageSimilarity": 0.0005540055979465869,
+        "recordCount": 337
+      },
+      {
+        "difference": 30,
+        "averageSimilarity": 0.0005963102159375,
+        "recordCount": 336
+      },
+      {
+        "difference": 31,
+        "averageSimilarity": 0.0005339978606507462,
+        "recordCount": 335
+      },
+      {
+        "difference": 32,
+        "averageSimilarity": 0.0005546737984670649,
+        "recordCount": 334
+      },
+      {
+        "difference": 33,
+        "averageSimilarity": 0.0005956445846996996,
+        "recordCount": 333
+      },
+      {
+        "difference": 34,
+        "averageSimilarity": 0.0005103219733463859,
+        "recordCount": 332
+      },
+      {
+        "difference": 35,
+        "averageSimilarity": 0.0005300126704788519,
+        "recordCount": 331
+      },
+      {
+        "difference": 36,
+        "averageSimilarity": 0.0005226065621303025,
+        "recordCount": 330
+      },
+      {
+        "difference": 37,
+        "averageSimilarity": 0.000565974981170213,
+        "recordCount": 329
+      },
+      {
+        "difference": 38,
+        "averageSimilarity": 0.0004914288080213413,
+        "recordCount": 328
+      },
+      {
+        "difference": 39,
+        "averageSimilarity": 0.0005499593315565746,
+        "recordCount": 327
+      },
+      {
+        "difference": 40,
+        "averageSimilarity": 0.0005140894197883429,
+        "recordCount": 326
+      },
+      {
+        "difference": 41,
+        "averageSimilarity": 0.0005493791746492311,
+        "recordCount": 325
+      },
+      {
+        "difference": 42,
+        "averageSimilarity": 0.0005394434429138891,
+        "recordCount": 324
+      },
+      {
+        "difference": 43,
+        "averageSimilarity": 0.0005105764576006199,
+        "recordCount": 323
+      },
+      {
+        "difference": 44,
+        "averageSimilarity": 0.0005192816343385098,
+        "recordCount": 322
+      },
+      {
+        "difference": 45,
+        "averageSimilarity": 0.0005319326562024922,
+        "recordCount": 321
+      },
+      {
+        "difference": 46,
+        "averageSimilarity": 0.000570241390021875,
+        "recordCount": 320
+      },
+      {
+        "difference": 47,
+        "averageSimilarity": 0.0005456647642319749,
+        "recordCount": 319
+      },
+      {
+        "difference": 48,
+        "averageSimilarity": 0.0005739950015786159,
+        "recordCount": 318
+      },
+      {
+        "difference": 49,
+        "averageSimilarity": 0.0005913226340694006,
+        "recordCount": 317
+      },
+      {
+        "difference": 50,
+        "averageSimilarity": 0.0005094220883481005,
+        "recordCount": 316
+      },
+      {
+        "difference": 51,
+        "averageSimilarity": 0.0005182733107936507,
+        "recordCount": 315
+      },
+      {
+        "difference": 52,
+        "averageSimilarity": 0.0006425685957515924,
+        "recordCount": 314
+      },
+      {
+        "difference": 53,
+        "averageSimilarity": 0.0005949605598035138,
+        "recordCount": 313
+      },
+      {
+        "difference": 54,
+        "averageSimilarity": 0.00047440809414743605,
+        "recordCount": 312
+      },
+      {
+        "difference": 55,
+        "averageSimilarity": 0.0005264478884565915,
+        "recordCount": 311
+      },
+      {
+        "difference": 56,
+        "averageSimilarity": 0.0004926754405161298,
+        "recordCount": 310
+      },
+      {
+        "difference": 57,
+        "averageSimilarity": 0.0005143719498737863,
+        "recordCount": 309
+      },
+      {
+        "difference": 58,
+        "averageSimilarity": 0.0005004802055519488,
+        "recordCount": 308
+      },
+      {
+        "difference": 59,
+        "averageSimilarity": 0.0004935042699055369,
+        "recordCount": 307
+      },
+      {
+        "difference": 60,
+        "averageSimilarity": 0.0004616240972287581,
+        "recordCount": 306
+      },
+      {
+        "difference": 61,
+        "averageSimilarity": 0.000553394692790163,
+        "recordCount": 305
+      },
+      {
+        "difference": 62,
+        "averageSimilarity": 0.00045250914973684226,
+        "recordCount": 304
+      },
+      {
+        "difference": 63,
+        "averageSimilarity": 0.00046468117927062666,
+        "recordCount": 303
+      },
+      {
+        "difference": 64,
+        "averageSimilarity": 0.0005019733631986758,
+        "recordCount": 302
+      },
+      {
+        "difference": 65,
+        "averageSimilarity": 0.0004547177162757471,
+        "recordCount": 301
+      },
+      {
+        "difference": 66,
+        "averageSimilarity": 0.0004773657675899997,
+        "recordCount": 300
+      },
+      {
+        "difference": 67,
+        "averageSimilarity": 0.00047632099621404666,
+        "recordCount": 299
+      },
+      {
+        "difference": 68,
+        "averageSimilarity": 0.0005226024904932886,
+        "recordCount": 298
+      },
+      {
+        "difference": 69,
+        "averageSimilarity": 0.00048382008855555556,
+        "recordCount": 297
+      },
+      {
+        "difference": 70,
+        "averageSimilarity": 0.0004517782827635139,
+        "recordCount": 296
+      },
+      {
+        "difference": 71,
+        "averageSimilarity": 0.0004746924764949153,
+        "recordCount": 295
+      },
+      {
+        "difference": 72,
+        "averageSimilarity": 0.0005083681614489794,
+        "recordCount": 294
+      },
+      {
+        "difference": 73,
+        "averageSimilarity": 0.0004800219976757679,
+        "recordCount": 293
+      },
+      {
+        "difference": 74,
+        "averageSimilarity": 0.0004808352357842468,
+        "recordCount": 292
+      },
+      {
+        "difference": 75,
+        "averageSimilarity": 0.0004908969793573883,
+        "recordCount": 291
+      },
+      {
+        "difference": 76,
+        "averageSimilarity": 0.0005933688625413795,
+        "recordCount": 290
+      },
+      {
+        "difference": 77,
+        "averageSimilarity": 0.0005218683604913493,
+        "recordCount": 289
+      },
+      {
+        "difference": 78,
+        "averageSimilarity": 0.0005140285879218754,
+        "recordCount": 288
+      },
+      {
+        "difference": 79,
+        "averageSimilarity": 0.0004975964246498256,
+        "recordCount": 287
+      },
+      {
+        "difference": 80,
+        "averageSimilarity": 0.0005303874683513991,
+        "recordCount": 286
+      },
+      {
+        "difference": 81,
+        "averageSimilarity": 0.0004904663245105266,
+        "recordCount": 285
+      },
+      {
+        "difference": 82,
+        "averageSimilarity": 0.0004949661425211272,
+        "recordCount": 284
+      },
+      {
+        "difference": 83,
+        "averageSimilarity": 0.00044487444146501813,
+        "recordCount": 283
+      },
+      {
+        "difference": 84,
+        "averageSimilarity": 0.0004900017646241135,
+        "recordCount": 282
+      },
+      {
+        "difference": 85,
+        "averageSimilarity": 0.00044662222226512474,
+        "recordCount": 281
+      },
+      {
+        "difference": 86,
+        "averageSimilarity": 0.0004375433032428568,
+        "recordCount": 280
+      },
+      {
+        "difference": 87,
+        "averageSimilarity": 0.0004670114968189965,
+        "recordCount": 279
+      },
+      {
+        "difference": 88,
+        "averageSimilarity": 0.0004935813881834536,
+        "recordCount": 278
+      },
+      {
+        "difference": 89,
+        "averageSimilarity": 0.000531941565792419,
+        "recordCount": 277
+      },
+      {
+        "difference": 90,
+        "averageSimilarity": 0.0005075298355344206,
+        "recordCount": 276
+      },
+      {
+        "difference": 91,
+        "averageSimilarity": 0.0004900792901672726,
+        "recordCount": 275
+      },
+      {
+        "difference": 92,
+        "averageSimilarity": 0.00048423106957299256,
+        "recordCount": 274
+      },
+      {
+        "difference": 93,
+        "averageSimilarity": 0.0004562172709890112,
+        "recordCount": 273
+      },
+      {
+        "difference": 94,
+        "averageSimilarity": 0.0005085146869117645,
+        "recordCount": 272
+      },
+      {
+        "difference": 95,
+        "averageSimilarity": 0.0005020446271439112,
+        "recordCount": 271
+      },
+      {
+        "difference": 96,
+        "averageSimilarity": 0.0005335584883555556,
+        "recordCount": 270
+      },
+      {
+        "difference": 97,
+        "averageSimilarity": 0.00046007465556133854,
+        "recordCount": 269
+      },
+      {
+        "difference": 98,
+        "averageSimilarity": 0.00045878822734328364,
+        "recordCount": 268
+      },
+      {
+        "difference": 99,
+        "averageSimilarity": 0.0004471867278838945,
+        "recordCount": 267
+      },
+      {
+        "difference": 100,
+        "averageSimilarity": 0.00044076878142857145,
+        "recordCount": 266
+      },
+      {
+        "difference": 101,
+        "averageSimilarity": 0.00044652639979622655,
+        "recordCount": 265
+      },
+      {
+        "difference": 102,
+        "averageSimilarity": 0.0004375780720151517,
+        "recordCount": 264
+      },
+      {
+        "difference": 103,
+        "averageSimilarity": 0.00047919079398479127,
+        "recordCount": 263
+      },
+      {
+        "difference": 104,
+        "averageSimilarity": 0.00043032313247709953,
+        "recordCount": 262
+      },
+      {
+        "difference": 105,
+        "averageSimilarity": 0.0004252165681053642,
+        "recordCount": 261
+      },
+      {
+        "difference": 106,
+        "averageSimilarity": 0.0003907530235596154,
+        "recordCount": 260
+      },
+      {
+        "difference": 107,
+        "averageSimilarity": 0.00034507407519691115,
+        "recordCount": 259
+      },
+      {
+        "difference": 108,
+        "averageSimilarity": 0.0003558947293217056,
+        "recordCount": 258
+      },
+      {
+        "difference": 109,
+        "averageSimilarity": 0.000386150824414397,
+        "recordCount": 257
+      },
+      {
+        "difference": 110,
+        "averageSimilarity": 0.00038844672749999983,
+        "recordCount": 256
+      },
+      {
+        "difference": 111,
+        "averageSimilarity": 0.00035313325189921557,
+        "recordCount": 255
+      },
+      {
+        "difference": 112,
+        "averageSimilarity": 0.00034707188493267733,
+        "recordCount": 254
+      },
+      {
+        "difference": 113,
+        "averageSimilarity": 0.00033213721075098815,
+        "recordCount": 253
+      },
+      {
+        "difference": 114,
+        "averageSimilarity": 0.0003134683111269842,
+        "recordCount": 252
+      },
+      {
+        "difference": 115,
+        "averageSimilarity": 0.00031374107868924325,
+        "recordCount": 251
+      },
+      {
+        "difference": 116,
+        "averageSimilarity": 0.00028556320000559994,
+        "recordCount": 250
+      },
+      {
+        "difference": 117,
+        "averageSimilarity": 0.0002952593964618475,
+        "recordCount": 249
+      },
+      {
+        "difference": 118,
+        "averageSimilarity": 0.000333101910326613,
+        "recordCount": 248
+      },
+      {
+        "difference": 119,
+        "averageSimilarity": 0.0003246176556032389,
+        "recordCount": 247
+      },
+      {
+        "difference": 120,
+        "averageSimilarity": 0.0002892801782467481,
+        "recordCount": 246
+      },
+      {
+        "difference": 121,
+        "averageSimilarity": 0.000329005264955102,
+        "recordCount": 245
+      },
+      {
+        "difference": 122,
+        "averageSimilarity": 0.00030710566405327874,
+        "recordCount": 244
+      },
+      {
+        "difference": 123,
+        "averageSimilarity": 0.00033589805346502055,
+        "recordCount": 243
+      },
+      {
+        "difference": 124,
+        "averageSimilarity": 0.0003256318214793389,
+        "recordCount": 242
+      },
+      {
+        "difference": 125,
+        "averageSimilarity": 0.0002833495407634855,
+        "recordCount": 241
+      },
+      {
+        "difference": 126,
+        "averageSimilarity": 0.0003464140118625,
+        "recordCount": 240
+      },
+      {
+        "difference": 127,
+        "averageSimilarity": 0.0003237155896359834,
+        "recordCount": 239
+      },
+      {
+        "difference": 128,
+        "averageSimilarity": 0.0002621611063794119,
+        "recordCount": 238
+      },
+      {
+        "difference": 129,
+        "averageSimilarity": 0.00027652457847890274,
+        "recordCount": 237
+      },
+      {
+        "difference": 130,
+        "averageSimilarity": 0.0002966842101271186,
+        "recordCount": 236
+      },
+      {
+        "difference": 131,
+        "averageSimilarity": 0.0002656732955595746,
+        "recordCount": 235
+      },
+      {
+        "difference": 132,
+        "averageSimilarity": 0.00027931735479487155,
+        "recordCount": 234
+      },
+      {
+        "difference": 133,
+        "averageSimilarity": 0.000293350173386266,
+        "recordCount": 233
+      },
+      {
+        "difference": 134,
+        "averageSimilarity": 0.0002510384001939657,
+        "recordCount": 232
+      },
+      {
+        "difference": 135,
+        "averageSimilarity": 0.0002550003144761904,
+        "recordCount": 231
+      },
+      {
+        "difference": 136,
+        "averageSimilarity": 0.00027583393502608695,
+        "recordCount": 230
+      },
+      {
+        "difference": 137,
+        "averageSimilarity": 0.00026613471154585144,
+        "recordCount": 229
+      },
+      {
+        "difference": 138,
+        "averageSimilarity": 0.00024175705043859625,
+        "recordCount": 228
+      },
+      {
+        "difference": 139,
+        "averageSimilarity": 0.00031531673766079286,
+        "recordCount": 227
+      },
+      {
+        "difference": 140,
+        "averageSimilarity": 0.00028512715287389354,
+        "recordCount": 226
+      },
+      {
+        "difference": 141,
+        "averageSimilarity": 0.0003348978834977778,
+        "recordCount": 225
+      },
+      {
+        "difference": 142,
+        "averageSimilarity": 0.0003084927630089285,
+        "recordCount": 224
+      },
+      {
+        "difference": 143,
+        "averageSimilarity": 0.000346283970378027,
+        "recordCount": 223
+      },
+      {
+        "difference": 144,
+        "averageSimilarity": 0.0003739175289707207,
+        "recordCount": 222
+      },
+      {
+        "difference": 145,
+        "averageSimilarity": 0.0003169878190520362,
+        "recordCount": 221
+      },
+      {
+        "difference": 146,
+        "averageSimilarity": 0.00037549901449545475,
+        "recordCount": 220
+      },
+      {
+        "difference": 147,
+        "averageSimilarity": 0.0003504075082602739,
+        "recordCount": 219
+      },
+      {
+        "difference": 148,
+        "averageSimilarity": 0.0003267228739770645,
+        "recordCount": 218
+      },
+      {
+        "difference": 149,
+        "averageSimilarity": 0.0004350910434815671,
+        "recordCount": 217
+      },
+      {
+        "difference": 150,
+        "averageSimilarity": 0.000348840936913889,
+        "recordCount": 216
+      },
+      {
+        "difference": 151,
+        "averageSimilarity": 0.0003375538724418603,
+        "recordCount": 215
+      },
+      {
+        "difference": 152,
+        "averageSimilarity": 0.00041689034760747677,
+        "recordCount": 214
+      },
+      {
+        "difference": 153,
+        "averageSimilarity": 0.0003569723295046948,
+        "recordCount": 213
+      },
+      {
+        "difference": 154,
+        "averageSimilarity": 0.0004722681391367921,
+        "recordCount": 212
+      },
+      {
+        "difference": 155,
+        "averageSimilarity": 0.0003857907797014217,
+        "recordCount": 211
+      },
+      {
+        "difference": 156,
+        "averageSimilarity": 0.0003365606950857145,
+        "recordCount": 210
+      },
+      {
+        "difference": 157,
+        "averageSimilarity": 0.0003750504931645934,
+        "recordCount": 209
+      },
+      {
+        "difference": 158,
+        "averageSimilarity": 0.0003983337303269229,
+        "recordCount": 208
+      },
+      {
+        "difference": 159,
+        "averageSimilarity": 0.0003898294896352657,
+        "recordCount": 207
+      },
+      {
+        "difference": 160,
+        "averageSimilarity": 0.00037957988992233017,
+        "recordCount": 206
+      },
+      {
+        "difference": 161,
+        "averageSimilarity": 0.0003608166578195122,
+        "recordCount": 205
+      },
+      {
+        "difference": 162,
+        "averageSimilarity": 0.00035246411731127444,
+        "recordCount": 204
+      },
+      {
+        "difference": 163,
+        "averageSimilarity": 0.0003548438057083743,
+        "recordCount": 203
+      },
+      {
+        "difference": 164,
+        "averageSimilarity": 0.000342759098970297,
+        "recordCount": 202
+      },
+      {
+        "difference": 165,
+        "averageSimilarity": 0.0003678842334975124,
+        "recordCount": 201
+      },
+      {
+        "difference": 166,
+        "averageSimilarity": 0.0003879200381849998,
+        "recordCount": 200
+      },
+      {
+        "difference": 167,
+        "averageSimilarity": 0.0003519329640427136,
+        "recordCount": 199
+      },
+      {
+        "difference": 168,
+        "averageSimilarity": 0.0004135121628333333,
+        "recordCount": 198
+      },
+      {
+        "difference": 169,
+        "averageSimilarity": 0.00040699393307461917,
+        "recordCount": 197
+      },
+      {
+        "difference": 170,
+        "averageSimilarity": 0.000416136992617347,
+        "recordCount": 196
+      },
+      {
+        "difference": 171,
+        "averageSimilarity": 0.0004751553216020516,
+        "recordCount": 195
+      },
+      {
+        "difference": 172,
+        "averageSimilarity": 0.00041685740697422653,
+        "recordCount": 194
+      },
+      {
+        "difference": 173,
+        "averageSimilarity": 0.0004062537291321245,
+        "recordCount": 193
+      },
+      {
+        "difference": 174,
+        "averageSimilarity": 0.00040230356026562476,
+        "recordCount": 192
+      },
+      {
+        "difference": 175,
+        "averageSimilarity": 0.0003744395658429322,
+        "recordCount": 191
+      },
+      {
+        "difference": 176,
+        "averageSimilarity": 0.00040457283960526315,
+        "recordCount": 190
+      },
+      {
+        "difference": 177,
+        "averageSimilarity": 0.0003931238359470897,
+        "recordCount": 189
+      },
+      {
+        "difference": 178,
+        "averageSimilarity": 0.00038078325920744684,
+        "recordCount": 188
+      },
+      {
+        "difference": 179,
+        "averageSimilarity": 0.00043666957725668455,
+        "recordCount": 187
+      }
+    ],
+    "maxSimilarity": 0.056523193,
+    "minSimilarity": 0.0000018480143
+  },
+  "week": {
+    "differences": [],
+    "maxSimilarity": 1,
+    "minSimilarity": 0
+  },
+  "month": {
+    "differences": [],
+    "maxSimilarity": 1,
+    "minSimilarity": 0
+  },
+  "year": {
+    "differences": [],
+    "maxSimilarity": 1,
+    "minSimilarity": 0
+  }
+}

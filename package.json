@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@kannydennedy/dreams-2020-types": "^0.7.1",
+    "@kannydennedy/dreams-2020-types": "^0.9.5",
     "@reduxjs/toolkit": "^1.8.1",
     "@rehooks/component-size": "^1.0.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -36,7 +36,8 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "fakedata": "npx ts-node scripts/generateFakeData.ts",
-    "realdata": "npx ts-node scripts/generateRealData.ts"
+    "realdata": "npx ts-node scripts/generateRealData.ts",
+    "bardata": "npx ts-node scripts/generateBarData.ts"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="chart"
+      style="
+        position: relative;
+        width: 1400px;
+        height: 500px;
+        background-color: blueviolet;
+      "
+    ></div>
+  </body>
+  <script>
+    var chartWidth = 1400;
+    var chartHeight = 500;
+
+    var dayDictionary = {
+      0: {
+        average: 3.9248456864105394e-7,
+        recordCount: 366,
+      },
+      1: {
+        average: 4.873040931926169e-7,
+        recordCount: 365,
+      },
+      2: {
+        average: 1.301185414892495e-7,
+        recordCount: 364,
+      },
+      3: {
+        average: 8.391872108485063e-8,
+        recordCount: 363,
+      },
+      4: {
+        average: 3.996898613278967e-8,
+        recordCount: 362,
+      },
+      5: {
+        average: 9.095287056211168e-8,
+        recordCount: 361,
+      },
+      6: {
+        average: 2.406244719557106e-7,
+        recordCount: 360,
+      },
+      7: {
+        average: 1.8770906085890076e-7,
+        recordCount: 359,
+      },
+      8: {
+        average: 3.5598668362939623e-7,
+        recordCount: 358,
+      },
+      9: {
+        average: 2.1153885581840422e-7,
+        recordCount: 357,
+      },
+      10: {
+        average: 1.551761266986937e-7,
+        recordCount: 356,
+      },
+      11: {
+        average: 1.6064183503420308e-7,
+        recordCount: 355,
+      },
+      12: {
+        average: 2.0369529739954297e-7,
+        recordCount: 354,
+      },
+      13: {
+        average: 2.563819181804655e-7,
+        recordCount: 353,
+      },
+      14: {
+        average: 3.962150987473061e-7,
+        recordCount: 352,
+      },
+      15: {
+        average: 4.429114014083993e-7,
+        recordCount: 351,
+      },
+      16: {
+        average: 3.160742495544313e-7,
+        recordCount: 350,
+      },
+      17: {
+        average: 2.7879684197231776e-7,
+        recordCount: 349,
+      },
+      18: {
+        average: 1.2933189830984866e-7,
+        recordCount: 348,
+      },
+      19: {
+        average: 3.0428652206672085e-7,
+        recordCount: 347,
+      },
+      20: {
+        average: 3.0918639995774083e-7,
+        recordCount: 346,
+      },
+      21: {
+        average: 4.864299211572187e-7,
+        recordCount: 345,
+      },
+      22: {
+        average: 2.1577385174019605e-7,
+        recordCount: 344,
+      },
+      23: {
+        average: 2.5775088199157346e-7,
+        recordCount: 343,
+      },
+      24: {
+        average: 2.3766021082545994e-7,
+        recordCount: 342,
+      },
+      25: {
+        average: 1.2775118582843356e-7,
+        recordCount: 341,
+      },
+      26: {
+        average: 1.0412780570444207e-7,
+        recordCount: 340,
+      },
+      27: {
+        average: 1.4815180430091885e-7,
+        recordCount: 339,
+      },
+      28: {
+        average: 3.0071956330697433e-7,
+        recordCount: 338,
+      },
+      29: {
+        average: 2.428696202114074e-7,
+        recordCount: 337,
+      },
+      30: {
+        average: 2.2182526883851903e-7,
+        recordCount: 336,
+      },
+      31: {
+        average: 2.176132649925562e-7,
+        recordCount: 335,
+      },
+      32: {
+        average: 1.1195802113241477e-7,
+        recordCount: 334,
+      },
+      33: {
+        average: 8.858376911138098e-8,
+        recordCount: 333,
+      },
+      34: {
+        average: 1.0716986287288732e-7,
+        recordCount: 332,
+      },
+      35: {
+        average: 1.8333266910584959e-7,
+        recordCount: 331,
+      },
+      36: {
+        average: 2.7745091253342743e-7,
+        recordCount: 330,
+      },
+      37: {
+        average: 3.135270774282472e-7,
+        recordCount: 329,
+      },
+      38: {
+        average: 1.9549548957825726e-7,
+        recordCount: 328,
+      },
+      39: {
+        average: 1.8681213854999196e-7,
+        recordCount: 327,
+      },
+      40: {
+        average: 1.6153485500485212e-7,
+        recordCount: 326,
+      },
+      41: {
+        average: 2.928518137654766e-7,
+        recordCount: 325,
+      },
+      42: {
+        average: 8.236760118924121e-7,
+        recordCount: 324,
+      },
+      43: {
+        average: 7.145838956666583e-7,
+        recordCount: 323,
+      },
+      44: {
+        average: 8.117006988008039e-7,
+        recordCount: 322,
+      },
+      45: {
+        average: 7.582436537389325e-7,
+        recordCount: 321,
+      },
+      46: {
+        average: 5.626033543728466e-7,
+        recordCount: 320,
+      },
+      47: {
+        average: 4.60243857722482e-7,
+        recordCount: 319,
+      },
+      48: {
+        average: 0.0000015707055287217026,
+        recordCount: 318,
+      },
+      49: {
+        average: 0.0000018607032646242548,
+        recordCount: 317,
+      },
+      50: {
+        average: 0.000001752989333390074,
+        recordCount: 316,
+      },
+      51: {
+        average: 0.0000016646622423018022,
+        recordCount: 315,
+      },
+      52: {
+        average: 0.0000014978810445345116,
+        recordCount: 314,
+      },
+      53: {
+        average: 0.0000013012541026314502,
+        recordCount: 313,
+      },
+      54: {
+        average: 0.00000109985360208921,
+        recordCount: 312,
+      },
+      55: {
+        average: 0.0000014971123002843324,
+        recordCount: 311,
+      },
+      56: {
+        average: 0.000001863720956040986,
+        recordCount: 310,
+      },
+      57: {
+        average: 0.000003071891911093852,
+        recordCount: 309,
+      },
+      58: {
+        average: 0.000002452155323540833,
+        recordCount: 308,
+      },
+      59: {
+        average: 0.00001467682190019251,
+        recordCount: 307,
+      },
+      60: {
+        average: 0.000006304753926817341,
+        recordCount: 306,
+      },
+      61: {
+        average: 0.000014706880752682954,
+        recordCount: 305,
+      },
+      62: {
+        average: 0.000039718259053487,
+        recordCount: 304,
+      },
+      63: {
+        average: 5.042963191813923e-7,
+        recordCount: 303,
+      },
+      64: {
+        average: 4.624351547765711e-7,
+        recordCount: 302,
+      },
+      65: {
+        average: 3.696429195155254e-7,
+        recordCount: 301,
+      },
+      66: {
+        average: 3.547803940664531e-7,
+        recordCount: 300,
+      },
+      67: {
+        average: 2.561169110660857e-7,
+        recordCount: 299,
+      },
+      68: {
+        average: 3.255372957261076e-7,
+        recordCount: 298,
+      },
+      69: {
+        average: 6.73448311637725e-7,
+        recordCount: 297,
+      },
+      70: {
+        average: 4.939367862781331e-7,
+        recordCount: 296,
+      },
+      71: {
+        average: 8.627790705868351e-7,
+        recordCount: 295,
+      },
+      72: {
+        average: 7.629185527496502e-7,
+        recordCount: 294,
+      },
+      73: {
+        average: 3.386370631887982e-7,
+        recordCount: 293,
+      },
+      74: {
+        average: 2.2608042170803144e-7,
+        recordCount: 292,
+      },
+      75: {
+        average: 2.473180022581271e-7,
+        recordCount: 291,
+      },
+      76: {
+        average: 5.41204074874953e-7,
+        recordCount: 290,
+      },
+      77: {
+        average: 6.761470635446294e-7,
+        recordCount: 289,
+      },
+      78: {
+        average: 8.020936930213336e-7,
+        recordCount: 288,
+      },
+      79: {
+        average: 6.405336978168538e-7,
+        recordCount: 287,
+      },
+      80: {
+        average: 7.685037468994538e-7,
+        recordCount: 286,
+      },
+      81: {
+        average: 4.1568457088717525e-7,
+        recordCount: 285,
+      },
+      82: {
+        average: 2.7138854106557014e-7,
+        recordCount: 284,
+      },
+      83: {
+        average: 2.5832501633618593e-7,
+        recordCount: 283,
+      },
+      84: {
+        average: 3.460576662132229e-7,
+        recordCount: 282,
+      },
+      85: {
+        average: 3.5360684108792327e-7,
+        recordCount: 281,
+      },
+      86: {
+        average: 4.5621944351551763e-7,
+        recordCount: 280,
+      },
+      87: {
+        average: 3.3956263769235413e-7,
+        recordCount: 279,
+      },
+      88: {
+        average: 2.2472834857289292e-7,
+        recordCount: 278,
+      },
+      89: {
+        average: 2.2311660399324694e-7,
+        recordCount: 277,
+      },
+      90: {
+        average: 3.8573763969980086e-7,
+        recordCount: 276,
+      },
+      91: {
+        average: 4.239569206407456e-7,
+        recordCount: 275,
+      },
+      92: {
+        average: 0.0000031402260289078965,
+        recordCount: 274,
+      },
+      93: {
+        average: 0.0000016046140556653254,
+        recordCount: 273,
+      },
+      94: {
+        average: 0.0000013114532362135055,
+        recordCount: 272,
+      },
+      95: {
+        average: 7.602723306198947e-7,
+        recordCount: 271,
+      },
+      96: {
+        average: 8.668874801415006e-7,
+        recordCount: 270,
+      },
+      97: {
+        average: 0.000001237320059272374,
+        recordCount: 269,
+      },
+      98: {
+        average: 0.0000014462898009817117,
+        recordCount: 268,
+      },
+      99: {
+        average: 0.0000011683133526297877,
+        recordCount: 267,
+      },
+      100: {
+        average: 0.000001308018581069288,
+        recordCount: 266,
+      },
+      101: {
+        average: 9.24413567094989e-7,
+        recordCount: 265,
+      },
+      102: {
+        average: 5.307144968111716e-7,
+        recordCount: 264,
+      },
+      103: {
+        average: 2.0177339251558063e-7,
+        recordCount: 263,
+      },
+      104: {
+        average: 2.8508417022860423e-7,
+        recordCount: 262,
+      },
+      105: {
+        average: 3.005492391240124e-7,
+        recordCount: 261,
+      },
+      106: {
+        average: 3.5142149014987725e-7,
+        recordCount: 260,
+      },
+      107: {
+        average: 3.973697500319779e-7,
+        recordCount: 259,
+      },
+      108: {
+        average: 2.922804948658142e-7,
+        recordCount: 258,
+      },
+      109: {
+        average: 1.7820953502927149e-7,
+        recordCount: 257,
+      },
+      110: {
+        average: 1.8695071079401903e-7,
+        recordCount: 256,
+      },
+      111: {
+        average: 3.0815614818462754e-7,
+        recordCount: 255,
+      },
+      112: {
+        average: 3.248128352006848e-7,
+        recordCount: 254,
+      },
+      113: {
+        average: 2.6535302319770764e-7,
+        recordCount: 253,
+      },
+      114: {
+        average: 2.5883442266336777e-7,
+        recordCount: 252,
+      },
+      115: {
+        average: 1.4389700589469216e-7,
+        recordCount: 251,
+      },
+      116: {
+        average: 1.568022047913628e-7,
+        recordCount: 250,
+      },
+      117: {
+        average: 1.8105903728609619e-7,
+        recordCount: 249,
+      },
+      118: {
+        average: 2.2698138023545956e-7,
+        recordCount: 248,
+      },
+      119: {
+        average: 4.129364238946261e-7,
+        recordCount: 247,
+      },
+      120: {
+        average: 2.6566449593186326e-7,
+        recordCount: 246,
+      },
+      121: {
+        average: 3.7885092450944066e-7,
+        recordCount: 245,
+      },
+      122: {
+        average: 2.2428295788247278e-7,
+        recordCount: 244,
+      },
+      123: {
+        average: 1.2935913209052134e-7,
+        recordCount: 243,
+      },
+      124: {
+        average: 2.1696636833754538e-7,
+        recordCount: 242,
+      },
+      125: {
+        average: 5.60621440523e-7,
+        recordCount: 241,
+      },
+      126: {
+        average: 7.257190596010872e-7,
+        recordCount: 240,
+      },
+      127: {
+        average: 6.011298588877145e-7,
+        recordCount: 239,
+      },
+      128: {
+        average: 5.343667709044431e-7,
+        recordCount: 238,
+      },
+      129: {
+        average: 4.1680293205114403e-7,
+        recordCount: 237,
+      },
+      130: {
+        average: 2.707459145985642e-7,
+        recordCount: 236,
+      },
+      131: {
+        average: 2.750292172105479e-7,
+        recordCount: 235,
+      },
+      132: {
+        average: 5.471898150037189e-7,
+        recordCount: 234,
+      },
+      133: {
+        average: 6.37720682959082e-7,
+        recordCount: 233,
+      },
+      134: {
+        average: 4.615149682449239e-7,
+        recordCount: 232,
+      },
+      135: {
+        average: 3.1910590444844986e-7,
+        recordCount: 231,
+      },
+      136: {
+        average: 3.967667578830818e-7,
+        recordCount: 230,
+      },
+      137: {
+        average: 2.5236726716298324e-7,
+        recordCount: 229,
+      },
+      138: {
+        average: 2.2084595848540642e-7,
+        recordCount: 228,
+      },
+      139: {
+        average: 4.385337412109922e-7,
+        recordCount: 227,
+      },
+      140: {
+        average: 3.804343205253328e-7,
+        recordCount: 226,
+      },
+      141: {
+        average: 3.9144800497138314e-7,
+        recordCount: 225,
+      },
+      142: {
+        average: 2.81382968981687e-7,
+        recordCount: 224,
+      },
+      143: {
+        average: 2.7815493287811915e-7,
+        recordCount: 223,
+      },
+      144: {
+        average: 3.538319991165472e-7,
+        recordCount: 222,
+      },
+      145: {
+        average: 5.958403968356684e-7,
+        recordCount: 221,
+      },
+      146: {
+        average: 0.0000011624593590732342,
+        recordCount: 220,
+      },
+      147: {
+        average: 8.364944413681084e-7,
+        recordCount: 219,
+      },
+      148: {
+        average: 0.0000010697116270558659,
+        recordCount: 218,
+      },
+      149: {
+        average: 0.0000010391495855304088,
+        recordCount: 217,
+      },
+      150: {
+        average: 4.4173561936944287e-7,
+        recordCount: 216,
+      },
+      151: {
+        average: 4.346913617893056e-7,
+        recordCount: 215,
+      },
+      152: {
+        average: 6.085679649635847e-7,
+        recordCount: 214,
+      },
+      153: {
+        average: 8.002710253447023e-7,
+        recordCount: 213,
+      },
+      154: {
+        average: 6.501249322358042e-7,
+        recordCount: 212,
+      },
+      155: {
+        average: 7.194547562881738e-7,
+        recordCount: 211,
+      },
+      156: {
+        average: 6.881799054230828e-7,
+        recordCount: 210,
+      },
+      157: {
+        average: 5.553399298375863e-7,
+        recordCount: 209,
+      },
+      158: {
+        average: 2.681401619849985e-7,
+        recordCount: 208,
+      },
+      159: {
+        average: 7.543391837437235e-7,
+        recordCount: 207,
+      },
+      160: {
+        average: 0.000001067489252448668,
+        recordCount: 206,
+      },
+      161: {
+        average: 6.548819862920895e-7,
+        recordCount: 205,
+      },
+      162: {
+        average: 5.692036917432763e-7,
+        recordCount: 204,
+      },
+      163: {
+        average: 5.923936331966525e-7,
+        recordCount: 203,
+      },
+      164: {
+        average: 5.634320665101265e-7,
+        recordCount: 202,
+      },
+      165: {
+        average: 0.00000716686642291861,
+        recordCount: 201,
+      },
+      166: {
+        average: 0.000006353985953369219,
+        recordCount: 200,
+      },
+      167: {
+        average: 0.0000144876102689436,
+        recordCount: 199,
+      },
+      168: {
+        average: 0.000009010146352087487,
+        recordCount: 198,
+      },
+      169: {
+        average: 0.000013364429179196721,
+        recordCount: 197,
+      },
+      170: {
+        average: 0.000006745440046627761,
+        recordCount: 196,
+      },
+      171: {
+        average: 0.00000617255132524277,
+        recordCount: 195,
+      },
+      172: {
+        average: 0.0000020218572125234438,
+        recordCount: 194,
+      },
+      173: {
+        average: 0.000003374061115417214,
+        recordCount: 193,
+      },
+      174: {
+        average: 0.0000034629743638406772,
+        recordCount: 192,
+      },
+      175: {
+        average: 0.0000020035805380119043,
+        recordCount: 191,
+      },
+      176: {
+        average: 0.0000022706321259919386,
+        recordCount: 190,
+      },
+      177: {
+        average: 0.000002044051588719582,
+        recordCount: 189,
+      },
+      178: {
+        average: 0.000001965053123416647,
+        recordCount: 188,
+      },
+      179: {
+        average: 9.980038904331262e-7,
+        recordCount: 187,
+      },
+      "-38": {
+        average: 2.5506870587550885e-7,
+        recordCount: 328,
+      },
+      "-37": {
+        average: 1.9530128043143514e-7,
+        recordCount: 329,
+      },
+      "-36": {
+        average: 1.8723275425127682e-7,
+        recordCount: 330,
+      },
+      "-35": {
+        average: 1.7191337015361591e-7,
+        recordCount: 331,
+      },
+      "-119": {
+        average: 2.181697027814156e-7,
+        recordCount: 247,
+      },
+      "-39": {
+        average: 2.2788446157672333e-7,
+        recordCount: 327,
+      },
+      "-115": {
+        average: 4.0256441136970043e-8,
+        recordCount: 251,
+      },
+      "-30": {
+        average: 1.8884889489825916e-7,
+        recordCount: 336,
+      },
+      "-116": {
+        average: 1.6208457004466745e-7,
+        recordCount: 250,
+      },
+      "-29": {
+        average: 3.055998914406891e-7,
+        recordCount: 337,
+      },
+      "-117": {
+        average: 2.6616924653123214e-7,
+        recordCount: 249,
+      },
+      "-118": {
+        average: 3.1667402826798306e-7,
+        recordCount: 248,
+      },
+      "-34": {
+        average: 1.6249322669277583e-7,
+        recordCount: 332,
+      },
+      "-111": {
+        average: 2.6451859412032714e-7,
+        recordCount: 255,
+      },
+      "-33": {
+        average: 1.5765141891213102e-7,
+        recordCount: 333,
+      },
+      "-112": {
+        average: 1.763101220386441e-7,
+        recordCount: 254,
+      },
+      "-32": {
+        average: 1.1434768822044926e-7,
+        recordCount: 334,
+      },
+      "-113": {
+        average: 1.9698258949352526e-7,
+        recordCount: 253,
+      },
+      "-31": {
+        average: 1.7091777933797953e-7,
+        recordCount: 335,
+      },
+      "-114": {
+        average: 5.250177357041817e-7,
+        recordCount: 252,
+      },
+      "-110": {
+        average: 1.300797423632691e-7,
+        recordCount: 256,
+      },
+      "-28": {
+        average: 7.173555448523341e-8,
+        recordCount: 338,
+      },
+      "-27": {
+        average: 7.271972834682138e-8,
+        recordCount: 339,
+      },
+      "-26": {
+        average: 1.495146727499609e-7,
+        recordCount: 340,
+      },
+      "-25": {
+        average: 4.714564868879513e-7,
+        recordCount: 341,
+      },
+      "-108": {
+        average: 3.742129233761971e-7,
+        recordCount: 258,
+      },
+      "-109": {
+        average: 3.0902635999573544e-7,
+        recordCount: 257,
+      },
+      "-20": {
+        average: 1.2623014173738132e-7,
+        recordCount: 346,
+      },
+      "-104": {
+        average: 3.1839749653964333e-7,
+        recordCount: 262,
+      },
+      "-19": {
+        average: 3.099535946199114e-7,
+        recordCount: 347,
+      },
+      "-105": {
+        average: 2.2122677655424262e-7,
+        recordCount: 261,
+      },
+      "-106": {
+        average: 2.627308306231953e-7,
+        recordCount: 260,
+      },
+      "-107": {
+        average: 2.218933475252301e-7,
+        recordCount: 259,
+      },
+      "-24": {
+        average: 1.5872491910348478e-7,
+        recordCount: 342,
+      },
+      "-100": {
+        average: 1.958561152007234e-7,
+        recordCount: 266,
+      },
+      "-23": {
+        average: 9.085814404865699e-8,
+        recordCount: 343,
+      },
+      "-101": {
+        average: 4.227205296935389e-7,
+        recordCount: 265,
+      },
+      "-22": {
+        average: 4.464766818549385e-7,
+        recordCount: 344,
+      },
+      "-102": {
+        average: 2.7652178221334356e-7,
+        recordCount: 264,
+      },
+      "-21": {
+        average: 1.6911253548507062e-7,
+        recordCount: 345,
+      },
+      "-103": {
+        average: 4.3416095180599566e-7,
+        recordCount: 263,
+      },
+      "-59": {
+        average: 2.827625902626115e-7,
+        recordCount: 307,
+      },
+      "-58": {
+        average: 3.7114845970193097e-7,
+        recordCount: 308,
+      },
+      "-57": {
+        average: 2.129675887557457e-7,
+        recordCount: 309,
+      },
+      "-139": {
+        average: 1.6742502197998218e-7,
+        recordCount: 227,
+      },
+      "-52": {
+        average: 1.8447425377821444e-7,
+        recordCount: 314,
+      },
+      "-136": {
+        average: 2.936563056137575e-7,
+        recordCount: 230,
+      },
+      "-51": {
+        average: 2.539190623096063e-7,
+        recordCount: 315,
+      },
+      "-135": {
+        average: 1.0682165261158236e-7,
+        recordCount: 231,
+      },
+      "-50": {
+        average: 1.6136918800162208e-7,
+        recordCount: 316,
+      },
+      "-138": {
+        average: 8.452256342758359e-7,
+        recordCount: 228,
+      },
+      "-137": {
+        average: 2.3911955857141025e-7,
+        recordCount: 229,
+      },
+      "-56": {
+        average: 3.8817465475818486e-7,
+        recordCount: 310,
+      },
+      "-132": {
+        average: 9.785353496090243e-8,
+        recordCount: 234,
+      },
+      "-55": {
+        average: 1.8960593259379096e-7,
+        recordCount: 311,
+      },
+      "-131": {
+        average: 2.4972433516311254e-7,
+        recordCount: 235,
+      },
+      "-54": {
+        average: 9.83141080285747e-7,
+        recordCount: 312,
+      },
+      "-134": {
+        average: 3.340147318246243e-7,
+        recordCount: 232,
+      },
+      "-53": {
+        average: 2.2757556201477554e-7,
+        recordCount: 313,
+      },
+      "-133": {
+        average: 2.1551637319859835e-7,
+        recordCount: 233,
+      },
+      "-130": {
+        average: 4.2349432554697037e-7,
+        recordCount: 236,
+      },
+      "-49": {
+        average: 2.189063424978168e-7,
+        recordCount: 317,
+      },
+      "-48": {
+        average: 2.359322927243515e-7,
+        recordCount: 318,
+      },
+      "-47": {
+        average: 4.548688838964927e-7,
+        recordCount: 319,
+      },
+      "-46": {
+        average: 1.1067041693736223e-7,
+        recordCount: 320,
+      },
+      "-129": {
+        average: 2.1141862173936746e-7,
+        recordCount: 237,
+      },
+      "-128": {
+        average: 2.0674405962889683e-7,
+        recordCount: 238,
+      },
+      "-41": {
+        average: 1.6088226260291662e-7,
+        recordCount: 325,
+      },
+      "-125": {
+        average: 1.8755093498070076e-7,
+        recordCount: 241,
+      },
+      "-40": {
+        average: 1.4994597989171358e-7,
+        recordCount: 326,
+      },
+      "-124": {
+        average: 1.0264526804123634e-7,
+        recordCount: 242,
+      },
+      "-127": {
+        average: 1.6733940420043875e-7,
+        recordCount: 239,
+      },
+      "-126": {
+        average: 2.3757140682885358e-7,
+        recordCount: 240,
+      },
+      "-45": {
+        average: 3.7584547319119906e-7,
+        recordCount: 321,
+      },
+      "-121": {
+        average: 2.1499422133479595e-7,
+        recordCount: 245,
+      },
+      "-44": {
+        average: 2.1508482628877156e-7,
+        recordCount: 322,
+      },
+      "-43": {
+        average: 5.043177950292913e-7,
+        recordCount: 323,
+      },
+      "-123": {
+        average: 3.601265176396857e-7,
+        recordCount: 243,
+      },
+      "-42": {
+        average: 2.4614463488662367e-7,
+        recordCount: 324,
+      },
+      "-122": {
+        average: 1.7890435771443428e-7,
+        recordCount: 244,
+      },
+      "-120": {
+        average: 1.3980885159059827e-7,
+        recordCount: 246,
+      },
+      "-76": {
+        average: 1.7511560823358392e-7,
+        recordCount: 290,
+      },
+      "-77": {
+        average: 1.3808163197241825e-7,
+        recordCount: 289,
+      },
+      "-160": {
+        average: 2.3827313500362344e-7,
+        recordCount: 206,
+      },
+      "-78": {
+        average: 2.5191550558129954e-7,
+        recordCount: 288,
+      },
+      "-72": {
+        average: 2.5291823708466886e-7,
+        recordCount: 294,
+      },
+      "-157": {
+        average: 4.304967006915342e-7,
+        recordCount: 209,
+      },
+      "-73": {
+        average: 1.2329869328361887e-7,
+        recordCount: 293,
+      },
+      "-156": {
+        average: 2.409349888099783e-7,
+        recordCount: 210,
+      },
+      "-74": {
+        average: 2.490601335130683e-7,
+        recordCount: 292,
+      },
+      "-159": {
+        average: 1.850628807944715e-7,
+        recordCount: 207,
+      },
+      "-75": {
+        average: 2.2765546430682763e-7,
+        recordCount: 291,
+      },
+      "-158": {
+        average: 2.582671690695768e-7,
+        recordCount: 208,
+      },
+      "-153": {
+        average: 3.073793732010931e-7,
+        recordCount: 213,
+      },
+      "-69": {
+        average: 2.1381594626031713e-7,
+        recordCount: 297,
+      },
+      "-152": {
+        average: 1.941731791256168e-7,
+        recordCount: 214,
+      },
+      "-70": {
+        average: 2.1170237447575382e-7,
+        recordCount: 296,
+      },
+      "-155": {
+        average: 3.259232874875689e-7,
+        recordCount: 211,
+      },
+      "-71": {
+        average: 2.6054484089523453e-7,
+        recordCount: 295,
+      },
+      "-154": {
+        average: 1.1960072190040207e-7,
+        recordCount: 212,
+      },
+      "-150": {
+        average: 1.4777023155378037e-7,
+        recordCount: 216,
+      },
+      "-151": {
+        average: 6.990514588697315e-7,
+        recordCount: 215,
+      },
+      "-65": {
+        average: 2.416624619226412e-7,
+        recordCount: 301,
+      },
+      "-66": {
+        average: 2.498123444745784e-7,
+        recordCount: 300,
+      },
+      "-67": {
+        average: 4.926295815171976e-7,
+        recordCount: 299,
+      },
+      "-68": {
+        average: 1.2516140687371362e-7,
+        recordCount: 298,
+      },
+      "-61": {
+        average: 2.8974226880374164e-7,
+        recordCount: 305,
+      },
+      "-147": {
+        average: 1.4747241693718201e-7,
+        recordCount: 219,
+      },
+      "-62": {
+        average: 2.5798284963946053e-7,
+        recordCount: 304,
+      },
+      "-146": {
+        average: 1.9632139063547544e-7,
+        recordCount: 220,
+      },
+      "-63": {
+        average: 2.4872775771992506e-7,
+        recordCount: 303,
+      },
+      "-149": {
+        average: 2.0277185626492686e-7,
+        recordCount: 217,
+      },
+      "-64": {
+        average: 3.229812588313262e-7,
+        recordCount: 302,
+      },
+      "-148": {
+        average: 1.2508148324761892e-7,
+        recordCount: 218,
+      },
+      "-143": {
+        average: 2.5982906656986023e-7,
+        recordCount: 223,
+      },
+      "-142": {
+        average: 2.8210691996541604e-7,
+        recordCount: 224,
+      },
+      "-145": {
+        average: 1.6903901068451662e-7,
+        recordCount: 221,
+      },
+      "-60": {
+        average: 1.9109538481083266e-7,
+        recordCount: 306,
+      },
+      "-144": {
+        average: 2.483623684947716e-7,
+        recordCount: 222,
+      },
+      "-141": {
+        average: 2.010053451423618e-7,
+        recordCount: 225,
+      },
+      "-140": {
+        average: 2.7600757355594704e-7,
+        recordCount: 226,
+      },
+      "-17": {
+        average: 1.2452295119187786e-7,
+        recordCount: 349,
+      },
+      "-16": {
+        average: 1.766358828880773e-7,
+        recordCount: 350,
+      },
+      "-15": {
+        average: 3.0791625727691185e-7,
+        recordCount: 351,
+      },
+      "-14": {
+        average: 1.472886521517231e-7,
+        recordCount: 352,
+      },
+      "-97": {
+        average: 2.3378969114386603e-7,
+        recordCount: 269,
+      },
+      "-98": {
+        average: 1.7681823504472373e-7,
+        recordCount: 268,
+      },
+      "-99": {
+        average: 2.2209515843371483e-7,
+        recordCount: 267,
+      },
+      "-18": {
+        average: 1.8872298507035386e-7,
+        recordCount: 348,
+      },
+      "-9": {
+        average: 4.471509684252292e-7,
+        recordCount: 357,
+      },
+      "-93": {
+        average: 3.0527784826419897e-7,
+        recordCount: 273,
+      },
+      "-179": {
+        average: 1.8182510916244234e-7,
+        recordCount: 187,
+      },
+      "-94": {
+        average: 2.982696444377586e-7,
+        recordCount: 272,
+      },
+      "-178": {
+        average: 1.3910709538642247e-7,
+        recordCount: 188,
+      },
+      "-95": {
+        average: 1.6925698842306606e-7,
+        recordCount: 271,
+      },
+      "-96": {
+        average: 2.711898474116866e-7,
+        recordCount: 270,
+      },
+      "-13": {
+        average: 2.853504467036993e-7,
+        recordCount: 353,
+      },
+      "-90": {
+        average: 1.2595254099188436e-7,
+        recordCount: 276,
+      },
+      "-175": {
+        average: 1.5276633430069288e-7,
+        recordCount: 191,
+      },
+      "-12": {
+        average: 7.204919348625473e-7,
+        recordCount: 354,
+      },
+      "-174": {
+        average: 2.051919014456721e-7,
+        recordCount: 192,
+      },
+      "-11": {
+        average: 6.029763206002622e-7,
+        recordCount: 355,
+      },
+      "-91": {
+        average: 2.040777121482877e-7,
+        recordCount: 275,
+      },
+      "-177": {
+        average: 1.4830815767382587e-7,
+        recordCount: 189,
+      },
+      "-10": {
+        average: 5.454103664161855e-7,
+        recordCount: 356,
+      },
+      "-92": {
+        average: 1.8884507436454294e-7,
+        recordCount: 274,
+      },
+      "-176": {
+        average: 1.6186184407959784e-7,
+        recordCount: 190,
+      },
+      "-171": {
+        average: 3.4953643089304056e-7,
+        recordCount: 195,
+      },
+      "-173": {
+        average: 1.7587155132871214e-7,
+        recordCount: 193,
+      },
+      "-89": {
+        average: 1.4611945053415113e-7,
+        recordCount: 277,
+      },
+      "-172": {
+        average: 3.662894444394482e-7,
+        recordCount: 194,
+      },
+      "-6": {
+        average: 6.03636712652756e-7,
+        recordCount: 360,
+      },
+      "-5": {
+        average: 5.233342478267762e-7,
+        recordCount: 361,
+      },
+      "-4": {
+        average: 4.222267180920977e-7,
+        recordCount: 362,
+      },
+      "-3": {
+        average: 5.313790088827734e-7,
+        recordCount: 363,
+      },
+      "-87": {
+        average: 2.697097197506004e-7,
+        recordCount: 279,
+      },
+      "-88": {
+        average: 9.63973525952813e-8,
+        recordCount: 278,
+      },
+      "-8": {
+        average: 6.614294570531168e-7,
+        recordCount: 358,
+      },
+      "-7": {
+        average: 6.589828326730728e-7,
+        recordCount: 359,
+      },
+      "-83": {
+        average: 3.748714835302529e-7,
+        recordCount: 283,
+      },
+      "-168": {
+        average: 2.417271283189081e-7,
+        recordCount: 198,
+      },
+      "-84": {
+        average: 2.2609898984912925e-7,
+        recordCount: 282,
+      },
+      "-167": {
+        average: 1.4880901656414808e-7,
+        recordCount: 199,
+      },
+      "-85": {
+        average: 1.7257341358723075e-7,
+        recordCount: 281,
+      },
+      "-170": {
+        average: 2.6449694838083757e-7,
+        recordCount: 196,
+      },
+      "-86": {
+        average: 1.6023793312449452e-7,
+        recordCount: 280,
+      },
+      "-169": {
+        average: 1.838919894654454e-7,
+        recordCount: 197,
+      },
+      "-2": {
+        average: 4.771596159901506e-7,
+        recordCount: 364,
+      },
+      "-79": {
+        average: 1.5493979165583727e-7,
+        recordCount: 287,
+      },
+      "-164": {
+        average: 1.715277676875018e-7,
+        recordCount: 202,
+      },
+      "-1": {
+        average: 3.56158392349217e-7,
+        recordCount: 365,
+      },
+      "-80": {
+        average: 2.5709549558730746e-7,
+        recordCount: 286,
+      },
+      "-163": {
+        average: 2.469309195279966e-7,
+        recordCount: 203,
+      },
+      "-81": {
+        average: 1.4734683128159398e-7,
+        recordCount: 285,
+      },
+      "-166": {
+        average: 2.1641852158258175e-7,
+        recordCount: 200,
+      },
+      "-82": {
+        average: 2.0989606234065116e-7,
+        recordCount: 284,
+      },
+      "-165": {
+        average: 3.2049396139800485e-7,
+        recordCount: 201,
+      },
+      "-162": {
+        average: 2.1210840580527594e-7,
+        recordCount: 204,
+      },
+      "-161": {
+        average: 1.5918496745051913e-7,
+        recordCount: 205,
+      },
+    };
+
+    // turn dayDictionary into an array of objects
+    var dayArray = [];
+    minSimilarity = 1;
+    maxSimilarity = 0;
+    for (var key in dayDictionary) {
+      var avg = dayDictionary[key].average;
+
+      if (avg > maxSimilarity) {
+        maxSimilarity = avg;
+      } else if (avg < minSimilarity) {
+        minSimilarity = avg;
+      }
+
+      dayArray.push({
+        index: parseInt(key),
+        average: avg,
+        recordCount: dayDictionary[key].recordCount,
+      });
+    }
+
+    var step = chartWidth / dayArray.length;
+
+    // Loop over day array and add to chart
+    var chartDiv = document.getElementById("chart");
+    for (var i = 0; i < dayArray.length; i++) {
+      var day = dayArray[i];
+
+      // Get position of column based on the index
+      // Cast index to int
+      var pos = chartWidth / 2 + day.index * step;
+
+      var height =
+        ((day.average - minSimilarity) / (maxSimilarity - minSimilarity)) * chartHeight;
+
+      var dayDiv = document.createElement("div");
+      dayDiv.className = "day";
+
+      dayDiv.style.left = pos + "px";
+      dayDiv.style.height = height + "px";
+      dayDiv.style.top = chartHeight - height + "px";
+      dayDiv.style.width = step + "px";
+      dayDiv.style.backgroundColor = "hsl(" + day.index * 10 + ", 100%, 50%)";
+      dayDiv.style.border = "1px solid black";
+      dayDiv.style.borderRadius = "5px";
+      dayDiv.style.position = "absolute";
+      dayDiv.style.zIndex = "1";
+
+      // Add dayDiv to chartDiv
+      chartDiv.appendChild(dayDiv);
+    }
+  </script>
+</html>

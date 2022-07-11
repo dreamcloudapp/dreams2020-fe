@@ -2,6 +2,15 @@ const MILLISECONDS_IN_DAY = 1000 * 60 * 60 * 24;
 const FEB_28_INDEX = 58;
 const LAST_DAY_OF_YEAR_INDEX = 364;
 
+// Get the difference between two dates in days
+// If date1 is after date2, return a positive number
+// If date1 is before date2, return a negative number
+export function getDifferenceInDays(date1: Date, date2: Date): number {
+  const difference = date1.getTime() - date2.getTime();
+  return Math.floor(difference / MILLISECONDS_IN_DAY);
+}
+
+
 // Determine if a year is a leap year
 export const isLeapYear = (year: number): boolean => {
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;

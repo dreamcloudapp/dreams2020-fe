@@ -7,14 +7,18 @@ export type CollectionCheck = {
   checked: boolean;
 };
 
+export type GraphType = "column" | "bubble";
+
 export type UIState = {
   activeGranularity: Granularity;
   checkedCollections: CollectionCheck[];
+  showingGraph: GraphType;
 };
 
 const initialState: UIState = {
-  activeGranularity: "month",
+  activeGranularity: "day",
   checkedCollections: [],
+  showingGraph: "column",
 };
 
 const uiSlice = createSlice({
@@ -27,6 +31,9 @@ const uiSlice = createSlice({
     setCheckedCollections(state, action: PayloadAction<CollectionCheck[]>) {
       state.checkedCollections = action.payload;
     },
+    setShowingGraph(state, action: PayloadAction<GraphType>) {
+      state.showingGraph = action.payload;
+    },
     toggleCollectionChecked(state, action: PayloadAction<string>) {
       const collection = state.checkedCollections.find(c => c.label === action.payload);
       if (collection) {
@@ -36,8 +43,12 @@ const uiSlice = createSlice({
   },
 });
 
-export const { setActiveGranularity, setCheckedCollections, toggleCollectionChecked } =
-  uiSlice.actions;
+export const {
+  setActiveGranularity,
+  setCheckedCollections,
+  toggleCollectionChecked,
+  setShowingGraph,
+} = uiSlice.actions;
 
 export const selectActiveGranularity = (state: RootState): Granularity => {
   return state?.ui.activeGranularity;
@@ -45,6 +56,10 @@ export const selectActiveGranularity = (state: RootState): Granularity => {
 
 export const selectCheckedCollections = (state: RootState): CollectionCheck[] => {
   return state?.ui.checkedCollections;
+};
+
+export const selectShowingGraph = (state: RootState): GraphType => {
+  return state?.ui.showingGraph;
 };
 
 export default uiSlice;

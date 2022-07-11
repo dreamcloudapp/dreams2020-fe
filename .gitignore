@@ -3,6 +3,12 @@
 # env
 .env
 
+# Source directory, this is a lot of data
+/source-data-all/*
+
+# Not sure what this is
+src/extensions.json
+
 # dependencies
 /node_modules
 /.pnp
