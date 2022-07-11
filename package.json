@@ -35,8 +35,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "fakedata": "npx ts-node scripts/generateFakeData.ts",
-    "realdata": "npx ts-node scripts/generateRealData.ts",
+    "bubbledata": "npx ts-node scripts/generateBubbleData.ts",
     "bardata": "npx ts-node scripts/generateBarData.ts"
   },
   "eslintConfig": {

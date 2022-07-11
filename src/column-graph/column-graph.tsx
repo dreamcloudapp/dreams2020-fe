@@ -27,10 +27,11 @@ export function ColumnGraph({
 
   return (
     <svg width={width} height={height}>
-      {data.map(d => {
+      {data.map((d, i) => {
         const colHeight = d.averageSimilarity * 900000;
         return (
           <rect
+            key={i}
             x={midpoint + d.difference * columnWidth}
             y={height - colHeight}
             fill={"hsla(200, 50%, 50%, 0.5)"}

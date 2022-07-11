@@ -116,7 +116,9 @@ const files = [
 ];
 
 // Loads the data from the files
-export function fetchMonths(): AppThunk {
+export function fetchBubbleData(): AppThunk {
+  console.log("Fetching bubble data");
+
   return async (dispatch: Dispatch) => {
     dispatch(dataSlice.actions.setLoading(true));
 
@@ -144,7 +146,7 @@ export function fetchMonths(): AppThunk {
 const differencesFile = "differences.json";
 
 // Loads the differences from the file
-export function fetchDifferences(): AppThunk {
+export function fetchColumnData(): AppThunk {
   return async (dispatch: Dispatch) => {
     dispatch(dataSlice.actions.setLoading(true));
 

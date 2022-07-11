@@ -4,14 +4,19 @@ import GraphContainer from "./graph/graph-container";
 import ColumnGraphContainer from "./column-graph/column-graph-container";
 import { useSelector } from "./ducks/root-reducer";
 import {
-  fetchMonths,
+  fetchBubbleData,
   selectComparisons,
   selectIsLoading,
-  fetchDifferences,
+  fetchColumnData,
   selectDifferences,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
-import { selectActiveGranularity, selectShowingGraph, setShowingGraph } from "./ducks/ui";
+import {
+  selectActiveGranularity,
+  selectShowingGraph,
+  setActiveGranularity,
+  setShowingGraph,
+} from "./ducks/ui";
 import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
@@ -33,6 +38,11 @@ function GraphTypeToggle({
           key={graphType}
           onClick={() => {
             dispatch<any>(onSelectGraphType(graphType));
+            if (graphType === "column") {
+              dispatch<any>(setActiveGranularity("day"));
+            } else {
+              dispatch<any>(setActiveGranularity("month"));
+            }
           }}
           className={graphType === "column" ? "active" : ""}
         >
@@ -51,6 +61,7 @@ function App() {
   const showingGraph = useSelector(selectShowingGraph);
   const differencesData = useSelector(selectDifferences);
 
+  // Dummy data for bubbles
   // For when allComparisons hasn't loaded yet
   const defaultData: GranularityComparisonCollection = {
     comparisonSets: [],
@@ -61,6 +72,7 @@ function App() {
     granularity: activeGranularity,
   };
 
+  // Dummy data for columns
   const defaultDifferencesData: DifferenceByGranularity = {
     day: {
       differences: [],
@@ -92,8 +104,8 @@ function App() {
 
   // Initial data fetch
   useEffect(() => {
-    dispatch<any>(fetchMonths());
-    dispatch<any>(fetchDifferences());
+    dispatch<any>(fetchBubbleData());
+    dispatch<any>(fetchColumnData());
   }, [dispatch]);
 
   return (
