@@ -31,10 +31,8 @@ export type FakeComparison = {
 };
 
 const timeLabels: { key: Granularity; label: string }[] = [
-  { key: "year", label: "Years" },
   { key: "month", label: "Months" },
   { key: "week", label: "Weeks" },
-  { key: "day", label: "Days" },
 ];
 
 function GraphContainer({ data }: GraphProps) {

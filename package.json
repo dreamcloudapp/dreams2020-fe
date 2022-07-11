@@ -36,7 +36,8 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "bubbledata": "npx ts-node scripts/generateBubbleData.ts",
-    "bardata": "npx ts-node scripts/generateBarData.ts"
+    "columndata": "npx ts-node scripts/generateColumnData.ts",
+    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateColumnData.ts"
   },
   "eslintConfig": {
     "extends": [

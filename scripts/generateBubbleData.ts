@@ -1,20 +1,26 @@
 const fs = require("fs");
 const path = require("path");
 import {
-  SheldonRecordSet,
   DateTimeRange,
   ComparisonSet,
-  GranularityComparisonCollection,
+  // GranularityComparisonCollection,
   ColoredSetWithinGranularity,
+  DayRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { monthIndexFromDate, weekIndexFromDate } from "./modules/time-helpers";
-const { convertSheldonRecordToComparisonSet } = require("./modules/type-conversions");
+import { convertNewsRecordToComparisonSet } from "./modules/type-conversions";
 const { isDotPath } = require("./modules/file-felpers");
 const { getBroaderGranularity } = require("./modules/get-broader-granularity");
 
 const NUM_CONCEPTS_PER_COMPARISON = 5;
 const NUM_EXAMPLES_PER_COMPARISON = 1;
 const VERY_LARGE_NUMBER = 999 * 999 * 999;
+const SRC_FOLDER = "../source-data-all";
+const NEWS_YEAR = 2020;
+
+const fileYearMap: { [key: string]: number } = {
+  "./all-dreams-final-2020.csv": 2020,
+};
 
 ////////////////////////////////////////////////////
 // CONFIGURATION
@@ -22,7 +28,7 @@ const VERY_LARGE_NUMBER = 999 * 999 * 999;
 
 // We need to decide what the 'coloured collections' will be
 // We decide this based on date ranges
-export type CollectionKey = "jan" | "feb" | "mar";
+export type CollectionKey = "dreams2020" | "controlSet";
 export type CollectionFinder = {
   key: CollectionKey;
   range: DateTimeRange;
@@ -30,23 +36,17 @@ export type CollectionFinder = {
   color: string;
 };
 export const colouredCollections: { [key in CollectionKey]: CollectionFinder } = {
-  jan: {
-    key: "jan",
-    label: "January News vs February Dreams",
+  dreams2020: {
+    key: "dreams2020",
+    label: "2020 Dreams vs 2020 News Items",
     color: "hsl(10, 90%, 60%)",
-    range: { from: new Date("2020-01-01"), to: new Date("2020-01-31") },
+    range: { from: new Date("2020-01-01"), to: new Date("2020-12-31") },
   },
-  feb: {
-    key: "feb",
-    label: "February News vs February Dreams",
-    color: "hsl(70, 90%, 40%)",
-    range: { from: new Date("2020-02-01"), to: new Date("2020-02-29") },
-  },
-  mar: {
-    key: "mar",
-    label: "March News vs February Dreams",
-    color: "hsl(200, 90%, 60%)",
-    range: { from: new Date("2020-03-01"), to: new Date("2020-03-31") },
+  controlSet: {
+    key: "controlSet",
+    label: "Non-2020 Dreams vs 2020 News Items",
+    color: "hsl(200, 90%, 40%)",
+    range: { from: new Date("2000-01-01"), to: new Date("2019-12-31") },
   },
 };
 
@@ -99,7 +99,7 @@ const mergeComparisonDictionaries = (
 
 // Open all the files in "../source-data" one by one
 // and combine them in memory
-const files = fs.readdirSync(path.join(__dirname, "../source-data"));
+const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));
 
 let maxSimilarity = 0;
 let minSimilarity = 1;
@@ -111,20 +111,27 @@ const colouredCollectionRanges = Object.values(colouredCollections);
 const data: ComparisonDictionary = files.reduce(
   (dataAcc: ComparisonDictionary, file: any) => {
     // Read the file
-    const filePath = path.join(__dirname, "../source-data", file);
+    const filePath = path.join(__dirname, SRC_FOLDER, file);
     const fileData = fs.readFileSync(filePath, "utf8");
 
     if (isDotPath(filePath)) {
       return dataAcc;
     } else {
-      const parsedFileData: SheldonRecordSet = JSON.parse(fileData);
-      const comparisonSets: ComparisonSet[] = parsedFileData.records.map(s =>
-        convertSheldonRecordToComparisonSet(
+      const parsedFileData: DayRecord = JSON.parse(fileData);
+
+      // Get the dream date from the file
+      const dreamYear: number = fileYearMap[parsedFileData.dreamSetName] || 2000;
+      const dreamDate = new Date(`${dreamYear}-${parsedFileData.dreamSetDate}`);
+
+      const comparisonSets: ComparisonSet[] = parsedFileData.newsRecords.map(s => {
+        return convertNewsRecordToComparisonSet(
           s,
+          dreamDate,
+          NEWS_YEAR,
           NUM_CONCEPTS_PER_COMPARISON,
           NUM_EXAMPLES_PER_COMPARISON
-        )
-      );
+        );
+      });
 
       // Add the comparison sets to the dictionary
       // For a given file, the records may belong to different "coloured collections"
@@ -170,15 +177,15 @@ const dayComparisonDictionaries: ColoredSetWithinGranularity[] = Object.entries(
   }
 );
 
-// Convert our dictionary to a big fat GranularityComparisonCollection
-const dayComparisonsCollection: GranularityComparisonCollection = {
-  granularity: "day",
-  maxSimilarity: maxSimilarity,
-  minSimilarity: minSimilarity,
-  maxWordCount: maxWordCount,
-  minWordCount: minWordCount,
-  comparisonSets: dayComparisonDictionaries,
-};
+// // Convert our dictionary to a big fat GranularityComparisonCollection
+// const dayComparisonsCollection: GranularityComparisonCollection = {
+//   granularity: "day",
+//   maxSimilarity: maxSimilarity,
+//   minSimilarity: minSimilarity,
+//   maxWordCount: maxWordCount,
+//   minWordCount: minWordCount,
+//   comparisonSets: dayComparisonDictionaries,
+// };
 
 const weekComparisonsCollection = getBroaderGranularity(
   "week",
@@ -192,13 +199,6 @@ const monthComparisonsCollection = getBroaderGranularity(
   monthIndexFromDate,
   dayComparisonDictionaries,
   NUM_EXAMPLES_PER_COMPARISON
-);
-
-// Now write all the day data to a big new file
-fs.writeFileSync(
-  path.join(__dirname, "../public/data/dayComparisons.json"),
-  JSON.stringify(dayComparisonsCollection, null, 2),
-  "utf8"
 );
 
 // Now write all the week data to a big new file

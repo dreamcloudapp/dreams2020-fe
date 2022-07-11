@@ -6,6 +6,7 @@ import {
   SheldonConcept,
   SheldonExample,
   SheldonRecord,
+  NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
 const { dayIndexFromDate } = require("./time-helpers");
 
@@ -49,15 +50,17 @@ const sheldonExampleToExampleRecordComparison = (
   };
 };
 
-// Convert a SheldonRecord to a ComparisonSet
-export const convertSheldonRecordToComparisonSet = (
-  record: SheldonRecord,
+// Convert a NewsRecord to a ComparisonSet
+export const convertNewsRecordToComparisonSet = (
+  record: NewsRecord,
+  dreamDate: Date, // Each file has only one dream date, pass this in
+  newsYear: number,
   numConceptsPerComparison: number,
   numExamplesPerComparison: number
 ): ComparisonSet => {
   // Get dates of set1 and set2
-  const set1Date = new Date(record.set1Date);
-  const set2Date = new Date(record.set2Date);
+  const set1Date = dreamDate;
+  const set2Date = new Date(`${newsYear}-${record.date}`);
 
   // Make collection1 and collection2
   // from set1 and set2
@@ -67,17 +70,18 @@ export const convertSheldonRecordToComparisonSet = (
     timePeriod: {
       granularity: "day",
       index: dayIndexFromDate(set1Date),
-      identifier: record.set1Date + " - " + record.set1Name,
+      identifier: record.date + " - " + "dreams",
       start: set1Date,
       end: set1Date,
     },
   };
+
   const collection2: CollectionParams = {
     label: "News",
     timePeriod: {
       granularity: "day",
       index: dayIndexFromDate(set2Date),
-      identifier: record.set2Date + " - " + record.set2Name,
+      identifier: record.date + " - " + "news",
       start: set2Date,
       end: set2Date,
     },
@@ -95,7 +99,7 @@ export const convertSheldonRecordToComparisonSet = (
     .map(e => sheldonExampleToExampleRecordComparison(e, numConceptsPerComparison));
 
   return {
-    id: record.set1Date + "_" + record.set2Date,
+    id: record.date + "_" + newsYear,
     granularity: "day",
     label: label,
     collection1: collection1,

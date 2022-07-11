@@ -105,14 +105,6 @@ const files = [
     name: "weekComparisons.json",
     granularity: "week",
   },
-  {
-    name: "dayComparisons.json",
-    granularity: "day",
-  },
-  {
-    name: "yearComparisons.json",
-    granularity: "year",
-  },
 ];
 
 // Loads the data from the files

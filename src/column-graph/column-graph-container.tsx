@@ -1,18 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
-import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Granularity } from "../../types/type";
 import { DifferenceByGranularity } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
-import {
-  selectActiveGranularity,
-  setActiveGranularity,
-  toggleCollectionChecked,
-} from "../ducks/ui";
+import { selectActiveGranularity, setActiveGranularity } from "../ducks/ui";
 import { useDispatch } from "react-redux";
-import { reduce } from "d3";
-import { Padding } from "../modules/ui-types";
 import { ColumnGraph } from "./column-graph";
 import { localPoint } from "@visx/event";
 
@@ -34,24 +27,14 @@ const timeLabels: { key: Granularity; label: string }[] = [
   { key: "day", label: "Days" },
 ];
 
-const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 60, BOTTOM: 60 };
-
 function ColumnGraphContainer({ data }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
 
   const columnData = data[activeGranularity].differences;
 
-  const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
-
   const chartContainerRef = useRef<HTMLDivElement>(null);
   let { width, height } = useComponentSize(chartContainerRef);
-
-  // Width of columns
-  const columnWidth = width / (columnData.length > 0 ? columnData.length : 1);
-
-  // Midpoint of the graph
-  const midpoint = width / 2;
 
   const { tooltipData, tooltipLeft, tooltipTop, tooltipOpen, showTooltip, hideTooltip } =
     useTooltip();
@@ -113,7 +96,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
         </div>
       </div>
 
-      {tooltipOpen && !focusedComparison && (
+      {tooltipOpen && (
         <TooltipInPortal
           // set this to random so it correctly updates with parent bounds
           key={Math.random()}
