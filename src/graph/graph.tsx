@@ -4,14 +4,20 @@ import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Ball } from "./ball";
 import { SplitBall } from "../ball/split-ball";
-import { FakeComparison } from "./graph-container";
 import { MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
 import {
   Granularity,
   GranularityComparisonCollection,
 } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
-import { selectActiveGranularity, CollectionCheck } from "../ducks/ui";
+import {
+  selectActiveGranularity,
+  CollectionCheck,
+  VisComparison,
+  setPrevFocusedComparison,
+  setFocusedComparison,
+} from "../ducks/ui";
+import { useDispatch } from "react-redux";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
@@ -21,10 +27,8 @@ type GraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
   checkedCollections: CollectionCheck[];
   hideTooltip: () => void;
-  focusedComparison: FakeComparison | null;
-  prevFocusedComparison: FakeComparison | null;
-  setFocusedComparison: React.Dispatch<React.SetStateAction<FakeComparison | null>>;
-  setPrevFocusedComparison: React.Dispatch<React.SetStateAction<FakeComparison | null>>;
+  focusedComparison: VisComparison | null;
+  prevFocusedComparison: VisComparison | null;
 };
 
 const getDomain = (granularity: Granularity): [number, number] => {
@@ -45,10 +49,10 @@ function Graph({
   hideTooltip,
   focusedComparison,
   prevFocusedComparison,
-  setFocusedComparison,
-  setPrevFocusedComparison,
   checkedCollections,
 }: GraphProps) {
+  const dispatch = useDispatch();
+
   // We need to know the active granularity to determine the scale
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -134,13 +138,15 @@ function Graph({
               }
               onMouseOut={hideTooltip}
               onClick={() => {
-                setFocusedComparison({
-                  x: endX,
-                  y: endY,
-                  color: comparisonSet.color,
-                  concepts: comparisonSet.comparisons[0].concepts.map(c => c.title),
-                  startRadius: scaleBallSize(wordCount),
-                });
+                dispatch(
+                  setFocusedComparison({
+                    x: endX,
+                    y: endY,
+                    color: comparisonSet.color,
+                    concepts: comparisonSet.comparisons[0].concepts.map(c => c.title),
+                    startRadius: scaleBallSize(wordCount),
+                  })
+                );
               }}
             />
           );
@@ -155,8 +161,8 @@ function Graph({
           height={height}
           fill={"rgba(255,255,255,0.2)"}
           onClick={() => {
-            setPrevFocusedComparison(focusedComparison);
-            setFocusedComparison(null);
+            dispatch(setPrevFocusedComparison(focusedComparison));
+            dispatch(setFocusedComparison(null));
           }}
         />
       )}

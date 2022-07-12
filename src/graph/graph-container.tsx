@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
@@ -15,19 +15,15 @@ import {
   CollectionCheck,
   toggleCollectionChecked,
   selectCheckedCollections,
+  selectFocusedComparison,
+  selectPrevFocusedComparison,
+  setFocusedComparison,
+  setPrevFocusedComparison,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
-};
-
-export type FakeComparison = {
-  x: number;
-  y: number;
-  concepts: string[];
-  startRadius: number;
-  color: string;
 };
 
 const timeLabels: { key: Granularity; label: string }[] = [
@@ -39,10 +35,8 @@ function GraphContainer({ data }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
   const checkedCollections = useSelector(selectCheckedCollections);
-
-  const [focusedComparison, setFocusedComparison] = useState<FakeComparison | null>(null);
-  const [prevFocusedComparison, setPrevFocusedComparison] =
-    useState<FakeComparison | null>(null);
+  const focusedComparison = useSelector(selectFocusedComparison);
+  const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
 
   // Set checked collections on mount
   useEffect(() => {
@@ -105,8 +99,6 @@ function GraphContainer({ data }: GraphProps) {
               hideTooltip={hideTooltip}
               focusedComparison={focusedComparison}
               prevFocusedComparison={prevFocusedComparison}
-              setFocusedComparison={setFocusedComparison}
-              setPrevFocusedComparison={setPrevFocusedComparison}
             />
           )}
           {/* Select active time period */}

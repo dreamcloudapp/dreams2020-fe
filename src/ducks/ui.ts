@@ -9,16 +9,28 @@ export type CollectionCheck = {
 
 export type GraphType = "column" | "bubble";
 
+export type VisComparison = {
+  x: number;
+  y: number;
+  concepts: string[];
+  startRadius: number;
+  color: string;
+};
+
 export type UIState = {
   activeGranularity: Granularity;
   checkedCollections: CollectionCheck[];
   showingGraph: GraphType;
+  focusedComparison: VisComparison | null;
+  prevFocusedComparison: VisComparison | null;
 };
 
 const initialState: UIState = {
   activeGranularity: "day",
   checkedCollections: [],
   showingGraph: "column",
+  focusedComparison: null,
+  prevFocusedComparison: null,
 };
 
 const uiSlice = createSlice({
@@ -34,6 +46,12 @@ const uiSlice = createSlice({
     setShowingGraph(state, action: PayloadAction<GraphType>) {
       state.showingGraph = action.payload;
     },
+    setFocusedComparison(state, action: PayloadAction<VisComparison | null>) {
+      state.focusedComparison = action.payload;
+    },
+    setPrevFocusedComparison(state, action: PayloadAction<VisComparison | null>) {
+      state.prevFocusedComparison = action.payload;
+    },
     toggleCollectionChecked(state, action: PayloadAction<string>) {
       const collection = state.checkedCollections.find(c => c.label === action.payload);
       if (collection) {
@@ -48,6 +66,8 @@ export const {
   setCheckedCollections,
   toggleCollectionChecked,
   setShowingGraph,
+  setFocusedComparison,
+  setPrevFocusedComparison,
 } = uiSlice.actions;
 
 export const selectActiveGranularity = (state: RootState): Granularity => {
@@ -60,6 +80,14 @@ export const selectCheckedCollections = (state: RootState): CollectionCheck[] =>
 
 export const selectShowingGraph = (state: RootState): GraphType => {
   return state?.ui.showingGraph;
+};
+
+export const selectFocusedComparison = (state: RootState): VisComparison | null => {
+  return state?.ui.focusedComparison;
+};
+
+export const selectPrevFocusedComparison = (state: RootState): VisComparison | null => {
+  return state?.ui.prevFocusedComparison;
 };
 
 export default uiSlice;
