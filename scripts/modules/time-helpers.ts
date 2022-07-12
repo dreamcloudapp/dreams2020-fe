@@ -1,6 +1,20 @@
 const MILLISECONDS_IN_DAY = 1000 * 60 * 60 * 24;
 const FEB_28_INDEX = 58;
 const LAST_DAY_OF_YEAR_INDEX = 364;
+const shortMonths = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 // Get the difference between two dates in days
 // If date1 is after date2, return a positive number
@@ -10,6 +24,14 @@ export function getDifferenceInDays(date1: Date, date2: Date): number {
   return Math.floor(difference / MILLISECONDS_IN_DAY);
 }
 
+// Turn a month index into a month name
+export const monthNameFromIndex = (index: number): string => {
+  if (shortMonths[index]) {
+    return shortMonths[index];
+  } else {
+    return "Invalid month index";
+  }
+};
 
 // Determine if a year is a leap year
 export const isLeapYear = (year: number): boolean => {

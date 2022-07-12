@@ -5,6 +5,7 @@ import {
   Granularity,
 } from "@kannydennedy/dreams-2020-types";
 import { consolidateExampleList, consolidateWikipediaConceptList } from "./mergers";
+import { monthNameFromIndex } from "./time-helpers";
 
 const VERY_LARGE_NUMBER = 999 * 999 * 999;
 // The maximum time index distance for a given granularity
@@ -15,6 +16,26 @@ export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number }
   week: 6,
   month: 6,
   year: 30,
+};
+
+const generateTooltipLabel = (
+  dreamIndex: number,
+  newsIndex: number,
+  granularity: Granularity
+): string => {
+  if (granularity === "month") {
+    // e.g. "March Dreams vs. April News"
+    // Convert dreamIndex and newsIndex to month names
+    const dreamMonth = monthNameFromIndex(dreamIndex);
+    const newsMonth = monthNameFromIndex(newsIndex);
+    return `${dreamMonth} Dreams vs. ${newsMonth} News`;
+  } else if (granularity === "week") {
+    // e.g. "Week 1 Dreams vs. Week 2 News"
+    // Convert dreamIndex and newsIndex to week numbers
+    return `Week ${dreamIndex} Dreams vs. Week ${newsIndex} News`;
+  } else {
+    return "Error in generateLabel";
+  }
 };
 
 // We have the 'day comparisons', and we need to change these
@@ -50,9 +71,7 @@ export const getBroaderGranularity = (
             const comp: ComparisonSet = {
               id: key,
               granularity: granularity,
-              label: `Dreams from ${granularity} ${
-                dreamTimeIndex + 1
-              } (collection name) vs. news from ${granularity} ${newsTimeIndex}`,
+              label: generateTooltipLabel(dreamTimeIndex, newsTimeIndex, granularity),
               collection1: {
                 label: "Dreams",
                 timePeriod: {
