@@ -17,8 +17,6 @@ import {
   selectCheckedCollections,
   selectFocusedComparison,
   selectPrevFocusedComparison,
-  setFocusedComparison,
-  setPrevFocusedComparison,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 

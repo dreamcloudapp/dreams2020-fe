@@ -15,6 +15,8 @@ import {
   selectActiveGranularity,
   selectShowingGraph,
   setActiveGranularity,
+  setFocusedComparison,
+  setPrevFocusedComparison,
   setShowingGraph,
 } from "./ducks/ui";
 import {
@@ -42,8 +44,12 @@ function GraphTypeToggle({
             dispatch<any>(onSelectGraphType(graphType));
             if (graphType === "column") {
               dispatch<any>(setActiveGranularity("day"));
+              dispatch<any>(setFocusedComparison(null));
+              dispatch<any>(setPrevFocusedComparison(null));
             } else {
               dispatch<any>(setActiveGranularity("month"));
+              dispatch<any>(setFocusedComparison(null));
+              dispatch<any>(setPrevFocusedComparison(null));
             }
           }}
           className={graphType === showingGraph ? "selected" : ""}

@@ -26,7 +26,9 @@ const prettyPrintDate = (date: Date): string => {
 function sheldonConceptToWikipediaConcept(
   sheldonConcept: SheldonConcept
 ): WikipediaConcept {
-  const title = capitalizeFirstLetter(sheldonConcept.concept);
+  // Get the title by taking everything after the last slash in sheldonConcept.concept
+  const title = sheldonConcept.concept.split("/").pop() || "";
+
   return {
     title: title,
     link: `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
