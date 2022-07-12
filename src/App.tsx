@@ -27,8 +27,10 @@ const graphtypes: GraphType[] = ["column", "bubble"];
 
 function GraphTypeToggle({
   onSelectGraphType,
+  showingGraph,
 }: {
   onSelectGraphType: (graphType: GraphType) => void;
+  showingGraph: GraphType;
 }) {
   const dispatch = useDispatch();
   return (
@@ -44,7 +46,7 @@ function GraphTypeToggle({
               dispatch<any>(setActiveGranularity("month"));
             }
           }}
-          className={graphType === "column" ? "active" : ""}
+          className={graphType === showingGraph ? "selected" : ""}
         >
           {graphType}
         </button>
@@ -123,7 +125,10 @@ function App() {
         className="App"
         style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
       >
-        <GraphTypeToggle onSelectGraphType={setShowingGraph} />
+        <GraphTypeToggle
+          onSelectGraphType={setShowingGraph}
+          showingGraph={showingGraph}
+        />
         {isLoading ? (
           <div>Loading...</div>
         ) : showingGraph === "column" ? (

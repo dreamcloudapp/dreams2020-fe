@@ -56,9 +56,6 @@ function Graph({
   const domain = getDomain(activeGranularity);
   const range = [0, height - graphPadding.BOTTOM - graphPadding.TOP];
 
-  console.log("domain", domain);
-  console.log("range", range);
-
   const maxDist = MAX_DISTANCE_BETWEEN_TIME_PERIODS[activeGranularity];
 
   // Same as scale y, but all positive inputs
