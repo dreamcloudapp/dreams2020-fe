@@ -51,21 +51,26 @@ function Graph({
 }: GraphProps) {
   // We need to know the active granularity to determine the scale
   const activeGranularity = useSelector(selectActiveGranularity);
+
+  // Domain & range for the y-axis
   const domain = getDomain(activeGranularity);
-  // const numStopsAboveAxis = getDomain(activeGranularity);
+  const range = [0, height - graphPadding.BOTTOM - graphPadding.TOP];
+
+  console.log("domain", domain);
+  console.log("range", range);
+
+  const maxDist = MAX_DISTANCE_BETWEEN_TIME_PERIODS[activeGranularity];
 
   // Same as scale y, but all positive inputs
   const tickScale = scaleLinear()
-    .domain([0, maxTimeDistance * 2])
+    .domain([0, maxDist * 2]) // x intervals before, x intervals after
     .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
   const scaleX = scaleLinear()
     .domain([0, data.maxSimilarity])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
 
-  const scaleYDiscrete = scaleLinear()
-    .domain(domain)
-    .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
+  const scaleYDiscrete = scaleLinear().domain(domain).range(range);
 
   // Size of the balls is determined by the number of words in the comparison
   // And the height of the graph
@@ -87,9 +92,10 @@ function Graph({
         yAxisBottomLabel={"Dream later in the year than news"}
         xAxisRightLabel={"Similarity"}
         yAxisTextLeft={30}
-        maxTimeDistance={maxTimeDistance}
+        maxTimeDistance={maxDist}
         tickScale={tickScale}
         opacity={focusedComparison ? 0.2 : 1}
+        granularity={activeGranularity}
       />
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {

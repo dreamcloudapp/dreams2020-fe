@@ -1,6 +1,6 @@
+import { Granularity } from "@kannydennedy/dreams-2020-types";
 import { ScaleLinear } from "d3";
 import { changeHslLightness } from "../modules/colorHelpers";
-import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Padding } from "../modules/ui-types";
 import { Triangle } from "./triangle";
 
@@ -23,9 +23,8 @@ type AxesProps = {
   maxTimeDistance: number;
   tickScale: ScaleLinear<number, number, never>;
   opacity: number;
+  granularity: Granularity;
 };
-
-const APPROX_MONTH_TIME = MILLISECONDS_IN_YEAR / 12;
 
 function Axes({
   height,
@@ -41,28 +40,29 @@ function Axes({
   maxTimeDistance,
   tickScale,
   opacity,
+  granularity,
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
   const rightGraphEdge = width - padding.RIGHT;
   const topGraphEdge = padding.TOP;
   const bottomGraphEdge = height - padding.BOTTOM;
 
+  // x intervals before, x intervals after, and 'same time'.
+  const numVerticalTicks = maxTimeDistance * 2 + 1;
+
   const yAxisTextLeftPadding = yAxisTextLeft || 0;
 
   const topLabels = splitLabel(yAxisTopLabel || "");
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
 
-  const monthTick = tickScale(APPROX_MONTH_TIME);
-  const weekTick = tickScale(APPROX_MONTH_TIME / 4);
-
-  const numMonthGridLines = 25;
+  const intervalTick = tickScale(1);
 
   return (
     <g opacity={opacity}>
       {/* Grid */}
       {/* hGrid */}
-      {[...new Array(numMonthGridLines)].map((_, i) => {
-        const linePosition = topGraphEdge + i * monthTick;
+      {[...new Array(numVerticalTicks)].map((_, i) => {
+        const linePosition = topGraphEdge + i * intervalTick;
         return (
           <line
             key={i}
@@ -95,20 +95,20 @@ function Axes({
       />
 
       {/* Month ticks */}
-      {[...new Array(25)].map((_, i) => {
+      {[...new Array(numVerticalTicks)].map((_, i) => {
         // No tick in zero position, there's an arrow there
-        const tickPosition = topGraphEdge + i * monthTick;
+        const tickPosition = topGraphEdge + i * intervalTick;
 
-        const midPoint = Math.floor(25 / 2);
+        const midPoint = Math.floor(numVerticalTicks / 2);
 
         const axisNum = Math.abs(i - midPoint);
         const sameMonth = axisNum === 0;
 
-        const text = sameMonth ? "Same time" : `${axisNum} months`;
+        const text = sameMonth ? "Same time" : `${axisNum} ${granularity}s`;
 
         return (
           <g key={`tick-${i}`}>
-            {i > 0 && i < 24 && (
+            {i > 0 && i < numVerticalTicks - 1 && (
               <line
                 x1={leftGraphEdge - 7}
                 y1={tickPosition}
@@ -135,26 +135,6 @@ function Axes({
           </g>
         );
       })}
-
-      {[...new Array(95)].map((_, i) => {
-        // No tick in zero position, there's an arrow there
-        const tickPosition = topGraphEdge + (i + 1) * weekTick;
-
-        return (
-          <g key={`tick-${i}`}>
-            <line
-              x1={leftGraphEdge - 3}
-              y1={tickPosition}
-              x2={leftGraphEdge}
-              y2={tickPosition}
-              stroke={changeHslLightness(strokeColor, 40)}
-              strokeWidth={strokeWidth}
-            />
-          </g>
-        );
-      })}
-
-      {/* const weekTick = tickScale(monthTick / 4); */}
 
       {/* yAxisTopLabel */}
       {topLabels.map((label, i) => {
