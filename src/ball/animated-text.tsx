@@ -1,11 +1,13 @@
 import { Point } from "../../types/types";
 import { animated, useChain, useSpring, useSpringRef } from "react-spring";
+import { changeHslLightness } from "../modules/colorHelpers";
 
 type AnimatedTextProps = {
   startPoint: Point;
   endPoint: Point;
   conceptText: string;
   fill: string;
+  outlineShade: string;
   fontSize: number;
   fontWeight: number;
   rectWidth: number;
@@ -21,6 +23,7 @@ export const AnimatedText = ({
   fontWeight,
   rectWidth,
   rectHeight,
+  outlineShade,
 }: AnimatedTextProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
@@ -37,8 +40,16 @@ export const AnimatedText = ({
   });
 
   const moveRectProps = useSpring({
-    to: { x: endX - rectWidth / 2, y: endY },
-    from: { x: startX - rectWidth / 2, y: startY },
+    to: {
+      x: endX - rectWidth / 2,
+      y: endY,
+      opacity: 1,
+    },
+    from: {
+      x: startX - rectWidth / 2,
+      y: startY,
+      opacity: 0,
+    },
     config: { mass: 10, tension: 500, friction: 85, clamp: false, delay: 3000 },
     ref: moveRectSpringRef,
   });
@@ -60,15 +71,18 @@ export const AnimatedText = ({
         {...fadeInProps}
         width={rectWidth}
         height={rectHeight}
-        fill={"white"}
-        stroke={"black"}
+        fill={changeHslLightness(fill, 35)}
+        stroke={outlineShade}
+        rx={0}
+        ry={0}
+        strokeWidth={2}
       />
       <animated.text
         {...moveTextProps}
         {...fadeInProps}
-        fill={fill}
+        fill={"#222"}
         textAnchor="middle"
-        // dominantBaseline="central"
+        dominantBaseline="central"
         fontSize={fontSize}
         fontWeight={fontWeight}
       >

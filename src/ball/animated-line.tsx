@@ -9,6 +9,7 @@ type AnimatedLineProps = {
   stroke: string;
   clampLeft: boolean;
   clampRight: boolean;
+  strokeWidth: number;
 };
 
 export const AnimatedLine = ({
@@ -19,6 +20,7 @@ export const AnimatedLine = ({
   stroke,
   clampLeft,
   clampRight,
+  strokeWidth,
 }: AnimatedLineProps) => {
   const [leftStartX, leftStartY] = leftStart;
   const [rightStartX, rightStartY] = rightStart;
@@ -58,7 +60,7 @@ export const AnimatedLine = ({
         {...moveLineLeftProps}
         {...moveLineRightProps}
         stroke={stroke}
-        strokeWidth={1}
+        strokeWidth={strokeWidth}
         // shapeRendering={"crispEdges"}
       />
     </g>

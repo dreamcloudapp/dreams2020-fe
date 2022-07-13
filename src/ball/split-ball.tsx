@@ -3,6 +3,7 @@ import { animated, useSpring, useChain, useSpringRef } from "react-spring";
 import React from "react";
 import { AnimatedText } from "./animated-text";
 import { AnimatedLine } from "./animated-line";
+import { changeHslLightness } from "../modules/colorHelpers";
 
 type SplitBallProps = {
   stroke: string;
@@ -44,10 +45,12 @@ export const SplitBall = ({
   const startFocus: Focus = isFocused ? "unfocused" : "focused";
   const endFocus: Focus = isFocused ? "focused" : "unfocused";
 
-  const ballSpreadPercentage = 0.5;
+  const ballSpreadPercentage = 0.8;
   const ballDistance = Math.floor(graphWidth * ballSpreadPercentage);
-  const textRectWidth = Math.floor(graphWidth * 0.15);
+  const textRectWidth = Math.floor(graphWidth * 0.5);
   const lineLength = ballDistance / 2;
+
+  const outlineShade = changeHslLightness(fill, -10);
 
   const rectHeight = 40;
 
@@ -66,11 +69,11 @@ export const SplitBall = ({
     focused: {
       moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
       leftBallMove: {
-        transform: "translateX(-5%) scale(0.7) translateY(20%)",
+        transform: "translateX(-21%) scale(0.7) translateY(20%)",
         stroke: stroke,
       },
       rightBallMove: {
-        transform: "translateX(34%) scale(0.7) translateY(20%)",
+        transform: "translateX(51%) scale(0.7) translateY(20%)",
         stroke: stroke,
       },
     },
@@ -129,9 +132,10 @@ export const SplitBall = ({
                   endX - textRectWidth / 2,
                   ySpreadStart + i * spreadInterval + rectHeight / 2,
                 ]}
-                stroke={"black"}
+                stroke={outlineShade}
                 clampLeft={false}
                 clampRight={true}
+                strokeWidth={strokeWidth}
               />
               {/* Lines that lead from the right ball to the text */}
               <AnimatedLine
@@ -142,9 +146,10 @@ export const SplitBall = ({
                   ySpreadStart + i * spreadInterval + rectHeight / 2,
                 ]}
                 rightEnd={[endX + lineLength, endY]}
-                stroke={"black"}
+                stroke={outlineShade}
                 clampLeft={true}
                 clampRight={false}
+                strokeWidth={strokeWidth}
               />
               <AnimatedText
                 startPoint={[endX, endY]}
@@ -152,10 +157,11 @@ export const SplitBall = ({
                 fill={fill}
                 conceptText={concept}
                 key={i}
-                fontSize={24}
+                fontSize={18}
                 fontWeight={500}
                 rectWidth={textRectWidth}
                 rectHeight={rectHeight}
+                outlineShade={outlineShade}
               />
             </g>
           );
