@@ -61,7 +61,14 @@ export const SplitBall = ({
   const positions = {
     unfocused: {
       moveIntoPlace: { cx: startX, cy: startY, r: startRadius },
+      moveTextIntoPlace: { x: startX, y: startY - startRadius },
       leftBallMove: { transform: "translateX(0%) scale(1) translateY(0%)", stroke: fill },
+      leftBallLabelMove: {
+        transform: "translateX(0%) translateY(0%)",
+      },
+      rightLabelMove: {
+        transform: "translateX(0%) translateY(0%)",
+      },
       rightBallMove: {
         transform: "translateX(0%) scale(1) translateY(0%)",
         stroke: fill,
@@ -76,6 +83,9 @@ export const SplitBall = ({
       leftBallMove: {
         transform: "translateX(-21%) scale(0.7) translateY(20%)",
         stroke: stroke,
+      },
+      leftBallLabelMove: {
+        transform: "translateX(12%) translateY(50%)",
       },
       rightBallMove: {
         transform: "translateX(51%) scale(0.7) translateY(20%)",
@@ -106,6 +116,15 @@ export const SplitBall = ({
     ref: leftBallMoveRef,
   });
 
+  const leftBallLabelMoveRef = useSpringRef();
+
+  const leftBallLabelMoveProps = useSpring({
+    from: positions[startFocus].leftBallLabelMove,
+    to: positions[endFocus].leftBallLabelMove,
+    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
+    ref: leftBallLabelMoveRef,
+  });
+
   const rightBallMoveRef = useSpringRef();
 
   const rightBallMoveProps = useSpring({
@@ -116,9 +135,9 @@ export const SplitBall = ({
   });
 
   const refOrder = isFocused
-    ? [moveRef, leftBallMoveRef, rightBallMoveRef]
-    : [rightBallMoveRef, leftBallMoveRef, moveRef];
-  const animationOrder = isFocused ? [0, 1, 1] : [0, 0, 1];
+    ? [moveRef, leftBallMoveRef, rightBallMoveRef, leftBallLabelMoveRef]
+    : [rightBallMoveRef, leftBallMoveRef, moveRef, leftBallLabelMoveRef];
+  const animationOrder = isFocused ? [0, 1, 1, 1] : [0, 0, 1, 1];
 
   useChain(refOrder, animationOrder);
 
@@ -176,6 +195,7 @@ export const SplitBall = ({
           );
         })}
       {/* Left ball */}
+
       <animated.circle
         {...moveIntoPlaceProps}
         style={leftBallMoveProps}
@@ -185,6 +205,16 @@ export const SplitBall = ({
         onClick={onClick}
         fill={fill}
       />
+      {isFocused && (
+        <animated.text
+          {...moveIntoPlaceProps}
+          fill={"white"}
+          style={leftBallLabelMoveProps}
+          fontSize={18}
+        >
+          Dreams
+        </animated.text>
+      )}
 
       {/* Right ball */}
       <animated.circle
@@ -212,7 +242,7 @@ export const SplitBall = ({
             textColor={"white"}
             hasBackground={true}
           />
-          <AnimatedLabel
+          {/* <AnimatedLabel
             startPoint={[endX, endY]}
             endPoint={[endX - 475, endY - 25]}
             fill={"black"}
@@ -237,7 +267,7 @@ export const SplitBall = ({
             outlineShade={"black"}
             textColor={"white"}
             hasBackground={false}
-          />
+          /> */}
         </>
       )}
     </>
