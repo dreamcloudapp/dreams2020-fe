@@ -1,6 +1,13 @@
 import { DifferenceRecord } from "@kannydennedy/dreams-2020-types";
+import { useSelector } from "react-redux";
+import Axes from "../axes/axes";
+import { selectActiveGranularity } from "../ducks/ui";
 import { ColorTheme } from "../modules/theme";
 import { Padding } from "../modules/ui-types";
+import { scaleLinear } from "d3";
+
+const LINE_WIDTH = 2;
+const TRIANGLE_HEIGHT = 10;
 
 type GraphProps = {
   data: DifferenceRecord[];
@@ -12,8 +19,8 @@ type GraphProps = {
 };
 
 const padding: Padding = {
-  LEFT: 90,
-  RIGHT: 90,
+  LEFT: 30,
+  RIGHT: 30,
   TOP: 60,
   BOTTOM: 10,
 };
@@ -25,14 +32,18 @@ export function ColumnGraph({
   hideTooltip,
   handleMouseOver,
 }: GraphProps) {
+  const activeGranularity = useSelector(selectActiveGranularity);
+
   // Width of columns
-  const columnWidth = width / (data.length > 0 ? data.length : 1);
+  const columnWidth =
+    (width - padding.LEFT - padding.RIGHT) / (data.length > 0 ? data.length : 1);
 
   // Midpoint of the graph
-  const midpoint = width / 2;
+  const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
 
   return (
     <svg width={width} height={height}>
+      {/* Columns */}
       {data.map((d, i) => {
         const colHeight = d.averageSimilarity * 900000;
         return (
@@ -68,6 +79,25 @@ export function ColumnGraph({
         );
       })}
       {/* GRID */}
+      <Axes
+        height={height}
+        width={width}
+        padding={padding}
+        // xAxisLabel="Days since news"
+        // yAxisLabel="Similarity"
+        // yScale={d3.scaleLinear().domain([0, 1]).range([height - padding.BOTTOM, padding.TOP])}
+        // xScale={d3.scaleLinear().domain([0, 1]).range([padding.LEFT, width - padding.RIGHT])}
+        strokeColor={"hsl(0, 0%, 0%)"}
+        opacity={0.9}
+        strokeWidth={LINE_WIDTH}
+        triangleHeight={TRIANGLE_HEIGHT}
+        tickScale={scaleLinear()
+          .domain([0, 1])
+          .range([0, height - padding.BOTTOM - padding.TOP])}
+        granularity={activeGranularity}
+        maxTimeDistance={1}
+        yAxisTopLabel="Similarity"
+      />
       <g>
         <line
           x1={midpoint}
@@ -77,7 +107,6 @@ export function ColumnGraph({
           stroke={"#444"}
           strokeWidth={1}
         />
-        <line x1={0} y1={height} x2={width} y2={height} stroke={"#444"} strokeWidth={2} />
       </g>
     </svg>
   );

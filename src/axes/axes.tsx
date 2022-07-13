@@ -2,7 +2,7 @@ import { Granularity } from "@kannydennedy/dreams-2020-types";
 import { ScaleLinear } from "d3";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Padding } from "../modules/ui-types";
-import { Triangle } from "../axes/triangle";
+import { Triangle } from "./triangle";
 
 const splitLabel = (text: string): string[] => {
   const parts = text.split(" ");
@@ -59,28 +59,12 @@ function Axes({
 
   return (
     <g opacity={opacity}>
-      {/* Grid */}
-      {/* hGrid */}
-      {[...new Array(numVerticalTicks)].map((_, i) => {
-        const linePosition = topGraphEdge + i * intervalTick;
-        return (
-          <line
-            key={i}
-            x1={leftGraphEdge}
-            y1={linePosition}
-            x2={rightGraphEdge}
-            y2={linePosition}
-            stroke={changeHslLightness(strokeColor, 70)}
-          />
-        );
-      })}
-
       {/* x-Axis section before label */}
       <line
         x1={leftGraphEdge}
-        y1={height / 2}
+        y1={height - padding.BOTTOM}
         x2={rightGraphEdge}
-        y2={height / 2}
+        y2={height - padding.BOTTOM}
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
@@ -93,48 +77,6 @@ function Axes({
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
-
-      {/* Month ticks */}
-      {[...new Array(numVerticalTicks)].map((_, i) => {
-        // No tick in zero position, there's an arrow there
-        const tickPosition = topGraphEdge + i * intervalTick;
-
-        const midPoint = Math.floor(numVerticalTicks / 2);
-
-        const axisNum = Math.abs(i - midPoint);
-        const sameMonth = axisNum === 0;
-
-        const text = sameMonth ? "Same time" : `${axisNum} ${granularity}s`;
-
-        return (
-          <g key={`tick-${i}`}>
-            {i > 0 && i < numVerticalTicks - 1 && (
-              <line
-                x1={leftGraphEdge - 7}
-                y1={tickPosition}
-                x2={leftGraphEdge}
-                y2={tickPosition}
-                stroke={changeHslLightness(strokeColor, 40)}
-                strokeWidth={strokeWidth}
-              />
-            )}
-            {i % 2 === 0 && (
-              <text
-                key={i}
-                x={sameMonth ? 20 : leftGraphEdge - (axisNum > 9 ? 70 : 65)}
-                y={tickPosition + 3} // + 3 to account for text centring
-                fontFamily="Lato"
-                fontSize="11"
-                fontWeight={300}
-                fill={changeHslLightness(strokeColor, 30)}
-                // color={changeHslLightness(strokeColor, 40)}
-              >
-                {text}
-              </text>
-            )}
-          </g>
-        );
-      })}
 
       {/* yAxisTopLabel */}
       {topLabels.map((label, i) => {
@@ -190,22 +132,13 @@ function Axes({
         y={topGraphEdge - triangleHeight}
         fill={strokeColor}
       />
-      {/* Bottom y-Axis triangle */}
-      <Triangle
-        height={triangleHeight}
-        width={triangleHeight}
-        orientation={"S"}
-        x={leftGraphEdge - triangleHeight / 2}
-        y={bottomGraphEdge}
-        fill={strokeColor}
-      />
       {/* x-Axis triangle */}
       <Triangle
         height={triangleHeight}
         width={triangleHeight}
         orientation={"E"}
         x={rightGraphEdge}
-        y={height / 2 - triangleHeight / 2}
+        y={height - padding.BOTTOM - triangleHeight / 2}
         fill={strokeColor}
       />
     </g>
