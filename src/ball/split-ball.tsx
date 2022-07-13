@@ -4,6 +4,7 @@ import React from "react";
 import { AnimatedText } from "./animated-text";
 import { AnimatedLine } from "./animated-line";
 import { changeHslLightness } from "../modules/colorHelpers";
+import { AnimatedLabel } from "./animated-label";
 
 type SplitBallProps = {
   stroke: string;
@@ -65,6 +66,10 @@ export const SplitBall = ({
         transform: "translateX(0%) scale(1) translateY(0%)",
         stroke: fill,
       },
+      conceptsLabelMove: {
+        transform: "translateX(0%) translateY(0%)",
+        fill: stroke,
+      },
     },
     focused: {
       moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
@@ -75,6 +80,10 @@ export const SplitBall = ({
       rightBallMove: {
         transform: "translateX(51%) scale(0.7) translateY(20%)",
         stroke: stroke,
+      },
+      conceptsLabelMove: {
+        transform: "translateX(-21%) translateY(20%)",
+        fill: stroke,
       },
     },
   };
@@ -104,6 +113,15 @@ export const SplitBall = ({
     to: positions[endFocus].rightBallMove,
     config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: rightBallMoveRef,
+  });
+
+  const conceptsLabelMoveRef = useSpringRef();
+
+  const conceptsLabelMoveProps = useSpring({
+    from: positions[startFocus].conceptsLabelMove,
+    to: positions[endFocus].conceptsLabelMove,
+    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
+    ref: conceptsLabelMoveRef,
   });
 
   const refOrder = isFocused
@@ -187,6 +205,50 @@ export const SplitBall = ({
         onMouseOut={onMouseOut}
         onClick={onClick}
       />
+      {/* Labels */}
+      {isFocused && (
+        <>
+          <AnimatedLabel
+            startPoint={[endX, endY]}
+            endPoint={[endX, endY - 250]}
+            fill={fill}
+            label={"Common Concepts"}
+            fontSize={18}
+            fontWeight={500}
+            rectWidth={200}
+            rectHeight={rectHeight}
+            outlineShade={fill}
+            textColor={"white"}
+            hasBackground={true}
+          />
+          <AnimatedLabel
+            startPoint={[endX, endY]}
+            endPoint={[endX - 475, endY - 25]}
+            fill={"black"}
+            label={"Dreams"}
+            fontSize={18}
+            fontWeight={500}
+            rectWidth={100}
+            rectHeight={rectHeight}
+            outlineShade={"black"}
+            textColor={"white"}
+            hasBackground={false}
+          />
+          <AnimatedLabel
+            startPoint={[endX, endY]}
+            endPoint={[endX + 475, endY - 25]}
+            fill={"black"}
+            label={"News"}
+            fontSize={18}
+            fontWeight={500}
+            rectWidth={100}
+            rectHeight={rectHeight}
+            outlineShade={"black"}
+            textColor={"white"}
+            hasBackground={false}
+          />
+        </>
+      )}
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { DifferenceRecord } from "@kannydennedy/dreams-2020-types";
+import { ColorTheme } from "../modules/theme";
 
 type GraphProps = {
   data: DifferenceRecord[];
@@ -31,7 +32,7 @@ export function ColumnGraph({
             key={i}
             x={midpoint + d.difference * columnWidth}
             y={height - colHeight}
-            fill={"hsla(200, 50%, 50%, 0.5)"}
+            fill={ColorTheme.BLUE}
             width={columnWidth}
             height={colHeight}
             onMouseOver={e => {

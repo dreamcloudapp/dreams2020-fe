@@ -76,7 +76,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
             />
           )}
           {/* Select active time period */}
-          <div style={{ position: "absolute", right: 10, bottom: 10 }}>
+          {/* <div style={{ position: "absolute", right: 10, bottom: 10 }}>
             <span>View: </span>
             {timeLabels.map(({ key, label }) => {
               const isActive = key === activeGranularity;
@@ -92,7 +92,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
                 </button>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </div>
 
