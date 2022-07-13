@@ -68,7 +68,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
           {width > 0 && height > 0 && (
             <ColumnGraph
               data={columnData}
-              max={data[activeGranularity].maxSimilarity}
+              max={data[activeGranularity].maxAverageSimilarity}
               width={width}
               height={height}
               hideTooltip={hideTooltip}

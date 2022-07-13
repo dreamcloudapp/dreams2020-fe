@@ -110,28 +110,37 @@ files.forEach((file: any) => {
   });
 });
 
-console.log(maxSimilarity, minSimilarity);
+const dayDifferences = differenceDictToArray(dayDictionary);
+const maxAverageSimilarity = Math.max(
+  ...dayDifferences.differences.map(d => d.averageSimilarity)
+);
+
+console.log(maxAverageSimilarity);
 
 const data: DifferenceByGranularity = {
   day: {
     differences: differenceDictToArray(dayDictionary).differences,
     maxSimilarity: maxSimilarity,
     minSimilarity: minSimilarity,
+    maxAverageSimilarity: maxAverageSimilarity,
   },
   week: {
     differences: [],
     maxSimilarity: 1,
     minSimilarity: 0,
+    maxAverageSimilarity: 1,
   },
   month: {
     differences: [],
     maxSimilarity: 1,
     minSimilarity: 0,
+    maxAverageSimilarity: 1,
   },
   year: {
     differences: [],
     maxSimilarity: 1,
     minSimilarity: 0,
+    maxAverageSimilarity: 1,
   },
 };
 

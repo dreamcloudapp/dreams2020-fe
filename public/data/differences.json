@@ -1798,21 +1798,25 @@
       }
     ],
     "maxSimilarity": 0.057454184,
-    "minSimilarity": 0.0000018480143
+    "minSimilarity": 0.0000018480143,
+    "maxAverageSimilarity": 0.0006556466816420125
   },
   "week": {
     "differences": [],
     "maxSimilarity": 1,
-    "minSimilarity": 0
+    "minSimilarity": 0,
+    "maxAverageSimilarity": 1
   },
   "month": {
     "differences": [],
     "maxSimilarity": 1,
-    "minSimilarity": 0
+    "minSimilarity": 0,
+    "maxAverageSimilarity": 1
   },
   "year": {
     "differences": [],
     "maxSimilarity": 1,
-    "minSimilarity": 0
+    "minSimilarity": 0,
+    "maxAverageSimilarity": 1
   }
 }

@@ -9,7 +9,7 @@ import { scaleLinear } from "d3";
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 
-type GraphProps = {
+type ColumnGraphProps = {
   data: DifferenceRecord[];
   max: number;
   width: number;
@@ -31,7 +31,8 @@ export function ColumnGraph({
   width,
   hideTooltip,
   handleMouseOver,
-}: GraphProps) {
+  max,
+}: ColumnGraphProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
   // Width of columns
@@ -41,11 +42,17 @@ export function ColumnGraph({
   // Midpoint of the graph
   const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
 
+  const colHeightScale = scaleLinear()
+    .domain([0, max])
+    .range([0, height - padding.TOP - padding.BOTTOM]);
+
+  console.log(max);
+
   return (
     <svg width={width} height={height}>
       {/* Columns */}
       {data.map((d, i) => {
-        const colHeight = d.averageSimilarity * 900000;
+        const colHeight = colHeightScale(d.averageSimilarity);
         return (
           <rect
             key={i}

@@ -86,21 +86,25 @@ function App() {
       differences: [],
       maxSimilarity: 1,
       minSimilarity: 0,
+      maxAverageSimilarity: 1,
     },
     week: {
       differences: [],
       maxSimilarity: 1,
       minSimilarity: 0,
+      maxAverageSimilarity: 1,
     },
     month: {
       differences: [],
       maxSimilarity: 1,
       minSimilarity: 0,
+      maxAverageSimilarity: 1,
     },
     year: {
       differences: [],
       maxSimilarity: 1,
       minSimilarity: 0,
+      maxAverageSimilarity: 1,
     },
   };
 
