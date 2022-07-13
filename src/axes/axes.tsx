@@ -1,6 +1,5 @@
 import { Granularity } from "@kannydennedy/dreams-2020-types";
 import { ScaleLinear } from "d3";
-import { changeHslLightness } from "../modules/colorHelpers";
 import { Padding } from "../modules/ui-types";
 import { Triangle } from "./triangle";
 
@@ -19,6 +18,8 @@ type AxesProps = {
   yAxisTopLabel?: string;
   yAxisBottomLabel?: string;
   xAxisRightLabel?: string;
+  xAxisLeftLabel?: string;
+  xAxisCenterLabel?: string;
   yAxisTextLeft?: number;
   maxTimeDistance: number;
   tickScale: ScaleLinear<number, number, never>;
@@ -40,6 +41,8 @@ function Axes({
   maxTimeDistance,
   tickScale,
   opacity,
+  xAxisCenterLabel,
+  xAxisLeftLabel,
   granularity,
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
@@ -47,15 +50,10 @@ function Axes({
   const topGraphEdge = padding.TOP;
   const bottomGraphEdge = height - padding.BOTTOM;
 
-  // x intervals before, x intervals after, and 'same time'.
-  const numVerticalTicks = maxTimeDistance * 2 + 1;
-
   const yAxisTextLeftPadding = yAxisTextLeft || 0;
 
   const topLabels = splitLabel(yAxisTopLabel || "");
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
-
-  const intervalTick = tickScale(1);
 
   return (
     <g opacity={opacity}>
@@ -112,10 +110,32 @@ function Axes({
         );
       })}
 
+      {/* xAxisLeftLabel */}
+      <text
+        x={leftGraphEdge}
+        y={height - padding.BOTTOM + 20}
+        fontFamily="Lato"
+        fontSize="14"
+        fontWeight={500}
+        fill={strokeColor}
+      >
+        {xAxisLeftLabel}
+      </text>
+      {/* xAxisCenterLabel */}
+      <text
+        x={width / 2 - 80}
+        y={height - padding.BOTTOM + 20}
+        fontFamily="Lato"
+        fontSize="14"
+        fontWeight={500}
+        fill={strokeColor}
+      >
+        {xAxisCenterLabel}
+      </text>
       {/* xAxisRightLabel */}
       <text
-        x={rightGraphEdge + triangleHeight + 5}
-        y={height / 2 + 5}
+        x={rightGraphEdge - 180}
+        y={height - padding.BOTTOM + 20}
         fontFamily="Lato"
         fontSize="14"
         fontWeight={500}

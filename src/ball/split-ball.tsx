@@ -115,15 +115,6 @@ export const SplitBall = ({
     ref: rightBallMoveRef,
   });
 
-  const conceptsLabelMoveRef = useSpringRef();
-
-  const conceptsLabelMoveProps = useSpring({
-    from: positions[startFocus].conceptsLabelMove,
-    to: positions[endFocus].conceptsLabelMove,
-    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
-    ref: conceptsLabelMoveRef,
-  });
-
   const refOrder = isFocused
     ? [moveRef, leftBallMoveRef, rightBallMoveRef]
     : [rightBallMoveRef, leftBallMoveRef, moveRef];

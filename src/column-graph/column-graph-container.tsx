@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
-import { Granularity } from "../../types/type";
+// import { Granularity } from "../../types/type";
 import { DifferenceByGranularity } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
-import { selectActiveGranularity, setActiveGranularity } from "../ducks/ui";
-import { useDispatch } from "react-redux";
+import { selectActiveGranularity } from "../ducks/ui";
+// import { useDispatch } from "react-redux";
 import { ColumnGraph } from "./column-graph";
 import { localPoint } from "@visx/event";
 
@@ -21,14 +21,14 @@ export type FakeComparison = {
   color: string;
 };
 
-const timeLabels: { key: Granularity; label: string }[] = [
-  { key: "month", label: "Months" },
-  { key: "week", label: "Weeks" },
-  { key: "day", label: "Days" },
-];
+// const timeLabels: { key: Granularity; label: string }[] = [
+//   { key: "month", label: "Months" },
+//   { key: "week", label: "Weeks" },
+//   { key: "day", label: "Days" },
+// ];
 
 function ColumnGraphContainer({ data }: GraphProps) {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
 
   const columnData = data[activeGranularity].differences;

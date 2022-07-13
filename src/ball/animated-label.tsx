@@ -1,6 +1,5 @@
 import { Point } from "../../types/types";
 import { animated, useChain, useSpring, useSpringRef } from "react-spring";
-import { changeHslLightness } from "../modules/colorHelpers";
 
 type AnimatedLabelProps = {
   startPoint: Point;

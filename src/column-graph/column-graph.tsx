@@ -22,7 +22,7 @@ const padding: Padding = {
   LEFT: 30,
   RIGHT: 30,
   TOP: 60,
-  BOTTOM: 10,
+  BOTTOM: 40,
 };
 
 export function ColumnGraph({
@@ -45,8 +45,6 @@ export function ColumnGraph({
   const colHeightScale = scaleLinear()
     .domain([0, max])
     .range([0, height - padding.TOP - padding.BOTTOM]);
-
-  console.log(max);
 
   return (
     <svg width={width} height={height}>
@@ -77,7 +75,8 @@ export function ColumnGraph({
                       </span>
                     )}
                   </p>
-                  <p>Similarity: {d.averageSimilarity.toFixed(7)}</p>
+                  <p>Average similarity: {d.averageSimilarity.toFixed(5)}</p>
+                  <p>Dreams have been compared to {d.recordCount} days of news</p>
                 </div>
               );
             }}
@@ -104,13 +103,16 @@ export function ColumnGraph({
         granularity={activeGranularity}
         maxTimeDistance={1}
         yAxisTopLabel="Similarity"
+        xAxisRightLabel="Dream occured after the news"
+        xAxisLeftLabel="Dream occured before the news"
+        xAxisCenterLabel="Dream on same day as news"
       />
       <g>
         <line
           x1={midpoint}
-          y1={0}
+          y1={padding.TOP}
           x2={midpoint}
-          y2={height}
+          y2={height - padding.BOTTOM}
           stroke={"#444"}
           strokeWidth={1}
         />
