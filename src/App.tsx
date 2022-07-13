@@ -82,30 +82,54 @@ function App() {
 
   // Dummy data for columns
   const defaultDifferencesData: DifferenceByGranularity = {
-    day: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
-    week: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
-    month: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
-    year: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
+    day: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
+    week: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
+    month: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
+    year: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
   };
 
   const data: GranularityComparisonCollection = allComparisons

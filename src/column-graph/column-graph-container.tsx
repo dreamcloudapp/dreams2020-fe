@@ -31,7 +31,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
   // const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
 
-  const columnData = data[activeGranularity].differences;
+  const columnDataSets = data[activeGranularity];
 
   const chartContainerRef = useRef<HTMLDivElement>(null);
   let { width, height } = useComponentSize(chartContainerRef);
@@ -66,33 +66,21 @@ function ColumnGraphContainer({ data }: GraphProps) {
           ref={containerRef}
         >
           {width > 0 && height > 0 && (
-            <ColumnGraph
-              data={columnData}
-              max={data[activeGranularity].maxAverageSimilarity}
-              width={width}
-              height={height}
-              hideTooltip={hideTooltip}
-              handleMouseOver={handleMouseOver}
-            />
+            <>
+              {columnDataSets.map((d, i) => {
+                return (
+                  <ColumnGraph
+                    data={d.comparisons.differences}
+                    max={d.comparisons.maxAverageSimilarity}
+                    width={width}
+                    height={height}
+                    hideTooltip={hideTooltip}
+                    handleMouseOver={handleMouseOver}
+                  />
+                );
+              })}
+            </>
           )}
-          {/* Select active time period */}
-          {/* <div style={{ position: "absolute", right: 10, bottom: 10 }}>
-            <span>View: </span>
-            {timeLabels.map(({ key, label }) => {
-              const isActive = key === activeGranularity;
-              return (
-                <button
-                  key={key}
-                  className={isActive ? "selected" : "unselected"}
-                  onClick={() => {
-                    dispatch(setActiveGranularity(key));
-                  }}
-                >
-                  {label}
-                </button>
-              );
-            })}
-          </div> */}
         </div>
       </div>
 

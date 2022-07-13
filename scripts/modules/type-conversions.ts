@@ -3,7 +3,7 @@ import {
   CollectionParams,
   WikipediaConcept,
   ExampleRecordComparison,
-  SheldonConcept,
+  OptionalSheldonConcept,
   SheldonExample,
   NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
@@ -24,16 +24,25 @@ const prettyPrintDate = (date: Date): string => {
 
 // Convert a SheldonConcept to a WikipediaConcept
 function sheldonConceptToWikipediaConcept(
-  sheldonConcept: SheldonConcept
+  sheldonConcept: OptionalSheldonConcept
 ): WikipediaConcept {
-  // Get the title by taking everything after the last slash in sheldonConcept.concept
-  const title = sheldonConcept.concept.split("/").pop() || "";
+  // If the concept is not present, return an empty object
+  if (!sheldonConcept) {
+    return {
+      title: "",
+      link: "",
+      score: 0,
+    };
+  } else {
+    // Get the title by taking everything after the last slash in sheldonConcept.concept
+    const title = sheldonConcept.concept.split("/").pop() || "";
 
-  return {
-    title: title,
-    link: `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
-    score: sheldonConcept.score,
-  };
+    return {
+      title: title,
+      link: `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
+      score: sheldonConcept.score,
+    };
+  }
 }
 
 // Convert Sheldon Example to ExampleRecordComparison

@@ -20,6 +20,7 @@ const NEWS_YEAR = 2020;
 
 const fileYearMap: { [key: string]: number } = {
   "./all-dreams-final-2020.csv": 2020,
+  "./all-dreams-control.csv": 2019,
 };
 
 ////////////////////////////////////////////////////
