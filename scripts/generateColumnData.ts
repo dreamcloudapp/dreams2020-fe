@@ -84,6 +84,11 @@ files.forEach((file: any) => {
     // const weekDifference = Math.floor(daysDifference / 7);
     // const monthDifference = Math.floor(daysDifference / 30);
 
+    // // If newsDate or dreamDate is in January, skip it
+    // if (newsDate.getMonth() >= 6 || dreamSetDate.getMonth() >= 6) {
+    //   return;
+    // }
+
     const key = `${daysDifference}`;
 
     // Add to day dictionary

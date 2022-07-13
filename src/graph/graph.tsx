@@ -143,7 +143,7 @@ function Graph({
                     x: endX,
                     y: endY,
                     color: comparisonSet.color,
-                    concepts: comparisonSet.comparisons[0].concepts.map(c => c.title),
+                    concepts: comparison.concepts.map(c => c.title),
                     startRadius: scaleBallSize(wordCount),
                   })
                 );
