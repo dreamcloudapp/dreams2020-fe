@@ -124,6 +124,7 @@ function App() {
     <div
       style={{
         width: "100%",
+        position: "relative",
         height: 600,
         padding: window.location.href.includes("localhost") ? 20 : 0,
         maxWidth: window.location.href.includes("localhost")
