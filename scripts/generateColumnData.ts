@@ -123,7 +123,9 @@ files.forEach((file: any) => {
       };
     } else {
       const { average: oldAverage, recordCount: oldRecordCount } = dictionaryOfSet[key];
+
       const newRecordCount = oldRecordCount + 1;
+
       const newAverage = (oldAverage * oldRecordCount + similarity) / newRecordCount;
 
       dictionaryOfSet[key] = {
