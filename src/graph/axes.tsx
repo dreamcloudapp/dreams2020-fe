@@ -123,7 +123,7 @@ function Axes({
                 key={i}
                 x={sameMonth ? 20 : leftGraphEdge - (axisNum > 9 ? 70 : 65)}
                 y={tickPosition + 3} // + 3 to account for text centring
-                fontFamily="Lato"
+                fontFamily="Calibri"
                 fontSize="11"
                 fontWeight={300}
                 fill={changeHslLightness(strokeColor, 30)}
@@ -143,7 +143,7 @@ function Axes({
             key={i}
             x={yAxisTextLeftPadding}
             y={20 * (i + 1)}
-            fontFamily="Lato"
+            fontFamily="Calibri"
             fontSize="14"
             fontWeight={500}
             fill={strokeColor}
@@ -160,7 +160,7 @@ function Axes({
             key={i}
             x={yAxisTextLeftPadding}
             y={height - 30 + 20 * i}
-            fontFamily="Lato"
+            fontFamily="Calibri"
             fontSize="14"
             fontWeight={500}
             fill={strokeColor}
@@ -174,7 +174,7 @@ function Axes({
       <text
         x={rightGraphEdge + triangleHeight + 5}
         y={height / 2 + 5}
-        fontFamily="Lato"
+        fontFamily="Calibri"
         fontSize="14"
         fontWeight={500}
         fill={strokeColor}

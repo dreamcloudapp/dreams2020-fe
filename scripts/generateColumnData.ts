@@ -154,7 +154,7 @@ const data: DifferenceByGranularity = {
   day: [
     {
       key: "2020",
-      color: ColorTheme.BLUE,
+      color: ColorTheme.RED,
       comparisons: {
         differences: dayDifferences2020.differences,
         maxSimilarity: allData[SET2020].maxSimilarity,
@@ -176,7 +176,7 @@ const data: DifferenceByGranularity = {
   week: [
     {
       key: "2020",
-      color: ColorTheme.BLUE,
+      color: ColorTheme.RED,
       comparisons: {
         differences: [],
         maxSimilarity: 1,
@@ -188,7 +188,7 @@ const data: DifferenceByGranularity = {
   month: [
     {
       key: "2020",
-      color: ColorTheme.BLUE,
+      color: ColorTheme.RED,
       comparisons: {
         differences: [],
         maxSimilarity: 1,
@@ -200,7 +200,7 @@ const data: DifferenceByGranularity = {
   year: [
     {
       key: "2020",
-      color: ColorTheme.BLUE,
+      color: ColorTheme.RED,
       comparisons: {
         differences: [],
         maxSimilarity: 1,

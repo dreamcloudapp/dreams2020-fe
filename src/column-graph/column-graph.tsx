@@ -2,7 +2,6 @@ import { DifferenceRecord } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "react-redux";
 import Axes from "../axes/axes";
 import { selectActiveGranularity } from "../ducks/ui";
-import { ColorTheme } from "../modules/theme";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 

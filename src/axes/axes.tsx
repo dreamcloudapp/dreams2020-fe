@@ -83,7 +83,6 @@ function Axes({
             key={i}
             x={yAxisTextLeftPadding}
             y={20 * (i + 1)}
-            fontFamily="Lato"
             fontSize="14"
             fontWeight={500}
             fill={strokeColor}
@@ -100,7 +99,6 @@ function Axes({
             key={i}
             x={yAxisTextLeftPadding}
             y={height - 30 + 20 * i}
-            fontFamily="Lato"
             fontSize="14"
             fontWeight={500}
             fill={strokeColor}
@@ -114,7 +112,7 @@ function Axes({
       <text
         x={leftGraphEdge}
         y={height - padding.BOTTOM + 20}
-        fontFamily="Lato"
+        fontFamily="Calibri"
         fontSize="14"
         fontWeight={500}
         fill={strokeColor}
@@ -125,7 +123,7 @@ function Axes({
       <text
         x={width / 2 - 80}
         y={height - padding.BOTTOM + 20}
-        fontFamily="Lato"
+        fontFamily="Calibri"
         fontSize="14"
         fontWeight={500}
         fill={strokeColor}
@@ -136,7 +134,7 @@ function Axes({
       <text
         x={rightGraphEdge - 180}
         y={height - padding.BOTTOM + 20}
-        fontFamily="Lato"
+        fontFamily="Calibri"
         fontSize="14"
         fontWeight={500}
         fill={strokeColor}

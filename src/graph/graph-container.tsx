@@ -133,7 +133,7 @@ function GraphContainer({ data }: GraphProps) {
           top={tooltipTop}
           left={tooltipLeft}
         >
-          <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
+          <div style={{ maxWidth: 300, fontFamily: "Calibri", fontWeight: 400 }}>
             <strong>{tooltipData}</strong>
           </div>
         </TooltipInPortal>

@@ -41,13 +41,13 @@ export const colouredCollections: { [key in CollectionKey]: CollectionFinder } =
   dreams2020: {
     key: "dreams2020",
     label: "2020 Dreams vs 2020 News Items",
-    color: ColorTheme.BLUE,
+    color: ColorTheme.RED,
     range: { from: new Date("2020-01-01"), to: new Date("2020-12-31") },
   },
   controlSet: {
     key: "controlSet",
     label: "Non-2020 Dreams vs 2020 News Items",
-    color: ColorTheme.RED,
+    color: ColorTheme.BLUE,
     range: { from: new Date("2000-01-01"), to: new Date("2019-12-31") },
   },
 };

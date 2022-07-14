@@ -70,6 +70,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
               {columnDataSets.map((d, i) => {
                 return (
                   <ColumnGraph
+                    key={i}
                     data={d.comparisons.differences}
                     max={d.comparisons.maxAverageSimilarity}
                     width={width}

@@ -2,7 +2,7 @@
   "day": [
     {
       "key": "2020",
-      "color": "hsl(220, 90%, 60%)",
+      "color": "hsl(24, 84%, 56%)",
       "comparisons": {
         "differences": [
           {
@@ -1810,7 +1810,7 @@
   "week": [
     {
       "key": "2020",
-      "color": "hsl(220, 90%, 60%)",
+      "color": "hsl(24, 84%, 56%)",
       "comparisons": {
         "differences": [],
         "maxSimilarity": 1,
@@ -1822,7 +1822,7 @@
   "month": [
     {
       "key": "2020",
-      "color": "hsl(220, 90%, 60%)",
+      "color": "hsl(24, 84%, 56%)",
       "comparisons": {
         "differences": [],
         "maxSimilarity": 1,
@@ -1834,7 +1834,7 @@
   "year": [
     {
       "key": "2020",
-      "color": "hsl(220, 90%, 60%)",
+      "color": "hsl(24, 84%, 56%)",
       "comparisons": {
         "differences": [],
         "maxSimilarity": 1,
