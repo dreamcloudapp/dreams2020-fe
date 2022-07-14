@@ -1,4 +1,4 @@
-export const concepts = [
+export const dummyConcepts = [
   {
     title: "COVID-19 pandemic in New York City",
     link: "https://en.wikipedia.org/wiki/COVID-19_pandemic_in_New_York_City",

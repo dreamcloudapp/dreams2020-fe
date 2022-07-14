@@ -7,6 +7,7 @@ import {
   SheldonExample,
   NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
+import { dummyConcepts } from "./dummy-data";
 const { dayIndexFromDate } = require("./time-helpers");
 
 // Function to capitalise the first letter of a string
@@ -50,7 +51,7 @@ const sheldonExampleToExampleRecordComparison = (
   sheldonExample: SheldonExample,
   numConceptsPerComparison: number
 ): ExampleRecordComparison => {
-  return {
+  const ret = {
     dreamText: sheldonExample.doc1Id, // TODO
     newsText: sheldonExample.doc2Id, // TODO
     score: sheldonExample.score,
@@ -58,6 +59,7 @@ const sheldonExampleToExampleRecordComparison = (
       .slice(0, numConceptsPerComparison)
       .map(sheldonConceptToWikipediaConcept),
   };
+  return ret;
 };
 
 // Convert a NewsRecord to a ComparisonSet
@@ -104,9 +106,15 @@ export const convertNewsRecordToComparisonSet = (
   const concepts = record.topConcepts
     .slice(0, numConceptsPerComparison)
     .map(sheldonConceptToWikipediaConcept);
+
   const examples = record.examples
     .slice(0, numExamplesPerComparison)
     .map(e => sheldonExampleToExampleRecordComparison(e, numConceptsPerComparison));
+
+  // If the concepts are not present, it's a dummy run for speed
+  // So return dummy concepts
+  const shouldUseDummyConcepts = !concepts.length || concepts[0].score === 0;
+  const conceptsToUse = shouldUseDummyConcepts ? dummyConcepts : concepts;
 
   return {
     id: record.date + "_" + newsYear,
@@ -114,7 +122,7 @@ export const convertNewsRecordToComparisonSet = (
     label: label,
     collection1: collection1,
     collection2: collection2,
-    concepts: concepts,
+    concepts: conceptsToUse,
     examples: examples,
     score: record.similarity,
     wordCount: record.wordCount,
