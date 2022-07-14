@@ -9,13 +9,10 @@ import {
   DifferenceRecord,
   DifferenceByGranularity,
 } from "@kannydennedy/dreams-2020-types";
+import { ColorTheme } from "./modules/theme";
 
 const YEAR = 2020;
 const SRC_FOLDER = "../source-data-all";
-const ColorTheme = {
-  RED: "hsl(10, 90%, 60%)",
-  BLUE: "hsl(220, 90%, 60%)",
-};
 
 ////////////////////////////////////////////////////
 // HELPER FUNCTIONS

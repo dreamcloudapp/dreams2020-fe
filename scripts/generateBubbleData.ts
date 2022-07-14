@@ -7,6 +7,7 @@ import {
   ColoredSetWithinGranularity,
   DayRecord,
 } from "@kannydennedy/dreams-2020-types";
+import { ColorTheme } from "./modules/theme";
 import { monthIndexFromDate, weekIndexFromDate } from "./modules/time-helpers";
 import { convertNewsRecordToComparisonSet } from "./modules/type-conversions";
 const { isDotPath } = require("./modules/file-felpers");
@@ -40,13 +41,13 @@ export const colouredCollections: { [key in CollectionKey]: CollectionFinder } =
   dreams2020: {
     key: "dreams2020",
     label: "2020 Dreams vs 2020 News Items",
-    color: "hsl(10, 90%, 60%)",
+    color: ColorTheme.BLUE,
     range: { from: new Date("2020-01-01"), to: new Date("2020-12-31") },
   },
   controlSet: {
     key: "controlSet",
     label: "Non-2020 Dreams vs 2020 News Items",
-    color: "hsl(200, 90%, 40%)",
+    color: ColorTheme.RED,
     range: { from: new Date("2000-01-01"), to: new Date("2019-12-31") },
   },
 };
