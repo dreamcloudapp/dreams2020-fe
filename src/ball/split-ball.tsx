@@ -61,12 +61,12 @@ export const SplitBall = ({
   const positions = {
     unfocused: {
       moveIntoPlace: { cx: startX, cy: startY, r: startRadius },
-      moveTextIntoPlace: { x: startX, y: startY - startRadius },
+      moveTextIntoPlace: { x: startX, y: startY },
       leftBallMove: { transform: "translateX(0%) scale(1) translateY(0%)", stroke: fill },
       leftBallLabelMove: {
         transform: "translateX(0%) translateY(0%)",
       },
-      rightLabelMove: {
+      rightBallLabelMove: {
         transform: "translateX(0%) translateY(0%)",
       },
       rightBallMove: {
@@ -80,12 +80,16 @@ export const SplitBall = ({
     },
     focused: {
       moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
+      moveTextIntoPlace: { x: endX, y: endY },
       leftBallMove: {
         transform: "translateX(-21%) scale(0.7) translateY(20%)",
         stroke: stroke,
       },
       leftBallLabelMove: {
         transform: "translateX(12%) translateY(50%)",
+      },
+      rightBallLabelMove: {
+        transform: "translateX(85%) translateY(50%)",
       },
       rightBallMove: {
         transform: "translateX(51%) scale(0.7) translateY(20%)",
@@ -107,6 +111,15 @@ export const SplitBall = ({
     ref: moveRef,
   });
 
+  // const moveTextRef = useSpringRef();
+
+  // const moveTextIntoPlaceProps = useSpring({
+  //   from: positions[startFocus].moveTextIntoPlace,
+  //   to: positions[endFocus].moveTextIntoPlace,
+  //   config: { mass: 8, tension: 500, friction: 75, clamp: false },
+  //   ref: moveTextRef,
+  // });
+
   const leftBallMoveRef = useSpringRef();
 
   const leftBallMoveProps = useSpring({
@@ -121,8 +134,17 @@ export const SplitBall = ({
   const leftBallLabelMoveProps = useSpring({
     from: positions[startFocus].leftBallLabelMove,
     to: positions[endFocus].leftBallLabelMove,
-    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
+    config: { mass: 1, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: leftBallLabelMoveRef,
+  });
+
+  const rightBallLabelMoveRef = useSpringRef();
+
+  const rightBallLabelMoveProps = useSpring({
+    from: positions[startFocus].rightBallLabelMove,
+    to: positions[endFocus].rightBallLabelMove,
+    config: { mass: 5, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
+    ref: rightBallLabelMoveRef,
   });
 
   const rightBallMoveRef = useSpringRef();
@@ -135,9 +157,23 @@ export const SplitBall = ({
   });
 
   const refOrder = isFocused
-    ? [moveRef, leftBallMoveRef, rightBallMoveRef, leftBallLabelMoveRef]
-    : [rightBallMoveRef, leftBallMoveRef, moveRef, leftBallLabelMoveRef];
-  const animationOrder = isFocused ? [0, 1, 1, 1] : [0, 0, 1, 1];
+    ? [
+        moveRef,
+        leftBallMoveRef,
+        rightBallMoveRef,
+        leftBallLabelMoveRef,
+        rightBallLabelMoveRef,
+        // moveTextRef,
+      ]
+    : [
+        rightBallMoveRef,
+        leftBallMoveRef,
+        moveRef,
+        leftBallLabelMoveRef,
+        rightBallLabelMoveRef,
+        // moveTextRef,
+      ];
+  const animationOrder = isFocused ? [0, 1, 1, 1, 1] : [0, 0, 1, 1, 1];
 
   useChain(refOrder, animationOrder);
 
@@ -226,6 +262,17 @@ export const SplitBall = ({
         onMouseOut={onMouseOut}
         onClick={onClick}
       />
+      {isFocused && (
+        <animated.text
+          {...moveIntoPlaceProps}
+          fill={"white"}
+          style={rightBallLabelMoveProps}
+          fontSize={18}
+        >
+          News
+        </animated.text>
+      )}
+
       {/* Labels */}
       {isFocused && (
         <>
