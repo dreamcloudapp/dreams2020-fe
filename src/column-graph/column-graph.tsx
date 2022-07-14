@@ -16,6 +16,7 @@ type ColumnGraphProps = {
   height: number;
   hideTooltip: () => void;
   handleMouseOver: (event: any, datum: any) => void;
+  barColor: string;
 };
 
 const padding: Padding = {
@@ -32,6 +33,7 @@ export function ColumnGraph({
   hideTooltip,
   handleMouseOver,
   max,
+  barColor,
 }: ColumnGraphProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -56,7 +58,7 @@ export function ColumnGraph({
             key={i}
             x={midpoint + d.difference * columnWidth}
             y={height - colHeight - padding.BOTTOM}
-            fill={ColorTheme.BLUE}
+            fill={barColor}
             width={columnWidth}
             height={colHeight}
             onMouseOver={e => {

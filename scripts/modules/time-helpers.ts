@@ -20,7 +20,7 @@ const shortMonths = [
 // If date1 is after date2, return a positive number
 // If date1 is before date2, return a negative number
 export function getDifferenceInDays(date1: Date, date2: Date): number {
-  const difference = date1.getTime() - date2.getTime();
+  const difference = date2.getTime() - date1.getTime();
   return Math.floor(difference / MILLISECONDS_IN_DAY);
 }
 

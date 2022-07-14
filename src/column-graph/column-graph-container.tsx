@@ -76,6 +76,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
                     height={height}
                     hideTooltip={hideTooltip}
                     handleMouseOver={handleMouseOver}
+                    barColor={d.color}
                   />
                 );
               })}
