@@ -5,6 +5,7 @@
 
 # Source directory, this is a lot of data
 /source-data-all/*
+/data-samples/*
 
 # Not sure what this is
 src/extensions.json
