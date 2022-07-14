@@ -1,9 +1,9 @@
 {
   "granularity": "month",
-  "maxSimilarity": 41.70143205399995,
+  "maxSimilarity": 21.54776925750001,
   "minSimilarity": 1,
-  "maxWordCount": 194111838,
-  "minWordCount": 35332486,
+  "maxWordCount": 168412642,
+  "minWordCount": 28847273,
   "comparisonSets": [
     {
       "label": "2020 Dreams vs 2020 News Items",
@@ -19,8 +19,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
           "collection2": {
@@ -29,17 +29,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
-          "score": 19.820099747899945,
-          "wordCount": 113819494,
+          "score": 9.263764072399997,
+          "wordCount": 84913190,
           "examples": [
             {
-              "dreamText": "419",
-              "newsText": "1484",
-              "score": 0.05664416,
+              "dreamText": "1967",
+              "newsText": "1481",
+              "score": 0.07499073,
               "concepts": []
             }
           ],
@@ -81,8 +81,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
           "collection2": {
@@ -91,17 +91,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
-          "score": 30.293219256600015,
-          "wordCount": 114451041,
+          "score": 14.475935374700013,
+          "wordCount": 85382689,
           "examples": [
             {
-              "dreamText": "419",
+              "dreamText": "1007",
               "newsText": "4556",
-              "score": 0.08777513,
+              "score": 0.1197989,
               "concepts": []
             }
           ],
@@ -143,8 +143,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
           "collection2": {
@@ -153,17 +153,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
-          "score": 22.101245707500023,
-          "wordCount": 124936913,
+          "score": 10.020432602200001,
+          "wordCount": 93240113,
           "examples": [
             {
-              "dreamText": "419",
-              "newsText": "1218",
-              "score": 0.06922962,
+              "dreamText": "1967",
+              "newsText": "1192",
+              "score": 0.11268211,
               "concepts": []
             }
           ],
@@ -205,8 +205,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
           "collection2": {
@@ -215,17 +215,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
-          "score": 28.80315659490006,
-          "wordCount": 131642608,
+          "score": 13.639964919100002,
+          "wordCount": 98189104,
           "examples": [
             {
-              "dreamText": "56",
-              "newsText": "5443",
-              "score": 0.14486313,
+              "dreamText": "1007",
+              "newsText": "5433",
+              "score": 0.19765808,
               "concepts": []
             }
           ],
@@ -267,8 +267,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
           "collection2": {
@@ -277,17 +277,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
-          "score": 27.65875869899999,
-          "wordCount": 120599247,
+          "score": 13.103101983899998,
+          "wordCount": 89998015,
           "examples": [
             {
-              "dreamText": "419",
-              "newsText": "3020",
-              "score": 0.0695156,
+              "dreamText": "1008",
+              "newsText": "3038",
+              "score": 0.23300263,
               "concepts": []
             }
           ],
@@ -329,8 +329,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
           "collection2": {
@@ -339,17 +339,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:26.556Z",
-              "end": "2022-07-13T23:31:26.556Z"
+              "start": "2022-07-14T11:44:39.047Z",
+              "end": "2022-07-14T11:44:39.047Z"
             }
           },
-          "score": 24.203741111599996,
-          "wordCount": 143911312,
+          "score": 11.201569463199993,
+          "wordCount": 107274174,
           "examples": [
             {
-              "dreamText": "419",
-              "newsText": "6319",
-              "score": 0.10119579,
+              "dreamText": "1967",
+              "newsText": "6315",
+              "score": 0.15852733,
               "concepts": []
             }
           ],
@@ -391,8 +391,8 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.558Z",
-              "end": "2022-07-13T23:31:26.558Z"
+              "start": "2022-07-14T11:44:39.050Z",
+              "end": "2022-07-14T11:44:39.050Z"
             }
           },
           "collection2": {
@@ -401,17 +401,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:26.558Z",
-              "end": "2022-07-13T23:31:26.558Z"
+              "start": "2022-07-14T11:44:39.050Z",
+              "end": "2022-07-14T11:44:39.050Z"
             }
           },
-          "score": 11.275361318300016,
-          "wordCount": 57694953,
+          "score": 5.029392946200004,
+          "wordCount": 43310986,
           "examples": [
             {
-              "dreamText": "421",
-              "newsText": "7381",
-              "score": 0.07752943,
+              "dreamText": "1965",
+              "newsText": "7347",
+              "score": 0.14580117,
               "concepts": []
             }
           ],
@@ -453,8 +453,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.642Z",
-              "end": "2022-07-13T23:31:26.642Z"
+              "start": "2022-07-14T11:44:39.123Z",
+              "end": "2022-07-14T11:44:39.123Z"
             }
           },
           "collection2": {
@@ -463,17 +463,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.642Z",
-              "end": "2022-07-13T23:31:26.642Z"
+              "start": "2022-07-14T11:44:39.123Z",
+              "end": "2022-07-14T11:44:39.123Z"
             }
           },
-          "score": 31.34725294340001,
-          "wordCount": 88557831,
+          "score": 14.926752937399993,
+          "wordCount": 64790374,
           "examples": [
             {
-              "dreamText": "87",
-              "newsText": "4562",
-              "score": 0.13451336,
+              "dreamText": "81",
+              "newsText": "4556",
+              "score": 0.13766319,
               "concepts": []
             }
           ],
@@ -515,8 +515,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.642Z",
-              "end": "2022-07-13T23:31:26.642Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
           "collection2": {
@@ -525,17 +525,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:26.642Z",
-              "end": "2022-07-13T23:31:26.642Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
-          "score": 30.137447638500007,
-          "wordCount": 101840008,
+          "score": 14.043077662999996,
+          "wordCount": 74491028,
           "examples": [
             {
-              "dreamText": "699",
-              "newsText": "5443",
-              "score": 0.08299217,
+              "dreamText": "81",
+              "newsText": "5433",
+              "score": 0.11444456,
               "concepts": []
             }
           ],
@@ -577,8 +577,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
           "collection2": {
@@ -587,17 +587,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
-          "score": 28.94907460830005,
-          "wordCount": 93345507,
+          "score": 13.538531208599984,
+          "wordCount": 68318689,
           "examples": [
             {
-              "dreamText": "450",
-              "newsText": "3023",
-              "score": 0.042396206,
+              "dreamText": "81",
+              "newsText": "3042",
+              "score": 0.07878786,
               "concepts": []
             }
           ],
@@ -639,8 +639,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
           "collection2": {
@@ -649,17 +649,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
-          "score": 21.30920403569998,
-          "wordCount": 88070914,
+          "score": 9.666641010100001,
+          "wordCount": 64435608,
           "examples": [
             {
-              "dreamText": "699",
+              "dreamText": "81",
               "newsText": "1481",
-              "score": 0.018326124,
+              "score": 0.084934376,
               "concepts": []
             }
           ],
@@ -701,8 +701,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
           "collection2": {
@@ -711,17 +711,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
-          "score": 26.537376639700017,
-          "wordCount": 108022644,
+          "score": 11.995696181399996,
+          "wordCount": 78918972,
           "examples": [
             {
-              "dreamText": "699",
-              "newsText": "8145",
-              "score": 0.03596557,
+              "dreamText": "81",
+              "newsText": "8139",
+              "score": 0.120759636,
               "concepts": []
             }
           ],
@@ -763,8 +763,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
           "collection2": {
@@ -773,17 +773,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
-          "score": 23.992809180799973,
-          "wordCount": 96708323,
+          "score": 10.67413440690002,
+          "wordCount": 70784440,
           "examples": [
             {
-              "dreamText": "450",
-              "newsText": "1218",
-              "score": 0.051937465,
+              "dreamText": "81",
+              "newsText": "1206",
+              "score": 0.081834905,
               "concepts": []
             }
           ],
@@ -825,8 +825,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
           "collection2": {
@@ -835,17 +835,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:26.643Z",
-              "end": "2022-07-13T23:31:26.643Z"
+              "start": "2022-07-14T11:44:39.124Z",
+              "end": "2022-07-14T11:44:39.124Z"
             }
           },
-          "score": 25.933363384000007,
-          "wordCount": 111580753,
+          "score": 11.509713872299988,
+          "wordCount": 81587804,
           "examples": [
             {
-              "dreamText": "699",
+              "dreamText": "81",
               "newsText": "7332",
-              "score": 0.037120737,
+              "score": 0.1302516,
               "concepts": []
             }
           ],
@@ -887,8 +887,8 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.648Z",
-              "end": "2022-07-13T23:31:26.648Z"
+              "start": "2022-07-14T11:44:39.130Z",
+              "end": "2022-07-14T11:44:39.130Z"
             }
           },
           "collection2": {
@@ -897,17 +897,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:26.648Z",
-              "end": "2022-07-13T23:31:26.648Z"
+              "start": "2022-07-14T11:44:39.130Z",
+              "end": "2022-07-14T11:44:39.130Z"
             }
           },
-          "score": 10.041104599800008,
-          "wordCount": 42635015,
+          "score": 4.624945292099996,
+          "wordCount": 32895302,
           "examples": [
             {
-              "dreamText": "452",
-              "newsText": "8729",
-              "score": 0.102855675,
+              "dreamText": "1923",
+              "newsText": "8718",
+              "score": 0.30701,
               "concepts": []
             }
           ],
@@ -949,8 +949,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.773Z",
-              "end": "2022-07-13T23:31:26.773Z"
+              "start": "2022-07-14T11:44:39.236Z",
+              "end": "2022-07-14T11:44:39.236Z"
             }
           },
           "collection2": {
@@ -959,17 +959,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.773Z",
-              "end": "2022-07-13T23:31:26.773Z"
+              "start": "2022-07-14T11:44:39.236Z",
+              "end": "2022-07-14T11:44:39.236Z"
             }
           },
-          "score": 40.53574016269991,
-          "wordCount": 98679520,
+          "score": 19.198312219500018,
+          "wordCount": 76503335,
           "examples": [
             {
-              "dreamText": "478",
-              "newsText": "4562",
-              "score": 0.10647846,
+              "dreamText": "445",
+              "newsText": "4550",
+              "score": 0.085764304,
               "concepts": []
             }
           ],
@@ -1011,8 +1011,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.773Z",
-              "end": "2022-07-13T23:31:26.773Z"
+              "start": "2022-07-14T11:44:39.237Z",
+              "end": "2022-07-14T11:44:39.237Z"
             }
           },
           "collection2": {
@@ -1021,17 +1021,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:26.773Z",
-              "end": "2022-07-13T23:31:26.773Z"
+              "start": "2022-07-14T11:44:39.237Z",
+              "end": "2022-07-14T11:44:39.237Z"
             }
           },
-          "score": 39.241386893000055,
-          "wordCount": 113476796,
+          "score": 18.280862139400014,
+          "wordCount": 87952480,
           "examples": [
             {
-              "dreamText": "478",
-              "newsText": "5422",
-              "score": 0.05515801,
+              "dreamText": "445",
+              "newsText": "5436",
+              "score": 0.09098394,
               "concepts": []
             }
           ],
@@ -1073,8 +1073,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.237Z",
+              "end": "2022-07-14T11:44:39.237Z"
             }
           },
           "collection2": {
@@ -1083,17 +1083,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.237Z",
+              "end": "2022-07-14T11:44:39.237Z"
             }
           },
-          "score": 38.62126317169992,
-          "wordCount": 104018941,
+          "score": 18.208666501700044,
+          "wordCount": 80677445,
           "examples": [
             {
-              "dreamText": "115",
-              "newsText": "3033",
-              "score": 0.058714226,
+              "dreamText": "445",
+              "newsText": "3025",
+              "score": 0.05709907,
               "concepts": []
             }
           ],
@@ -1135,8 +1135,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.237Z",
+              "end": "2022-07-14T11:44:39.237Z"
             }
           },
           "collection2": {
@@ -1145,17 +1145,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.237Z",
+              "end": "2022-07-14T11:44:39.237Z"
             }
           },
-          "score": 35.32431967950005,
-          "wordCount": 115665775,
+          "score": 16.184709614800003,
+          "wordCount": 89616685,
           "examples": [
             {
-              "dreamText": "478",
+              "dreamText": "445",
               "newsText": "9837",
-              "score": 0.0711917,
+              "score": 0.115562394,
               "concepts": []
             }
           ],
@@ -1197,8 +1197,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
           "collection2": {
@@ -1207,17 +1207,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
-          "score": 29.685315410799983,
-          "wordCount": 98137212,
+          "score": 14.001918898600014,
+          "wordCount": 76084890,
           "examples": [
             {
-              "dreamText": "115",
+              "dreamText": "110",
               "newsText": "1481",
-              "score": 0.015318316,
+              "score": 0.033444054,
               "concepts": []
             }
           ],
@@ -1259,8 +1259,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
           "collection2": {
@@ -1269,17 +1269,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
-          "score": 35.69302204529997,
-          "wordCount": 120591212,
+          "score": 16.298613436099984,
+          "wordCount": 93376885,
           "examples": [
             {
-              "dreamText": "478",
+              "dreamText": "110",
               "newsText": "8151",
-              "score": 0.033921827,
+              "score": 0.046644796,
               "concepts": []
             }
           ],
@@ -1321,8 +1321,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
           "collection2": {
@@ -1331,17 +1331,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.774Z",
-              "end": "2022-07-13T23:31:26.774Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
-          "score": 32.429353891799906,
-          "wordCount": 107767078,
+          "score": 14.69824041599998,
+          "wordCount": 83590655,
           "examples": [
             {
-              "dreamText": "115",
+              "dreamText": "445",
               "newsText": "1218",
-              "score": 0.053170513,
+              "score": 0.053844247,
               "concepts": []
             }
           ],
@@ -1383,8 +1383,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.775Z",
-              "end": "2022-07-13T23:31:26.775Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
           "collection2": {
@@ -1393,17 +1393,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:26.775Z",
-              "end": "2022-07-13T23:31:26.775Z"
+              "start": "2022-07-14T11:44:39.238Z",
+              "end": "2022-07-14T11:44:39.238Z"
             }
           },
-          "score": 34.91553487440005,
-          "wordCount": 124325582,
+          "score": 15.808687528799974,
+          "wordCount": 96323005,
           "examples": [
             {
-              "dreamText": "478",
-              "newsText": "7309",
-              "score": 0.041852407,
+              "dreamText": "445",
+              "newsText": "7332",
+              "score": 0.04566795,
               "concepts": []
             }
           ],
@@ -1445,8 +1445,8 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.801Z",
-              "end": "2022-07-13T23:31:26.801Z"
+              "start": "2022-07-14T11:44:39.259Z",
+              "end": "2022-07-14T11:44:39.259Z"
             }
           },
           "collection2": {
@@ -1455,17 +1455,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:26.801Z",
-              "end": "2022-07-13T23:31:26.801Z"
+              "start": "2022-07-14T11:44:39.259Z",
+              "end": "2022-07-14T11:44:39.259Z"
             }
           },
-          "score": 12.646311433299987,
-          "wordCount": 48883995,
+          "score": 5.5695325069,
+          "wordCount": 39960135,
           "examples": [
             {
-              "dreamText": "483",
-              "newsText": "10065",
-              "score": 0.069857374,
+              "dreamText": "115",
+              "newsText": "10053",
+              "score": 0.15167099,
               "concepts": []
             }
           ],
@@ -1507,8 +1507,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.993Z",
-              "end": "2022-07-13T23:31:26.993Z"
+              "start": "2022-07-14T11:44:39.436Z",
+              "end": "2022-07-14T11:44:39.436Z"
             }
           },
           "collection2": {
@@ -1517,17 +1517,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.993Z",
-              "end": "2022-07-13T23:31:26.993Z"
+              "start": "2022-07-14T11:44:39.436Z",
+              "end": "2022-07-14T11:44:39.436Z"
             }
           },
-          "score": 37.29957194010004,
-          "wordCount": 149696305,
+          "score": 18.68140544609998,
+          "wordCount": 129800895,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "4544",
-              "score": 0.23105076,
+              "dreamText": "1133",
+              "newsText": "4554",
+              "score": 0.069545746,
               "concepts": []
             }
           ],
@@ -1569,8 +1569,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.436Z",
+              "end": "2022-07-14T11:44:39.436Z"
             }
           },
           "collection2": {
@@ -1579,17 +1579,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.436Z",
+              "end": "2022-07-14T11:44:39.436Z"
             }
           },
-          "score": 28.042354377999985,
-          "wordCount": 194111838,
+          "score": 13.356485915000006,
+          "wordCount": 168412642,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "11243",
-              "score": 0.19626588,
+              "dreamText": "141",
+              "newsText": "11238",
+              "score": 0.075790405,
               "concepts": []
             }
           ],
@@ -1631,8 +1631,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.437Z",
+              "end": "2022-07-14T11:44:39.437Z"
             }
           },
           "collection2": {
@@ -1641,17 +1641,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.437Z",
+              "end": "2022-07-14T11:44:39.437Z"
             }
           },
-          "score": 35.34576259329993,
-          "wordCount": 172109552,
+          "score": 17.390781607799994,
+          "wordCount": 149215456,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "5411",
-              "score": 0.21647872,
+              "dreamText": "802",
+              "newsText": "5422",
+              "score": 0.13904537,
               "concepts": []
             }
           ],
@@ -1693,8 +1693,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.437Z",
+              "end": "2022-07-14T11:44:39.437Z"
             }
           },
           "collection2": {
@@ -1703,17 +1703,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.437Z",
+              "end": "2022-07-14T11:44:39.437Z"
             }
           },
-          "score": 34.2629388943,
-          "wordCount": 157848127,
+          "score": 17.035987871900012,
+          "wordCount": 136899501,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "3049",
-              "score": 0.18394522,
+              "dreamText": "802",
+              "newsText": "3011",
+              "score": 0.1916123,
               "concepts": []
             }
           ],
@@ -1755,8 +1755,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.437Z",
+              "end": "2022-07-14T11:44:39.437Z"
             }
           },
           "collection2": {
@@ -1765,17 +1765,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:26.994Z",
-              "end": "2022-07-13T23:31:26.994Z"
+              "start": "2022-07-14T11:44:39.437Z",
+              "end": "2022-07-14T11:44:39.437Z"
             }
           },
-          "score": 29.952567593000023,
-          "wordCount": 176158740,
+          "score": 14.337143924999971,
+          "wordCount": 152666020,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "9946",
-              "score": 0.259339,
+              "dreamText": "737",
+              "newsText": "9931",
+              "score": 0.029810267,
               "concepts": []
             }
           ],
@@ -1817,8 +1817,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.995Z",
-              "end": "2022-07-13T23:31:26.995Z"
+              "start": "2022-07-14T11:44:39.438Z",
+              "end": "2022-07-14T11:44:39.438Z"
             }
           },
           "collection2": {
@@ -1827,17 +1827,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:26.995Z",
-              "end": "2022-07-13T23:31:26.995Z"
+              "start": "2022-07-14T11:44:39.438Z",
+              "end": "2022-07-14T11:44:39.438Z"
             }
           },
-          "score": 24.439408539700004,
-          "wordCount": 148876614,
+          "score": 11.622921355799994,
+          "wordCount": 129091882,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "1474",
-              "score": 0.09872524,
+              "dreamText": "737",
+              "newsText": "1481",
+              "score": 0.01744487,
               "concepts": []
             }
           ],
@@ -1879,8 +1879,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.996Z",
-              "end": "2022-07-13T23:31:26.996Z"
+              "start": "2022-07-14T11:44:39.438Z",
+              "end": "2022-07-14T11:44:39.438Z"
             }
           },
           "collection2": {
@@ -1889,17 +1889,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:26.996Z",
-              "end": "2022-07-13T23:31:26.996Z"
+              "start": "2022-07-14T11:44:39.438Z",
+              "end": "2022-07-14T11:44:39.438Z"
             }
           },
-          "score": 30.809388990400016,
-          "wordCount": 182765219,
+          "score": 14.82287884850001,
+          "wordCount": 158375357,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "8145",
-              "score": 0.1789233,
+              "dreamText": "802",
+              "newsText": "8146",
+              "score": 0.049690753,
               "concepts": []
             }
           ],
@@ -1941,8 +1941,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.996Z",
-              "end": "2022-07-13T23:31:26.996Z"
+              "start": "2022-07-14T11:44:39.438Z",
+              "end": "2022-07-14T11:44:39.438Z"
             }
           },
           "collection2": {
@@ -1951,17 +1951,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:26.996Z",
-              "end": "2022-07-13T23:31:26.996Z"
+              "start": "2022-07-14T11:44:39.438Z",
+              "end": "2022-07-14T11:44:39.438Z"
             }
           },
-          "score": 26.740963197299997,
-          "wordCount": 163545121,
+          "score": 12.243793841600013,
+          "wordCount": 141845783,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "1220",
-              "score": 0.17825496,
+              "dreamText": "802",
+              "newsText": "1199",
+              "score": 0.1869164,
               "concepts": []
             }
           ],
@@ -2003,8 +2003,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:26.996Z",
-              "end": "2022-07-13T23:31:26.996Z"
+              "start": "2022-07-14T11:44:39.439Z",
+              "end": "2022-07-14T11:44:39.439Z"
             }
           },
           "collection2": {
@@ -2013,17 +2013,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:26.996Z",
-              "end": "2022-07-13T23:31:26.996Z"
+              "start": "2022-07-14T11:44:39.439Z",
+              "end": "2022-07-14T11:44:39.439Z"
             }
           },
-          "score": 29.722935396499988,
-          "wordCount": 188506739,
+          "score": 14.13329877249999,
+          "wordCount": 163398277,
           "examples": [
             {
-              "dreamText": "749",
-              "newsText": "7332",
-              "score": 0.19568874,
+              "dreamText": "802",
+              "newsText": "7299",
+              "score": 0.10512398,
               "concepts": []
             }
           ],
@@ -2065,8 +2065,8 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:27.019Z",
-              "end": "2022-07-13T23:31:27.019Z"
+              "start": "2022-07-14T11:44:39.523Z",
+              "end": "2022-07-14T11:44:39.523Z"
             }
           },
           "collection2": {
@@ -2075,17 +2075,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:27.019Z",
-              "end": "2022-07-13T23:31:27.019Z"
+              "start": "2022-07-14T11:44:39.523Z",
+              "end": "2022-07-14T11:44:39.523Z"
             }
           },
-          "score": 10.127792797100009,
-          "wordCount": 79614231,
+          "score": 4.766728662099998,
+          "wordCount": 69549126,
           "examples": [
             {
-              "dreamText": "513",
-              "newsText": "11492",
-              "score": 0.065205835,
+              "dreamText": "464",
+              "newsText": "11499",
+              "score": 0.17144936,
               "concepts": []
             }
           ],
@@ -2127,8 +2127,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.251Z",
-              "end": "2022-07-13T23:31:27.251Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
           "collection2": {
@@ -2137,17 +2137,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:27.251Z",
-              "end": "2022-07-13T23:31:27.251Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
-          "score": 41.70143205399995,
-          "wordCount": 117873834,
+          "score": 19.48403821300002,
+          "wordCount": 101885834,
           "examples": [
             {
-              "dreamText": "174",
-              "newsText": "4554",
-              "score": 0.0751605,
+              "dreamText": "1038",
+              "newsText": "4563",
+              "score": 0.055862732,
               "concepts": []
             }
           ],
@@ -2189,8 +2189,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.251Z",
-              "end": "2022-07-13T23:31:27.251Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
           "collection2": {
@@ -2199,17 +2199,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:27.251Z",
-              "end": "2022-07-13T23:31:27.251Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
-          "score": 33.69522990650004,
-          "wordCount": 153892248,
+          "score": 14.149019102600011,
+          "wordCount": 132901243,
           "examples": [
             {
-              "dreamText": "174",
-              "newsText": "11432",
-              "score": 0.072260365,
+              "dreamText": "828",
+              "newsText": "11402",
+              "score": 0.07241106,
               "concepts": []
             }
           ],
@@ -2251,8 +2251,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
           "collection2": {
@@ -2261,17 +2261,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
-          "score": 33.7375125969,
-          "wordCount": 158146049,
+          "score": 14.178535371900006,
+          "wordCount": 136569277,
           "examples": [
             {
-              "dreamText": "539",
+              "dreamText": "828",
               "newsText": "11954",
-              "score": 0.05798566,
+              "score": 0.05253036,
               "concepts": []
             }
           ],
@@ -2313,8 +2313,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
           "collection2": {
@@ -2323,17 +2323,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.838Z",
+              "end": "2022-07-14T11:44:39.838Z"
             }
           },
-          "score": 39.95909718529993,
-          "wordCount": 135544104,
+          "score": 18.12300673099999,
+          "wordCount": 117137588,
           "examples": [
             {
-              "dreamText": "174",
+              "dreamText": "828",
               "newsText": "5409",
-              "score": 0.113225885,
+              "score": 0.11442494,
               "concepts": []
             }
           ],
@@ -2375,8 +2375,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.839Z",
+              "end": "2022-07-14T11:44:39.839Z"
             }
           },
           "collection2": {
@@ -2385,17 +2385,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.839Z",
+              "end": "2022-07-14T11:44:39.839Z"
             }
           },
-          "score": 39.331089833500016,
-          "wordCount": 124259820,
+          "score": 17.90042163760001,
+          "wordCount": 107438789,
           "examples": [
             {
-              "dreamText": "174",
+              "dreamText": "171",
               "newsText": "3038",
-              "score": 0.0640698,
+              "score": 0.11357867,
               "concepts": []
             }
           ],
@@ -2437,8 +2437,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.839Z",
+              "end": "2022-07-14T11:44:39.839Z"
             }
           },
           "collection2": {
@@ -2447,17 +2447,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:27.252Z",
-              "end": "2022-07-13T23:31:27.252Z"
+              "start": "2022-07-14T11:44:39.839Z",
+              "end": "2022-07-14T11:44:39.839Z"
             }
           },
-          "score": 35.62408084799997,
-          "wordCount": 138798420,
+          "score": 15.037816370300005,
+          "wordCount": 119884150,
           "examples": [
             {
-              "dreamText": "539",
-              "newsText": "9946",
-              "score": 0.06975717,
+              "dreamText": "828",
+              "newsText": "9929",
+              "score": 0.083888076,
               "concepts": []
             }
           ],
@@ -2499,8 +2499,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.254Z",
-              "end": "2022-07-13T23:31:27.254Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
           "collection2": {
@@ -2509,17 +2509,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:27.254Z",
-              "end": "2022-07-13T23:31:27.254Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
-          "score": 29.20541385390004,
-          "wordCount": 117226500,
+          "score": 12.2626510945,
+          "wordCount": 101328208,
           "examples": [
             {
-              "dreamText": "539",
-              "newsText": "1481",
-              "score": 0.039154064,
+              "dreamText": "171",
+              "newsText": "1477",
+              "score": 0.035250045,
               "concepts": []
             }
           ],
@@ -2561,8 +2561,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.254Z",
-              "end": "2022-07-13T23:31:27.254Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
           "collection2": {
@@ -2571,17 +2571,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:27.254Z",
-              "end": "2022-07-13T23:31:27.254Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
-          "score": 36.200299279099994,
-          "wordCount": 144021318,
+          "score": 15.5304159571,
+          "wordCount": 124377666,
           "examples": [
             {
-              "dreamText": "539",
-              "newsText": "8145",
-              "score": 0.05754931,
+              "dreamText": "828",
+              "newsText": "8151",
+              "score": 0.19808513,
               "concepts": []
             }
           ],
@@ -2623,8 +2623,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.254Z",
-              "end": "2022-07-13T23:31:27.254Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
           "collection2": {
@@ -2633,17 +2633,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:27.254Z",
-              "end": "2022-07-13T23:31:27.254Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
-          "score": 32.08834486480006,
-          "wordCount": 128738718,
+          "score": 12.923686281399984,
+          "wordCount": 111317260,
           "examples": [
             {
-              "dreamText": "174",
-              "newsText": "1218",
-              "score": 0.07963644,
+              "dreamText": "828",
+              "newsText": "1185",
+              "score": 0.12629771,
               "concepts": []
             }
           ],
@@ -2685,8 +2685,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.255Z",
-              "end": "2022-07-13T23:31:27.255Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
           "collection2": {
@@ -2695,17 +2695,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.255Z",
-              "end": "2022-07-13T23:31:27.255Z"
+              "start": "2022-07-14T11:44:39.840Z",
+              "end": "2022-07-14T11:44:39.840Z"
             }
           },
-          "score": 35.141823531000085,
-          "wordCount": 148493826,
+          "score": 15.007924029299994,
+          "wordCount": 128292344,
           "examples": [
             {
-              "dreamText": "539",
-              "newsText": "7332",
-              "score": 0.06365785,
+              "dreamText": "1038",
+              "newsText": "7287",
+              "score": 0.06451061,
               "concepts": []
             }
           ],
@@ -2747,8 +2747,8 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.290Z",
-              "end": "2022-07-13T23:31:27.290Z"
+              "start": "2022-07-14T11:44:39.857Z",
+              "end": "2022-07-14T11:44:39.857Z"
             }
           },
           "collection2": {
@@ -2757,17 +2757,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:27.290Z",
-              "end": "2022-07-13T23:31:27.290Z"
+              "start": "2022-07-14T11:44:39.857Z",
+              "end": "2022-07-14T11:44:39.857Z"
             }
           },
-          "score": 14.034146965699986,
-          "wordCount": 59427905,
+          "score": 5.5276604752999985,
+          "wordCount": 51869062,
           "examples": [
             {
-              "dreamText": "544",
-              "newsText": "12997",
-              "score": 0.10324565,
+              "dreamText": "833",
+              "newsText": "12993",
+              "score": 0.04092524,
               "concepts": []
             }
           ],
@@ -2809,8 +2809,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
           "collection2": {
@@ -2819,17 +2819,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
-          "score": 26.736768023699955,
-          "wordCount": 128499137,
+          "score": 12.889818282100006,
+          "wordCount": 101365463,
           "examples": [
             {
-              "dreamText": "757",
-              "newsText": "12912",
-              "score": 0.11770238,
+              "dreamText": "202",
+              "newsText": "12911",
+              "score": 0.0624824,
               "concepts": []
             }
           ],
@@ -2871,8 +2871,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
           "collection2": {
@@ -2881,17 +2881,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
-          "score": 25.609309725400017,
-          "wordCount": 112490921,
+          "score": 12.434235153099984,
+          "wordCount": 88962919,
           "examples": [
             {
-              "dreamText": "752",
-              "newsText": "13034",
-              "score": 0.24762958,
+              "dreamText": "851",
+              "newsText": "13029",
+              "score": 0.047303215,
               "concepts": []
             }
           ],
@@ -2933,8 +2933,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
           "collection2": {
@@ -2943,17 +2943,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
-          "score": 33.93988862589999,
-          "wordCount": 94721062,
+          "score": 17.388832984300013,
+          "wordCount": 74812192,
           "examples": [
             {
-              "dreamText": "761",
-              "newsText": "4556",
-              "score": 0.27167326,
+              "dreamText": "851",
+              "newsText": "4554",
+              "score": 0.044013422,
               "concepts": []
             }
           ],
@@ -2995,8 +2995,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
           "collection2": {
@@ -3005,17 +3005,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:27.974Z",
-              "end": "2022-07-13T23:31:27.974Z"
+              "start": "2022-07-14T11:44:40.025Z",
+              "end": "2022-07-14T11:44:40.025Z"
             }
           },
-          "score": 26.880521064100005,
-          "wordCount": 123726769,
+          "score": 12.864196694499997,
+          "wordCount": 97600419,
           "examples": [
             {
-              "dreamText": "753",
-              "newsText": "11434",
-              "score": 0.25878632,
+              "dreamText": "202",
+              "newsText": "11442",
+              "score": 0.09209434,
               "concepts": []
             }
           ],
@@ -3057,8 +3057,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.975Z",
-              "end": "2022-07-13T23:31:27.975Z"
+              "start": "2022-07-14T11:44:40.026Z",
+              "end": "2022-07-14T11:44:40.026Z"
             }
           },
           "collection2": {
@@ -3067,17 +3067,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:27.975Z",
-              "end": "2022-07-13T23:31:27.975Z"
+              "start": "2022-07-14T11:44:40.026Z",
+              "end": "2022-07-14T11:44:40.026Z"
             }
           },
-          "score": 32.482764215699994,
-          "wordCount": 108932028,
+          "score": 16.311822013299984,
+          "wordCount": 86013836,
           "examples": [
             {
-              "dreamText": "762",
+              "dreamText": "851",
               "newsText": "5409",
-              "score": 0.13622242,
+              "score": 0.09955793,
               "concepts": []
             }
           ],
@@ -3119,8 +3119,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.975Z",
-              "end": "2022-07-13T23:31:27.975Z"
+              "start": "2022-07-14T11:44:40.026Z",
+              "end": "2022-07-14T11:44:40.026Z"
             }
           },
           "collection2": {
@@ -3129,17 +3129,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:27.975Z",
-              "end": "2022-07-13T23:31:27.975Z"
+              "start": "2022-07-14T11:44:40.026Z",
+              "end": "2022-07-14T11:44:40.026Z"
             }
           },
-          "score": 31.5820659648,
-          "wordCount": 99835231,
+          "score": 15.888548655699989,
+          "wordCount": 78885529,
           "examples": [
             {
-              "dreamText": "757",
-              "newsText": "3052",
-              "score": 0.1539852,
+              "dreamText": "851",
+              "newsText": "3033",
+              "score": 0.05785469,
               "concepts": []
             }
           ],
@@ -3181,8 +3181,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.975Z",
-              "end": "2022-07-13T23:31:27.975Z"
+              "start": "2022-07-14T11:44:40.026Z",
+              "end": "2022-07-14T11:44:40.026Z"
             }
           },
           "collection2": {
@@ -3191,17 +3191,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:27.975Z",
-              "end": "2022-07-13T23:31:27.975Z"
+              "start": "2022-07-14T11:44:40.026Z",
+              "end": "2022-07-14T11:44:40.026Z"
             }
           },
-          "score": 28.598501609200003,
-          "wordCount": 111582130,
+          "score": 13.682130728600011,
+          "wordCount": 88038690,
           "examples": [
             {
-              "dreamText": "752",
-              "newsText": "9933",
-              "score": 0.13982143,
+              "dreamText": "851",
+              "newsText": "9931",
+              "score": 0.032288756,
               "concepts": []
             }
           ],
@@ -3243,8 +3243,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.976Z",
-              "end": "2022-07-13T23:31:27.976Z"
+              "start": "2022-07-14T11:44:40.027Z",
+              "end": "2022-07-14T11:44:40.027Z"
             }
           },
           "collection2": {
@@ -3253,17 +3253,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:27.976Z",
-              "end": "2022-07-13T23:31:27.976Z"
+              "start": "2022-07-14T11:44:40.027Z",
+              "end": "2022-07-14T11:44:40.027Z"
             }
           },
-          "score": 23.230590158499968,
-          "wordCount": 94199872,
+          "score": 11.067324060999994,
+          "wordCount": 74402508,
           "examples": [
             {
-              "dreamText": "757",
+              "dreamText": "851",
               "newsText": "1481",
-              "score": 0.087757595,
+              "score": 0.018209253,
               "concepts": []
             }
           ],
@@ -3305,8 +3305,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.976Z",
-              "end": "2022-07-13T23:31:27.976Z"
+              "start": "2022-07-14T11:44:40.027Z",
+              "end": "2022-07-14T11:44:40.027Z"
             }
           },
           "collection2": {
@@ -3315,17 +3315,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:27.976Z",
-              "end": "2022-07-13T23:31:27.976Z"
+              "start": "2022-07-14T11:44:40.027Z",
+              "end": "2022-07-14T11:44:40.027Z"
             }
           },
-          "score": 28.85403282339996,
-          "wordCount": 115790206,
+          "score": 14.091673096900013,
+          "wordCount": 91340732,
           "examples": [
             {
-              "dreamText": "756",
-              "newsText": "8146",
-              "score": 0.100120306,
+              "dreamText": "851",
+              "newsText": "8152",
+              "score": 0.033073295,
               "concepts": []
             }
           ],
@@ -3367,8 +3367,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.976Z",
-              "end": "2022-07-13T23:31:27.976Z"
+              "start": "2022-07-14T11:44:40.027Z",
+              "end": "2022-07-14T11:44:40.027Z"
             }
           },
           "collection2": {
@@ -3377,17 +3377,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:27.976Z",
-              "end": "2022-07-13T23:31:27.976Z"
+              "start": "2022-07-14T11:44:40.027Z",
+              "end": "2022-07-14T11:44:40.027Z"
             }
           },
-          "score": 25.784678538900028,
-          "wordCount": 103309148,
+          "score": 11.8528253128,
+          "wordCount": 81618811,
           "examples": [
             {
-              "dreamText": "753",
+              "dreamText": "851",
               "newsText": "1218",
-              "score": 0.18136936,
+              "score": 0.05847284,
               "concepts": []
             }
           ],
@@ -3429,8 +3429,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.977Z",
-              "end": "2022-07-13T23:31:27.977Z"
+              "start": "2022-07-14T11:44:40.028Z",
+              "end": "2022-07-14T11:44:40.028Z"
             }
           },
           "collection2": {
@@ -3439,17 +3439,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.977Z",
-              "end": "2022-07-13T23:31:27.977Z"
+              "start": "2022-07-14T11:44:40.028Z",
+              "end": "2022-07-14T11:44:40.028Z"
             }
           },
-          "score": 28.048478164000002,
-          "wordCount": 119358480,
+          "score": 13.632691786600006,
+          "wordCount": 94209206,
           "examples": [
             {
-              "dreamText": "757",
-              "newsText": "7337",
-              "score": 0.21608922,
+              "dreamText": "202",
+              "newsText": "7311",
+              "score": 0.054965645,
               "concepts": []
             }
           ],
@@ -3491,8 +3491,8 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:27.998Z",
-              "end": "2022-07-13T23:31:27.998Z"
+              "start": "2022-07-14T11:44:40.049Z",
+              "end": "2022-07-14T11:44:40.049Z"
             }
           },
           "collection2": {
@@ -3501,17 +3501,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:27.998Z",
-              "end": "2022-07-13T23:31:27.998Z"
+              "start": "2022-07-14T11:44:40.049Z",
+              "end": "2022-07-14T11:44:40.049Z"
             }
           },
-          "score": 10.119815963599994,
-          "wordCount": 50593797,
+          "score": 4.634906721100003,
+          "wordCount": 41245107,
           "examples": [
             {
-              "dreamText": "209",
-              "newsText": "14312",
-              "score": 0.13769898,
+              "dreamText": "206",
+              "newsText": "14323",
+              "score": 0.13702686,
               "concepts": []
             }
           ],
@@ -3553,8 +3553,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
           "collection2": {
@@ -3563,17 +3563,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
-          "score": 27.649043808900014,
-          "wordCount": 131196390,
+          "score": 13.384078114100001,
+          "wordCount": 109301611,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "12911",
-              "score": 0.17584422,
+              "dreamText": "751",
+              "newsText": "12917",
+              "score": 0.12582411,
               "concepts": []
             }
           ],
@@ -3615,8 +3615,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
           "collection2": {
@@ -3625,17 +3625,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
-          "score": 26.653678459800073,
-          "wordCount": 115556010,
+          "score": 12.991111490099994,
+          "wordCount": 96245981,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "13012",
-              "score": 0.075663134,
+              "dreamText": "751",
+              "newsText": "13020",
+              "score": 0.1091609,
               "concepts": []
             }
           ],
@@ -3677,8 +3677,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
           "collection2": {
@@ -3687,17 +3687,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
-          "score": 35.65524144090006,
-          "wordCount": 96644490,
+          "score": 17.985799701699996,
+          "wordCount": 80601317,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "4574",
-              "score": 0.081675954,
+              "dreamText": "751",
+              "newsText": "4556",
+              "score": 0.10187845,
               "concepts": []
             }
           ],
@@ -3739,8 +3739,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
           "collection2": {
@@ -3749,17 +3749,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.197Z",
-              "end": "2022-07-13T23:31:28.197Z"
+              "start": "2022-07-14T11:44:40.239Z",
+              "end": "2022-07-14T11:44:40.239Z"
             }
           },
-          "score": 27.581970402999993,
-          "wordCount": 126324130,
+          "score": 13.351821275600004,
+          "wordCount": 105242089,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "11441",
-              "score": 0.113348566,
+              "dreamText": "751",
+              "newsText": "11402",
+              "score": 0.082266316,
               "concepts": []
             }
           ],
@@ -3801,8 +3801,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.198Z",
-              "end": "2022-07-13T23:31:28.198Z"
+              "start": "2022-07-14T11:44:40.240Z",
+              "end": "2022-07-14T11:44:40.240Z"
             }
           },
           "collection2": {
@@ -3811,17 +3811,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:28.198Z",
-              "end": "2022-07-13T23:31:28.198Z"
+              "start": "2022-07-14T11:44:40.240Z",
+              "end": "2022-07-14T11:44:40.240Z"
             }
           },
-          "score": 33.96033885729997,
-          "wordCount": 111159760,
+          "score": 16.890553050899996,
+          "wordCount": 92686280,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "5426",
-              "score": 0.09486445,
+              "dreamText": "751",
+              "newsText": "5404",
+              "score": 0.11008826,
               "concepts": []
             }
           ],
@@ -3863,8 +3863,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.198Z",
-              "end": "2022-07-13T23:31:28.198Z"
+              "start": "2022-07-14T11:44:40.240Z",
+              "end": "2022-07-14T11:44:40.240Z"
             }
           },
           "collection2": {
@@ -3873,17 +3873,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:28.198Z",
-              "end": "2022-07-13T23:31:28.198Z"
+              "start": "2022-07-14T11:44:40.240Z",
+              "end": "2022-07-14T11:44:40.240Z"
             }
           },
-          "score": 32.927796617499986,
-          "wordCount": 101838570,
+          "score": 16.397622746500023,
+          "wordCount": 84964733,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "3022",
-              "score": 0.21230558,
+              "dreamText": "878",
+              "newsText": "3040",
+              "score": 0.06537229,
               "concepts": []
             }
           ],
@@ -3925,8 +3925,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.198Z",
-              "end": "2022-07-13T23:31:28.198Z"
+              "start": "2022-07-14T11:44:40.241Z",
+              "end": "2022-07-14T11:44:40.241Z"
             }
           },
           "collection2": {
@@ -3935,17 +3935,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.198Z",
-              "end": "2022-07-13T23:31:28.198Z"
+              "start": "2022-07-14T11:44:40.241Z",
+              "end": "2022-07-14T11:44:40.241Z"
             }
           },
-          "score": 29.24719300429999,
-          "wordCount": 113911600,
+          "score": 14.297861073099986,
+          "wordCount": 94918120,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "9946",
-              "score": 0.0744738,
+              "dreamText": "878",
+              "newsText": "9929",
+              "score": 0.09516508,
               "concepts": []
             }
           ],
@@ -3987,8 +3987,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
           "collection2": {
@@ -3997,17 +3997,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
-          "score": 23.916682947199973,
-          "wordCount": 95864477,
+          "score": 11.569141310300008,
+          "wordCount": 79923598,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "1480",
-              "score": 0.048983425,
+              "dreamText": "751",
+              "newsText": "1481",
+              "score": 0.07781978,
               "concepts": []
             }
           ],
@@ -4049,8 +4049,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
           "collection2": {
@@ -4059,17 +4059,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
-          "score": 29.83593459140002,
-          "wordCount": 118220270,
+          "score": 14.5283639717,
+          "wordCount": 98491575,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "8154",
-              "score": 0.064244896,
+              "dreamText": "878",
+              "newsText": "8151",
+              "score": 0.28059888,
               "concepts": []
             }
           ],
@@ -4111,8 +4111,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
           "collection2": {
@@ -4121,17 +4121,17 @@
               "granularity": "month",
               "index": 0,
               "identifier": "month 0",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
-          "score": 11.763378741099999,
-          "wordCount": 52158569,
+          "score": 5.156626617799999,
+          "wordCount": 43176098,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "1214",
-              "score": 0.069028534,
+              "dreamText": "878",
+              "newsText": "1185",
+              "score": 0.18306108,
               "concepts": []
             }
           ],
@@ -4173,8 +4173,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
           "collection2": {
@@ -4183,17 +4183,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:28.200Z",
-              "end": "2022-07-13T23:31:28.200Z"
+              "start": "2022-07-14T11:44:40.242Z",
+              "end": "2022-07-14T11:44:40.242Z"
             }
           },
-          "score": 28.947925593800008,
-          "wordCount": 121825750,
+          "score": 14.098766885799998,
+          "wordCount": 101545019,
           "examples": [
             {
-              "dreamText": "235",
-              "newsText": "7296",
-              "score": 0.2396849,
+              "dreamText": "232",
+              "newsText": "7332",
+              "score": 0.08282051,
               "concepts": []
             }
           ],
@@ -4235,8 +4235,8 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.201Z",
-              "end": "2022-07-13T23:31:28.201Z"
+              "start": "2022-07-14T11:44:40.244Z",
+              "end": "2022-07-14T11:44:40.244Z"
             }
           },
           "collection2": {
@@ -4245,17 +4245,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:28.201Z",
-              "end": "2022-07-13T23:31:28.201Z"
+              "start": "2022-07-14T11:44:40.244Z",
+              "end": "2022-07-14T11:44:40.244Z"
             }
           },
-          "score": 27.51655524129995,
-          "wordCount": 117349535,
+          "score": 13.3957838654,
+          "wordCount": 97764629,
           "examples": [
             {
-              "dreamText": "235",
+              "dreamText": "878",
               "newsText": "14850",
-              "score": 0.15660368,
+              "score": 0.13647681,
               "concepts": []
             }
           ],
@@ -4297,8 +4297,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.465Z",
-              "end": "2022-07-13T23:31:28.465Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
           "collection2": {
@@ -4307,17 +4307,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.465Z",
-              "end": "2022-07-13T23:31:28.465Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
-          "score": 32.372224267299956,
-          "wordCount": 126168553,
+          "score": 16.478037599100016,
+          "wordCount": 103660962,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "12911",
-              "score": 0.09851229,
+              "dreamText": "263",
+              "newsText": "12922",
+              "score": 0.15423158,
               "concepts": []
             }
           ],
@@ -4359,8 +4359,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.465Z",
-              "end": "2022-07-13T23:31:28.465Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
           "collection2": {
@@ -4369,17 +4369,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:28.465Z",
-              "end": "2022-07-13T23:31:28.465Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
-          "score": 31.146374662699973,
-          "wordCount": 111137159,
+          "score": 15.917201631000005,
+          "wordCount": 91291878,
           "examples": [
             {
-              "dreamText": "266",
-              "newsText": "13025",
-              "score": 0.052964117,
+              "dreamText": "263",
+              "newsText": "13043",
+              "score": 0.1447538,
               "concepts": []
             }
           ],
@@ -4421,8 +4421,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.465Z",
-              "end": "2022-07-13T23:31:28.465Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
           "collection2": {
@@ -4431,17 +4431,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:28.465Z",
-              "end": "2022-07-13T23:31:28.465Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
-          "score": 40.68073718510004,
-          "wordCount": 92908514,
+          "score": 21.54776925750001,
+          "wordCount": 76398777,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "4562",
-              "score": 0.067809165,
+              "dreamText": "263",
+              "newsText": "4547",
+              "score": 0.14145835,
               "concepts": []
             }
           ],
@@ -4483,8 +4483,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.466Z",
-              "end": "2022-07-13T23:31:28.466Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
           "collection2": {
@@ -4493,17 +4493,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.466Z",
-              "end": "2022-07-13T23:31:28.466Z"
+              "start": "2022-07-14T11:44:40.505Z",
+              "end": "2022-07-14T11:44:40.505Z"
             }
           },
-          "score": 32.105817780300036,
-          "wordCount": 121483153,
+          "score": 16.207515257399987,
+          "wordCount": 99811124,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "11445",
-              "score": 0.07833055,
+              "dreamText": "263",
+              "newsText": "11447",
+              "score": 0.12519215,
               "concepts": []
             }
           ],
@@ -4545,8 +4545,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.466Z",
-              "end": "2022-07-13T23:31:28.466Z"
+              "start": "2022-07-14T11:44:40.506Z",
+              "end": "2022-07-14T11:44:40.506Z"
             }
           },
           "collection2": {
@@ -4555,17 +4555,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:28.466Z",
-              "end": "2022-07-13T23:31:28.466Z"
+              "start": "2022-07-14T11:44:40.506Z",
+              "end": "2022-07-14T11:44:40.506Z"
             }
           },
-          "score": 38.980690916100045,
-          "wordCount": 106870508,
+          "score": 20.375106622399965,
+          "wordCount": 87864068,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "5422",
-              "score": 0.08466477,
+              "dreamText": "263",
+              "newsText": "5430",
+              "score": 0.1639025,
               "concepts": []
             }
           ],
@@ -4607,8 +4607,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.467Z",
-              "end": "2022-07-13T23:31:28.467Z"
+              "start": "2022-07-14T11:44:40.506Z",
+              "end": "2022-07-14T11:44:40.506Z"
             }
           },
           "collection2": {
@@ -4617,17 +4617,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:28.467Z",
-              "end": "2022-07-13T23:31:28.467Z"
+              "start": "2022-07-14T11:44:40.506Z",
+              "end": "2022-07-14T11:44:40.506Z"
             }
           },
-          "score": 37.637764912499904,
-          "wordCount": 96128762,
+          "score": 19.684681632600007,
+          "wordCount": 78974723,
           "examples": [
             {
-              "dreamText": "266",
+              "dreamText": "263",
               "newsText": "3038",
-              "score": 0.06355014,
+              "score": 0.1631355,
               "concepts": []
             }
           ],
@@ -4669,8 +4669,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.467Z",
-              "end": "2022-07-13T23:31:28.467Z"
+              "start": "2022-07-14T11:44:40.506Z",
+              "end": "2022-07-14T11:44:40.506Z"
             }
           },
           "collection2": {
@@ -4679,17 +4679,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.467Z",
-              "end": "2022-07-13T23:31:28.467Z"
+              "start": "2022-07-14T11:44:40.506Z",
+              "end": "2022-07-14T11:44:40.506Z"
             }
           },
-          "score": 34.0792627319,
-          "wordCount": 109539850,
+          "score": 17.23587747630001,
+          "wordCount": 90011330,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "9929",
-              "score": 0.098687075,
+              "dreamText": "263",
+              "newsText": "9936",
+              "score": 0.12001446,
               "concepts": []
             }
           ],
@@ -4731,8 +4731,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.468Z",
-              "end": "2022-07-13T23:31:28.468Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
           "collection2": {
@@ -4741,17 +4741,17 @@
               "granularity": "month",
               "index": 1,
               "identifier": "month 1",
-              "start": "2022-07-13T23:31:28.468Z",
-              "end": "2022-07-13T23:31:28.468Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
-          "score": 11.037981539200006,
-          "wordCount": 36896252,
+          "score": 5.259450498499997,
+          "wordCount": 29951494,
           "examples": [
             {
-              "dreamText": "266",
-              "newsText": "1477",
-              "score": 0.021621302,
+              "dreamText": "263",
+              "newsText": "1474",
+              "score": 0.09828305,
               "concepts": []
             }
           ],
@@ -4793,8 +4793,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.468Z",
-              "end": "2022-07-13T23:31:28.468Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
           "collection2": {
@@ -4803,17 +4803,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.468Z",
-              "end": "2022-07-13T23:31:28.468Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
-          "score": 34.70394675670003,
-          "wordCount": 113689506,
+          "score": 17.73882825240002,
+          "wordCount": 93408511,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "8151",
-              "score": 0.22408433,
+              "dreamText": "263",
+              "newsText": "8141",
+              "score": 0.20202594,
               "concepts": []
             }
           ],
@@ -4855,8 +4855,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.469Z",
-              "end": "2022-07-13T23:31:28.469Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
           "collection2": {
@@ -4865,17 +4865,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:28.469Z",
-              "end": "2022-07-13T23:31:28.469Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
-          "score": 33.66403537080001,
-          "wordCount": 117138044,
+          "score": 17.057372633100005,
+          "wordCount": 96279365,
           "examples": [
             {
-              "dreamText": "266",
-              "newsText": "7334",
-              "score": 0.046714526,
+              "dreamText": "263",
+              "newsText": "7290",
+              "score": 0.15285397,
               "concepts": []
             }
           ],
@@ -4917,8 +4917,8 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.469Z",
-              "end": "2022-07-13T23:31:28.469Z"
+              "start": "2022-07-14T11:44:40.508Z",
+              "end": "2022-07-14T11:44:40.508Z"
             }
           },
           "collection2": {
@@ -4927,17 +4927,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:28.469Z",
-              "end": "2022-07-13T23:31:28.469Z"
+              "start": "2022-07-14T11:44:40.509Z",
+              "end": "2022-07-14T11:44:40.509Z"
             }
           },
-          "score": 32.185688411600005,
-          "wordCount": 113565959,
+          "score": 16.738522269599976,
+          "wordCount": 93310714,
           "examples": [
             {
-              "dreamText": "631",
-              "newsText": "15596",
-              "score": 0.11617874,
+              "dreamText": "263",
+              "newsText": "15619",
+              "score": 0.14578927,
               "concepts": []
             }
           ],
@@ -4979,8 +4979,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.773Z",
+              "end": "2022-07-14T11:44:40.773Z"
             }
           },
           "collection2": {
@@ -4989,17 +4989,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.773Z",
+              "end": "2022-07-14T11:44:40.773Z"
             }
           },
-          "score": 28.708031844799986,
-          "wordCount": 141551273,
+          "score": 14.771012194500011,
+          "wordCount": 117604471,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "12912",
-              "score": 0.04290011,
+              "dreamText": "916",
+              "newsText": "12917",
+              "score": 0.14210558,
               "concepts": []
             }
           ],
@@ -5041,8 +5041,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.774Z",
+              "end": "2022-07-14T11:44:40.774Z"
             }
           },
           "collection2": {
@@ -5051,17 +5051,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.774Z",
+              "end": "2022-07-14T11:44:40.774Z"
             }
           },
-          "score": 27.772810237999945,
-          "wordCount": 124689631,
+          "score": 14.283820752400008,
+          "wordCount": 103576289,
           "examples": [
             {
-              "dreamText": "297",
-              "newsText": "13027",
-              "score": 0.036925666,
+              "dreamText": "916",
+              "newsText": "13020",
+              "score": 0.07348346,
               "concepts": []
             }
           ],
@@ -5103,8 +5103,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.774Z",
+              "end": "2022-07-14T11:44:40.774Z"
             }
           },
           "collection2": {
@@ -5113,17 +5113,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.774Z",
+              "end": "2022-07-14T11:44:40.774Z"
             }
           },
-          "score": 37.092984522599984,
-          "wordCount": 103262201,
+          "score": 19.323387764100016,
+          "wordCount": 85758693,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "4554",
-              "score": 0.032783873,
+              "dreamText": "916",
+              "newsText": "4556",
+              "score": 0.07412427,
               "concepts": []
             }
           ],
@@ -5165,8 +5165,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.774Z",
+              "end": "2022-07-14T11:44:40.774Z"
             }
           },
           "collection2": {
@@ -5175,17 +5175,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.728Z",
-              "end": "2022-07-13T23:31:28.728Z"
+              "start": "2022-07-14T11:44:40.774Z",
+              "end": "2022-07-14T11:44:40.774Z"
             }
           },
-          "score": 28.474933764700015,
-          "wordCount": 136294655,
+          "score": 14.544241029500007,
+          "wordCount": 113236857,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "11438",
-              "score": 0.040590297,
+              "dreamText": "916",
+              "newsText": "11434",
+              "score": 0.10529834,
               "concepts": []
             }
           ],
@@ -5227,8 +5227,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.729Z",
-              "end": "2022-07-13T23:31:28.729Z"
+              "start": "2022-07-14T11:44:40.775Z",
+              "end": "2022-07-14T11:44:40.775Z"
             }
           },
           "collection2": {
@@ -5237,17 +5237,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:28.729Z",
-              "end": "2022-07-13T23:31:28.729Z"
+              "start": "2022-07-14T11:44:40.775Z",
+              "end": "2022-07-14T11:44:40.775Z"
             }
           },
-          "score": 35.679027522900064,
-          "wordCount": 119893024,
+          "score": 18.4365432577,
+          "wordCount": 99668464,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "5409",
-              "score": 0.07507691,
+              "dreamText": "916",
+              "newsText": "5422",
+              "score": 0.09155171,
               "concepts": []
             }
           ],
@@ -5289,8 +5289,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.730Z",
-              "end": "2022-07-13T23:31:28.730Z"
+              "start": "2022-07-14T11:44:40.775Z",
+              "end": "2022-07-14T11:44:40.775Z"
             }
           },
           "collection2": {
@@ -5299,17 +5299,17 @@
               "granularity": "month",
               "index": 2,
               "identifier": "month 2",
-              "start": "2022-07-13T23:31:28.730Z",
-              "end": "2022-07-13T23:31:28.730Z"
+              "start": "2022-07-14T11:44:40.775Z",
+              "end": "2022-07-14T11:44:40.775Z"
             }
           },
-          "score": 14.470338305499997,
-          "wordCount": 35332486,
+          "score": 7.5167808375,
+          "wordCount": 28847273,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "3011",
-              "score": 0.0972521,
+              "dreamText": "916",
+              "newsText": "3033",
+              "score": 0.084558025,
               "concepts": []
             }
           ],
@@ -5351,8 +5351,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.730Z",
-              "end": "2022-07-13T23:31:28.730Z"
+              "start": "2022-07-14T11:44:40.775Z",
+              "end": "2022-07-14T11:44:40.775Z"
             }
           },
           "collection2": {
@@ -5361,17 +5361,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.730Z",
-              "end": "2022-07-13T23:31:28.730Z"
+              "start": "2022-07-14T11:44:40.775Z",
+              "end": "2022-07-14T11:44:40.775Z"
             }
           },
-          "score": 30.469966053200032,
-          "wordCount": 122893580,
+          "score": 15.476468302099995,
+          "wordCount": 102115740,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "9946",
-              "score": 0.016770158,
+              "dreamText": "916",
+              "newsText": "9936",
+              "score": 0.05343749,
               "concepts": []
             }
           ],
@@ -5413,8 +5413,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.731Z",
-              "end": "2022-07-13T23:31:28.731Z"
+              "start": "2022-07-14T11:44:40.777Z",
+              "end": "2022-07-14T11:44:40.777Z"
             }
           },
           "collection2": {
@@ -5423,17 +5423,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.731Z",
-              "end": "2022-07-13T23:31:28.731Z"
+              "start": "2022-07-14T11:44:40.777Z",
+              "end": "2022-07-14T11:44:40.777Z"
             }
           },
-          "score": 31.12878119940002,
-          "wordCount": 127550703,
+          "score": 15.981058639000006,
+          "wordCount": 105972853,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "8153",
-              "score": 0.027563574,
+              "dreamText": "916",
+              "newsText": "8141",
+              "score": 0.044999864,
               "concepts": []
             }
           ],
@@ -5475,8 +5475,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.732Z",
-              "end": "2022-07-13T23:31:28.732Z"
+              "start": "2022-07-14T11:44:40.778Z",
+              "end": "2022-07-14T11:44:40.778Z"
             }
           },
           "collection2": {
@@ -5485,17 +5485,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:28.732Z",
-              "end": "2022-07-13T23:31:28.732Z"
+              "start": "2022-07-14T11:44:40.778Z",
+              "end": "2022-07-14T11:44:40.778Z"
             }
           },
-          "score": 30.60292605950003,
-          "wordCount": 131414983,
+          "score": 15.646235130699989,
+          "wordCount": 109220725,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "7325",
-              "score": 0.04886192,
+              "dreamText": "916",
+              "newsText": "7309",
+              "score": 0.07928143,
               "concepts": []
             }
           ],
@@ -5537,8 +5537,8 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.732Z",
-              "end": "2022-07-13T23:31:28.732Z"
+              "start": "2022-07-14T11:44:40.778Z",
+              "end": "2022-07-14T11:44:40.778Z"
             }
           },
           "collection2": {
@@ -5547,17 +5547,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:28.732Z",
-              "end": "2022-07-13T23:31:28.732Z"
+              "start": "2022-07-14T11:44:40.778Z",
+              "end": "2022-07-14T11:44:40.778Z"
             }
           },
-          "score": 28.835510929799995,
-          "wordCount": 127411627,
+          "score": 14.853379671100004,
+          "wordCount": 105860997,
           "examples": [
             {
-              "dreamText": "662",
-              "newsText": "15612",
-              "score": 0.059133533,
+              "dreamText": "916",
+              "newsText": "15596",
+              "score": 0.10286259,
               "concepts": []
             }
           ],
@@ -5599,8 +5599,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.021Z",
+              "end": "2022-07-14T11:44:41.021Z"
             }
           },
           "collection2": {
@@ -5609,17 +5609,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.021Z",
+              "end": "2022-07-14T11:44:41.021Z"
             }
           },
-          "score": 31.54165950679996,
-          "wordCount": 141748612,
+          "score": 16.269451359100024,
+          "wordCount": 124051547,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "12936",
-              "score": 0.06457297,
+              "dreamText": "596",
+              "newsText": "12905",
+              "score": 0.22850853,
               "concepts": []
             }
           ],
@@ -5661,8 +5661,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.021Z",
+              "end": "2022-07-14T11:44:41.021Z"
             }
           },
           "collection2": {
@@ -5671,17 +5671,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.021Z",
+              "end": "2022-07-14T11:44:41.021Z"
             }
           },
-          "score": 30.44765560539996,
-          "wordCount": 124855148,
+          "score": 15.706705821900002,
+          "wordCount": 109258069,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "13027",
-              "score": 0.104677245,
+              "dreamText": "1649",
+              "newsText": "13000",
+              "score": 0.20323434,
               "concepts": []
             }
           ],
@@ -5723,8 +5723,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.022Z",
+              "end": "2022-07-14T11:44:41.022Z"
             }
           },
           "collection2": {
@@ -5733,17 +5733,17 @@
               "granularity": "month",
               "index": 3,
               "identifier": "month 3",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.022Z",
+              "end": "2022-07-14T11:44:41.022Z"
             }
           },
-          "score": 15.630143342499991,
-          "wordCount": 45332188,
+          "score": 8.102856658699997,
+          "wordCount": 40100629,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "4556",
-              "score": 0.08716553,
+              "dreamText": "1649",
+              "newsText": "4582",
+              "score": 0.22215529,
               "concepts": []
             }
           ],
@@ -5785,8 +5785,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.022Z",
+              "end": "2022-07-14T11:44:41.022Z"
             }
           },
           "collection2": {
@@ -5795,17 +5795,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:28.980Z",
-              "end": "2022-07-13T23:31:28.980Z"
+              "start": "2022-07-14T11:44:41.022Z",
+              "end": "2022-07-14T11:44:41.022Z"
             }
           },
-          "score": 31.3485405361,
-          "wordCount": 136484544,
+          "score": 15.952665376599994,
+          "wordCount": 119444555,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "11396",
-              "score": 0.059357487,
+              "dreamText": "1649",
+              "newsText": "11426",
+              "score": 0.2824417,
               "concepts": []
             }
           ],
@@ -5847,8 +5847,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.981Z",
-              "end": "2022-07-13T23:31:28.981Z"
+              "start": "2022-07-14T11:44:41.023Z",
+              "end": "2022-07-14T11:44:41.023Z"
             }
           },
           "collection2": {
@@ -5857,17 +5857,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:28.981Z",
-              "end": "2022-07-13T23:31:28.981Z"
+              "start": "2022-07-14T11:44:41.023Z",
+              "end": "2022-07-14T11:44:41.023Z"
             }
           },
-          "score": 38.239933081900055,
-          "wordCount": 119520088,
+          "score": 19.40649015449999,
+          "wordCount": 104639748,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "5412",
-              "score": 0.09551255,
+              "dreamText": "596",
+              "newsText": "5436",
+              "score": 0.1396652,
               "concepts": []
             }
           ],
@@ -5909,8 +5909,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.982Z",
-              "end": "2022-07-13T23:31:28.982Z"
+              "start": "2022-07-14T11:44:41.024Z",
+              "end": "2022-07-14T11:44:41.024Z"
             }
           },
           "collection2": {
@@ -5919,17 +5919,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:28.982Z",
-              "end": "2022-07-13T23:31:28.982Z"
+              "start": "2022-07-14T11:44:41.024Z",
+              "end": "2022-07-14T11:44:41.024Z"
             }
           },
-          "score": 33.471784322299996,
-          "wordCount": 123070380,
+          "score": 17.02123209959997,
+          "wordCount": 107711270,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "9946",
-              "score": 0.083308764,
+              "dreamText": "1649",
+              "newsText": "9939",
+              "score": 0.16216671,
               "concepts": []
             }
           ],
@@ -5971,8 +5971,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.983Z",
-              "end": "2022-07-13T23:31:28.983Z"
+              "start": "2022-07-14T11:44:41.025Z",
+              "end": "2022-07-14T11:44:41.025Z"
             }
           },
           "collection2": {
@@ -5981,17 +5981,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:28.983Z",
-              "end": "2022-07-13T23:31:28.983Z"
+              "start": "2022-07-14T11:44:41.025Z",
+              "end": "2022-07-14T11:44:41.025Z"
             }
           },
-          "score": 34.146413898600066,
-          "wordCount": 127728706,
+          "score": 17.30824494179999,
+          "wordCount": 111782202,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "8145",
-              "score": 0.07912918,
+              "dreamText": "1649",
+              "newsText": "8144",
+              "score": 0.14022271,
               "concepts": []
             }
           ],
@@ -6033,8 +6033,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.984Z",
-              "end": "2022-07-13T23:31:28.984Z"
+              "start": "2022-07-14T11:44:41.025Z",
+              "end": "2022-07-14T11:44:41.025Z"
             }
           },
           "collection2": {
@@ -6043,17 +6043,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:28.984Z",
-              "end": "2022-07-13T23:31:28.984Z"
+              "start": "2022-07-14T11:44:41.025Z",
+              "end": "2022-07-14T11:44:41.025Z"
             }
           },
-          "score": 33.24288205060002,
-          "wordCount": 131614630,
+          "score": 16.802591196599963,
+          "wordCount": 115200832,
           "examples": [
             {
-              "dreamText": "327",
-              "newsText": "7332",
-              "score": 0.07420607,
+              "dreamText": "324",
+              "newsText": "7337",
+              "score": 0.2465528,
               "concepts": []
             }
           ],
@@ -6095,8 +6095,8 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:28.984Z",
-              "end": "2022-07-13T23:31:28.984Z"
+              "start": "2022-07-14T11:44:41.025Z",
+              "end": "2022-07-14T11:44:41.025Z"
             }
           },
           "collection2": {
@@ -6105,17 +6105,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:28.984Z",
-              "end": "2022-07-13T23:31:28.984Z"
+              "start": "2022-07-14T11:44:41.025Z",
+              "end": "2022-07-14T11:44:41.025Z"
             }
           },
-          "score": 31.70314940619998,
-          "wordCount": 127591044,
+          "score": 16.153844460700004,
+          "wordCount": 111663493,
           "examples": [
             {
-              "dreamText": "327",
+              "dreamText": "324",
               "newsText": "15615",
-              "score": 0.05835302,
+              "score": 0.12300596,
               "concepts": []
             }
           ],
@@ -6157,8 +6157,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.230Z",
-              "end": "2022-07-13T23:31:29.230Z"
+              "start": "2022-07-14T11:44:41.274Z",
+              "end": "2022-07-14T11:44:41.274Z"
             }
           },
           "collection2": {
@@ -6167,17 +6167,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:29.230Z",
-              "end": "2022-07-13T23:31:29.230Z"
+              "start": "2022-07-14T11:44:41.274Z",
+              "end": "2022-07-14T11:44:41.274Z"
             }
           },
-          "score": 25.880184171599943,
-          "wordCount": 123107550,
+          "score": 13.082763285399995,
+          "wordCount": 106436241,
           "examples": [
             {
-              "dreamText": "798",
+              "dreamText": "964",
               "newsText": "12917",
-              "score": 0.06337637,
+              "score": 0.07318424,
               "concepts": []
             }
           ],
@@ -6219,8 +6219,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.230Z",
-              "end": "2022-07-13T23:31:29.230Z"
+              "start": "2022-07-14T11:44:41.274Z",
+              "end": "2022-07-14T11:44:41.274Z"
             }
           },
           "collection2": {
@@ -6229,17 +6229,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.230Z",
-              "end": "2022-07-13T23:31:29.230Z"
+              "start": "2022-07-14T11:44:41.274Z",
+              "end": "2022-07-14T11:44:41.274Z"
             }
           },
-          "score": 25.22856047970003,
-          "wordCount": 108416538,
+          "score": 12.800237649600007,
+          "wordCount": 93720447,
           "examples": [
             {
-              "dreamText": "798",
-              "newsText": "13020",
-              "score": 0.07363366,
+              "dreamText": "33",
+              "newsText": "13026",
+              "score": 0.089368604,
               "concepts": []
             }
           ],
@@ -6281,8 +6281,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.230Z",
-              "end": "2022-07-13T23:31:29.230Z"
+              "start": "2022-07-14T11:44:41.275Z",
+              "end": "2022-07-14T11:44:41.275Z"
             }
           },
           "collection2": {
@@ -6291,17 +6291,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:29.230Z",
-              "end": "2022-07-13T23:31:29.230Z"
+              "start": "2022-07-14T11:44:41.275Z",
+              "end": "2022-07-14T11:44:41.275Z"
             }
           },
-          "score": 25.63005444150003,
-          "wordCount": 118535468,
+          "score": 12.908613603000001,
+          "wordCount": 102483105,
           "examples": [
             {
-              "dreamText": "358",
-              "newsText": "11438",
-              "score": 0.09891269,
+              "dreamText": "964",
+              "newsText": "11402",
+              "score": 0.071941264,
               "concepts": []
             }
           ],
@@ -6343,8 +6343,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.231Z",
-              "end": "2022-07-13T23:31:29.231Z"
+              "start": "2022-07-14T11:44:41.275Z",
+              "end": "2022-07-14T11:44:41.275Z"
             }
           },
           "collection2": {
@@ -6353,17 +6353,17 @@
               "granularity": "month",
               "index": 4,
               "identifier": "month 4",
-              "start": "2022-07-13T23:31:29.231Z",
-              "end": "2022-07-13T23:31:29.231Z"
+              "start": "2022-07-14T11:44:41.275Z",
+              "end": "2022-07-14T11:44:41.275Z"
             }
           },
-          "score": 12.332328486199998,
-          "wordCount": 37471362,
+          "score": 6.6701834615,
+          "wordCount": 32721034,
           "examples": [
             {
-              "dreamText": "358",
+              "dreamText": "633",
               "newsText": "5422",
-              "score": 0.17250352,
+              "score": 0.11583719,
               "concepts": []
             }
           ],
@@ -6405,8 +6405,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.232Z",
-              "end": "2022-07-13T23:31:29.232Z"
+              "start": "2022-07-14T11:44:41.276Z",
+              "end": "2022-07-14T11:44:41.276Z"
             }
           },
           "collection2": {
@@ -6415,17 +6415,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:29.232Z",
-              "end": "2022-07-13T23:31:29.232Z"
+              "start": "2022-07-14T11:44:41.276Z",
+              "end": "2022-07-14T11:44:41.276Z"
             }
           },
-          "score": 27.271105140800042,
-          "wordCount": 106898270,
+          "score": 13.748574023500002,
+          "wordCount": 92431410,
           "examples": [
             {
-              "dreamText": "798",
-              "newsText": "9931",
-              "score": 0.037608687,
+              "dreamText": "33",
+              "newsText": "9946",
+              "score": 0.065534,
               "concepts": []
             }
           ],
@@ -6467,8 +6467,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.233Z",
-              "end": "2022-07-13T23:31:29.233Z"
+              "start": "2022-07-14T11:44:41.277Z",
+              "end": "2022-07-14T11:44:41.277Z"
             }
           },
           "collection2": {
@@ -6477,17 +6477,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:29.233Z",
-              "end": "2022-07-13T23:31:29.233Z"
+              "start": "2022-07-14T11:44:41.277Z",
+              "end": "2022-07-14T11:44:41.277Z"
             }
           },
-          "score": 27.889778538299968,
-          "wordCount": 110931793,
+          "score": 14.1851030428,
+          "wordCount": 95909646,
           "examples": [
             {
-              "dreamText": "358",
-              "newsText": "8146",
-              "score": 0.12088566,
+              "dreamText": "33",
+              "newsText": "8139",
+              "score": 0.12523624,
               "concepts": []
             }
           ],
@@ -6529,8 +6529,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.233Z",
-              "end": "2022-07-13T23:31:29.233Z"
+              "start": "2022-07-14T11:44:41.278Z",
+              "end": "2022-07-14T11:44:41.278Z"
             }
           },
           "collection2": {
@@ -6539,17 +6539,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:29.233Z",
-              "end": "2022-07-13T23:31:29.233Z"
+              "start": "2022-07-14T11:44:41.278Z",
+              "end": "2022-07-14T11:44:41.278Z"
             }
           },
-          "score": 26.609906862700036,
-          "wordCount": 113451816,
+          "score": 13.52250623059999,
+          "wordCount": 98103037,
           "examples": [
             {
-              "dreamText": "358",
-              "newsText": "7325",
-              "score": 0.1739403,
+              "dreamText": "33",
+              "newsText": "7302",
+              "score": 0.09391712,
               "concepts": []
             }
           ],
@@ -6591,8 +6591,8 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.233Z",
-              "end": "2022-07-13T23:31:29.233Z"
+              "start": "2022-07-14T11:44:41.278Z",
+              "end": "2022-07-14T11:44:41.278Z"
             }
           },
           "collection2": {
@@ -6601,17 +6601,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.233Z",
-              "end": "2022-07-13T23:31:29.233Z"
+              "start": "2022-07-14T11:44:41.278Z",
+              "end": "2022-07-14T11:44:41.278Z"
             }
           },
-          "score": 26.492451447499946,
-          "wordCount": 110815942,
+          "score": 13.583310470299995,
+          "wordCount": 95812239,
           "examples": [
             {
-              "dreamText": "358",
+              "dreamText": "34",
               "newsText": "15612",
-              "score": 0.072264336,
+              "score": 0.073021054,
               "concepts": []
             }
           ],
@@ -6653,8 +6653,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.453Z",
-              "end": "2022-07-13T23:31:29.453Z"
+              "start": "2022-07-14T11:44:41.498Z",
+              "end": "2022-07-14T11:44:41.498Z"
             }
           },
           "collection2": {
@@ -6663,17 +6663,17 @@
               "granularity": "month",
               "index": 9,
               "identifier": "month 9",
-              "start": "2022-07-13T23:31:29.453Z",
-              "end": "2022-07-13T23:31:29.453Z"
+              "start": "2022-07-14T11:44:41.498Z",
+              "end": "2022-07-14T11:44:41.498Z"
             }
           },
-          "score": 27.203637506600028,
-          "wordCount": 164348069,
+          "score": 12.99619416879999,
+          "wordCount": 118509814,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "12939",
-              "score": 0.036228903,
+              "dreamText": "1558",
+              "newsText": "12912",
+              "score": 0.14699987,
               "concepts": []
             }
           ],
@@ -6715,8 +6715,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.453Z",
-              "end": "2022-07-13T23:31:29.453Z"
+              "start": "2022-07-14T11:44:41.498Z",
+              "end": "2022-07-14T11:44:41.498Z"
             }
           },
           "collection2": {
@@ -6725,17 +6725,17 @@
               "granularity": "month",
               "index": 10,
               "identifier": "month 10",
-              "start": "2022-07-13T23:31:29.453Z",
-              "end": "2022-07-13T23:31:29.453Z"
+              "start": "2022-07-14T11:44:41.498Z",
+              "end": "2022-07-14T11:44:41.498Z"
             }
           },
-          "score": 26.31994467390003,
-          "wordCount": 144723499,
+          "score": 12.668634969799992,
+          "wordCount": 104335010,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "13034",
-              "score": 0.015200939,
+              "dreamText": "1558",
+              "newsText": "13023",
+              "score": 0.10442838,
               "concepts": []
             }
           ],
@@ -6777,8 +6777,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.453Z",
-              "end": "2022-07-13T23:31:29.453Z"
+              "start": "2022-07-14T11:44:41.498Z",
+              "end": "2022-07-14T11:44:41.498Z"
             }
           },
           "collection2": {
@@ -6787,17 +6787,17 @@
               "granularity": "month",
               "index": 8,
               "identifier": "month 8",
-              "start": "2022-07-13T23:31:29.453Z",
-              "end": "2022-07-13T23:31:29.453Z"
+              "start": "2022-07-14T11:44:41.498Z",
+              "end": "2022-07-14T11:44:41.498Z"
             }
           },
-          "score": 27.166105310099987,
-          "wordCount": 158244181,
+          "score": 12.959291486100007,
+          "wordCount": 114108012,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "11443",
-              "score": 0.04999133,
+              "dreamText": "385",
+              "newsText": "11449",
+              "score": 0.20249708,
               "concepts": []
             }
           ],
@@ -6839,8 +6839,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.454Z",
-              "end": "2022-07-13T23:31:29.454Z"
+              "start": "2022-07-14T11:44:41.499Z",
+              "end": "2022-07-14T11:44:41.499Z"
             }
           },
           "collection2": {
@@ -6849,17 +6849,17 @@
               "granularity": "month",
               "index": 7,
               "identifier": "month 7",
-              "start": "2022-07-13T23:31:29.454Z",
-              "end": "2022-07-13T23:31:29.454Z"
+              "start": "2022-07-14T11:44:41.499Z",
+              "end": "2022-07-14T11:44:41.499Z"
             }
           },
-          "score": 28.893016100300027,
-          "wordCount": 142716730,
+          "score": 13.913198064400015,
+          "wordCount": 102927270,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "9934",
-              "score": 0.026703933,
+              "dreamText": "1558",
+              "newsText": "9933",
+              "score": 0.10805826,
               "concepts": []
             }
           ],
@@ -6901,8 +6901,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.455Z",
-              "end": "2022-07-13T23:31:29.455Z"
+              "start": "2022-07-14T11:44:41.501Z",
+              "end": "2022-07-14T11:44:41.501Z"
             }
           },
           "collection2": {
@@ -6911,17 +6911,17 @@
               "granularity": "month",
               "index": 6,
               "identifier": "month 6",
-              "start": "2022-07-13T23:31:29.455Z",
-              "end": "2022-07-13T23:31:29.455Z"
+              "start": "2022-07-14T11:44:41.501Z",
+              "end": "2022-07-14T11:44:41.501Z"
             }
           },
-          "score": 29.325188686799986,
-          "wordCount": 144824561,
+          "score": 14.037369486499996,
+          "wordCount": 104981317,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "8152",
-              "score": 0.04313558,
+              "dreamText": "1558",
+              "newsText": "8153",
+              "score": 0.068226114,
               "concepts": []
             }
           ],
@@ -6963,8 +6963,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.456Z",
-              "end": "2022-07-13T23:31:29.456Z"
+              "start": "2022-07-14T11:44:41.501Z",
+              "end": "2022-07-14T11:44:41.501Z"
             }
           },
           "collection2": {
@@ -6973,17 +6973,17 @@
               "granularity": "month",
               "index": 5,
               "identifier": "month 5",
-              "start": "2022-07-13T23:31:29.456Z",
-              "end": "2022-07-13T23:31:29.456Z"
+              "start": "2022-07-14T11:44:41.501Z",
+              "end": "2022-07-14T11:44:41.501Z"
             }
           },
-          "score": 10.49464889690001,
-          "wordCount": 46305579,
+          "score": 5.153257341300002,
+          "wordCount": 39328401,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "7299",
-              "score": 0.036834046,
+              "dreamText": "385",
+              "newsText": "7337",
+              "score": 0.15257005,
               "concepts": []
             }
           ],
@@ -7025,8 +7025,8 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.456Z",
-              "end": "2022-07-13T23:31:29.456Z"
+              "start": "2022-07-14T11:44:41.501Z",
+              "end": "2022-07-14T11:44:41.501Z"
             }
           },
           "collection2": {
@@ -7035,17 +7035,17 @@
               "granularity": "month",
               "index": 11,
               "identifier": "month 11",
-              "start": "2022-07-13T23:31:29.456Z",
-              "end": "2022-07-13T23:31:29.456Z"
+              "start": "2022-07-14T11:44:41.501Z",
+              "end": "2022-07-14T11:44:41.501Z"
             }
           },
-          "score": 27.339907266899985,
-          "wordCount": 147941435,
+          "score": 13.151721796200022,
+          "wordCount": 106684254,
           "examples": [
             {
-              "dreamText": "388",
-              "newsText": "15603",
-              "score": 0.01940249,
+              "dreamText": "1558",
+              "newsText": "15616",
+              "score": 0.1239053,
               "concepts": []
             }
           ],

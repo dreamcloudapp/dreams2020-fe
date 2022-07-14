@@ -163,16 +163,16 @@ const data: DifferenceByGranularity = {
         maxAverageSimilarity: maxAverageSimilarity2020,
       },
     },
-    {
-      key: "Control",
-      color: ColorTheme.RED,
-      comparisons: {
-        differences: dayDifferencesControl.differences,
-        maxSimilarity: allData[CONTROL_SET].maxSimilarity,
-        minSimilarity: allData[CONTROL_SET].minSimilarity,
-        maxAverageSimilarity: maxAverageSimilarityControl,
-      },
-    },
+    // {
+    //   key: "Control",
+    //   color: ColorTheme.RED,
+    //   comparisons: {
+    //     differences: dayDifferencesControl.differences,
+    //     maxSimilarity: allData[CONTROL_SET].maxSimilarity,
+    //     minSimilarity: allData[CONTROL_SET].minSimilarity,
+    //     maxAverageSimilarity: maxAverageSimilarityControl,
+    //   },
+    // },
   ],
   week: [
     {
