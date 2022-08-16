@@ -144,7 +144,7 @@ function Axes({
             x={yAxisTextLeftPadding}
             y={20 * (i + 1)}
             fontFamily="Calibri"
-            fontSize="14"
+            fontSize="16"
             fontWeight={500}
             fill={strokeColor}
           >
@@ -161,7 +161,7 @@ function Axes({
             x={yAxisTextLeftPadding}
             y={height - 30 + 20 * i}
             fontFamily="Calibri"
-            fontSize="14"
+            fontSize="16"
             fontWeight={500}
             fill={strokeColor}
           >
@@ -175,7 +175,7 @@ function Axes({
         x={rightGraphEdge + triangleHeight + 5}
         y={height / 2 + 5}
         fontFamily="Calibri"
-        fontSize="14"
+        fontSize="16"
         fontWeight={500}
         fill={strokeColor}
       >

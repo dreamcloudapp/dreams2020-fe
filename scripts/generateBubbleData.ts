@@ -14,7 +14,7 @@ const { isDotPath } = require("./modules/file-felpers");
 const { getBroaderGranularity } = require("./modules/get-broader-granularity");
 
 const NUM_CONCEPTS_PER_COMPARISON = 5;
-const NUM_EXAMPLES_PER_COMPARISON = 1;
+const NUM_EXAMPLES_PER_COMPARISON = 100;
 const VERY_LARGE_NUMBER = 999 * 999 * 999;
 const SRC_FOLDER = "../source-data-all";
 const NEWS_YEAR = 2020;
