@@ -9,10 +9,10 @@ import {
   DifferenceRecord,
   DifferenceByGranularity,
 } from "@kannydennedy/dreams-2020-types";
+import { CONTROL_SET, SET2020, SRC_FOLDER } from "./config";
 import { ColorTheme } from "./modules/theme";
 
 const YEAR = 2020;
-const SRC_FOLDER = "../source-data-all";
 
 ////////////////////////////////////////////////////
 // HELPER FUNCTIONS
@@ -41,8 +41,6 @@ const differenceDictToArray = (
 // MAIN
 ////////////////////////////////////////////////////
 
-const SET2020 = "./all-dreams-final-2020.csv";
-const CONTROL_SET = "./all-dreams-control.csv";
 const setNames = [SET2020, CONTROL_SET];
 
 type DataSet = {
@@ -141,9 +139,12 @@ const maxAverageSimilarity2020 = Math.max(
   ...dayDifferences2020.differences.map(d => d.averageSimilarity)
 );
 
+console.log(allData[CONTROL_SET]);
+
 const dayDifferencesControl = differenceDictToArray(
   allData[CONTROL_SET].differenceDictionary
 );
+
 const maxAverageSimilarityControl = Math.max(
   ...dayDifferencesControl.differences.map(d => d.averageSimilarity)
 );
@@ -162,16 +163,16 @@ const data: DifferenceByGranularity = {
         maxAverageSimilarity: maxAverageSimilarity2020,
       },
     },
-    // {
-    //   key: "Control",
-    //   color: ColorTheme.RED,
-    //   comparisons: {
-    //     differences: dayDifferencesControl.differences,
-    //     maxSimilarity: allData[CONTROL_SET].maxSimilarity,
-    //     minSimilarity: allData[CONTROL_SET].minSimilarity,
-    //     maxAverageSimilarity: maxAverageSimilarityControl,
-    //   },
-    // },
+    {
+      key: "Control",
+      color: ColorTheme.RED,
+      comparisons: {
+        differences: dayDifferencesControl.differences,
+        maxSimilarity: allData[CONTROL_SET].maxSimilarity,
+        minSimilarity: allData[CONTROL_SET].minSimilarity,
+        maxAverageSimilarity: maxAverageSimilarityControl,
+      },
+    },
   ],
   week: [
     {

@@ -25,6 +25,27 @@ const padding: Padding = {
   BOTTOM: 40,
 };
 
+function ColumnTooltip({ datum }: { datum: DifferenceRecord }) {
+  return (
+    <div>
+      <p>
+        {datum.difference === 0 ? (
+          <span>Dreams on same day as news</span>
+        ) : (
+          <span>
+            <span>Dreams {Math.abs(datum.difference)} </span>
+            <span>{Math.abs(datum.difference) === 1 ? "day" : "days"} </span>
+            <i>{datum.difference >= 0 ? "after" : "before"} </i>
+            <span>the news</span>
+          </span>
+        )}
+      </p>
+      <p>Average similarity: {datum.averageSimilarity.toFixed(5)}</p>
+      <p>Dreams have been compared to {datum.recordCount} days of news</p>
+    </div>
+  );
+}
+
 export function ColumnGraph({
   data,
   height,
@@ -39,6 +60,7 @@ export function ColumnGraph({
   // Width of columns
   const columnWidth =
     (width - padding.LEFT - padding.RIGHT) / (data.length > 0 ? data.length : 1);
+  const bubbleRadius = columnWidth * 0.6;
 
   // Midpoint of the graph
   const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
@@ -47,53 +69,42 @@ export function ColumnGraph({
     .domain([0, max])
     .range([0, height - padding.TOP - padding.BOTTOM]);
 
+  const lineData = data.map((d, i) => {
+    return {
+      x: midpoint + d.difference * columnWidth,
+      y: height - colHeightScale(d.averageSimilarity) - padding.BOTTOM,
+      datum: d,
+    };
+  });
+
+  // <polyline points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+  const polyLineString = lineData.reduce((acc, curr) => {
+    return acc + `${curr.x}, ${curr.y} `;
+  }, "");
+
+  const bubbles = lineData.map((d, i) => {
+    return (
+      <circle
+        r={bubbleRadius}
+        cx={d.x}
+        cy={d.y}
+        key={i}
+        fill={barColor}
+        onMouseOver={e => {
+          (handleMouseOver as any)(e, <ColumnTooltip datum={d.datum} />);
+        }}
+        onMouseOut={hideTooltip}
+      />
+    );
+  });
+
   return (
     <svg width={width} height={height}>
-      {/* Columns */}
-      {data.map((d, i) => {
-        const colHeight = colHeightScale(d.averageSimilarity);
-        return (
-          <rect
-            key={i}
-            x={midpoint + d.difference * columnWidth}
-            y={height - colHeight - padding.BOTTOM}
-            fill={barColor}
-            width={columnWidth}
-            height={colHeight}
-            onMouseOver={e => {
-              (handleMouseOver as any)(
-                e,
-                <div>
-                  <p>
-                    {d.difference === 0 ? (
-                      <span>Dreams on same day as news</span>
-                    ) : (
-                      <span>
-                        <span>Dreams {Math.abs(d.difference)} </span>
-                        <span>{Math.abs(d.difference) === 1 ? "day" : "days"} </span>
-                        <i>{d.difference >= 0 ? "after" : "before"} </i>
-                        <span>the news</span>
-                      </span>
-                    )}
-                  </p>
-                  <p>Average similarity: {d.averageSimilarity.toFixed(5)}</p>
-                  <p>Dreams have been compared to {d.recordCount} days of news</p>
-                </div>
-              );
-            }}
-            onMouseOut={hideTooltip}
-          ></rect>
-        );
-      })}
       {/* GRID */}
       <Axes
         height={height}
         width={width}
         padding={padding}
-        // xAxisLabel="Days since news"
-        // yAxisLabel="Similarity"
-        // yScale={d3.scaleLinear().domain([0, 1]).range([height - padding.BOTTOM, padding.TOP])}
-        // xScale={d3.scaleLinear().domain([0, 1]).range([padding.LEFT, width - padding.RIGHT])}
         strokeColor={"hsl(0, 0%, 0%)"}
         opacity={0.9}
         strokeWidth={LINE_WIDTH}
@@ -118,6 +129,13 @@ export function ColumnGraph({
           strokeWidth={1}
         />
       </g>
+      <polyline
+        points={polyLineString}
+        fill="none"
+        stroke={barColor}
+        strokeWidth={LINE_WIDTH}
+      />
+      {bubbles}
     </svg>
   );
 }

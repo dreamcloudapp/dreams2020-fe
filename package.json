@@ -37,7 +37,8 @@
     "eject": "react-scripts eject",
     "bubbledata": "npx ts-node scripts/generateBubbleData.ts",
     "columndata": "npx ts-node scripts/generateColumnData.ts",
-    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateColumnData.ts"
+    "monthcolumns": "npx ts-node scripts/generateMonthColumnData.ts",
+    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateColumnData.ts && npx ts-node scripts/generateMonthColumnData.ts"
   },
   "eslintConfig": {
     "extends": [
