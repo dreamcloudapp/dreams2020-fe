@@ -1,10 +1,14 @@
-import { DifferenceDisplayReccord } from "@kannydennedy/dreams-2020-types";
+import {
+  DifferenceDisplayReccord,
+  DifferenceRecord,
+} from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "react-redux";
 import Axes from "../axes/axes";
 import { selectActiveGranularity } from "../ducks/ui";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import { ChartPolygon } from "./chart-polygon";
+import "../App.css";
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
@@ -25,6 +29,33 @@ const padding: Padding = {
   BOTTOM: 40,
 };
 
+function LineTooltip({ datum }: { datum: DifferenceRecord[] }) {
+  return (
+    <div>
+      {datum.map((d, i) => {
+        return (
+          <>
+            <p>
+              {d.difference === 0 ? (
+                <span>Dreams on same day as news</span>
+              ) : (
+                <span>
+                  <span>Dreams {Math.abs(d.difference)} </span>
+                  <span>{Math.abs(d.difference) === 1 ? "day" : "days"} </span>
+                  <i>{d.difference >= 0 ? "after" : "before"} </i>
+                  <span>the news</span>
+                </span>
+              )}
+            </p>
+            <p>Average similarity: {d.averageSimilarity.toFixed(5)}</p>
+            <p>Dreams have been compared to {d.recordCount} days of news</p>
+          </>
+        );
+      })}
+    </div>
+  );
+}
+
 export function AreaGraph({
   data,
   height,
@@ -41,6 +72,13 @@ export function AreaGraph({
   const colHeightScale = scaleLinear()
     .domain([0, paddedMax])
     .range([0, height - padding.TOP - padding.BOTTOM]);
+
+  // We assume both sets have the same length
+  const dataLength = data.length ? data[0].comparisons.differences.length : 0;
+
+  // Width of columns
+  const invisibleColumnWidth =
+    (width - padding.LEFT - padding.RIGHT) / (dataLength > 0 ? dataLength : 1);
 
   return (
     <svg width={width} height={height}>
@@ -89,9 +127,47 @@ export function AreaGraph({
             padding={padding}
             colHeightScale={colHeightScale}
             barColor={d.color}
+            invisibleColumnWidth={invisibleColumnWidth}
           />
         );
       })}
+      {/* 'Invisible' coluns */}
+      {
+        <g>
+          {[...Array(dataLength)].map((_, i) => {
+            return (
+              <g className="invisible-column" key={i}>
+                <rect
+                  key={i}
+                  x={padding.LEFT + i * invisibleColumnWidth}
+                  y={padding.TOP}
+                  width={invisibleColumnWidth}
+                  height={height - padding.TOP - padding.BOTTOM}
+                  stroke="none"
+                  strokeWidth={0}
+                  onMouseOver={e => {
+                    (handleMouseOver as any)(
+                      e,
+                      <LineTooltip datum={data.map(d => d.comparisons.differences[i])} />
+                    );
+                  }}
+                  onMouseOut={hideTooltip}
+                />
+                {/* Dotted line in middle of rect */}
+                <line
+                  className="moving-line"
+                  x1={padding.LEFT + i * invisibleColumnWidth + invisibleColumnWidth / 2}
+                  y1={padding.TOP}
+                  x2={padding.LEFT + i * invisibleColumnWidth + invisibleColumnWidth / 2}
+                  y2={height - padding.BOTTOM}
+                  strokeWidth={1}
+                  strokeDasharray="2,2"
+                />
+              </g>
+            );
+          })}
+        </g>
+      }
     </svg>
   );
 }

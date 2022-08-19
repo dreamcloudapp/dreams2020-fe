@@ -15,6 +15,7 @@ type ChartPolylineProps = {
   strokeWidth: number;
   midpoint: number;
   colHeightScale: ScaleLinear<number, number>;
+  invisibleColumnWidth: number;
 };
 
 // function LineTooltip({ datum }: { datum: DifferenceRecord }) {
@@ -49,11 +50,10 @@ export function ChartPolygon({
   strokeWidth,
   midpoint,
   colHeightScale,
+  invisibleColumnWidth,
 }: ChartPolylineProps) {
   // Width of columns
-  const columnWidth =
-    (width - padding.LEFT - padding.RIGHT) / (data.length > 0 ? data.length : 1);
-  // const bubbleRadius = columnWidth * 0.6;
+  const columnWidth = invisibleColumnWidth;
 
   const lineData = data.map((d, i) => {
     return {

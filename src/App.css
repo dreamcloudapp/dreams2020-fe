@@ -31,3 +31,19 @@ button.selected {
   padding: 0 20px;
   z-index: 1;
 }
+
+.invisible-column {
+  fill: transparent;
+}
+
+.moving-line {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 1px;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.invisible-column:hover line {
+  stroke: #333;
+}
