@@ -1808,7 +1808,7 @@
     },
     {
       "key": "Control",
-      "color": "hsl(24, 84%, 56%)",
+      "color": "hsl(220, 90%, 60%)",
       "comparisons": {
         "differences": [
           {

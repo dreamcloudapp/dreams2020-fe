@@ -13,20 +13,6 @@ type GraphProps = {
   data: DifferenceByGranularity;
 };
 
-export type FakeComparison = {
-  x: number;
-  y: number;
-  concepts: string[];
-  startRadius: number;
-  color: string;
-};
-
-// const timeLabels: { key: Granularity; label: string }[] = [
-//   { key: "month", label: "Months" },
-//   { key: "week", label: "Weeks" },
-//   { key: "day", label: "Days" },
-// ];
-
 function ColumnGraphContainer({ data }: GraphProps) {
   // const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
@@ -66,22 +52,22 @@ function ColumnGraphContainer({ data }: GraphProps) {
           ref={containerRef}
         >
           {width > 0 && height > 0 && (
-            <>
-              {columnDataSets.map((d, i) => {
-                return (
-                  <ColumnGraph
-                    key={i}
-                    data={d.comparisons.differences}
-                    max={d.comparisons.maxAverageSimilarity}
-                    width={width}
-                    height={height}
-                    hideTooltip={hideTooltip}
-                    handleMouseOver={handleMouseOver}
-                    barColor={d.color}
-                  />
-                );
-              })}
-            </>
+            // <>
+            //   {columnDataSets.map((d, i) => {
+            //     return (
+            <ColumnGraph
+              // key={i}
+              data={columnDataSets}
+              // max={d.comparisons.maxAverageSimilarity}
+              width={width}
+              height={height}
+              hideTooltip={hideTooltip}
+              handleMouseOver={handleMouseOver}
+              // barColor={d.color}
+            />
+            //     );
+            //   })}
+            // </>
           )}
         </div>
       </div>

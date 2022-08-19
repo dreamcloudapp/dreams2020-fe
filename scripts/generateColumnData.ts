@@ -165,7 +165,7 @@ const data: DifferenceByGranularity = {
     },
     {
       key: "Control",
-      color: ColorTheme.RED,
+      color: ColorTheme.BLUE,
       comparisons: {
         differences: dayDifferencesControl.differences,
         maxSimilarity: allData[CONTROL_SET].maxSimilarity,
