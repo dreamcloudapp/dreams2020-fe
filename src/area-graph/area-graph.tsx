@@ -4,7 +4,7 @@ import Axes from "../axes/axes";
 import { selectActiveGranularity } from "../ducks/ui";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
-import { ChartPolyline } from "./chart-polyline";
+import { ChartPolygon } from "./chart-polygon";
 
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
@@ -24,14 +24,16 @@ const padding: Padding = {
   BOTTOM: 40,
 };
 
-export function ColumnGraph({
+export function AreaGraph({
   data,
   height,
   width,
   hideTooltip,
   handleMouseOver,
 }: ColumnGraphProps) {
-  const max = Math.max(...data.map(d => d.comparisons.maxAverageSimilarity));
+  // Pad the max a little so the lines aren't always at the top of the chart
+  const realMax = Math.max(...data.map(d => d.comparisons.maxAverageSimilarity));
+  const paddedMax = realMax * 1.3;
 
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -39,7 +41,7 @@ export function ColumnGraph({
   const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
 
   const colHeightScale = scaleLinear()
-    .domain([0, max])
+    .domain([0, paddedMax])
     .range([0, height - padding.TOP - padding.BOTTOM]);
 
   return (
@@ -76,8 +78,8 @@ export function ColumnGraph({
       </g>
       {data.map((d, i) => {
         return (
-          <ChartPolyline
-            max={max}
+          <ChartPolygon
+            max={paddedMax}
             width={width}
             height={height}
             data={d.comparisons.differences}

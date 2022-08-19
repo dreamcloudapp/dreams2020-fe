@@ -6,7 +6,7 @@ import { DifferenceByGranularity } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
 import { selectActiveGranularity } from "../ducks/ui";
 // import { useDispatch } from "react-redux";
-import { ColumnGraph } from "./column-graph";
+import { AreaGraph } from "./area-graph";
 import { localPoint } from "@visx/event";
 
 type GraphProps = {
@@ -55,7 +55,7 @@ function ColumnGraphContainer({ data }: GraphProps) {
             // <>
             //   {columnDataSets.map((d, i) => {
             //     return (
-            <ColumnGraph
+            <AreaGraph
               // key={i}
               data={columnDataSets}
               // max={d.comparisons.maxAverageSimilarity}

@@ -121,7 +121,7 @@ function GraphContainer({ data }: GraphProps) {
       </div>
       {/* Legend */}
       <Legend
-        data={data}
+        options={data.comparisonSets.map(s => ({ label: s.label, color: s.color }))}
         handleCheck={handleOnChange}
         checkedCollections={checkedCollections}
       />
