@@ -1,7 +1,7 @@
 {
   "day": [
     {
-      "key": "2020",
+      "key": "2020 Dreams vs 2020 News Items",
       "color": "hsl(24, 84%, 56%)",
       "comparisons": {
         "differences": [
@@ -1807,7 +1807,7 @@
       }
     },
     {
-      "key": "Control",
+      "key": "Pre-2020 Dreams vs 2020 News Items",
       "color": "hsl(220, 90%, 60%)",
       "comparisons": {
         "differences": [
@@ -3625,7 +3625,7 @@
   ],
   "week": [
     {
-      "key": "2020",
+      "key": "2020 Dreams vs 2020 News Items",
       "color": "hsl(24, 84%, 56%)",
       "comparisons": {
         "differences": [],

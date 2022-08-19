@@ -13,6 +13,7 @@ type ColumnGraphProps = {
   data: DifferenceDisplayReccord[];
   width: number;
   height: number;
+  paddedMax: number;
   hideTooltip: () => void;
   handleMouseOver: (event: any, datum: any) => void;
 };
@@ -30,11 +31,8 @@ export function AreaGraph({
   width,
   hideTooltip,
   handleMouseOver,
+  paddedMax,
 }: ColumnGraphProps) {
-  // Pad the max a little so the lines aren't always at the top of the chart
-  const realMax = Math.max(...data.map(d => d.comparisons.maxAverageSimilarity));
-  const paddedMax = realMax * 1.3;
-
   const activeGranularity = useSelector(selectActiveGranularity);
 
   // Midpoint of the graph
@@ -76,9 +74,10 @@ export function AreaGraph({
           strokeWidth={1}
         />
       </g>
-      {data.map((d, i) => {
+      {data.map(d => {
         return (
           <ChartPolygon
+            key={d.key}
             max={paddedMax}
             width={width}
             height={height}

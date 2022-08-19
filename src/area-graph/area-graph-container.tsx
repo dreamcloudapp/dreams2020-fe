@@ -1,23 +1,45 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useComponentSize from "@rehooks/component-size";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 // import { Granularity } from "../../types/type";
 import { DifferenceByGranularity } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
-import { selectActiveGranularity } from "../ducks/ui";
+import {
+  CollectionCheck,
+  selectActiveGranularity,
+  selectCheckedCollections,
+  setCheckedCollections,
+  toggleCollectionChecked,
+} from "../ducks/ui";
 // import { useDispatch } from "react-redux";
 import { AreaGraph } from "./area-graph";
 import { localPoint } from "@visx/event";
+import Legend from "../graph/legend";
+import { useDispatch } from "react-redux";
 
 type GraphProps = {
   data: DifferenceByGranularity;
 };
 
 function ColumnGraphContainer({ data }: GraphProps) {
+  const dispatch = useDispatch();
   // const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
-
+  const checkedCollections = useSelector(selectCheckedCollections);
   const columnDataSets = data[activeGranularity];
+
+  // Set checked collections on mount
+  useEffect(() => {
+    const checkedCollections: CollectionCheck[] = columnDataSets.map(s => ({
+      label: s.key,
+      checked: true,
+    }));
+    dispatch(setCheckedCollections(checkedCollections));
+  }, [dispatch, columnDataSets]);
+
+  const handleOnChange = (labelToToggle: string) => {
+    dispatch(toggleCollectionChecked(labelToToggle));
+  };
 
   const chartContainerRef = useRef<HTMLDivElement>(null);
   let { width, height } = useComponentSize(chartContainerRef);
@@ -36,13 +58,18 @@ function ColumnGraphContainer({ data }: GraphProps) {
 
   const handleMouseOver = (event: any, datum: any) => {
     const coords = localPoint(event.target.ownerSVGElement, event);
-
     showTooltip({
       tooltipLeft: coords?.x,
       tooltipTop: coords?.y,
       tooltipData: datum,
     });
   };
+
+  // Pad the max a little so the lines aren't always at the top of the chart
+  const realMax = Math.max(
+    ...columnDataSets.map(d => d.comparisons.maxAverageSimilarity)
+  );
+  const paddedMax = realMax * 1.3;
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
@@ -52,25 +79,25 @@ function ColumnGraphContainer({ data }: GraphProps) {
           ref={containerRef}
         >
           {width > 0 && height > 0 && (
-            // <>
-            //   {columnDataSets.map((d, i) => {
-            //     return (
             <AreaGraph
-              // key={i}
-              data={columnDataSets}
-              // max={d.comparisons.maxAverageSimilarity}
+              data={columnDataSets.filter(
+                d => checkedCollections.find(c => c.label === d.key)?.checked
+              )}
               width={width}
               height={height}
               hideTooltip={hideTooltip}
               handleMouseOver={handleMouseOver}
-              // barColor={d.color}
+              paddedMax={paddedMax}
             />
-            //     );
-            //   })}
-            // </>
           )}
         </div>
       </div>
+      {/* Legend */}
+      <Legend
+        options={columnDataSets.map(s => ({ label: s.key, color: s.color }))}
+        handleCheck={handleOnChange}
+        checkedCollections={checkedCollections}
+      />
 
       {tooltipOpen && (
         <TooltipInPortal

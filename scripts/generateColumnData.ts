@@ -9,7 +9,13 @@ import {
   DifferenceRecord,
   DifferenceByGranularity,
 } from "@kannydennedy/dreams-2020-types";
-import { CONTROL_SET, SET2020, SRC_FOLDER } from "./config";
+import {
+  CONTROL_SET,
+  SET2020,
+  SET_2020_NAME,
+  SRC_FOLDER,
+  CONTROL_SET_NAME,
+} from "./config";
 import { ColorTheme } from "./modules/theme";
 
 const YEAR = 2020;
@@ -154,7 +160,7 @@ console.log(maxAverageSimilarity2020);
 const data: DifferenceByGranularity = {
   day: [
     {
-      key: "2020",
+      key: SET_2020_NAME,
       color: ColorTheme.RED,
       comparisons: {
         differences: dayDifferences2020.differences,
@@ -164,7 +170,7 @@ const data: DifferenceByGranularity = {
       },
     },
     {
-      key: "Control",
+      key: CONTROL_SET_NAME,
       color: ColorTheme.BLUE,
       comparisons: {
         differences: dayDifferencesControl.differences,
@@ -176,7 +182,7 @@ const data: DifferenceByGranularity = {
   ],
   week: [
     {
-      key: "2020",
+      key: SET_2020_NAME,
       color: ColorTheme.RED,
       comparisons: {
         differences: [],
