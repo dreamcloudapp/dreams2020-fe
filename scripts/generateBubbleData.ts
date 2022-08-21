@@ -20,9 +20,15 @@ import {
 import { ColorTheme } from "./modules/theme";
 import { monthIndexFromDate, weekIndexFromDate } from "./modules/time-helpers";
 import { convertNewsRecordToDayComparisonSet } from "./modules/type-conversions";
-const { isDotFile } = require("./modules/file-felpers");
+const { isDotFile } = require("./modules/file-helpers");
 const { getBroaderGranularity } = require("./modules/get-broader-granularity");
 
+// Each of the input data files (from Sheldon) has a field 'dreamSetName'
+// This field indicates the CSV file that the data came from
+// From the name of this file, we determine the 'year' of the dreams
+// Since the year isn't in the file.
+// We've decided that the exact year isn't important for the control set
+// So we put it all together in 2019
 const fileYearMap: { [key: string]: number } = {
   [SET2020]: 2020,
   [CONTROL_SET]: 2019,
@@ -33,13 +39,17 @@ const fileYearMap: { [key: string]: number } = {
 ////////////////////////////////////////////////////
 
 // We need to decide what the 'coloured collections' will be
-// We decide this based on date ranges
+// E.g. Dreams 2020 and Control Set
+// We will decide the members of these collections (comparisons) based on date ranges
 export type CollectionKey = "dreams2020" | "controlSet";
 export type CollectionFinder = {
   key: CollectionKey;
   range: DateTimeRange;
   label: string;
   color: string;
+};
+type ComparisonDictionary = {
+  [key in CollectionKey]: ComparisonSet[];
 };
 export const colouredCollections: { [key in CollectionKey]: CollectionFinder } = {
   dreams2020: {
@@ -57,58 +67,6 @@ export const colouredCollections: { [key in CollectionKey]: CollectionFinder } =
 };
 
 ////////////////////////////////////////////////////
-// HELPER FUNCTIONS
-////////////////////////////////////////////////////
-
-// Return the coloured collection key for a given date
-const getColouredCollectionKey = (
-  date: Date,
-  collections: CollectionFinder[]
-): CollectionKey | null => {
-  const dateTime = date.getTime();
-  const found = collections.find(collection => {
-    const { from, to } = collection.range;
-    return dateTime >= from.getTime() && dateTime <= to.getTime();
-  });
-
-  return found ? found.key : null;
-};
-
-type ComparisonDictionary = {
-  [key in CollectionKey]: ComparisonSet[];
-};
-
-// Merge two comparison dictionaries
-const mergeComparisonDictionaries = (
-  dict1: ComparisonDictionary,
-  dict2: ComparisonDictionary
-): ComparisonDictionary => {
-  // If one of the dictionaries is empty (it's just been cast to ComparisonDictionary in a reducer)
-  // Then return the other one
-
-  if (!Object.keys(dict1) || !Object.keys(dict1).length) return dict2;
-  if (!Object.keys(dict2) || !Object.keys(dict2).length) return dict1;
-
-  // Else, merge
-  const keys: CollectionKey[] = Object.keys(dict1) as CollectionKey[];
-
-  // if (Math.random() > 0.99) {
-  //   console.log(dict1, dict2);
-  // }
-
-  const ret = keys.reduce((acc, curr) => {
-    return {
-      ...acc,
-      [curr]: [...dict1[curr], ...dict2[curr]],
-    };
-  }, {} as ComparisonDictionary);
-
-  // console.log("merged", ret);
-
-  return ret;
-};
-
-////////////////////////////////////////////////////
 // MAIN
 ////////////////////////////////////////////////////
 
@@ -120,7 +78,7 @@ let minWordCount = VERY_LARGE_NUMBER;
 const colouredCollectionRanges = Object.values(colouredCollections);
 
 // Open all the files in "../source-data" one by one
-// and combine them in memory
+// and then combine them in memory
 const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));
 
 const dataArr: ComparisonDictionary[] = files
@@ -136,15 +94,14 @@ const dataArr: ComparisonDictionary[] = files
 
     // Get the dream date from the file
     // The year isn't included in the file, only the month and day
-    // We have to infer the year from the dreamSetName, and
-    // We just give an arbitrary year to pre-2020 dreams
+    // We have to infer the year from the dreamSetName
     const dreamYear: number = fileYearMap[parsedFileData.dreamSetName];
     if (!dreamYear) throw new Error("No year found for file");
     const dreamDate = new Date(`${dreamYear}-${parsedFileData.dreamSetDate}`);
     if (isNaN(dreamDate.getTime())) throw new Error("Invalid date");
 
     // ComparisonSet is all the comparisons within a given "coloured set" in a granularity
-    // In this case, we're making 'day comparisons'
+    // At this point, we're making 'day comparisons'
     // i.e. One day of dreams compared to one day of news
     const comparisonSets: ComparisonSet[] = parsedFileData.newsRecords.map(newsRecord => {
       const ret = convertNewsRecordToDayComparisonSet(
@@ -157,9 +114,8 @@ const dataArr: ComparisonDictionary[] = files
       return ret;
     });
 
-    // Update max/min similarity
+    // Not pretty, but let's update the max and min similarity/wordcount here
     comparisonSets.forEach(set => {
-      // Not pretty, but let's update the max and min similarity/wordcount here
       if (set.score > maxSimilarity) maxSimilarity = set.score;
       if (set.score < minSimilarity) minSimilarity = set.score;
       if (set.wordCount > maxWordCount) maxWordCount = set.wordCount;
@@ -171,7 +127,7 @@ const dataArr: ComparisonDictionary[] = files
     const comparisonDictionary: ComparisonDictionary = comparisonSets.reduce(
       (acc, set) => {
         const key = getColouredCollectionKey(
-          set.newsCollection.timePeriod.start,
+          set.dreamCollection.timePeriod.start,
           colouredCollectionRanges
         );
         if (!key) throw new Error("No key found for set");
@@ -184,7 +140,6 @@ const dataArr: ComparisonDictionary[] = files
       },
       {} as ComparisonDictionary
     );
-
     return comparisonDictionary;
   });
 
@@ -195,8 +150,9 @@ const data: ComparisonDictionary = dataArr.reduce(
 );
 
 // Turn comparison dictionary into array
+// Also include the label and color
 const dayComparisonDictionaries: ColoredSetWithinGranularity[] = Object.entries(data).map(
-  ([key, value], i) => {
+  ([key, value]) => {
     return {
       label: colouredCollections[key as CollectionKey].label,
       color: colouredCollections[key as CollectionKey].color,
@@ -205,15 +161,15 @@ const dayComparisonDictionaries: ColoredSetWithinGranularity[] = Object.entries(
   }
 );
 
+// We have a set of comparisons by day
+// We want to turn this into a set of comparisons by week
+// and a set of comparisons by month
 const weekComparisonsCollection = getBroaderGranularity(
   "week",
   weekIndexFromDate,
   dayComparisonDictionaries,
   NUM_EXAMPLES_PER_COMPARISON
 );
-
-console.log(weekComparisonsCollection.comparisonSets.length, "comparisons");
-
 const monthComparisonsCollection = getBroaderGranularity(
   "month",
   monthIndexFromDate,
@@ -221,18 +177,51 @@ const monthComparisonsCollection = getBroaderGranularity(
   NUM_EXAMPLES_PER_COMPARISON
 );
 
-// Now write all the week data to a big new file
+// Write all the week data to file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/weekComparisons.json"),
   JSON.stringify(weekComparisonsCollection, null, 2),
   "utf8"
 );
 
-// Now write all the month data to a big new file
+// Write all the month data to file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/monthComparisons.json"),
   JSON.stringify(monthComparisonsCollection, null, 2),
   "utf8"
 );
+
+////////////////////////////////////////////////////
+// HELPER FUNCTIONS
+////////////////////////////////////////////////////
+
+// Given a date, return the collection it belongs to
+function getColouredCollectionKey(
+  date: Date,
+  collections: CollectionFinder[]
+): CollectionKey | null {
+  const dateTime = date.getTime();
+  const found = collections.find(collection => {
+    const { from, to } = collection.range;
+    return dateTime >= from.getTime() && dateTime <= to.getTime();
+  });
+  return found ? found.key : null;
+}
+
+// Merge two comparison dictionaries
+function mergeComparisonDictionaries(
+  dict1: ComparisonDictionary,
+  dict2: ComparisonDictionary
+): ComparisonDictionary {
+  const dict12020 = dict1.dreams2020 || [];
+  const dict1ControlSet = dict1.controlSet || [];
+  const dict22020 = dict2.dreams2020 || [];
+  const dict2ControlSet = dict2.controlSet || [];
+
+  return {
+    dreams2020: [...dict12020, ...dict22020],
+    controlSet: [...dict1ControlSet, ...dict2ControlSet],
+  };
+}
 
 export {};

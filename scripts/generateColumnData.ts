@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { isDotPath } = require("./modules/file-felpers");
+const { isDotPath } = require("./modules/file-helpers");
 const { getDifferenceInDays } = require("./modules/time-helpers");
 import {
   DifferenceDictionary,

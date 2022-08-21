@@ -150,7 +150,7 @@ export const getBroaderGranularity = (
 
         return {
           ...comp,
-          concepts: consolidateWikipediaConceptList(comp.concepts),
+          concepts: consolidateWikipediaConceptList(comp.concepts, 5),
           examples: consolidateExampleList(comp.examples, numExamplesPerComparison),
         };
       });

@@ -17,8 +17,9 @@ const shortMonths = [
 ];
 
 // Get the difference between two dates in days
-// If date1 is after date2, return a positive number
-// If date1 is before date2, return a negative number
+// If the second date is after the first, the result is positive
+// If the second date is before the first, the result is negative
+// If the second date is the same as the first, the result is 0
 export function getDifferenceInDays(date1: Date, date2: Date): number {
   const difference = date2.getTime() - date1.getTime();
   return Math.floor(difference / MILLISECONDS_IN_DAY);
@@ -29,7 +30,7 @@ export const monthNameFromIndex = (index: number): string => {
   if (shortMonths[index]) {
     return shortMonths[index];
   } else {
-    return "Invalid month index";
+    throw new Error("Invalid month index");
   }
 };
 
