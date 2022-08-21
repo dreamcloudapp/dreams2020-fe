@@ -63,8 +63,12 @@ export const getBroaderGranularity = (
         dict.comparisons.reduce((acc, comparison, i) => {
           // Get the index from the date & the granularity
           // E.g. if the granularity is week and the date is Jan 8, then the index is 1.
-          const dreamTimeIndex = indexFromDateFn(comparison.collection1.timePeriod.start);
-          const newsTimeIndex = indexFromDateFn(comparison.collection2.timePeriod.start);
+          const dreamTimeIndex = indexFromDateFn(
+            comparison.dreamCollection.timePeriod.start
+          );
+          const newsTimeIndex = indexFromDateFn(
+            comparison.newsCollection.timePeriod.start
+          );
           const key = `${granularity}-${dreamTimeIndex}-${newsTimeIndex}`;
 
           if (!acc[key]) {
@@ -74,7 +78,7 @@ export const getBroaderGranularity = (
               granularity: granularity,
               label: generateTooltipLabel(dreamTimeIndex, newsTimeIndex, granularity),
 
-              collection1: {
+              dreamCollection: {
                 label: "Dreams",
                 timePeriod: {
                   granularity: granularity,
@@ -84,7 +88,7 @@ export const getBroaderGranularity = (
                   end: new Date(), // TODO
                 },
               },
-              collection2: {
+              newsCollection: {
                 label: "News",
                 timePeriod: {
                   granularity: granularity,
@@ -132,7 +136,7 @@ export const getBroaderGranularity = (
       // Now, we filter out anything that's too far apart
       const filteredComparisons = longComparisons.filter(comp => {
         const absDistance = Math.abs(
-          comp.collection1.timePeriod.index - comp.collection2.timePeriod.index
+          comp.dreamCollection.timePeriod.index - comp.newsCollection.timePeriod.index
         );
         return !(absDistance > MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity]);
       });

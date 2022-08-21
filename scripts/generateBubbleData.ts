@@ -3,25 +3,29 @@ const path = require("path");
 import {
   DateTimeRange,
   ComparisonSet,
-  // GranularityComparisonCollection,
   ColoredSetWithinGranularity,
   DayRecord,
 } from "@kannydennedy/dreams-2020-types";
+import {
+  CONTROL_SET_NAME,
+  NEWS_YEAR,
+  NUM_CONCEPTS_PER_COMPARISON,
+  NUM_EXAMPLES_PER_COMPARISON,
+  SET2020,
+  SET_2020_NAME,
+  SRC_FOLDER,
+  VERY_LARGE_NUMBER,
+  CONTROL_SET,
+} from "./config";
 import { ColorTheme } from "./modules/theme";
 import { monthIndexFromDate, weekIndexFromDate } from "./modules/time-helpers";
-import { convertNewsRecordToComparisonSet } from "./modules/type-conversions";
-const { isDotPath } = require("./modules/file-felpers");
+import { convertNewsRecordToDayComparisonSet } from "./modules/type-conversions";
+const { isDotFile } = require("./modules/file-felpers");
 const { getBroaderGranularity } = require("./modules/get-broader-granularity");
 
-const NUM_CONCEPTS_PER_COMPARISON = 5;
-const NUM_EXAMPLES_PER_COMPARISON = 100;
-const VERY_LARGE_NUMBER = 999 * 999 * 999;
-const SRC_FOLDER = "../source-data-all";
-const NEWS_YEAR = 2020;
-
 const fileYearMap: { [key: string]: number } = {
-  "./all-dreams-final-2020.csv": 2020,
-  "./all-dreams-control.csv": 2019,
+  [SET2020]: 2020,
+  [CONTROL_SET]: 2019,
 };
 
 ////////////////////////////////////////////////////
@@ -40,13 +44,13 @@ export type CollectionFinder = {
 export const colouredCollections: { [key in CollectionKey]: CollectionFinder } = {
   dreams2020: {
     key: "dreams2020",
-    label: "2020 Dreams vs 2020 News Items",
+    label: SET_2020_NAME,
     color: ColorTheme.RED,
     range: { from: new Date("2020-01-01"), to: new Date("2020-12-31") },
   },
   controlSet: {
     key: "controlSet",
-    label: "Non-2020 Dreams vs 2020 News Items",
+    label: CONTROL_SET_NAME,
     color: ColorTheme.BLUE,
     range: { from: new Date("2000-01-01"), to: new Date("2019-12-31") },
   },
@@ -81,27 +85,32 @@ const mergeComparisonDictionaries = (
 ): ComparisonDictionary => {
   // If one of the dictionaries is empty (it's just been cast to ComparisonDictionary in a reducer)
   // Then return the other one
-  if (!Object.keys(dict1).length) return dict2;
-  if (!Object.keys(dict2).length) return dict1;
+
+  if (!Object.keys(dict1) || !Object.keys(dict1).length) return dict2;
+  if (!Object.keys(dict2) || !Object.keys(dict2).length) return dict1;
 
   // Else, merge
   const keys: CollectionKey[] = Object.keys(dict1) as CollectionKey[];
+
+  // if (Math.random() > 0.99) {
+  //   console.log(dict1, dict2);
+  // }
+
   const ret = keys.reduce((acc, curr) => {
     return {
       ...acc,
       [curr]: [...dict1[curr], ...dict2[curr]],
     };
   }, {} as ComparisonDictionary);
+
+  // console.log("merged", ret);
+
   return ret;
 };
 
 ////////////////////////////////////////////////////
 // MAIN
 ////////////////////////////////////////////////////
-
-// Open all the files in "../source-data" one by one
-// and combine them in memory
-const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));
 
 let maxSimilarity = 0;
 let minSimilarity = 1;
@@ -110,61 +119,78 @@ let minWordCount = VERY_LARGE_NUMBER;
 
 const colouredCollectionRanges = Object.values(colouredCollections);
 
-const data: ComparisonDictionary = files.reduce(
-  (dataAcc: ComparisonDictionary, file: any) => {
+// Open all the files in "../source-data" one by one
+// and combine them in memory
+const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));
+
+const dataArr: ComparisonDictionary[] = files
+  .filter((file: any) => !isDotFile(file))
+  .map((file: any) => {
     // Read the file
     const filePath = path.join(__dirname, SRC_FOLDER, file);
     const fileData = fs.readFileSync(filePath, "utf8");
 
-    if (isDotPath(filePath)) {
-      return dataAcc;
-    } else {
-      const parsedFileData: DayRecord = JSON.parse(fileData);
+    // Each file represents a day of dreams,
+    // Compared to multiple days of news
+    const parsedFileData: DayRecord = JSON.parse(fileData);
 
-      // Get the dream date from the file
-      const dreamYear: number = fileYearMap[parsedFileData.dreamSetName] || 2000;
-      const dreamDate = new Date(`${dreamYear}-${parsedFileData.dreamSetDate}`);
+    // Get the dream date from the file
+    // The year isn't included in the file, only the month and day
+    // We have to infer the year from the dreamSetName, and
+    // We just give an arbitrary year to pre-2020 dreams
+    const dreamYear: number = fileYearMap[parsedFileData.dreamSetName];
+    if (!dreamYear) throw new Error("No year found for file");
+    const dreamDate = new Date(`${dreamYear}-${parsedFileData.dreamSetDate}`);
+    if (isNaN(dreamDate.getTime())) throw new Error("Invalid date");
 
-      const comparisonSets: ComparisonSet[] = parsedFileData.newsRecords.map(s => {
-        return convertNewsRecordToComparisonSet(
-          s,
-          dreamDate,
-          NEWS_YEAR,
-          NUM_CONCEPTS_PER_COMPARISON,
-          NUM_EXAMPLES_PER_COMPARISON
-        );
-      });
-
-      // Add the comparison sets to the dictionary
-      // For a given file, the records may belong to different "coloured collections"
-      const comparisonDictionary: ComparisonDictionary = comparisonSets.reduce(
-        (acc, set) => {
-          // Not pretty, but let's update the max and min similarity/wordcount here
-          if (set.score > maxSimilarity) maxSimilarity = set.score;
-          if (set.score < minSimilarity) minSimilarity = set.score;
-          if (set.wordCount > maxWordCount) maxWordCount = set.wordCount;
-          if (set.wordCount < minWordCount) minWordCount = set.wordCount;
-
-          const key = getColouredCollectionKey(
-            set.collection2.timePeriod.start,
-            colouredCollectionRanges
-          );
-          if (!key) {
-            return acc;
-          } else if (!acc[key]) {
-            return { ...acc, [key]: [set] };
-          } else {
-            return { ...acc, [key]: [...acc[key], set] };
-          }
-        },
-        {} as ComparisonDictionary
+    // ComparisonSet is all the comparisons within a given "coloured set" in a granularity
+    // In this case, we're making 'day comparisons'
+    // i.e. One day of dreams compared to one day of news
+    const comparisonSets: ComparisonSet[] = parsedFileData.newsRecords.map(newsRecord => {
+      const ret = convertNewsRecordToDayComparisonSet(
+        newsRecord,
+        dreamDate,
+        NEWS_YEAR,
+        NUM_CONCEPTS_PER_COMPARISON,
+        NUM_EXAMPLES_PER_COMPARISON
       );
+      return ret;
+    });
 
-      const mergedData = mergeComparisonDictionaries(dataAcc, comparisonDictionary);
+    // Update max/min similarity
+    comparisonSets.forEach(set => {
+      // Not pretty, but let's update the max and min similarity/wordcount here
+      if (set.score > maxSimilarity) maxSimilarity = set.score;
+      if (set.score < minSimilarity) minSimilarity = set.score;
+      if (set.wordCount > maxWordCount) maxWordCount = set.wordCount;
+      if (set.wordCount < minWordCount) minWordCount = set.wordCount;
+    });
 
-      return mergedData;
-    }
-  },
+    // Add the comparison sets to the dictionary
+    // For a given file, the records may belong to different "coloured collections"
+    const comparisonDictionary: ComparisonDictionary = comparisonSets.reduce(
+      (acc, set) => {
+        const key = getColouredCollectionKey(
+          set.newsCollection.timePeriod.start,
+          colouredCollectionRanges
+        );
+        if (!key) throw new Error("No key found for set");
+
+        if (!acc[key]) {
+          return { ...acc, [key]: [set] };
+        } else {
+          return { ...acc, [key]: [...acc[key], set] };
+        }
+      },
+      {} as ComparisonDictionary
+    );
+
+    return comparisonDictionary;
+  });
+
+// Merge the data arrays
+const data: ComparisonDictionary = dataArr.reduce(
+  mergeComparisonDictionaries,
   {} as ComparisonDictionary
 );
 
@@ -179,22 +205,14 @@ const dayComparisonDictionaries: ColoredSetWithinGranularity[] = Object.entries(
   }
 );
 
-// // Convert our dictionary to a big fat GranularityComparisonCollection
-// const dayComparisonsCollection: GranularityComparisonCollection = {
-//   granularity: "day",
-//   maxSimilarity: maxSimilarity,
-//   minSimilarity: minSimilarity,
-//   maxWordCount: maxWordCount,
-//   minWordCount: minWordCount,
-//   comparisonSets: dayComparisonDictionaries,
-// };
-
 const weekComparisonsCollection = getBroaderGranularity(
   "week",
   weekIndexFromDate,
   dayComparisonDictionaries,
   NUM_EXAMPLES_PER_COMPARISON
 );
+
+console.log(weekComparisonsCollection.comparisonSets.length, "comparisons");
 
 const monthComparisonsCollection = getBroaderGranularity(
   "month",

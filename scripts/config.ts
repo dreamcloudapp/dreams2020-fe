@@ -7,3 +7,8 @@ export const CONTROL_SET = "./all-dreams-control.csv";
 
 export const SET_2020_NAME = "2020 Dreams vs 2020 News Items";
 export const CONTROL_SET_NAME = "Pre-2020 Dreams vs 2020 News Items";
+
+export const NUM_CONCEPTS_PER_COMPARISON = 5;
+export const NUM_EXAMPLES_PER_COMPARISON = 100;
+export const VERY_LARGE_NUMBER = 999 * 999 * 999;
+export const NEWS_YEAR = 2020;

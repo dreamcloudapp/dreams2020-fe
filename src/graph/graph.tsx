@@ -101,10 +101,10 @@ function Graph({
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
         return comparisonSet.comparisons.map((comparison, i) => {
-          const { collection1, collection2, score, wordCount } = comparison;
+          const { dreamCollection, newsCollection, score, wordCount } = comparison;
 
-          const index1 = collection1.timePeriod.index;
-          const index2 = collection2.timePeriod.index;
+          const index1 = dreamCollection.timePeriod.index;
+          const index2 = newsCollection.timePeriod.index;
 
           const startPoint: [number, number] = [width / 2, height / 2];
           const endX = scaleX(score);
