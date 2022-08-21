@@ -29,26 +29,37 @@ const padding: Padding = {
   BOTTOM: 40,
 };
 
-function LineTooltip({ datum }: { datum: DifferenceRecord[] }) {
+type ColouredDayDifference = {
+  color: string;
+  label: string;
+  datum: DifferenceRecord;
+};
+
+function LineTooltip({ data }: { data: ColouredDayDifference[] }) {
+  // We assume that all sets of data have the same length
+  const sampleData = data[0].datum;
+
   return (
     <div>
-      {datum.map((d, i) => {
+      <h4 style={{ fontWeight: "bold", textDecoration: "underline" }}>
+        {sampleData.difference === 0 ? (
+          <span>Dreams on same day as news</span>
+        ) : (
+          <span>
+            <span>Dreams {Math.abs(sampleData.difference)} </span>
+            <span>{Math.abs(sampleData.difference) === 1 ? "day" : "days"} </span>
+            <i>{sampleData.difference >= 0 ? "after" : "before"} </i>
+            <span>the news</span>
+          </span>
+        )}
+      </h4>
+      {data.map((d, i) => {
+        const { datum, label, color } = d;
         return (
           <>
-            <p>
-              {d.difference === 0 ? (
-                <span>Dreams on same day as news</span>
-              ) : (
-                <span>
-                  <span>Dreams {Math.abs(d.difference)} </span>
-                  <span>{Math.abs(d.difference) === 1 ? "day" : "days"} </span>
-                  <i>{d.difference >= 0 ? "after" : "before"} </i>
-                  <span>the news</span>
-                </span>
-              )}
-            </p>
-            <p>Average similarity: {d.averageSimilarity.toFixed(5)}</p>
-            <p>Dreams have been compared to {d.recordCount} days of news</p>
+            <p style={{ color: color }}>{label}</p>
+            <p>Average similarity: {datum.averageSimilarity.toFixed(5)}</p>
+            {/* <p>Dreams have been compared to {datum.recordCount} days of news</p> */}
           </>
         );
       })}
@@ -131,7 +142,7 @@ export function AreaGraph({
           />
         );
       })}
-      {/* 'Invisible' coluns */}
+      {/* 'Invisible' columns */}
       {
         <g>
           {[...Array(dataLength)].map((_, i) => {
@@ -148,7 +159,15 @@ export function AreaGraph({
                   onMouseOver={e => {
                     (handleMouseOver as any)(
                       e,
-                      <LineTooltip datum={data.map(d => d.comparisons.differences[i])} />
+                      <LineTooltip
+                        data={data.map(d => {
+                          return {
+                            datum: d.comparisons.differences[i],
+                            label: d.key,
+                            color: d.color,
+                          };
+                        })}
+                      />
                     );
                   }}
                   onMouseOut={hideTooltip}

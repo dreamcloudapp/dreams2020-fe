@@ -1812,11 +1812,6 @@
       "comparisons": {
         "differences": [
           {
-            "difference": -180,
-            "averageSimilarity": 0.01479894332372882,
-            "recordCount": 59
-          },
-          {
             "difference": -179,
             "averageSimilarity": 0.016596279083870975,
             "recordCount": 186
@@ -3610,11 +3605,6 @@
             "difference": 179,
             "averageSimilarity": 0.017209021207526872,
             "recordCount": 186
-          },
-          {
-            "difference": 180,
-            "averageSimilarity": 0.01494862634067797,
-            "recordCount": 59
           }
         ],
         "maxSimilarity": 0.14251365,

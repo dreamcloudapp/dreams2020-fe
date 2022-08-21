@@ -24,7 +24,9 @@ const YEAR = 2020;
 // HELPER FUNCTIONS
 ////////////////////////////////////////////////////
 const differenceDictToArray = (
-  dict: DifferenceDictionary
+  dict: DifferenceDictionary,
+  maxDifference = 9999,
+  minDifference = -9999
 ): { differences: DifferenceRecord[] } => {
   // Convert the day dictionary to an array
   const arr: DifferenceRecord[] = Object.keys(dict).map((key: string) => {
@@ -40,7 +42,14 @@ const differenceDictToArray = (
     return a.difference - b.difference;
   });
 
-  return { differences: sortedArr };
+  // Filter out the differences that are outside the range
+  const filteredArr = sortedArr.filter((difference: DifferenceRecord) => {
+    return (
+      difference.difference >= minDifference && difference.difference <= maxDifference
+    );
+  });
+
+  return { differences: filteredArr };
 };
 
 ////////////////////////////////////////////////////
@@ -140,15 +149,19 @@ files.forEach((file: any) => {
   });
 });
 
-const dayDifferences2020 = differenceDictToArray(allData[SET2020].differenceDictionary);
+const dayDifferences2020 = differenceDictToArray(
+  allData[SET2020].differenceDictionary,
+  179,
+  -179
+);
 const maxAverageSimilarity2020 = Math.max(
   ...dayDifferences2020.differences.map(d => d.averageSimilarity)
 );
 
-console.log(allData[CONTROL_SET]);
-
 const dayDifferencesControl = differenceDictToArray(
-  allData[CONTROL_SET].differenceDictionary
+  allData[CONTROL_SET].differenceDictionary,
+  179,
+  -179
 );
 
 const maxAverageSimilarityControl = Math.max(

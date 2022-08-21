@@ -18,26 +18,6 @@ type ChartPolylineProps = {
   invisibleColumnWidth: number;
 };
 
-// function LineTooltip({ datum }: { datum: DifferenceRecord }) {
-//   return (
-//     <div>
-//       <p>
-//         {datum.difference === 0 ? (
-//           <span>Dreams on same day as news</span>
-//         ) : (
-//           <span>
-//             <span>Dreams {Math.abs(datum.difference)} </span>
-//             <span>{Math.abs(datum.difference) === 1 ? "day" : "days"} </span>
-//             <i>{datum.difference >= 0 ? "after" : "before"} </i>
-//             <span>the news</span>
-//           </span>
-//         )}
-//       </p>
-//       <p>Average similarity: {datum.averageSimilarity.toFixed(5)}</p>
-//       <p>Dreams have been compared to {datum.recordCount} days of news</p>
-//     </div>
-//   );
-// }
 
 export function ChartPolygon({
   data,
