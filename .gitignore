@@ -3,7 +3,7 @@
 # env
 .env
 
-# Source directory, this is a lot of data
+# Source directories, this is a lot of data
 /source-data-all/*
 /data-samples/*
 

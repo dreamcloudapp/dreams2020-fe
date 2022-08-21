@@ -58,8 +58,9 @@ export const getBroaderGranularity = (
       // We need an object keyed by index-index (dream week index, news week index)
       // We can just concat the top concepts and examples for now,
       // Then deal with ordering and consolidating them later
+
       const consolidatedDictionary: { [key: string]: ComparisonSet } =
-        dict.comparisons.reduce((acc, comparison) => {
+        dict.comparisons.reduce((acc, comparison, i) => {
           // Get the index from the date & the granularity
           // E.g. if the granularity is week and the date is Jan 8, then the index is 1.
           const dreamTimeIndex = indexFromDateFn(comparison.collection1.timePeriod.start);
@@ -72,6 +73,7 @@ export const getBroaderGranularity = (
               id: key,
               granularity: granularity,
               label: generateTooltipLabel(dreamTimeIndex, newsTimeIndex, granularity),
+
               collection1: {
                 label: "Dreams",
                 timePeriod: {
@@ -108,7 +110,10 @@ export const getBroaderGranularity = (
 
             const mergedComp: ComparisonSet = {
               ...compToMerge,
-              score: compToMerge.score + comparison.score, // TODO?
+              // Calculate the average on the fly
+              // E.g. If the average is 3 after 3 runs, and the new score is 7,
+              // the average is (i * 3 + 7) / (i + 1), i.e. (3 * 3 + 7) / 4, i.e. 4
+              score: (i * compToMerge.score + comparison.score) / (i + 1),
               wordCount: compToMerge.wordCount + comparison.wordCount,
               concepts: [...compToMerge.concepts, ...comparison.concepts],
               examples: [...compToMerge.examples, ...comparison.examples],

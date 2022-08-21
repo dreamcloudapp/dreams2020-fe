@@ -121,7 +121,7 @@ function GraphContainer({ data }: GraphProps) {
       </div>
       {/* Legend */}
       <Legend
-        data={data}
+        options={data.comparisonSets.map(s => ({ label: s.label, color: s.color }))}
         handleCheck={handleOnChange}
         checkedCollections={checkedCollections}
       />
@@ -133,7 +133,7 @@ function GraphContainer({ data }: GraphProps) {
           top={tooltipTop}
           left={tooltipLeft}
         >
-          <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
+          <div style={{ maxWidth: 300, fontFamily: "Calibri", fontWeight: 400 }}>
             <strong>{tooltipData}</strong>
           </div>
         </TooltipInPortal>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import GraphContainer from "./graph/graph-container";
-import ColumnGraphContainer from "./column-graph/column-graph-container";
+import ColumnGraphContainer from "./area-graph/area-graph-container";
 import { useSelector } from "./ducks/root-reducer";
 import {
   fetchBubbleData,
@@ -25,7 +25,7 @@ import {
 } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 
-const graphtypes: GraphType[] = ["column", "bubble"];
+const graphtypes: GraphType[] = ["area", "bubble"];
 
 function GraphTypeToggle({
   onSelectGraphType,
@@ -42,7 +42,7 @@ function GraphTypeToggle({
           key={graphType}
           onClick={() => {
             dispatch<any>(onSelectGraphType(graphType));
-            if (graphType === "column") {
+            if (graphType === "area") {
               dispatch<any>(setActiveGranularity("day"));
               dispatch<any>(setFocusedComparison(null));
               dispatch<any>(setPrevFocusedComparison(null));
@@ -82,30 +82,54 @@ function App() {
 
   // Dummy data for columns
   const defaultDifferencesData: DifferenceByGranularity = {
-    day: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
-    week: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
-    month: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
-    year: {
-      differences: [],
-      maxSimilarity: 1,
-      minSimilarity: 0,
-      maxAverageSimilarity: 1,
-    },
+    day: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
+    week: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
+    month: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
+    year: [
+      {
+        key: "2020",
+        color: "#fff",
+        comparisons: {
+          differences: [],
+          maxSimilarity: 1,
+          minSimilarity: 0,
+          maxAverageSimilarity: 1,
+        },
+      },
+    ],
   };
 
   const data: GranularityComparisonCollection = allComparisons
@@ -142,7 +166,7 @@ function App() {
         />
         {isLoading ? (
           <div>Loading...</div>
-        ) : showingGraph === "column" ? (
+        ) : showingGraph === "area" ? (
           <ColumnGraphContainer data={diffData} />
         ) : (
           <GraphContainer data={data} />

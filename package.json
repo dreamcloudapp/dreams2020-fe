@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@kannydennedy/dreams-2020-types": "0.9.9",
+    "@kannydennedy/dreams-2020-types": "^1.1.3",
     "@reduxjs/toolkit": "^1.8.1",
     "@rehooks/component-size": "^1.0.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -37,7 +37,8 @@
     "eject": "react-scripts eject",
     "bubbledata": "npx ts-node scripts/generateBubbleData.ts",
     "columndata": "npx ts-node scripts/generateColumnData.ts",
-    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateColumnData.ts"
+    "monthcolumns": "npx ts-node scripts/generateMonthColumnData.ts",
+    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateColumnData.ts && npx ts-node scripts/generateMonthColumnData.ts"
   },
   "eslintConfig": {
     "extends": [

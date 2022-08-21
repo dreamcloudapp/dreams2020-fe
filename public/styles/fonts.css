@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/century-gothic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/century-gothic-bold.ttf") format("truetype");
+  font-style: "bold";
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/calibri-regular.ttf") format("truetype");
+  font-style: "regular";
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/calibri-italic.ttf") format("truetype");
+  font-style: "italic";
+  font-weight: 400;
+}

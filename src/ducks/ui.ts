@@ -7,7 +7,7 @@ export type CollectionCheck = {
   checked: boolean;
 };
 
-export type GraphType = "column" | "bubble";
+export type GraphType = "column" | "bubble" | "area";
 
 export type VisComparison = {
   x: number;
@@ -28,7 +28,7 @@ export type UIState = {
 const initialState: UIState = {
   activeGranularity: "day",
   checkedCollections: [],
-  showingGraph: "column",
+  showingGraph: "area",
   focusedComparison: null,
   prevFocusedComparison: null,
 };

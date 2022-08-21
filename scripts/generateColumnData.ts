@@ -9,22 +9,31 @@ import {
   DifferenceRecord,
   DifferenceByGranularity,
 } from "@kannydennedy/dreams-2020-types";
+import {
+  CONTROL_SET,
+  SET2020,
+  SET_2020_NAME,
+  SRC_FOLDER,
+  CONTROL_SET_NAME,
+} from "./config";
+import { ColorTheme } from "./modules/theme";
 
 const YEAR = 2020;
-const SRC_FOLDER = "../source-data-all";
 
 ////////////////////////////////////////////////////
 // HELPER FUNCTIONS
 ////////////////////////////////////////////////////
 const differenceDictToArray = (
-  dict: DifferenceDictionary
+  dict: DifferenceDictionary,
+  maxDifference = 9999,
+  minDifference = -9999
 ): { differences: DifferenceRecord[] } => {
   // Convert the day dictionary to an array
   const arr: DifferenceRecord[] = Object.keys(dict).map((key: string) => {
     return {
       difference: parseInt(key),
-      averageSimilarity: dayDictionary[key].average,
-      recordCount: dayDictionary[key].recordCount,
+      averageSimilarity: dict[key].average,
+      recordCount: dict[key].recordCount,
     };
   });
 
@@ -33,20 +42,43 @@ const differenceDictToArray = (
     return a.difference - b.difference;
   });
 
-  return { differences: sortedArr };
+  // Filter out the differences that are outside the range
+  const filteredArr = sortedArr.filter((difference: DifferenceRecord) => {
+    return (
+      difference.difference >= minDifference && difference.difference <= maxDifference
+    );
+  });
+
+  return { differences: filteredArr };
 };
 
 ////////////////////////////////////////////////////
 // MAIN
 ////////////////////////////////////////////////////
 
-const dayDictionary: DifferenceDictionary = {};
+const setNames = [SET2020, CONTROL_SET];
+
+type DataSet = {
+  maxSimilarity: number;
+  minSimilarity: number;
+  differenceDictionary: DifferenceDictionary;
+};
+
+const allData: { [key: string]: DataSet } = {
+  [SET2020]: {
+    maxSimilarity: 0,
+    minSimilarity: 1,
+    differenceDictionary: {},
+  },
+  [CONTROL_SET]: {
+    maxSimilarity: 0,
+    minSimilarity: 1,
+    differenceDictionary: {},
+  },
+};
 
 // Open all the files in source data one by one
 const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));
-
-let maxSimilarity = 0;
-let minSimilarity = 1;
 
 files.forEach((file: any) => {
   const filePath = path.join(__dirname, SRC_FOLDER, file);
@@ -61,7 +93,17 @@ files.forEach((file: any) => {
     return;
   }
 
+  // Parse the file data
   const parsedFileData: DayRecord = JSON.parse(fileData);
+
+  // Get the set that it belongs to
+  const setName = parsedFileData.dreamSetName;
+
+  //  If the setName is not in setNames, return
+  if (!setNames.includes(setName)) {
+    console.log(`"${setName}" is not in setNames`);
+    return;
+  }
 
   const dreamSetDate = new Date(`${YEAR}-${parsedFileData.dreamSetDate}`);
 
@@ -70,39 +112,36 @@ files.forEach((file: any) => {
     const { similarity, date: newsDateString } = newsRecord;
 
     // Update max and min similarity
-    if (similarity > maxSimilarity) {
-      maxSimilarity = similarity;
+    if (similarity > allData[setName].maxSimilarity) {
+      allData[setName].maxSimilarity = similarity;
     }
-    if (similarity < minSimilarity) {
-      minSimilarity = similarity;
+    if (similarity < allData[setName].minSimilarity) {
+      allData[setName].minSimilarity = similarity;
     }
 
     const newsDate = new Date(`${YEAR}-${newsDateString}`);
 
     // Get the difference, in days, between the news date and the dream set date
     const daysDifference = getDifferenceInDays(newsDate, dreamSetDate);
-    // const weekDifference = Math.floor(daysDifference / 7);
-    // const monthDifference = Math.floor(daysDifference / 30);
-
-    // // If newsDate or dreamDate is in January, skip it
-    // if (newsDate.getMonth() >= 6 || dreamSetDate.getMonth() >= 6) {
-    //   return;
-    // }
 
     const key = `${daysDifference}`;
 
+    const dictionaryOfSet = allData[setName].differenceDictionary;
+
     // Add to day dictionary
-    if (!dayDictionary[key]) {
-      dayDictionary[key] = {
+    if (!dictionaryOfSet[key]) {
+      dictionaryOfSet[key] = {
         average: similarity,
         recordCount: 1,
       };
     } else {
-      const { average: oldAverage, recordCount: oldRecordCount } = dayDictionary[key];
+      const { average: oldAverage, recordCount: oldRecordCount } = dictionaryOfSet[key];
+
       const newRecordCount = oldRecordCount + 1;
+
       const newAverage = (oldAverage * oldRecordCount + similarity) / newRecordCount;
 
-      dayDictionary[key] = {
+      dictionaryOfSet[key] = {
         average: newAverage,
         recordCount: newRecordCount,
       };
@@ -110,38 +149,86 @@ files.forEach((file: any) => {
   });
 });
 
-const dayDifferences = differenceDictToArray(dayDictionary);
-const maxAverageSimilarity = Math.max(
-  ...dayDifferences.differences.map(d => d.averageSimilarity)
+const dayDifferences2020 = differenceDictToArray(
+  allData[SET2020].differenceDictionary,
+  179,
+  -179
+);
+const maxAverageSimilarity2020 = Math.max(
+  ...dayDifferences2020.differences.map(d => d.averageSimilarity)
 );
 
-console.log(maxAverageSimilarity);
+const dayDifferencesControl = differenceDictToArray(
+  allData[CONTROL_SET].differenceDictionary,
+  179,
+  -179
+);
+
+const maxAverageSimilarityControl = Math.max(
+  ...dayDifferencesControl.differences.map(d => d.averageSimilarity)
+);
+
+console.log(maxAverageSimilarity2020);
 
 const data: DifferenceByGranularity = {
-  day: {
-    differences: differenceDictToArray(dayDictionary).differences,
-    maxSimilarity: maxSimilarity,
-    minSimilarity: minSimilarity,
-    maxAverageSimilarity: maxAverageSimilarity,
-  },
-  week: {
-    differences: [],
-    maxSimilarity: 1,
-    minSimilarity: 0,
-    maxAverageSimilarity: 1,
-  },
-  month: {
-    differences: [],
-    maxSimilarity: 1,
-    minSimilarity: 0,
-    maxAverageSimilarity: 1,
-  },
-  year: {
-    differences: [],
-    maxSimilarity: 1,
-    minSimilarity: 0,
-    maxAverageSimilarity: 1,
-  },
+  day: [
+    {
+      key: SET_2020_NAME,
+      color: ColorTheme.RED,
+      comparisons: {
+        differences: dayDifferences2020.differences,
+        maxSimilarity: allData[SET2020].maxSimilarity,
+        minSimilarity: allData[SET2020].minSimilarity,
+        maxAverageSimilarity: maxAverageSimilarity2020,
+      },
+    },
+    {
+      key: CONTROL_SET_NAME,
+      color: ColorTheme.BLUE,
+      comparisons: {
+        differences: dayDifferencesControl.differences,
+        maxSimilarity: allData[CONTROL_SET].maxSimilarity,
+        minSimilarity: allData[CONTROL_SET].minSimilarity,
+        maxAverageSimilarity: maxAverageSimilarityControl,
+      },
+    },
+  ],
+  week: [
+    {
+      key: SET_2020_NAME,
+      color: ColorTheme.RED,
+      comparisons: {
+        differences: [],
+        maxSimilarity: 1,
+        minSimilarity: 0,
+        maxAverageSimilarity: 1,
+      },
+    },
+  ],
+  month: [
+    {
+      key: "2020",
+      color: ColorTheme.RED,
+      comparisons: {
+        differences: [],
+        maxSimilarity: 1,
+        minSimilarity: 0,
+        maxAverageSimilarity: 1,
+      },
+    },
+  ],
+  year: [
+    {
+      key: "2020",
+      color: ColorTheme.RED,
+      comparisons: {
+        differences: [],
+        maxSimilarity: 1,
+        minSimilarity: 0,
+        maxAverageSimilarity: 1,
+      },
+    },
+  ],
 };
 
 // Print the dicitonary to JSON

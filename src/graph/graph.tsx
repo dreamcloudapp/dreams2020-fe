@@ -124,7 +124,7 @@ function Graph({
                   e,
                   <div>
                     <p>{comparison.label}</p>
-                    <p>Similarity: {comparison.score.toFixed(6)}</p>
+                    <p>Average similarity: {comparison.score.toFixed(5)}</p>
                     <p>Total words: {comparison.wordCount}</p>
                   </div>
                 );
