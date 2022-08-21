@@ -91,6 +91,9 @@ export const SplitBall = ({
       rightBallLabelMove: {
         transform: "translateX(84%) translateY(50%)",
       },
+      rightBallLabelMove: {
+        transform: "translateX(85%) translateY(50%)",
+      },
       rightBallMove: {
         transform: "translateX(51%) scale(0.7) translateY(20%)",
         stroke: stroke,
