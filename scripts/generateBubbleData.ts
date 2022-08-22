@@ -180,14 +180,14 @@ const monthComparisonsCollection = getBroaderGranularity(
 // Write all the week data to file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/weekComparisons.json"),
-  JSON.stringify(weekComparisonsCollection, null, 2),
+  JSON.stringify(weekComparisonsCollection),
   "utf8"
 );
 
 // Write all the month data to file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/monthComparisons.json"),
-  JSON.stringify(monthComparisonsCollection, null, 2),
+  JSON.stringify(monthComparisonsCollection),
   "utf8"
 );
 
@@ -197,9 +197,14 @@ fs.writeFileSync(
 
 // Given a date, return the collection it belongs to
 function getColouredCollectionKey(
-  date: Date,
+  date: Date | undefined,
   collections: CollectionFinder[]
 ): CollectionKey | null {
+  if (!date) {
+    console.log("No date found");
+    // throw new Error(`Invalid date: ${date}`);
+  }
+  if (!date) date = new Date("2020-01-01");
   const dateTime = date.getTime();
   const found = collections.find(collection => {
     const { from, to } = collection.range;

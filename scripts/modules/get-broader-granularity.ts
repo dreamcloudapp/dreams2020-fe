@@ -13,7 +13,7 @@ const VERY_LARGE_NUMBER = 999 * 999 * 999;
 // This is duplicated in ducks/data.ts
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
   day: 2,
-  week: 6,
+  week: 3,
   month: 6,
   year: 30,
 };
@@ -42,7 +42,7 @@ const generateTooltipLabel = (
 // to week comparisons or month comparisons
 export const getBroaderGranularity = (
   granularity: Granularity,
-  indexFromDateFn: (date: Date) => number,
+  indexFromDateFn: (date: Date | undefined) => number,
   dayComparisonDictionaries: ColoredSetWithinGranularity[],
   numExamplesPerComparison: number
 ): GranularityComparisonCollection => {
@@ -84,8 +84,8 @@ export const getBroaderGranularity = (
                   granularity: granularity,
                   index: dreamTimeIndex,
                   identifier: `${granularity} ${dreamTimeIndex}`,
-                  start: new Date(), // TODO
-                  end: new Date(), // TODO
+                  // start: new Date(), // TODO
+                  // end: new Date(), // TODO
                 },
               },
               newsCollection: {
@@ -94,8 +94,8 @@ export const getBroaderGranularity = (
                   granularity: granularity,
                   index: newsTimeIndex,
                   identifier: `${granularity} ${newsTimeIndex}`,
-                  start: new Date(), // TODO
-                  end: new Date(), // TODO
+                  // start: new Date(), // TODO
+                  // end: new Date(), // TODO
                 },
               },
               score: comparison.score,

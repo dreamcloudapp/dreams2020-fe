@@ -77,7 +77,10 @@ export const dayIndexFromDate = (date: Date): number => {
 };
 
 // Basically, get "what number week in the year is this date?" (0-52)
-export const weekIndexFromDate = (date: Date): number => {
+export const weekIndexFromDate = (date: Date | undefined): number => {
+  if (!date) {
+    throw new Error("Invalid date");
+  }
   const dayIndex = dayIndexFromDate(date);
 
   // 365 days in a year (366 in a leap year, but this is normalised by getDayIndexFromDate)
@@ -89,6 +92,9 @@ export const weekIndexFromDate = (date: Date): number => {
 };
 
 // Get "what number month in the year is this date?" (0-11)
-export const monthIndexFromDate = (date: Date): number => {
+export const monthIndexFromDate = (date: Date | undefined): number => {
+  if (!date) {
+    throw new Error("Invalid date");
+  }
   return date.getMonth();
 };

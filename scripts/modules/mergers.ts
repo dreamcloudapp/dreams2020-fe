@@ -19,18 +19,18 @@ export const consolidateWikipediaConceptList = (
     //   return acc;
     // }
 
-    if (acc[concept.link]) {
+    if (acc[`${concept.title}`]) {
       return {
         ...acc,
-        [concept.link]: {
-          ...acc[concept.link],
-          score: acc[concept.link].score + concept.score,
+        [`concept.title`]: {
+          ...acc[`${concept.title}`],
+          score: acc[`${concept.title}`].score + concept.score,
         },
       };
     } else {
       return {
         ...acc,
-        [concept.link]: concept,
+        [`${concept.title}`]: concept,
       };
     }
   }, {} as { [key: string]: WikipediaConcept });

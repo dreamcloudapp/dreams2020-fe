@@ -31,16 +31,16 @@ function sheldonConceptToWikipediaConcept(
   if (!sheldonConcept) {
     return {
       title: "",
-      link: "",
       score: 0,
     };
   } else {
     // Get the title by taking everything after the last slash in sheldonConcept.concept
     const title = sheldonConcept.concept.split("/").pop() || "";
+    // We're not using the link here, but we could get it via
+    // `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
 
     return {
       title: title,
-      link: `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
       score: sheldonConcept.score,
     };
   }
