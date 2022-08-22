@@ -13,7 +13,7 @@ const VERY_LARGE_NUMBER = 999 * 999 * 999;
 // This is duplicated in ducks/data.ts
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
   day: 2,
-  week: 6,
+  week: 3,
   month: 6,
   year: 30,
 };
@@ -42,7 +42,7 @@ const generateTooltipLabel = (
 // to week comparisons or month comparisons
 export const getBroaderGranularity = (
   granularity: Granularity,
-  indexFromDateFn: (date: Date) => number,
+  indexFromDateFn: (date: Date | undefined) => number,
   dayComparisonDictionaries: ColoredSetWithinGranularity[],
   numExamplesPerComparison: number
 ): GranularityComparisonCollection => {
@@ -63,8 +63,12 @@ export const getBroaderGranularity = (
         dict.comparisons.reduce((acc, comparison, i) => {
           // Get the index from the date & the granularity
           // E.g. if the granularity is week and the date is Jan 8, then the index is 1.
-          const dreamTimeIndex = indexFromDateFn(comparison.collection1.timePeriod.start);
-          const newsTimeIndex = indexFromDateFn(comparison.collection2.timePeriod.start);
+          const dreamTimeIndex = indexFromDateFn(
+            comparison.dreamCollection.timePeriod.start
+          );
+          const newsTimeIndex = indexFromDateFn(
+            comparison.newsCollection.timePeriod.start
+          );
           const key = `${granularity}-${dreamTimeIndex}-${newsTimeIndex}`;
 
           if (!acc[key]) {
@@ -74,24 +78,24 @@ export const getBroaderGranularity = (
               granularity: granularity,
               label: generateTooltipLabel(dreamTimeIndex, newsTimeIndex, granularity),
 
-              collection1: {
+              dreamCollection: {
                 label: "Dreams",
                 timePeriod: {
                   granularity: granularity,
                   index: dreamTimeIndex,
                   identifier: `${granularity} ${dreamTimeIndex}`,
-                  start: new Date(), // TODO
-                  end: new Date(), // TODO
+                  // start: new Date(), // TODO
+                  // end: new Date(), // TODO
                 },
               },
-              collection2: {
+              newsCollection: {
                 label: "News",
                 timePeriod: {
                   granularity: granularity,
                   index: newsTimeIndex,
                   identifier: `${granularity} ${newsTimeIndex}`,
-                  start: new Date(), // TODO
-                  end: new Date(), // TODO
+                  // start: new Date(), // TODO
+                  // end: new Date(), // TODO
                 },
               },
               score: comparison.score,
@@ -132,7 +136,7 @@ export const getBroaderGranularity = (
       // Now, we filter out anything that's too far apart
       const filteredComparisons = longComparisons.filter(comp => {
         const absDistance = Math.abs(
-          comp.collection1.timePeriod.index - comp.collection2.timePeriod.index
+          comp.dreamCollection.timePeriod.index - comp.newsCollection.timePeriod.index
         );
         return !(absDistance > MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity]);
       });
@@ -146,7 +150,7 @@ export const getBroaderGranularity = (
 
         return {
           ...comp,
-          concepts: consolidateWikipediaConceptList(comp.concepts),
+          concepts: consolidateWikipediaConceptList(comp.concepts, 5),
           examples: consolidateExampleList(comp.examples, numExamplesPerComparison),
         };
       });

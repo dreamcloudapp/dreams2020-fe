@@ -3,8 +3,8 @@ import {
   CollectionParams,
   WikipediaConcept,
   ExampleRecordComparison,
-  OptionalSheldonConcept,
-  SheldonExample,
+  OptionalConceptScore,
+  ExampleDreamNewsComparison,
   NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { dummyConcepts } from "./dummy-data";
@@ -25,22 +25,22 @@ const prettyPrintDate = (date: Date): string => {
 
 // Convert a SheldonConcept to a WikipediaConcept
 function sheldonConceptToWikipediaConcept(
-  sheldonConcept: OptionalSheldonConcept
+  sheldonConcept: OptionalConceptScore
 ): WikipediaConcept {
   // If the concept is not present, return an empty object
   if (!sheldonConcept) {
     return {
       title: "",
-      link: "",
       score: 0,
     };
   } else {
     // Get the title by taking everything after the last slash in sheldonConcept.concept
     const title = sheldonConcept.concept.split("/").pop() || "";
+    // We're not using the link here, but we could get it via
+    // `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
 
     return {
       title: title,
-      link: `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`,
       score: sheldonConcept.score,
     };
   }
@@ -48,12 +48,12 @@ function sheldonConceptToWikipediaConcept(
 
 // Convert Sheldon Example to ExampleRecordComparison
 const sheldonExampleToExampleRecordComparison = (
-  sheldonExample: SheldonExample,
+  sheldonExample: ExampleDreamNewsComparison,
   numConceptsPerComparison: number
 ): ExampleRecordComparison => {
   const ret = {
-    dreamText: sheldonExample.doc1Id, // TODO
-    newsText: sheldonExample.doc2Id, // TODO
+    dreamText: sheldonExample.doc1Id, // TODO get the actual text
+    newsText: sheldonExample.doc2Id, // TODO get the actual text
     score: sheldonExample.score,
     concepts: sheldonExample.topConcepts
       .slice(0, numConceptsPerComparison)
@@ -63,7 +63,7 @@ const sheldonExampleToExampleRecordComparison = (
 };
 
 // Convert a NewsRecord to a ComparisonSet
-export const convertNewsRecordToComparisonSet = (
+export const convertNewsRecordToDayComparisonSet = (
   record: NewsRecord,
   dreamDate: Date, // Each file has only one dream date, pass this in
   newsYear: number,
@@ -77,7 +77,7 @@ export const convertNewsRecordToComparisonSet = (
   // Make collection1 and collection2
   // from set1 and set2
   // Assuming that 'set1' is dreams, and set2 is news
-  const collection1: CollectionParams = {
+  const dreamCollection: CollectionParams = {
     label: "Dreams",
     timePeriod: {
       granularity: "day",
@@ -88,7 +88,7 @@ export const convertNewsRecordToComparisonSet = (
     },
   };
 
-  const collection2: CollectionParams = {
+  const newsCollection: CollectionParams = {
     label: "News",
     timePeriod: {
       granularity: "day",
@@ -120,11 +120,11 @@ export const convertNewsRecordToComparisonSet = (
     id: record.date + "_" + newsYear,
     granularity: "day",
     label: label,
-    collection1: collection1,
-    collection2: collection2,
-    concepts: conceptsToUse,
-    examples: examples,
     score: record.similarity,
     wordCount: record.wordCount,
+    dreamCollection,
+    newsCollection,
+    concepts: conceptsToUse,
+    examples: examples,
   };
 };
