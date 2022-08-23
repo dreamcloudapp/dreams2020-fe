@@ -9,6 +9,7 @@ import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
 } from "@kannydennedy/dreams-2020-types";
+import { ColumnGraphData } from "../App";
 
 export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
 
@@ -30,12 +31,14 @@ export type DataState = {
   loading: boolean;
   comparisons?: BigBigThing;
   differences?: DifferenceByGranularity;
+  columnData?: ColumnGraphData[];
 };
 
 const initialState: DataState = {
   loading: true,
   comparisons: undefined,
   differences: undefined,
+  columnData: undefined,
 };
 
 const dataSlice = createSlice({
@@ -50,6 +53,9 @@ const dataSlice = createSlice({
     },
     setDifferences(state, action: PayloadAction<DifferenceByGranularity>) {
       state.differences = action.payload;
+    },
+    setColumnData(state, action: PayloadAction<ColumnGraphData[]>) {
+      state.columnData = action.payload;
     },
   },
 });
@@ -67,6 +73,10 @@ export const selectDifferences = (
   state: RootState
 ): DifferenceByGranularity | undefined => {
   return state?.data.differences;
+};
+
+export const selectColumnData = (state: RootState): ColumnGraphData[] | undefined => {
+  return state?.data.columnData;
 };
 
 // Get the comparison sets for a given granularity
@@ -136,9 +146,10 @@ export function fetchBubbleData(): AppThunk {
 }
 
 const differencesFile = "differences.json";
+const columnFile = "month-columns.json";
 
 // Loads the differences from the file
-export function fetchColumnData(): AppThunk {
+export function fetchAreaData(): AppThunk {
   return async (dispatch: Dispatch) => {
     dispatch(dataSlice.actions.setLoading(true));
 
@@ -146,6 +157,19 @@ export function fetchColumnData(): AppThunk {
     const data = await response.json();
 
     dispatch(dataSlice.actions.setDifferences(data));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+// // Loads the differences from the file
+export function fetchColumnData(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${columnFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setColumnData(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }

@@ -21,7 +21,7 @@ type GraphProps = {
   data: DifferenceByGranularity;
 };
 
-function ColumnGraphContainer({ data }: GraphProps) {
+function AreaGraphContainer({ data }: GraphProps) {
   const dispatch = useDispatch();
   // const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
@@ -115,4 +115,4 @@ function ColumnGraphContainer({ data }: GraphProps) {
   );
 }
 
-export default ColumnGraphContainer;
+export default AreaGraphContainer;
