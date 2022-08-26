@@ -100,7 +100,7 @@ function App() {
     day: [
       {
         key: "2020",
-        color: "#fff",
+        color: "hsl(24, 84%, 56%)",
         comparisons: {
           differences: [],
           maxSimilarity: 1,
@@ -112,7 +112,7 @@ function App() {
     week: [
       {
         key: "2020",
-        color: "#fff",
+        color: "hsl(24, 84%, 56%)",
         comparisons: {
           differences: [],
           maxSimilarity: 1,
@@ -124,7 +124,7 @@ function App() {
     month: [
       {
         key: "2020",
-        color: "#fff",
+        color: "hsl(24, 84%, 56%)",
         comparisons: {
           differences: [],
           maxSimilarity: 1,
@@ -136,7 +136,7 @@ function App() {
     year: [
       {
         key: "2020",
-        color: "#fff",
+        color: "hsl(24, 84%, 56%)",
         comparisons: {
           differences: [],
           maxSimilarity: 1,
