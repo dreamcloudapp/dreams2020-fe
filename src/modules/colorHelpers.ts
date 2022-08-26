@@ -13,7 +13,11 @@ export const changeHslLightness = (hslColor: string, change: number): string => 
 
 // Extract hsl values from hsl string:
 const hslValues = (hslColor: string): number[] => {
+  console.log("hslColor", hslColor);
+
   const parts = hslColor.split(" ");
+  console.log("parts", parts);
+
   const h = parseInt(parts[0].replace("hsl(", ""));
   const s = parseInt(parts[1].replace("%, ", ""));
   const l = parseInt(parts[2].replace("%)", ""));
