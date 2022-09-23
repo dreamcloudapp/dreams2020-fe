@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import "./App.css";
-import GraphContainer from "./bubble-graph/bubble-graph-container";
-import AreaGraphContainer from "./area-graph/area-graph-container";
+import { BubbleGraphContainer } from "./bubble-graph/bubble-graph-container";
+import { AreaGraphContainer } from "./area-graph/area-graph-container";
+import { ColumnGraphContainer } from "./column-graph/column-graph-container";
 import { useSelector } from "./ducks/root-reducer";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import {
@@ -24,7 +25,6 @@ import {
 } from "./ducks/ui";
 import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
-import ColumnGraphContainer from "./column-graph/column-graph-container";
 import {
   defaultColumnGraphData,
   defaultData,
@@ -159,7 +159,7 @@ function App() {
               onSelectGraphType={setShowingGraph}
               showingGraph={showingGraph}
             />
-            {(isLoading || width < 1) && <div>Loading...</div>}
+            {(isLoading || !width || width < 1) && <div>Loading...</div>}
             {!isLoading && showingGraph === "area" && (
               <AreaGraphContainer
                 data={diffData}
@@ -170,7 +170,7 @@ function App() {
               />
             )}
             {!isLoading && showingGraph === "bubble" && (
-              <GraphContainer
+              <BubbleGraphContainer
                 data={data}
                 width={width}
                 height={height}

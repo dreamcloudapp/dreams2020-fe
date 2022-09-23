@@ -30,7 +30,7 @@ const timeLabels: { key: Granularity; label: string }[] = [
   { key: "week", label: "Weeks" },
 ];
 
-function GraphContainer({
+export function BubbleGraphContainer({
   data,
   width,
   height,
@@ -105,5 +105,3 @@ function GraphContainer({
     </div>
   );
 }
-
-export default GraphContainer;

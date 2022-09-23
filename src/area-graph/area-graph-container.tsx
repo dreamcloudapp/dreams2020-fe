@@ -20,7 +20,7 @@ type GraphProps = {
   onMouseOut: () => void;
 };
 
-function AreaGraphContainer({
+export function AreaGraphContainer({
   data,
   width,
   height,
@@ -78,5 +78,3 @@ function AreaGraphContainer({
     </div>
   );
 }
-
-export default AreaGraphContainer;

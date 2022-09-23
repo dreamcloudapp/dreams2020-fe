@@ -13,7 +13,7 @@ type GraphProps = {
   onMouseOut: () => void;
 };
 
-function ColumnGraphContainer({
+export function ColumnGraphContainer({
   data,
   width,
   height,
@@ -100,5 +100,3 @@ function ColumnGraphContainer({
     </svg>
   );
 }
-
-export default ColumnGraphContainer;
