@@ -9,9 +9,17 @@ type GraphProps = {
   data: ColumnGraphData[];
   width: number;
   height: number;
+  handleMouseOver: (event: any, datum: any) => void;
+  onMouseOut: () => void;
 };
 
-function ColumnGraphContainer({ data, width, height }: GraphProps) {
+function ColumnGraphContainer({
+  data,
+  width,
+  height,
+  handleMouseOver,
+  onMouseOut,
+}: GraphProps) {
   const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <svg width={width} height={height}>
@@ -24,8 +32,25 @@ function ColumnGraphContainer({ data, width, height }: GraphProps) {
         const lowSimilarityHeight = (colHeight / 100) * d.lowSimilarity.percent;
 
         const x = i * (columnWidth + COLUMN_GAP);
+        const monthName = monthNameFromIndex(d.month);
+
         return (
-          <g key={i}>
+          <g
+            key={i}
+            onMouseOver={e => {
+              (handleMouseOver as any)(
+                e,
+                <div>
+                  <p>{monthName}</p>
+                  <p>Avg. similarity: {d.avgSimilarity.toFixed(5)}</p>
+                  <p>High similarity: {d.highSimilarity.percent.toFixed(1)}%</p>
+                  <p>Medium similarity: {d.mediumSimilarity.percent.toFixed(1)}%</p>
+                  <p>Low similarity: {d.lowSimilarity.percent.toFixed(1)}%</p>
+                </div>
+              );
+            }}
+            onMouseOut={onMouseOut}
+          >
             {/* High Similarity */}
             <rect
               x={x}

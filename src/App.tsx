@@ -3,6 +3,7 @@ import "./App.css";
 import GraphContainer from "./graph/graph-container";
 import AreaGraphContainer from "./area-graph/area-graph-container";
 import { useSelector } from "./ducks/root-reducer";
+import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import {
   fetchBubbleData,
   selectComparisons,
@@ -30,6 +31,7 @@ import {
   defaultDifferencesData,
 } from "./initial-dummy-data";
 import useComponentSize from "@rehooks/component-size";
+import { localPoint } from "@visx/event";
 
 const graphtypes: GraphType[] = ["area", "bubble", "column"];
 
@@ -103,6 +105,28 @@ function App() {
   const graphContainerRef = useRef<HTMLDivElement>(null);
   let { width, height } = useComponentSize(graphContainerRef);
 
+  // Tooltip
+  const { tooltipData, tooltipLeft, tooltipTop, tooltipOpen, showTooltip, hideTooltip } =
+    useTooltip();
+
+  // If you don't want to use a Portal, simply replace `TooltipInPortal` below with
+  // `Tooltip` or `TooltipWithBounds` and remove `containerRef`
+  const { containerRef, TooltipInPortal } = useTooltipInPortal({
+    // use TooltipWithBounds
+    detectBounds: true,
+    // when tooltip containers are scrolled, this will correctly update the Tooltip position
+    scroll: true,
+  });
+
+  const handleMouseOver = (event: any, datum: any) => {
+    const coords = localPoint(event.target.ownerSVGElement, event);
+    showTooltip({
+      tooltipLeft: coords?.x,
+      tooltipTop: coords?.y,
+      tooltipData: datum,
+    });
+  };
+
   // Initial data fetch
   useEffect(() => {
     dispatch<any>(fetchBubbleData());
@@ -127,20 +151,44 @@ function App() {
         style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
       >
         <div style={{ height: "100%", width: "100%" }} ref={graphContainerRef}>
-          <GraphTypeToggle
-            onSelectGraphType={setShowingGraph}
-            showingGraph={showingGraph}
-          />
-          {(isLoading || width < 1) && <div>Loading...</div>}
-          {!isLoading && showingGraph === "area" && (
-            <AreaGraphContainer data={diffData} />
-          )}
-          {!isLoading && showingGraph === "bubble" && <GraphContainer data={data} />}
-          {!isLoading && showingGraph === "column" && (
-            <ColumnGraphContainer data={columnGraphData} width={width} height={height} />
-          )}
+          <div
+            style={{ height: "100%", width: "100%", position: "relative" }}
+            ref={containerRef}
+          >
+            <GraphTypeToggle
+              onSelectGraphType={setShowingGraph}
+              showingGraph={showingGraph}
+            />
+            {(isLoading || width < 1) && <div>Loading...</div>}
+            {!isLoading && showingGraph === "area" && (
+              <AreaGraphContainer data={diffData} />
+            )}
+            {!isLoading && showingGraph === "bubble" && <GraphContainer data={data} />}
+            {!isLoading && showingGraph === "column" && (
+              <ColumnGraphContainer
+                data={columnGraphData}
+                width={width}
+                height={height}
+                handleMouseOver={handleMouseOver}
+                onMouseOut={hideTooltip}
+              />
+            )}
+          </div>
         </div>
       </div>
+
+      {tooltipOpen && (
+        <TooltipInPortal
+          // set this to random so it correctly updates with parent bounds
+          key={Math.random()}
+          top={tooltipTop}
+          left={tooltipLeft}
+        >
+          <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
+            <strong>{tooltipData}</strong>
+          </div>
+        </TooltipInPortal>
+      )}
     </div>
   );
 }
