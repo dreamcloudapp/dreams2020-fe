@@ -126,5 +126,6 @@ export const convertNewsRecordToDayComparisonSet = (
     newsCollection,
     concepts: conceptsToUse,
     examples: examples,
+    numDayComparisons: 1,
   };
 };

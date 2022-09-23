@@ -102,6 +102,7 @@ export const getBroaderGranularity = (
               wordCount: comparison.wordCount,
               examples: [...comparison.examples],
               concepts: [...comparison.concepts],
+              numDayComparisons: 1,
             };
 
             return {
@@ -121,6 +122,7 @@ export const getBroaderGranularity = (
               wordCount: compToMerge.wordCount + comparison.wordCount,
               concepts: [...compToMerge.concepts, ...comparison.concepts],
               examples: [...compToMerge.examples, ...comparison.examples],
+              numDayComparisons: compToMerge.numDayComparisons + 1,
             };
 
             return {
