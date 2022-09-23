@@ -2,6 +2,7 @@
   {
     "month": 0,
     "count": 961,
+    "totalWordCount": 93240113,
     "avgSimilarity": 0.010360882948074924,
     "highSimilarity": {
       "percent": 0,
@@ -25,6 +26,7 @@
   {
     "month": 1,
     "count": 841,
+    "totalWordCount": 64435608,
     "avgSimilarity": 0.011494222366349584,
     "highSimilarity": {
       "percent": 0,
@@ -48,6 +50,7 @@
   {
     "month": 2,
     "count": 961,
+    "totalWordCount": 80677445,
     "avgSimilarity": 0.01894762383111347,
     "highSimilarity": {
       "percent": 3.7460978147762747,
@@ -71,6 +74,7 @@
   {
     "month": 3,
     "count": 900,
+    "totalWordCount": 129800895,
     "avgSimilarity": 0.020757117162333312,
     "highSimilarity": {
       "percent": 7.666666666666666,
@@ -94,6 +98,7 @@
   {
     "month": 4,
     "count": 961,
+    "totalWordCount": 117137588,
     "avgSimilarity": 0.01885848775338188,
     "highSimilarity": {
       "percent": 3.0176899063475546,
@@ -117,6 +122,7 @@
   {
     "month": 5,
     "count": 900,
+    "totalWordCount": 94209206,
     "avgSimilarity": 0.01514743531844445,
     "highSimilarity": {
       "percent": 0.3333333333333333,
@@ -140,6 +146,7 @@
   {
     "month": 6,
     "count": 961,
+    "totalWordCount": 98491575,
     "avgSimilarity": 0.015117964590738813,
     "highSimilarity": {
       "percent": 0,
@@ -163,6 +170,7 @@
   {
     "month": 7,
     "count": 961,
+    "totalWordCount": 90011330,
     "avgSimilarity": 0.017935356374921968,
     "highSimilarity": {
       "percent": 1.352757544224766,
@@ -186,6 +194,7 @@
   {
     "month": 8,
     "count": 900,
+    "totalWordCount": 113236857,
     "avgSimilarity": 0.016160267810555563,
     "highSimilarity": {
       "percent": 0,
@@ -209,6 +218,7 @@
   {
     "month": 9,
     "count": 961,
+    "totalWordCount": 124051547,
     "avgSimilarity": 0.016929710051092638,
     "highSimilarity": {
       "percent": 4.890738813735692,
@@ -232,6 +242,7 @@
   {
     "month": 10,
     "count": 900,
+    "totalWordCount": 93720447,
     "avgSimilarity": 0.014222486277333342,
     "highSimilarity": {
       "percent": 0.3333333333333333,
@@ -255,6 +266,7 @@
   {
     "month": 11,
     "count": 961,
+    "totalWordCount": 106684254,
     "avgSimilarity": 0.013685454522580668,
     "highSimilarity": {
       "percent": 0,

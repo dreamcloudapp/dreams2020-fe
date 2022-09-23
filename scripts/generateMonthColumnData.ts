@@ -77,6 +77,7 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         month: dreamNewsMonth,
         totalSimilarity: record.similarity,
         count: 1,
+        totalWordCount: record.wordCount,
         highSimilarityCount: highSimilarityAddCount,
         mediumSimilarityCount: mediumSimilarityAddCount,
         lowSimilarityCount: lowSimilarityAddCount,
@@ -90,6 +91,7 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         ...acc[dreamNewsMonth],
         totalSimilarity: acc[dreamNewsMonth].totalSimilarity + record.similarity,
         count: acc[dreamNewsMonth].count + 1,
+        totalWordCount: acc[dreamNewsMonth].totalWordCount + record.wordCount,
         highSimilarityCount:
           acc[dreamNewsMonth].highSimilarityCount + highSimilarityAddCount,
         mediumSimilarityCount:
@@ -107,6 +109,7 @@ const monthDataCleaned = Object.values(monthData)
     const {
       totalSimilarity,
       count,
+      totalWordCount,
       highSimilarityCount,
       mediumSimilarityCount,
       lowSimilarityCount,
@@ -114,6 +117,7 @@ const monthDataCleaned = Object.values(monthData)
     return {
       month: monthRecord.month,
       count: count,
+      totalWordCount: totalWordCount,
       avgSimilarity: totalSimilarity / count,
       highSimilarity: {
         percent: (100 / count) * highSimilarityCount,

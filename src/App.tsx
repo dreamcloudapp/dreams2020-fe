@@ -45,6 +45,7 @@ export type SimilarityDescription = {
 export type ColumnGraphData = {
   month: number;
   count: number;
+  totalWordCount: number;
   avgSimilarity: number;
   highSimilarity: SimilarityDescription;
   mediumSimilarity: SimilarityDescription;

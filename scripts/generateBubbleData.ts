@@ -5,6 +5,7 @@ import {
   ComparisonSet,
   ColoredSetWithinGranularity,
   DayRecord,
+  GranularityComparisonCollection,
 } from "@kannydennedy/dreams-2020-types";
 import {
   CONTROL_SET_NAME,
@@ -164,13 +165,13 @@ const dayComparisonDictionaries: ColoredSetWithinGranularity[] = Object.entries(
 // We have a set of comparisons by day
 // We want to turn this into a set of comparisons by week
 // and a set of comparisons by month
-const weekComparisonsCollection = getBroaderGranularity(
+const weekComparisonsCollection: GranularityComparisonCollection = getBroaderGranularity(
   "week",
   weekIndexFromDate,
   dayComparisonDictionaries,
   NUM_EXAMPLES_PER_COMPARISON
 );
-const monthComparisonsCollection = getBroaderGranularity(
+const monthComparisonsCollection: GranularityComparisonCollection = getBroaderGranularity(
   "month",
   monthIndexFromDate,
   dayComparisonDictionaries,

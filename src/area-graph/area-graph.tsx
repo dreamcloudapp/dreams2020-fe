@@ -56,11 +56,11 @@ function LineTooltip({ data }: { data: ColouredDayDifference[] }) {
       {data.map((d, i) => {
         const { datum, label, color } = d;
         return (
-          <>
+          <div key={i}>
             <p style={{ color: color }}>{label}</p>
             <p>Average similarity: {datum.averageSimilarity.toFixed(5)}</p>
             {/* <p>Dreams have been compared to {datum.recordCount} days of news</p> */}
-          </>
+          </div>
         );
       })}
     </div>

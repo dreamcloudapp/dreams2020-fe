@@ -51,6 +51,10 @@ const renderTooltip = (d: ColumnGraphData) => {
         <b>Total day comparisons: </b>
         {d.count}
       </p>
+      <p>
+        <b>Total word count: </b>
+        {d.totalWordCount}
+      </p>
     </div>
   );
 };

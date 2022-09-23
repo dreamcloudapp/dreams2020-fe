@@ -71,7 +71,8 @@ export const defaultColumnGraphData: ColumnGraphData[] = [
   {
     month: 0,
     count: 961,
-    avgSimilarity: 0.010360882948074924,
+    totalWordCount: 0,
+    avgSimilarity: 0,
     highSimilarity: { percent: 0, count: 0, threshold: 0.05, color: "red" },
     mediumSimilarity: { percent: 0, count: 0, threshold: 0.025, color: "orange" },
     lowSimilarity: { percent: 100, count: 961, threshold: 0, color: "green" },
