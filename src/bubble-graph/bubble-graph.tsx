@@ -126,6 +126,7 @@ function Graph({
                     <p>{comparison.label}</p>
                     <p>Average similarity: {comparison.score.toFixed(5)}</p>
                     <p>Total words: {comparison.wordCount}</p>
+                    <p>Total days compared: TODO</p>
                   </div>
                 );
               }}

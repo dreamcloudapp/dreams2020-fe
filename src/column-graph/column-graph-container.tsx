@@ -25,26 +25,31 @@ const renderTooltip = (d: ColumnGraphData) => {
   return (
     <div>
       <p>
-        {monthName} 2020 Dreams vs. {monthName} 2020 News
+        {monthName} 2020 dream days vs.
+        <br /> {monthName} 2020 news days
       </p>
       <p>
         <b>Average similarity: </b>
         {prettyNumber(d.avgSimilarity, 5)}
       </p>
       <p>
-        <b style={{ color: d.highSimilarity.color }}>High similarity</b>
-        <span> (&gt; {d.highSimilarity.threshold}): </span>
+        <b style={{ color: d.highSimilarity.color }}>High similarity day pairs</b>
+        <span> (&gt;= {d.highSimilarity.threshold}): </span>
         <span> {prettyNumber(d.highSimilarity.percent, 1)}%</span>
       </p>
       <p>
-        <b style={{ color: d.mediumSimilarity.color }}>Medium similarity</b>
-        <span> (&gt; {d.mediumSimilarity.threshold}): </span>
+        <b style={{ color: d.mediumSimilarity.color }}>Medium similarity day pairs</b>
+        <span> (&gt;= {d.mediumSimilarity.threshold}): </span>
         <span> {prettyNumber(d.mediumSimilarity.percent, 1)}%</span>
       </p>
       <p>
-        <b style={{ color: d.lowSimilarity.color }}>Low similarity</b>
-        <span> (&lt;= {d.mediumSimilarity.threshold}): </span>
+        <b style={{ color: d.lowSimilarity.color }}>Low similarity day pairs</b>
+        <span> (&lt; {d.mediumSimilarity.threshold}): </span>
         <span>{prettyNumber(d.lowSimilarity.percent, 1)}%</span>
+      </p>
+      <p>
+        <b>Total day comparisons: </b>
+        {d.count}
       </p>
     </div>
   );
