@@ -73,6 +73,7 @@ export const getBroaderGranularity = (
 
           if (!acc[key]) {
             // If we don't have this key yet, add a new comparison
+            // The 'Comparison Set' is basically one 'bubble'
             const comp: ComparisonSet = {
               id: key,
               granularity: granularity,
@@ -115,10 +116,8 @@ export const getBroaderGranularity = (
 
             const mergedComp: ComparisonSet = {
               ...compToMerge,
-              // Calculate the average on the fly
-              // E.g. If the average is 3 after 3 runs, and the new score is 7,
-              // the average is (i * 3 + 7) / (i + 1), i.e. (3 * 3 + 7) / 4, i.e. 4
-              score: (i * compToMerge.score + comparison.score) / (i + 1),
+              // We'll calculate the average later
+              score: compToMerge.score + comparison.score,
               wordCount: compToMerge.wordCount + comparison.wordCount,
               concepts: [...compToMerge.concepts, ...comparison.concepts],
               examples: [...compToMerge.examples, ...comparison.examples],
@@ -133,7 +132,15 @@ export const getBroaderGranularity = (
         }, {} as { [key: string]: ComparisonSet });
 
       // Now we just squash down those pesky long lists
-      const longComparisons: ComparisonSet[] = Object.values(consolidatedDictionary);
+      const longComparisons: ComparisonSet[] = Object.values(consolidatedDictionary)
+        // And also turn the score into an average
+        .map(comparison => {
+          const avgScore = comparison.score / comparison.numDayComparisons;
+          return {
+            ...comparison,
+            score: avgScore,
+          };
+        });
 
       // Now, we filter out anything that's too far apart
       const filteredComparisons = longComparisons.filter(comp => {
