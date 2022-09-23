@@ -13,6 +13,43 @@ type GraphProps = {
   onMouseOut: () => void;
 };
 
+const prettyNumber = (similarity: number, decimals: number): string => {
+  if (similarity === 0) {
+    return "0";
+  }
+  return similarity.toFixed(decimals);
+};
+
+const renderTooltip = (d: ColumnGraphData) => {
+  const monthName = monthNameFromIndex(d.month);
+  return (
+    <div>
+      <p>
+        {monthName} 2020 Dreams vs. {monthName} 2020 News
+      </p>
+      <p>
+        <b>Average similarity: </b>
+        {prettyNumber(d.avgSimilarity, 5)}
+      </p>
+      <p>
+        <b style={{ color: d.highSimilarity.color }}>High similarity</b>
+        <span> (&gt; {d.highSimilarity.threshold}): </span>
+        <span> {prettyNumber(d.highSimilarity.percent, 1)}%</span>
+      </p>
+      <p>
+        <b style={{ color: d.mediumSimilarity.color }}>Medium similarity</b>
+        <span> (&gt; {d.mediumSimilarity.threshold}): </span>
+        <span> {prettyNumber(d.mediumSimilarity.percent, 1)}%</span>
+      </p>
+      <p>
+        <b style={{ color: d.lowSimilarity.color }}>Low similarity</b>
+        <span> (&lt;= {d.mediumSimilarity.threshold}): </span>
+        <span>{prettyNumber(d.lowSimilarity.percent, 1)}%</span>
+      </p>
+    </div>
+  );
+};
+
 export function ColumnGraphContainer({
   data,
   width,
@@ -32,22 +69,12 @@ export function ColumnGraphContainer({
         const lowSimilarityHeight = (colHeight / 100) * d.lowSimilarity.percent;
 
         const x = i * (columnWidth + COLUMN_GAP);
-        const monthName = monthNameFromIndex(d.month);
 
         return (
           <g
             key={i}
             onMouseOver={e => {
-              (handleMouseOver as any)(
-                e,
-                <div>
-                  <p>{monthName}</p>
-                  <p>Avg. similarity: {d.avgSimilarity.toFixed(5)}</p>
-                  <p>High similarity: {d.highSimilarity.percent.toFixed(1)}%</p>
-                  <p>Medium similarity: {d.mediumSimilarity.percent.toFixed(1)}%</p>
-                  <p>Low similarity: {d.lowSimilarity.percent.toFixed(1)}%</p>
-                </div>
-              );
+              (handleMouseOver as any)(e, renderTooltip(d));
             }}
             onMouseOut={onMouseOut}
           >
