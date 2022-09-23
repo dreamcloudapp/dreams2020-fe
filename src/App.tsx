@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./App.css";
-import GraphContainer from "./graph/graph-container";
+import GraphContainer from "./bubble-graph/bubble-graph-container";
 import AreaGraphContainer from "./area-graph/area-graph-container";
 import { useSelector } from "./ducks/root-reducer";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
@@ -161,9 +161,23 @@ function App() {
             />
             {(isLoading || width < 1) && <div>Loading...</div>}
             {!isLoading && showingGraph === "area" && (
-              <AreaGraphContainer data={diffData} />
+              <AreaGraphContainer
+                data={diffData}
+                width={width}
+                height={height}
+                handleMouseOver={handleMouseOver}
+                onMouseOut={hideTooltip}
+              />
             )}
-            {!isLoading && showingGraph === "bubble" && <GraphContainer data={data} />}
+            {!isLoading && showingGraph === "bubble" && (
+              <GraphContainer
+                data={data}
+                width={width}
+                height={height}
+                handleMouseOver={handleMouseOver}
+                onMouseOut={hideTooltip}
+              />
+            )}
             {!isLoading && showingGraph === "column" && (
               <ColumnGraphContainer
                 data={columnGraphData}
