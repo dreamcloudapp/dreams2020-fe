@@ -53,6 +53,10 @@ const dataArr2020: NewsRecordWithDates[] = files
     return newsMonth === dreamMonth;
   });
 
+// Hacky, we keep track of the highest and lowest similarity
+// For each month
+const highestSimilarities: { [key: string]: number } = {};
+
 // Now we have all the data for 2020
 // We need to group it by month
 // We're only interested in the data where dreams and news are in the same month
@@ -68,6 +72,16 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
   const highSimilarityAddCount = isHigh ? 1 : 0;
   const mediumSimilarityAddCount = isMedium ? 1 : 0;
   const lowSimilarityAddCount = isLow ? 1 : 0;
+
+  // Update the highestSimilarity for this month
+  if (!highestSimilarities[dreamNewsMonth]) {
+    highestSimilarities[dreamNewsMonth] = similarity;
+  } else {
+    highestSimilarities[dreamNewsMonth] = Math.max(
+      highestSimilarities[dreamNewsMonth],
+      similarity
+    );
+  }
 
   // If the month is not in the accumulator, we add it
   if (!acc[dreamNewsMonth]) {
@@ -119,6 +133,7 @@ const monthDataCleaned = Object.values(monthData)
       count: count,
       totalWordCount: totalWordCount,
       avgSimilarity: totalSimilarity / count,
+      maxSimilarity: highestSimilarities[monthRecord.month],
       highSimilarity: {
         percent: (100 / count) * highSimilarityCount,
         count: highSimilarityCount,

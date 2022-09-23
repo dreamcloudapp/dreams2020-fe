@@ -47,6 +47,7 @@ export type ColumnGraphData = {
   count: number;
   totalWordCount: number;
   avgSimilarity: number;
+  maxSimilarity: number;
   highSimilarity: SimilarityDescription;
   mediumSimilarity: SimilarityDescription;
   lowSimilarity: SimilarityDescription;

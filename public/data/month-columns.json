@@ -4,6 +4,7 @@
     "count": 961,
     "totalWordCount": 93240113,
     "avgSimilarity": 0.010360882948074924,
+    "maxSimilarity": 0.019663893,
     "highSimilarity": {
       "percent": 0,
       "count": 0,
@@ -28,6 +29,7 @@
     "count": 841,
     "totalWordCount": 64435608,
     "avgSimilarity": 0.011494222366349584,
+    "maxSimilarity": 0.028356412,
     "highSimilarity": {
       "percent": 0,
       "count": 0,
@@ -52,6 +54,7 @@
     "count": 961,
     "totalWordCount": 80677445,
     "avgSimilarity": 0.01894762383111347,
+    "maxSimilarity": 0.0742324,
     "highSimilarity": {
       "percent": 3.7460978147762747,
       "count": 36,
@@ -76,6 +79,7 @@
     "count": 900,
     "totalWordCount": 129800895,
     "avgSimilarity": 0.020757117162333312,
+    "maxSimilarity": 0.07170229,
     "highSimilarity": {
       "percent": 7.666666666666666,
       "count": 69,
@@ -100,6 +104,7 @@
     "count": 961,
     "totalWordCount": 117137588,
     "avgSimilarity": 0.01885848775338188,
+    "maxSimilarity": 0.05658838,
     "highSimilarity": {
       "percent": 3.0176899063475546,
       "count": 29,
@@ -124,6 +129,7 @@
     "count": 900,
     "totalWordCount": 94209206,
     "avgSimilarity": 0.01514743531844445,
+    "maxSimilarity": 0.046182867,
     "highSimilarity": {
       "percent": 0.3333333333333333,
       "count": 3,
@@ -148,6 +154,7 @@
     "count": 961,
     "totalWordCount": 98491575,
     "avgSimilarity": 0.015117964590738813,
+    "maxSimilarity": 0.037202023,
     "highSimilarity": {
       "percent": 0,
       "count": 0,
@@ -172,6 +179,7 @@
     "count": 961,
     "totalWordCount": 90011330,
     "avgSimilarity": 0.017935356374921968,
+    "maxSimilarity": 0.04646403,
     "highSimilarity": {
       "percent": 1.352757544224766,
       "count": 13,
@@ -196,6 +204,7 @@
     "count": 900,
     "totalWordCount": 113236857,
     "avgSimilarity": 0.016160267810555563,
+    "maxSimilarity": 0.03345677,
     "highSimilarity": {
       "percent": 0,
       "count": 0,
@@ -220,6 +229,7 @@
     "count": 961,
     "totalWordCount": 124051547,
     "avgSimilarity": 0.016929710051092638,
+    "maxSimilarity": 0.08139946,
     "highSimilarity": {
       "percent": 4.890738813735692,
       "count": 47,
@@ -244,6 +254,7 @@
     "count": 900,
     "totalWordCount": 93720447,
     "avgSimilarity": 0.014222486277333342,
+    "maxSimilarity": 0.046026386,
     "highSimilarity": {
       "percent": 0.3333333333333333,
       "count": 3,
@@ -268,6 +279,7 @@
     "count": 961,
     "totalWordCount": 106684254,
     "avgSimilarity": 0.013685454522580668,
+    "maxSimilarity": 0.038953472,
     "highSimilarity": {
       "percent": 0,
       "count": 0,
