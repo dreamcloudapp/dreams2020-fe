@@ -2,13 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 const { getDifferenceInDays } = require("./modules/time-helpers");
-import {
-  DifferenceDictionary,
-  DayRecord,
-  NewsRecord,
-  DifferenceRecord,
-  DifferenceByGranularity,
-} from "@kannydennedy/dreams-2020-types";
+import { DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
 import { SET2020, SRC_FOLDER } from "./config";
 import { ColorTheme } from "./modules/theme";
 
@@ -17,6 +11,12 @@ type Similarity = "low" | "medium" | "high";
 type SimilarityRecord = {
   similarity: Similarity;
   count: number;
+};
+
+const COLORS = {
+  low: ColorTheme.BLUE,
+  medium: ColorTheme.GRAY,
+  high: ColorTheme.RED,
 };
 
 console.log("Generating month column data...");
@@ -117,16 +117,19 @@ const monthDataCleaned = Object.values(monthData)
         percent: (100 / count) * highSimilarity,
         count: highSimilarity,
         threshold: HIGH_SIMILARITY,
+        color: COLORS.high,
       },
       mediumSimilarity: {
         percent: (100 / count) * mediumSimilarity,
         count: mediumSimilarity,
         threshold: MEDIUM_SIMILARITY,
+        color: COLORS.medium,
       },
       lowSimilarity: {
         percent: (100 / count) * lowSimilarity,
         count: lowSimilarity,
         threshold: 0,
+        color: COLORS.low,
       },
     };
   })

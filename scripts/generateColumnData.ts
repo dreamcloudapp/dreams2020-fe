@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { isDotPath } = require("./modules/file-helpers");
+const { isDotFile } = require("./modules/file-helpers");
 const { getDifferenceInDays } = require("./modules/time-helpers");
 import {
   DifferenceDictionary,
@@ -89,7 +89,7 @@ files.forEach((file: any) => {
     return;
   }
   // Check if the file is a dot file, and if so, skip it
-  if (isDotPath(filePath)) {
+  if (isDotFile(filePath)) {
     return;
   }
 

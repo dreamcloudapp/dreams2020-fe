@@ -18,7 +18,6 @@ type ChartPolylineProps = {
   invisibleColumnWidth: number;
 };
 
-
 export function ChartPolygon({
   data,
   height,

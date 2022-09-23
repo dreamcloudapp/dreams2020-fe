@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
 import GraphContainer from "./graph/graph-container";
 import AreaGraphContainer from "./area-graph/area-graph-container";
@@ -21,16 +21,24 @@ import {
   setPrevFocusedComparison,
   setShowingGraph,
 } from "./ducks/ui";
-import {
-  GranularityComparisonCollection,
-  DifferenceByGranularity,
-} from "@kannydennedy/dreams-2020-types";
+import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import ColumnGraphContainer from "./column-graph/column-graph-container";
+import {
+  defaultColumnGraphData,
+  defaultData,
+  defaultDifferencesData,
+} from "./initial-dummy-data";
+import useComponentSize from "@rehooks/component-size";
 
 const graphtypes: GraphType[] = ["area", "bubble", "column"];
 
-export type SimilarityDescription = { percent: number; count: number; threshold: number };
+export type SimilarityDescription = {
+  percent: number;
+  count: number;
+  threshold: number;
+  color: string;
+};
 
 export type ColumnGraphData = {
   month: number;
@@ -84,86 +92,16 @@ function App() {
   const differencesData = useSelector(selectDifferences);
   const columnData = useSelector(selectColumnData);
 
-  // Dummy data for bubbles
-  // For when allComparisons hasn't loaded yet
-  const defaultData: GranularityComparisonCollection = {
-    comparisonSets: [],
-    maxSimilarity: 1,
-    minSimilarity: 0,
-    maxWordCount: 100,
-    minWordCount: 1,
-    granularity: activeGranularity,
-  };
-
-  // Dummy data for columns
-  const defaultDifferencesData: DifferenceByGranularity = {
-    day: [
-      {
-        key: "2020",
-        color: "hsl(24, 84%, 56%)",
-        comparisons: {
-          differences: [],
-          maxSimilarity: 1,
-          minSimilarity: 0,
-          maxAverageSimilarity: 1,
-        },
-      },
-    ],
-    week: [
-      {
-        key: "2020",
-        color: "hsl(24, 84%, 56%)",
-        comparisons: {
-          differences: [],
-          maxSimilarity: 1,
-          minSimilarity: 0,
-          maxAverageSimilarity: 1,
-        },
-      },
-    ],
-    month: [
-      {
-        key: "2020",
-        color: "hsl(24, 84%, 56%)",
-        comparisons: {
-          differences: [],
-          maxSimilarity: 1,
-          minSimilarity: 0,
-          maxAverageSimilarity: 1,
-        },
-      },
-    ],
-    year: [
-      {
-        key: "2020",
-        color: "hsl(24, 84%, 56%)",
-        comparisons: {
-          differences: [],
-          maxSimilarity: 1,
-          minSimilarity: 0,
-          maxAverageSimilarity: 1,
-        },
-      },
-    ],
-  };
-
-  const defaultColumnGraphData: ColumnGraphData[] = [
-    {
-      month: 0,
-      count: 961,
-      avgSimilarity: 0.010360882948074924,
-      highSimilarity: { percent: 0, count: 0, threshold: 0.05 },
-      mediumSimilarity: { percent: 0, count: 0, threshold: 0.025 },
-      lowSimilarity: { percent: 100, count: 961, threshold: 0 },
-    },
-  ];
-
   const data: GranularityComparisonCollection = allComparisons
     ? allComparisons[activeGranularity]
     : defaultData;
 
   const diffData = differencesData || defaultDifferencesData;
   const columnGraphData = columnData || defaultColumnGraphData;
+
+  // Get width and height
+  const graphContainerRef = useRef<HTMLDivElement>(null);
+  let { width, height } = useComponentSize(graphContainerRef);
 
   // Initial data fetch
   useEffect(() => {
@@ -188,16 +126,20 @@ function App() {
         className="App"
         style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
       >
-        <GraphTypeToggle
-          onSelectGraphType={setShowingGraph}
-          showingGraph={showingGraph}
-        />
-        {isLoading && <div>Loading...</div>}
-        {!isLoading && showingGraph === "area" && <AreaGraphContainer data={diffData} />}
-        {!isLoading && showingGraph === "bubble" && <GraphContainer data={data} />}
-        {!isLoading && showingGraph === "column" && (
-          <ColumnGraphContainer data={columnGraphData} />
-        )}
+        <div style={{ height: "100%", width: "100%" }} ref={graphContainerRef}>
+          <GraphTypeToggle
+            onSelectGraphType={setShowingGraph}
+            showingGraph={showingGraph}
+          />
+          {(isLoading || width < 1) && <div>Loading...</div>}
+          {!isLoading && showingGraph === "area" && (
+            <AreaGraphContainer data={diffData} />
+          )}
+          {!isLoading && showingGraph === "bubble" && <GraphContainer data={data} />}
+          {!isLoading && showingGraph === "column" && (
+            <ColumnGraphContainer data={columnGraphData} width={width} height={height} />
+          )}
+        </div>
       </div>
     </div>
   );

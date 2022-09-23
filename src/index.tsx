@@ -24,7 +24,6 @@ window.embedDreamChart = function (htmlTagId: keyof HTMLElementTagNameMap) {
       el
     );
   };
-
   render();
 };
 
