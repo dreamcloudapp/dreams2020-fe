@@ -1,18 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
-const { getDifferenceInDays } = require("./modules/time-helpers");
 import { DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
 import { SET2020, SRC_FOLDER } from "./config";
 import { ColorTheme } from "./modules/theme";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
-type Similarity = "low" | "medium" | "high";
-type SimilarityRecord = {
-  similarity: Similarity;
-  count: number;
-};
-
 const COLORS = {
   low: ColorTheme.BLUE,
   medium: ColorTheme.GRAY,
@@ -49,39 +42,38 @@ const dataArr2020: NewsRecordWithDates[] = files
       return { ...newsRecord, dreamDate, newsDate };
     });
   })
-  .flat();
+  .flat()
+  // If they dream and news are not in the same month, we don't care about them
+  .filter((record: NewsRecordWithDates) => {
+    const newsMonth = record.newsDate.getMonth();
+    const dreamMonth = record.dreamDate.getMonth();
+    if (isNaN(newsMonth) || isNaN(dreamMonth)) {
+      throw new Error(`Invalid date: ${record.newsDate}`);
+    }
+    return newsMonth === dreamMonth;
+  });
 
 // Now we have all the data for 2020
 // We need to group it by month
 // We're only interested in the data where dreams and news are in the same month
 const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => {
-  const newsMonth = record.newsDate.getMonth();
-  const dreamMonth = record.dreamDate.getMonth();
+  const dreamNewsMonth = record.newsDate.getMonth();
 
-  if (isNaN(newsMonth) || isNaN(dreamMonth)) {
-    throw new Error(`Invalid date: ${record.newsDate}`);
-  }
-
-  // If they dream and news are not in the same month, we don't care about them
-  if (newsMonth !== dreamMonth) return acc;
-
+  // We check if a particular dream day / news day combination
+  // Is 'high', 'medium', or 'low' similarity
   const { similarity } = record;
-  let highSimilarity = 0;
-  let mediumSimilarity = 0;
-  let lowSimilarity = 0;
-  if (similarity >= HIGH_SIMILARITY) {
-    highSimilarity++;
-  } else if (similarity >= MEDIUM_SIMILARITY) {
-    mediumSimilarity++;
-  } else {
-    lowSimilarity++;
-  }
+  const isHigh = similarity >= HIGH_SIMILARITY;
+  const isMedium = similarity >= MEDIUM_SIMILARITY && similarity < HIGH_SIMILARITY;
+  const isLow = similarity < MEDIUM_SIMILARITY;
+  const highSimilarity = isHigh ? 1 : 0;
+  const mediumSimilarity = isMedium ? 1 : 0;
+  const lowSimilarity = isLow ? 1 : 0;
 
-  if (!acc[newsMonth]) {
+  if (!acc[dreamNewsMonth]) {
     return {
       ...acc,
-      [newsMonth]: {
-        month: newsMonth,
+      [dreamNewsMonth]: {
+        month: dreamNewsMonth,
         similarity: record.similarity,
         count: 1,
         highSimilarity,
@@ -92,13 +84,13 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
   } else {
     return {
       ...acc,
-      [newsMonth]: {
-        ...acc[newsMonth],
-        similarity: acc[newsMonth].similarity + record.similarity,
-        count: acc[newsMonth].count + 1,
-        highSimilarity: acc[newsMonth].highSimilarity + highSimilarity,
-        mediumSimilarity: acc[newsMonth].mediumSimilarity + mediumSimilarity,
-        lowSimilarity: acc[newsMonth].lowSimilarity + lowSimilarity,
+      [dreamNewsMonth]: {
+        ...acc[dreamNewsMonth],
+        similarity: acc[dreamNewsMonth].similarity + record.similarity,
+        count: acc[dreamNewsMonth].count + 1,
+        highSimilarity: acc[dreamNewsMonth].highSimilarity + highSimilarity,
+        mediumSimilarity: acc[dreamNewsMonth].mediumSimilarity + mediumSimilarity,
+        lowSimilarity: acc[dreamNewsMonth].lowSimilarity + lowSimilarity,
       },
     };
   }
