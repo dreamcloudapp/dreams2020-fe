@@ -43,7 +43,7 @@ const dataArr2020: NewsRecordWithDates[] = files
     });
   })
   .flat()
-  // If they dream and news are not in the same month, we don't care about them
+  // For this chart, we only care about dreams & news in the same month
   .filter((record: NewsRecordWithDates) => {
     const newsMonth = record.newsDate.getMonth();
     const dreamMonth = record.dreamDate.getMonth();
@@ -65,32 +65,37 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
   const isHigh = similarity >= HIGH_SIMILARITY;
   const isMedium = similarity >= MEDIUM_SIMILARITY && similarity < HIGH_SIMILARITY;
   const isLow = similarity < MEDIUM_SIMILARITY;
-  const highSimilarity = isHigh ? 1 : 0;
-  const mediumSimilarity = isMedium ? 1 : 0;
-  const lowSimilarity = isLow ? 1 : 0;
+  const highSimilarityAddCount = isHigh ? 1 : 0;
+  const mediumSimilarityAddCount = isMedium ? 1 : 0;
+  const lowSimilarityAddCount = isLow ? 1 : 0;
 
+  // If the month is not in the accumulator, we add it
   if (!acc[dreamNewsMonth]) {
     return {
       ...acc,
       [dreamNewsMonth]: {
         month: dreamNewsMonth,
-        similarity: record.similarity,
+        totalSimilarity: record.similarity,
         count: 1,
-        highSimilarity,
-        mediumSimilarity,
-        lowSimilarity,
+        highSimilarityCount: highSimilarityAddCount,
+        mediumSimilarityCount: mediumSimilarityAddCount,
+        lowSimilarityCount: lowSimilarityAddCount,
       },
     };
+    // If the month is in the accumulator, we add to it
   } else {
     return {
       ...acc,
       [dreamNewsMonth]: {
         ...acc[dreamNewsMonth],
-        similarity: acc[dreamNewsMonth].similarity + record.similarity,
+        totalSimilarity: acc[dreamNewsMonth].totalSimilarity + record.similarity,
         count: acc[dreamNewsMonth].count + 1,
-        highSimilarity: acc[dreamNewsMonth].highSimilarity + highSimilarity,
-        mediumSimilarity: acc[dreamNewsMonth].mediumSimilarity + mediumSimilarity,
-        lowSimilarity: acc[dreamNewsMonth].lowSimilarity + lowSimilarity,
+        highSimilarityCount:
+          acc[dreamNewsMonth].highSimilarityCount + highSimilarityAddCount,
+        mediumSimilarityCount:
+          acc[dreamNewsMonth].mediumSimilarityCount + mediumSimilarityAddCount,
+        lowSimilarityCount:
+          acc[dreamNewsMonth].lowSimilarityCount + lowSimilarityAddCount,
       },
     };
   }
@@ -99,27 +104,32 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
 // Now we just need to clean up the data
 const monthDataCleaned = Object.values(monthData)
   .map((monthRecord: any) => {
-    const { similarity, count, highSimilarity, mediumSimilarity, lowSimilarity } =
-      monthRecord;
+    const {
+      totalSimilarity,
+      count,
+      highSimilarityCount,
+      mediumSimilarityCount,
+      lowSimilarityCount,
+    } = monthRecord;
     return {
       month: monthRecord.month,
       count: count,
-      avgSimilarity: similarity / count,
+      avgSimilarity: totalSimilarity / count,
       highSimilarity: {
-        percent: (100 / count) * highSimilarity,
-        count: highSimilarity,
+        percent: (100 / count) * highSimilarityCount,
+        count: highSimilarityCount,
         threshold: HIGH_SIMILARITY,
         color: COLORS.high,
       },
       mediumSimilarity: {
-        percent: (100 / count) * mediumSimilarity,
-        count: mediumSimilarity,
+        percent: (100 / count) * mediumSimilarityCount,
+        count: mediumSimilarityCount,
         threshold: MEDIUM_SIMILARITY,
         color: COLORS.medium,
       },
       lowSimilarity: {
-        percent: (100 / count) * lowSimilarity,
-        count: lowSimilarity,
+        percent: (100 / count) * lowSimilarityCount,
+        count: lowSimilarityCount,
         threshold: 0,
         color: COLORS.low,
       },

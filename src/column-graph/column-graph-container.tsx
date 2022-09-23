@@ -66,8 +66,6 @@ export function ColumnGraphContainer({
   return (
     <svg width={width} height={height}>
       {data.map((d, i) => {
-        console.log(d);
-
         const colHeight = d.avgSimilarity * 18000;
         const highSimilarityHeight = (colHeight / 100) * d.highSimilarity.percent;
         const mediumSimilarityHeight = (colHeight / 100) * d.mediumSimilarity.percent;
