@@ -1,5 +1,5 @@
 import {
-  DifferenceDisplayReccord,
+  DifferenceDisplayRecord,
   DifferenceRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "react-redux";
@@ -14,7 +14,7 @@ const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 
 type ColumnGraphProps = {
-  data: DifferenceDisplayReccord[];
+  data: DifferenceDisplayRecord[];
   width: number;
   height: number;
   paddedMax: number;

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 import { DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
-import { SET2020, SRC_FOLDER } from "./config";
+import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
 import { ColorTheme } from "./modules/theme";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
@@ -13,10 +13,6 @@ const COLORS = {
 };
 
 console.log("Generating month column data...");
-
-// We're going to choose some arbitrary figures here
-const HIGH_SIMILARITY = 0.04;
-const MEDIUM_SIMILARITY = 0.02;
 
 // Open all the files in source data one by one
 const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));

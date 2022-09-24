@@ -1,6 +1,7 @@
 import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
+  DifferenceDisplayRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { ColumnGraphData } from "./App";
 
@@ -65,6 +66,17 @@ export const defaultDifferencesData: DifferenceByGranularity = {
       },
     },
   ],
+};
+
+export const defaultBarData: DifferenceDisplayRecord = {
+  key: "2020",
+  color: "hsl(24, 84%, 56%)",
+  comparisons: {
+    differences: [],
+    maxSimilarity: 1,
+    minSimilarity: 0,
+    maxAverageSimilarity: 1,
+  },
 };
 
 export const defaultColumnGraphData: ColumnGraphData[] = [

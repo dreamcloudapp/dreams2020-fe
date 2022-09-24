@@ -1,6 +1,4 @@
 import { createSlice, PayloadAction, Dispatch } from "@reduxjs/toolkit";
-// import { QueryBase } from "../types/queries";
-// import { debounce } from "lodash/fp";
 import { AppThunk } from "./store";
 import { RootState } from "./root-reducer";
 import {
@@ -8,6 +6,7 @@ import {
   ComparisonSet,
   GranularityComparisonCollection,
   DifferenceByGranularity,
+  DifferenceDisplayRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { ColumnGraphData } from "../App";
 
@@ -32,6 +31,7 @@ export type DataState = {
   comparisons?: BigBigThing;
   differences?: DifferenceByGranularity;
   columnData?: ColumnGraphData[];
+  barData?: DifferenceDisplayRecord;
 };
 
 const initialState: DataState = {
@@ -39,6 +39,7 @@ const initialState: DataState = {
   comparisons: undefined,
   differences: undefined,
   columnData: undefined,
+  barData: undefined,
 };
 
 const dataSlice = createSlice({
@@ -56,6 +57,9 @@ const dataSlice = createSlice({
     },
     setColumnData(state, action: PayloadAction<ColumnGraphData[]>) {
       state.columnData = action.payload;
+    },
+    setBarData(state, action: PayloadAction<DifferenceDisplayRecord>) {
+      state.barData = action.payload;
     },
   },
 });
@@ -77,6 +81,10 @@ export const selectDifferences = (
 
 export const selectColumnData = (state: RootState): ColumnGraphData[] | undefined => {
   return state?.data.columnData;
+};
+
+export const selectBarData = (state: RootState): DifferenceDisplayRecord | undefined => {
+  return state?.data.barData;
 };
 
 // Get the comparison sets for a given granularity
@@ -147,6 +155,7 @@ export function fetchBubbleData(): AppThunk {
 
 const differencesFile = "differences.json";
 const columnFile = "month-columns.json";
+const barFile = "bar-data.json";
 
 // Loads the differences from the file
 export function fetchAreaData(): AppThunk {
@@ -170,6 +179,19 @@ export function fetchColumnData(): AppThunk {
     const data = await response.json();
 
     dispatch(dataSlice.actions.setColumnData(data));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+// Loads bar data from the file
+export function fetchBarData(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${barFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setBarData(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }

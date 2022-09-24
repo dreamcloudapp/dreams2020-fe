@@ -4,6 +4,136 @@
   "comparisons": {
     "differences": [
       {
+        "difference": -26,
+        "recordCount": 754,
+        "averageSimilarity": 0.017202734662732106
+      },
+      {
+        "difference": -25,
+        "recordCount": 1358,
+        "averageSimilarity": 0.017126489149263627
+      },
+      {
+        "difference": -24,
+        "recordCount": 1407,
+        "averageSimilarity": 0.01694829562238806
+      },
+      {
+        "difference": -23,
+        "recordCount": 1456,
+        "averageSimilarity": 0.016954192186332435
+      },
+      {
+        "difference": -22,
+        "recordCount": 1505,
+        "averageSimilarity": 0.016982350607043162
+      },
+      {
+        "difference": -21,
+        "recordCount": 1554,
+        "averageSimilarity": 0.01707412025559847
+      },
+      {
+        "difference": -20,
+        "recordCount": 1603,
+        "averageSimilarity": 0.016890717063630687
+      },
+      {
+        "difference": -19,
+        "recordCount": 1652,
+        "averageSimilarity": 0.01696455290599274
+      },
+      {
+        "difference": -18,
+        "recordCount": 1701,
+        "averageSimilarity": 0.016818925643680184
+      },
+      {
+        "difference": -17,
+        "recordCount": 1750,
+        "averageSimilarity": 0.016674741496342863
+      },
+      {
+        "difference": -16,
+        "recordCount": 1799,
+        "averageSimilarity": 0.01667515772012233
+      },
+      {
+        "difference": -15,
+        "recordCount": 1848,
+        "averageSimilarity": 0.016598644803787886
+      },
+      {
+        "difference": -14,
+        "recordCount": 1897,
+        "averageSimilarity": 0.016468658968581993
+      },
+      {
+        "difference": -13,
+        "recordCount": 1946,
+        "averageSimilarity": 0.016504826853237394
+      },
+      {
+        "difference": -12,
+        "recordCount": 1995,
+        "averageSimilarity": 0.01641433822967416
+      },
+      {
+        "difference": -11,
+        "recordCount": 2044,
+        "averageSimilarity": 0.01645443248449123
+      },
+      {
+        "difference": -10,
+        "recordCount": 2093,
+        "averageSimilarity": 0.01656231042393694
+      },
+      {
+        "difference": -9,
+        "recordCount": 2142,
+        "averageSimilarity": 0.016613590958916902
+      },
+      {
+        "difference": -8,
+        "recordCount": 2191,
+        "averageSimilarity": 0.016435031488954838
+      },
+      {
+        "difference": -7,
+        "recordCount": 2240,
+        "averageSimilarity": 0.016366967556696407
+      },
+      {
+        "difference": -6,
+        "recordCount": 2289,
+        "averageSimilarity": 0.016317087112407196
+      },
+      {
+        "difference": -5,
+        "recordCount": 2338,
+        "averageSimilarity": 0.016301608923096674
+      },
+      {
+        "difference": -4,
+        "recordCount": 2387,
+        "averageSimilarity": 0.016215696294805203
+      },
+      {
+        "difference": -3,
+        "recordCount": 2436,
+        "averageSimilarity": 0.016122507385550065
+      },
+      {
+        "difference": -2,
+        "recordCount": 2485,
+        "averageSimilarity": 0.016041532993279668
+      },
+      {
+        "difference": -1,
+        "recordCount": 2534,
+        "averageSimilarity": 0.015927682032991358
+      },
+      {
         "difference": 0,
         "recordCount": 2541,
         "averageSimilarity": 0.015897252756434513
@@ -132,136 +262,6 @@
         "difference": 25,
         "recordCount": 945,
         "averageSimilarity": 0.01427755737650794
-      },
-      {
-        "difference": -1,
-        "recordCount": 2534,
-        "averageSimilarity": 0.015927682032991358
-      },
-      {
-        "difference": -2,
-        "recordCount": 2485,
-        "averageSimilarity": 0.016041532993279668
-      },
-      {
-        "difference": -3,
-        "recordCount": 2436,
-        "averageSimilarity": 0.016122507385550065
-      },
-      {
-        "difference": -4,
-        "recordCount": 2387,
-        "averageSimilarity": 0.016215696294805203
-      },
-      {
-        "difference": -5,
-        "recordCount": 2338,
-        "averageSimilarity": 0.016301608923096674
-      },
-      {
-        "difference": -6,
-        "recordCount": 2289,
-        "averageSimilarity": 0.016317087112407196
-      },
-      {
-        "difference": -7,
-        "recordCount": 2240,
-        "averageSimilarity": 0.016366967556696407
-      },
-      {
-        "difference": -8,
-        "recordCount": 2191,
-        "averageSimilarity": 0.016435031488954838
-      },
-      {
-        "difference": -9,
-        "recordCount": 2142,
-        "averageSimilarity": 0.016613590958916902
-      },
-      {
-        "difference": -10,
-        "recordCount": 2093,
-        "averageSimilarity": 0.01656231042393694
-      },
-      {
-        "difference": -11,
-        "recordCount": 2044,
-        "averageSimilarity": 0.01645443248449123
-      },
-      {
-        "difference": -12,
-        "recordCount": 1995,
-        "averageSimilarity": 0.01641433822967416
-      },
-      {
-        "difference": -13,
-        "recordCount": 1946,
-        "averageSimilarity": 0.016504826853237394
-      },
-      {
-        "difference": -14,
-        "recordCount": 1897,
-        "averageSimilarity": 0.016468658968581993
-      },
-      {
-        "difference": -15,
-        "recordCount": 1848,
-        "averageSimilarity": 0.016598644803787886
-      },
-      {
-        "difference": -16,
-        "recordCount": 1799,
-        "averageSimilarity": 0.01667515772012233
-      },
-      {
-        "difference": -17,
-        "recordCount": 1750,
-        "averageSimilarity": 0.016674741496342863
-      },
-      {
-        "difference": -18,
-        "recordCount": 1701,
-        "averageSimilarity": 0.016818925643680184
-      },
-      {
-        "difference": -19,
-        "recordCount": 1652,
-        "averageSimilarity": 0.01696455290599274
-      },
-      {
-        "difference": -20,
-        "recordCount": 1603,
-        "averageSimilarity": 0.016890717063630687
-      },
-      {
-        "difference": -21,
-        "recordCount": 1554,
-        "averageSimilarity": 0.01707412025559847
-      },
-      {
-        "difference": -22,
-        "recordCount": 1505,
-        "averageSimilarity": 0.016982350607043162
-      },
-      {
-        "difference": -23,
-        "recordCount": 1456,
-        "averageSimilarity": 0.016954192186332435
-      },
-      {
-        "difference": -24,
-        "recordCount": 1407,
-        "averageSimilarity": 0.01694829562238806
-      },
-      {
-        "difference": -25,
-        "recordCount": 1358,
-        "averageSimilarity": 0.017126489149263627
-      },
-      {
-        "difference": -26,
-        "recordCount": 754,
-        "averageSimilarity": 0.017202734662732106
       }
     ],
     "maxAverageSimilarity": 0.017202734662732106,

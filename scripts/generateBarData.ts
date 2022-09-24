@@ -3,7 +3,7 @@ const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 import {
   DayRecord,
-  DifferenceDisplayReccord,
+  DifferenceDisplayRecord,
   DifferenceRecord,
   DifferenceRecordSet,
   NewsRecord,
@@ -20,10 +20,6 @@ const COLORS = {
 };
 
 console.log("Generating bar data...");
-
-// We're going to choose some arbitrary figures here
-const HIGH_SIMILARITY = 0.04;
-const MEDIUM_SIMILARITY = 0.02;
 
 // Open all the files in source data one by one
 const files = fs.readdirSync(path.join(__dirname, SRC_FOLDER));
@@ -57,7 +53,7 @@ const dataArr2020: NewsRecordWithDates[] = files
     return diff <= 180;
   });
 
-//   const x: DifferenceDisplayReccord[] = [];
+//   const x: DifferenceDisplayRecord[] = [];
 
 const comparisons: DifferenceRecordSet[] = [];
 
@@ -119,6 +115,9 @@ const minAverageSimilarity = Math.min(
   ...weekData.map(record => record.averageSimilarity)
 );
 
+// Sort week data by difference
+weekData.sort((a, b) => a.difference - b.difference);
+
 // Make a DifferenceRecordSet
 const weekDataWithMinMax: DifferenceRecordSet = {
   differences: weekData,
@@ -128,7 +127,7 @@ const weekDataWithMinMax: DifferenceRecordSet = {
 };
 
 // Make a DifferenceDisplayRecord
-const weekDataDisplay: DifferenceDisplayReccord = {
+const weekDataDisplay: DifferenceDisplayRecord = {
   key: "2020",
   color: ColorTheme.RED,
   comparisons: weekDataWithMinMax,

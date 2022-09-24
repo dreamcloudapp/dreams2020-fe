@@ -1,5 +1,6 @@
 import { ColumnGraphData } from "../App";
 import { changeHslOpacity } from "../modules/colorHelpers";
+import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 
 const STROKE_WIDTH = 2;
@@ -11,13 +12,6 @@ type GraphProps = {
   height: number;
   handleMouseOver: (event: any, datum: any) => void;
   onMouseOut: () => void;
-};
-
-const prettyNumber = (similarity: number, decimals: number): string => {
-  if (similarity === 0) {
-    return "0";
-  }
-  return similarity.toFixed(decimals);
 };
 
 const renderTooltip = (d: ColumnGraphData) => {

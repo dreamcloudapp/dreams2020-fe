@@ -13,6 +13,8 @@ import {
   selectDifferences,
   fetchColumnData,
   selectColumnData,
+  selectBarData,
+  fetchBarData,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
@@ -26,14 +28,16 @@ import {
 import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import {
+  defaultBarData,
   defaultColumnGraphData,
   defaultData,
   defaultDifferencesData,
 } from "./initial-dummy-data";
 import useComponentSize from "@rehooks/component-size";
 import { localPoint } from "@visx/event";
+import { BarGraphContainer } from "./bar-graph/bar-graph-container";
 
-const graphtypes: GraphType[] = ["area", "bubble", "column"];
+const graphtypes: GraphType[] = ["area", "bubble", "column", "bar"];
 
 export type SimilarityDescription = {
   percent: number;
@@ -95,6 +99,7 @@ function App() {
   const showingGraph = useSelector(selectShowingGraph);
   const differencesData = useSelector(selectDifferences);
   const columnData = useSelector(selectColumnData);
+  const barData = useSelector(selectBarData);
 
   const data: GranularityComparisonCollection = allComparisons
     ? allComparisons[activeGranularity]
@@ -102,6 +107,7 @@ function App() {
 
   const diffData = differencesData || defaultDifferencesData;
   const columnGraphData = columnData || defaultColumnGraphData;
+  const barGraphData = barData || defaultBarData;
 
   // Get width and height
   const graphContainerRef = useRef<HTMLDivElement>(null);
@@ -134,6 +140,7 @@ function App() {
     dispatch<any>(fetchBubbleData());
     dispatch<any>(fetchAreaData());
     dispatch<any>(fetchColumnData());
+    dispatch<any>(fetchBarData());
   }, [dispatch]);
 
   return (
@@ -183,6 +190,15 @@ function App() {
             {!isLoading && showingGraph === "column" && (
               <ColumnGraphContainer
                 data={columnGraphData}
+                width={width}
+                height={height}
+                handleMouseOver={handleMouseOver}
+                onMouseOut={hideTooltip}
+              />
+            )}
+            {!isLoading && showingGraph === "bar" && (
+              <BarGraphContainer
+                data={barGraphData}
                 width={width}
                 height={height}
                 handleMouseOver={handleMouseOver}
