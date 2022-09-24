@@ -38,9 +38,10 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "bubbledata": "npx ts-node scripts/generateBubbleData.ts",
-    "columndata": "npx ts-node scripts/generateColumnData.ts",
+    "bardata": "npx ts-node scripts/generateBarData.ts",
+    "areadata": "npx ts-node scripts/generateAreaData.ts",
     "monthcolumns": "npx ts-node scripts/generateMonthColumnData.ts",
-    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateColumnData.ts && npx ts-node scripts/generateMonthColumnData.ts"
+    "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateAreaData.ts && npx ts-node scripts/generateMonthColumnData.ts && npx ts-node scripts/generateBarData.ts"
   },
   "eslintConfig": {
     "extends": [
