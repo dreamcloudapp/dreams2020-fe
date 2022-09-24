@@ -47,23 +47,16 @@ const dataArr2020: NewsRecordWithDates[] = files
   })
   .flat()
   // For this chart, we only care about dreams & news within 6 months of each other
+  // But really this doesn't matter
+  // Because that's all that's in the data for now
   .filter((record: NewsRecordWithDates) => {
     const { dreamDate, newsDate } = record;
     const diff = Math.abs(getDifferenceInDays(newsDate, dreamDate));
     return diff <= 180;
   });
 
-//   const x: DifferenceDisplayRecord[] = [];
-
-const comparisons: DifferenceRecordSet[] = [];
-
-const diff: DifferenceRecord[] = [];
-
 // We're going to loop through dataArr2020: NewsRecordWithDates[]
 // We're just going to do it by weeks, keep it simple
-// Get the difference in days, and modulo 7
-// If the difference is 0, we're on the same week
-
 type IntermediaryDifferenceRecord = {
   difference: number;
   recordCount: number;
@@ -73,9 +66,17 @@ type IntermediaryDifferenceRecord = {
 
 const weekDict: { [key: string]: IntermediaryDifferenceRecord } = {};
 
-dataArr2020.forEach((record: NewsRecordWithDates) => {
+dataArr2020.forEach((record: NewsRecordWithDates, index) => {
   const { dreamDate, newsDate } = record;
-  const diff = getDifferenceInDays(dreamDate, newsDate);
+
+  // If the news comes before the dream, the difference is positive
+  // If the dream comes before the news, the difference is negative
+  // Zero is the same day
+  const diff = getDifferenceInDays(newsDate, dreamDate);
+
+  // In this case, zero means that the dream came after the news
+  // But within one week
+  // -1 means that the dream came before the news, but within one week
   const weekDiff = Math.floor(diff / 7);
 
   const key = `${weekDiff}`;

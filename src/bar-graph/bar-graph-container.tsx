@@ -24,12 +24,25 @@ const padding: Padding = {
 };
 
 const renderTooltip = (d: DifferenceRecord) => {
-  const temporal = d.difference > 0 ? "after" : "before";
-  const absoluteDifference = Math.abs(d.difference);
-  const tooltipHeader =
-    absoluteDifference === 0
-      ? "Same"
-      : `Dreams ${absoluteDifference} weeks ${temporal} the news`;
+  const { difference } = d;
+  const absoluteDifference = Math.abs(difference);
+
+  let tooltipHeader = "";
+  if (difference === 0) {
+    tooltipHeader = "Dreams within 1 week after the news";
+  } else if (difference > 0) {
+    tooltipHeader = `Dreams within ${absoluteDifference + 1} weeks after the news`;
+  } else if (difference === -1) {
+    tooltipHeader = `Dreams within 1 week before the news`;
+  } else if (difference < -1) {
+    tooltipHeader = `Dreams within ${absoluteDifference} weeks before the news`;
+  }
+
+  //   const tooltipHeader =
+
+  //     absoluteDifference === 0
+  //       ? "Dreams within 1 week after the news"
+  //       : `Dreams within ${absoluteDifference} weeks ${temporal} the news`;
 
   return (
     <div className="tooltip">
