@@ -48,7 +48,7 @@ export const getBroaderGranularity = (
 ): GranularityComparisonCollection => {
   // Turn the day comparison dictionaries into week comparison dictionaries
   let maxTimePeriodSimilarity = 0;
-  let minSimilarity = 1;
+  let minTimePeriodSimilarity = 1;
   let maxWordCount = 0;
   let minWordCount = VERY_LARGE_NUMBER;
   const timePeriodComparisonDictionaries: ColoredSetWithinGranularity[] =
@@ -153,7 +153,7 @@ export const getBroaderGranularity = (
       const shortenedComparisons = filteredComparisons.map(comp => {
         // Ugly!
         if (comp.score > maxTimePeriodSimilarity) maxTimePeriodSimilarity = comp.score;
-        if (comp.score < minSimilarity) minSimilarity = comp.score;
+        if (comp.score < minTimePeriodSimilarity) minTimePeriodSimilarity = comp.score;
         if (comp.wordCount > maxWordCount) maxWordCount = comp.wordCount;
         if (comp.wordCount < minWordCount) minWordCount = comp.wordCount;
 
@@ -174,7 +174,7 @@ export const getBroaderGranularity = (
   const ret: GranularityComparisonCollection = {
     granularity: granularity,
     maxSimilarity: maxTimePeriodSimilarity,
-    minSimilarity: minSimilarity,
+    minSimilarity: minTimePeriodSimilarity,
     maxWordCount: maxWordCount,
     minWordCount: minWordCount,
     comparisonSets: timePeriodComparisonDictionaries,

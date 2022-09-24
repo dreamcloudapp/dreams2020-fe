@@ -68,7 +68,7 @@ function Graph({
     .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
 
   const scaleX = scaleLinear()
-    .domain([0, data.maxSimilarity])
+    .domain([data.minSimilarity, data.maxSimilarity])
     .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
 
   const scaleYDiscrete = scaleLinear().domain(domain).range(range);
