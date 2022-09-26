@@ -25,7 +25,10 @@ import {
   setPrevFocusedComparison,
   setShowingGraph,
 } from "./ducks/ui";
-import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
+import {
+  GranularityComparisonCollection,
+  SimilarityLevelSection,
+} from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import {
   defaultBarData,
@@ -60,9 +63,7 @@ export type ColumnGraphData = {
   totalWordCount: number;
   avgSimilarity: number;
   maxSimilarity: number;
-  highSimilarity: SimilarityDescription;
-  mediumSimilarity: SimilarityDescription;
-  lowSimilarity: SimilarityDescription;
+  similarityLevels: SimilarityLevelSection[];
 };
 
 function GraphTypeToggle({

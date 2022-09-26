@@ -5,24 +5,29 @@
     "totalWordCount": 93240113,
     "avgSimilarity": 0.010360882948074924,
     "maxSimilarity": 0.019663893,
-    "highSimilarity": {
-      "percent": 0,
-      "count": 0,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 0,
-      "count": 0,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 100,
-      "count": 961,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 89.69823100936524,
+        "threshold": 0,
+        "count": 862
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 10.301768990634756,
+        "threshold": 0.015,
+        "count": 99
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 0,
+        "threshold": 0.03,
+        "count": 862
+      }
+    ]
   },
   {
     "month": 1,
@@ -30,24 +35,29 @@
     "totalWordCount": 64435608,
     "avgSimilarity": 0.011494222366349584,
     "maxSimilarity": 0.028356412,
-    "highSimilarity": {
-      "percent": 0,
-      "count": 0,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 3.4482758620689653,
-      "count": 29,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 96.55172413793103,
-      "count": 812,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 80.7372175980975,
+        "threshold": 0,
+        "count": 679
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 19.2627824019025,
+        "threshold": 0.015,
+        "count": 162
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 0,
+        "threshold": 0.03,
+        "count": 679
+      }
+    ]
   },
   {
     "month": 2,
@@ -55,24 +65,29 @@
     "totalWordCount": 80677445,
     "avgSimilarity": 0.01894762383111347,
     "maxSimilarity": 0.0742324,
-    "highSimilarity": {
-      "percent": 3.7460978147762747,
-      "count": 36,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 29.34443288241415,
-      "count": 282,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 66.90946930280957,
-      "count": 643,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 41.727367325702396,
+        "threshold": 0,
+        "count": 401
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 42.66389177939646,
+        "threshold": 0.015,
+        "count": 410
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 15.608740894901144,
+        "threshold": 0.03,
+        "count": 401
+      }
+    ]
   },
   {
     "month": 3,
@@ -80,24 +95,29 @@
     "totalWordCount": 129800895,
     "avgSimilarity": 0.020757117162333312,
     "maxSimilarity": 0.07170229,
-    "highSimilarity": {
-      "percent": 7.666666666666666,
-      "count": 69,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 36.44444444444444,
-      "count": 328,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 55.888888888888886,
-      "count": 503,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 31,
+        "threshold": 0,
+        "count": 279
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 57,
+        "threshold": 0.015,
+        "count": 513
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 12,
+        "threshold": 0.03,
+        "count": 279
+      }
+    ]
   },
   {
     "month": 4,
@@ -105,24 +125,29 @@
     "totalWordCount": 117137588,
     "avgSimilarity": 0.01885848775338188,
     "maxSimilarity": 0.05658838,
-    "highSimilarity": {
-      "percent": 3.0176899063475546,
-      "count": 29,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 34.33922996878252,
-      "count": 330,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 62.643080124869925,
-      "count": 602,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 35.483870967741936,
+        "threshold": 0,
+        "count": 341
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 58.168574401664934,
+        "threshold": 0.015,
+        "count": 559
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 6.347554630593132,
+        "threshold": 0.03,
+        "count": 341
+      }
+    ]
   },
   {
     "month": 5,
@@ -130,24 +155,29 @@
     "totalWordCount": 94209206,
     "avgSimilarity": 0.01514743531844445,
     "maxSimilarity": 0.046182867,
-    "highSimilarity": {
-      "percent": 0.3333333333333333,
-      "count": 3,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 26.11111111111111,
-      "count": 235,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 73.55555555555556,
-      "count": 662,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 57.55555555555555,
+        "threshold": 0,
+        "count": 518
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 39.888888888888886,
+        "threshold": 0.015,
+        "count": 359
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 2.5555555555555554,
+        "threshold": 0.03,
+        "count": 518
+      }
+    ]
   },
   {
     "month": 6,
@@ -155,24 +185,29 @@
     "totalWordCount": 98491575,
     "avgSimilarity": 0.015117964590738813,
     "maxSimilarity": 0.037202023,
-    "highSimilarity": {
-      "percent": 0,
-      "count": 0,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 16.129032258064516,
-      "count": 155,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 83.87096774193549,
-      "count": 806,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 56.71175858480749,
+        "threshold": 0,
+        "count": 545
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 42.55983350676379,
+        "threshold": 0.015,
+        "count": 409
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 0.72840790842872,
+        "threshold": 0.03,
+        "count": 545
+      }
+    ]
   },
   {
     "month": 7,
@@ -180,24 +215,29 @@
     "totalWordCount": 90011330,
     "avgSimilarity": 0.017935356374921968,
     "maxSimilarity": 0.04646403,
-    "highSimilarity": {
-      "percent": 1.352757544224766,
-      "count": 13,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 25.18210197710718,
-      "count": 242,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 73.46514047866805,
-      "count": 706,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 41.31113423517169,
+        "threshold": 0,
+        "count": 397
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 49.947970863683665,
+        "threshold": 0.015,
+        "count": 480
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 8.74089490114464,
+        "threshold": 0.03,
+        "count": 397
+      }
+    ]
   },
   {
     "month": 8,
@@ -205,24 +245,29 @@
     "totalWordCount": 113236857,
     "avgSimilarity": 0.016160267810555563,
     "maxSimilarity": 0.03345677,
-    "highSimilarity": {
-      "percent": 0,
-      "count": 0,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 19.777777777777775,
-      "count": 178,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 80.22222222222221,
-      "count": 722,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 40.666666666666664,
+        "threshold": 0,
+        "count": 366
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 59.22222222222222,
+        "threshold": 0.015,
+        "count": 533
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 0.1111111111111111,
+        "threshold": 0.03,
+        "count": 366
+      }
+    ]
   },
   {
     "month": 9,
@@ -230,24 +275,29 @@
     "totalWordCount": 124051547,
     "avgSimilarity": 0.016929710051092638,
     "maxSimilarity": 0.08139946,
-    "highSimilarity": {
-      "percent": 4.890738813735692,
-      "count": 47,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 13.631633714880333,
-      "count": 131,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 81.47762747138397,
-      "count": 783,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 57.75234131113423,
+        "threshold": 0,
+        "count": 555
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 32.3621227887617,
+        "threshold": 0.015,
+        "count": 311
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 9.885535900104058,
+        "threshold": 0.03,
+        "count": 555
+      }
+    ]
   },
   {
     "month": 10,
@@ -255,24 +305,29 @@
     "totalWordCount": 93720447,
     "avgSimilarity": 0.014222486277333342,
     "maxSimilarity": 0.046026386,
-    "highSimilarity": {
-      "percent": 0.3333333333333333,
-      "count": 3,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 11.777777777777777,
-      "count": 106,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 87.88888888888889,
-      "count": 791,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 67.66666666666666,
+        "threshold": 0,
+        "count": 609
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 29.666666666666664,
+        "threshold": 0.015,
+        "count": 267
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 2.6666666666666665,
+        "threshold": 0.03,
+        "count": 609
+      }
+    ]
   },
   {
     "month": 11,
@@ -280,23 +335,28 @@
     "totalWordCount": 106684254,
     "avgSimilarity": 0.013685454522580668,
     "maxSimilarity": 0.038953472,
-    "highSimilarity": {
-      "percent": 0,
-      "count": 0,
-      "threshold": 0.04,
-      "color": "hsl(24, 84%, 56%)"
-    },
-    "mediumSimilarity": {
-      "percent": 8.949011446409989,
-      "count": 86,
-      "threshold": 0.02,
-      "color": "hsl(0, 0%, 50%)"
-    },
-    "lowSimilarity": {
-      "percent": 91.05098855359,
-      "count": 875,
-      "threshold": 0,
-      "color": "hsl(220, 90%, 60%)"
-    }
+    "similarityLevels": [
+      {
+        "similarityLevel": "low",
+        "color": "hsl(220, 20%, 30%)",
+        "percent": 64.51612903225806,
+        "threshold": 0,
+        "count": 620
+      },
+      {
+        "similarityLevel": "medium",
+        "color": "hsl(220, 50%, 45%)",
+        "percent": 34.755463059313215,
+        "threshold": 0.015,
+        "count": 334
+      },
+      {
+        "similarityLevel": "high",
+        "color": "hsl(220, 90%, 60%)",
+        "percent": 0.72840790842872,
+        "threshold": 0.03,
+        "count": 620
+      }
+    ]
   }
 ]

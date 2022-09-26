@@ -1,4 +1,5 @@
 import { ColumnGraphData } from "../App";
+import { Column } from "../components/column";
 import { changeHslOpacity } from "../modules/colorHelpers";
 import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
@@ -26,7 +27,7 @@ const renderTooltip = (d: ColumnGraphData) => {
         <b>Average similarity: </b>
         {prettyNumber(d.avgSimilarity, 5)}
       </p>
-      <p>
+      {/* <p>
         <b style={{ color: d.highSimilarity.color }}>High similarity day pairs</b>
         <span> (&gt;= {d.highSimilarity.threshold}): </span>
         <span> {prettyNumber(d.highSimilarity.percent, 1)}%</span>
@@ -40,7 +41,7 @@ const renderTooltip = (d: ColumnGraphData) => {
         <b style={{ color: d.lowSimilarity.color }}>Low similarity day pairs</b>
         <span> (&lt; {d.mediumSimilarity.threshold}): </span>
         <span>{prettyNumber(d.lowSimilarity.percent, 1)}%</span>
-      </p>
+      </p> */}
       <p>
         <b>Total day comparisons: </b>
         {d.count}
@@ -65,9 +66,6 @@ export function ColumnGraphContainer({
     <svg width={width} height={height}>
       {data.map((d, i) => {
         const colHeight = d.avgSimilarity * 18000;
-        const highSimilarityHeight = (colHeight / 100) * d.highSimilarity.percent;
-        const mediumSimilarityHeight = (colHeight / 100) * d.mediumSimilarity.percent;
-        const lowSimilarityHeight = (colHeight / 100) * d.lowSimilarity.percent;
 
         const x = i * (columnWidth + COLUMN_GAP);
 
@@ -76,46 +74,20 @@ export function ColumnGraphContainer({
         // ]
 
         return (
-          <g
-            key={i}
-            onMouseOver={e => {
-              (handleMouseOver as any)(e, renderTooltip(d));
-            }}
-            onMouseOut={onMouseOut}
-          >
-            {/* High Similarity */}
-            <rect
+          <g>
+            <Column
+              key={i}
+              handleMouseOver={handleMouseOver}
+              onMouseOut={onMouseOut}
+              sections={d.similarityLevels}
               x={x}
               y={height - colHeight}
-              key={i}
-              width={columnWidth}
-              height={highSimilarityHeight}
-              fill={changeHslOpacity(d.highSimilarity.color, 0.2)}
-              stroke={d.highSimilarity.color}
-              strokeWidth={STROKE_WIDTH}
+              tooltipData={d}
+              renderTooltip={renderTooltip}
+              colHeight={colHeight}
+              colWidth={columnWidth}
             />
-            {/* Medium similarity */}
-            <rect
-              x={x}
-              y={height - mediumSimilarityHeight - lowSimilarityHeight}
-              key={i + "medium"}
-              width={columnWidth}
-              height={mediumSimilarityHeight}
-              fill={changeHslOpacity(d.mediumSimilarity.color, 0.2)}
-              stroke={d.mediumSimilarity.color}
-              strokeWidth={STROKE_WIDTH}
-            />
-            {/* Low Similarity*/}
-            <rect
-              x={x}
-              y={height - lowSimilarityHeight}
-              key={i + "low"}
-              width={columnWidth}
-              height={lowSimilarityHeight}
-              fill={changeHslOpacity(d.lowSimilarity.color, 0.2)}
-              stroke={d.lowSimilarity.color}
-              strokeWidth={STROKE_WIDTH}
-            />
+
             {/* Label */}
             <text
               x={x + columnWidth / 2}

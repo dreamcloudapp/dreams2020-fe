@@ -3,7 +3,7 @@ const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 import { DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
 import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
-import { ColorTheme } from "./modules/theme";
+import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
 const COLORS = {
@@ -130,24 +130,30 @@ const monthDataCleaned = Object.values(monthData)
       totalWordCount: totalWordCount,
       avgSimilarity: totalSimilarity / count,
       maxSimilarity: highestSimilarities[monthRecord.month],
-      highSimilarity: {
-        percent: (100 / count) * highSimilarityCount,
-        count: highSimilarityCount,
-        threshold: HIGH_SIMILARITY,
-        color: COLORS.high,
-      },
-      mediumSimilarity: {
-        percent: (100 / count) * mediumSimilarityCount,
-        count: mediumSimilarityCount,
-        threshold: MEDIUM_SIMILARITY,
-        color: COLORS.medium,
-      },
-      lowSimilarity: {
-        percent: (100 / count) * lowSimilarityCount,
-        count: lowSimilarityCount,
-        threshold: 0,
-        color: COLORS.low,
-      },
+      // These are secretly SimilarityLevelSections
+      similarityLevels: [
+        {
+          similarityLevel: "low",
+          color: SIMILARITY_COLORS.low,
+          percent: (100 / count) * lowSimilarityCount,
+          threshold: 0,
+          count: lowSimilarityCount,
+        },
+        {
+          similarityLevel: "medium",
+          color: SIMILARITY_COLORS.medium,
+          percent: (100 / count) * mediumSimilarityCount,
+          threshold: MEDIUM_SIMILARITY,
+          count: mediumSimilarityCount,
+        },
+        {
+          similarityLevel: "high",
+          color: SIMILARITY_COLORS.high,
+          percent: (100 / count) * highSimilarityCount,
+          threshold: HIGH_SIMILARITY,
+          count: lowSimilarityCount,
+        },
+      ],
     };
   })
   .sort((a: any, b: any) => a.month - b.month);
