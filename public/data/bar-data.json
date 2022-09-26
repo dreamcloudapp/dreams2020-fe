@@ -11,17 +11,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 63.66047745358091
+            "percent": 63.66047745358091,
+            "threshold": 0,
+            "count": 480
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 32.891246684350136
+            "percent": 32.891246684350136,
+            "threshold": 0.015,
+            "count": 248
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.4482758620689657
+            "percent": 3.4482758620689657,
+            "threshold": 0.03,
+            "count": 26
           }
         ]
       },
@@ -33,17 +39,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 64.28571428571429
+            "percent": 64.28571428571429,
+            "threshold": 0,
+            "count": 873
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 32.253313696612665
+            "percent": 32.253313696612665,
+            "threshold": 0.015,
+            "count": 438
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.4609720176730487
+            "percent": 3.4609720176730487,
+            "threshold": 0.03,
+            "count": 47
           }
         ]
       },
@@ -55,17 +67,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 64.4633972992182
+            "percent": 64.4633972992182,
+            "threshold": 0,
+            "count": 907
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 31.982942430703627
+            "percent": 31.982942430703627,
+            "threshold": 0.015,
+            "count": 450
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.553660270078181
+            "percent": 3.553660270078181,
+            "threshold": 0.03,
+            "count": 50
           }
         ]
       },
@@ -77,17 +95,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 63.66758241758242
+            "percent": 63.66758241758242,
+            "threshold": 0,
+            "count": 927
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 33.17307692307693
+            "percent": 33.17307692307693,
+            "threshold": 0.015,
+            "count": 483
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.1593406593406597
+            "percent": 3.1593406593406597,
+            "threshold": 0.03,
+            "count": 46
           }
         ]
       },
@@ -99,17 +123,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 61.79401993355482
+            "percent": 61.79401993355482,
+            "threshold": 0,
+            "count": 930
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 34.81727574750831
+            "percent": 34.81727574750831,
+            "threshold": 0.015,
+            "count": 524
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.3887043189368775
+            "percent": 3.3887043189368775,
+            "threshold": 0.03,
+            "count": 51
           }
         ]
       },
@@ -121,17 +151,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 62.612612612612615
+            "percent": 62.612612612612615,
+            "threshold": 0,
+            "count": 973
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 33.71943371943372
+            "percent": 33.71943371943372,
+            "threshold": 0.015,
+            "count": 524
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.667953667953668
+            "percent": 3.667953667953668,
+            "threshold": 0.03,
+            "count": 57
           }
         ]
       },
@@ -143,17 +179,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 62.44541484716157
+            "percent": 62.44541484716157,
+            "threshold": 0,
+            "count": 1001
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 34.123518402994385
+            "percent": 34.123518402994385,
+            "threshold": 0.015,
+            "count": 547
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.4310667498440424
+            "percent": 3.4310667498440424,
+            "threshold": 0.03,
+            "count": 55
           }
         ]
       },
@@ -165,17 +207,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 60.83535108958838
+            "percent": 60.83535108958838,
+            "threshold": 0,
+            "count": 1005
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 35.653753026634384
+            "percent": 35.653753026634384,
+            "threshold": 0.015,
+            "count": 589
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.51089588377724
+            "percent": 3.51089588377724,
+            "threshold": 0.03,
+            "count": 58
           }
         ]
       },
@@ -187,17 +235,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 58.08348030570253
+            "percent": 58.08348030570253,
+            "threshold": 0,
+            "count": 988
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 37.91887125220458
+            "percent": 37.91887125220458,
+            "threshold": 0.015,
+            "count": 645
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.9976484420928866
+            "percent": 3.9976484420928866,
+            "threshold": 0.03,
+            "count": 68
           }
         ]
       },
@@ -209,17 +263,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 57.6
+            "percent": 57.6,
+            "threshold": 0,
+            "count": 1008
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 38.628571428571426
+            "percent": 38.628571428571426,
+            "threshold": 0.015,
+            "count": 676
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.7714285714285714
+            "percent": 3.7714285714285714,
+            "threshold": 0.03,
+            "count": 66
           }
         ]
       },
@@ -231,17 +291,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 54.97498610339077
+            "percent": 54.97498610339077,
+            "threshold": 0,
+            "count": 989
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 41.467481934408
+            "percent": 41.467481934408,
+            "threshold": 0.015,
+            "count": 746
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.5575319622012227
+            "percent": 3.5575319622012227,
+            "threshold": 0.03,
+            "count": 64
           }
         ]
       },
@@ -253,17 +319,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 54.816017316017316
+            "percent": 54.816017316017316,
+            "threshold": 0,
+            "count": 1013
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 41.55844155844156
+            "percent": 41.55844155844156,
+            "threshold": 0.015,
+            "count": 768
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.6255411255411256
+            "percent": 3.6255411255411256,
+            "threshold": 0.03,
+            "count": 67
           }
         ]
       },
@@ -275,17 +347,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.82024248813917
+            "percent": 52.82024248813917,
+            "threshold": 0,
+            "count": 1002
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.12071692145493
+            "percent": 43.12071692145493,
+            "threshold": 0.015,
+            "count": 818
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.059040590405904
+            "percent": 4.059040590405904,
+            "threshold": 0.03,
+            "count": 77
           }
         ]
       },
@@ -297,17 +375,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.826310380267216
+            "percent": 52.826310380267216,
+            "threshold": 0,
+            "count": 1028
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 42.959917780061666
+            "percent": 42.959917780061666,
+            "threshold": 0.015,
+            "count": 836
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.213771839671121
+            "percent": 4.213771839671121,
+            "threshold": 0.03,
+            "count": 82
           }
         ]
       },
@@ -319,17 +403,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.33082706766917
+            "percent": 52.33082706766917,
+            "threshold": 0,
+            "count": 1044
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.70927318295739
+            "percent": 43.70927318295739,
+            "threshold": 0.015,
+            "count": 872
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 3.9598997493734336
+            "percent": 3.9598997493734336,
+            "threshold": 0.03,
+            "count": 79
           }
         ]
       },
@@ -341,17 +431,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.054794520547944
+            "percent": 52.054794520547944,
+            "threshold": 0,
+            "count": 1064
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.39530332681017
+            "percent": 43.39530332681017,
+            "threshold": 0.015,
+            "count": 887
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.549902152641878
+            "percent": 4.549902152641878,
+            "threshold": 0.03,
+            "count": 93
           }
         ]
       },
@@ -363,17 +459,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 51.17056856187291
+            "percent": 51.17056856187291,
+            "threshold": 0,
+            "count": 1071
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 44.62494027711419
+            "percent": 44.62494027711419,
+            "threshold": 0.015,
+            "count": 934
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.2044911610129
+            "percent": 4.2044911610129,
+            "threshold": 0.03,
+            "count": 88
           }
         ]
       },
@@ -385,17 +487,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.38095238095238
+            "percent": 52.38095238095238,
+            "threshold": 0,
+            "count": 1122
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.183940242763775
+            "percent": 43.183940242763775,
+            "threshold": 0.015,
+            "count": 925
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.435107376283847
+            "percent": 4.435107376283847,
+            "threshold": 0.03,
+            "count": 95
           }
         ]
       },
@@ -407,17 +515,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 51.71154723870379
+            "percent": 51.71154723870379,
+            "threshold": 0,
+            "count": 1133
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.17663167503423
+            "percent": 43.17663167503423,
+            "threshold": 0.015,
+            "count": 946
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.111821086261981
+            "percent": 5.111821086261981,
+            "threshold": 0.03,
+            "count": 112
           }
         ]
       },
@@ -429,17 +543,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 51.91964285714286
+            "percent": 51.91964285714286,
+            "threshold": 0,
+            "count": 1163
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 42.767857142857146
+            "percent": 42.767857142857146,
+            "threshold": 0.015,
+            "count": 958
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.3125
+            "percent": 5.3125,
+            "threshold": 0.03,
+            "count": 119
           }
         ]
       },
@@ -451,17 +571,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.29357798165138
+            "percent": 52.29357798165138,
+            "threshold": 0,
+            "count": 1197
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 42.201834862385326
+            "percent": 42.201834862385326,
+            "threshold": 0.015,
+            "count": 966
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.504587155963303
+            "percent": 5.504587155963303,
+            "threshold": 0.03,
+            "count": 126
           }
         ]
       },
@@ -473,17 +599,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.65183917878529
+            "percent": 52.65183917878529,
+            "threshold": 0,
+            "count": 1231
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 41.616766467065865
+            "percent": 41.616766467065865,
+            "threshold": 0.015,
+            "count": 973
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.731394354148845
+            "percent": 5.731394354148845,
+            "threshold": 0.03,
+            "count": 134
           }
         ]
       },
@@ -495,17 +627,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 53.95894428152493
+            "percent": 53.95894428152493,
+            "threshold": 0,
+            "count": 1288
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 40.88814411395057
+            "percent": 40.88814411395057,
+            "threshold": 0.015,
+            "count": 976
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.152911604524508
+            "percent": 5.152911604524508,
+            "threshold": 0.03,
+            "count": 123
           }
         ]
       },
@@ -517,17 +655,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 54.35139573070607
+            "percent": 54.35139573070607,
+            "threshold": 0,
+            "count": 1324
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 40.06568144499179
+            "percent": 40.06568144499179,
+            "threshold": 0.015,
+            "count": 976
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.582922824302134
+            "percent": 5.582922824302134,
+            "threshold": 0.03,
+            "count": 136
           }
         ]
       },
@@ -539,17 +683,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 54.84909456740443
+            "percent": 54.84909456740443,
+            "threshold": 0,
+            "count": 1363
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 39.23541247484909
+            "percent": 39.23541247484909,
+            "threshold": 0.015,
+            "count": 975
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.915492957746479
+            "percent": 5.915492957746479,
+            "threshold": 0.03,
+            "count": 147
           }
         ]
       },
@@ -561,17 +711,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 55.36700868192581
+            "percent": 55.36700868192581,
+            "threshold": 0,
+            "count": 1403
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 39.660615627466456
+            "percent": 39.660615627466456,
+            "threshold": 0.015,
+            "count": 1005
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.972375690607735
+            "percent": 4.972375690607735,
+            "threshold": 0.03,
+            "count": 126
           }
         ]
       },
@@ -583,17 +739,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 55.175127902400625
+            "percent": 55.175127902400625,
+            "threshold": 0,
+            "count": 1402
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 39.82683982683982
+            "percent": 39.82683982683982,
+            "threshold": 0.015,
+            "count": 1012
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.998032270759543
+            "percent": 4.998032270759543,
+            "threshold": 0.03,
+            "count": 127
           }
         ]
       },
@@ -605,17 +767,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 54.37399678972713
+            "percent": 54.37399678972713,
+            "threshold": 0,
+            "count": 1355
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 40.6099518459069
+            "percent": 40.6099518459069,
+            "threshold": 0.015,
+            "count": 1012
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.016051364365971
+            "percent": 5.016051364365971,
+            "threshold": 0.03,
+            "count": 125
           }
         ]
       },
@@ -627,17 +795,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 54.93246009005321
+            "percent": 54.93246009005321,
+            "threshold": 0,
+            "count": 1342
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 39.582480556692595
+            "percent": 39.582480556692595,
+            "threshold": 0.015,
+            "count": 967
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.485059353254196
+            "percent": 5.485059353254196,
+            "threshold": 0.03,
+            "count": 134
           }
         ]
       },
@@ -649,17 +823,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 53.091060985797824
+            "percent": 53.091060985797824,
+            "threshold": 0,
+            "count": 1271
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 42.18880534670008
+            "percent": 42.18880534670008,
+            "threshold": 0.015,
+            "count": 1010
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.720133667502088
+            "percent": 4.720133667502088,
+            "threshold": 0.03,
+            "count": 113
           }
         ]
       },
@@ -671,17 +851,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 52.23880597014925
+            "percent": 52.23880597014925,
+            "threshold": 0,
+            "count": 1225
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.45415778251599
+            "percent": 43.45415778251599,
+            "threshold": 0.015,
+            "count": 1019
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 4.3070362473347545
+            "percent": 4.3070362473347545,
+            "threshold": 0.03,
+            "count": 101
           }
         ]
       },
@@ -693,17 +879,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 53.092334494773525
+            "percent": 53.092334494773525,
+            "threshold": 0,
+            "count": 1219
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 41.55052264808363
+            "percent": 41.55052264808363,
+            "threshold": 0.015,
+            "count": 954
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.357142857142858
+            "percent": 5.357142857142858,
+            "threshold": 0.03,
+            "count": 123
           }
         ]
       },
@@ -715,17 +907,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 53.22652425456163
+            "percent": 53.22652425456163,
+            "threshold": 0,
+            "count": 1196
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 41.65554072096128
+            "percent": 41.65554072096128,
+            "threshold": 0.015,
+            "count": 936
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.11793502447708
+            "percent": 5.11793502447708,
+            "threshold": 0.03,
+            "count": 115
           }
         ]
       },
@@ -737,17 +935,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 51.228389444949954
+            "percent": 51.228389444949954,
+            "threshold": 0,
+            "count": 1126
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 42.62966333030027
+            "percent": 42.62966333030027,
+            "threshold": 0.015,
+            "count": 937
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.141947224749773
+            "percent": 6.141947224749773,
+            "threshold": 0.03,
+            "count": 135
           }
         ]
       },
@@ -759,17 +963,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 51.18659841786877
+            "percent": 51.18659841786877,
+            "threshold": 0,
+            "count": 1100
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 42.48487668683108
+            "percent": 42.48487668683108,
+            "threshold": 0.015,
+            "count": 913
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.32852489530014
+            "percent": 6.32852489530014,
+            "threshold": 0.03,
+            "count": 136
           }
         ]
       },
@@ -781,17 +991,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 51.857142857142854
+            "percent": 51.857142857142854,
+            "threshold": 0,
+            "count": 1089
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 41.57142857142857
+            "percent": 41.57142857142857,
+            "threshold": 0.015,
+            "count": 873
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.571428571428571
+            "percent": 6.571428571428571,
+            "threshold": 0.03,
+            "count": 138
           }
         ]
       },
@@ -803,17 +1019,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 50.51194539249147
+            "percent": 50.51194539249147,
+            "threshold": 0,
+            "count": 1036
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 43.83227693807899
+            "percent": 43.83227693807899,
+            "threshold": 0.015,
+            "count": 899
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.655777669429547
+            "percent": 5.655777669429547,
+            "threshold": 0.03,
+            "count": 116
           }
         ]
       },
@@ -825,17 +1047,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 49.75024975024975
+            "percent": 49.75024975024975,
+            "threshold": 0,
+            "count": 996
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 44.35564435564436
+            "percent": 44.35564435564436,
+            "threshold": 0.015,
+            "count": 888
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.894105894105894
+            "percent": 5.894105894105894,
+            "threshold": 0.03,
+            "count": 118
           }
         ]
       },
@@ -847,17 +1075,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 50.486431131592425
+            "percent": 50.486431131592425,
+            "threshold": 0,
+            "count": 986
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 44.086021505376344
+            "percent": 44.086021505376344,
+            "threshold": 0.015,
+            "count": 861
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.427547363031234
+            "percent": 5.427547363031234,
+            "threshold": 0.03,
+            "count": 106
           }
         ]
       },
@@ -869,17 +1103,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 50.21008403361345
+            "percent": 50.21008403361345,
+            "threshold": 0,
+            "count": 956
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 44.642857142857146
+            "percent": 44.642857142857146,
+            "threshold": 0.015,
+            "count": 850
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.147058823529412
+            "percent": 5.147058823529412,
+            "threshold": 0.03,
+            "count": 98
           }
         ]
       },
@@ -891,17 +1131,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 48.57142857142858
+            "percent": 48.57142857142858,
+            "threshold": 0,
+            "count": 901
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 46.19946091644205
+            "percent": 46.19946091644205,
+            "threshold": 0.015,
+            "count": 857
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.22911051212938
+            "percent": 5.22911051212938,
+            "threshold": 0.03,
+            "count": 97
           }
         ]
       },
@@ -913,17 +1159,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 47.286821705426355
+            "percent": 47.286821705426355,
+            "threshold": 0,
+            "count": 854
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 47.176079734219265
+            "percent": 47.176079734219265,
+            "threshold": 0.015,
+            "count": 852
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.537098560354374
+            "percent": 5.537098560354374,
+            "threshold": 0.03,
+            "count": 100
           }
         ]
       },
@@ -935,17 +1187,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 47.01195219123506
+            "percent": 47.01195219123506,
+            "threshold": 0,
+            "count": 826
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 47.808764940239044
+            "percent": 47.808764940239044,
+            "threshold": 0.015,
+            "count": 840
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.179282868525896
+            "percent": 5.179282868525896,
+            "threshold": 0.03,
+            "count": 91
           }
         ]
       },
@@ -957,17 +1215,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 48.18501170960187
+            "percent": 48.18501170960187,
+            "threshold": 0,
+            "count": 823
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 45.78454332552693
+            "percent": 45.78454332552693,
+            "threshold": 0.015,
+            "count": 782
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.030444964871195
+            "percent": 6.030444964871195,
+            "threshold": 0.03,
+            "count": 103
           }
         ]
       },
@@ -979,17 +1243,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 46.71488848704039
+            "percent": 46.71488848704039,
+            "threshold": 0,
+            "count": 775
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 46.835443037974684
+            "percent": 46.835443037974684,
+            "threshold": 0.015,
+            "count": 777
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.449668474984931
+            "percent": 6.449668474984931,
+            "threshold": 0.03,
+            "count": 107
           }
         ]
       },
@@ -1001,17 +1271,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 48.32298136645963
+            "percent": 48.32298136645963,
+            "threshold": 0,
+            "count": 778
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 45.03105590062112
+            "percent": 45.03105590062112,
+            "threshold": 0.015,
+            "count": 725
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.645962732919255
+            "percent": 6.645962732919255,
+            "threshold": 0.03,
+            "count": 107
           }
         ]
       },
@@ -1023,17 +1299,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 46.764894298526585
+            "percent": 46.764894298526585,
+            "threshold": 0,
+            "count": 730
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 46.63677130044843
+            "percent": 46.63677130044843,
+            "threshold": 0.015,
+            "count": 728
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.598334401024984
+            "percent": 6.598334401024984,
+            "threshold": 0.03,
+            "count": 103
           }
         ]
       },
@@ -1045,17 +1327,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 48.28042328042328
+            "percent": 48.28042328042328,
+            "threshold": 0,
+            "count": 730
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 45.1058201058201
+            "percent": 45.1058201058201,
+            "threshold": 0.015,
+            "count": 682
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.613756613756613
+            "percent": 6.613756613756613,
+            "threshold": 0.03,
+            "count": 100
           }
         ]
       },
@@ -1067,17 +1355,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 48.120300751879704
+            "percent": 48.120300751879704,
+            "threshold": 0,
+            "count": 704
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 45.6596035543404
+            "percent": 45.6596035543404,
+            "threshold": 0.015,
+            "count": 668
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.220095693779904
+            "percent": 6.220095693779904,
+            "threshold": 0.03,
+            "count": 91
           }
         ]
       },
@@ -1089,17 +1383,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 46.88826025459689
+            "percent": 46.88826025459689,
+            "threshold": 0,
+            "count": 663
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 47.02970297029703
+            "percent": 47.02970297029703,
+            "threshold": 0.015,
+            "count": 665
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 6.082036775106082
+            "percent": 6.082036775106082,
+            "threshold": 0.03,
+            "count": 86
           }
         ]
       },
@@ -1111,17 +1411,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 46.00732600732601
+            "percent": 46.00732600732601,
+            "threshold": 0,
+            "count": 628
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 48.42490842490843
+            "percent": 48.42490842490843,
+            "threshold": 0.015,
+            "count": 661
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.567765567765568
+            "percent": 5.567765567765568,
+            "threshold": 0.03,
+            "count": 76
           }
         ]
       },
@@ -1133,17 +1439,23 @@
           {
             "similarityLevel": "low",
             "color": "hsl(220, 20%, 30%)",
-            "percent": 46.03174603174603
+            "percent": 46.03174603174603,
+            "threshold": 0,
+            "count": 435
           },
           {
             "similarityLevel": "medium",
             "color": "hsl(220, 50%, 45%)",
-            "percent": 48.148148148148145
+            "percent": 48.148148148148145,
+            "threshold": 0.015,
+            "count": 455
           },
           {
             "similarityLevel": "high",
             "color": "hsl(220, 90%, 60%)",
-            "percent": 5.82010582010582
+            "percent": 5.82010582010582,
+            "threshold": 0.03,
+            "count": 55
           }
         ]
       }

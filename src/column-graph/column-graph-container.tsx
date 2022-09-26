@@ -14,8 +14,8 @@ type GraphProps = {
 };
 
 const renderTooltip = (d: ColumnGraphData) => {
-  const { similarityLevels } = d;
-  const monthName = monthNameFromIndex(d.month);
+  const { similarityLevels, avgSimilarity, month } = d;
+  const monthName = monthNameFromIndex(month);
   return (
     <div>
       <p>
@@ -24,7 +24,7 @@ const renderTooltip = (d: ColumnGraphData) => {
       </p>
       <p>
         <b>Average similarity: </b>
-        {prettyNumber(d.avgSimilarity, 5)}
+        {prettyNumber(avgSimilarity, 5)}
       </p>
       {/* Need to reverse these for presentation */}
       {similarityLevels

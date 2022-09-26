@@ -21,7 +21,7 @@ type BarGraphProps = {
 };
 
 const renderTooltip = (d: DifferenceRecord) => {
-  const { difference } = d;
+  const { difference, similarityLevels } = d;
   const absoluteDifference = Math.abs(difference);
 
   let tooltipHeader = "";
@@ -42,6 +42,20 @@ const renderTooltip = (d: DifferenceRecord) => {
         <b>Average similarity: </b>
         {prettyNumber(d.averageSimilarity, 5)}
       </p>
+      {(similarityLevels || [])
+        .slice()
+        .reverse()
+        .map((sLevel, i) => {
+          return (
+            <p key={i}>
+              <b style={{ color: sLevel.color }}>
+                {sLevel.similarityLevel} similarity day pairs
+              </b>
+              <span> (&gt;= {sLevel.threshold}): </span>
+              <span> {prettyNumber(sLevel.percent, 1)}%</span>
+            </p>
+          );
+        })}
     </div>
   );
 };
