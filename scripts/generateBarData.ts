@@ -8,7 +8,7 @@ import {
   DifferenceRecordSet,
   NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
-import { SET2020, SRC_FOLDER } from "./config";
+import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
 import { getSimilarityLevel } from "./modules/similarity";
 import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 import { getDifferenceInDays } from "./modules/time-helpers";
@@ -133,16 +133,22 @@ const weekData: DifferenceRecord[] = Object.keys(weekDict).map(key => {
         similarityLevel: "low",
         color: SIMILARITY_COLORS.low,
         percent: (100 / recordCount) * totalLowSimilarity,
+        threshold: 0,
+        count: totalLowSimilarity,
       },
       {
         similarityLevel: "medium",
         color: SIMILARITY_COLORS.medium,
         percent: (100 / recordCount) * totalMediumSimilarity,
+        threshold: MEDIUM_SIMILARITY,
+        count: totalMediumSimilarity,
       },
       {
         similarityLevel: "high",
         color: SIMILARITY_COLORS.high,
         percent: (100 / recordCount) * totalHighSimilarity,
+        threshold: HIGH_SIMILARITY,
+        count: totalHighSimilarity,
       },
     ],
   };

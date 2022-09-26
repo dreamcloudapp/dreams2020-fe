@@ -1,7 +1,6 @@
 import {
   DifferenceDisplayRecord,
   DifferenceRecord,
-  SimilarityLevelSection,
 } from "@kannydennedy/dreams-2020-types";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
@@ -9,7 +8,6 @@ import "../App.css";
 import { BeforeAfterAxis } from "../axes/before-after-axis";
 import { prettyNumber } from "../modules/formatters";
 import { Column } from "../components/column";
-import { SIMILARITY_COLORS } from "../modules/theme";
 
 const BAR_GAP = 3;
 
@@ -72,7 +70,6 @@ export function BarGraphContainer({
       {data.comparisons.differences.map((difference, index) => {
         const x = (barWidth + BAR_GAP) * index + padding.LEFT;
         const barHeight = scaleY(difference.averageSimilarity);
-        console.log(barHeight, "barHeight");
 
         const y = height - padding.BOTTOM - barHeight;
 

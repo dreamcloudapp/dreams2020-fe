@@ -71,6 +71,10 @@ export function ColumnGraphContainer({
 
         const x = i * (columnWidth + COLUMN_GAP);
 
+        // const sections: SimilarityLevelSection[] = [
+
+        // ]
+
         return (
           <g
             key={i}
