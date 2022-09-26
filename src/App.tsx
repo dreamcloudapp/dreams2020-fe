@@ -36,6 +36,14 @@ import {
 import useComponentSize from "@rehooks/component-size";
 import { localPoint } from "@visx/event";
 import { BarGraphContainer } from "./bar-graph/bar-graph-container";
+import { Padding } from "./modules/ui-types";
+
+const padding: Padding = {
+  LEFT: 30,
+  RIGHT: 30,
+  TOP: 60,
+  BOTTOM: 40,
+};
 
 const graphtypes: GraphType[] = ["area", "bubble", "column", "bar"];
 
@@ -203,6 +211,7 @@ function App() {
                 height={height}
                 handleMouseOver={handleMouseOver}
                 onMouseOut={hideTooltip}
+                padding={padding}
               />
             )}
           </div>

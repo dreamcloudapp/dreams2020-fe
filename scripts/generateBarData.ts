@@ -9,7 +9,8 @@ import {
   NewsRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { SET2020, SRC_FOLDER } from "./config";
-import { ColorTheme } from "./modules/theme";
+import { getSimilarityLevel } from "./modules/similarity";
+import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 import { getDifferenceInDays } from "./modules/time-helpers";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
@@ -62,6 +63,9 @@ type IntermediaryDifferenceRecord = {
   recordCount: number;
   totalSimilarity: number;
   totalWordCount: number;
+  totalLowSimilarity: number;
+  totalMediumSimilarity: number;
+  totalHighSimilarity: number;
 };
 
 const weekDict: { [key: string]: IntermediaryDifferenceRecord } = {};
@@ -79,32 +83,68 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
   // -1 means that the dream came before the news, but within one week
   const weekDiff = Math.floor(diff / 7);
 
-  const key = `${weekDiff}`;
+  // Work out the similarity level
+  const s = getSimilarityLevel(record.similarity);
 
-  if (!weekDict[key]) {
+  const key = `${weekDiff}`;
+  const currWk = weekDict[key] ? { ...weekDict[key] } : undefined;
+  if (!currWk) {
     weekDict[key] = {
       difference: weekDiff,
       recordCount: 1,
       totalSimilarity: record.similarity,
       totalWordCount: record.wordCount,
+      totalHighSimilarity: s === "high" ? 1 : 0,
+      totalMediumSimilarity: s === "medium" ? 1 : 0,
+      totalLowSimilarity: s == "low" ? 1 : 0,
     };
   } else {
     weekDict[key] = {
-      ...weekDict[key],
-      recordCount: weekDict[key].recordCount + 1,
-      totalSimilarity: weekDict[key].totalSimilarity + record.similarity,
-      totalWordCount: weekDict[key].totalWordCount + record.wordCount,
+      ...currWk,
+      recordCount: currWk.recordCount + 1,
+      totalSimilarity: currWk.totalSimilarity + record.similarity,
+      totalWordCount: currWk.totalWordCount + record.wordCount,
+      totalHighSimilarity:
+        s === "high" ? currWk.totalHighSimilarity + 1 : currWk.totalHighSimilarity,
+      totalMediumSimilarity:
+        s === "medium" ? currWk.totalMediumSimilarity + 1 : currWk.totalMediumSimilarity,
+      totalLowSimilarity:
+        s == "low" ? currWk.totalLowSimilarity + 1 : currWk.totalLowSimilarity,
     };
   }
 });
 
 // Now we loop through again, and get the averages
 const weekData: DifferenceRecord[] = Object.keys(weekDict).map(key => {
-  const { difference, recordCount, totalSimilarity } = weekDict[key];
+  const {
+    difference,
+    recordCount,
+    totalSimilarity,
+    totalHighSimilarity,
+    totalMediumSimilarity,
+    totalLowSimilarity,
+  } = weekDict[key];
   return {
     difference,
     recordCount,
     averageSimilarity: totalSimilarity / recordCount,
+    similarityLevels: [
+      {
+        similarityLevel: "low",
+        color: SIMILARITY_COLORS.low,
+        percent: (100 / recordCount) * totalLowSimilarity,
+      },
+      {
+        similarityLevel: "medium",
+        color: SIMILARITY_COLORS.medium,
+        percent: (100 / recordCount) * totalMediumSimilarity,
+      },
+      {
+        similarityLevel: "high",
+        color: SIMILARITY_COLORS.high,
+        percent: (100 / recordCount) * totalHighSimilarity,
+      },
+    ],
   };
 });
 

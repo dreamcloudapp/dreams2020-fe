@@ -15,5 +15,5 @@ export const NEWS_YEAR = 2020;
 
 // We're going to choose some arbitrary figures here
 // We just want to make sure there's some of each
-export const HIGH_SIMILARITY = 0.04;
-export const MEDIUM_SIMILARITY = 0.02;
+export const HIGH_SIMILARITY = 0.03;
+export const MEDIUM_SIMILARITY = 0.015;

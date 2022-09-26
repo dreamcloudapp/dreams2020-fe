@@ -6,262 +6,1146 @@
       {
         "difference": -26,
         "recordCount": 754,
-        "averageSimilarity": 0.014258560623076911
+        "averageSimilarity": 0.014258560623076911,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 63.66047745358091
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 32.891246684350136
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.4482758620689657
+          }
+        ]
       },
       {
         "difference": -25,
         "recordCount": 1358,
-        "averageSimilarity": 0.014266884732695146
+        "averageSimilarity": 0.014266884732695146,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 64.28571428571429
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 32.253313696612665
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.4609720176730487
+          }
+        ]
       },
       {
         "difference": -24,
         "recordCount": 1407,
-        "averageSimilarity": 0.014328259079530913
+        "averageSimilarity": 0.014328259079530913,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 64.4633972992182
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 31.982942430703627
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.553660270078181
+          }
+        ]
       },
       {
         "difference": -23,
         "recordCount": 1456,
-        "averageSimilarity": 0.01427996396572802
+        "averageSimilarity": 0.01427996396572802,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 63.66758241758242
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 33.17307692307693
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.1593406593406597
+          }
+        ]
       },
       {
         "difference": -22,
         "recordCount": 1505,
-        "averageSimilarity": 0.014385165201328903
+        "averageSimilarity": 0.014385165201328903,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 61.79401993355482
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 34.81727574750831
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.3887043189368775
+          }
+        ]
       },
       {
         "difference": -21,
         "recordCount": 1554,
-        "averageSimilarity": 0.014451465072072055
+        "averageSimilarity": 0.014451465072072055,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 62.612612612612615
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 33.71943371943372
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.667953667953668
+          }
+        ]
       },
       {
         "difference": -20,
         "recordCount": 1603,
-        "averageSimilarity": 0.014598090475982515
+        "averageSimilarity": 0.014598090475982515,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 62.44541484716157
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 34.123518402994385
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.4310667498440424
+          }
+        ]
       },
       {
         "difference": -19,
         "recordCount": 1652,
-        "averageSimilarity": 0.014803181306113808
+        "averageSimilarity": 0.014803181306113808,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 60.83535108958838
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 35.653753026634384
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.51089588377724
+          }
+        ]
       },
       {
         "difference": -18,
         "recordCount": 1701,
-        "averageSimilarity": 0.015057132048030563
+        "averageSimilarity": 0.015057132048030563,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 58.08348030570253
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 37.91887125220458
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.9976484420928866
+          }
+        ]
       },
       {
         "difference": -17,
         "recordCount": 1750,
-        "averageSimilarity": 0.015193413513200001
+        "averageSimilarity": 0.015193413513200001,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 57.6
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 38.628571428571426
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.7714285714285714
+          }
+        ]
       },
       {
         "difference": -16,
         "recordCount": 1799,
-        "averageSimilarity": 0.015362677245858809
+        "averageSimilarity": 0.015362677245858809,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 54.97498610339077
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 41.467481934408
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.5575319622012227
+          }
+        ]
       },
       {
         "difference": -15,
         "recordCount": 1848,
-        "averageSimilarity": 0.01546730486011901
+        "averageSimilarity": 0.01546730486011901,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 54.816017316017316
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 41.55844155844156
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.6255411255411256
+          }
+        ]
       },
       {
         "difference": -14,
         "recordCount": 1897,
-        "averageSimilarity": 0.015684656418081193
+        "averageSimilarity": 0.015684656418081193,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.82024248813917
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.12071692145493
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.059040590405904
+          }
+        ]
       },
       {
         "difference": -13,
         "recordCount": 1946,
-        "averageSimilarity": 0.01581677902060639
+        "averageSimilarity": 0.01581677902060639,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.826310380267216
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 42.959917780061666
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.213771839671121
+          }
+        ]
       },
       {
         "difference": -12,
         "recordCount": 1995,
-        "averageSimilarity": 0.015893517408120263
+        "averageSimilarity": 0.015893517408120263,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.33082706766917
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.70927318295739
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 3.9598997493734336
+          }
+        ]
       },
       {
         "difference": -11,
         "recordCount": 2044,
-        "averageSimilarity": 0.015924012152348288
+        "averageSimilarity": 0.015924012152348288,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.054794520547944
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.39530332681017
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.549902152641878
+          }
+        ]
       },
       {
         "difference": -10,
         "recordCount": 2093,
-        "averageSimilarity": 0.015933051581366427
+        "averageSimilarity": 0.015933051581366427,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 51.17056856187291
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 44.62494027711419
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.2044911610129
+          }
+        ]
       },
       {
         "difference": -9,
         "recordCount": 2142,
-        "averageSimilarity": 0.01597098047502333
+        "averageSimilarity": 0.01597098047502333,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.38095238095238
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.183940242763775
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.435107376283847
+          }
+        ]
       },
       {
         "difference": -8,
         "recordCount": 2191,
-        "averageSimilarity": 0.016138822636558647
+        "averageSimilarity": 0.016138822636558647,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 51.71154723870379
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.17663167503423
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.111821086261981
+          }
+        ]
       },
       {
         "difference": -7,
         "recordCount": 2240,
-        "averageSimilarity": 0.016156860218258923
+        "averageSimilarity": 0.016156860218258923,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 51.91964285714286
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 42.767857142857146
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.3125
+          }
+        ]
       },
       {
         "difference": -6,
         "recordCount": 2289,
-        "averageSimilarity": 0.016105392764438627
+        "averageSimilarity": 0.016105392764438627,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.29357798165138
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 42.201834862385326
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.504587155963303
+          }
+        ]
       },
       {
         "difference": -5,
         "recordCount": 2338,
-        "averageSimilarity": 0.016035945135414918
+        "averageSimilarity": 0.016035945135414918,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.65183917878529
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 41.616766467065865
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.731394354148845
+          }
+        ]
       },
       {
         "difference": -4,
         "recordCount": 2387,
-        "averageSimilarity": 0.015927375660703777
+        "averageSimilarity": 0.015927375660703777,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 53.95894428152493
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 40.88814411395057
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.152911604524508
+          }
+        ]
       },
       {
         "difference": -3,
         "recordCount": 2436,
-        "averageSimilarity": 0.015881407434646964
+        "averageSimilarity": 0.015881407434646964,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 54.35139573070607
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 40.06568144499179
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.582922824302134
+          }
+        ]
       },
       {
         "difference": -2,
         "recordCount": 2485,
-        "averageSimilarity": 0.01586933708676057
+        "averageSimilarity": 0.01586933708676057,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 54.84909456740443
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 39.23541247484909
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.915492957746479
+          }
+        ]
       },
       {
         "difference": -1,
         "recordCount": 2534,
-        "averageSimilarity": 0.015897062534056868
+        "averageSimilarity": 0.015897062534056868,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 55.36700868192581
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 39.660615627466456
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.972375690607735
+          }
+        ]
       },
       {
         "difference": 0,
         "recordCount": 2541,
-        "averageSimilarity": 0.015911329320897304
+        "averageSimilarity": 0.015911329320897304,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 55.175127902400625
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 39.82683982683982
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.998032270759543
+          }
+        ]
       },
       {
         "difference": 1,
         "recordCount": 2492,
-        "averageSimilarity": 0.016031910749919758
+        "averageSimilarity": 0.016031910749919758,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 54.37399678972713
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 40.6099518459069
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.016051364365971
+          }
+        ]
       },
       {
         "difference": 2,
         "recordCount": 2443,
-        "averageSimilarity": 0.016128545993368777
+        "averageSimilarity": 0.016128545993368777,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 54.93246009005321
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 39.582480556692595
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.485059353254196
+          }
+        ]
       },
       {
         "difference": 3,
         "recordCount": 2394,
-        "averageSimilarity": 0.016205691735045945
+        "averageSimilarity": 0.016205691735045945,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 53.091060985797824
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 42.18880534670008
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.720133667502088
+          }
+        ]
       },
       {
         "difference": 4,
         "recordCount": 2345,
-        "averageSimilarity": 0.01627580700379534
+        "averageSimilarity": 0.01627580700379534,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 52.23880597014925
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.45415778251599
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 4.3070362473347545
+          }
+        ]
       },
       {
         "difference": 5,
         "recordCount": 2296,
-        "averageSimilarity": 0.016315246619555766
+        "averageSimilarity": 0.016315246619555766,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 53.092334494773525
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 41.55052264808363
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.357142857142858
+          }
+        ]
       },
       {
         "difference": 6,
         "recordCount": 2247,
-        "averageSimilarity": 0.016363654294347992
+        "averageSimilarity": 0.016363654294347992,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 53.22652425456163
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 41.65554072096128
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.11793502447708
+          }
+        ]
       },
       {
         "difference": 7,
         "recordCount": 2198,
-        "averageSimilarity": 0.01641843732993634
+        "averageSimilarity": 0.01641843732993634,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 51.228389444949954
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 42.62966333030027
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.141947224749773
+          }
+        ]
       },
       {
         "difference": 8,
         "recordCount": 2149,
-        "averageSimilarity": 0.016609386204746397
+        "averageSimilarity": 0.016609386204746397,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 51.18659841786877
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 42.48487668683108
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.32852489530014
+          }
+        ]
       },
       {
         "difference": 9,
         "recordCount": 2100,
-        "averageSimilarity": 0.016588476535523814
+        "averageSimilarity": 0.016588476535523814,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 51.857142857142854
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 41.57142857142857
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.571428571428571
+          }
+        ]
       },
       {
         "difference": 10,
         "recordCount": 2051,
-        "averageSimilarity": 0.01643835296596784
+        "averageSimilarity": 0.01643835296596784,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 50.51194539249147
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 43.83227693807899
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.655777669429547
+          }
+        ]
       },
       {
         "difference": 11,
         "recordCount": 2002,
-        "averageSimilarity": 0.016410564880169832
+        "averageSimilarity": 0.016410564880169832,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 49.75024975024975
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 44.35564435564436
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.894105894105894
+          }
+        ]
       },
       {
         "difference": 12,
         "recordCount": 1953,
-        "averageSimilarity": 0.016508400505939557
+        "averageSimilarity": 0.016508400505939557,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 50.486431131592425
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 44.086021505376344
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.427547363031234
+          }
+        ]
       },
       {
         "difference": 13,
         "recordCount": 1904,
-        "averageSimilarity": 0.016462377000997903
+        "averageSimilarity": 0.016462377000997903,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 50.21008403361345
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 44.642857142857146
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.147058823529412
+          }
+        ]
       },
       {
         "difference": 14,
         "recordCount": 1855,
-        "averageSimilarity": 0.01656667780997306
+        "averageSimilarity": 0.01656667780997306,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 48.57142857142858
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 46.19946091644205
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.22911051212938
+          }
+        ]
       },
       {
         "difference": 15,
         "recordCount": 1806,
-        "averageSimilarity": 0.016684486716555962
+        "averageSimilarity": 0.016684486716555962,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 47.286821705426355
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 47.176079734219265
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.537098560354374
+          }
+        ]
       },
       {
         "difference": 16,
         "recordCount": 1757,
-        "averageSimilarity": 0.01665917992714854
+        "averageSimilarity": 0.01665917992714854,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 47.01195219123506
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 47.808764940239044
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.179282868525896
+          }
+        ]
       },
       {
         "difference": 17,
         "recordCount": 1708,
-        "averageSimilarity": 0.016789185538290407
+        "averageSimilarity": 0.016789185538290407,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 48.18501170960187
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 45.78454332552693
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.030444964871195
+          }
+        ]
       },
       {
         "difference": 18,
         "recordCount": 1659,
-        "averageSimilarity": 0.016961417798553344
+        "averageSimilarity": 0.016961417798553344,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 46.71488848704039
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 46.835443037974684
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.449668474984931
+          }
+        ]
       },
       {
         "difference": 19,
         "recordCount": 1610,
-        "averageSimilarity": 0.016879870912484468
+        "averageSimilarity": 0.016879870912484468,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 48.32298136645963
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 45.03105590062112
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.645962732919255
+          }
+        ]
       },
       {
         "difference": 20,
         "recordCount": 1561,
-        "averageSimilarity": 0.017078070481165924
+        "averageSimilarity": 0.017078070481165924,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 46.764894298526585
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 46.63677130044843
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.598334401024984
+          }
+        ]
       },
       {
         "difference": 21,
         "recordCount": 1512,
-        "averageSimilarity": 0.01698591186494707
+        "averageSimilarity": 0.01698591186494707,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 48.28042328042328
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 45.1058201058201
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.613756613756613
+          }
+        ]
       },
       {
         "difference": 22,
         "recordCount": 1463,
-        "averageSimilarity": 0.016973009306083385
+        "averageSimilarity": 0.016973009306083385,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 48.120300751879704
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 45.6596035543404
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.220095693779904
+          }
+        ]
       },
       {
         "difference": 23,
         "recordCount": 1414,
-        "averageSimilarity": 0.016924189192362108
+        "averageSimilarity": 0.016924189192362108,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 46.88826025459689
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 47.02970297029703
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 6.082036775106082
+          }
+        ]
       },
       {
         "difference": 24,
         "recordCount": 1365,
-        "averageSimilarity": 0.017129049190256415
+        "averageSimilarity": 0.017129049190256415,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 46.00732600732601
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 48.42490842490843
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.567765567765568
+          }
+        ]
       },
       {
         "difference": 25,
         "recordCount": 945,
-        "averageSimilarity": 0.017170484757354502
+        "averageSimilarity": 0.017170484757354502,
+        "similarityLevels": [
+          {
+            "similarityLevel": "low",
+            "color": "hsl(220, 20%, 30%)",
+            "percent": 46.03174603174603
+          },
+          {
+            "similarityLevel": "medium",
+            "color": "hsl(220, 50%, 45%)",
+            "percent": 48.148148148148145
+          },
+          {
+            "similarityLevel": "high",
+            "color": "hsl(220, 90%, 60%)",
+            "percent": 5.82010582010582
+          }
+        ]
       }
     ],
     "maxAverageSimilarity": 0.017170484757354502,
