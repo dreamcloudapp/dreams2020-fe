@@ -1,10 +1,8 @@
 import { ColumnGraphData } from "../App";
 import { Column } from "../components/column";
-import { changeHslOpacity } from "../modules/colorHelpers";
 import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 
-const STROKE_WIDTH = 2;
 const COLUMN_GAP = 10;
 
 type GraphProps = {
@@ -16,6 +14,7 @@ type GraphProps = {
 };
 
 const renderTooltip = (d: ColumnGraphData) => {
+  const { similarityLevels } = d;
   const monthName = monthNameFromIndex(d.month);
   return (
     <div>
@@ -27,21 +26,21 @@ const renderTooltip = (d: ColumnGraphData) => {
         <b>Average similarity: </b>
         {prettyNumber(d.avgSimilarity, 5)}
       </p>
-      {/* <p>
-        <b style={{ color: d.highSimilarity.color }}>High similarity day pairs</b>
-        <span> (&gt;= {d.highSimilarity.threshold}): </span>
-        <span> {prettyNumber(d.highSimilarity.percent, 1)}%</span>
-      </p>
-      <p>
-        <b style={{ color: d.mediumSimilarity.color }}>Medium similarity day pairs</b>
-        <span> (&gt;= {d.mediumSimilarity.threshold}): </span>
-        <span> {prettyNumber(d.mediumSimilarity.percent, 1)}%</span>
-      </p>
-      <p>
-        <b style={{ color: d.lowSimilarity.color }}>Low similarity day pairs</b>
-        <span> (&lt; {d.mediumSimilarity.threshold}): </span>
-        <span>{prettyNumber(d.lowSimilarity.percent, 1)}%</span>
-      </p> */}
+      {/* Need to reverse these for presentation */}
+      {similarityLevels
+        .slice()
+        .reverse()
+        .map((sLevel, i) => {
+          return (
+            <p key={i}>
+              <b style={{ color: sLevel.color }}>
+                {sLevel.similarityLevel} similarity day pairs
+              </b>
+              <span> (&gt;= {sLevel.threshold}): </span>
+              <span> {prettyNumber(sLevel.percent, 1)}%</span>
+            </p>
+          );
+        })}
       <p>
         <b>Total day comparisons: </b>
         {d.count}
@@ -77,13 +76,13 @@ export function ColumnGraphContainer({
           <g>
             <Column
               key={i}
-              handleMouseOver={handleMouseOver}
+              onMouseOver={e => {
+                (handleMouseOver as any)(e, renderTooltip(d));
+              }}
               onMouseOut={onMouseOut}
               sections={d.similarityLevels}
               x={x}
               y={height - colHeight}
-              tooltipData={d}
-              renderTooltip={renderTooltip}
               colHeight={colHeight}
               colWidth={columnWidth}
             />

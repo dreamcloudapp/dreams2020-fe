@@ -7,9 +7,7 @@ type ColumnProps = {
   colHeight: number;
   sections: SimilarityLevelSection[];
   onMouseOut: () => void;
-  handleMouseOver: (event: any, datum: any) => void;
-  tooltipData: any;
-  renderTooltip: (data: any) => JSX.Element;
+  onMouseOver: (event: any) => void;
 };
 
 export function Column({
@@ -17,19 +15,12 @@ export function Column({
   y,
   colWidth,
   colHeight,
-  handleMouseOver,
   onMouseOut,
-  renderTooltip,
-  tooltipData,
   sections,
+  onMouseOver,
 }: ColumnProps) {
   return (
-    <g
-      onMouseOver={e => {
-        (handleMouseOver as any)(e, renderTooltip(tooltipData));
-      }}
-      onMouseOut={onMouseOut}
-    >
+    <g onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
       {sections.map((s, i) => {
         const sectionProportion = s.percent / 100;
         const sectionHeight = colHeight * sectionProportion;
@@ -42,10 +33,10 @@ export function Column({
         return (
           <rect
             key={i}
-            height={sectionHeight}
-            width={colWidth}
             y={sectionY}
             x={x}
+            height={sectionHeight}
+            width={colWidth}
             fill={s.color}
           />
         );

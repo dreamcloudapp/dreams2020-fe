@@ -80,10 +80,10 @@ export function BarGraphContainer({
             y={y}
             colWidth={barWidth}
             colHeight={barHeight}
-            handleMouseOver={handleMouseOver}
+            onMouseOver={e => {
+              (handleMouseOver as any)(e, renderTooltip(difference));
+            }}
             onMouseOut={onMouseOut}
-            tooltipData={difference}
-            renderTooltip={renderTooltip}
             sections={difference.similarityLevels || []}
           />
         );
