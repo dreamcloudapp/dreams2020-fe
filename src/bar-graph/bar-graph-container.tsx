@@ -118,7 +118,7 @@ export function BarGraphContainer({
                   x: x,
                   y: y,
                   color: "red",
-                  concepts: ["cat", "cot", "first"],
+                  concepts: difference.examples["high"].topConcepts.map(x => x.concept),
                   startRadius: 20,
                 })
               );

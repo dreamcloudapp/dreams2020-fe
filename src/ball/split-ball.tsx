@@ -60,7 +60,7 @@ export const SplitBall = ({
 
   const positions = {
     unfocused: {
-      moveIntoPlace: { cx: startX, cy: startY, r: startRadius },
+      moveIntoPlace: { cx: startX, cy: startY, r: 0 },
       moveTextIntoPlace: { x: startX, y: startY },
       leftBallMove: { transform: "translateX(0%) scale(1) translateY(0%)", stroke: fill },
       leftBallLabelMove: {
@@ -102,12 +102,19 @@ export const SplitBall = ({
     },
   };
 
+  const config = {
+    mass: 8,
+    tension: 500,
+    friction: isFocused ? 75 : 100,
+    clamp: false,
+  };
+
   const moveRef = useSpringRef();
 
   const moveIntoPlaceProps = useSpring({
     from: positions[startFocus].moveIntoPlace,
     to: positions[endFocus].moveIntoPlace,
-    config: { mass: 8, tension: 500, friction: 75, clamp: false },
+    config: { ...config, clamp: isFocused ? false : true },
     ref: moveRef,
   });
 
@@ -125,8 +132,8 @@ export const SplitBall = ({
   const leftBallMoveProps = useSpring({
     from: positions[startFocus].leftBallMove,
     to: positions[endFocus].leftBallMove,
-    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: leftBallMoveRef,
+    config,
   });
 
   const leftBallLabelMoveRef = useSpringRef();
@@ -134,8 +141,8 @@ export const SplitBall = ({
   const leftBallLabelMoveProps = useSpring({
     from: positions[startFocus].leftBallLabelMove,
     to: positions[endFocus].leftBallLabelMove,
-    config: { mass: 1, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: leftBallLabelMoveRef,
+    config,
   });
 
   const rightBallLabelMoveRef = useSpringRef();
@@ -143,8 +150,8 @@ export const SplitBall = ({
   const rightBallLabelMoveProps = useSpring({
     from: positions[startFocus].rightBallLabelMove,
     to: positions[endFocus].rightBallLabelMove,
-    config: { mass: 5, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: rightBallLabelMoveRef,
+    config,
   });
 
   const rightBallMoveRef = useSpringRef();
@@ -152,8 +159,8 @@ export const SplitBall = ({
   const rightBallMoveProps = useSpring({
     from: positions[startFocus].rightBallMove,
     to: positions[endFocus].rightBallMove,
-    config: { mass: 8, tension: 500, friction: isFocused ? 75 : 100, clamp: false },
     ref: rightBallMoveRef,
+    config,
   });
 
   const refOrder = isFocused

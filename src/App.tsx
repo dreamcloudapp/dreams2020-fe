@@ -81,11 +81,16 @@ type DifferenceRecordWithExamples = DifferenceRecord & {
   examples: ExamplesWithSimilarityLevel;
 };
 
-type DifferenceRecordSetWithExamples = DifferenceRecordSet & {
+export type DifferenceRecordSetWithExamples = {
+  maxSimilarity: number;
+  minSimilarity: number;
+  maxAverageSimilarity: number;
   differences: DifferenceRecordWithExamples[];
 };
 
-export type DifferenceDisplayRecordWithExamples = DifferenceDisplayRecord & {
+export type DifferenceDisplayRecordWithExamples = {
+  key: string;
+  color: string;
   comparisons: DifferenceRecordSetWithExamples;
 };
 
