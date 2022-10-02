@@ -10,27 +10,22 @@ import {
 const inputList: WikipediaConcept[] = [
   {
     title: "John F. Kennedy",
-    link: "https://en.wikipedia.org/wiki/John_F._Kennedy",
     score: 3,
   },
   {
     title: "Donald Trump",
-    link: "https://en.wikipedia.org/wiki/Donald_Trump",
     score: 3,
   },
   {
     title: "Al Gore",
-    link: "https://en.wikipedia.org/wiki/Al_Gore",
     score: 5,
   },
   {
     title: "John F. Kennedy",
-    link: "https://en.wikipedia.org/wiki/John_F._Kennedy",
     score: 4,
   },
   {
     title: "Donald Trump",
-    link: "https://en.wikipedia.org/wiki/Donald_Trump",
     score: 3,
   },
 ];
@@ -38,12 +33,10 @@ const inputList: WikipediaConcept[] = [
 const expectedList: WikipediaConcept[] = [
   {
     title: "John F. Kennedy",
-    link: "https://en.wikipedia.org/wiki/John_F._Kennedy",
     score: 7,
   },
   {
     title: "Donald Trump",
-    link: "https://en.wikipedia.org/wiki/Donald_Trump",
     score: 6,
   },
 ];

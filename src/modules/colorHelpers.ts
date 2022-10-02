@@ -4,6 +4,11 @@ const clamp = (num: number, min: number, max: number) =>
 
 export const changeHslLightness = (hslColor: string, change: number): string => {
   const parts = hslColor.split(" ");
+  if (parts.length < 3) {
+    console.warn("Weird color passed to changeHslLightness");
+    return "red";
+  }
+
   const lightness = parts[2];
   const lightnessNumber = parseInt(lightness.replace("%)", ""));
   const newNumber = lightnessNumber + change;

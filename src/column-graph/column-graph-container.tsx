@@ -90,6 +90,7 @@ export function ColumnGraphContainer({
               y={y}
               colHeight={colHeight}
               colWidth={barWidth}
+              onClick={() => {}}
             />
 
             {/* Label */}

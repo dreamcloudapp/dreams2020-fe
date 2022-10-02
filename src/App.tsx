@@ -29,7 +29,9 @@ import {
   DifferenceDisplayRecord,
   DifferenceRecord,
   DifferenceRecordSet,
+  ExampleDreamNewsComparison,
   GranularityComparisonCollection,
+  SimilarityLevel,
   SimilarityLevelSection,
   WikipediaConcept,
 } from "@kannydennedy/dreams-2020-types";
@@ -70,8 +72,13 @@ export type ColumnGraphData = {
   similarityLevels: SimilarityLevelSection[];
 };
 
+export type ExamplesWithSimilarityLevel = {
+  [key in SimilarityLevel]: ExampleDreamNewsComparison;
+};
+
 type DifferenceRecordWithExamples = DifferenceRecord & {
   topConcepts: WikipediaConcept[];
+  examples: ExamplesWithSimilarityLevel;
 };
 
 type DifferenceRecordSetWithExamples = DifferenceRecordSet & {

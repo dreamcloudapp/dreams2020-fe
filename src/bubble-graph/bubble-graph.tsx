@@ -3,7 +3,6 @@ import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Bubble } from "./bubble";
-import { SplitBall } from "../ball/split-ball";
 import { MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
 import {
   Granularity,
@@ -14,12 +13,12 @@ import {
   selectActiveGranularity,
   CollectionCheck,
   VisComparison,
-  setPrevFocusedComparison,
   setFocusedComparison,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
+import { BubbleOverlay } from "../ball/ball-overlay";
 
-type GraphProps = {
+type BubbleGraphProps = {
   data: GranularityComparisonCollection;
   maxTimeDistance: number; // We only show comparisons that fall within this range
   width: number;
@@ -40,7 +39,7 @@ const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 60, BOTTOM: 60 };
 
-function Graph({
+export function BubbleGraph({
   data,
   width,
   height,
@@ -50,7 +49,7 @@ function Graph({
   focusedComparison,
   prevFocusedComparison,
   checkedCollections,
-}: GraphProps) {
+}: BubbleGraphProps) {
   const dispatch = useDispatch();
 
   // We need to know the active granularity to determine the scale
@@ -153,62 +152,13 @@ function Graph({
           );
         });
       })}
-      {/* Transparent overlay */}
-      {focusedComparison && (
-        <rect
-          x={0}
-          y={0}
-          width={width}
-          height={height}
-          fill={"rgba(255,255,255,0.2)"}
-          onClick={() => {
-            dispatch(setPrevFocusedComparison(focusedComparison));
-            dispatch(setFocusedComparison(null));
-          }}
-        />
-      )}
-      {prevFocusedComparison && (
-        <SplitBall
-          key={`${prevFocusedComparison.x}-${prevFocusedComparison.y}`}
-          startPoint={[prevFocusedComparison.x, prevFocusedComparison.y]}
-          endPoint={[width / 2, height / 2]}
-          startRadius={prevFocusedComparison.startRadius}
-          endRadius={Math.floor(height / 4)}
-          stroke={changeHslLightness(prevFocusedComparison.color, -10)}
-          strokeWidth={LINE_WIDTH}
-          fill={prevFocusedComparison.color}
-          onMouseOver={() => {}}
-          onMouseOut={() => {}}
-          opacity={1}
-          onClick={() => {}}
-          topCommonConcepts={prevFocusedComparison.concepts}
-          graphHeight={height}
-          graphWidth={width}
-          isFocused={false}
-        />
-      )}
-      {focusedComparison && (
-        <SplitBall
-          key={`${focusedComparison.x}-${focusedComparison.y}`}
-          startPoint={[focusedComparison.x, focusedComparison.y]}
-          endPoint={[width / 2, height / 2]}
-          startRadius={focusedComparison.startRadius}
-          endRadius={Math.floor(height / 4)}
-          stroke={changeHslLightness(focusedComparison.color, -10)}
-          strokeWidth={LINE_WIDTH}
-          fill={focusedComparison.color}
-          onMouseOver={() => {}}
-          onMouseOut={() => {}}
-          opacity={1}
-          onClick={() => {}}
-          topCommonConcepts={focusedComparison.concepts}
-          graphHeight={height}
-          graphWidth={width}
-          isFocused={true}
-        />
-      )}
+      {/* Overlay with focused balls (may be null) */}
+      <BubbleOverlay
+        width={width}
+        height={height}
+        prevFocusedComparison={prevFocusedComparison}
+        focusedComparison={focusedComparison}
+      />
     </svg>
   );
 }
-
-export default Graph;

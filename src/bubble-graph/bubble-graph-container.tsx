@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Legend from "./legend";
-import Graph from "./bubble-graph";
+import { BubbleGraph } from "./bubble-graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Granularity } from "../../types/type";
 import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
@@ -65,7 +65,7 @@ export function BubbleGraphContainer({
     <div style={{ height: "100%", width: "100%" }}>
       <div style={{ height: "100%", width: "100%", position: "relative" }}>
         {width > 0 && height > 0 && (
-          <Graph
+          <BubbleGraph
             data={data}
             checkedCollections={checkedCollections}
             maxTimeDistance={maxTimeDistance}

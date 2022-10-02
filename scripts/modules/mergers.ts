@@ -71,6 +71,8 @@ export const consolidateDreamNewsComparisonExampleList = (
   // So we get the most relevant items first
 
   const sortedList = listWithRealThings.sort((a, b) => b.score - a.score);
+
+  // High is the top, low is the bottom, med is the one in the middle
   const high = sortedList[0];
   const low = sortedList[sortedList.length - 1];
   const medium = sortedList[Math.floor(sortedList.length / 2)];

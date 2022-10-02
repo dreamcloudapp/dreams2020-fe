@@ -8,6 +8,7 @@ type ColumnProps = {
   sections: SimilarityLevelSection[];
   onMouseOut: () => void;
   onMouseOver: (event: any) => void;
+  onClick: () => void;
 };
 
 export function Column({
@@ -18,9 +19,10 @@ export function Column({
   onMouseOut,
   sections,
   onMouseOver,
+  onClick,
 }: ColumnProps) {
   return (
-    <g onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+    <g onMouseOver={onMouseOver} onMouseOut={onMouseOut} onClick={onClick}>
       {sections.map((s, i) => {
         const sectionProportion = s.percent / 100;
         const sectionHeight = colHeight * sectionProportion;

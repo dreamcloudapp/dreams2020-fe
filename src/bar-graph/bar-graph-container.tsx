@@ -8,11 +8,20 @@ import "../App.css";
 import { BasedAxis } from "../axes/before-after-axis";
 import { prettyNumber } from "../modules/formatters";
 import { Column } from "../components/column";
+import { useDispatch } from "react-redux";
+import {
+  selectFocusedComparison,
+  selectPrevFocusedComparison,
+  setFocusedComparison,
+} from "../ducks/ui";
+import { DifferenceDisplayRecordWithExamples } from "../App";
+import { BubbleOverlay } from "../ball/ball-overlay";
+import { useSelector } from "../ducks/root-reducer";
 
 const BAR_GAP = 3;
 
 type BarGraphProps = {
-  data: DifferenceDisplayRecord;
+  data: DifferenceDisplayRecordWithExamples;
   padding: Padding;
   width: number;
   height: number;
@@ -68,6 +77,10 @@ export function BarGraphContainer({
   handleMouseOver,
   padding,
 }: BarGraphProps) {
+  const dispatch = useDispatch();
+  const focusedComparison = useSelector(selectFocusedComparison);
+  const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
+
   const numBars = data.comparisons.differences.length;
   const totalGap = (numBars - 1) * BAR_GAP;
   const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
@@ -99,9 +112,27 @@ export function BarGraphContainer({
             }}
             onMouseOut={onMouseOut}
             sections={difference.similarityLevels || []}
+            onClick={() => {
+              dispatch(
+                setFocusedComparison({
+                  x: x,
+                  y: y,
+                  color: "red",
+                  concepts: ["cat", "cot", "first"],
+                  startRadius: 20,
+                })
+              );
+            }}
           />
         );
       })}
+      {/* Overlay with focused balls (may be null) */}
+      <BubbleOverlay
+        width={width}
+        height={height}
+        prevFocusedComparison={prevFocusedComparison}
+        focusedComparison={focusedComparison}
+      />
     </svg>
   );
 }
