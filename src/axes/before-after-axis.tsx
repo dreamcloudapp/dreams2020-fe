@@ -8,13 +8,19 @@ import "../App.css";
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 
-type BeforeAfterAxisProps = {
+type BasedAxisProps = {
   width: number;
   height: number;
   padding: Padding;
+  hasMidpointLine?: boolean;
 };
 
-export function BeforeAfterAxis({ height, width, padding }: BeforeAfterAxisProps) {
+export function BasedAxis({
+  height,
+  width,
+  padding,
+  hasMidpointLine = false,
+}: BasedAxisProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
   // Midpoint of the graph
@@ -42,16 +48,18 @@ export function BeforeAfterAxis({ height, width, padding }: BeforeAfterAxisProps
         xAxisCenterLabel="Dream on same day as news"
       />
       {/* MIDPOINT LINE */}
-      <g>
-        <line
-          x1={midpoint}
-          y1={padding.TOP}
-          x2={midpoint}
-          y2={height - padding.BOTTOM}
-          stroke={"#444"}
-          strokeWidth={1}
-        />
-      </g>
+      {hasMidpointLine && (
+        <g>
+          <line
+            x1={midpoint}
+            y1={padding.TOP}
+            x2={midpoint}
+            y2={height - padding.BOTTOM}
+            stroke={"#444"}
+            strokeWidth={1}
+          />
+        </g>
+      )}
     </>
   );
 }

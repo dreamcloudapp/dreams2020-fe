@@ -5,7 +5,7 @@ import {
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import "../App.css";
-import { BeforeAfterAxis } from "../axes/before-after-axis";
+import { BasedAxis } from "../axes/before-after-axis";
 import { prettyNumber } from "../modules/formatters";
 import { Column } from "../components/column";
 
@@ -80,7 +80,7 @@ export function BarGraphContainer({
 
   return (
     <svg width={width} height={height}>
-      <BeforeAfterAxis width={width} height={height} padding={padding} />
+      <BasedAxis width={width} height={height} padding={padding} hasMidpointLine={true} />
       {data.comparisons.differences.map((difference, index) => {
         const x = (barWidth + BAR_GAP) * index + padding.LEFT;
         const barHeight = scaleY(difference.averageSimilarity);

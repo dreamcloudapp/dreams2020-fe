@@ -1,7 +1,9 @@
 import { ColumnGraphData } from "../App";
+import { BasedAxis } from "../axes/before-after-axis";
 import { Column } from "../components/column";
 import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
+import { Padding } from "../modules/ui-types";
 
 const COLUMN_GAP = 10;
 
@@ -9,6 +11,7 @@ type GraphProps = {
   data: ColumnGraphData[];
   width: number;
   height: number;
+  padding: Padding;
   handleMouseOver: (event: any, datum: any) => void;
   onMouseOut: () => void;
 };
@@ -59,38 +62,40 @@ export function ColumnGraphContainer({
   height,
   handleMouseOver,
   onMouseOut,
+  padding,
 }: GraphProps) {
-  const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
+  const numBars = data.length;
+  const totalGap = (numBars - 1) * COLUMN_GAP;
+  const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
+
+  // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <svg width={width} height={height}>
+      <BasedAxis width={width} height={height} padding={padding} />
       {data.map((d, i) => {
         const colHeight = d.avgSimilarity * 18000;
 
-        const x = i * (columnWidth + COLUMN_GAP);
-
-        // const sections: SimilarityLevelSection[] = [
-
-        // ]
+        const x = i * (barWidth + COLUMN_GAP) + padding.LEFT;
+        const y = height - padding.BOTTOM - colHeight;
 
         return (
-          <g>
+          <g key={i}>
             <Column
-              key={i}
               onMouseOver={e => {
                 (handleMouseOver as any)(e, renderTooltip(d));
               }}
               onMouseOut={onMouseOut}
               sections={d.similarityLevels}
               x={x}
-              y={height - colHeight}
+              y={y}
               colHeight={colHeight}
-              colWidth={columnWidth}
+              colWidth={barWidth}
             />
 
             {/* Label */}
             <text
-              x={x + columnWidth / 2}
-              y={height - colHeight - 10}
+              x={x + barWidth / 2}
+              y={y - 10}
               textAnchor="middle"
               fill="black"
               fontSize="12px"

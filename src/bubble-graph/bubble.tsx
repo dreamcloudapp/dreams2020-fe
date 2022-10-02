@@ -1,7 +1,7 @@
 import { Point } from "../../types/types";
 import { animated, useSpring } from "react-spring";
 
-type BallProps = {
+type BubbleProps = {
   r: number;
   stroke: string;
   fill: string;
@@ -14,7 +14,7 @@ type BallProps = {
   opacity: number;
 };
 
-export const Ball = ({
+export const Bubble = ({
   r,
   stroke,
   strokeWidth,
@@ -25,7 +25,7 @@ export const Ball = ({
   endPoint,
   opacity,
   onClick,
-}: BallProps) => {
+}: BubbleProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
 

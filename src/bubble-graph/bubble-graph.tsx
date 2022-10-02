@@ -2,7 +2,7 @@ import { scaleLinear } from "d3";
 import Axes from "./axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
-import { Ball } from "./ball";
+import { Bubble } from "./bubble";
 import { SplitBall } from "../ball/split-ball";
 import { MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
 import {
@@ -111,7 +111,7 @@ function Graph({
           const endY = graphPadding.TOP + scaleYDiscrete(index1 - index2);
 
           return (
-            <Ball
+            <Bubble
               startPoint={startPoint}
               endPoint={[endX, endY]}
               key={i}

@@ -7,13 +7,21 @@ import {
   DifferenceRecord,
   DifferenceRecordSet,
   NewsRecord,
+  OptionalConceptScore,
+  WikipediaConcept,
 } from "@kannydennedy/dreams-2020-types";
 import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
 import { getSimilarityLevel } from "./modules/similarity";
 import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 import { getDifferenceInDays } from "./modules/time-helpers";
+import { consolidateWikipediaConceptList } from "./modules/mergers";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
+
+type DifferenceRecordWithExamples = DifferenceRecord & {
+  topConcepts: WikipediaConcept[];
+};
+
 const COLORS = {
   low: ColorTheme.BLUE,
   medium: ColorTheme.GRAY,
@@ -66,9 +74,48 @@ type IntermediaryDifferenceRecord = {
   totalLowSimilarity: number;
   totalMediumSimilarity: number;
   totalHighSimilarity: number;
+  wikipediaConceptDict: { [key: string]: number };
 };
 
 const weekDict: { [key: string]: IntermediaryDifferenceRecord } = {};
+
+// Keep a running dictionary of concepts, keyed by title
+// With score accumulating
+// i.e. {title: score}
+// It's a mess but someone's got to do it
+const updateConceptDict = (
+  prevConceptDict: { [key: string]: number } | undefined,
+  newConcepts: OptionalConceptScore[]
+): { [key: string]: number } => {
+  if (prevConceptDict === undefined) {
+    return newConcepts.reduce((acc, curr) => {
+      if (!curr) {
+        return acc;
+      } else {
+        return {
+          ...acc,
+          [curr.concept]: curr.score,
+        };
+      }
+    }, {});
+  } else {
+    return newConcepts.reduce((acc, curr) => {
+      if (!curr) {
+        return acc;
+      } else if (acc[curr.concept]) {
+        return {
+          ...acc,
+          [curr.concept]: acc[curr.concept] + curr.score,
+        };
+      } else {
+        return {
+          ...acc,
+          [curr.concept]: curr.score,
+        };
+      }
+    }, prevConceptDict);
+  }
+};
 
 dataArr2020.forEach((record: NewsRecordWithDates, index) => {
   const { dreamDate, newsDate } = record;
@@ -97,6 +144,7 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
       totalHighSimilarity: s === "high" ? 1 : 0,
       totalMediumSimilarity: s === "medium" ? 1 : 0,
       totalLowSimilarity: s == "low" ? 1 : 0,
+      wikipediaConceptDict: updateConceptDict(undefined, record.topConcepts),
     };
   } else {
     weekDict[key] = {
@@ -110,12 +158,16 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
         s === "medium" ? currWk.totalMediumSimilarity + 1 : currWk.totalMediumSimilarity,
       totalLowSimilarity:
         s == "low" ? currWk.totalLowSimilarity + 1 : currWk.totalLowSimilarity,
+      wikipediaConceptDict: updateConceptDict(
+        currWk.wikipediaConceptDict,
+        record.topConcepts
+      ),
     };
   }
 });
 
 // Now we loop through again, and get the averages
-const weekData: DifferenceRecord[] = Object.keys(weekDict).map(key => {
+const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key => {
   const {
     difference,
     recordCount,
@@ -123,10 +175,22 @@ const weekData: DifferenceRecord[] = Object.keys(weekDict).map(key => {
     totalHighSimilarity,
     totalMediumSimilarity,
     totalLowSimilarity,
+    wikipediaConceptDict,
   } = weekDict[key];
+
+  // Turn the wikipediaConceptDict into a shortlist of top concepts
+  const allConcepts: WikipediaConcept[] = Object.entries(wikipediaConceptDict).map(
+    ([title, score]) => ({
+      title: title,
+      score: score,
+    })
+  );
+  const topConcepts = consolidateWikipediaConceptList(allConcepts, 5);
+
   return {
     difference,
     recordCount,
+    topConcepts,
     averageSimilarity: totalSimilarity / recordCount,
     similarityLevels: [
       {
