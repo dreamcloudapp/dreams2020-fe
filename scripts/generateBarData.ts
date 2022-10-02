@@ -19,6 +19,7 @@ import { getDifferenceInDays } from "./modules/time-helpers";
 import {
   consolidateWikipediaConceptList,
   consolidateDreamNewsComparisonExampleList,
+  exampleListToTopConceptList,
 } from "./modules/mergers";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
@@ -212,7 +213,8 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
       score: score,
     })
   );
-  const topConcepts = consolidateWikipediaConceptList(allConcepts, 5);
+  // const topConcepts = consolidateWikipediaConceptList(allConcepts, 5);
+  const topConcepts = exampleListToTopConceptList(examples);
   const exampleDict = consolidateDreamNewsComparisonExampleList(examples);
 
   return {

@@ -1,6 +1,15 @@
+import { useDispatch } from "react-redux";
+import { ColorTheme } from "../modules/theme";
 import { ColumnGraphData } from "../App";
 import { BasedAxis } from "../axes/before-after-axis";
+import { BubbleOverlay } from "../ball/ball-overlay";
 import { Column } from "../components/column";
+import { useSelector } from "../ducks/root-reducer";
+import {
+  selectFocusedComparison,
+  selectPrevFocusedComparison,
+  setFocusedComparison,
+} from "../ducks/ui";
 import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 import { Padding } from "../modules/ui-types";
@@ -64,6 +73,10 @@ export function ColumnGraphContainer({
   onMouseOut,
   padding,
 }: GraphProps) {
+  const dispatch = useDispatch();
+  const focusedComparison = useSelector(selectFocusedComparison);
+  const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
+
   const numBars = data.length;
   const totalGap = (numBars - 1) * COLUMN_GAP;
   const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
@@ -90,7 +103,17 @@ export function ColumnGraphContainer({
               y={y}
               colHeight={colHeight}
               colWidth={barWidth}
-              onClick={() => {}}
+              onClick={() => {
+                dispatch(
+                  setFocusedComparison({
+                    x: x + barWidth / 2,
+                    y: y + colHeight / 2,
+                    color: ColorTheme.DULLER_BLUE,
+                    concepts: ["example", "example", "example"],
+                    startRadius: 20,
+                  })
+                );
+              }}
             />
 
             {/* Label */}
@@ -106,6 +129,12 @@ export function ColumnGraphContainer({
           </g>
         );
       })}
+      <BubbleOverlay
+        width={width}
+        height={height}
+        prevFocusedComparison={prevFocusedComparison}
+        focusedComparison={focusedComparison}
+      />
     </svg>
   );
 }

@@ -17,6 +17,7 @@ import {
 import { DifferenceDisplayRecordWithExamples } from "../App";
 import { BubbleOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
+import { ColorTheme } from "../modules/theme";
 
 const BAR_GAP = 3;
 
@@ -115,9 +116,9 @@ export function BarGraphContainer({
             onClick={() => {
               dispatch(
                 setFocusedComparison({
-                  x: x,
-                  y: y,
-                  color: "red",
+                  x: x + barWidth / 2,
+                  y: y + barHeight / 2,
+                  color: ColorTheme.DULLER_BLUE,
                   concepts: difference.examples["high"].topConcepts.map(x => x.concept),
                   startRadius: 20,
                 })
