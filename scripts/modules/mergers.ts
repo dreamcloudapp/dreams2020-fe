@@ -1,7 +1,9 @@
 import {
   WikipediaConcept,
   ExampleRecordComparison,
+  ExampleDreamNewsComparison,
 } from "@kannydennedy/dreams-2020-types";
+import { ExamplesWithSimilarityLevel } from "../generateBarData";
 
 // Take a big list of wikipedia concepts and consolidate them into a smaller list
 // First consolidate and sum the concepts with the same title
@@ -58,4 +60,24 @@ export const consolidateExampleList = (
   // So we get the most relevant items first
   const sortedList = bigList.sort((a, b) => b.score - a.score);
   return sortedList.slice(0, desiredLength);
+};
+
+export const consolidateDreamNewsComparisonExampleList = (
+  bigList: ExampleDreamNewsComparison[]
+): ExamplesWithSimilarityLevel => {
+  // We can't show things when there's no concepts in common
+  const listWithRealThings = bigList.filter(example => example.topConcepts.length > 0);
+  // Order list items by score
+  // So we get the most relevant items first
+
+  const sortedList = listWithRealThings.sort((a, b) => b.score - a.score);
+  const high = sortedList[0];
+  const low = sortedList[sortedList.length - 1];
+  const medium = sortedList[Math.floor(sortedList.length / 2)];
+
+  return {
+    high,
+    low,
+    medium,
+  };
 };

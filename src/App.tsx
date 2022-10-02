@@ -26,8 +26,12 @@ import {
   setShowingGraph,
 } from "./ducks/ui";
 import {
+  DifferenceDisplayRecord,
+  DifferenceRecord,
+  DifferenceRecordSet,
   GranularityComparisonCollection,
   SimilarityLevelSection,
+  WikipediaConcept,
 } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import {
@@ -64,6 +68,18 @@ export type ColumnGraphData = {
   avgSimilarity: number;
   maxSimilarity: number;
   similarityLevels: SimilarityLevelSection[];
+};
+
+type DifferenceRecordWithExamples = DifferenceRecord & {
+  topConcepts: WikipediaConcept[];
+};
+
+type DifferenceRecordSetWithExamples = DifferenceRecordSet & {
+  differences: DifferenceRecordWithExamples[];
+};
+
+export type DifferenceDisplayRecordWithExamples = DifferenceDisplayRecord & {
+  comparisons: DifferenceRecordSetWithExamples;
 };
 
 function GraphTypeToggle({

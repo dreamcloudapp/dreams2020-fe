@@ -3,7 +3,7 @@ import {
   DifferenceByGranularity,
   DifferenceDisplayRecord,
 } from "@kannydennedy/dreams-2020-types";
-import { ColumnGraphData } from "./App";
+import { ColumnGraphData, DifferenceDisplayRecordWithExamples } from "./App";
 
 // Dummy data for bubbles
 // For when allComparisons hasn't loaded yet
@@ -68,7 +68,7 @@ export const defaultDifferencesData: DifferenceByGranularity = {
   ],
 };
 
-export const defaultBarData: DifferenceDisplayRecord = {
+export const defaultBarData: DifferenceDisplayRecordWithExamples = {
   key: "2020",
   color: "hsl(24, 84%, 56%)",
   comparisons: {

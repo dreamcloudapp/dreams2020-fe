@@ -6,20 +6,43 @@ import {
   DifferenceDisplayRecord,
   DifferenceRecord,
   DifferenceRecordSet,
+  ExampleDreamNewsComparison,
   NewsRecord,
   OptionalConceptScore,
+  SimilarityLevel,
   WikipediaConcept,
 } from "@kannydennedy/dreams-2020-types";
 import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
 import { getSimilarityLevel } from "./modules/similarity";
 import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 import { getDifferenceInDays } from "./modules/time-helpers";
-import { consolidateWikipediaConceptList } from "./modules/mergers";
+import {
+  consolidateWikipediaConceptList,
+  consolidateDreamNewsComparisonExampleList,
+} from "./modules/mergers";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
 
+// type ExamplesWithSimilarityLevel = {
+//   similarity: SimilarityLevel;
+//   example: ExampleDreamNewsComparison;
+// };
+
+export type ExamplesWithSimilarityLevel = {
+  [key in SimilarityLevel]: ExampleDreamNewsComparison;
+};
+
 type DifferenceRecordWithExamples = DifferenceRecord & {
   topConcepts: WikipediaConcept[];
+  examples: ExamplesWithSimilarityLevel;
+};
+
+type DifferenceRecordSetWithExamples = DifferenceRecordSet & {
+  differences: DifferenceRecordWithExamples[];
+};
+
+type DifferenceDisplayRecordWithExamples = DifferenceDisplayRecord & {
+  comparisons: DifferenceRecordSetWithExamples;
 };
 
 const COLORS = {
@@ -75,6 +98,7 @@ type IntermediaryDifferenceRecord = {
   totalMediumSimilarity: number;
   totalHighSimilarity: number;
   wikipediaConceptDict: { [key: string]: number };
+  examples: ExampleDreamNewsComparison[];
 };
 
 const weekDict: { [key: string]: IntermediaryDifferenceRecord } = {};
@@ -145,6 +169,7 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
       totalMediumSimilarity: s === "medium" ? 1 : 0,
       totalLowSimilarity: s == "low" ? 1 : 0,
       wikipediaConceptDict: updateConceptDict(undefined, record.topConcepts),
+      examples: [...record.examples],
     };
   } else {
     weekDict[key] = {
@@ -162,6 +187,7 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
         currWk.wikipediaConceptDict,
         record.topConcepts
       ),
+      examples: [...currWk.examples, ...record.examples],
     };
   }
 });
@@ -176,6 +202,7 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
     totalMediumSimilarity,
     totalLowSimilarity,
     wikipediaConceptDict,
+    examples,
   } = weekDict[key];
 
   // Turn the wikipediaConceptDict into a shortlist of top concepts
@@ -186,12 +213,14 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
     })
   );
   const topConcepts = consolidateWikipediaConceptList(allConcepts, 5);
+  const exampleDict = consolidateDreamNewsComparisonExampleList(examples);
 
   return {
     difference,
     recordCount,
     topConcepts,
     averageSimilarity: totalSimilarity / recordCount,
+    examples: exampleDict,
     similarityLevels: [
       {
         similarityLevel: "low",
@@ -230,7 +259,7 @@ const minAverageSimilarity = Math.min(
 weekData.sort((a, b) => a.difference - b.difference);
 
 // Make a DifferenceRecordSet
-const weekDataWithMinMax: DifferenceRecordSet = {
+const weekDataWithMinMax: DifferenceRecordSetWithExamples = {
   differences: weekData,
   maxAverageSimilarity,
   minSimilarity: minAverageSimilarity,
@@ -238,7 +267,7 @@ const weekDataWithMinMax: DifferenceRecordSet = {
 };
 
 // Make a DifferenceDisplayRecord
-const weekDataDisplay: DifferenceDisplayRecord = {
+const weekDataDisplay: DifferenceDisplayRecordWithExamples = {
   key: "2020",
   color: ColorTheme.RED,
   comparisons: weekDataWithMinMax,

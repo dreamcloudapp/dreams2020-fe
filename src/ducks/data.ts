@@ -8,7 +8,7 @@ import {
   DifferenceByGranularity,
   DifferenceDisplayRecord,
 } from "@kannydennedy/dreams-2020-types";
-import { ColumnGraphData } from "../App";
+import { ColumnGraphData, DifferenceDisplayRecordWithExamples } from "../App";
 
 export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
 
@@ -31,7 +31,7 @@ export type DataState = {
   comparisons?: BigBigThing;
   differences?: DifferenceByGranularity;
   columnData?: ColumnGraphData[];
-  barData?: DifferenceDisplayRecord;
+  barData?: DifferenceDisplayRecordWithExamples;
 };
 
 const initialState: DataState = {
@@ -58,7 +58,7 @@ const dataSlice = createSlice({
     setColumnData(state, action: PayloadAction<ColumnGraphData[]>) {
       state.columnData = action.payload;
     },
-    setBarData(state, action: PayloadAction<DifferenceDisplayRecord>) {
+    setBarData(state, action: PayloadAction<DifferenceDisplayRecordWithExamples>) {
       state.barData = action.payload;
     },
   },
@@ -83,7 +83,9 @@ export const selectColumnData = (state: RootState): ColumnGraphData[] | undefine
   return state?.data.columnData;
 };
 
-export const selectBarData = (state: RootState): DifferenceDisplayRecord | undefined => {
+export const selectBarData = (
+  state: RootState
+): DifferenceDisplayRecordWithExamples | undefined => {
   return state?.data.barData;
 };
 
