@@ -1,4 +1,7 @@
-import { DifferenceRecord } from "@kannydennedy/dreams-2020-types";
+import {
+  DifferenceDisplayRecordWithExamples,
+  DifferenceRecord,
+} from "@kannydennedy/dreams-2020-types";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import "../App.css";
@@ -11,7 +14,6 @@ import {
   selectPrevFocusedComparison,
   setFocusedComparison,
 } from "../ducks/ui";
-import { DifferenceDisplayRecordWithExamples } from "../App";
 import { BubbleOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
 import { ColorTheme } from "../modules/theme";

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@kannydennedy/dreams-2020-types": "^5.3.2",
+    "@kannydennedy/dreams-2020-types": "^5.3.3",
     "@reduxjs/toolkit": "^1.8.1",
     "@rehooks/component-size": "^1.0.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -43,6 +43,7 @@
     "areadata": "npx ts-node scripts/generateAreaData.ts",
     "monthcolumns": "npx ts-node scripts/generateMonthColumnData.ts",
     "parse-dreams": "npx ts-node scripts/parseDreams.ts",
+    "parse-news": "npx ts-node scripts/parseNews.ts",
     "data": "npx ts-node scripts/generateBubbleData.ts && npx ts-node scripts/generateAreaData.ts && npx ts-node scripts/generateMonthColumnData.ts && npx ts-node scripts/generateBarData.ts"
   },
   "eslintConfig": {

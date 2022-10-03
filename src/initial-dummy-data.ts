@@ -1,8 +1,9 @@
 import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
+  DifferenceDisplayRecordWithExamples,
 } from "@kannydennedy/dreams-2020-types";
-import { ColumnGraphData, DifferenceDisplayRecordWithExamples } from "./App";
+import { ColumnGraphData } from "./App";
 
 // Dummy data for bubbles
 // For when allComparisons hasn't loaded yet

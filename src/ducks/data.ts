@@ -7,8 +7,9 @@ import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
   SingleTextRecordDictionary,
+  DifferenceDisplayRecordWithExamples,
 } from "@kannydennedy/dreams-2020-types";
-import { ColumnGraphData, DifferenceDisplayRecordWithExamples } from "../App";
+import { ColumnGraphData } from "../App";
 
 export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
 
