@@ -1,7 +1,6 @@
 import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
-  DifferenceDisplayRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { ColumnGraphData, DifferenceDisplayRecordWithExamples } from "./App";
 

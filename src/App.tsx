@@ -26,9 +26,7 @@ import {
   setShowingGraph,
 } from "./ducks/ui";
 import {
-  DifferenceDisplayRecord,
   DifferenceRecord,
-  DifferenceRecordSet,
   ExampleDreamNewsComparison,
   GranularityComparisonCollection,
   SimilarityLevel,

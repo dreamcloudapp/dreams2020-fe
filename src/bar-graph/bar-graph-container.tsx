@@ -1,7 +1,4 @@
-import {
-  DifferenceDisplayRecord,
-  DifferenceRecord,
-} from "@kannydennedy/dreams-2020-types";
+import { DifferenceRecord } from "@kannydennedy/dreams-2020-types";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import "../App.css";
