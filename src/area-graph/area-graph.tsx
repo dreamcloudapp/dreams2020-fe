@@ -2,9 +2,6 @@ import {
   DifferenceDisplayRecord,
   DifferenceRecord,
 } from "@kannydennedy/dreams-2020-types";
-import { useSelector } from "react-redux";
-import Axes from "../axes/axes";
-import { selectActiveGranularity } from "../ducks/ui";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import { ChartPolygon } from "./chart-polygon";
@@ -12,7 +9,6 @@ import "../App.css";
 import { BasedAxis } from "../axes/before-after-axis";
 
 const LINE_WIDTH = 2;
-const TRIANGLE_HEIGHT = 10;
 
 type ColumnGraphProps = {
   data: DifferenceDisplayRecord[];
@@ -76,8 +72,6 @@ export function AreaGraph({
   handleMouseOver,
   paddedMax,
 }: ColumnGraphProps) {
-  const activeGranularity = useSelector(selectActiveGranularity);
-
   // Midpoint of the graph
   const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
 
