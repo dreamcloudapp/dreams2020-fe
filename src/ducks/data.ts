@@ -6,6 +6,7 @@ import {
   ComparisonSet,
   GranularityComparisonCollection,
   DifferenceByGranularity,
+  SingleTextRecordDictionary,
 } from "@kannydennedy/dreams-2020-types";
 import { ColumnGraphData, DifferenceDisplayRecordWithExamples } from "../App";
 
@@ -31,6 +32,7 @@ export type DataState = {
   differences?: DifferenceByGranularity;
   columnData?: ColumnGraphData[];
   barData?: DifferenceDisplayRecordWithExamples;
+  dreams?: SingleTextRecordDictionary;
 };
 
 const initialState: DataState = {
@@ -39,6 +41,7 @@ const initialState: DataState = {
   differences: undefined,
   columnData: undefined,
   barData: undefined,
+  dreams: undefined,
 };
 
 const dataSlice = createSlice({
@@ -59,6 +62,9 @@ const dataSlice = createSlice({
     },
     setBarData(state, action: PayloadAction<DifferenceDisplayRecordWithExamples>) {
       state.barData = action.payload;
+    },
+    setDreams(state, action: PayloadAction<SingleTextRecordDictionary>) {
+      state.dreams = action.payload;
     },
   },
 });
@@ -86,6 +92,12 @@ export const selectBarData = (
   state: RootState
 ): DifferenceDisplayRecordWithExamples | undefined => {
   return state?.data.barData;
+};
+
+export const selectDreams = (
+  state: RootState
+): SingleTextRecordDictionary | undefined => {
+  return state?.data.dreams;
 };
 
 // Get the comparison sets for a given granularity
@@ -157,6 +169,7 @@ export function fetchBubbleData(): AppThunk {
 const differencesFile = "differences.json";
 const columnFile = "month-columns.json";
 const barFile = "bar-data.json";
+const dreamsFile = "all-dreams-final.json";
 
 // Loads the differences from the file
 export function fetchAreaData(): AppThunk {
@@ -193,6 +206,19 @@ export function fetchBarData(): AppThunk {
     const data = await response.json();
 
     dispatch(dataSlice.actions.setBarData(data));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+// Load dreams from the file
+export function fetchDreams(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${dreamsFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setDreams(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }

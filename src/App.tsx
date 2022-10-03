@@ -15,6 +15,7 @@ import {
   selectColumnData,
   selectBarData,
   fetchBarData,
+  fetchDreams,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
@@ -176,6 +177,7 @@ function App() {
     dispatch<any>(fetchAreaData());
     dispatch<any>(fetchColumnData());
     dispatch<any>(fetchBarData());
+    dispatch<any>(fetchDreams());
   }, [dispatch]);
 
   return (
