@@ -1858,10 +1858,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kannydennedy/dreams-2020-types@^5.3.1":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@kannydennedy/dreams-2020-types/-/dreams-2020-types-5.3.1.tgz#98a07f59ffe94506e6e8bc8e2a03025461deca93"
-  integrity sha512-zk5aoYYV0jSG0Kdse8YF3G31moNh4vWASuc69uOEuWzBhS/naC+dmSjlislh7VFDwBDUWoGTiyisHMF4X1jeUg==
+"@kannydennedy/dreams-2020-types@^5.3.2":
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/@kannydennedy/dreams-2020-types/-/dreams-2020-types-5.3.2.tgz#3c829fdb5b297a73a49949c034fe86e18efcb653"
+  integrity sha512-OY2L/CZUwHOoj7jhuFVbVvPlQsUm/j/hn/SsA5D4M4FcZKPmhvtpytjj9xBu0B5nrP1pnYwJYz+EvTqFMyfV8g==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -4875,6 +4875,13 @@ csstype@^3.0.2:
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.10.tgz#2ad3a7bed70f35b965707c092e5f30b327c290e5"
   integrity sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==
+
+csv-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/csv-parser/-/csv-parser-3.0.0.tgz#b88a6256d79e090a97a1b56451f9327b01d710e7"
+  integrity sha512-s6OYSXAK3IdKqYO33y09jhypG/bSDHPuyCme/IdEHfWpLf/jKcpitVFyOC6UemgGk8v7Q5u2XE0vvwmanxhGlQ==
+  dependencies:
+    minimist "^1.2.0"
 
 cyclist@^1.0.1:
   version "1.0.1"
