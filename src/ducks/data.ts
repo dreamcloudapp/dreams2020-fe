@@ -34,6 +34,7 @@ export type DataState = {
   columnData?: ColumnGraphData[];
   barData?: DifferenceDisplayRecordWithExamples;
   dreams?: SingleTextRecordDictionary;
+  news?: SingleTextRecordDictionary;
 };
 
 const initialState: DataState = {
@@ -43,6 +44,7 @@ const initialState: DataState = {
   columnData: undefined,
   barData: undefined,
   dreams: undefined,
+  news: undefined,
 };
 
 const dataSlice = createSlice({
@@ -66,6 +68,9 @@ const dataSlice = createSlice({
     },
     setDreams(state, action: PayloadAction<SingleTextRecordDictionary>) {
       state.dreams = action.payload;
+    },
+    setNews(state, action: PayloadAction<SingleTextRecordDictionary>) {
+      state.news = action.payload;
     },
   },
 });
@@ -99,6 +104,10 @@ export const selectDreams = (
   state: RootState
 ): SingleTextRecordDictionary | undefined => {
   return state?.data.dreams;
+};
+
+export const selectNews = (state: RootState): SingleTextRecordDictionary | undefined => {
+  return state?.data.news;
 };
 
 // Get the comparison sets for a given granularity
@@ -171,6 +180,7 @@ const differencesFile = "differences.json";
 const columnFile = "month-columns.json";
 const barFile = "bar-data.json";
 const dreamsFile = "all-dreams-final.json";
+const newsFile = "all-news-final.json";
 
 // Loads the differences from the file
 export function fetchAreaData(): AppThunk {
@@ -220,6 +230,19 @@ export function fetchDreams(): AppThunk {
     const data = await response.json();
 
     dispatch(dataSlice.actions.setDreams(data));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+// Load news from the file
+export function fetchNews(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${newsFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setNews(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }

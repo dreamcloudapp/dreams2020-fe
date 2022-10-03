@@ -16,6 +16,7 @@ import {
   selectBarData,
   fetchBarData,
   fetchDreams,
+  fetchNews,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
@@ -27,12 +28,8 @@ import {
   setShowingGraph,
 } from "./ducks/ui";
 import {
-  DifferenceRecord,
-  ExampleDreamNewsComparison,
   GranularityComparisonCollection,
-  SimilarityLevel,
   SimilarityLevelSection,
-  WikipediaConcept,
 } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import {
@@ -69,28 +66,6 @@ export type ColumnGraphData = {
   avgSimilarity: number;
   maxSimilarity: number;
   similarityLevels: SimilarityLevelSection[];
-};
-
-export type ExamplesWithSimilarityLevel = {
-  [key in SimilarityLevel]: ExampleDreamNewsComparison;
-};
-
-type DifferenceRecordWithExamples = DifferenceRecord & {
-  topConcepts: WikipediaConcept[];
-  examples: ExamplesWithSimilarityLevel;
-};
-
-export type DifferenceRecordSetWithExamples = {
-  maxSimilarity: number;
-  minSimilarity: number;
-  maxAverageSimilarity: number;
-  differences: DifferenceRecordWithExamples[];
-};
-
-export type DifferenceDisplayRecordWithExamples = {
-  key: string;
-  color: string;
-  comparisons: DifferenceRecordSetWithExamples;
 };
 
 function GraphTypeToggle({
@@ -178,6 +153,7 @@ function App() {
     dispatch<any>(fetchColumnData());
     dispatch<any>(fetchBarData());
     dispatch<any>(fetchDreams());
+    dispatch<any>(fetchNews());
   }, [dispatch]);
 
   return (
