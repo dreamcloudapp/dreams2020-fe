@@ -48,26 +48,26 @@ test("consolidateWikipediaConceptList", () => {
 
 const inputExampleList: ExampleRecordComparison[] = [
   {
-    dreamId: "I dreamt of a mouse.",
-    newsId: "A mouse caught COVID-19.",
+    dreamText: "I dreamt of a mouse.",
+    newsText: "A mouse caught COVID-19.",
     score: 0.7,
     concepts: [],
   },
   {
-    dreamId: "I dreamt of a dog.",
-    newsId: "A dog caught COVID-19.",
+    dreamText: "I dreamt of a dog.",
+    newsText: "A dog caught COVID-19.",
     score: 0.5,
     concepts: [],
   },
   {
-    dreamId: "I dreamt of a beaver.",
-    newsId: "A beaver caught COVID-19.",
+    dreamText: "I dreamt of a beaver.",
+    newsText: "A beaver caught COVID-19.",
     score: 0.8,
     concepts: [],
   },
   {
-    dreamId: "I dreamt of a cat.",
-    newsId: "A cat caught polio.",
+    dreamText: "I dreamt of a cat.",
+    newsText: "A cat caught polio.",
     score: 0.6,
     concepts: [],
   },
@@ -75,14 +75,14 @@ const inputExampleList: ExampleRecordComparison[] = [
 
 const expectedExampleList: ExampleRecordComparison[] = [
   {
-    dreamId: "I dreamt of a beaver.",
-    newsId: "A beaver caught COVID-19.",
+    dreamText: "I dreamt of a beaver.",
+    newsText: "A beaver caught COVID-19.",
     score: 0.8,
     concepts: [],
   },
   {
-    newsId: "I dreamt of a mouse.",
-    dreamId: "A mouse caught COVID-19.",
+    dreamText: "I dreamt of a mouse.",
+    newsText: "A mouse caught COVID-19.",
     score: 0.7,
     concepts: [],
   },
