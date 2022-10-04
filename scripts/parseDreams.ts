@@ -60,5 +60,7 @@ fs.createReadStream(dreamsFile)
 
     // Write JSON file
 
+    console.log("Writing JSON file");
+
     fs.writeFileSync(dreamsJsonPath, JSON.stringify(dreamsById, null, 2));
   });
