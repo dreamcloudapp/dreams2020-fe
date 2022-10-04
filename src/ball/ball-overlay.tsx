@@ -4,24 +4,28 @@ import {
   VisComparison,
   setPrevFocusedComparison,
   setFocusedComparison,
+  incrementFocusedComparison,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
+import { ChevronRight } from "../icons/icons";
+import { ColorTheme } from "../modules/theme";
 
-type BubbleOverlayProps = {
+type BallOverlayProps = {
   width: number;
   height: number;
   focusedComparison: VisComparison | null;
   prevFocusedComparison: VisComparison | null;
+  activeComparisonSet: VisComparison[];
 };
 
 const LINE_WIDTH = 2;
 
-export function BubbleOverlay({
+export function BallOverlay({
   width,
   height,
   focusedComparison,
   prevFocusedComparison,
-}: BubbleOverlayProps) {
+}: BallOverlayProps) {
   const dispatch = useDispatch();
 
   // If we have dream and news ids, it's a special thing
@@ -30,6 +34,7 @@ export function BubbleOverlay({
   const newsId = focusedComparison?.newsId || "";
   const hasDreamId = !!dreamId;
   const hasNewsId = !!newsId;
+  //   const isSingleComparison: boolean = hasDreamId && hasNewsId;
 
   const textLeft = hasDreamId ? "Dream" : "Dreams";
   const textRight = hasNewsId ? "News Item" : "News";
@@ -42,7 +47,7 @@ export function BubbleOverlay({
           y={0}
           width={width}
           height={height}
-          fill={"rgba(255,255,255,0.2)"}
+          fill={"rgba(255,255,255,0.4)"}
           onClick={() => {
             dispatch(setPrevFocusedComparison(focusedComparison));
             dispatch(setFocusedComparison(null));
@@ -89,6 +94,18 @@ export function BubbleOverlay({
           isFocused={true}
           textLeft={textLeft}
           textRight={textRight}
+        />
+      )}
+
+      {focusedComparison && (
+        <ChevronRight
+          fill={ColorTheme.BLUE}
+          x={width - 50}
+          y={height / 2 - 10}
+          scale={0.06}
+          onClick={() => {
+            dispatch(incrementFocusedComparison());
+          }}
         />
       )}
     </>

@@ -12,9 +12,11 @@ export type GraphType = "column" | "bubble" | "area" | "bar";
 export type VisComparison = {
   x: number;
   y: number;
+  index: number;
   concepts: string[];
   startRadius: number;
   color: string;
+  label: string;
   dreamId?: string;
   newsId?: string;
 };
@@ -25,6 +27,7 @@ export type UIState = {
   showingGraph: GraphType;
   focusedComparison: VisComparison | null;
   prevFocusedComparison: VisComparison | null;
+  activeComparisonSet: VisComparison[];
 };
 
 const initialState: UIState = {
@@ -33,6 +36,7 @@ const initialState: UIState = {
   showingGraph: "area",
   focusedComparison: null,
   prevFocusedComparison: null,
+  activeComparisonSet: [],
 };
 
 const uiSlice = createSlice({
@@ -54,6 +58,31 @@ const uiSlice = createSlice({
     setPrevFocusedComparison(state, action: PayloadAction<VisComparison | null>) {
       state.prevFocusedComparison = action.payload;
     },
+    setActiveComparisonSet(state, action: PayloadAction<VisComparison[]>) {
+      state.activeComparisonSet = action.payload;
+    },
+    incrementFocusedComparison(state) {
+      if (state.focusedComparison) {
+        const index = state.focusedComparison.index;
+        const nextIndex =
+          index + 1 > state.activeComparisonSet.length - 1 ? 0 : index + 1;
+        const nextComparison = state.activeComparisonSet[nextIndex];
+        if (nextComparison) {
+          state.focusedComparison = { ...nextComparison };
+        }
+      }
+    },
+    decrementFocusedComparison(state) {
+      if (state.focusedComparison) {
+        const index = state.focusedComparison.index;
+        const nextIndex =
+          index - 1 < 0 ? state.activeComparisonSet.length - 1 : index - 1;
+        const nextComparison = state.activeComparisonSet[nextIndex];
+        if (nextComparison) {
+          state.focusedComparison = { ...nextComparison };
+        }
+      }
+    },
     toggleCollectionChecked(state, action: PayloadAction<string>) {
       const collection = state.checkedCollections.find(c => c.label === action.payload);
       if (collection) {
@@ -70,6 +99,9 @@ export const {
   setShowingGraph,
   setFocusedComparison,
   setPrevFocusedComparison,
+  setActiveComparisonSet,
+  incrementFocusedComparison,
+  decrementFocusedComparison,
 } = uiSlice.actions;
 
 export const selectActiveGranularity = (state: RootState): Granularity => {
@@ -90,6 +122,10 @@ export const selectFocusedComparison = (state: RootState): VisComparison | null 
 
 export const selectPrevFocusedComparison = (state: RootState): VisComparison | null => {
   return state?.ui.prevFocusedComparison;
+};
+
+export const selectActiveComparisonSet = (state: RootState): VisComparison[] => {
+  return state?.ui.activeComparisonSet;
 };
 
 export default uiSlice;

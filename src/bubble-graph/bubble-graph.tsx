@@ -14,9 +14,10 @@ import {
   CollectionCheck,
   VisComparison,
   setFocusedComparison,
+  selectActiveComparisonSet,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
-import { BubbleOverlay } from "../ball/ball-overlay";
+import { BallOverlay } from "../ball/ball-overlay";
 
 type BubbleGraphProps = {
   data: GranularityComparisonCollection;
@@ -54,6 +55,7 @@ export function BubbleGraph({
 
   // We need to know the active granularity to determine the scale
   const activeGranularity = useSelector(selectActiveGranularity);
+  const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
   // Domain & range for the y-axis
   const domain = getDomain(activeGranularity);
@@ -142,9 +144,11 @@ export function BubbleGraph({
                   setFocusedComparison({
                     x: endX,
                     y: endY,
+                    index: 0,
                     color: comparisonSet.color,
                     concepts: comparison.concepts.map(c => c.title),
                     startRadius: scaleBallSize(wordCount),
+                    label: "TODO",
                   })
                 );
               }}
@@ -153,11 +157,12 @@ export function BubbleGraph({
         });
       })}
       {/* Overlay with focused balls (may be null) */}
-      <BubbleOverlay
+      <BallOverlay
         width={width}
         height={height}
         prevFocusedComparison={prevFocusedComparison}
         focusedComparison={focusedComparison}
+        activeComparisonSet={activeComparisonSet}
       />
     </svg>
   );

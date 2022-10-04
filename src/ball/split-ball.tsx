@@ -24,6 +24,7 @@ type SplitBallProps = {
   isFocused: boolean;
   textLeft?: string;
   textRight?: string;
+  headerLabel?: string;
 };
 
 export const SplitBall = ({
@@ -44,6 +45,7 @@ export const SplitBall = ({
   isFocused,
   textLeft = "Dreams",
   textRight = "News",
+  headerLabel = "Common Concepts",
 }: SplitBallProps) => {
   // If the ball is focused, we want to make it bigger and have it fade in
   // If the ball is not focused, we want to make it smaller and have it fade out
@@ -291,7 +293,7 @@ export const SplitBall = ({
             startPoint={[endX, endY]}
             endPoint={[endX, endY - 250]}
             fill={fill}
-            label={"Common Concepts"}
+            label={headerLabel}
             fontSize={18}
             fontWeight={500}
             rectWidth={200}
