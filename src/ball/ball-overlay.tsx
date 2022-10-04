@@ -24,6 +24,16 @@ export function BubbleOverlay({
 }: BubbleOverlayProps) {
   const dispatch = useDispatch();
 
+  // If we have dream and news ids, it's a special thing
+  // We're comparing one dream and one news, not a set of them
+  const dreamId = focusedComparison?.dreamId || "";
+  const newsId = focusedComparison?.newsId || "";
+  const hasDreamId = !!dreamId;
+  const hasNewsId = !!newsId;
+
+  const textLeft = hasDreamId ? "Dream" : "Dreams";
+  const textRight = hasNewsId ? "News Item" : "News";
+
   return (
     <>
       {focusedComparison && (
@@ -77,6 +87,8 @@ export function BubbleOverlay({
           graphHeight={height}
           graphWidth={width}
           isFocused={true}
+          textLeft={textLeft}
+          textRight={textRight}
         />
       )}
     </>

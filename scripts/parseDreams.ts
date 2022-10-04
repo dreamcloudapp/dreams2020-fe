@@ -44,7 +44,7 @@ fs.createReadStream(dreamsFile)
         : dream.Answer;
 
       return {
-        id: dream.DreamId,
+        id: dream["Old DreamId"], // Todo: change to DreamId
         text: clippedDream,
         date: new Date(dream.Date),
       };

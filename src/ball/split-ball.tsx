@@ -22,6 +22,8 @@ type SplitBallProps = {
   graphHeight: number;
   graphWidth: number;
   isFocused: boolean;
+  textLeft?: string;
+  textRight?: string;
 };
 
 export const SplitBall = ({
@@ -40,6 +42,8 @@ export const SplitBall = ({
   graphHeight,
   graphWidth,
   isFocused,
+  textLeft = "Dreams",
+  textRight = "News",
 }: SplitBallProps) => {
   // If the ball is focused, we want to make it bigger and have it fade in
   // If the ball is not focused, we want to make it smaller and have it fade out
@@ -255,7 +259,7 @@ export const SplitBall = ({
           style={leftBallLabelMoveProps}
           fontSize={18}
         >
-          Dreams
+          {textLeft}
         </animated.text>
       )}
 
@@ -276,7 +280,7 @@ export const SplitBall = ({
           style={rightBallLabelMoveProps}
           fontSize={18}
         >
-          News
+          {textRight}
         </animated.text>
       )}
 
@@ -296,32 +300,6 @@ export const SplitBall = ({
             textColor={"white"}
             hasBackground={true}
           />
-          {/* <AnimatedLabel
-            startPoint={[endX, endY]}
-            endPoint={[endX - 475, endY - 25]}
-            fill={"black"}
-            label={"Dreams"}
-            fontSize={18}
-            fontWeight={500}
-            rectWidth={100}
-            rectHeight={rectHeight}
-            outlineShade={"black"}
-            textColor={"white"}
-            hasBackground={false}
-          />
-          <AnimatedLabel
-            startPoint={[endX, endY]}
-            endPoint={[endX + 475, endY - 25]}
-            fill={"black"}
-            label={"News"}
-            fontSize={18}
-            fontWeight={500}
-            rectWidth={100}
-            rectHeight={rectHeight}
-            outlineShade={"black"}
-            textColor={"white"}
-            hasBackground={false}
-          /> */}
         </>
       )}
     </>
