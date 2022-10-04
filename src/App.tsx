@@ -21,6 +21,7 @@ import {
 import { useDispatch } from "react-redux";
 import {
   selectActiveGranularity,
+  selectFocusedComparison,
   selectShowingGraph,
   setActiveGranularity,
   setFocusedComparison,
@@ -42,6 +43,7 @@ import useComponentSize from "@rehooks/component-size";
 import { localPoint } from "@visx/event";
 import { BarGraphContainer } from "./bar-graph/bar-graph-container";
 import { Padding } from "./modules/ui-types";
+import { DreamNewsText } from "./dream-news-text/dream-news-text";
 
 const padding: Padding = {
   LEFT: 30,
@@ -111,6 +113,7 @@ function App() {
   const differencesData = useSelector(selectDifferences);
   const columnData = useSelector(selectColumnData);
   const barData = useSelector(selectBarData);
+  const focusedComparison = useSelector(selectFocusedComparison);
 
   const data: GranularityComparisonCollection = allComparisons
     ? allComparisons[activeGranularity]
@@ -156,86 +159,94 @@ function App() {
     dispatch<any>(fetchNews());
   }, [dispatch]);
 
+  const frameWidth = window.location.href.includes("localhost") ? 20 : 0;
+  const maxWidth = window.location.href.includes("localhost")
+    ? "calc(100% - 40px)"
+    : "90rem";
+
   return (
-    <div
-      style={{
-        width: "100%",
-        position: "relative",
-        height: 600,
-        padding: window.location.href.includes("localhost") ? 20 : 0,
-        maxWidth: window.location.href.includes("localhost")
-          ? "calc(100% - 40px)"
-          : "90rem",
-      }}
-    >
+    <div style={{ width: "100%" }}>
       <div
-        className="App"
-        style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
+        style={{
+          width: "100%",
+          position: "relative",
+          height: 600,
+          padding: frameWidth,
+          maxWidth: maxWidth,
+        }}
       >
-        <div style={{ height: "100%", width: "100%" }} ref={graphContainerRef}>
-          <div
-            style={{ height: "100%", width: "100%", position: "relative" }}
-            ref={containerRef}
-          >
-            <GraphTypeToggle
-              onSelectGraphType={setShowingGraph}
-              showingGraph={showingGraph}
-            />
-            {(isLoading || !width || width < 1) && <div>Loading...</div>}
-            {!isLoading && showingGraph === "area" && (
-              <AreaGraphContainer
-                data={diffData}
-                width={width}
-                height={height}
-                handleMouseOver={handleMouseOver}
-                onMouseOut={hideTooltip}
+        <div
+          className="App"
+          style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
+        >
+          <div style={{ height: "100%", width: "100%" }} ref={graphContainerRef}>
+            <div
+              style={{ height: "100%", width: "100%", position: "relative" }}
+              ref={containerRef}
+            >
+              <GraphTypeToggle
+                onSelectGraphType={setShowingGraph}
+                showingGraph={showingGraph}
               />
-            )}
-            {!isLoading && showingGraph === "bubble" && (
-              <BubbleGraphContainer
-                data={data}
-                width={width}
-                height={height}
-                handleMouseOver={handleMouseOver}
-                onMouseOut={hideTooltip}
-              />
-            )}
-            {!isLoading && showingGraph === "column" && (
-              <ColumnGraphContainer
-                data={columnGraphData}
-                width={width}
-                height={height}
-                handleMouseOver={handleMouseOver}
-                onMouseOut={hideTooltip}
-                padding={padding}
-              />
-            )}
-            {!isLoading && showingGraph === "bar" && (
-              <BarGraphContainer
-                data={barGraphData}
-                width={width}
-                height={height}
-                handleMouseOver={handleMouseOver}
-                onMouseOut={hideTooltip}
-                padding={padding}
-              />
-            )}
+              {(isLoading || !width || width < 1) && <div>Loading...</div>}
+              {!isLoading && showingGraph === "area" && (
+                <AreaGraphContainer
+                  data={diffData}
+                  width={width}
+                  height={height}
+                  handleMouseOver={handleMouseOver}
+                  onMouseOut={hideTooltip}
+                />
+              )}
+              {!isLoading && showingGraph === "bubble" && (
+                <BubbleGraphContainer
+                  data={data}
+                  width={width}
+                  height={height}
+                  handleMouseOver={handleMouseOver}
+                  onMouseOut={hideTooltip}
+                />
+              )}
+              {!isLoading && showingGraph === "column" && (
+                <ColumnGraphContainer
+                  data={columnGraphData}
+                  width={width}
+                  height={height}
+                  handleMouseOver={handleMouseOver}
+                  onMouseOut={hideTooltip}
+                  padding={padding}
+                />
+              )}
+              {!isLoading && showingGraph === "bar" && (
+                <BarGraphContainer
+                  data={barGraphData}
+                  width={width}
+                  height={height}
+                  handleMouseOver={handleMouseOver}
+                  onMouseOut={hideTooltip}
+                  padding={padding}
+                />
+              )}
+            </div>
           </div>
         </div>
-      </div>
 
-      {tooltipOpen && (
-        <TooltipInPortal
-          // set this to random so it correctly updates with parent bounds
-          key={Math.random()}
-          top={tooltipTop}
-          left={tooltipLeft}
-        >
-          <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
-            <strong>{tooltipData}</strong>
-          </div>
-        </TooltipInPortal>
-      )}
+        {tooltipOpen && (
+          <TooltipInPortal
+            // set this to random so it correctly updates with parent bounds
+            key={Math.random()}
+            top={tooltipTop}
+            left={tooltipLeft}
+          >
+            <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
+              <strong>{tooltipData}</strong>
+            </div>
+          </TooltipInPortal>
+        )}
+      </div>
+      <div style={{ padding: frameWidth }}>
+        <DreamNewsText focusedComparison={focusedComparison} />
+      </div>
     </div>
   );
 }

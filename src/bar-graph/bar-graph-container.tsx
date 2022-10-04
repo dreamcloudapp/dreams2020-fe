@@ -120,6 +120,8 @@ export function BarGraphContainer({
                   color: ColorTheme.DULLER_BLUE,
                   concepts: difference.examples["high"].topConcepts.map(x => x.concept),
                   startRadius: 20,
+                  dreamId: difference.examples["high"].doc1Id,
+                  newsId: difference.examples["high"].doc2Id,
                 })
               );
             }}

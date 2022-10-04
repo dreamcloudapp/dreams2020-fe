@@ -15,6 +15,8 @@ export type VisComparison = {
   concepts: string[];
   startRadius: number;
   color: string;
+  dreamId?: string;
+  newsId?: string;
 };
 
 export type UIState = {

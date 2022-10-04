@@ -2,6 +2,7 @@ import {
   SingleTextRecord,
   SingleTextRecordDictionary,
 } from "@kannydennedy/dreams-2020-types";
+import { ukDateStringToDate } from "./modules/time-helpers";
 const fs = require("fs");
 const path = require("path");
 const csv = require("csv-parser");
@@ -44,9 +45,9 @@ fs.createReadStream(dreamsFile)
         : dream.Answer;
 
       return {
-        id: dream.DreamId,
+        id: dream["Old DreamId"], // Todo: change to DreamId
         text: clippedDream,
-        date: new Date(dream.Date),
+        date: ukDateStringToDate(dream.Date),
       };
     });
 
@@ -59,6 +60,8 @@ fs.createReadStream(dreamsFile)
     }, {} as SingleTextRecordDictionary);
 
     // Write JSON file
+
+    console.log("Writing JSON file");
 
     fs.writeFileSync(dreamsJsonPath, JSON.stringify(dreamsById, null, 2));
   });
