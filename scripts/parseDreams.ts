@@ -20,7 +20,7 @@ type DreamCsvRow = {
   "Question Title": string;
 };
 
-const DREAM_MAX_LEN = 1000;
+const DREAM_MAX_LEN = 2000;
 
 const DREAMS_FILE_PATH = "../source-dreams-news/all-dreams-final.csv";
 const dreamsFile = path.join(__dirname, DREAMS_FILE_PATH);

@@ -1,6 +1,7 @@
 import {
   DifferenceDisplayRecordWithExamples,
   DifferenceRecord,
+  SimilarityLevel,
 } from "@kannydennedy/dreams-2020-types";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
@@ -10,13 +11,16 @@ import { prettyNumber } from "../modules/formatters";
 import { Column } from "../components/column";
 import { useDispatch } from "react-redux";
 import {
+  selectActiveComparisonSet,
   selectFocusedComparison,
   selectPrevFocusedComparison,
+  setActiveComparisonSet,
   setFocusedComparison,
+  VisComparison,
 } from "../ducks/ui";
-import { BubbleOverlay } from "../ball/ball-overlay";
+import { BallOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
-import { ColorTheme } from "../modules/theme";
+import { ColorTheme, SIMILARITY_COLORS } from "../modules/theme";
 
 const BAR_GAP = 3;
 
@@ -29,8 +33,7 @@ type BarGraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
 };
 
-const renderTooltip = (d: DifferenceRecord) => {
-  const { difference, similarityLevels } = d;
+const differenceIncrementToText = (difference: number): string => {
   const absoluteDifference = Math.abs(difference);
 
   let tooltipHeader = "";
@@ -43,6 +46,14 @@ const renderTooltip = (d: DifferenceRecord) => {
   } else if (difference < -1) {
     tooltipHeader = `Dreams within ${absoluteDifference} weeks before the news`;
   }
+
+  return tooltipHeader;
+};
+
+const renderTooltip = (d: DifferenceRecord) => {
+  const { difference, similarityLevels } = d;
+
+  const tooltipHeader = differenceIncrementToText(difference);
 
   return (
     <div className="tooltip">
@@ -80,6 +91,7 @@ export function BarGraphContainer({
   const dispatch = useDispatch();
   const focusedComparison = useSelector(selectFocusedComparison);
   const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
+  const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
   const numBars = data.comparisons.differences.length;
   const totalGap = (numBars - 1) * BAR_GAP;
@@ -113,27 +125,60 @@ export function BarGraphContainer({
             onMouseOut={onMouseOut}
             sections={difference.similarityLevels || []}
             onClick={() => {
-              dispatch(
-                setFocusedComparison({
-                  x: x + barWidth / 2,
-                  y: y + barHeight / 2,
-                  color: ColorTheme.DULLER_BLUE,
-                  concepts: difference.examples["high"].topConcepts.map(x => x.concept),
-                  startRadius: 20,
-                  dreamId: difference.examples["high"].doc1Id,
-                  newsId: difference.examples["high"].doc2Id,
-                })
-              );
+              const ballX = x + barWidth / 2;
+              const ballY = y + barHeight / 2;
+              const startRadius = 20;
+
+              const subLabel = differenceIncrementToText(difference.difference);
+              console.log("subLabel", subLabel);
+
+              const mainComparison: VisComparison = {
+                x: ballX,
+                y: ballY,
+                index: 0,
+                color: ColorTheme.BLUE,
+                concepts: difference.topConcepts.map(c => c.title),
+                startRadius,
+                label: "Top common concepts",
+                subLabel,
+              };
+              const highMedLowComparisons: VisComparison[] = Object.entries(
+                difference.examples
+              ).map(([level, comparison], i) => {
+                return {
+                  x: ballX,
+                  y: ballY,
+                  index: i + 1,
+                  color: SIMILARITY_COLORS[level as SimilarityLevel],
+                  concepts: comparison.topConcepts.map(c => c.concept),
+                  startRadius,
+                  label: `Example ${level} similarity comparison`,
+                  dreamId: comparison.doc1Id,
+                  newsId: comparison.doc2Id,
+                  subLabel,
+                };
+              });
+
+              const newActiveComparisonSet: VisComparison[] = [
+                mainComparison,
+                ...highMedLowComparisons,
+              ];
+
+              dispatch(setActiveComparisonSet(newActiveComparisonSet));
+
+              dispatch(setFocusedComparison(highMedLowComparisons[0]));
             }}
           />
         );
       })}
       {/* Overlay with focused balls (may be null) */}
-      <BubbleOverlay
+      <BallOverlay
         width={width}
         height={height}
         prevFocusedComparison={prevFocusedComparison}
         focusedComparison={focusedComparison}
+        activeComparisonSet={activeComparisonSet}
+        header={focusedComparison?.subLabel}
       />
     </svg>
   );

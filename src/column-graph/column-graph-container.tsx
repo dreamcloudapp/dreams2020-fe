@@ -2,10 +2,11 @@ import { useDispatch } from "react-redux";
 import { ColorTheme } from "../modules/theme";
 import { ColumnGraphData } from "../App";
 import { BasedAxis } from "../axes/before-after-axis";
-import { BubbleOverlay } from "../ball/ball-overlay";
+import { BallOverlay } from "../ball/ball-overlay";
 import { Column } from "../components/column";
 import { useSelector } from "../ducks/root-reducer";
 import {
+  selectActiveComparisonSet,
   selectFocusedComparison,
   selectPrevFocusedComparison,
   setFocusedComparison,
@@ -76,6 +77,7 @@ export function ColumnGraphContainer({
   const dispatch = useDispatch();
   const focusedComparison = useSelector(selectFocusedComparison);
   const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
+  const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
   const numBars = data.length;
   const totalGap = (numBars - 1) * COLUMN_GAP;
@@ -104,13 +106,18 @@ export function ColumnGraphContainer({
               colHeight={colHeight}
               colWidth={barWidth}
               onClick={() => {
+                const ballX = x + barWidth / 2;
+                const ballY = y + colHeight / 2;
+
                 dispatch(
                   setFocusedComparison({
-                    x: x + barWidth / 2,
-                    y: y + colHeight / 2,
+                    x: x + ballX,
+                    y: y + ballY,
+                    index: 0,
                     color: ColorTheme.DULLER_BLUE,
                     concepts: ["example", "example", "example"],
                     startRadius: 20,
+                    label: "TODO",
                   })
                 );
               }}
@@ -129,11 +136,12 @@ export function ColumnGraphContainer({
           </g>
         );
       })}
-      <BubbleOverlay
+      <BallOverlay
         width={width}
         height={height}
         prevFocusedComparison={prevFocusedComparison}
         focusedComparison={focusedComparison}
+        activeComparisonSet={activeComparisonSet}
       />
     </svg>
   );

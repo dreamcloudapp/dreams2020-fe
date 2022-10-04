@@ -33,3 +33,23 @@ export function PlusIcon(props: any): any {
     </svg>
   );
 }
+
+type IconProps = {
+  fill: string;
+  x: number;
+  y: number;
+  scale: number;
+  onClick: () => void;
+};
+
+export function ChevronRight({ fill, x, y, scale, onClick }: IconProps): any {
+  return (
+    <path
+      fill={fill}
+      transform={`translate(${x} ${y}) scale(${scale})`}
+      onClick={onClick}
+      d="M0 256c0 141.4 114.6 256 256 256s256-114.6 256-256S397.4 0 256 0 0 114.6 0 256zm241 121c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+      style={{ cursor: "pointer" }}
+    />
+  );
+}

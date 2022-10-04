@@ -25,8 +25,6 @@ export const monthNameFromIndex = (index: number): string => {
 // Turn a date into a pretty string
 // (e.g. "Jan 1, 2020")
 export const prettyDate = (date: Date): string => {
-  console.log("date", date);
-
   const month = monthNameFromIndex(date.getMonth());
   const day = date.getDate();
   const year = date.getFullYear();

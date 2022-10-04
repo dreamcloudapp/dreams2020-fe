@@ -57,8 +57,6 @@ export function DreamNewsText({ focusedComparison }: DreamNewsTextProps) {
     textRight = "";
   }
 
-  console.log(matchingDream, matchingNews);
-
   return (
     <div
       style={{

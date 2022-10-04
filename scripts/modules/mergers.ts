@@ -62,7 +62,7 @@ export const consolidateWikipediaConceptList = (
 // Need to test this function
 export const exampleListToTopConceptList = (
   exampleList: ExampleDreamNewsComparison[]
-) => {
+): WikipediaConcept[] => {
   // First, we order the examples
   const sortedList = exampleList.sort((a, b) => b.score - a.score);
   // Then we take the top 1/3, say
@@ -76,7 +76,13 @@ export const exampleListToTopConceptList = (
     score: ex.score,
   }));
   // Then we get the top ones
-  return consolidateWikipediaConceptList(wikiTopConcepts, 5);
+  const wikiList = consolidateWikipediaConceptList(wikiTopConcepts, 5);
+
+  // Prettify and return
+  return wikiList.map(example => ({
+    score: example.score,
+    title: linkToTitle(example.title),
+  }));
 };
 
 export const consolidateExampleList = (
