@@ -17,7 +17,6 @@ import { getSimilarityLevel } from "./modules/similarity";
 import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 import { getDifferenceInDays } from "./modules/time-helpers";
 import {
-  consolidateWikipediaConceptList,
   consolidateDreamNewsComparisonExampleList,
   exampleListToTopConceptList,
 } from "./modules/mergers";
@@ -202,17 +201,17 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
     totalHighSimilarity,
     totalMediumSimilarity,
     totalLowSimilarity,
-    wikipediaConceptDict,
+    // wikipediaConceptDict,
     examples,
   } = weekDict[key];
 
-  // Turn the wikipediaConceptDict into a shortlist of top concepts
-  const allConcepts: WikipediaConcept[] = Object.entries(wikipediaConceptDict).map(
-    ([title, score]) => ({
-      title: title,
-      score: score,
-    })
-  );
+  // // Turn the wikipediaConceptDict into a shortlist of top concepts
+  // const allConcepts: WikipediaConcept[] = Object.entries(wikipediaConceptDict).map(
+  //   ([title, score]) => ({
+  //     title: title,
+  //     score: score,
+  //   })
+  // );
   // const topConcepts = consolidateWikipediaConceptList(allConcepts, 5);
   const topConcepts = exampleListToTopConceptList(examples);
   const exampleDict = consolidateDreamNewsComparisonExampleList(examples);

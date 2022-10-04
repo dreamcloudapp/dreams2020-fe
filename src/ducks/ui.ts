@@ -52,6 +52,8 @@ const uiSlice = createSlice({
     },
     setShowingGraph(state, action: PayloadAction<GraphType>) {
       state.showingGraph = action.payload;
+      // Also reset some things
+      state.activeComparisonSet = [];
     },
     setFocusedComparison(state, action: PayloadAction<VisComparison | null>) {
       state.focusedComparison = action.payload;

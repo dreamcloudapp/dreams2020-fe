@@ -139,7 +139,7 @@ export function BarGraphContainer({
                 color: ColorTheme.BLUE,
                 concepts: difference.topConcepts.map(c => c.title),
                 startRadius,
-                label: "Top concepts",
+                label: "Top common concepts",
                 subLabel,
               };
               const highMedLowComparisons: VisComparison[] = Object.entries(
@@ -166,7 +166,7 @@ export function BarGraphContainer({
 
               dispatch(setActiveComparisonSet(newActiveComparisonSet));
 
-              dispatch(setFocusedComparison(mainComparison));
+              dispatch(setFocusedComparison(highMedLowComparisons[0]));
             }}
           />
         );
