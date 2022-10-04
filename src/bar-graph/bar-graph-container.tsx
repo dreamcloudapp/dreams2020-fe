@@ -33,8 +33,7 @@ type BarGraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
 };
 
-const renderTooltip = (d: DifferenceRecord) => {
-  const { difference, similarityLevels } = d;
+const differenceIncrementToText = (difference: number): string => {
   const absoluteDifference = Math.abs(difference);
 
   let tooltipHeader = "";
@@ -47,6 +46,14 @@ const renderTooltip = (d: DifferenceRecord) => {
   } else if (difference < -1) {
     tooltipHeader = `Dreams within ${absoluteDifference} weeks before the news`;
   }
+
+  return tooltipHeader;
+};
+
+const renderTooltip = (d: DifferenceRecord) => {
+  const { difference, similarityLevels } = d;
+
+  const tooltipHeader = differenceIncrementToText(difference);
 
   return (
     <div className="tooltip">
@@ -122,6 +129,9 @@ export function BarGraphContainer({
               const ballY = y + barHeight / 2;
               const startRadius = 20;
 
+              const subLabel = differenceIncrementToText(difference.difference);
+              console.log("subLabel", subLabel);
+
               const mainComparison: VisComparison = {
                 x: ballX,
                 y: ballY,
@@ -130,6 +140,7 @@ export function BarGraphContainer({
                 concepts: difference.topConcepts.map(c => c.title),
                 startRadius,
                 label: "Top concepts",
+                subLabel,
               };
               const highMedLowComparisons: VisComparison[] = Object.entries(
                 difference.examples
@@ -144,6 +155,7 @@ export function BarGraphContainer({
                   label: `Example ${level} similarity comparison`,
                   dreamId: comparison.doc1Id,
                   newsId: comparison.doc2Id,
+                  subLabel,
                 };
               });
 
@@ -166,6 +178,7 @@ export function BarGraphContainer({
         prevFocusedComparison={prevFocusedComparison}
         focusedComparison={focusedComparison}
         activeComparisonSet={activeComparisonSet}
+        header={focusedComparison?.subLabel}
       />
     </svg>
   );

@@ -16,6 +16,7 @@ type BallOverlayProps = {
   focusedComparison: VisComparison | null;
   prevFocusedComparison: VisComparison | null;
   activeComparisonSet: VisComparison[];
+  header?: string;
 };
 
 const LINE_WIDTH = 2;
@@ -25,6 +26,7 @@ export function BallOverlay({
   height,
   focusedComparison,
   prevFocusedComparison,
+  header,
 }: BallOverlayProps) {
   const dispatch = useDispatch();
 
@@ -94,6 +96,7 @@ export function BallOverlay({
           isFocused={true}
           textLeft={textLeft}
           textRight={textRight}
+          headerLabel={focusedComparison.label}
         />
       )}
 
@@ -107,6 +110,19 @@ export function BallOverlay({
             dispatch(incrementFocusedComparison());
           }}
         />
+      )}
+      {focusedComparison && header && (
+        <text
+          x={width / 2}
+          y={20}
+          textAnchor="middle"
+          dominantBaseline="central"
+          //   fontSize={20}
+          //   fontWeight="bold"
+          fontStyle={"italic"}
+        >
+          {header}
+        </text>
       )}
     </>
   );

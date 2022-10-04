@@ -35,10 +35,12 @@ export const AnimatedLabel = ({
   const moveTextSpringRef = useSpringRef();
   const moveRectSpringRef = useSpringRef();
 
+  const config = { mass: 10, tension: 500, friction: 85, clamp: false, delay: 3000 };
+
   const moveTextProps = useSpring({
     to: { x: endX, y: endY + textOffset }, // why * 1.1?
     from: { x: startX, y: startY },
-    config: { mass: 10, tension: 500, friction: 85, clamp: false, delay: 3000 },
+    config: config,
     ref: moveTextSpringRef,
   });
 
@@ -53,7 +55,7 @@ export const AnimatedLabel = ({
       y: startY,
       opacity: 0,
     },
-    config: { mass: 10, tension: 500, friction: 85, clamp: false, delay: 3000 },
+    config: config,
     ref: moveRectSpringRef,
   });
 

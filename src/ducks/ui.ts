@@ -17,6 +17,7 @@ export type VisComparison = {
   startRadius: number;
   color: string;
   label: string;
+  subLabel?: string;
   dreamId?: string;
   newsId?: string;
 };
