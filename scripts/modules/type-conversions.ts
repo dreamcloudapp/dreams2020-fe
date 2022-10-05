@@ -52,8 +52,8 @@ const sheldonExampleToExampleRecordComparison = (
   numConceptsPerComparison: number
 ): ExampleRecordComparison => {
   const ret = {
-    dreamText: sheldonExample.doc1Id, // TODO get the actual text
-    newsText: sheldonExample.doc2Id, // TODO get the actual text
+    dreamId: sheldonExample.doc1Id, // TODO get the actual text
+    newsId: sheldonExample.doc2Id, // TODO get the actual text
     score: sheldonExample.score,
     concepts: sheldonExample.topConcepts
       .slice(0, numConceptsPerComparison)

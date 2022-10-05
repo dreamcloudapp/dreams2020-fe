@@ -3,9 +3,8 @@ import {
   ExampleRecordComparison,
   ExampleDreamNewsComparison,
   ConceptScore,
+  ExamplesWithSimilarityLevel,
 } from "@kannydennedy/dreams-2020-types";
-import { flatGroup } from "d3";
-import { ExamplesWithSimilarityLevel } from "../generateBarData";
 import { linkToTitle } from "../modules/string-helpers";
 
 // Take a big list of wikipedia concepts and consolidate them into a smaller list
@@ -95,12 +94,13 @@ export const consolidateExampleList = (
   return sortedList.slice(0, desiredLength);
 };
 
-const cleanExampleList = (dirtyList: ConceptScore[]): ConceptScore[] => {
+const cleanExampleList = (dirtyList: ConceptScore[]): WikipediaConcept[] => {
   return dirtyList
     .slice(0, 5)
-    .map(example => ({ ...example, concept: linkToTitle(example.concept) }));
+    .map(example => ({ ...example, title: linkToTitle(example.concept) }));
 };
 
+// We're also kindof converting from Sheldon format here:/
 export const consolidateDreamNewsComparisonExampleList = (
   bigList: ExampleDreamNewsComparison[]
 ): ExamplesWithSimilarityLevel => {
@@ -116,13 +116,28 @@ export const consolidateDreamNewsComparisonExampleList = (
   const lowEx = sortedList[sortedList.length - 1];
   const mediumEx = sortedList[Math.floor(sortedList.length / 2)];
 
-  const high = { ...highEx, topConcepts: cleanExampleList(highEx.topConcepts) };
-  const low = { ...lowEx, topConcepts: cleanExampleList(lowEx.topConcepts) };
-  const medium = { ...mediumEx, topConcepts: cleanExampleList(mediumEx.topConcepts) };
+  const high: ExampleRecordComparison = {
+    ...highEx,
+    dreamId: highEx.doc1Id,
+    newsId: highEx.doc2Id,
+    concepts: cleanExampleList(highEx.topConcepts),
+  };
+  const low: ExampleRecordComparison = {
+    ...lowEx,
+    dreamId: lowEx.doc1Id,
+    newsId: lowEx.doc2Id,
+    concepts: cleanExampleList(lowEx.topConcepts),
+  };
+  const medium: ExampleRecordComparison = {
+    ...mediumEx,
+    dreamId: mediumEx.doc1Id,
+    newsId: mediumEx.doc2Id,
+    concepts: cleanExampleList(mediumEx.topConcepts),
+  };
 
   return {
     high,
-    low,
     medium,
+    low,
   };
 };

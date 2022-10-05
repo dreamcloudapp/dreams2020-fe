@@ -3,14 +3,12 @@ const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 import {
   DayRecord,
-  DifferenceDisplayRecord,
-  DifferenceRecord,
-  DifferenceRecordSet,
+  DifferenceDisplayRecordWithExamples,
+  DifferenceRecordSetWithExamples,
+  DifferenceRecordWithExamples,
   ExampleDreamNewsComparison,
   NewsRecord,
   OptionalConceptScore,
-  SimilarityLevel,
-  WikipediaConcept,
 } from "@kannydennedy/dreams-2020-types";
 import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
 import { getSimilarityLevel } from "./modules/similarity";
@@ -22,28 +20,6 @@ import {
 } from "./modules/mergers";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
-
-// type ExamplesWithSimilarityLevel = {
-//   similarity: SimilarityLevel;
-//   example: ExampleDreamNewsComparison;
-// };
-
-export type ExamplesWithSimilarityLevel = {
-  [key in SimilarityLevel]: ExampleDreamNewsComparison;
-};
-
-type DifferenceRecordWithExamples = DifferenceRecord & {
-  topConcepts: WikipediaConcept[];
-  examples: ExamplesWithSimilarityLevel;
-};
-
-type DifferenceRecordSetWithExamples = DifferenceRecordSet & {
-  differences: DifferenceRecordWithExamples[];
-};
-
-type DifferenceDisplayRecordWithExamples = DifferenceDisplayRecord & {
-  comparisons: DifferenceRecordSetWithExamples;
-};
 
 const COLORS = {
   low: ColorTheme.BLUE,

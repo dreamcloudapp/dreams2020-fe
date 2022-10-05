@@ -150,11 +150,11 @@ export function BarGraphContainer({
                   y: ballY,
                   index: i + 1,
                   color: SIMILARITY_COLORS[level as SimilarityLevel],
-                  concepts: comparison.topConcepts.map(c => c.concept),
+                  concepts: comparison.concepts.map(c => c.title),
                   startRadius,
                   label: `Example ${level} similarity comparison`,
-                  dreamId: comparison.doc1Id,
-                  newsId: comparison.doc2Id,
+                  dreamId: comparison.dreamId,
+                  newsId: comparison.newsId,
                   subLabel,
                 };
               });
