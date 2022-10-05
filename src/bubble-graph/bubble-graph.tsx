@@ -7,6 +7,7 @@ import { MAX_DISTANCE_BETWEEN_TIME_PERIODS } from "../ducks/data";
 import {
   Granularity,
   GranularityComparisonCollection,
+  SimilarityLevel,
 } from "@kannydennedy/dreams-2020-types";
 import { useSelector } from "../ducks/root-reducer";
 import {
@@ -15,9 +16,11 @@ import {
   VisComparison,
   setFocusedComparison,
   selectActiveComparisonSet,
+  setActiveComparisonSet,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
+import { SIMILARITY_COLORS } from "../modules/theme";
 
 type BubbleGraphProps = {
   data: GranularityComparisonCollection;
@@ -140,17 +143,39 @@ export function BubbleGraph({
               }
               onMouseOut={hideTooltip}
               onClick={() => {
-                dispatch(
-                  setFocusedComparison({
+                const highMedLowComparisons: VisComparison[] = Object.entries(
+                  comparison.similarityExamples || {}
+                ).map(([level, comparison], i) => {
+                  return {
                     x: endX,
                     y: endY,
-                    index: 0,
-                    color: comparisonSet.color,
+                    index: i,
+                    color: SIMILARITY_COLORS[level as SimilarityLevel],
                     concepts: comparison.concepts.map(c => c.title),
                     startRadius: scaleBallSize(wordCount),
-                    label: "TODO",
-                  })
-                );
+                    label: `Example ${level} similarity comparison`,
+                    dreamId: comparison.dreamId,
+                    newsId: comparison.newsId,
+                    subLabel: "testing",
+                  };
+                });
+
+                dispatch(setActiveComparisonSet(highMedLowComparisons));
+
+                dispatch(setFocusedComparison(highMedLowComparisons[0]));
+
+                // dispatch(
+
+                //   setFocusedComparison({
+                //     x: endX,
+                //     y: endY,
+                //     index: 0,
+                //     color: comparisonSet.color,
+                //     concepts: comparison.concepts.map(c => c.title),
+                //     startRadius: scaleBallSize(wordCount),
+                //     label: "TODO",
+                //   })
+                // );
               }}
             />
           );

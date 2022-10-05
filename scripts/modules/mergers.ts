@@ -15,16 +15,9 @@ export const consolidateWikipediaConceptList = (
   bigList: WikipediaConcept[],
   desiredLength: number
 ): WikipediaConcept[] => {
-  // For the sake of interest, we're going to try removing lists
-  const filteredList = bigList.filter(x => {
-    const title = x.title.toLowerCase();
-    const isListArticle = title.includes("list ") || title.includes("glossary ");
-    return !isListArticle;
-  });
-
   // We need to consolidate the list of concepts
   // So there are no duplicates
-  const consolidatedConceptsDict = filteredList.reduce((acc, concept) => {
+  const consolidatedConceptsDict = bigList.reduce((acc, concept) => {
     // If the concept title includes the word "list", we ignore it
     // if (concept.title.toLowerCase().includes("list")) {
     //   return acc;

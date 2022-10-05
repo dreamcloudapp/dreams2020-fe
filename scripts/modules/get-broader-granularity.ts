@@ -3,6 +3,8 @@ import {
   GranularityComparisonCollection,
   ColoredSetWithinGranularity,
   Granularity,
+  ExamplesWithSimilarityLevel,
+  ExampleRecordComparison,
 } from "@kannydennedy/dreams-2020-types";
 import { consolidateExampleList, consolidateWikipediaConceptList } from "./mergers";
 import { monthNameFromIndex } from "./time-helpers";
@@ -159,8 +161,15 @@ export const getBroaderGranularity = (
 
         return {
           ...comp,
-          concepts: consolidateWikipediaConceptList(comp.concepts, 5),
-          examples: consolidateExampleList(comp.examples, numExamplesPerComparison),
+          // We're not using this any more
+          // concepts: consolidateWikipediaConceptList(comp.concepts, 5),
+          concepts: [],
+          // We're not using this any more
+          // examples: consolidateExampleList(comp.examples, numExamplesPerComparison),
+          examples: [],
+          similarityExamples: consolidateExamplesToExamplesWithSimilarityLevel(
+            comp.examples
+          ),
         };
       });
 
@@ -182,3 +191,54 @@ export const getBroaderGranularity = (
 
   return ret;
 };
+
+// This is basically the same as consolidateDreamNewsComparisonExampleList
+// So much duplication
+// We need a blank example, in case there's none
+const blankExample: ExampleRecordComparison = {
+  score: 0,
+  dreamId: "-1",
+  newsId: "-1",
+  concepts: [],
+};
+
+function consolidateExamplesToExamplesWithSimilarityLevel(
+  bigList: ExampleRecordComparison[]
+): ExamplesWithSimilarityLevel {
+  // We can't show things when there's no concepts in common
+  const listWithRealThings = bigList.filter(example => example.concepts.length > 0);
+  // Order list items by score
+  // So we get the most relevant items first
+
+  const sortedList = listWithRealThings.sort((a, b) => b.score - a.score);
+
+  // High is the top, low is the bottom, med is the one in the middle
+  const highEx = sortedList[0] || blankExample;
+  const lowEx = sortedList[sortedList.length - 1] || blankExample;
+  const mediumEx = sortedList[Math.floor(sortedList.length / 2)] || blankExample;
+
+  const high: ExampleRecordComparison = {
+    ...highEx,
+    dreamId: highEx.dreamId,
+    newsId: highEx.newsId,
+    concepts: highEx.concepts,
+  };
+  const low: ExampleRecordComparison = {
+    ...lowEx,
+    dreamId: lowEx.dreamId,
+    newsId: lowEx.newsId,
+    concepts: lowEx.concepts,
+  };
+  const medium: ExampleRecordComparison = {
+    ...mediumEx,
+    dreamId: mediumEx.dreamId,
+    newsId: mediumEx.newsId,
+    concepts: mediumEx.concepts,
+  };
+
+  return {
+    high,
+    medium,
+    low,
+  };
+}
