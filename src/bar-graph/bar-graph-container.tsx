@@ -130,25 +130,24 @@ export function BarGraphContainer({
               const startRadius = 20;
 
               const subLabel = differenceIncrementToText(difference.difference);
-              console.log("subLabel", subLabel);
 
-              const mainComparison: VisComparison = {
-                x: ballX,
-                y: ballY,
-                index: 0,
-                color: ColorTheme.BLUE,
-                concepts: difference.topConcepts.map(c => c.title),
-                startRadius,
-                label: "Top common concepts",
-                subLabel,
-              };
+              // const mainComparison: VisComparison = {
+              //   x: ballX,
+              //   y: ballY,
+              //   index: 0,
+              //   color: ColorTheme.BLUE,
+              //   concepts: difference.topConcepts.map(c => c.title),
+              //   startRadius,
+              //   label: "Top common concepts",
+              //   subLabel,
+              // };
               const highMedLowComparisons: VisComparison[] = Object.entries(
                 difference.examples
               ).map(([level, comparison], i) => {
                 return {
                   x: ballX,
                   y: ballY,
-                  index: i + 1,
+                  index: i,
                   color: SIMILARITY_COLORS[level as SimilarityLevel],
                   concepts: comparison.concepts.map(c => c.title),
                   startRadius,
@@ -159,12 +158,12 @@ export function BarGraphContainer({
                 };
               });
 
-              const newActiveComparisonSet: VisComparison[] = [
-                mainComparison,
-                ...highMedLowComparisons,
-              ];
+              // const newActiveComparisonSet: VisComparison[] = [
+              //   mainComparison,
+              //   ...highMedLowComparisons,
+              // ];
 
-              dispatch(setActiveComparisonSet(newActiveComparisonSet));
+              dispatch(setActiveComparisonSet(highMedLowComparisons));
 
               dispatch(setFocusedComparison(highMedLowComparisons[0]));
             }}

@@ -35,7 +35,7 @@ export const AnimatedText = ({
   const moveTextProps = useSpring({
     to: { x: endX, y: endY + textOffset }, // why * 1.1?
     from: { x: startX, y: startY },
-    config: { mass: 10, tension: 500, friction: 85, clamp: false, delay: 3000 },
+    config: { mass: 6, tension: 500, friction: 85, clamp: false, delay: 3000 },
     ref: moveTextSpringRef,
   });
 

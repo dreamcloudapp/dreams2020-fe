@@ -109,7 +109,7 @@ export const SplitBall = ({
   };
 
   const config = {
-    mass: 8,
+    mass: 5,
     tension: 500,
     friction: isFocused ? 75 : 100,
     clamp: false,
@@ -199,7 +199,7 @@ export const SplitBall = ({
       {isFocused &&
         topCommonConcepts.map((concept, i) => {
           return (
-            <g>
+            <g key={i}>
               {/* Lines that lead from the left ball to the text */}
               <AnimatedLine
                 leftStart={[endX, endY]}
