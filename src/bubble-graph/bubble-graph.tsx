@@ -166,21 +166,7 @@ export function BubbleGraph({
                 });
 
                 dispatch(setActiveComparisonSet(highMedLowComparisons));
-
                 dispatch(setFocusedComparison(highMedLowComparisons[0]));
-
-                // dispatch(
-
-                //   setFocusedComparison({
-                //     x: endX,
-                //     y: endY,
-                //     index: 0,
-                //     color: comparisonSet.color,
-                //     concepts: comparison.concepts.map(c => c.title),
-                //     startRadius: scaleBallSize(wordCount),
-                //     label: "TODO",
-                //   })
-                // );
               }}
             />
           );

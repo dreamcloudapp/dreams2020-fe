@@ -47,20 +47,17 @@ const barData: DifferenceDisplayRecordWithExamples = JSON.parse(
   fs.readFileSync(barJsonPath, "utf8")
 );
 const barExamples = barData.comparisons.differences.map(d => d.examples);
-const barNewsIds = barExamples.reduce((acc, examples) => {
-  return [...acc, examples.high.newsId, examples.low.newsId, examples.medium.newsId];
-}, [] as string[]);
-// Make sure they're unique
-const barNewsIdsUnique = uniqueStringArr(barNewsIds);
+const barNewsIds = exampleSetsToIdSet(barExamples);
 
 // BUBBLE DATA
-const BUBBLE_DATA_FILE_MONTH = "../public/data/monthComparisons.json";
-const bubbleJsonPathMonth = path.join(__dirname, BUBBLE_DATA_FILE_MONTH);
 const blankSimilarityExample: ExamplesWithSimilarityLevel = {
   high: { dreamId: "", newsId: "", score: 0, concepts: [] },
   medium: { dreamId: "", newsId: "", score: 0, concepts: [] },
   low: { dreamId: "", newsId: "", score: 0, concepts: [] },
 };
+// By month
+const BUBBLE_DATA_FILE_MONTH = "../public/data/monthComparisons.json";
+const bubbleJsonPathMonth = path.join(__dirname, BUBBLE_DATA_FILE_MONTH);
 // Read JSON file into memory
 const bubbleDataMonth: GranularityComparisonCollection = JSON.parse(
   fs.readFileSync(bubbleJsonPathMonth, "utf8")
@@ -71,14 +68,25 @@ const allComparisons: ComparisonSet[] = bubbleDataMonth.comparisonSets
 const allExampleSets: ExamplesWithSimilarityLevel[] = allComparisons.map(
   c => c.similarityExamples || blankSimilarityExample
 );
-const monthNewsIds = allExampleSets.reduce((acc, examples) => {
-  return [...acc, examples.high.newsId, examples.low.newsId, examples.medium.newsId];
-}, [] as string[]);
-// Make sure they're unique
-const monthNewsIdsUnique = uniqueStringArr(monthNewsIds);
+const monthNewsIds = exampleSetsToIdSet(allExampleSets);
+// By week
+const BUBBLE_DATA_FILE_WEEK = "../public/data/weekComparisons.json";
+const bubbleJsonPathWeek = path.join(__dirname, BUBBLE_DATA_FILE_WEEK);
+// Read JSON file into memory
+const bubbleDataWeek: GranularityComparisonCollection = JSON.parse(
+  fs.readFileSync(bubbleJsonPathWeek, "utf8")
+);
+const allComparisonsWeek: ComparisonSet[] = bubbleDataWeek.comparisonSets
+
+  .map(c => c.comparisons)
+  .flat();
+const allExampleSetsWeek: ExamplesWithSimilarityLevel[] = allComparisonsWeek.map(
+  c => c.similarityExamples || blankSimilarityExample
+);
+const weekNewsIds = exampleSetsToIdSet(allExampleSetsWeek);
 
 // Combine the two
-const allNewsIds = uniqueStringArr([...barNewsIdsUnique, ...monthNewsIdsUnique]);
+const allNewsIds = uniqueStringArr([...barNewsIds, ...monthNewsIds, ...weekNewsIds]);
 
 /////////////////////////////////////////////////
 // Main
@@ -139,4 +147,14 @@ function onlyUnique(value: string, index: number, self: string[]) {
 
 function uniqueStringArr(arr: string[]): string[] {
   return arr.filter(onlyUnique);
+}
+
+// Extract all the unique IDs from an array of ExamplesWithSimilarityLevel
+function exampleSetsToIdSet(exampleSets: ExamplesWithSimilarityLevel[]): string[] {
+  const ids = exampleSets.reduce((acc, examples) => {
+    return [...acc, examples.high.newsId, examples.low.newsId, examples.medium.newsId];
+  }, [] as string[]);
+  // Make sure they're unique
+  const idsUnique = uniqueStringArr(ids);
+  return idsUnique;
 }
