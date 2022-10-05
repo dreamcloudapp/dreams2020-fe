@@ -6,10 +6,18 @@ export enum ColorTheme {
   DULLEST_BLUE = "hsl(220, 20%, 30%)",
   GRAY = "hsl(0, 0%, 50%)",
   RED = "hsl(24, 84%, 56%)",
+  DULLER_RED = "hsl(24, 84%, 46%)",
+  DULLEST_RED = "hsl(24, 84%, 36%)",
 }
 
 export const SIMILARITY_COLORS: { [key in SimilarityLevel]: string } = {
   low: ColorTheme.DULLEST_BLUE,
   medium: ColorTheme.DULLER_BLUE,
   high: ColorTheme.BLUE,
+};
+
+export const RED_SIMILARITY_COLORS: { [key in SimilarityLevel]: string } = {
+  low: ColorTheme.DULLEST_RED,
+  medium: ColorTheme.DULLER_RED,
+  high: ColorTheme.RED,
 };

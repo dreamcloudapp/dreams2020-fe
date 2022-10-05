@@ -20,7 +20,7 @@ import {
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
-import { SIMILARITY_COLORS } from "../modules/theme";
+import { ColorTheme, RED_SIMILARITY_COLORS, SIMILARITY_COLORS } from "../modules/theme";
 
 type BubbleGraphProps = {
   data: GranularityComparisonCollection;
@@ -143,6 +143,11 @@ export function BubbleGraph({
               }
               onMouseOut={hideTooltip}
               onClick={() => {
+                const colorTheme =
+                  comparisonSet.color === ColorTheme.BLUE
+                    ? SIMILARITY_COLORS
+                    : RED_SIMILARITY_COLORS;
+
                 const highMedLowComparisons: VisComparison[] = Object.entries(
                   comparison.similarityExamples || {}
                 ).map(([level, comparison], i) => {
@@ -150,7 +155,7 @@ export function BubbleGraph({
                     x: endX,
                     y: endY,
                     index: i,
-                    color: SIMILARITY_COLORS[level as SimilarityLevel],
+                    color: colorTheme[level as SimilarityLevel],
                     concepts: comparison.concepts.map(c => c.title),
                     startRadius: scaleBallSize(wordCount),
                     label: `Example ${level} similarity comparison`,
