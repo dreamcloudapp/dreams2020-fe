@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { ColorTheme } from "../modules/theme";
+import { ColorTheme, SIMILARITY_COLORS } from "../modules/theme";
 import { BasedAxis } from "../axes/before-after-axis";
 import { BallOverlay } from "../ball/ball-overlay";
 import { Column } from "../components/column";
@@ -8,12 +8,14 @@ import {
   selectActiveComparisonSet,
   selectFocusedComparison,
   selectPrevFocusedComparison,
+  setActiveComparisonSet,
   setFocusedComparison,
+  VisComparison,
 } from "../ducks/ui";
 import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 import { Padding } from "../modules/ui-types";
-import { ColumnGraphData } from "@kannydennedy/dreams-2020-types";
+import { ColumnGraphData, SimilarityLevel } from "@kannydennedy/dreams-2020-types";
 
 const COLUMN_GAP = 10;
 
@@ -108,18 +110,40 @@ export function ColumnGraphContainer({
               onClick={() => {
                 const ballX = x + barWidth / 2;
                 const ballY = y + colHeight / 2;
+                const startRadius = 20;
 
-                dispatch(
-                  setFocusedComparison({
-                    x: x + ballX,
-                    y: y + ballY,
-                    index: 0,
-                    color: ColorTheme.DULLER_BLUE,
-                    concepts: ["example", "example", "example"],
-                    startRadius: 20,
-                    label: "TODO",
-                  })
-                );
+                const highMedLowComparisons: VisComparison[] = Object.entries(
+                  d.examples
+                ).map(([level, comparison], i) => {
+                  return {
+                    x: ballX,
+                    y: ballY,
+                    index: i,
+                    color: SIMILARITY_COLORS[level as SimilarityLevel],
+                    concepts: comparison.concepts.map(c => c.title),
+                    startRadius,
+                    label: `Example ${level} similarity comparison`,
+                    dreamId: comparison.dreamId,
+                    newsId: comparison.newsId,
+                    subLabel: "",
+                  };
+                });
+
+                dispatch(setActiveComparisonSet(highMedLowComparisons));
+
+                dispatch(setFocusedComparison(highMedLowComparisons[0]));
+
+                // dispatch(
+                //   setFocusedComparison({
+                //     x: x + ballX,
+                //     y: y + ballY,
+                //     index: 0,
+                //     color: ColorTheme.DULLER_BLUE,
+                //     concepts: ["example", "example", "example"],
+                //     startRadius: 20,
+                //     label: "TODO",
+                //   })
+                // );
               }}
             />
 
