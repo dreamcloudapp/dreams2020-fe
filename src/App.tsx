@@ -244,7 +244,7 @@ function App() {
           </TooltipInPortal>
         )}
       </div>
-      <div style={{ padding: frameWidth }}>
+      <div style={{ padding: frameWidth, maxWidth: maxWidth }}>
         <DreamNewsText focusedComparison={focusedComparison} />
       </div>
     </div>
