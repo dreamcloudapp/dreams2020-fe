@@ -96,12 +96,14 @@ export function BubbleGraphContainer({
           })}
         </div>
       </div>
-      {/* Legend */}
-      <Legend
-        options={data.comparisonSets.map(s => ({ label: s.label, color: s.color }))}
-        handleCheck={handleOnChange}
-        checkedCollections={checkedCollections}
-      />
+      {/* Legend - don't show when there's a focused comparison */}
+      {!focusedComparison && (
+        <Legend
+          options={data.comparisonSets.map(s => ({ label: s.label, color: s.color }))}
+          handleCheck={handleOnChange}
+          checkedCollections={checkedCollections}
+        />
+      )}
     </div>
   );
 }
