@@ -20,7 +20,7 @@ import {
 } from "../ducks/ui";
 import { BallOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
-import { ColorTheme, SIMILARITY_COLORS } from "../modules/theme";
+import { SIMILARITY_COLORS } from "../modules/theme";
 
 const BAR_GAP = 3;
 
