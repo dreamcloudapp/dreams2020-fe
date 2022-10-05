@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import { ColorTheme } from "../modules/theme";
-import { ColumnGraphData } from "../App";
 import { BasedAxis } from "../axes/before-after-axis";
 import { BallOverlay } from "../ball/ball-overlay";
 import { Column } from "../components/column";
@@ -14,6 +13,7 @@ import {
 import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 import { Padding } from "../modules/ui-types";
+import { ColumnGraphData } from "@kannydennedy/dreams-2020-types";
 
 const COLUMN_GAP = 10;
 

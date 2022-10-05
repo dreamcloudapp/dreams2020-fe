@@ -28,10 +28,7 @@ import {
   setPrevFocusedComparison,
   setShowingGraph,
 } from "./ducks/ui";
-import {
-  GranularityComparisonCollection,
-  SimilarityLevelSection,
-} from "@kannydennedy/dreams-2020-types";
+import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import {
   defaultBarData,
@@ -53,22 +50,6 @@ const padding: Padding = {
 };
 
 const graphtypes: GraphType[] = ["area", "bubble", "column", "bar"];
-
-export type SimilarityDescription = {
-  percent: number;
-  count: number;
-  threshold: number;
-  color: string;
-};
-
-export type ColumnGraphData = {
-  month: number;
-  count: number;
-  totalWordCount: number;
-  avgSimilarity: number;
-  maxSimilarity: number;
-  similarityLevels: SimilarityLevelSection[];
-};
 
 function GraphTypeToggle({
   onSelectGraphType,

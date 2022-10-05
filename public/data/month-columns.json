@@ -5,6 +5,104 @@
     "totalWordCount": 93240113,
     "avgSimilarity": 0.010360882948074924,
     "maxSimilarity": 0.019663893,
+    "examples": {
+      "high": {
+        "dreamId": "1015",
+        "newsId": "463",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Mayon",
+            "score": 2937.7585,
+            "title": "Mayon"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Ring of Fire",
+            "score": 2423.2559,
+            "title": "Ring of Fire"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Mount Bulusan",
+            "score": 2310.7893,
+            "title": "Mount Bulusan"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/1980 eruption of Mount St. Helens",
+            "score": 2171.8237,
+            "title": "1980 eruption of Mount St. Helens"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Types of volcanic eruptions",
+            "score": 2129.7156,
+            "title": "Types of volcanic eruptions"
+          }
+        ],
+        "score": 0.49134028
+      },
+      "medium": {
+        "dreamId": "430",
+        "newsId": "234",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Law enforcement in the United States",
+            "score": 1354.5452,
+            "title": "Law enforcement in the United States"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Police",
+            "score": 663.9585,
+            "title": "Police"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Emergency vehicle lighting",
+            "score": 640.9403,
+            "title": "Emergency vehicle lighting"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/George Floyd protests in Portland, Oregon",
+            "score": 560.48206,
+            "title": "George Floyd protests in Portland, Oregon"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/New South Wales Police Force",
+            "score": 520.08777,
+            "title": "New South Wales Police Force"
+          }
+        ],
+        "score": 0.06601218
+      },
+      "low": {
+        "dreamId": "1293",
+        "newsId": "962",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Cars characters",
+            "score": 15882.389,
+            "title": "List of Cars characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Racial views of Donald Trump",
+            "score": 12767.441,
+            "title": "Racial views of Donald Trump"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 9509.713,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Roman conquest of the Iberian Peninsula",
+            "score": 9387.696,
+            "title": "Roman conquest of the Iberian Peninsula"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/June 2013 Egyptian protests",
+            "score": 8055.7837,
+            "title": "June 2013 Egyptian protests"
+          }
+        ],
+        "score": 0.000008977729
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -35,6 +133,104 @@
     "totalWordCount": 64435608,
     "avgSimilarity": 0.011494222366349584,
     "maxSimilarity": 0.028356412,
+    "examples": {
+      "high": {
+        "dreamId": "1919",
+        "newsId": "1770",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Winter of 2009–10 in Europe",
+            "score": 6078.5425,
+            "title": "Winter of 2009–10 in Europe"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Severe weather terminology (United States)",
+            "score": 5012.7417,
+            "title": "Severe weather terminology (United States)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Global storm activity of 2007",
+            "score": 4740.843,
+            "title": "Global storm activity of 2007"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2020–21 North American winter",
+            "score": 3207.3352,
+            "title": "2020–21 North American winter"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/February 2009 Great Britain and Ireland snowfall",
+            "score": 3167.6458,
+            "title": "February 2009 Great Britain and Ireland snowfall"
+          }
+        ],
+        "score": 0.42421636
+      },
+      "medium": {
+        "dreamId": "1021",
+        "newsId": "1846",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Environmental policy of the Donald Trump administration",
+            "score": 735.69885,
+            "title": "Environmental policy of the Donald Trump administration"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Coal mining",
+            "score": 569.7727,
+            "title": "Coal mining"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Energy policy of the United Kingdom",
+            "score": 481.284,
+            "title": "Energy policy of the United Kingdom"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Economy of China",
+            "score": 446.1156,
+            "title": "Economy of China"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Eurasian Development Bank",
+            "score": 416.17267,
+            "title": "Eurasian Development Bank"
+          }
+        ],
+        "score": 0.046781767
+      },
+      "low": {
+        "dreamId": "1105",
+        "newsId": "1922",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Share taxi",
+            "score": 1514.5634,
+            "title": "Share taxi"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/William Fitzwilliam, 4th Earl Fitzwilliam",
+            "score": 866.9949,
+            "title": "William Fitzwilliam, 4th Earl Fitzwilliam"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Comparison of electoral systems",
+            "score": 850.87195,
+            "title": "Comparison of electoral systems"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/London Breed",
+            "score": 806.57623,
+            "title": "London Breed"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Pinoy Big Brother: Connect",
+            "score": 676.59155,
+            "title": "Pinoy Big Brother: Connect"
+          }
+        ],
+        "score": 0.000009967629
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -65,6 +261,104 @@
     "totalWordCount": 80677445,
     "avgSimilarity": 0.01894762383111347,
     "maxSimilarity": 0.0742324,
+    "examples": {
+      "high": {
+        "dreamId": "455",
+        "newsId": "2419",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Hillary Clinton",
+            "score": 2536.8557,
+            "title": "Hillary Clinton"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Mueller report",
+            "score": 2287.5276,
+            "title": "Mueller report"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chelsea Clinton",
+            "score": 1779.6743,
+            "title": "Chelsea Clinton"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Russian interference in the 2016 United States elections",
+            "score": 1761.6113,
+            "title": "Russian interference in the 2016 United States elections"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Donald Trump 2016 presidential campaign",
+            "score": 1384.646,
+            "title": "Donald Trump 2016 presidential campaign"
+          }
+        ],
+        "score": 0.5005423
+      },
+      "medium": {
+        "dreamId": "734",
+        "newsId": "3450",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Gun laws in California",
+            "score": 2173.4824,
+            "title": "Gun laws in California"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Red flag law",
+            "score": 1104.8774,
+            "title": "Red flag law"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/National Rifle Association",
+            "score": 1043.1155,
+            "title": "National Rifle Association"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Unite the Right rally",
+            "score": 1013.8615,
+            "title": "Unite the Right rally"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2015 San Bernardino attack",
+            "score": 993.7606,
+            "title": "2015 San Bernardino attack"
+          }
+        ],
+        "score": 0.06631621
+      },
+      "low": {
+        "dreamId": "1123",
+        "newsId": "2388",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Hollyoaks characters (2011)",
+            "score": 264076.62,
+            "title": "List of Hollyoaks characters (2011)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Australian Survivor (season 5)",
+            "score": 15076.278,
+            "title": "Australian Survivor (season 5)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 10974.354,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Murder of Ahmaud Arbery",
+            "score": 9802.238,
+            "title": "Murder of Ahmaud Arbery"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/NFL on CBS",
+            "score": 9208.176,
+            "title": "NFL on CBS"
+          }
+        ],
+        "score": 0.000008761196
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -95,6 +389,104 @@
     "totalWordCount": 129800895,
     "avgSimilarity": 0.020757117162333312,
     "maxSimilarity": 0.07170229,
+    "examples": {
+      "high": {
+        "dreamId": "1029",
+        "newsId": "4336",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration communication during the COVID-19 pandemic",
+            "score": 2545.8032,
+            "title": "Trump administration communication during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Russian interference in the 2016 United States elections",
+            "score": 1973.5294,
+            "title": "Russian interference in the 2016 United States elections"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Steele dossier",
+            "score": 1713.2961,
+            "title": "Steele dossier"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Presidency of Donald Trump",
+            "score": 1618.345,
+            "title": "Presidency of Donald Trump"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump–Ukraine scandal",
+            "score": 1515.1262,
+            "title": "Trump–Ukraine scandal"
+          }
+        ],
+        "score": 0.5688757
+      },
+      "medium": {
+        "dreamId": "1147",
+        "newsId": "3879",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of performances on Top of the Pops",
+            "score": 83227.516,
+            "title": "List of performances on Top of the Pops"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Diné Bahaneʼ",
+            "score": 54974.45,
+            "title": "Diné Bahaneʼ"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Shameless (British TV series) characters",
+            "score": 22337.912,
+            "title": "List of Shameless (British TV series) characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Red vs. Blue episodes",
+            "score": 19581.695,
+            "title": "List of Red vs. Blue episodes"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of 90210 characters",
+            "score": 18954.57,
+            "title": "List of 90210 characters"
+          }
+        ],
+        "score": 0.09194712
+      },
+      "low": {
+        "dreamId": "1343",
+        "newsId": "4142",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 9708.799,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of The Transformers (TV series) characters",
+            "score": 8901.959,
+            "title": "List of The Transformers (TV series) characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Glossary of nautical terms",
+            "score": 8026.2305,
+            "title": "Glossary of nautical terms"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Nuclear program of Iran",
+            "score": 7921.984,
+            "title": "Nuclear program of Iran"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Meredith Grey",
+            "score": 7222.935,
+            "title": "Meredith Grey"
+          }
+        ],
+        "score": 7.591467e-7
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -125,6 +517,104 @@
     "totalWordCount": 117137588,
     "avgSimilarity": 0.01885848775338188,
     "maxSimilarity": 0.05658838,
+    "examples": {
+      "high": {
+        "dreamId": "834",
+        "newsId": "5658",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Cycling in the Netherlands",
+            "score": 1788.8445,
+            "title": "Cycling in the Netherlands"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Cycling infrastructure",
+            "score": 1764.5798,
+            "title": "Cycling infrastructure"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Cycling in New York City",
+            "score": 1558.8726,
+            "title": "Cycling in New York City"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2009 British motorcycle Grand Prix",
+            "score": 1429.5245,
+            "title": "2009 British motorcycle Grand Prix"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Bicycle-sharing system",
+            "score": 1417.6909,
+            "title": "Bicycle-sharing system"
+          }
+        ],
+        "score": 0.60135084
+      },
+      "medium": {
+        "dreamId": "1841",
+        "newsId": "5920",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 2183.9326,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Citizens United v. FEC",
+            "score": 1275.0808,
+            "title": "Citizens United v. FEC"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/American Rescue Plan Act of 2021",
+            "score": 1196.7615,
+            "title": "American Rescue Plan Act of 2021"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2011 Wisconsin protests",
+            "score": 1069.8275,
+            "title": "2011 Wisconsin protests"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Kaidan Restaurant",
+            "score": 947.3164,
+            "title": "Kaidan Restaurant"
+          }
+        ],
+        "score": 0.08425253
+      },
+      "low": {
+        "dreamId": "1375",
+        "newsId": "5536",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of The Walking Dead (TV series) characters",
+            "score": 289274.94,
+            "title": "List of The Walking Dead (TV series) characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration family separation policy",
+            "score": 80815.58,
+            "title": "Trump administration family separation policy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 36774.043,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/World's Most Amazing Videos",
+            "score": 33066.746,
+            "title": "World's Most Amazing Videos"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2011 Super Outbreak",
+            "score": 31245.414,
+            "title": "2011 Super Outbreak"
+          }
+        ],
+        "score": 7.05705e-7
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -155,6 +645,104 @@
     "totalWordCount": 94209206,
     "avgSimilarity": 0.01514743531844445,
     "maxSimilarity": 0.046182867,
+    "examples": {
+      "high": {
+        "dreamId": "204",
+        "newsId": "6156",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Carnival",
+            "score": 2035.3022,
+            "title": "Carnival"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Face masks during the COVID-19 pandemic",
+            "score": 1898.1456,
+            "title": "Face masks during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Face masks during the COVID-19 pandemic in the United States",
+            "score": 1759.1503,
+            "title": "Face masks during the COVID-19 pandemic in the United States"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration communication during the COVID-19 pandemic",
+            "score": 1205.999,
+            "title": "Trump administration communication during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Xenophobia and racism related to the COVID-19 pandemic",
+            "score": 1163.9429,
+            "title": "Xenophobia and racism related to the COVID-19 pandemic"
+          }
+        ],
+        "score": 0.4146768
+      },
+      "medium": {
+        "dreamId": "528",
+        "newsId": "7049",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Surveillance",
+            "score": 1622.88,
+            "title": "Surveillance"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Facial recognition system",
+            "score": 1242.1888,
+            "title": "Facial recognition system"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Automatic number-plate recognition",
+            "score": 1059.5134,
+            "title": "Automatic number-plate recognition"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Murder of Ahmaud Arbery",
+            "score": 1044.4543,
+            "title": "Murder of Ahmaud Arbery"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Police body camera",
+            "score": 992.9574,
+            "title": "Police body camera"
+          }
+        ],
+        "score": 0.06071092
+      },
+      "low": {
+        "dreamId": "1179",
+        "newsId": "7197",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 16404.7,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/William Fitzwilliam, 4th Earl Fitzwilliam",
+            "score": 3971.5596,
+            "title": "William Fitzwilliam, 4th Earl Fitzwilliam"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Fox Broadcasting Company",
+            "score": 2582.576,
+            "title": "Fox Broadcasting Company"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Sir William Robertson, 1st Baronet",
+            "score": 2247.6753,
+            "title": "Sir William Robertson, 1st Baronet"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/United Kingdom labour law",
+            "score": 2076.0889,
+            "title": "United Kingdom labour law"
+          }
+        ],
+        "score": 0.00000411478
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -185,6 +773,104 @@
     "totalWordCount": 98491575,
     "avgSimilarity": 0.015117964590738813,
     "maxSimilarity": 0.037202023,
+    "examples": {
+      "high": {
+        "dreamId": "887",
+        "newsId": "7866",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/American cuisine",
+            "score": 6752.117,
+            "title": "American cuisine"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/The Best Thing I Ever Ate",
+            "score": 4769.28,
+            "title": "The Best Thing I Ever Ate"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Malaysian cuisine",
+            "score": 4116.699,
+            "title": "Malaysian cuisine"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Danish cuisine",
+            "score": 3941.143,
+            "title": "Danish cuisine"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Filipino cuisine",
+            "score": 3459.2354,
+            "title": "Filipino cuisine"
+          }
+        ],
+        "score": 0.47183943
+      },
+      "medium": {
+        "dreamId": "242",
+        "newsId": "8171",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration communication during the COVID-19 pandemic",
+            "score": 3878.256,
+            "title": "Trump administration communication during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/COVID-19 pandemic in Nevada",
+            "score": 675.94635,
+            "title": "COVID-19 pandemic in Nevada"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Donald Trump photo op at St. John's Church",
+            "score": 593.3365,
+            "title": "Donald Trump photo op at St. John's Church"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/The Apprentice (American season 5)",
+            "score": 586.3764,
+            "title": "The Apprentice (American season 5)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of 90210 characters",
+            "score": 523.57684,
+            "title": "List of 90210 characters"
+          }
+        ],
+        "score": 0.07404878
+      },
+      "low": {
+        "dreamId": "1208",
+        "newsId": "8312",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Marianne Williamson",
+            "score": 33199.832,
+            "title": "Marianne Williamson"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of EastEnders characters (2009)",
+            "score": 23503.344,
+            "title": "List of EastEnders characters (2009)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Ascetical theology",
+            "score": 14132.924,
+            "title": "Ascetical theology"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Culture of Thailand",
+            "score": 11729.74,
+            "title": "Culture of Thailand"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Eucharist in the Catholic Church",
+            "score": 10582.822,
+            "title": "Eucharist in the Catholic Church"
+          }
+        ],
+        "score": 0.000004827708
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -215,6 +901,104 @@
     "totalWordCount": 90011330,
     "avgSimilarity": 0.017935356374921968,
     "maxSimilarity": 0.04646403,
+    "examples": {
+      "high": {
+        "dreamId": "1732",
+        "newsId": "9070",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/COVID-19 pandemic in Sweden",
+            "score": 834.96814,
+            "title": "COVID-19 pandemic in Sweden"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Mental health during the COVID-19 pandemic",
+            "score": 814.8647,
+            "title": "Mental health during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Shortages related to the COVID-19 pandemic",
+            "score": 785.7361,
+            "title": "Shortages related to the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Health professional",
+            "score": 752.52747,
+            "title": "Health professional"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Telehealth",
+            "score": 684.41364,
+            "title": "Telehealth"
+          }
+        ],
+        "score": 0.4935265
+      },
+      "medium": {
+        "dreamId": "1218",
+        "newsId": "9151",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of 90210 characters",
+            "score": 189493.17,
+            "title": "List of 90210 characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of The Big Bang Theory and Young Sheldon characters",
+            "score": 50776.605,
+            "title": "List of The Big Bang Theory and Young Sheldon characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/California Trail",
+            "score": 45226.957,
+            "title": "California Trail"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/The Dancing Water, the Singing Apple, and the Speaking Bird",
+            "score": 40327.37,
+            "title": "The Dancing Water, the Singing Apple, and the Speaking Bird"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Teen Wolf characters",
+            "score": 36142.09,
+            "title": "List of Teen Wolf characters"
+          }
+        ],
+        "score": 0.08322155
+      },
+      "low": {
+        "dreamId": "1437",
+        "newsId": "9448",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/World's Most Amazing Videos",
+            "score": 4890.358,
+            "title": "World's Most Amazing Videos"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 4506.159,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2021 United States Capitol attack",
+            "score": 2148.3833,
+            "title": "2021 United States Capitol attack"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Central Alaskan Yup'ik language",
+            "score": 1883.564,
+            "title": "Central Alaskan Yup'ik language"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/A Nightmare on Elm Street 4: The Dream Master",
+            "score": 1845.1144,
+            "title": "A Nightmare on Elm Street 4: The Dream Master"
+          }
+        ],
+        "score": 0.000009926304
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -245,6 +1029,104 @@
     "totalWordCount": 113236857,
     "avgSimilarity": 0.016160267810555563,
     "maxSimilarity": 0.03345677,
+    "examples": {
+      "high": {
+        "dreamId": "1696",
+        "newsId": "10161",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Meal, Ready-to-Eat",
+            "score": 1729.2242,
+            "title": "Meal, Ready-to-Eat"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Buffalo wing",
+            "score": 1622.3842,
+            "title": "Buffalo wing"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Danish cuisine",
+            "score": 1458.2573,
+            "title": "Danish cuisine"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chicken as food",
+            "score": 1426.1833,
+            "title": "Chicken as food"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Fried chicken",
+            "score": 1291.22,
+            "title": "Fried chicken"
+          }
+        ],
+        "score": 0.5988839
+      },
+      "medium": {
+        "dreamId": "931",
+        "newsId": "10234",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/2019 in American television",
+            "score": 444.01712,
+            "title": "2019 in American television"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Long COVID",
+            "score": 418.65283,
+            "title": "Long COVID"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Health care in the United States",
+            "score": 408.89996,
+            "title": "Health care in the United States"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/RT (TV network)",
+            "score": 393.76282,
+            "title": "RT (TV network)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Caregiver",
+            "score": 389.85873,
+            "title": "Caregiver"
+          }
+        ],
+        "score": 0.093245156
+      },
+      "low": {
+        "dreamId": "1439",
+        "newsId": "10428",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Hetalia: Axis Powers characters",
+            "score": 36249.13,
+            "title": "List of Hetalia: Axis Powers characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Hiro Nakamura",
+            "score": 32132.883,
+            "title": "Hiro Nakamura"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/GI Underground Press",
+            "score": 26013.346,
+            "title": "GI Underground Press"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Carnival in the Netherlands",
+            "score": 20870.447,
+            "title": "Carnival in the Netherlands"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Blockade of Germany (1939–1945)",
+            "score": 18655.014,
+            "title": "Blockade of Germany (1939–1945)"
+          }
+        ],
+        "score": 7.17305e-7
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -275,6 +1157,104 @@
     "totalWordCount": 124051547,
     "avgSimilarity": 0.016929710051092638,
     "maxSimilarity": 0.08139946,
+    "examples": {
+      "high": {
+        "dreamId": "1647",
+        "newsId": "11746",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/COVID-19",
+            "score": 44086.117,
+            "title": "COVID-19"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration communication during the COVID-19 pandemic",
+            "score": 34196.85,
+            "title": "Trump administration communication during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/White House COVID-19 outbreak",
+            "score": 17873.375,
+            "title": "White House COVID-19 outbreak"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/British government response to the COVID-19 pandemic",
+            "score": 16738.613,
+            "title": "British government response to the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/COVID-19 pandemic in the Czech Republic",
+            "score": 14950.5205,
+            "title": "COVID-19 pandemic in the Czech Republic"
+          }
+        ],
+        "score": 0.6090811
+      },
+      "medium": {
+        "dreamId": "954",
+        "newsId": "11789",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Diné Bahaneʼ",
+            "score": 6709.944,
+            "title": "Diné Bahaneʼ"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of performances on Top of the Pops",
+            "score": 3186.3223,
+            "title": "List of performances on Top of the Pops"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Supernatural characters",
+            "score": 2672.0654,
+            "title": "List of Supernatural characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Crime SuspenStories",
+            "score": 2127.81,
+            "title": "Crime SuspenStories"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/The Royal Today",
+            "score": 2108.6533,
+            "title": "The Royal Today"
+          }
+        ],
+        "score": 0.08886175
+      },
+      "low": {
+        "dreamId": "1459",
+        "newsId": "12559",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of The Idolmaster characters",
+            "score": 70076.195,
+            "title": "List of The Idolmaster characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/MythBusters (2010 season)",
+            "score": 47890.47,
+            "title": "MythBusters (2010 season)"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Chicago P.D. characters",
+            "score": 34908.414,
+            "title": "List of Chicago P.D. characters"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of smoking bans",
+            "score": 19586.455,
+            "title": "List of smoking bans"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of The Walking Dead (TV series) characters",
+            "score": 16625.465,
+            "title": "List of The Walking Dead (TV series) characters"
+          }
+        ],
+        "score": 0.000006779445
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -305,6 +1285,104 @@
     "totalWordCount": 93720447,
     "avgSimilarity": 0.014222486277333342,
     "maxSimilarity": 0.046026386,
+    "examples": {
+      "high": {
+        "dreamId": "642",
+        "newsId": "13601",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Colectiv nightclub fire",
+            "score": 2202.4258,
+            "title": "Colectiv nightclub fire"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Western African Ebola virus epidemic",
+            "score": 1461.323,
+            "title": "Western African Ebola virus epidemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/COVID-19 pandemic in Sweden",
+            "score": 904.61316,
+            "title": "COVID-19 pandemic in Sweden"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Telehealth",
+            "score": 896.06604,
+            "title": "Telehealth"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/COVID-19 pandemic in Slovenia",
+            "score": 814.58044,
+            "title": "COVID-19 pandemic in Slovenia"
+          }
+        ],
+        "score": 0.5763298
+      },
+      "medium": {
+        "dreamId": "376",
+        "newsId": "14179",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chestnut",
+            "score": 623.6653,
+            "title": "Chestnut"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Cannabis cultivation",
+            "score": 478.676,
+            "title": "Cannabis cultivation"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Deforestation",
+            "score": 475.56558,
+            "title": "Deforestation"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of Christmas films",
+            "score": 407.2598,
+            "title": "List of Christmas films"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/British government response to the COVID-19 pandemic",
+            "score": 406.3559,
+            "title": "British government response to the COVID-19 pandemic"
+          }
+        ],
+        "score": 0.07857299
+      },
+      "low": {
+        "dreamId": "1482",
+        "newsId": "13456",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Chip Roy",
+            "score": 15432.2,
+            "title": "Chip Roy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration family separation policy",
+            "score": 6359.217,
+            "title": "Trump administration family separation policy"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/2021 United States Capitol attack",
+            "score": 5015.3022,
+            "title": "2021 United States Capitol attack"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Racial views of Donald Trump",
+            "score": 3354.3892,
+            "title": "Racial views of Donald Trump"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Comparison of electoral systems",
+            "score": 2076.8127,
+            "title": "Comparison of electoral systems"
+          }
+        ],
+        "score": 0.000012208632
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",
@@ -335,6 +1413,104 @@
     "totalWordCount": 106684254,
     "avgSimilarity": 0.013685454522580668,
     "maxSimilarity": 0.038953472,
+    "examples": {
+      "high": {
+        "dreamId": "655",
+        "newsId": "15465",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Telehealth",
+            "score": 2460.5066,
+            "title": "Telehealth"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Maternal death",
+            "score": 2197.421,
+            "title": "Maternal death"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Palliative care",
+            "score": 2141.6333,
+            "title": "Palliative care"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Trump administration communication during the COVID-19 pandemic",
+            "score": 1979.2313,
+            "title": "Trump administration communication during the COVID-19 pandemic"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Occupational therapy",
+            "score": 1962.9949,
+            "title": "Occupational therapy"
+          }
+        ],
+        "score": 0.47221693
+      },
+      "medium": {
+        "dreamId": "675",
+        "newsId": "14487",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/Columbine High School massacre",
+            "score": 470.35297,
+            "title": "Columbine High School massacre"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Kid Cudi",
+            "score": 330.58972,
+            "title": "Kid Cudi"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/SpongeBob SquarePants",
+            "score": 302.73502,
+            "title": "SpongeBob SquarePants"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Shaktimaan",
+            "score": 299.80188,
+            "title": "Shaktimaan"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Oxymoron (album)",
+            "score": 277.3911,
+            "title": "Oxymoron (album)"
+          }
+        ],
+        "score": 0.064256944
+      },
+      "low": {
+        "dreamId": "1266",
+        "newsId": "15420",
+        "concepts": [
+          {
+            "concept": "https://en.wikipedia.org/wiki/The Royal Today",
+            "score": 29175.72,
+            "title": "The Royal Today"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Destroyed in Seconds",
+            "score": 29132.383,
+            "title": "Destroyed in Seconds"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Crime SuspenStories",
+            "score": 8837.27,
+            "title": "Crime SuspenStories"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/Rhys Lawson",
+            "score": 4576.0464,
+            "title": "Rhys Lawson"
+          },
+          {
+            "concept": "https://en.wikipedia.org/wiki/List of The Young and the Restless characters (1980s)",
+            "score": 4282.7363,
+            "title": "List of The Young and the Restless characters (1980s)"
+          }
+        ],
+        "score": 0.0000024602266
+      }
+    },
     "similarityLevels": [
       {
         "similarityLevel": "low",

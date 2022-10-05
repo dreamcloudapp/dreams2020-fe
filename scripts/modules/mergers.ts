@@ -110,22 +110,22 @@ export const consolidateDreamNewsComparisonExampleList = (
   const mediumEx = sortedList[Math.floor(sortedList.length / 2)];
 
   const high: ExampleRecordComparison = {
-    ...highEx,
     dreamId: highEx.doc1Id,
     newsId: highEx.doc2Id,
     concepts: cleanExampleList(highEx.topConcepts),
-  };
-  const low: ExampleRecordComparison = {
-    ...lowEx,
-    dreamId: lowEx.doc1Id,
-    newsId: lowEx.doc2Id,
-    concepts: cleanExampleList(lowEx.topConcepts),
+    score: highEx.score,
   };
   const medium: ExampleRecordComparison = {
-    ...mediumEx,
     dreamId: mediumEx.doc1Id,
     newsId: mediumEx.doc2Id,
     concepts: cleanExampleList(mediumEx.topConcepts),
+    score: mediumEx.score,
+  };
+  const low: ExampleRecordComparison = {
+    dreamId: lowEx.doc1Id,
+    newsId: lowEx.doc2Id,
+    concepts: cleanExampleList(lowEx.topConcepts),
+    score: lowEx.score,
   };
 
   return {

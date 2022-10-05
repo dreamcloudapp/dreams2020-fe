@@ -2,8 +2,9 @@ import {
   GranularityComparisonCollection,
   DifferenceByGranularity,
   DifferenceDisplayRecordWithExamples,
+  ColumnGraphData,
+  ExamplesWithSimilarityLevel,
 } from "@kannydennedy/dreams-2020-types";
-import { ColumnGraphData } from "./App";
 
 // Dummy data for bubbles
 // For when allComparisons hasn't loaded yet
@@ -79,6 +80,12 @@ export const defaultBarData: DifferenceDisplayRecordWithExamples = {
   },
 };
 
+const blankSimilarityExample: ExamplesWithSimilarityLevel = {
+  high: { dreamId: "", newsId: "", score: 0, concepts: [] },
+  medium: { dreamId: "", newsId: "", score: 0, concepts: [] },
+  low: { dreamId: "", newsId: "", score: 0, concepts: [] },
+};
+
 export const defaultColumnGraphData: ColumnGraphData[] = [
   {
     month: 0,
@@ -87,5 +94,6 @@ export const defaultColumnGraphData: ColumnGraphData[] = [
     avgSimilarity: 0,
     maxSimilarity: 0,
     similarityLevels: [],
+    examples: blankSimilarityExample,
   },
 ];

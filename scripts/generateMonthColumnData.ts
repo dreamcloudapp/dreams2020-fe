@@ -1,16 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
-import { DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
+import { ColumnGraphData, DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
 import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
-import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
+import { SIMILARITY_COLORS } from "./modules/theme";
+import { consolidateDreamNewsComparisonExampleList } from "./modules/mergers";
 
 type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
-const COLORS = {
-  low: ColorTheme.BLUE,
-  medium: ColorTheme.GRAY,
-  high: ColorTheme.RED,
-};
 
 console.log("Generating month column data...");
 
@@ -91,6 +87,7 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         highSimilarityCount: highSimilarityAddCount,
         mediumSimilarityCount: mediumSimilarityAddCount,
         lowSimilarityCount: lowSimilarityAddCount,
+        exampleDreamNewsComparisons: record.examples,
       },
     };
     // If the month is in the accumulator, we add to it
@@ -108,13 +105,17 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
           acc[dreamNewsMonth].mediumSimilarityCount + mediumSimilarityAddCount,
         lowSimilarityCount:
           acc[dreamNewsMonth].lowSimilarityCount + lowSimilarityAddCount,
+        exampleDreamNewsComparisons: [
+          ...acc[dreamNewsMonth].exampleDreamNewsComparisons,
+          ...record.examples,
+        ],
       },
     };
   }
 }, {});
 
 // Now we just need to clean up the data
-const monthDataCleaned = Object.values(monthData)
+const monthDataCleaned: ColumnGraphData[] = Object.values(monthData)
   .map((monthRecord: any) => {
     const {
       totalSimilarity,
@@ -123,14 +124,21 @@ const monthDataCleaned = Object.values(monthData)
       highSimilarityCount,
       mediumSimilarityCount,
       lowSimilarityCount,
+      exampleDreamNewsComparisons,
     } = monthRecord;
-    return {
+
+    const examplesWithSimilarityLevel = consolidateDreamNewsComparisonExampleList(
+      exampleDreamNewsComparisons
+    );
+
+    const ret: ColumnGraphData = {
       month: monthRecord.month,
       count: count,
       totalWordCount: totalWordCount,
       avgSimilarity: totalSimilarity / count,
       maxSimilarity: highestSimilarities[monthRecord.month],
       // These are secretly SimilarityLevelSections
+      examples: examplesWithSimilarityLevel,
       similarityLevels: [
         {
           similarityLevel: "low",
@@ -155,6 +163,8 @@ const monthDataCleaned = Object.values(monthData)
         },
       ],
     };
+
+    return ret;
   })
   .sort((a: any, b: any) => a.month - b.month);
 

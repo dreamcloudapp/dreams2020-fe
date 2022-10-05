@@ -1858,10 +1858,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kannydennedy/dreams-2020-types@^7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@kannydennedy/dreams-2020-types/-/dreams-2020-types-7.1.1.tgz#8aa4ec7cbac972ebcd03a447da3841f564f679a4"
-  integrity sha512-P6fNpQ1d8fsPxr7zpusJ6Aott+Uz5YsdF/xeQ2eomlfWE3X2NBuAjPiPD1deGxfebFWJc36LOV1SONKUzM9u3A==
+"@kannydennedy/dreams-2020-types@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@kannydennedy/dreams-2020-types/-/dreams-2020-types-8.0.3.tgz#ef8ace8d40ad2c552f23cb5c8239df8a4cb083a8"
+  integrity sha512-Dy5AFnt3Ehefrd43iP7UzmdDAAuaPiWygAy/rxNQ0H3J1n3eoIq46po8U++o5M7BORH+mgZSNJ/FGS7+kEIQ0A==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
