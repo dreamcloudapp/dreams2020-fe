@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { ColorTheme, SIMILARITY_COLORS } from "../modules/theme";
+import { SIMILARITY_COLORS } from "../modules/theme";
 import { BasedAxis } from "../axes/before-after-axis";
 import { BallOverlay } from "../ball/ball-overlay";
 import { Column } from "../components/column";

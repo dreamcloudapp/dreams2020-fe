@@ -164,7 +164,6 @@ export function BarGraphContainer({
               // ];
 
               dispatch(setActiveComparisonSet(highMedLowComparisons));
-
               dispatch(setFocusedComparison(highMedLowComparisons[0]));
             }}
           />
