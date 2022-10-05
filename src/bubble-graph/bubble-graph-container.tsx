@@ -77,25 +77,28 @@ export function BubbleGraphContainer({
             prevFocusedComparison={prevFocusedComparison}
           />
         )}
-        {/* Select active time period */}
-        <div style={{ position: "absolute", right: 10, bottom: 10 }}>
-          <span>View: </span>
-          {timeLabels.map(({ key, label }) => {
-            const isActive = key === activeGranularity;
-            return (
-              <button
-                key={key}
-                className={isActive ? "selected" : "unselected"}
-                onClick={() => {
-                  dispatch(setActiveGranularity(key));
-                }}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
+        {/* Select active time period - don't show when there's a focused comparison */}
+        {!focusedComparison && (
+          <div style={{ position: "absolute", right: 10, bottom: 10 }}>
+            <span>View: </span>
+            {timeLabels.map(({ key, label }) => {
+              const isActive = key === activeGranularity;
+              return (
+                <button
+                  key={key}
+                  className={isActive ? "selected" : "unselected"}
+                  onClick={() => {
+                    dispatch(setActiveGranularity(key));
+                  }}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
+
       {/* Legend - don't show when there's a focused comparison */}
       {!focusedComparison && (
         <Legend

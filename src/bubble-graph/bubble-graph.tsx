@@ -165,6 +165,14 @@ export function BubbleGraph({
                   };
                 });
 
+                // Don't do anything if there are no examples
+                if (
+                  !comparison.similarityExamples ||
+                  !comparison.similarityExamples.high.score
+                ) {
+                  return;
+                }
+
                 dispatch(setActiveComparisonSet(highMedLowComparisons));
                 dispatch(setFocusedComparison(highMedLowComparisons[0]));
               }}
@@ -173,6 +181,7 @@ export function BubbleGraph({
         });
       })}
       {/* Overlay with focused balls (may be null) */}
+      {/* Don't show this if there's no info in the focused comparison */}
       <BallOverlay
         width={width}
         height={height}
