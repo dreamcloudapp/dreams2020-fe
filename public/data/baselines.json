@@ -1,0 +1,429 @@
+[
+  {
+    "name": "Baselines F",
+    "data": {
+      "perception": {
+        "Vision": 37,
+        "Hearing": 10,
+        "Touch": 12,
+        "Smell & Taste": 2,
+        "Color": 17
+      },
+      "emotion": {
+        "Fear": 23,
+        "Anger": 8,
+        "Sadness": 5,
+        "Wonder": 18,
+        "Happiness": 9
+      },
+      "characters": {
+        "Family": 40,
+        "Animals": 13,
+        "Fantastic beings": 2,
+        "Male references": 47,
+        "Female references": 44
+      },
+      "social interactions": {
+        "Friendliness": 46,
+        "Physical aggression": 12,
+        "Sexuality": 4
+      },
+      "movement": {
+        "Walking/Running": 27,
+        "Flying": 4,
+        "Falling": 7,
+        "Death": 9
+      },
+      "cognition": {
+        "Thinking": 39,
+        "Speech": 35,
+        "Reading/Writing": 6
+      },
+      "culture": {
+        "Architecture": 47,
+        "Food and Drink": 14,
+        "Clothing": 14,
+        "School": 17,
+        "Transportation": 24,
+        "Technology": 7,
+        "Money and Work": 18,
+        "Weapons": 3,
+        "Sports": 4,
+        "Art": 10,
+        "Religion": 7
+      },
+      "elements": {
+        "Fire": 4,
+        "Air": 4,
+        "Water": 13,
+        "Earth": 10
+      }
+    }
+  },
+  {
+    "name": "Baselines M",
+    "data": {
+      "perception": {
+        "Vision": 29,
+        "Hearing": 9,
+        "Touch": 12,
+        "Smell & Taste": 1,
+        "Color": 12
+      },
+      "emotion": {
+        "Fear": 15,
+        "Anger": 5,
+        "Sadness": 3,
+        "Wonder": 18,
+        "Happiness": 6
+      },
+      "characters": {
+        "Family": 27,
+        "Animals": 12,
+        "Fantastic beings": 2,
+        "Male references": 40,
+        "Female references": 35
+      },
+      "social interactions": {
+        "Friendliness": 34,
+        "Physical aggression": 19,
+        "Sexuality": 6
+      },
+      "movement": {
+        "Walking/Running": 27,
+        "Flying": 6,
+        "Falling": 8,
+        "Death": 7
+      },
+      "cognition": {
+        "Thinking": 38,
+        "Speech": 32,
+        "Reading/Writing": 5
+      },
+      "culture": {
+        "Architecture": 41,
+        "Food and Drink": 12,
+        "Clothing": 11,
+        "School": 13,
+        "Transportation": 28,
+        "Technology": 8,
+        "Money and Work": 22,
+        "Weapons": 5,
+        "Sports": 4,
+        "Art": 7,
+        "Religion": 6
+      },
+      "elements": {
+        "Fire": 4,
+        "Air": 5,
+        "Water": 12,
+        "Earth": 10
+      }
+    }
+  },
+  {
+    "name": "Ana Journal 2020",
+    "data": {
+      "perception": {
+        "Vision": 66,
+        "Hearing": 17,
+        "Touch": 33,
+        "Smell & Taste": 14,
+        "Color": 52
+      },
+      "emotion": {
+        "Fear": 30,
+        "Anger": 9,
+        "Sadness": 7,
+        "Wonder": 32,
+        "Happiness": 12
+      },
+      "characters": {
+        "Family": 54,
+        "Animals": 25,
+        "Fantastic beings": 4,
+        "Male references": 67,
+        "Female references": 68
+      },
+      "social interactions": {
+        "Friendliness": 60,
+        "Physical aggression": 17,
+        "Sexuality": 11
+      },
+      "movement": {
+        "Walking/Running": 46,
+        "Flying": 9,
+        "Falling": 14,
+        "Death": 7
+      },
+      "cognition": {
+        "Thinking": 62,
+        "Speech": 54,
+        "Reading/Writing": 14
+      },
+      "culture": {
+        "Architecture": 66,
+        "Food and Drink": 35,
+        "Clothing": 37,
+        "School": 22,
+        "Transportation": 36,
+        "Technology": 16,
+        "Money and Work": 36,
+        "Weapons": 5,
+        "Sports": 4,
+        "Art": 30,
+        "Religion": 24
+      },
+      "elements": {
+        "Fire": 12,
+        "Air": 10,
+        "Water": 35,
+        "Earth": 26
+      }
+    }
+  },
+  {
+    "name": "Burgess Journal",
+    "data": {
+      "perception": {
+        "Vision": 6,
+        "Hearing": 0,
+        "Touch": 0,
+        "Smell & Taste": 0,
+        "Color": 6
+      },
+      "emotion": {
+        "Fear": 6,
+        "Anger": 4,
+        "Sadness": 0,
+        "Wonder": 6,
+        "Happiness": 2
+      },
+      "characters": {
+        "Family": 26,
+        "Animals": 4,
+        "Fantastic beings": 8,
+        "Male references": 26,
+        "Female references": 22
+      },
+      "social interactions": {
+        "Friendliness": 29,
+        "Physical aggression": 2,
+        "Sexuality": 4
+      },
+      "movement": {
+        "Walking/Running": 14,
+        "Flying": 6,
+        "Falling": 6,
+        "Death": 2
+      },
+      "cognition": {
+        "Thinking": 14,
+        "Speech": 6,
+        "Reading/Writing": 2
+      },
+      "culture": {
+        "Architecture": 26,
+        "Food and Drink": 2,
+        "Clothing": 6,
+        "School": 0,
+        "Transportation": 2,
+        "Technology": 6,
+        "Money and Work": 14,
+        "Weapons": 0,
+        "Sports": 0,
+        "Art": 2,
+        "Religion": 22
+      },
+      "elements": {
+        "Fire": 2,
+        "Air": 0,
+        "Water": 2,
+        "Earth": 4
+      }
+    }
+  },
+  {
+    "name": "Mary Journal",
+    "data": {
+      "perception": {
+        "Vision": 40,
+        "Hearing": 9,
+        "Touch": 8,
+        "Smell & Taste": 6,
+        "Color": 19
+      },
+      "emotion": {
+        "Fear": 18,
+        "Anger": 8,
+        "Sadness": 3,
+        "Wonder": 11,
+        "Happiness": 3
+      },
+      "characters": {
+        "Family": 33,
+        "Animals": 20,
+        "Fantastic beings": 1,
+        "Male references": 41,
+        "Female references": 45
+      },
+      "social interactions": {
+        "Friendliness": 26,
+        "Physical aggression": 18,
+        "Sexuality": 6
+      },
+      "movement": {
+        "Walking/Running": 18,
+        "Flying": 4,
+        "Falling": 4,
+        "Death": 6
+      },
+      "cognition": {
+        "Thinking": 36,
+        "Speech": 26,
+        "Reading/Writing": 10
+      },
+      "culture": {
+        "Architecture": 21,
+        "Food and Drink": 6,
+        "Clothing": 11,
+        "School": 9,
+        "Transportation": 16,
+        "Technology": 3,
+        "Money and Work": 13,
+        "Weapons": 0,
+        "Sports": 1,
+        "Art": 11,
+        "Religion": 20
+      },
+      "elements": {
+        "Fire": 5,
+        "Air": 5,
+        "Water": 11,
+        "Earth": 13
+      }
+    }
+  },
+  {
+    "name": "Tita Journal",
+    "data": {
+      "perception": {
+        "Vision": 35,
+        "Hearing": 23,
+        "Touch": 19,
+        "Smell & Taste": 4,
+        "Color": 29
+      },
+      "emotion": {
+        "Fear": 33,
+        "Anger": 0,
+        "Sadness": 10,
+        "Wonder": 19,
+        "Happiness": 4
+      },
+      "characters": {
+        "Family": 52,
+        "Animals": 15,
+        "Fantastic beings": 8,
+        "Male references": 54,
+        "Female references": 69
+      },
+      "social interactions": {
+        "Friendliness": 75,
+        "Physical aggression": 25,
+        "Sexuality": 15
+      },
+      "movement": {
+        "Walking/Running": 27,
+        "Flying": 6,
+        "Falling": 25,
+        "Death": 17
+      },
+      "cognition": {
+        "Thinking": 54,
+        "Speech": 54,
+        "Reading/Writing": 8
+      },
+      "culture": {
+        "Architecture": 54,
+        "Food and Drink": 33,
+        "Clothing": 21,
+        "School": 21,
+        "Transportation": 35,
+        "Technology": 15,
+        "Money and Work": 35,
+        "Weapons": 4,
+        "Sports": 0,
+        "Art": 29,
+        "Religion": 15
+      },
+      "elements": {
+        "Fire": 2,
+        "Air": 6,
+        "Water": 13,
+        "Earth": 10
+      }
+    }
+  },
+  {
+    "name": "Rose Journal",
+    "data": {
+      "perception": {
+        "Vision": 94,
+        "Hearing": 52,
+        "Touch": 48,
+        "Smell & Taste": 20,
+        "Color": 72
+      },
+      "emotion": {
+        "Fear": 49,
+        "Anger": 32,
+        "Sadness": 15,
+        "Wonder": 55,
+        "Happiness": 25
+      },
+      "characters": {
+        "Family": 75,
+        "Animals": 33,
+        "Fantastic beings": 12,
+        "Male references": 87,
+        "Female references": 87
+      },
+      "social interactions": {
+        "Friendliness": 83,
+        "Physical aggression": 34,
+        "Sexuality": 21
+      },
+      "movement": {
+        "Walking/Running": 67,
+        "Flying": 13,
+        "Falling": 31,
+        "Death": 14
+      },
+      "cognition": {
+        "Thinking": 94,
+        "Speech": 89,
+        "Reading/Writing": 13
+      },
+      "culture": {
+        "Architecture": 87,
+        "Food and Drink": 51,
+        "Clothing": 55,
+        "School": 47,
+        "Transportation": 68,
+        "Technology": 30,
+        "Money and Work": 64,
+        "Weapons": 7,
+        "Sports": 21,
+        "Art": 40,
+        "Religion": 37
+      },
+      "elements": {
+        "Fire": 20,
+        "Air": 23,
+        "Water": 51,
+        "Earth": 49
+      }
+    }
+  }
+]

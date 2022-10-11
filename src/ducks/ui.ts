@@ -7,7 +7,7 @@ export type CollectionCheck = {
   checked: boolean;
 };
 
-export type GraphType = "column" | "bubble" | "area" | "bar";
+export type GraphType = "column" | "bubble" | "area" | "bar" | "radar";
 
 export type VisComparison = {
   x: number;

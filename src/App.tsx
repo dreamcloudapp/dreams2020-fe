@@ -17,6 +17,8 @@ import {
   fetchBarData,
   fetchDreams,
   fetchNews,
+  selectRadarData,
+  fetchRadarData,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
@@ -35,12 +37,14 @@ import {
   defaultColumnGraphData,
   defaultData,
   defaultDifferencesData,
+  defaultRadarData,
 } from "./initial-dummy-data";
 import useComponentSize from "@rehooks/component-size";
 import { localPoint } from "@visx/event";
 import { BarGraphContainer } from "./bar-graph/bar-graph-container";
 import { Padding } from "./modules/ui-types";
 import { DreamNewsText } from "./dream-news-text/dream-news-text";
+import { RadarGraph } from "./radar-graph/radar-graph";
 
 const padding: Padding = {
   LEFT: 30,
@@ -49,7 +53,7 @@ const padding: Padding = {
   BOTTOM: 40,
 };
 
-const graphtypes: GraphType[] = ["area", "bubble", "column", "bar"];
+const graphtypes: GraphType[] = ["area", "bubble", "column", "bar", "radar"];
 
 function GraphTypeToggle({
   onSelectGraphType,
@@ -94,6 +98,7 @@ function App() {
   const differencesData = useSelector(selectDifferences);
   const columnData = useSelector(selectColumnData);
   const barData = useSelector(selectBarData);
+  const radarData = useSelector(selectRadarData);
   const focusedComparison = useSelector(selectFocusedComparison);
 
   const data: GranularityComparisonCollection = allComparisons
@@ -103,6 +108,7 @@ function App() {
   const diffData = differencesData || defaultDifferencesData;
   const columnGraphData = columnData || defaultColumnGraphData;
   const barGraphData = barData || defaultBarData;
+  const radarGraphData = radarData || defaultRadarData;
 
   // Get width and height
   const graphContainerRef = useRef<HTMLDivElement>(null);
@@ -138,6 +144,7 @@ function App() {
     dispatch<any>(fetchBarData());
     dispatch<any>(fetchDreams());
     dispatch<any>(fetchNews());
+    dispatch<any>(fetchRadarData());
   }, [dispatch]);
 
   const frameWidth = window.location.href.includes("localhost") ? 20 : 0;
@@ -207,6 +214,9 @@ function App() {
                   onMouseOut={hideTooltip}
                   padding={padding}
                 />
+              )}
+              {!isLoading && showingGraph === "radar" && (
+                <RadarGraph data={radarGraphData} />
               )}
             </div>
           </div>

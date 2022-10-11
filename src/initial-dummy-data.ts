@@ -5,6 +5,7 @@ import {
   ColumnGraphData,
   ExamplesWithSimilarityLevel,
 } from "@kannydennedy/dreams-2020-types";
+import { RadarPersonData } from "./ducks/data";
 
 // Dummy data for bubbles
 // For when allComparisons hasn't loaded yet
@@ -97,3 +98,5 @@ export const defaultColumnGraphData: ColumnGraphData[] = [
     examples: blankSimilarityExample,
   },
 ];
+
+export const defaultRadarData: RadarPersonData[] = [];

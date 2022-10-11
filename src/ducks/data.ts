@@ -18,6 +18,13 @@ export type ComparisonSets = {
   comparisonSets: ComparisonSet[];
 };
 
+export type RadarPersonData = {
+  name: string;
+  data: {
+    [key: string]: number;
+  };
+};
+
 // The maximum time index distance for a given granularity
 // E.g. month: 6 would be 6 months
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
@@ -35,6 +42,7 @@ export type DataState = {
   barData?: DifferenceDisplayRecordWithExamples;
   dreams?: SingleTextRecordDictionary;
   news?: SingleTextRecordDictionary;
+  radarData?: RadarPersonData[];
 };
 
 const initialState: DataState = {
@@ -45,6 +53,7 @@ const initialState: DataState = {
   barData: undefined,
   dreams: undefined,
   news: undefined,
+  radarData: undefined,
 };
 
 const dataSlice = createSlice({
@@ -71,6 +80,9 @@ const dataSlice = createSlice({
     },
     setNews(state, action: PayloadAction<SingleTextRecordDictionary>) {
       state.news = action.payload;
+    },
+    setRadarData(state, action: PayloadAction<RadarPersonData[]>) {
+      state.radarData = action.payload;
     },
   },
 });
@@ -108,6 +120,10 @@ export const selectDreams = (
 
 export const selectNews = (state: RootState): SingleTextRecordDictionary | undefined => {
   return state?.data.news;
+};
+
+export const selectRadarData = (state: RootState): RadarPersonData[] | undefined => {
+  return state?.data.radarData;
 };
 
 // Get the comparison sets for a given granularity
@@ -181,6 +197,7 @@ const columnFile = "month-columns.json";
 const barFile = "bar-data.json";
 const dreamsFile = "all-dreams-final.json";
 const newsFile = "all-news-final.json";
+const radarFile = "baselines.json";
 
 // Loads the differences from the file
 export function fetchAreaData(): AppThunk {
@@ -243,6 +260,19 @@ export function fetchNews(): AppThunk {
     const data = await response.json();
 
     dispatch(dataSlice.actions.setNews(data));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+// Load radar data from the file
+export function fetchRadarData(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${radarFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setRadarData(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }
