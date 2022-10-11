@@ -1858,10 +1858,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kannydennedy/dreams-2020-types@^8.0.3":
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/@kannydennedy/dreams-2020-types/-/dreams-2020-types-8.0.3.tgz#ef8ace8d40ad2c552f23cb5c8239df8a4cb083a8"
-  integrity sha512-Dy5AFnt3Ehefrd43iP7UzmdDAAuaPiWygAy/rxNQ0H3J1n3eoIq46po8U++o5M7BORH+mgZSNJ/FGS7+kEIQ0A==
+"@kannydennedy/dreams-2020-types@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@kannydennedy/dreams-2020-types/-/dreams-2020-types-8.1.0.tgz#d8a452c49783f0fb002763dd6d00297d1c531d45"
+  integrity sha512-1uf+WgLahhqJLfd0D70RDIPQ/C7vmSV4OLG8sT7eAiVQaejZ1lsVxbWEj5Y3TvjC7h32Mp7EW1oHLNdvcZr9hw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -2727,6 +2727,13 @@
   version "17.0.11"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
   integrity sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-svg-radar-chart@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@types/react-svg-radar-chart/-/react-svg-radar-chart-1.2.3.tgz#a0532aee5b5dc616e0b6e76965fc41c791fc57fd"
+  integrity sha512-M1P7swGEJ9xB3YDNVlxUqeXCL3iqxj0ECpuMgoDWsFbD7O8PQGp3GshyI7TpbYNUFaa6cnKtZu+OiW+vOf5m4g==
   dependencies:
     "@types/react" "*"
 

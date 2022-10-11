@@ -40,6 +40,19 @@ const legends = [
   },
 ];
 
+const palette = [
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "orange",
+  "purple",
+  "pink",
+  "brown",
+  "grey",
+  "black",
+];
+
 const categories = {
   perception: ["Vision", "Hearing", "Touch", "Smell & Taste", "Color"],
   emotion: ["Fear", "Anger", "Sadness", "Wonder", "Happiness"],
@@ -129,6 +142,9 @@ try {
     return {
       name: legend.name,
       data: legendData,
+      meta: {
+        color: palette[legends.indexOf(legend)],
+      },
     };
   });
 

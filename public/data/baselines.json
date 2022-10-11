@@ -58,6 +58,9 @@
         "Water": 13,
         "Earth": 10
       }
+    },
+    "meta": {
+      "color": "red"
     }
   },
   {
@@ -119,6 +122,9 @@
         "Water": 12,
         "Earth": 10
       }
+    },
+    "meta": {
+      "color": "blue"
     }
   },
   {
@@ -180,6 +186,9 @@
         "Water": 35,
         "Earth": 26
       }
+    },
+    "meta": {
+      "color": "green"
     }
   },
   {
@@ -241,6 +250,9 @@
         "Water": 2,
         "Earth": 4
       }
+    },
+    "meta": {
+      "color": "yellow"
     }
   },
   {
@@ -302,6 +314,9 @@
         "Water": 11,
         "Earth": 13
       }
+    },
+    "meta": {
+      "color": "orange"
     }
   },
   {
@@ -363,6 +378,9 @@
         "Water": 13,
         "Earth": 10
       }
+    },
+    "meta": {
+      "color": "purple"
     }
   },
   {
@@ -424,6 +442,9 @@
         "Water": 51,
         "Earth": 49
       }
+    },
+    "meta": {
+      "color": "pink"
     }
   }
 ]

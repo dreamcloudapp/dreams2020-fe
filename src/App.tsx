@@ -216,7 +216,7 @@ function App() {
                 />
               )}
               {!isLoading && showingGraph === "radar" && (
-                <RadarGraph data={radarGraphData} />
+                <RadarGraph data={radarGraphData} width={width} />
               )}
             </div>
           </div>

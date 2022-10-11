@@ -9,6 +9,7 @@ import {
   SingleTextRecordDictionary,
   DifferenceDisplayRecordWithExamples,
   ColumnGraphData,
+  RadarPersonData,
 } from "@kannydennedy/dreams-2020-types";
 
 export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
@@ -16,13 +17,6 @@ export type BigBigThing = { [key in Granularity]: GranularityComparisonCollectio
 export type ComparisonSets = {
   granularity: Granularity;
   comparisonSets: ComparisonSet[];
-};
-
-export type RadarPersonData = {
-  name: string;
-  data: {
-    [key: string]: number;
-  };
 };
 
 // The maximum time index distance for a given granularity

@@ -4,8 +4,8 @@ import {
   DifferenceDisplayRecordWithExamples,
   ColumnGraphData,
   ExamplesWithSimilarityLevel,
+  RadarPersonData,
 } from "@kannydennedy/dreams-2020-types";
-import { RadarPersonData } from "./ducks/data";
 
 // Dummy data for bubbles
 // For when allComparisons hasn't loaded yet
