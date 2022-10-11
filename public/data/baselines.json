@@ -3,60 +3,60 @@
     "name": "Baselines F",
     "data": {
       "perception": {
-        "Vision": 37,
-        "Hearing": 10,
-        "Touch": 12,
-        "Smell & Taste": 2,
-        "Color": 17
+        "Vision": 0.37,
+        "Hearing": 0.1,
+        "Touch": 0.12,
+        "Smell & Taste": 0.02,
+        "Color": 0.17
       },
       "emotion": {
-        "Fear": 23,
-        "Anger": 8,
-        "Sadness": 5,
-        "Wonder": 18,
-        "Happiness": 9
+        "Fear": 0.23,
+        "Anger": 0.08,
+        "Sadness": 0.05,
+        "Wonder": 0.18,
+        "Happiness": 0.09
       },
       "characters": {
-        "Family": 40,
-        "Animals": 13,
-        "Fantastic beings": 2,
-        "Male references": 47,
-        "Female references": 44
+        "Family": 0.4,
+        "Animals": 0.13,
+        "Fantastic beings": 0.02,
+        "Male references": 0.47000000000000003,
+        "Female references": 0.44
       },
       "social interactions": {
-        "Friendliness": 46,
-        "Physical aggression": 12,
-        "Sexuality": 4
+        "Friendliness": 0.46,
+        "Physical aggression": 0.12,
+        "Sexuality": 0.04
       },
       "movement": {
-        "Walking/Running": 27,
-        "Flying": 4,
-        "Falling": 7,
-        "Death": 9
+        "Walking/Running": 0.27,
+        "Flying": 0.04,
+        "Falling": 0.07,
+        "Death": 0.09
       },
       "cognition": {
-        "Thinking": 39,
-        "Speech": 35,
-        "Reading/Writing": 6
+        "Thinking": 0.39,
+        "Speech": 0.35000000000000003,
+        "Reading/Writing": 0.06
       },
       "culture": {
-        "Architecture": 47,
-        "Food and Drink": 14,
-        "Clothing": 14,
-        "School": 17,
-        "Transportation": 24,
-        "Technology": 7,
-        "Money and Work": 18,
-        "Weapons": 3,
-        "Sports": 4,
-        "Art": 10,
-        "Religion": 7
+        "Architecture": 0.47000000000000003,
+        "Food and Drink": 0.14,
+        "Clothing": 0.14,
+        "School": 0.17,
+        "Transportation": 0.24,
+        "Technology": 0.07,
+        "Money and Work": 0.18,
+        "Weapons": 0.03,
+        "Sports": 0.04,
+        "Art": 0.1,
+        "Religion": 0.07
       },
       "elements": {
-        "Fire": 4,
-        "Air": 4,
-        "Water": 13,
-        "Earth": 10
+        "Fire": 0.04,
+        "Air": 0.04,
+        "Water": 0.13,
+        "Earth": 0.1
       }
     },
     "meta": {
@@ -67,60 +67,60 @@
     "name": "Baselines M",
     "data": {
       "perception": {
-        "Vision": 29,
-        "Hearing": 9,
-        "Touch": 12,
-        "Smell & Taste": 1,
-        "Color": 12
+        "Vision": 0.29,
+        "Hearing": 0.09,
+        "Touch": 0.12,
+        "Smell & Taste": 0.01,
+        "Color": 0.12
       },
       "emotion": {
-        "Fear": 15,
-        "Anger": 5,
-        "Sadness": 3,
-        "Wonder": 18,
-        "Happiness": 6
+        "Fear": 0.15,
+        "Anger": 0.05,
+        "Sadness": 0.03,
+        "Wonder": 0.18,
+        "Happiness": 0.06
       },
       "characters": {
-        "Family": 27,
-        "Animals": 12,
-        "Fantastic beings": 2,
-        "Male references": 40,
-        "Female references": 35
+        "Family": 0.27,
+        "Animals": 0.12,
+        "Fantastic beings": 0.02,
+        "Male references": 0.4,
+        "Female references": 0.35000000000000003
       },
       "social interactions": {
-        "Friendliness": 34,
-        "Physical aggression": 19,
-        "Sexuality": 6
+        "Friendliness": 0.34,
+        "Physical aggression": 0.19,
+        "Sexuality": 0.06
       },
       "movement": {
-        "Walking/Running": 27,
-        "Flying": 6,
-        "Falling": 8,
-        "Death": 7
+        "Walking/Running": 0.27,
+        "Flying": 0.06,
+        "Falling": 0.08,
+        "Death": 0.07
       },
       "cognition": {
-        "Thinking": 38,
-        "Speech": 32,
-        "Reading/Writing": 5
+        "Thinking": 0.38,
+        "Speech": 0.32,
+        "Reading/Writing": 0.05
       },
       "culture": {
-        "Architecture": 41,
-        "Food and Drink": 12,
-        "Clothing": 11,
-        "School": 13,
-        "Transportation": 28,
-        "Technology": 8,
-        "Money and Work": 22,
-        "Weapons": 5,
-        "Sports": 4,
-        "Art": 7,
-        "Religion": 6
+        "Architecture": 0.41000000000000003,
+        "Food and Drink": 0.12,
+        "Clothing": 0.11,
+        "School": 0.13,
+        "Transportation": 0.28,
+        "Technology": 0.08,
+        "Money and Work": 0.22,
+        "Weapons": 0.05,
+        "Sports": 0.04,
+        "Art": 0.07,
+        "Religion": 0.06
       },
       "elements": {
-        "Fire": 4,
-        "Air": 5,
-        "Water": 12,
-        "Earth": 10
+        "Fire": 0.04,
+        "Air": 0.05,
+        "Water": 0.12,
+        "Earth": 0.1
       }
     },
     "meta": {
@@ -131,60 +131,60 @@
     "name": "Ana Journal 2020",
     "data": {
       "perception": {
-        "Vision": 66,
-        "Hearing": 17,
-        "Touch": 33,
-        "Smell & Taste": 14,
-        "Color": 52
+        "Vision": 0.66,
+        "Hearing": 0.17,
+        "Touch": 0.33,
+        "Smell & Taste": 0.14,
+        "Color": 0.52
       },
       "emotion": {
-        "Fear": 30,
-        "Anger": 9,
-        "Sadness": 7,
-        "Wonder": 32,
-        "Happiness": 12
+        "Fear": 0.3,
+        "Anger": 0.09,
+        "Sadness": 0.07,
+        "Wonder": 0.32,
+        "Happiness": 0.12
       },
       "characters": {
-        "Family": 54,
-        "Animals": 25,
-        "Fantastic beings": 4,
-        "Male references": 67,
-        "Female references": 68
+        "Family": 0.54,
+        "Animals": 0.25,
+        "Fantastic beings": 0.04,
+        "Male references": 0.67,
+        "Female references": 0.68
       },
       "social interactions": {
-        "Friendliness": 60,
-        "Physical aggression": 17,
-        "Sexuality": 11
+        "Friendliness": 0.6,
+        "Physical aggression": 0.17,
+        "Sexuality": 0.11
       },
       "movement": {
-        "Walking/Running": 46,
-        "Flying": 9,
-        "Falling": 14,
-        "Death": 7
+        "Walking/Running": 0.46,
+        "Flying": 0.09,
+        "Falling": 0.14,
+        "Death": 0.07
       },
       "cognition": {
-        "Thinking": 62,
-        "Speech": 54,
-        "Reading/Writing": 14
+        "Thinking": 0.62,
+        "Speech": 0.54,
+        "Reading/Writing": 0.14
       },
       "culture": {
-        "Architecture": 66,
-        "Food and Drink": 35,
-        "Clothing": 37,
-        "School": 22,
-        "Transportation": 36,
-        "Technology": 16,
-        "Money and Work": 36,
-        "Weapons": 5,
-        "Sports": 4,
-        "Art": 30,
-        "Religion": 24
+        "Architecture": 0.66,
+        "Food and Drink": 0.35000000000000003,
+        "Clothing": 0.37,
+        "School": 0.22,
+        "Transportation": 0.36,
+        "Technology": 0.16,
+        "Money and Work": 0.36,
+        "Weapons": 0.05,
+        "Sports": 0.04,
+        "Art": 0.3,
+        "Religion": 0.24
       },
       "elements": {
-        "Fire": 12,
-        "Air": 10,
-        "Water": 35,
-        "Earth": 26
+        "Fire": 0.12,
+        "Air": 0.1,
+        "Water": 0.35000000000000003,
+        "Earth": 0.26
       }
     },
     "meta": {
@@ -195,60 +195,60 @@
     "name": "Burgess Journal",
     "data": {
       "perception": {
-        "Vision": 6,
+        "Vision": 0.06,
         "Hearing": 0,
         "Touch": 0,
         "Smell & Taste": 0,
-        "Color": 6
+        "Color": 0.06
       },
       "emotion": {
-        "Fear": 6,
-        "Anger": 4,
+        "Fear": 0.06,
+        "Anger": 0.04,
         "Sadness": 0,
-        "Wonder": 6,
-        "Happiness": 2
+        "Wonder": 0.06,
+        "Happiness": 0.02
       },
       "characters": {
-        "Family": 26,
-        "Animals": 4,
-        "Fantastic beings": 8,
-        "Male references": 26,
-        "Female references": 22
+        "Family": 0.26,
+        "Animals": 0.04,
+        "Fantastic beings": 0.08,
+        "Male references": 0.26,
+        "Female references": 0.22
       },
       "social interactions": {
-        "Friendliness": 29,
-        "Physical aggression": 2,
-        "Sexuality": 4
+        "Friendliness": 0.29,
+        "Physical aggression": 0.02,
+        "Sexuality": 0.04
       },
       "movement": {
-        "Walking/Running": 14,
-        "Flying": 6,
-        "Falling": 6,
-        "Death": 2
+        "Walking/Running": 0.14,
+        "Flying": 0.06,
+        "Falling": 0.06,
+        "Death": 0.02
       },
       "cognition": {
-        "Thinking": 14,
-        "Speech": 6,
-        "Reading/Writing": 2
+        "Thinking": 0.14,
+        "Speech": 0.06,
+        "Reading/Writing": 0.02
       },
       "culture": {
-        "Architecture": 26,
-        "Food and Drink": 2,
-        "Clothing": 6,
+        "Architecture": 0.26,
+        "Food and Drink": 0.02,
+        "Clothing": 0.06,
         "School": 0,
-        "Transportation": 2,
-        "Technology": 6,
-        "Money and Work": 14,
+        "Transportation": 0.02,
+        "Technology": 0.06,
+        "Money and Work": 0.14,
         "Weapons": 0,
         "Sports": 0,
-        "Art": 2,
-        "Religion": 22
+        "Art": 0.02,
+        "Religion": 0.22
       },
       "elements": {
-        "Fire": 2,
+        "Fire": 0.02,
         "Air": 0,
-        "Water": 2,
-        "Earth": 4
+        "Water": 0.02,
+        "Earth": 0.04
       }
     },
     "meta": {
@@ -259,60 +259,60 @@
     "name": "Mary Journal",
     "data": {
       "perception": {
-        "Vision": 40,
-        "Hearing": 9,
-        "Touch": 8,
-        "Smell & Taste": 6,
-        "Color": 19
+        "Vision": 0.4,
+        "Hearing": 0.09,
+        "Touch": 0.08,
+        "Smell & Taste": 0.06,
+        "Color": 0.19
       },
       "emotion": {
-        "Fear": 18,
-        "Anger": 8,
-        "Sadness": 3,
-        "Wonder": 11,
-        "Happiness": 3
+        "Fear": 0.18,
+        "Anger": 0.08,
+        "Sadness": 0.03,
+        "Wonder": 0.11,
+        "Happiness": 0.03
       },
       "characters": {
-        "Family": 33,
-        "Animals": 20,
-        "Fantastic beings": 1,
-        "Male references": 41,
-        "Female references": 45
+        "Family": 0.33,
+        "Animals": 0.2,
+        "Fantastic beings": 0.01,
+        "Male references": 0.41000000000000003,
+        "Female references": 0.45
       },
       "social interactions": {
-        "Friendliness": 26,
-        "Physical aggression": 18,
-        "Sexuality": 6
+        "Friendliness": 0.26,
+        "Physical aggression": 0.18,
+        "Sexuality": 0.06
       },
       "movement": {
-        "Walking/Running": 18,
-        "Flying": 4,
-        "Falling": 4,
-        "Death": 6
+        "Walking/Running": 0.18,
+        "Flying": 0.04,
+        "Falling": 0.04,
+        "Death": 0.06
       },
       "cognition": {
-        "Thinking": 36,
-        "Speech": 26,
-        "Reading/Writing": 10
+        "Thinking": 0.36,
+        "Speech": 0.26,
+        "Reading/Writing": 0.1
       },
       "culture": {
-        "Architecture": 21,
-        "Food and Drink": 6,
-        "Clothing": 11,
-        "School": 9,
-        "Transportation": 16,
-        "Technology": 3,
-        "Money and Work": 13,
+        "Architecture": 0.21,
+        "Food and Drink": 0.06,
+        "Clothing": 0.11,
+        "School": 0.09,
+        "Transportation": 0.16,
+        "Technology": 0.03,
+        "Money and Work": 0.13,
         "Weapons": 0,
-        "Sports": 1,
-        "Art": 11,
-        "Religion": 20
+        "Sports": 0.01,
+        "Art": 0.11,
+        "Religion": 0.2
       },
       "elements": {
-        "Fire": 5,
-        "Air": 5,
-        "Water": 11,
-        "Earth": 13
+        "Fire": 0.05,
+        "Air": 0.05,
+        "Water": 0.11,
+        "Earth": 0.13
       }
     },
     "meta": {
@@ -323,60 +323,60 @@
     "name": "Tita Journal",
     "data": {
       "perception": {
-        "Vision": 35,
-        "Hearing": 23,
-        "Touch": 19,
-        "Smell & Taste": 4,
-        "Color": 29
+        "Vision": 0.35000000000000003,
+        "Hearing": 0.23,
+        "Touch": 0.19,
+        "Smell & Taste": 0.04,
+        "Color": 0.29
       },
       "emotion": {
-        "Fear": 33,
+        "Fear": 0.33,
         "Anger": 0,
-        "Sadness": 10,
-        "Wonder": 19,
-        "Happiness": 4
+        "Sadness": 0.1,
+        "Wonder": 0.19,
+        "Happiness": 0.04
       },
       "characters": {
-        "Family": 52,
-        "Animals": 15,
-        "Fantastic beings": 8,
-        "Male references": 54,
-        "Female references": 69
+        "Family": 0.52,
+        "Animals": 0.15,
+        "Fantastic beings": 0.08,
+        "Male references": 0.54,
+        "Female references": 0.6900000000000001
       },
       "social interactions": {
-        "Friendliness": 75,
-        "Physical aggression": 25,
-        "Sexuality": 15
+        "Friendliness": 0.75,
+        "Physical aggression": 0.25,
+        "Sexuality": 0.15
       },
       "movement": {
-        "Walking/Running": 27,
-        "Flying": 6,
-        "Falling": 25,
-        "Death": 17
+        "Walking/Running": 0.27,
+        "Flying": 0.06,
+        "Falling": 0.25,
+        "Death": 0.17
       },
       "cognition": {
-        "Thinking": 54,
-        "Speech": 54,
-        "Reading/Writing": 8
+        "Thinking": 0.54,
+        "Speech": 0.54,
+        "Reading/Writing": 0.08
       },
       "culture": {
-        "Architecture": 54,
-        "Food and Drink": 33,
-        "Clothing": 21,
-        "School": 21,
-        "Transportation": 35,
-        "Technology": 15,
-        "Money and Work": 35,
-        "Weapons": 4,
+        "Architecture": 0.54,
+        "Food and Drink": 0.33,
+        "Clothing": 0.21,
+        "School": 0.21,
+        "Transportation": 0.35000000000000003,
+        "Technology": 0.15,
+        "Money and Work": 0.35000000000000003,
+        "Weapons": 0.04,
         "Sports": 0,
-        "Art": 29,
-        "Religion": 15
+        "Art": 0.29,
+        "Religion": 0.15
       },
       "elements": {
-        "Fire": 2,
-        "Air": 6,
-        "Water": 13,
-        "Earth": 10
+        "Fire": 0.02,
+        "Air": 0.06,
+        "Water": 0.13,
+        "Earth": 0.1
       }
     },
     "meta": {
@@ -387,60 +387,60 @@
     "name": "Rose Journal",
     "data": {
       "perception": {
-        "Vision": 94,
-        "Hearing": 52,
-        "Touch": 48,
-        "Smell & Taste": 20,
-        "Color": 72
+        "Vision": 0.9400000000000001,
+        "Hearing": 0.52,
+        "Touch": 0.48,
+        "Smell & Taste": 0.2,
+        "Color": 0.72
       },
       "emotion": {
-        "Fear": 49,
-        "Anger": 32,
-        "Sadness": 15,
-        "Wonder": 55,
-        "Happiness": 25
+        "Fear": 0.49,
+        "Anger": 0.32,
+        "Sadness": 0.15,
+        "Wonder": 0.55,
+        "Happiness": 0.25
       },
       "characters": {
-        "Family": 75,
-        "Animals": 33,
-        "Fantastic beings": 12,
-        "Male references": 87,
-        "Female references": 87
+        "Family": 0.75,
+        "Animals": 0.33,
+        "Fantastic beings": 0.12,
+        "Male references": 0.87,
+        "Female references": 0.87
       },
       "social interactions": {
-        "Friendliness": 83,
-        "Physical aggression": 34,
-        "Sexuality": 21
+        "Friendliness": 0.8300000000000001,
+        "Physical aggression": 0.34,
+        "Sexuality": 0.21
       },
       "movement": {
-        "Walking/Running": 67,
-        "Flying": 13,
-        "Falling": 31,
-        "Death": 14
+        "Walking/Running": 0.67,
+        "Flying": 0.13,
+        "Falling": 0.31,
+        "Death": 0.14
       },
       "cognition": {
-        "Thinking": 94,
-        "Speech": 89,
-        "Reading/Writing": 13
+        "Thinking": 0.9400000000000001,
+        "Speech": 0.89,
+        "Reading/Writing": 0.13
       },
       "culture": {
-        "Architecture": 87,
-        "Food and Drink": 51,
-        "Clothing": 55,
-        "School": 47,
-        "Transportation": 68,
-        "Technology": 30,
-        "Money and Work": 64,
-        "Weapons": 7,
-        "Sports": 21,
-        "Art": 40,
-        "Religion": 37
+        "Architecture": 0.87,
+        "Food and Drink": 0.51,
+        "Clothing": 0.55,
+        "School": 0.47000000000000003,
+        "Transportation": 0.68,
+        "Technology": 0.3,
+        "Money and Work": 0.64,
+        "Weapons": 0.07,
+        "Sports": 0.21,
+        "Art": 0.4,
+        "Religion": 0.37
       },
       "elements": {
-        "Fire": 20,
-        "Air": 23,
-        "Water": 51,
-        "Earth": 49
+        "Fire": 0.2,
+        "Air": 0.23,
+        "Water": 0.51,
+        "Earth": 0.49
       }
     },
     "meta": {

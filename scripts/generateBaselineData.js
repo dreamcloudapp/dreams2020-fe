@@ -115,7 +115,7 @@ try {
     // });
     const legendData = sheetData[0].reduce((acc, row) => {
       const item = row[0];
-      const value = row[legend.column];
+      const value = (1 / 100) * row[legend.column];
       const category = getCategoryForItem(item);
 
       // Sometimes a random row sneaks in if it has a weird filled cell somewhere
