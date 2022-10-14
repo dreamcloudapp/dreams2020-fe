@@ -1,5 +1,5 @@
 import { ContentCategory, RadarPersonData } from "@kannydennedy/dreams-2020-types";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import RadarChart, { ChartData } from "react-svg-radar-chart";
 import "react-svg-radar-chart/build/css/index.css";
 
