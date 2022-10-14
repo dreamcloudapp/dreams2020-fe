@@ -29,74 +29,29 @@ type RadarGraphProps = {
   //   onMouseOut: () => void;
 };
 
-const testdata: ChartData[] = [
-  {
-    data: {
-      battery: 0.7,
-      design: 0.8,
-      useful: 0.9,
-      speed: 0.67,
-      weight: 0.8,
-    },
-    meta: { color: "blue" },
-  },
-  {
-    data: {
-      battery: 0.6,
-      design: 0.85,
-      useful: 0.5,
-      speed: 0.6,
-      weight: 0.7,
-    },
-    meta: { color: "red" },
-  },
-];
-
-const testData2 = [
-  {
-    data: {
-      battery: 0.7,
-      design: 1,
-      useful: 0.9,
-    },
-    meta: {
-      color: "#edc951",
-    },
-  },
-  {
-    data: {
-      battery: 1,
-      design: 0.6,
-      useful: 0.8,
-    },
-    meta: {
-      color: "#cc333f",
-    },
-  },
-  {
-    data: {
-      battery: 0.8,
-      design: 0.7,
-      useful: 0.6,
-    },
-    meta: {
-      color: "#00a0b0",
-    },
-  },
-];
-
-const palette = [
-  "red",
-  "blue",
-  "green",
-  "yellow",
-  "orange",
-  "purple",
-  "pink",
-  "brown",
-  "grey",
-  "black",
-];
+// Data has this format:
+// const testdata: ChartData[] = [
+//   {
+//     data: {
+//       battery: 0.7,
+//       design: 0.8,
+//       useful: 0.9,
+//       speed: 0.67,
+//       weight: 0.8,
+//     },
+//     meta: { color: "blue" },
+//   },
+//   {
+//     data: {
+//       battery: 0.6,
+//       design: 0.85,
+//       useful: 0.5,
+//       speed: 0.6,
+//       weight: 0.7,
+//     },
+//     meta: { color: "red" },
+//   },
+// ];
 
 export function RadarGraph({
   data,
@@ -121,6 +76,8 @@ RadarGraphProps) {
 
   // The data that goes in the radars
   const allRadarData = useMemo<ChartDataWithNameAndCaptions[]>(() => {
+    console.log("showingPeople", setShowingPeople);
+
     // const peopleToShow = showingPeople.filter(p => p.showing);
     const ret: ChartDataWithNameAndCaptions[] = allRadarChartNames.map(
       (chartCategory, i) => {
@@ -145,7 +102,7 @@ RadarGraphProps) {
       }
     );
     return ret;
-  }, [showingPeople]);
+  }, [showingPeople, data]);
 
   console.log("allRadarData", allRadarData);
 
