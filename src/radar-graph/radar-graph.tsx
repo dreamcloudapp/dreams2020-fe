@@ -65,19 +65,17 @@ RadarGraphProps) {
   // Dummy
   const radarWidth = width / 4;
 
-  const [showingPeople, setShowingPeople] = useState(
-    data.map((person, i) => {
-      return {
-        name: person.name,
-        showing: true,
-      };
-    })
-  );
+  // const [showingPeople, setShowingPeople] = useState(
+  //   data.map((person, i) => {
+  //     return {
+  //       name: person.name,
+  //       showing: true,
+  //     };
+  //   })
+  // );
 
   // The data that goes in the radars
   const allRadarData = useMemo<ChartDataWithNameAndCaptions[]>(() => {
-    console.log("showingPeople", setShowingPeople);
-
     // const peopleToShow = showingPeople.filter(p => p.showing);
     const ret: ChartDataWithNameAndCaptions[] = allRadarChartNames.map(
       (chartCategory, i) => {
@@ -102,7 +100,7 @@ RadarGraphProps) {
       }
     );
     return ret;
-  }, [showingPeople, data]);
+  }, [data]);
 
   console.log("allRadarData", allRadarData);
 
