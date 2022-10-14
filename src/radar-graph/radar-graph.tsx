@@ -3,20 +3,21 @@ import { useMemo, useState } from "react";
 import RadarChart, { ChartData } from "react-svg-radar-chart";
 import "react-svg-radar-chart/build/css/index.css";
 
-type ChartDataWithName = {
+type ChartDataWithNameAndCaptions = {
   name: string;
   chartData: ChartData[];
+  captions: { [key: string]: string };
 };
 
 const allRadarChartNames: ContentCategory[] = [
   "perception",
   "emotion",
   "characters",
-  //   "social interactions",
+  "social interactions",
   "movement",
-  //   "cognition",
+  "cognition",
   "culture",
-  //   "elements",
+  "elements",
 ];
 
 type RadarGraphProps = {
@@ -84,15 +85,6 @@ const testData2 = [
   },
 ];
 
-const captions = {
-  // columns
-  battery: "Battery Capacity",
-  design: "Design",
-  useful: "Usefulness",
-  speed: "Speed",
-  weight: "Weight",
-};
-
 const palette = [
   "red",
   "blue",
@@ -128,40 +120,46 @@ RadarGraphProps) {
   );
 
   // The data that goes in the radars
-  const allRadarData = useMemo<ChartDataWithName[]>(() => {
+  const allRadarData = useMemo<ChartDataWithNameAndCaptions[]>(() => {
     // const peopleToShow = showingPeople.filter(p => p.showing);
-    const ret: ChartDataWithName[] = allRadarChartNames.map((chartCategory, i) => {
-      return {
-        name: "dab",
-        chartData: [
-          {
-            meta: {
-              color: palette[i],
-            },
-            data: {
-              battery: 0.7,
-              design: 1,
-              useful: 0.9,
-              speed: 0.67,
-              weight: 0.8,
-            },
-          },
-        ],
-      };
-    });
+    const ret: ChartDataWithNameAndCaptions[] = allRadarChartNames.map(
+      (chartCategory, i) => {
+        return {
+          name: "dab",
+          chartData: data.map((person, i) => {
+            return {
+              data: person.data[chartCategory],
+
+              meta: {
+                color: person.meta.color,
+              },
+            };
+          }),
+          captions: Object.keys(data[0].data[chartCategory]).reduce((acc, curr) => {
+            return {
+              ...acc,
+              [curr]: curr,
+            };
+          }, {}),
+        };
+      }
+    );
     return ret;
   }, [showingPeople]);
 
   console.log("allRadarData", allRadarData);
-
-  const allRadars = data[0] ? Object.keys(data[0].data) : [];
 
   // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <div>
       {allRadarData.map((d, i) => {
         return (
-          <RadarChart key={i} captions={captions} data={d.chartData} size={radarWidth} />
+          <RadarChart
+            key={i}
+            captions={d.captions}
+            data={d.chartData}
+            size={radarWidth}
+          />
         );
       })}
     </div>
