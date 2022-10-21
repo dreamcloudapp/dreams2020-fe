@@ -21,7 +21,6 @@ import {
 import { BallOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
 import { SIMILARITY_COLORS } from "../modules/theme";
-import { Point } from "../../types/types";
 
 const BAR_GAP = 3;
 
@@ -99,12 +98,13 @@ export function BarGraphContainer({
   const totalGap = (numBars - 1) * BAR_GAP;
   const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
 
-  const max = data.comparisons.maxAverageSimilarity;
-  const yPad = height * 0.1;
+  // const max = data.comparisons.maxAverageSimilarity;
+
+  const paddedMax = 0.022;
 
   const scaleY = scaleLinear()
-    .domain([0, max])
-    .range([0, height - padding.TOP - padding.BOTTOM - yPad]);
+    .domain([0, paddedMax])
+    .range([0, height - padding.TOP - padding.BOTTOM]);
 
   return (
     <svg width={width} height={height}>
@@ -113,8 +113,9 @@ export function BarGraphContainer({
         height={height}
         padding={padding}
         hasMidpointLine={true}
-        yRange={[0, 0.02]}
+        yRange={[0, paddedMax]}
         xRange={[-numBars / 2, numBars / 2]}
+        numTicks={11}
       />
       {data.comparisons.differences.map((difference, index) => {
         const x = (barWidth + BAR_GAP) * index + padding.LEFT;

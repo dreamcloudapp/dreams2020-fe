@@ -107,8 +107,7 @@ export function BubbleGraph({
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
         return comparisonSet.comparisons.map((comparison, i) => {
-          const { dreamCollection, newsCollection, score, wordCount, numComparisons } =
-            comparison;
+          const { dreamCollection, newsCollection, score, numComparisons } = comparison;
 
           const index1 = dreamCollection.timePeriod.index;
           const index2 = newsCollection.timePeriod.index;

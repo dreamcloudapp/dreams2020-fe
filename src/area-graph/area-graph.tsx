@@ -11,20 +11,14 @@ import { Point } from "../../types/types";
 
 const LINE_WIDTH = 2;
 
-type ColumnGraphProps = {
+type AreaGraphProps = {
   data: DifferenceDisplayRecord[];
   width: number;
   height: number;
   paddedMax: number;
+  padding: Padding;
   hideTooltip: () => void;
   handleMouseOver: (event: any, datum: any) => void;
-};
-
-const padding: Padding = {
-  LEFT: 30,
-  RIGHT: 30,
-  TOP: 60,
-  BOTTOM: 40,
 };
 
 type ColouredDayDifference = {
@@ -75,7 +69,8 @@ export function AreaGraph({
   hideTooltip,
   handleMouseOver,
   paddedMax,
-}: ColumnGraphProps) {
+  padding,
+}: AreaGraphProps) {
   // Midpoint of the graph
   const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
 
@@ -99,8 +94,9 @@ export function AreaGraph({
         height={height}
         padding={padding}
         hasMidpointLine={true}
-        yRange={[0, 0.02]}
+        yRange={[0, paddedMax]}
         xRange={[-dataLength / 2, dataLength / 2]}
+        numTicks={11}
       />
       {data.map(d => {
         return (

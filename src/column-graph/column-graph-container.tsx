@@ -16,6 +16,7 @@ import { prettyNumber } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 import { Padding } from "../modules/ui-types";
 import { ColumnGraphData, SimilarityLevel } from "@kannydennedy/dreams-2020-types";
+import { scaleLinear } from "d3";
 
 const COLUMN_GAP = 10;
 
@@ -80,6 +81,13 @@ export function ColumnGraphContainer({
   const totalGap = (numBars - 1) * COLUMN_GAP;
   const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
 
+  const maxSimilarity = 0.025;
+
+  // yScale
+  const yScale = scaleLinear()
+    .domain([0, maxSimilarity])
+    .range([0, height - padding.BOTTOM - padding.TOP]);
+
   // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <svg width={width} height={height}>
@@ -90,11 +98,12 @@ export function ColumnGraphContainer({
         xAxisLeftLabel=""
         xAxisRightLabel=""
         xAxisCenterLabel=""
-        yRange={[0, 0.02]}
+        yRange={[0, maxSimilarity]}
         xRange={[0, data.length]}
+        numTicks={5}
       />
       {data.map((d, i) => {
-        const colHeight = d.avgSimilarity * 18000;
+        const colHeight = yScale(d.avgSimilarity);
 
         const x = i * (barWidth + COLUMN_GAP) + padding.LEFT;
         const y = height - padding.BOTTOM - colHeight;
@@ -132,22 +141,8 @@ export function ColumnGraphContainer({
                     subLabel: "",
                   };
                 });
-
                 dispatch(setActiveComparisonSet(highMedLowComparisons));
-
                 dispatch(setFocusedComparison(highMedLowComparisons[0]));
-
-                // dispatch(
-                //   setFocusedComparison({
-                //     x: x + ballX,
-                //     y: y + ballY,
-                //     index: 0,
-                //     color: ColorTheme.DULLER_BLUE,
-                //     concepts: ["example", "example", "example"],
-                //     startRadius: 20,
-                //     label: "TODO",
-                //   })
-                // );
               }}
             />
 

@@ -18,6 +18,7 @@ type XYAxisProps = {
   xAxisCenterLabel?: string;
   yRange: [number, number];
   xRange: [number, number];
+  numTicks?: number;
 };
 
 export function XYAxis({
@@ -30,6 +31,7 @@ export function XYAxis({
   xAxisCenterLabel = "Dream on same day as news",
   yRange,
   xRange,
+  numTicks = 10,
 }: XYAxisProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -58,6 +60,7 @@ export function XYAxis({
         xAxisCenterLabel={xAxisCenterLabel}
         yRange={yRange}
         xRange={xRange}
+        numTicks={numTicks}
       />
       {/* MIDPOINT LINE */}
       {hasMidpointLine && (

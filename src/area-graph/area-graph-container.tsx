@@ -11,6 +11,7 @@ import {
 import { AreaGraph } from "./area-graph";
 import Legend from "../bubble-graph/legend";
 import { useDispatch } from "react-redux";
+import { Padding } from "../modules/ui-types";
 
 type GraphProps = {
   data: DifferenceByGranularity;
@@ -18,6 +19,7 @@ type GraphProps = {
   height: number;
   handleMouseOver: (event: any, datum: any) => void;
   onMouseOut: () => void;
+  padding: Padding;
 };
 
 export function AreaGraphContainer({
@@ -26,6 +28,7 @@ export function AreaGraphContainer({
   height,
   handleMouseOver,
   onMouseOut,
+  padding,
 }: GraphProps) {
   const dispatch = useDispatch();
   // const dispatch = useDispatch();
@@ -47,10 +50,7 @@ export function AreaGraphContainer({
   };
 
   // Pad the max a little so the lines aren't always at the top of the chart
-  const realMax = Math.max(
-    ...columnDataSets.map(d => d.comparisons.maxAverageSimilarity)
-  );
-  const paddedMax = realMax * 1.3;
+  const paddedMax = 0.022;
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
@@ -65,6 +65,7 @@ export function AreaGraphContainer({
             hideTooltip={onMouseOut}
             handleMouseOver={handleMouseOver}
             paddedMax={paddedMax}
+            padding={padding}
           />
         )}
       </div>

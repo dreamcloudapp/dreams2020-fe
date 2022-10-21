@@ -53,7 +53,7 @@ const padding: Padding = {
   BOTTOM: 40,
 };
 
-const graphtypes: GraphType[] = ["area", "bubble", "column", "bar", "radar"];
+const graphtypes: GraphType[] = ["area", "bar", "bubble", "column", "radar"];
 
 function GraphTypeToggle({
   onSelectGraphType,
@@ -184,6 +184,7 @@ function App() {
                   height={height}
                   handleMouseOver={handleMouseOver}
                   onMouseOut={hideTooltip}
+                  padding={padding}
                 />
               )}
               {!isLoading && showingGraph === "bubble" && (

@@ -27,6 +27,7 @@ type AxesProps = {
   granularity: Granularity;
   yRange: [number, number];
   xRange: [number, number];
+  numTicks: number;
 };
 
 function Axes({
@@ -48,6 +49,7 @@ function Axes({
   granularity,
   xRange,
   yRange,
+  numTicks,
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
   const rightGraphEdge = width - padding.RIGHT;
@@ -59,7 +61,6 @@ function Axes({
   const topLabels = splitLabel(yAxisTopLabel || "");
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
 
-  const numTicks = 10;
   const intervalTick = tickScale(yRange[1]) / numTicks;
 
   return (
@@ -86,15 +87,24 @@ function Axes({
       {[...Array(numTicks)].map((_, i) => {
         const y = bottomGraphEdge - intervalTick * i;
         return (
-          <>
+          <g key={i}>
             <line
-              key={i}
               x1={leftGraphEdge}
               y1={y}
               x2={leftGraphEdge - 5}
               y2={y}
               stroke={strokeColor}
               strokeWidth={strokeWidth}
+            />
+            {/* background lines */}
+            <line
+              x1={leftGraphEdge}
+              y1={y}
+              x2={rightGraphEdge}
+              y2={y}
+              stroke={"#ccc"}
+              strokeWidth={strokeWidth}
+              strokeDasharray="2,2"
             />
             {/* label */}
             <text
@@ -106,7 +116,7 @@ function Axes({
             >
               {((i * yRange[1]) / numTicks).toFixed(3)}
             </text>
-          </>
+          </g>
         );
       })}
 
