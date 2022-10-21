@@ -1,5 +1,5 @@
 import { scaleLinear } from "d3";
-import Axes from "./axes";
+import Axes from "./bubble-axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Bubble } from "./bubble";
@@ -80,8 +80,10 @@ export function BubbleGraph({
   // Size of the balls is determined by the number of words in the comparison
   // And the height of the graph
   // TODO - think about width too
+  const maxComparisons = activeGranularity === "week" ? 30000 : 350000;
   const scaleBallSize = scaleLinear()
-    .domain([0, data.maxWordCount])
+    // .domain([0, data.maxWordCount])
+    .domain([0, maxComparisons])
     .range([0, height / 40]);
 
   return (
@@ -105,7 +107,8 @@ export function BubbleGraph({
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
         return comparisonSet.comparisons.map((comparison, i) => {
-          const { dreamCollection, newsCollection, score, wordCount } = comparison;
+          const { dreamCollection, newsCollection, score, wordCount, numComparisons } =
+            comparison;
 
           const index1 = dreamCollection.timePeriod.index;
           const index2 = newsCollection.timePeriod.index;
@@ -119,7 +122,7 @@ export function BubbleGraph({
               startPoint={startPoint}
               endPoint={[endX, endY]}
               key={i}
-              r={scaleBallSize(wordCount)}
+              r={scaleBallSize(numComparisons)}
               stroke={changeHslLightness(comparisonSet.color, -10)}
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
@@ -131,7 +134,6 @@ export function BubbleGraph({
                       {comparison.label}
                     </h4>
                     <p>Average similarity: {comparison.score.toFixed(5)}</p>
-                    <p>Total words: {comparison.wordCount.toLocaleString()}</p>
                     <p>
                       Total dream-news pairs compared:{" "}
                       {comparison.numComparisons.toLocaleString()}
@@ -162,7 +164,7 @@ export function BubbleGraph({
                     index: i,
                     color: colorTheme[level as SimilarityLevel],
                     concepts: comparison.concepts.map(c => c.title),
-                    startRadius: scaleBallSize(wordCount),
+                    startRadius: scaleBallSize(numComparisons),
                     label: `Example ${level} similarity comparison`,
                     dreamId: comparison.dreamId,
                     newsId: comparison.newsId,

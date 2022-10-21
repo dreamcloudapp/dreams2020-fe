@@ -47,7 +47,7 @@ import { DreamNewsText } from "./dream-news-text/dream-news-text";
 import { RadarGraph } from "./radar-graph/radar-graph";
 
 const padding: Padding = {
-  LEFT: 30,
+  LEFT: 50,
   RIGHT: 30,
   TOP: 60,
   BOTTOM: 40,

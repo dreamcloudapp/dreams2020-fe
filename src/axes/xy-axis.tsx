@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Axes from "../axes/axes";
+import Axes from "./axes";
 import { selectActiveGranularity } from "../ducks/ui";
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
@@ -8,7 +8,7 @@ import "../App.css";
 const LINE_WIDTH = 2;
 const TRIANGLE_HEIGHT = 10;
 
-type BasedAxisProps = {
+type XYAxisProps = {
   width: number;
   height: number;
   padding: Padding;
@@ -16,9 +16,11 @@ type BasedAxisProps = {
   xAxisRightLabel?: string;
   xAxisLeftLabel?: string;
   xAxisCenterLabel?: string;
+  yRange: [number, number];
+  xRange: [number, number];
 };
 
-export function BasedAxis({
+export function XYAxis({
   height,
   width,
   padding,
@@ -26,7 +28,9 @@ export function BasedAxis({
   xAxisRightLabel = "Dream occured after the news",
   xAxisLeftLabel = "Dream occured before the news",
   xAxisCenterLabel = "Dream on same day as news",
-}: BasedAxisProps) {
+  yRange,
+  xRange,
+}: XYAxisProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
   // Midpoint of the graph
@@ -44,7 +48,7 @@ export function BasedAxis({
         strokeWidth={LINE_WIDTH}
         triangleHeight={TRIANGLE_HEIGHT}
         tickScale={scaleLinear()
-          .domain([0, 1])
+          .domain(yRange)
           .range([0, height - padding.BOTTOM - padding.TOP])}
         granularity={activeGranularity}
         maxTimeDistance={1}
@@ -52,6 +56,8 @@ export function BasedAxis({
         xAxisRightLabel={xAxisRightLabel}
         xAxisLeftLabel={xAxisLeftLabel}
         xAxisCenterLabel={xAxisCenterLabel}
+        yRange={yRange}
+        xRange={xRange}
       />
       {/* MIDPOINT LINE */}
       {hasMidpointLine && (

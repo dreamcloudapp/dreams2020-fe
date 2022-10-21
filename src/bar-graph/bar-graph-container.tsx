@@ -6,7 +6,7 @@ import {
 import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import "../App.css";
-import { BasedAxis } from "../axes/before-after-axis";
+import { XYAxis } from "../axes/xy-axis";
 import { prettyNumber } from "../modules/formatters";
 import { Column } from "../components/column";
 import { useDispatch } from "react-redux";
@@ -21,6 +21,7 @@ import {
 import { BallOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
 import { SIMILARITY_COLORS } from "../modules/theme";
+import { Point } from "../../types/types";
 
 const BAR_GAP = 3;
 
@@ -100,13 +101,21 @@ export function BarGraphContainer({
 
   const max = data.comparisons.maxAverageSimilarity;
   const yPad = height * 0.1;
+
   const scaleY = scaleLinear()
     .domain([0, max])
     .range([0, height - padding.TOP - padding.BOTTOM - yPad]);
 
   return (
     <svg width={width} height={height}>
-      <BasedAxis width={width} height={height} padding={padding} hasMidpointLine={true} />
+      <XYAxis
+        width={width}
+        height={height}
+        padding={padding}
+        hasMidpointLine={true}
+        yRange={[0, 0.02]}
+        xRange={[-numBars / 2, numBars / 2]}
+      />
       {data.comparisons.differences.map((difference, index) => {
         const x = (barWidth + BAR_GAP) * index + padding.LEFT;
         const barHeight = scaleY(difference.averageSimilarity);

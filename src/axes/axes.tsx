@@ -25,6 +25,8 @@ type AxesProps = {
   tickScale: ScaleLinear<number, number, never>;
   opacity: number;
   granularity: Granularity;
+  yRange: [number, number];
+  xRange: [number, number];
 };
 
 function Axes({
@@ -44,6 +46,8 @@ function Axes({
   xAxisCenterLabel,
   xAxisLeftLabel,
   granularity,
+  xRange,
+  yRange,
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
   const rightGraphEdge = width - padding.RIGHT;
@@ -54,6 +58,9 @@ function Axes({
 
   const topLabels = splitLabel(yAxisTopLabel || "");
   const bottomLabels = splitLabel(yAxisBottomLabel || "");
+
+  const numTicks = 10;
+  const intervalTick = tickScale(yRange[1]) / numTicks;
 
   return (
     <g opacity={opacity}>
@@ -75,6 +82,33 @@ function Axes({
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
+      {/* y-axis ticks */}
+      {[...Array(numTicks)].map((_, i) => {
+        const y = bottomGraphEdge - intervalTick * i;
+        return (
+          <>
+            <line
+              key={i}
+              x1={leftGraphEdge}
+              y1={y}
+              x2={leftGraphEdge - 5}
+              y2={y}
+              stroke={strokeColor}
+              strokeWidth={strokeWidth}
+            />
+            {/* label */}
+            <text
+              x={leftGraphEdge - 10 - yAxisTextLeftPadding}
+              y={y + 5}
+              textAnchor="end"
+              fontSize={12}
+              fill={strokeColor}
+            >
+              {((i * yRange[1]) / numTicks).toFixed(3)}
+            </text>
+          </>
+        );
+      })}
 
       {/* yAxisTopLabel */}
       {topLabels.map((label, i) => {

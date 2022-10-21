@@ -6,7 +6,8 @@ import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import { ChartPolygon } from "./chart-polygon";
 import "../App.css";
-import { BasedAxis } from "../axes/before-after-axis";
+import { XYAxis } from "../axes/xy-axis";
+import { Point } from "../../types/types";
 
 const LINE_WIDTH = 2;
 
@@ -78,8 +79,9 @@ export function AreaGraph({
   // Midpoint of the graph
   const midpoint = (width - padding.LEFT - padding.RIGHT) / 2 + padding.LEFT;
 
+  const domainY: Point = [0, paddedMax];
   const colHeightScale = scaleLinear()
-    .domain([0, paddedMax])
+    .domain(domainY)
     .range([0, height - padding.TOP - padding.BOTTOM]);
 
   // We assume both sets have the same length
@@ -92,7 +94,14 @@ export function AreaGraph({
   return (
     <svg width={width} height={height}>
       {/* GRID */}
-      <BasedAxis width={width} height={height} padding={padding} hasMidpointLine={true} />
+      <XYAxis
+        width={width}
+        height={height}
+        padding={padding}
+        hasMidpointLine={true}
+        yRange={[0, 0.02]}
+        xRange={[-dataLength / 2, dataLength / 2]}
+      />
       {data.map(d => {
         return (
           <ChartPolygon

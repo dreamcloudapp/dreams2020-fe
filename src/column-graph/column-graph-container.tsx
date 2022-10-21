@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { SIMILARITY_COLORS } from "../modules/theme";
-import { BasedAxis } from "../axes/before-after-axis";
+import { XYAxis } from "../axes/xy-axis";
 import { BallOverlay } from "../ball/ball-overlay";
 import { Column } from "../components/column";
 import { useSelector } from "../ducks/root-reducer";
@@ -83,13 +83,15 @@ export function ColumnGraphContainer({
   // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <svg width={width} height={height}>
-      <BasedAxis
+      <XYAxis
         width={width}
         height={height}
         padding={padding}
         xAxisLeftLabel=""
         xAxisRightLabel=""
         xAxisCenterLabel=""
+        yRange={[0, 0.02]}
+        xRange={[0, data.length]}
       />
       {data.map((d, i) => {
         const colHeight = d.avgSimilarity * 18000;
