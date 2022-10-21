@@ -57,8 +57,8 @@ const renderTooltip = (d: ColumnGraphData) => {
           );
         })}
       <p>
-        <b>Total day comparisons: </b>
-        {d.count}
+        <b>Total comparisons: </b>
+        {d.numComparisons}
       </p>
       <p>
         <b>Total word count: </b>

@@ -96,6 +96,7 @@ export const defaultColumnGraphData: ColumnGraphData[] = [
     maxSimilarity: 0,
     similarityLevels: [],
     examples: blankSimilarityExample,
+    numComparisons: 0,
   },
 ];
 
