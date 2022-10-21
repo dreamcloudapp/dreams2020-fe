@@ -22,7 +22,12 @@ export function Column({
   onClick,
 }: ColumnProps) {
   return (
-    <g onMouseOver={onMouseOver} onMouseOut={onMouseOut} onClick={onClick}>
+    <g
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+      onClick={onClick}
+      style={{ cursor: "pointer" }}
+    >
       {sections.map((s, i) => {
         const sectionProportion = s.percent / 100;
         const sectionHeight = colHeight * sectionProportion;
