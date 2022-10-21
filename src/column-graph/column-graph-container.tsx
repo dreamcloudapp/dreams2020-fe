@@ -33,10 +33,9 @@ const renderTooltip = (d: ColumnGraphData) => {
   const monthName = monthNameFromIndex(month);
   return (
     <div>
-      <p>
-        {monthName} 2020 dream days vs.
-        <br /> {monthName} 2020 news days
-      </p>
+      <h3 style={{ textDecoration: "underline" }}>
+        {monthName} 2020 dreams vs. {monthName} 2020 news
+      </h3>
       <p>
         <b>Average similarity: </b>
         {prettyNumber(avgSimilarity, 5)}
@@ -57,12 +56,8 @@ const renderTooltip = (d: ColumnGraphData) => {
           );
         })}
       <p>
-        <b>Total comparisons: </b>
-        {d.numComparisons}
-      </p>
-      <p>
-        <b>Total word count: </b>
-        {d.totalWordCount}
+        <b>Total dream-news pairs compared: </b>
+        {d.numComparisons.toLocaleString()}
       </p>
     </div>
   );

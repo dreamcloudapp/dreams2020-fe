@@ -3,6 +3,7 @@
     "month": 0,
     "count": 961,
     "totalWordCount": 93240113,
+    "numComparisons": 219096,
     "avgSimilarity": 0.010360882948074924,
     "maxSimilarity": 0.019663893,
     "examples": {
@@ -131,6 +132,7 @@
     "month": 1,
     "count": 841,
     "totalWordCount": 64435608,
+    "numComparisons": 124544,
     "avgSimilarity": 0.011494222366349584,
     "maxSimilarity": 0.028356412,
     "examples": {
@@ -259,6 +261,7 @@
     "month": 2,
     "count": 961,
     "totalWordCount": 80677445,
+    "numComparisons": 147625,
     "avgSimilarity": 0.01894762383111347,
     "maxSimilarity": 0.0742324,
     "examples": {
@@ -387,6 +390,7 @@
     "month": 3,
     "count": 900,
     "totalWordCount": 129800895,
+    "numComparisons": 220246,
     "avgSimilarity": 0.020757117162333312,
     "maxSimilarity": 0.07170229,
     "examples": {
@@ -515,6 +519,7 @@
     "month": 4,
     "count": 961,
     "totalWordCount": 117137588,
+    "numComparisons": 220848,
     "avgSimilarity": 0.01885848775338188,
     "maxSimilarity": 0.05658838,
     "examples": {
@@ -643,6 +648,7 @@
     "month": 5,
     "count": 900,
     "totalWordCount": 94209206,
+    "numComparisons": 182520,
     "avgSimilarity": 0.01514743531844445,
     "maxSimilarity": 0.046182867,
     "examples": {
@@ -771,6 +777,7 @@
     "month": 6,
     "count": 961,
     "totalWordCount": 98491575,
+    "numComparisons": 221354,
     "avgSimilarity": 0.015117964590738813,
     "maxSimilarity": 0.037202023,
     "examples": {
@@ -899,6 +906,7 @@
     "month": 7,
     "count": 961,
     "totalWordCount": 90011330,
+    "numComparisons": 221390,
     "avgSimilarity": 0.017935356374921968,
     "maxSimilarity": 0.04646403,
     "examples": {
@@ -1027,6 +1035,7 @@
     "month": 8,
     "count": 900,
     "totalWordCount": 113236857,
+    "numComparisons": 285847,
     "avgSimilarity": 0.016160267810555563,
     "maxSimilarity": 0.03345677,
     "examples": {
@@ -1155,6 +1164,7 @@
     "month": 9,
     "count": 961,
     "totalWordCount": 124051547,
+    "numComparisons": 319484,
     "avgSimilarity": 0.016929710051092638,
     "maxSimilarity": 0.08139946,
     "examples": {
@@ -1283,6 +1293,7 @@
     "month": 10,
     "count": 900,
     "totalWordCount": 93720447,
+    "numComparisons": 206700,
     "avgSimilarity": 0.014222486277333342,
     "maxSimilarity": 0.046026386,
     "examples": {
@@ -1411,6 +1422,7 @@
     "month": 11,
     "count": 961,
     "totalWordCount": 106684254,
+    "numComparisons": 210335,
     "avgSimilarity": 0.013685454522580668,
     "maxSimilarity": 0.038953472,
     "examples": {

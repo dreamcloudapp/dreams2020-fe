@@ -62,7 +62,7 @@ const renderTooltip = (d: DifferenceRecord) => {
         <b>Average similarity: </b>
         {prettyNumber(d.averageSimilarity, 5)}
       </p>
-      <p>Total comparisons: {d.numComparisons.toLocaleString()}</p>
+      <p>Total dream-news pairs compared: {d.numComparisons.toLocaleString()}</p>
       {(similarityLevels || [])
         .slice()
         .reverse()

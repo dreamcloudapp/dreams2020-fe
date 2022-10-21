@@ -19,12 +19,10 @@ import {
   exampleListToTopConceptList,
 } from "./modules/mergers";
 
-type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
-
-const COLORS = {
-  low: ColorTheme.BLUE,
-  medium: ColorTheme.GRAY,
-  high: ColorTheme.RED,
+type NewsRecordWithDates = NewsRecord & {
+  dreamDate: Date;
+  newsDate: Date;
+  numComparisons: number;
 };
 
 console.log("Generating bar data...");
@@ -48,10 +46,19 @@ const dataArr2020: NewsRecordWithDates[] = files
   .map((dayRecord: DayRecord) => {
     // Get the dream date based on dreamSetDate
     const dreamDate = new Date(`2020-${dayRecord.dreamSetDate}`);
-    return dayRecord.newsRecords.map((newsRecord: NewsRecord) => {
-      const newsDate = new Date(`2020-${newsRecord.date}`);
-      return { ...newsRecord, dreamDate, newsDate };
-    });
+    const dreamSetSize = dayRecord.dreamSetSize;
+    const records: NewsRecordWithDates[] = dayRecord.newsRecords.map(
+      (newsRecord: NewsRecord) => {
+        const newsDate = new Date(`2020-${newsRecord.date}`);
+        return {
+          ...newsRecord,
+          dreamDate,
+          newsDate,
+          numComparisons: dreamSetSize * newsRecord.recordSize,
+        };
+      }
+    );
+    return records;
   })
   .flat()
   // For this chart, we only care about dreams & news within 6 months of each other
@@ -75,6 +82,7 @@ type IntermediaryDifferenceRecord = {
   totalHighSimilarity: number;
   wikipediaConceptDict: { [key: string]: number };
   examples: ExampleDreamNewsComparison[];
+  numComparisons: number;
 };
 
 const weekDict: { [key: string]: IntermediaryDifferenceRecord } = {};
@@ -146,6 +154,7 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
       totalLowSimilarity: s == "low" ? 1 : 0,
       wikipediaConceptDict: updateConceptDict(undefined, record.topConcepts),
       examples: [...record.examples],
+      numComparisons: record.numComparisons,
     };
   } else {
     weekDict[key] = {
@@ -153,6 +162,7 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
       recordCount: currWk.recordCount + 1,
       totalSimilarity: currWk.totalSimilarity + record.similarity,
       totalWordCount: currWk.totalWordCount + record.wordCount,
+      numComparisons: currWk.numComparisons + record.numComparisons,
       totalHighSimilarity:
         s === "high" ? currWk.totalHighSimilarity + 1 : currWk.totalHighSimilarity,
       totalMediumSimilarity:
@@ -177,7 +187,7 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
     totalHighSimilarity,
     totalMediumSimilarity,
     totalLowSimilarity,
-    // wikipediaConceptDict,
+    numComparisons,
     examples,
   } = weekDict[key];
 
@@ -192,12 +202,13 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
   const topConcepts = exampleListToTopConceptList(examples);
   const exampleDict = consolidateDreamNewsComparisonExampleList(examples);
 
-  return {
+  const diff: DifferenceRecordWithExamples = {
     difference,
     recordCount,
     topConcepts,
     averageSimilarity: totalSimilarity / recordCount,
     examples: exampleDict,
+    numComparisons: numComparisons,
     similarityLevels: [
       {
         similarityLevel: "low",
@@ -222,6 +233,7 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
       },
     ],
   };
+  return diff;
 });
 
 // Get the min/max

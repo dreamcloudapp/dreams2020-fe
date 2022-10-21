@@ -6,7 +6,11 @@ import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./confi
 import { SIMILARITY_COLORS } from "./modules/theme";
 import { consolidateDreamNewsComparisonExampleList } from "./modules/mergers";
 
-type NewsRecordWithDates = NewsRecord & { dreamDate: Date; newsDate: Date };
+type NewsRecordWithDates = NewsRecord & {
+  dreamDate: Date;
+  newsDate: Date;
+  numComparisons: number;
+};
 
 console.log("Generating month column data...");
 
@@ -29,9 +33,16 @@ const dataArr2020: NewsRecordWithDates[] = files
   .map((dayRecord: DayRecord) => {
     // Get the dream date based on dreamSetDate
     const dreamDate = new Date(`2020-${dayRecord.dreamSetDate}`);
+    const dreamSetSize = dayRecord.dreamSetSize;
     return dayRecord.newsRecords.map((newsRecord: NewsRecord) => {
       const newsDate = new Date(`2020-${newsRecord.date}`);
-      return { ...newsRecord, dreamDate, newsDate };
+      const record: NewsRecordWithDates = {
+        ...newsRecord,
+        dreamDate,
+        newsDate,
+        numComparisons: dreamSetSize * newsRecord.recordSize,
+      };
+      return record;
     });
   })
   .flat()
@@ -88,6 +99,7 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         mediumSimilarityCount: mediumSimilarityAddCount,
         lowSimilarityCount: lowSimilarityAddCount,
         exampleDreamNewsComparisons: record.examples,
+        numComparisons: record.numComparisons,
       },
     };
     // If the month is in the accumulator, we add to it
@@ -98,6 +110,7 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         ...acc[dreamNewsMonth],
         totalSimilarity: acc[dreamNewsMonth].totalSimilarity + record.similarity,
         count: acc[dreamNewsMonth].count + 1,
+        numComparisons: acc[dreamNewsMonth].numComparisons + record.numComparisons,
         totalWordCount: acc[dreamNewsMonth].totalWordCount + record.wordCount,
         highSimilarityCount:
           acc[dreamNewsMonth].highSimilarityCount + highSimilarityAddCount,
@@ -125,6 +138,7 @@ const monthDataCleaned: ColumnGraphData[] = Object.values(monthData)
       mediumSimilarityCount,
       lowSimilarityCount,
       exampleDreamNewsComparisons,
+      numComparisons,
     } = monthRecord;
 
     const examplesWithSimilarityLevel = consolidateDreamNewsComparisonExampleList(
@@ -135,6 +149,7 @@ const monthDataCleaned: ColumnGraphData[] = Object.values(monthData)
       month: monthRecord.month,
       count: count,
       totalWordCount: totalWordCount,
+      numComparisons: numComparisons,
       avgSimilarity: totalSimilarity / count,
       maxSimilarity: highestSimilarities[monthRecord.month],
       // These are secretly SimilarityLevelSections
