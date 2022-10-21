@@ -56,6 +56,9 @@ function LineTooltip({ data }: { data: ColouredDayDifference[] }) {
           <div key={i}>
             <p style={{ color: color }}>{label}</p>
             <p>Average similarity: {datum.averageSimilarity.toFixed(5)}</p>
+            <p>
+              Number of dream-news comparisons: {datum.numComparisons.toLocaleString()}
+            </p>
             {/* <p>Dreams have been compared to {datum.recordCount} days of news</p> */}
           </div>
         );

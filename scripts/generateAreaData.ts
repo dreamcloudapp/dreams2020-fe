@@ -34,6 +34,7 @@ const differenceDictToArray = (
       difference: parseInt(key),
       averageSimilarity: dict[key].average,
       recordCount: dict[key].recordCount,
+      numComparisons: dict[key].numComparisons,
     };
   });
 
@@ -106,10 +107,11 @@ files.forEach((file: any) => {
   }
 
   const dreamSetDate = new Date(`${YEAR}-${parsedFileData.dreamSetDate}`);
+  const dreamSetSize = parsedFileData.dreamSetSize;
 
   // Loop over the news records in the file
   parsedFileData.newsRecords.forEach((newsRecord: NewsRecord) => {
-    const { similarity, date: newsDateString } = newsRecord;
+    const { similarity, date: newsDateString, recordSize } = newsRecord;
 
     // Update max and min similarity
     if (similarity > allData[setName].maxSimilarity) {
@@ -133,6 +135,7 @@ files.forEach((file: any) => {
       dictionaryOfSet[key] = {
         average: similarity,
         recordCount: 1,
+        numComparisons: dreamSetSize * recordSize,
       };
     } else {
       const { average: oldAverage, recordCount: oldRecordCount } = dictionaryOfSet[key];
@@ -144,6 +147,7 @@ files.forEach((file: any) => {
       dictionaryOfSet[key] = {
         average: newAverage,
         recordCount: newRecordCount,
+        numComparisons: dictionaryOfSet[key].numComparisons + dreamSetSize * recordSize,
       };
     }
   });
