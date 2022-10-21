@@ -83,7 +83,14 @@ export function ColumnGraphContainer({
   // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <svg width={width} height={height}>
-      <BasedAxis width={width} height={height} padding={padding} />
+      <BasedAxis
+        width={width}
+        height={height}
+        padding={padding}
+        xAxisLeftLabel=""
+        xAxisRightLabel=""
+        xAxisCenterLabel=""
+      />
       {data.map((d, i) => {
         const colHeight = d.avgSimilarity * 18000;
 

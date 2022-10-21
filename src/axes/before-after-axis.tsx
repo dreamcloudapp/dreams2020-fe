@@ -13,6 +13,9 @@ type BasedAxisProps = {
   height: number;
   padding: Padding;
   hasMidpointLine?: boolean;
+  xAxisRightLabel?: string;
+  xAxisLeftLabel?: string;
+  xAxisCenterLabel?: string;
 };
 
 export function BasedAxis({
@@ -20,6 +23,9 @@ export function BasedAxis({
   width,
   padding,
   hasMidpointLine = false,
+  xAxisRightLabel = "Dream occured after the news",
+  xAxisLeftLabel = "Dream occured before the news",
+  xAxisCenterLabel = "Dream on same day as news",
 }: BasedAxisProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -43,9 +49,9 @@ export function BasedAxis({
         granularity={activeGranularity}
         maxTimeDistance={1}
         yAxisTopLabel="Similarity"
-        xAxisRightLabel="Dream occured after the news"
-        xAxisLeftLabel="Dream occured before the news"
-        xAxisCenterLabel="Dream on same day as news"
+        xAxisRightLabel={xAxisRightLabel}
+        xAxisLeftLabel={xAxisLeftLabel}
+        xAxisCenterLabel={xAxisCenterLabel}
       />
       {/* MIDPOINT LINE */}
       {hasMidpointLine && (
