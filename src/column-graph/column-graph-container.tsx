@@ -34,9 +34,9 @@ const renderTooltip = (d: ColumnGraphData) => {
   const monthName = monthNameFromIndex(month);
   return (
     <div>
-      <h3 style={{ textDecoration: "underline" }}>
+      <p style={{ textDecoration: "underline" }}>
         {monthName} 2020 dreams vs. {monthName} 2020 news
-      </h3>
+      </p>
       <p>
         <b>Average similarity: </b>
         {prettyNumber(avgSimilarity, 5)}
