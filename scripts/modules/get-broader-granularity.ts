@@ -106,6 +106,7 @@ export const getBroaderGranularity = (
               examples: [...comparison.examples],
               concepts: [...comparison.concepts],
               numDayComparisons: 1,
+              numComparisons: comparison.numComparisons,
             };
 
             return {
@@ -124,6 +125,7 @@ export const getBroaderGranularity = (
               concepts: [...compToMerge.concepts, ...comparison.concepts],
               examples: [...compToMerge.examples, ...comparison.examples],
               numDayComparisons: compToMerge.numDayComparisons + 1,
+              numComparisons: compToMerge.numComparisons + comparison.numComparisons,
             };
 
             return {

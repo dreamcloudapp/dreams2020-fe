@@ -66,6 +66,7 @@ const sheldonExampleToExampleRecordComparison = (
 export const convertNewsRecordToDayComparisonSet = (
   record: NewsRecord,
   dreamDate: Date, // Each file has only one dream date, pass this in
+  dreamSetSize: number, // Each file has only one dream set size, pass this in
   newsYear: number,
   numConceptsPerComparison: number,
   numExamplesPerComparison: number
@@ -126,6 +127,7 @@ export const convertNewsRecordToDayComparisonSet = (
     newsCollection,
     concepts: conceptsToUse,
     examples: examples,
+    numComparisons: dreamSetSize * record.recordSize, // Num dreams * num news articles
     numDayComparisons: 1,
   };
 };

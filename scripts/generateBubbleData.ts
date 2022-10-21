@@ -101,6 +101,10 @@ const dataArr: ComparisonDictionary[] = files
     const dreamDate = new Date(`${dreamYear}-${parsedFileData.dreamSetDate}`);
     if (isNaN(dreamDate.getTime())) throw new Error("Invalid date");
 
+    // We need the number of dreams the file is dealing with
+    // So we can calculate the number of raw comparisons
+    const numDreamsInSet = parsedFileData.dreamSetSize;
+
     // ComparisonSet is all the comparisons within a given "coloured set" in a granularity
     // At this point, we're making 'day comparisons'
     // i.e. One day of dreams compared to one day of news
@@ -108,6 +112,7 @@ const dataArr: ComparisonDictionary[] = files
       const ret = convertNewsRecordToDayComparisonSet(
         newsRecord,
         dreamDate,
+        numDreamsInSet,
         NEWS_YEAR,
         NUM_CONCEPTS_PER_COMPARISON,
         NUM_EXAMPLES_PER_COMPARISON

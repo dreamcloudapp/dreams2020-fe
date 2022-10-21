@@ -127,10 +127,15 @@ export function BubbleGraph({
                 (handleMouseOver as any)(
                   e,
                   <div>
-                    <p>{comparison.label}</p>
+                    <h4 style={{ fontWeight: "bold", textDecoration: "underline" }}>
+                      {comparison.label}
+                    </h4>
                     <p>Average similarity: {comparison.score.toFixed(5)}</p>
-                    <p>Total words: {comparison.wordCount}</p>
-                    <p>Total days compared: {comparison.numDayComparisons}</p>
+                    <p>Total words: {comparison.wordCount.toLocaleString()}</p>
+                    <p>
+                      Total dream-news pairs compared:{" "}
+                      {comparison.numComparisons.toLocaleString()}
+                    </p>
                   </div>
                 );
               }}
