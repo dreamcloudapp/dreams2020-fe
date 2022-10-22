@@ -83,7 +83,7 @@ export function BubbleGraphContainer({
         )}
         {/* Select active time period - don't show when there's a focused comparison */}
         {!focusedComparison && (
-          <div style={{ position: "absolute", right: 10, bottom: 10 }}>
+          <div style={{ position: "absolute", left: 100, top: 0 }}>
             <span>View: </span>
             {timeLabels.map(({ key, label }) => {
               const isActive = key === activeGranularity;

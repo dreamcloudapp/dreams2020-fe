@@ -41,7 +41,6 @@ const getXDomain = (granularity: Granularity): [number, number] => {
 };
 
 const LINE_WIDTH = 2;
-const paddedMax = 0.026;
 
 export function BubbleGraph({
   data,
@@ -61,6 +60,8 @@ export function BubbleGraph({
   const activeGranularity = useSelector(selectActiveGranularity);
   const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
+  const paddedMax = activeGranularity === "month" ? 0.028 : 0.035;
+
   // Domain & range for the x-axis
   const xDomain = getXDomain(activeGranularity);
   const xRange = [0, width - padding.LEFT - padding.RIGHT];
@@ -76,7 +77,7 @@ export function BubbleGraph({
   const maxComparisons = activeGranularity === "week" ? 30000 : 350000;
   const scaleBallSize = scaleLinear()
     .domain([0, maxComparisons])
-    .range([0, height / 40]);
+    .range([0, height / 50]);
 
   return (
     <svg width={width} height={height}>
@@ -87,7 +88,7 @@ export function BubbleGraph({
         hasMidpointLine={true}
         yRange={[0, paddedMax]}
         xRange={[-3, 3]}
-        numTicks={13}
+        numTicks={7}
         xAxisCenterLabel="Dreams in same month as news"
       />
 
