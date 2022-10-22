@@ -1,4 +1,5 @@
 import { SimilarityLevelSection } from "@kannydennedy/dreams-2020-types";
+import { SIMILARITY_COLORS } from "../modules/theme";
 
 type ColumnProps = {
   x: number;
@@ -9,6 +10,7 @@ type ColumnProps = {
   onMouseOut: () => void;
   onMouseOver: (event: any) => void;
   onClick: () => void;
+  focused?: boolean;
 };
 
 export function Column({
@@ -20,6 +22,7 @@ export function Column({
   sections,
   onMouseOver,
   onClick,
+  focused,
 }: ColumnProps) {
   return (
     <g
@@ -48,6 +51,18 @@ export function Column({
           />
         );
       })}
+      {/* Little circle on top of the column if it's focused */}
+      {focused && (
+        <circle
+          cx={x + colWidth / 2}
+          cy={y}
+          r={colWidth / 6 < 10 ? 3 : 10}
+          fill={SIMILARITY_COLORS["high"]}
+          stroke={SIMILARITY_COLORS["low"]}
+          strokeWidth={1}
+          opacity={1}
+        />
+      )}
     </g>
   );
 }

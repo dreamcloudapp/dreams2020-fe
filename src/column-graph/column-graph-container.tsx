@@ -18,6 +18,7 @@ import { Padding } from "../modules/ui-types";
 import { ColumnGraphData, SimilarityLevel } from "@kannydennedy/dreams-2020-types";
 import { scaleLinear } from "d3";
 import { Tooltip, TooltipRow } from "../tooltip/tooltip-inner";
+import { useState } from "react";
 
 const COLUMN_GAP = 10;
 
@@ -77,6 +78,8 @@ export function ColumnGraphContainer({
   const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
   const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
+  const [focusedColIndex, setFocusedColIndex] = useState<number | null>(null);
+
   const numBars = data.length;
   const totalGap = (numBars - 1) * COLUMN_GAP;
   const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
@@ -111,10 +114,15 @@ export function ColumnGraphContainer({
         return (
           <g key={i}>
             <Column
+              focused={focusedColIndex === i}
               onMouseOver={e => {
+                setFocusedColIndex(i);
                 (handleMouseOver as any)(e, renderTooltip(d));
               }}
-              onMouseOut={onMouseOut}
+              onMouseOut={() => {
+                setFocusedColIndex(null);
+                onMouseOut();
+              }}
               sections={d.similarityLevels}
               x={x}
               y={y}
@@ -122,8 +130,8 @@ export function ColumnGraphContainer({
               colWidth={barWidth}
               onClick={() => {
                 const ballX = x + barWidth / 2;
-                const ballY = y + colHeight / 2;
-                const startRadius = 20;
+                const ballY = y;
+                const startRadius = 5;
 
                 const highMedLowComparisons: VisComparison[] = Object.entries(
                   d.examples
@@ -149,7 +157,7 @@ export function ColumnGraphContainer({
             {/* Label */}
             <text
               x={x + barWidth / 2}
-              y={y - 10}
+              y={y - 20}
               textAnchor="middle"
               fill="black"
               fontSize="12px"

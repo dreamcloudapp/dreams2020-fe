@@ -22,6 +22,7 @@ import { BallOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
 import { SIMILARITY_COLORS } from "../modules/theme";
 import { Tooltip, TooltipRow } from "../tooltip/tooltip-inner";
+import { useState } from "react";
 
 const BAR_GAP = 3;
 
@@ -100,6 +101,8 @@ export function BarGraphContainer({
   const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
   const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
+  const [focusedColIndex, setFocusedColIndex] = useState<number | null>(null);
+
   const numBars = data.comparisons.differences.length;
   const totalGap = (numBars - 1) * BAR_GAP;
   const barWidth = (width - totalGap - padding.LEFT - padding.RIGHT) / numBars;
@@ -134,30 +137,25 @@ export function BarGraphContainer({
             key={index}
             x={x}
             y={y}
+            focused={focusedColIndex === index}
             colWidth={barWidth}
             colHeight={barHeight}
             onMouseOver={e => {
+              setFocusedColIndex(index);
               (handleMouseOver as any)(e, renderTooltip(difference));
             }}
-            onMouseOut={onMouseOut}
+            onMouseOut={() => {
+              setFocusedColIndex(null);
+              onMouseOut();
+            }}
             sections={difference.similarityLevels || []}
             onClick={() => {
               const ballX = x + barWidth / 2;
-              const ballY = y + barHeight / 2;
-              const startRadius = 20;
+              const ballY = y;
+              const startRadius = 5;
 
               const subLabel = differenceIncrementToText(difference.difference);
 
-              // const mainComparison: VisComparison = {
-              //   x: ballX,
-              //   y: ballY,
-              //   index: 0,
-              //   color: ColorTheme.BLUE,
-              //   concepts: difference.topConcepts.map(c => c.title),
-              //   startRadius,
-              //   label: "Top common concepts",
-              //   subLabel,
-              // };
               const highMedLowComparisons: VisComparison[] = Object.entries(
                 difference.examples
               ).map(([level, comparison], i) => {
