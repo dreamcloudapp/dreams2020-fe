@@ -21,6 +21,7 @@ import {
 import { BallOverlay } from "../ball/ball-overlay";
 import { useSelector } from "../ducks/root-reducer";
 import { SIMILARITY_COLORS } from "../modules/theme";
+import { Tooltip, TooltipRow } from "../tooltip/tooltip-inner";
 
 const BAR_GAP = 3;
 
@@ -55,29 +56,34 @@ const renderTooltip = (d: DifferenceRecord) => {
 
   const tooltipHeader = differenceIncrementToText(difference);
 
+  const mainRows: TooltipRow[] = [
+    {
+      key: "Average similarity:",
+      value: prettyNumber(d.averageSimilarity, 5),
+    },
+    {
+      key: "Total dream-news pairs compared:",
+      value: prettyNumber(d.numComparisons, 0),
+    },
+  ];
+
+  const similarityRows: TooltipRow[] = (similarityLevels || []).map((sLevel, i) => {
+    return {
+      key: `${sLevel.similarityLevel} similarity day pairs (>= ${sLevel.threshold}):`,
+      value: prettyNumber(sLevel.percent, 1),
+      keyColor: sLevel.color,
+    };
+  });
+
   return (
-    <div className="tooltip">
-      <p>{tooltipHeader}</p>
-      <p>
-        <b>Average similarity: </b>
-        {prettyNumber(d.averageSimilarity, 5)}
-      </p>
-      <p>Total dream-news pairs compared: {d.numComparisons.toLocaleString()}</p>
-      {(similarityLevels || [])
-        .slice()
-        .reverse()
-        .map((sLevel, i) => {
-          return (
-            <p key={i}>
-              <b style={{ color: sLevel.color }}>
-                {sLevel.similarityLevel} similarity day pairs
-              </b>
-              <span> (&gt;= {sLevel.threshold}): </span>
-              <span> {prettyNumber(sLevel.percent, 1)}%</span>
-            </p>
-          );
-        })}
-    </div>
+    <Tooltip
+      tipTitle={tooltipHeader}
+      sections={[
+        {
+          rows: [...mainRows, ...similarityRows],
+        },
+      ]}
+    />
   );
 };
 

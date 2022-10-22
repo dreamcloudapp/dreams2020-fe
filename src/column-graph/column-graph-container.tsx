@@ -17,6 +17,7 @@ import { monthNameFromIndex } from "../modules/time-helpers";
 import { Padding } from "../modules/ui-types";
 import { ColumnGraphData, SimilarityLevel } from "@kannydennedy/dreams-2020-types";
 import { scaleLinear } from "d3";
+import { Tooltip, TooltipRow } from "../tooltip/tooltip-inner";
 
 const COLUMN_GAP = 10;
 
@@ -32,35 +33,34 @@ type GraphProps = {
 const renderTooltip = (d: ColumnGraphData) => {
   const { similarityLevels, avgSimilarity, month } = d;
   const monthName = monthNameFromIndex(month);
+
+  const similarityRows: TooltipRow[] = similarityLevels.map((sLevel, i) => {
+    return {
+      key: `${sLevel.similarityLevel} similarity day pairs (>= ${sLevel.threshold}):`,
+      value: prettyNumber(sLevel.percent, 1),
+      keyColor: sLevel.color,
+    };
+  });
+
   return (
-    <div>
-      <p style={{ textDecoration: "underline" }}>
-        {monthName} 2020 dreams vs. {monthName} 2020 news
-      </p>
-      <p>
-        <b>Average similarity: </b>
-        {prettyNumber(avgSimilarity, 5)}
-      </p>
-      {/* Need to reverse these for presentation */}
-      {similarityLevels
-        .slice()
-        .reverse()
-        .map((sLevel, i) => {
-          return (
-            <p key={i}>
-              <b style={{ color: sLevel.color }}>
-                {sLevel.similarityLevel} similarity day pairs
-              </b>
-              <span> (&gt;= {sLevel.threshold}): </span>
-              <span> {prettyNumber(sLevel.percent, 1)}%</span>
-            </p>
-          );
-        })}
-      <p>
-        <b>Total dream-news pairs compared: </b>
-        {d.numComparisons.toLocaleString()}
-      </p>
-    </div>
+    <Tooltip
+      tipTitle={`${monthName} 2020 dreams vs. ${monthName} 2020 news`}
+      sections={[
+        {
+          rows: [
+            {
+              key: "Average similarity:",
+              value: prettyNumber(avgSimilarity, 5),
+            },
+            {
+              key: "Total dream-news pairs compared:",
+              value: prettyNumber(d.numComparisons, 0),
+            },
+            ...similarityRows,
+          ],
+        },
+      ]}
+    />
   );
 };
 

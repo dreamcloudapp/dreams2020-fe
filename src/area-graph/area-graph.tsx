@@ -8,6 +8,7 @@ import { ChartPolygon } from "./chart-polygon";
 import "../App.css";
 import { XYAxis } from "../axes/xy-axis";
 import { Point } from "../../types/types";
+import { Tooltip } from "../tooltip/tooltip-inner";
 
 const LINE_WIDTH = 2;
 
@@ -31,34 +32,38 @@ function LineTooltip({ data }: { data: ColouredDayDifference[] }) {
   // We assume that all sets of data have the same length
   const sampleData = data[0].datum;
 
+  const sameDay = sampleData.difference === 0;
+  const beforeDay = sampleData.difference < 0;
+  const beforeAfterLabel = beforeDay ? "before" : "after";
+  const plural = Math.abs(sampleData.difference) > 1 ? "s" : "";
+
+  const tooltipHeader = sameDay
+    ? "Dreams on the same day as the news"
+    : `Dreams ${Math.abs(
+        sampleData.difference
+      )} week${plural} ${beforeAfterLabel} the news`;
+
   return (
-    <div>
-      <h4 style={{ fontWeight: "bold", textDecoration: "underline" }}>
-        {sampleData.difference === 0 ? (
-          <span>Dreams on same day as news</span>
-        ) : (
-          <span>
-            <span>Dreams {Math.abs(sampleData.difference)} </span>
-            <span>{Math.abs(sampleData.difference) === 1 ? "day" : "days"} </span>
-            <i>{sampleData.difference >= 0 ? "after" : "before"} </i>
-            <span>the news</span>
-          </span>
-        )}
-      </h4>
-      {data.map((d, i) => {
+    <Tooltip
+      tipTitle={tooltipHeader}
+      sections={data.map(d => {
         const { datum, label, color } = d;
-        return (
-          <div key={i}>
-            <p style={{ color: color }}>{label}</p>
-            <p>Average similarity: {datum.averageSimilarity.toFixed(5)}</p>
-            <p>
-              Number of dream-news comparisons: {datum.numComparisons.toLocaleString()}
-            </p>
-            {/* <p>Dreams have been compared to {datum.recordCount} days of news</p> */}
-          </div>
-        );
+        return {
+          sectionTitle: label,
+          sectionColor: color,
+          rows: [
+            {
+              key: "Average similarity:",
+              value: datum.averageSimilarity.toFixed(5),
+            },
+            {
+              key: "Number of dream-news comparisons:",
+              value: datum.numComparisons.toLocaleString(),
+            },
+          ],
+        };
       })}
-    </div>
+    />
   );
 }
 

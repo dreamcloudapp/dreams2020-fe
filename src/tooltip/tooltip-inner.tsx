@@ -1,10 +1,10 @@
-type TooltipRow = {
+export type TooltipRow = {
   key: string;
   value: string;
   keyColor?: string;
 };
 
-type TooltipSection = {
+export type TooltipSection = {
   sectionTitle?: string;
   sectionColor?: string;
   rows: TooltipRow[];
