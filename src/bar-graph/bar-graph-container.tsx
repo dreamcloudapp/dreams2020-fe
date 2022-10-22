@@ -125,7 +125,10 @@ export function BarGraphContainer({
         yRange={[0, paddedMax]}
         xRange={[-numBars / 2, numBars / 2]}
         numTicks={11}
+        barWidth={barWidth}
+        barGap={BAR_GAP}
       />
+
       {data.comparisons.differences.map((difference, index) => {
         const x = (barWidth + BAR_GAP) * index + padding.LEFT;
         const barHeight = scaleY(difference.averageSimilarity);

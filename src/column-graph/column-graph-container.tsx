@@ -104,6 +104,7 @@ export function ColumnGraphContainer({
         yRange={[0, maxSimilarity]}
         xRange={[0, data.length]}
         numTicks={5}
+        barWidth={barWidth}
       />
       {data.map((d, i) => {
         const colHeight = yScale(d.avgSimilarity);

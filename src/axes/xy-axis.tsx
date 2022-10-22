@@ -19,6 +19,8 @@ type XYAxisProps = {
   yRange: [number, number];
   xRange: [number, number];
   numTicks?: number;
+  barWidth?: number;
+  barGap?: number;
 };
 
 export function XYAxis({
@@ -32,6 +34,8 @@ export function XYAxis({
   yRange,
   xRange,
   numTicks = 10,
+  barWidth,
+  barGap,
 }: XYAxisProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -61,6 +65,8 @@ export function XYAxis({
         yRange={yRange}
         xRange={xRange}
         numTicks={numTicks}
+        barWidth={barWidth}
+        barGap={barGap}
       />
       {/* MIDPOINT LINE */}
       {hasMidpointLine && (

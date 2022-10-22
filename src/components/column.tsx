@@ -48,6 +48,7 @@ export function Column({
             height={sectionHeight}
             width={colWidth}
             fill={s.color}
+            opacity={focused ? 1 : 0.85}
           />
         );
       })}
@@ -56,7 +57,7 @@ export function Column({
         <circle
           cx={x + colWidth / 2}
           cy={y}
-          r={colWidth / 6 < 10 ? 3 : 10}
+          r={colWidth / 6 < 10 ? 4 : 10}
           fill={SIMILARITY_COLORS["high"]}
           stroke={SIMILARITY_COLORS["low"]}
           strokeWidth={1}

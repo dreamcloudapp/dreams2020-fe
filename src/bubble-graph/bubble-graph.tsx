@@ -88,7 +88,7 @@ export function BubbleGraph({
         padding={padding}
         hasMidpointLine={true}
         yRange={[0, paddedMax]}
-        xRange={[-3, 3]}
+        xRange={xDomain}
         numTicks={7}
         xAxisCenterLabel={`Dreams in same ${activeGranularity} as news`}
       />

@@ -8,6 +8,8 @@ const splitLabel = (text: string): string[] => {
   return [parts.slice(0, 4).join(" "), parts.slice(4, parts.length).join(" ")];
 };
 
+const BOTTOM_LABEL_PADDING = 70;
+
 type AxesProps = {
   height: number;
   width: number;
@@ -28,6 +30,9 @@ type AxesProps = {
   yRange: [number, number];
   xRange: [number, number];
   numTicks: number;
+  numTicksX?: number;
+  barWidth?: number;
+  barGap?: number;
 };
 
 function Axes({
@@ -50,6 +55,9 @@ function Axes({
   xRange,
   yRange,
   numTicks,
+  numTicksX = 10,
+  barWidth,
+  barGap,
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
   const rightGraphEdge = width - padding.RIGHT;
@@ -63,9 +71,13 @@ function Axes({
 
   const intervalTick = tickScale(yRange[1]) / numTicks;
 
+  // X axis calculations
+  const numRawXTicks = Math.abs(xRange[1] - xRange[0]);
+  const xTickInterval = (width - padding.LEFT - padding.RIGHT) / numRawXTicks;
+
   return (
     <g opacity={opacity}>
-      {/* x-Axis section before label */}
+      {/* x-Axis line */}
       <line
         x1={leftGraphEdge}
         y1={height - padding.BOTTOM}
@@ -74,6 +86,22 @@ function Axes({
         stroke={strokeColor}
         strokeWidth={strokeWidth}
       />
+      {/* x-axis ticks */}
+      {/* We use xRange and numTicksX */}
+      {[...Array(numRawXTicks)].map((_, i) => {
+        const barOffset = barWidth ? barWidth / 2 : 0;
+        return (
+          <line
+            x1={leftGraphEdge + i * xTickInterval + barOffset}
+            x2={leftGraphEdge + i * xTickInterval + barOffset}
+            y1={height - padding.BOTTOM}
+            y2={height - padding.BOTTOM + 5}
+            stroke={"#AAA"}
+            strokeWidth={strokeWidth}
+          />
+        );
+      })}
+
       {/* y-Axis */}
       <line
         x1={leftGraphEdge}
@@ -142,7 +170,7 @@ function Axes({
           <text
             key={i}
             x={yAxisTextLeftPadding}
-            y={height - 30 + 20 * i}
+            y={height - 70 + 20 * i}
             fontSize="16"
             fontWeight={500}
             fill={strokeColor}
@@ -155,7 +183,7 @@ function Axes({
       {/* xAxisLeftLabel */}
       <text
         x={leftGraphEdge}
-        y={height - padding.BOTTOM + 20}
+        y={height - padding.BOTTOM + BOTTOM_LABEL_PADDING}
         fontFamily="Calibri"
         fontSize="16"
         fontWeight={500}
@@ -166,7 +194,7 @@ function Axes({
       {/* xAxisCenterLabel */}
       <text
         x={width / 2 - 80}
-        y={height - padding.BOTTOM + 20}
+        y={height - padding.BOTTOM + BOTTOM_LABEL_PADDING}
         fontFamily="Calibri"
         fontSize="16"
         fontWeight={500}
@@ -177,7 +205,7 @@ function Axes({
       {/* xAxisRightLabel */}
       <text
         x={rightGraphEdge - 180}
-        y={height - padding.BOTTOM + 20}
+        y={height - padding.BOTTOM + BOTTOM_LABEL_PADDING}
         fontFamily="Calibri"
         fontSize="16"
         fontWeight={500}
