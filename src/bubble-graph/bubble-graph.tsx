@@ -21,6 +21,7 @@ import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
 import { ColorTheme, RED_SIMILARITY_COLORS, SIMILARITY_COLORS } from "../modules/theme";
 import { XYAxis } from "../axes/xy-axis";
+import { Tooltip } from "../tooltip/tooltip-inner";
 
 type BubbleGraphProps = {
   data: GranularityComparisonCollection;
@@ -89,7 +90,7 @@ export function BubbleGraph({
         yRange={[0, paddedMax]}
         xRange={[-3, 3]}
         numTicks={7}
-        xAxisCenterLabel="Dreams in same month as news"
+        xAxisCenterLabel={`Dreams in same ${activeGranularity} as news`}
       />
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
@@ -115,16 +116,23 @@ export function BubbleGraph({
               onMouseOver={e => {
                 (handleMouseOver as any)(
                   e,
-                  <div>
-                    <h4 style={{ fontWeight: "bold", textDecoration: "underline" }}>
-                      {comparison.label}
-                    </h4>
-                    <p>Average similarity: {comparison.score.toFixed(5)}</p>
-                    <p>
-                      Total dream-news pairs compared:{" "}
-                      {comparison.numComparisons.toLocaleString()}
-                    </p>
-                  </div>
+                  <Tooltip
+                    tipTitle={comparison.label}
+                    sections={[
+                      {
+                        rows: [
+                          {
+                            key: "Average similarity:",
+                            value: comparison.score.toFixed(5),
+                          },
+                          {
+                            key: "Total dream-news pairs compared:",
+                            value: comparison.numComparisons.toLocaleString(),
+                          },
+                        ],
+                      },
+                    ]}
+                  />
                 );
               }}
               opacity={
