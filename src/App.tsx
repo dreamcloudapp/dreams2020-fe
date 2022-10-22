@@ -194,6 +194,7 @@ function App() {
                   height={height}
                   handleMouseOver={handleMouseOver}
                   onMouseOut={hideTooltip}
+                  padding={padding}
                 />
               )}
               {!isLoading && showingGraph === "column" && (

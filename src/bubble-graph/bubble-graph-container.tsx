@@ -16,6 +16,7 @@ import {
   selectPrevFocusedComparison,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
+import { Padding } from "../modules/ui-types";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
@@ -23,6 +24,7 @@ type GraphProps = {
   height: number;
   handleMouseOver: (event: any, datum: any) => void;
   onMouseOut: () => void;
+  padding: Padding;
 };
 
 const timeLabels: { key: Granularity; label: string }[] = [
@@ -36,6 +38,7 @@ export function BubbleGraphContainer({
   height,
   handleMouseOver,
   onMouseOut,
+  padding,
 }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
@@ -75,6 +78,7 @@ export function BubbleGraphContainer({
             hideTooltip={onMouseOut}
             focusedComparison={focusedComparison}
             prevFocusedComparison={prevFocusedComparison}
+            padding={padding}
           />
         )}
         {/* Select active time period - don't show when there's a focused comparison */}

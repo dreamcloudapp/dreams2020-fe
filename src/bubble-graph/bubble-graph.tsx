@@ -1,5 +1,4 @@
 import { scaleLinear } from "d3";
-import Axes from "./bubble-axes";
 import { Padding } from "../modules/ui-types";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { Bubble } from "./bubble";
@@ -21,6 +20,7 @@ import {
 import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
 import { ColorTheme, RED_SIMILARITY_COLORS, SIMILARITY_COLORS } from "../modules/theme";
+import { XYAxis } from "../axes/xy-axis";
 
 type BubbleGraphProps = {
   data: GranularityComparisonCollection;
@@ -32,16 +32,16 @@ type BubbleGraphProps = {
   hideTooltip: () => void;
   focusedComparison: VisComparison | null;
   prevFocusedComparison: VisComparison | null;
+  padding: Padding;
 };
 
-const getDomain = (granularity: Granularity): [number, number] => {
+const getXDomain = (granularity: Granularity): [number, number] => {
   const maxDist = MAX_DISTANCE_BETWEEN_TIME_PERIODS[granularity];
   return [maxDist * -1, maxDist];
 };
 
 const LINE_WIDTH = 2;
-const TRIANGLE_HEIGHT = 10;
-const graphPadding: Padding = { LEFT: 90, RIGHT: 90, TOP: 60, BOTTOM: 60 };
+const paddedMax = 0.026;
 
 export function BubbleGraph({
   data,
@@ -53,6 +53,7 @@ export function BubbleGraph({
   focusedComparison,
   prevFocusedComparison,
   checkedCollections,
+  padding,
 }: BubbleGraphProps) {
   const dispatch = useDispatch();
 
@@ -60,49 +61,34 @@ export function BubbleGraph({
   const activeGranularity = useSelector(selectActiveGranularity);
   const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
-  // Domain & range for the y-axis
-  const domain = getDomain(activeGranularity);
-  const range = [0, height - graphPadding.BOTTOM - graphPadding.TOP];
+  // Domain & range for the x-axis
+  const xDomain = getXDomain(activeGranularity);
+  const xRange = [0, width - padding.LEFT - padding.RIGHT];
 
-  const maxDist = MAX_DISTANCE_BETWEEN_TIME_PERIODS[activeGranularity];
+  const scaleY = scaleLinear()
+    .domain([0, paddedMax])
+    .range([height - padding.BOTTOM, padding.TOP]);
 
-  // Same as scale y, but all positive inputs
-  const tickScale = scaleLinear()
-    .domain([0, maxDist * 2]) // x intervals before, x intervals after
-    .range([0, height - graphPadding.TOP - graphPadding.BOTTOM]);
+  const scaleXDiscrete = scaleLinear().domain(xDomain).range(xRange);
 
-  const scaleX = scaleLinear()
-    .domain([data.minSimilarity, data.maxSimilarity])
-    .range([graphPadding.LEFT, width - graphPadding.RIGHT]);
-
-  const scaleYDiscrete = scaleLinear().domain(domain).range(range);
-
-  // Size of the balls is determined by the number of words in the comparison
-  // And the height of the graph
-  // TODO - think about width too
+  // Size of the balls is determined by the number of comparisons
+  // Should also take into account graph dimensions
   const maxComparisons = activeGranularity === "week" ? 30000 : 350000;
   const scaleBallSize = scaleLinear()
-    // .domain([0, data.maxWordCount])
     .domain([0, maxComparisons])
     .range([0, height / 40]);
 
   return (
     <svg width={width} height={height}>
-      <Axes
-        height={height}
+      <XYAxis
         width={width}
-        strokeWidth={LINE_WIDTH}
-        padding={graphPadding}
-        triangleHeight={TRIANGLE_HEIGHT}
-        strokeColor={"hsl(0, 0%, 20%)"}
-        yAxisTopLabel={"Dream earlier in the year than news"}
-        yAxisBottomLabel={"Dream later in the year than news"}
-        xAxisRightLabel={"Similarity"}
-        yAxisTextLeft={30}
-        maxTimeDistance={maxDist}
-        tickScale={tickScale}
-        opacity={focusedComparison ? 0.2 : 1}
-        granularity={activeGranularity}
+        height={height}
+        padding={padding}
+        hasMidpointLine={true}
+        yRange={[0, paddedMax]}
+        xRange={[-3, 3]}
+        numTicks={13}
+        xAxisCenterLabel="Dreams in same month as news"
       />
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {
@@ -113,8 +99,8 @@ export function BubbleGraph({
           const index2 = newsCollection.timePeriod.index;
 
           const startPoint: [number, number] = [width / 2, height / 2];
-          const endX = scaleX(score);
-          const endY = graphPadding.TOP + scaleYDiscrete(index1 - index2);
+          const endY = scaleY(score);
+          const endX = padding.LEFT + scaleXDiscrete(index1 - index2);
 
           return (
             <Bubble
