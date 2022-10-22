@@ -31,9 +31,17 @@ export function Tooltip({ tipTitle, sections }: TooltipProps) {
             )}
             {section.rows.map((row, j) => {
               return (
-                <div key={j} style={{ display: "flex", margin: "0.5rem 0" }}>
+                <div
+                  key={j}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    margin: "0.5rem 0",
+                  }}
+                >
                   <span style={{ color: row.keyColor }}>{row.key}&nbsp;</span>
-                  <span>{row.value}</span>
+                  <span style={{ minWidth: 60, textAlign: "left" }}>{row.value}</span>
                 </div>
               );
             })}

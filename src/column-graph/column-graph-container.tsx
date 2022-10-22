@@ -37,7 +37,7 @@ const renderTooltip = (d: ColumnGraphData) => {
   const similarityRows: TooltipRow[] = similarityLevels.map((sLevel, i) => {
     return {
       key: `${sLevel.similarityLevel} similarity day pairs (>= ${sLevel.threshold}):`,
-      value: prettyNumber(sLevel.percent, 1),
+      value: prettyNumber(sLevel.percent, 1) + "%",
       keyColor: sLevel.color,
     };
   });
