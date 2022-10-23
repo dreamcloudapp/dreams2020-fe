@@ -40,7 +40,7 @@ const differenceIncrementToText = (difference: number): string => {
 
   let tooltipHeader = "";
   if (difference === 0) {
-    tooltipHeader = "Dreams within 1 week after the news";
+    tooltipHeader = "Dreams within 1 week after the news, including same day";
   } else if (difference > 0) {
     tooltipHeader = `Dreams within ${absoluteDifference + 1} weeks after the news`;
   } else if (difference === -1) {
@@ -121,12 +121,25 @@ export function BarGraphContainer({
         width={width}
         height={height}
         padding={padding}
-        hasMidpointLine={true}
+        hasMidpointLine={false}
         yRange={[0, paddedMax]}
         xRange={[-numBars / 2, numBars / 2]}
+        xAxisCenterLabel=""
         numTicks={11}
         barWidth={barWidth}
         barGap={BAR_GAP}
+        xAxisFormat={d => {
+          // If d is 0, it's 'within 1 week after the news', so it's 1
+          if (d === 0) {
+            return d + 1 + " week";
+          } else if (d === -1) {
+            return d + " week";
+          } else if (d > 0) {
+            return d + 1 + " weeks";
+          } else {
+            return d + " weeks";
+          }
+        }}
       />
 
       {data.comparisons.differences.map((difference, index) => {

@@ -50,7 +50,7 @@ const padding: Padding = {
   LEFT: 50,
   RIGHT: 30,
   TOP: 60,
-  BOTTOM: 80,
+  BOTTOM: 100,
 };
 
 const graphtypes: GraphType[] = ["area", "bar", "bubble", "column", "radar"];

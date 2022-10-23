@@ -41,7 +41,7 @@ function LineTooltip({ data }: { data: ColouredDayDifference[] }) {
     ? "Dreams on the same day as the news"
     : `Dreams ${Math.abs(
         sampleData.difference
-      )} week${plural} ${beforeAfterLabel} the news`;
+      )} day${plural} ${beforeAfterLabel} the news`;
 
   return (
     <Tooltip
@@ -100,8 +100,17 @@ export function AreaGraph({
         padding={padding}
         hasMidpointLine={true}
         yRange={[0, paddedMax]}
-        xRange={[-dataLength / 2, dataLength / 2]}
+        xRange={[-179, 179]}
+        xAxisCenterLabel=""
         numTicks={11}
+        xTickModulo={10}
+        xAxisFormat={d => {
+          if (d === 0) {
+            return "Same day";
+          } else {
+            return `${d} days`;
+          }
+        }}
       />
       {data.map(d => {
         return (

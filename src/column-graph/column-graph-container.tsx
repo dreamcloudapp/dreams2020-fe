@@ -105,6 +105,7 @@ export function ColumnGraphContainer({
         xRange={[0, data.length]}
         numTicks={5}
         barWidth={barWidth}
+        xAxisFormat={d => monthNameFromIndex(d)}
       />
       {data.map((d, i) => {
         const colHeight = yScale(d.avgSimilarity);

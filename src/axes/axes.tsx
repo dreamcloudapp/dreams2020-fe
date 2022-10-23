@@ -8,7 +8,7 @@ const splitLabel = (text: string): string[] => {
   return [parts.slice(0, 4).join(" "), parts.slice(4, parts.length).join(" ")];
 };
 
-const BOTTOM_LABEL_PADDING = 70;
+const BOTTOM_LABEL_PADDING = 90;
 
 type AxesProps = {
   height: number;
@@ -33,6 +33,8 @@ type AxesProps = {
   numTicksX?: number;
   barWidth?: number;
   barGap?: number;
+  xTickModulo?: number;
+  xAxisFormat?: (d: number) => string;
 };
 
 function Axes({
@@ -58,6 +60,8 @@ function Axes({
   numTicksX = 10,
   barWidth,
   barGap,
+  xTickModulo = 1,
+  xAxisFormat = d => d.toString(),
 }: AxesProps) {
   const leftGraphEdge = padding.LEFT;
   const rightGraphEdge = width - padding.RIGHT;
@@ -90,15 +94,36 @@ function Axes({
       {/* We use xRange and numTicksX */}
       {[...Array(numRawXTicks)].map((_, i) => {
         const barOffset = barWidth ? barWidth / 2 : 0;
+        const xTickValue = i + xRange[0];
+
+        if (xTickValue % xTickModulo !== 0) {
+          return null;
+        }
+
         return (
-          <line
-            x1={leftGraphEdge + i * xTickInterval + barOffset}
-            x2={leftGraphEdge + i * xTickInterval + barOffset}
-            y1={height - padding.BOTTOM}
-            y2={height - padding.BOTTOM + 5}
-            stroke={"#AAA"}
-            strokeWidth={strokeWidth}
-          />
+          <g>
+            <line
+              x1={leftGraphEdge + i * xTickInterval + barOffset}
+              x2={leftGraphEdge + i * xTickInterval + barOffset}
+              y1={height - padding.BOTTOM}
+              y2={height - padding.BOTTOM + 5}
+              stroke={"#AAA"}
+              strokeWidth={strokeWidth}
+            />
+            {/* Tick text, rotated 45 degrees */}
+            <text
+              x={leftGraphEdge + i * xTickInterval + barOffset}
+              y={height - padding.BOTTOM + 20}
+              transform={`rotate(45, ${leftGraphEdge + i * xTickInterval + barOffset}, ${
+                height - padding.BOTTOM + 20
+              })`}
+              textAnchor="start"
+              fontSize={12}
+              fill={"#AAA"}
+            >
+              {xAxisFormat(xTickValue)}
+            </text>
+          </g>
         );
       })}
 

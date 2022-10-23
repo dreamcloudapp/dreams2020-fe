@@ -90,7 +90,15 @@ export function BubbleGraph({
         yRange={[0, paddedMax]}
         xRange={xDomain}
         numTicks={7}
-        xAxisCenterLabel={`Dreams in same ${activeGranularity} as news`}
+        xAxisCenterLabel=""
+        xAxisFormat={d => {
+          const plural = Math.abs(d) > 1 ? "s" : "";
+          if (d === 0) {
+            return `Same ${activeGranularity}`;
+          } else {
+            return `${d} ${activeGranularity}${plural}`;
+          }
+        }}
       />
 
       {data.comparisonSets.map((comparisonSet, setIndex) => {

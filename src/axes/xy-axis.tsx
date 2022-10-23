@@ -21,6 +21,8 @@ type XYAxisProps = {
   numTicks?: number;
   barWidth?: number;
   barGap?: number;
+  xTickModulo?: number;
+  xAxisFormat?: (d: number) => string;
 };
 
 export function XYAxis({
@@ -36,6 +38,8 @@ export function XYAxis({
   numTicks = 10,
   barWidth,
   barGap,
+  xTickModulo,
+  xAxisFormat,
 }: XYAxisProps) {
   const activeGranularity = useSelector(selectActiveGranularity);
 
@@ -67,6 +71,8 @@ export function XYAxis({
         numTicks={numTicks}
         barWidth={barWidth}
         barGap={barGap}
+        xTickModulo={xTickModulo}
+        xAxisFormat={xAxisFormat}
       />
       {/* MIDPOINT LINE */}
       {hasMidpointLine && (
