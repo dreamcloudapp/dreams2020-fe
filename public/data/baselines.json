@@ -20,7 +20,7 @@
         "Family": 0.4,
         "Animals": 0.13,
         "Fantastic beings": 0.02,
-        "♂ references": 0.47000000000000003,
+        "♂ references": 0.47,
         "♀ references": 0.44
       },
       "social interactions": {
@@ -36,11 +36,11 @@
       },
       "cognition": {
         "Thinking": 0.39,
-        "Speech": 0.35000000000000003,
+        "Speech": 0.35,
         "Reading/Writing": 0.06
       },
       "culture": {
-        "Architecture": 0.47000000000000003,
+        "Architecture": 0.47,
         "Food and Drink": 0.14,
         "Clothing": 0.14,
         "School": 0.17,
@@ -85,7 +85,7 @@
         "Animals": 0.12,
         "Fantastic beings": 0.02,
         "♂ references": 0.4,
-        "♀ references": 0.35000000000000003
+        "♀ references": 0.35
       },
       "social interactions": {
         "Friendliness": 0.34,
@@ -104,7 +104,7 @@
         "Reading/Writing": 0.05
       },
       "culture": {
-        "Architecture": 0.41000000000000003,
+        "Architecture": 0.41,
         "Food and Drink": 0.12,
         "Clothing": 0.11,
         "School": 0.13,
@@ -148,7 +148,7 @@
         "Family": 0.33,
         "Animals": 0.2,
         "Fantastic beings": 0.01,
-        "♂ references": 0.41000000000000003,
+        "♂ references": 0.41,
         "♀ references": 0.45
       },
       "social interactions": {
@@ -195,7 +195,7 @@
     "name": "Tita Journal",
     "data": {
       "perception": {
-        "Vision": 0.35000000000000003,
+        "Vision": 0.35,
         "Hearing": 0.23,
         "Touch": 0.19,
         "Smell & Taste": 0.04,
@@ -213,7 +213,7 @@
         "Animals": 0.15,
         "Fantastic beings": 0.08,
         "♂ references": 0.54,
-        "♀ references": 0.6900000000000001
+        "♀ references": 0.69
       },
       "social interactions": {
         "Friendliness": 0.75,
@@ -236,9 +236,9 @@
         "Food and Drink": 0.33,
         "Clothing": 0.21,
         "School": 0.21,
-        "Transportation": 0.35000000000000003,
+        "Transportation": 0.35,
         "Technology": 0.15,
-        "Money and Work": 0.35000000000000003,
+        "Money and Work": 0.35,
         "Weapons": 0.04,
         "Sports": 0,
         "Art": 0.29,
@@ -297,7 +297,7 @@
       },
       "culture": {
         "Architecture": 0.66,
-        "Food and Drink": 0.35000000000000003,
+        "Food and Drink": 0.35,
         "Clothing": 0.37,
         "School": 0.22,
         "Transportation": 0.36,
@@ -311,7 +311,7 @@
       "elements": {
         "Fire": 0.12,
         "Air": 0.1,
-        "Water": 0.35000000000000003,
+        "Water": 0.35,
         "Earth": 0.26
       }
     },
@@ -387,7 +387,7 @@
     "name": "Rose Journal",
     "data": {
       "perception": {
-        "Vision": 0.9400000000000001,
+        "Vision": 0.94,
         "Hearing": 0.52,
         "Touch": 0.48,
         "Smell & Taste": 0.2,
@@ -408,7 +408,7 @@
         "♀ references": 0.87
       },
       "social interactions": {
-        "Friendliness": 0.8300000000000001,
+        "Friendliness": 0.83,
         "Aggression": 0.34,
         "Sexuality": 0.21
       },
@@ -419,7 +419,7 @@
         "Death": 0.14
       },
       "cognition": {
-        "Thinking": 0.9400000000000001,
+        "Thinking": 0.94,
         "Speech": 0.89,
         "Reading/Writing": 0.13
       },
@@ -427,7 +427,7 @@
         "Architecture": 0.87,
         "Food and Drink": 0.51,
         "Clothing": 0.55,
-        "School": 0.47000000000000003,
+        "School": 0.47,
         "Transportation": 0.68,
         "Technology": 0.3,
         "Money and Work": 0.64,

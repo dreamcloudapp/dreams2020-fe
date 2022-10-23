@@ -55,13 +55,13 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
   //     title: "Perception",
   //     radarData: [
   //       {
-  //         subject: "Math",
+  //         radarseg: "Math",
   //         mary: 120,
   //         john: 110,
   //         fullMark: 150,
   //       },
   //       {
-  //         subject: "Chinese",
+  //         radarseg: "Chinese",
   //         mary: 120,
   //         john: 110,
   //         fullMark: 150,
@@ -75,18 +75,15 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
       const activePeople = data.filter((_, i) => showingPeople[i].checked);
 
       // Radar data is an array of objects, where each object is a radar segment
-      const radarData: any = Object.keys(activePeople[0].data[chartCategory]).map(
-        (key, i) => {
-          const ret = {
-            subject: key,
-            fullMark: 1,
-          };
-          activePeople.forEach((person, i) => {
-            (ret as any)[person.name] = person.data[chartCategory][key];
-          });
-          return ret;
-        }
-      );
+      const radarData: any = Object.keys(activePeople[0].data[chartCategory]).map(key => {
+        const ret = {
+          radarseg: key,
+        };
+        activePeople.forEach((person, i) => {
+          (ret as any)[person.name] = Math.floor(person.data[chartCategory][key] * 100);
+        });
+        return ret;
+      });
 
       return {
         title: name,
@@ -95,7 +92,23 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
     });
   }, [data, showingPeople]);
 
-  // console.log(rechartsRadarData);
+  // We want to be able to 'zoom in' for the radars if we can
+  // So if the max is 49 percent for example, the radars stop at 50
+  const maxPercent = useMemo(() => {
+    const radarData = rechartsRadarData.map(x => x.radarData).flat();
+    const allVals = radarData.map(x => Object.values(x)).flat();
+    const numericVals: number[] = allVals
+      .filter(x => typeof x === "number")
+      .map(x => x as number);
+    return Math.max(...numericVals);
+  }, [rechartsRadarData]);
+
+  const radarMax =
+    maxPercent > 75 ? 100 : maxPercent > 50 ? 75 : maxPercent > 25 ? 50 : 25;
+
+  console.log("maxPercent", maxPercent);
+
+  console.log("rechartsRadarData", rechartsRadarData);
 
   const handleCheck = (label: string) => {
     // If every label is checked
@@ -147,6 +160,7 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
             style={{
               margin: CHART_MARGIN,
               display: "inline-block",
+              fontSize: "0.8rem",
             }}
           >
             <h3 style={{ fontWeight: "normal" }}>{radar.title}</h3>
@@ -161,8 +175,8 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
               style={{ margin: 0 }}
             >
               <PolarGrid />
-              <PolarAngleAxis dataKey="subject" />
-              <PolarRadiusAxis angle={90} domain={[0, 1]} />
+              <PolarAngleAxis dataKey="radarseg" />
+              <PolarRadiusAxis angle={90} domain={[0, radarMax]} />
               {showingPeople.map((person, i) => {
                 return (
                   <Radar

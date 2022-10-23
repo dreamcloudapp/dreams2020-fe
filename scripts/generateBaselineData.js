@@ -122,7 +122,8 @@ try {
     const legendData = sheetData[0].reduce((acc, row) => {
       const rawItem = row[0];
       const item = replaceLabels[rawItem] || rawItem;
-      const value = (1 / 100) * row[legend.column];
+      const rawValue = (1 / 100) * row[legend.column];
+      const value = parseFloat(rawValue.toFixed(2));
       const category = getCategoryForItem(rawItem);
 
       // Sometimes a random row sneaks in if it has a weird filled cell somewhere
