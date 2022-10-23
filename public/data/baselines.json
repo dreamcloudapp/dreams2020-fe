@@ -124,6 +124,70 @@
       }
     },
     "meta": {
+      "color": "hsl(270, 50%, 66%)"
+    }
+  },
+  {
+    "name": "Mary Journal",
+    "data": {
+      "perception": {
+        "Vision": 0.4,
+        "Hearing": 0.09,
+        "Touch": 0.08,
+        "Smell & Taste": 0.06,
+        "Color": 0.19
+      },
+      "emotion": {
+        "Fear": 0.18,
+        "Anger": 0.08,
+        "Sadness": 0.03,
+        "Wonder": 0.11,
+        "Happiness": 0.03
+      },
+      "characters": {
+        "Family": 0.33,
+        "Animals": 0.2,
+        "Fantastic beings": 0.01,
+        "♂ references": 0.41000000000000003,
+        "♀ references": 0.45
+      },
+      "social interactions": {
+        "Friendliness": 0.26,
+        "Aggression": 0.18,
+        "Sexuality": 0.06
+      },
+      "movement": {
+        "Walking/Running": 0.18,
+        "Flying": 0.04,
+        "Falling": 0.04,
+        "Death": 0.06
+      },
+      "cognition": {
+        "Thinking": 0.36,
+        "Speech": 0.26,
+        "Reading/Writing": 0.1
+      },
+      "culture": {
+        "Architecture": 0.21,
+        "Food and Drink": 0.06,
+        "Clothing": 0.11,
+        "School": 0.09,
+        "Transportation": 0.16,
+        "Technology": 0.03,
+        "Money and Work": 0.13,
+        "Weapons": 0,
+        "Sports": 0.01,
+        "Art": 0.11,
+        "Religion": 0.2
+      },
+      "elements": {
+        "Fire": 0.05,
+        "Air": 0.05,
+        "Water": 0.11,
+        "Earth": 0.13
+      }
+    },
+    "meta": {
       "color": "hsl(205, 90%, 60%)"
     }
   },
@@ -188,7 +252,7 @@
       }
     },
     "meta": {
-      "color": "hsl(270, 50%, 66%)"
+      "color": "hsl(335, 68%, 74%)"
     }
   },
   {
@@ -252,7 +316,7 @@
       }
     },
     "meta": {
-      "color": "hsl(335, 68%, 74%)"
+      "color": "hsl(30, 90%, 62%)"
     }
   },
   {
@@ -313,70 +377,6 @@
         "Air": 0,
         "Water": 0.02,
         "Earth": 0.04
-      }
-    },
-    "meta": {
-      "color": "hsl(30, 90%, 62%)"
-    }
-  },
-  {
-    "name": "Mary Journal",
-    "data": {
-      "perception": {
-        "Vision": 0.4,
-        "Hearing": 0.09,
-        "Touch": 0.08,
-        "Smell & Taste": 0.06,
-        "Color": 0.19
-      },
-      "emotion": {
-        "Fear": 0.18,
-        "Anger": 0.08,
-        "Sadness": 0.03,
-        "Wonder": 0.11,
-        "Happiness": 0.03
-      },
-      "characters": {
-        "Family": 0.33,
-        "Animals": 0.2,
-        "Fantastic beings": 0.01,
-        "♂ references": 0.41000000000000003,
-        "♀ references": 0.45
-      },
-      "social interactions": {
-        "Friendliness": 0.26,
-        "Aggression": 0.18,
-        "Sexuality": 0.06
-      },
-      "movement": {
-        "Walking/Running": 0.18,
-        "Flying": 0.04,
-        "Falling": 0.04,
-        "Death": 0.06
-      },
-      "cognition": {
-        "Thinking": 0.36,
-        "Speech": 0.26,
-        "Reading/Writing": 0.1
-      },
-      "culture": {
-        "Architecture": 0.21,
-        "Food and Drink": 0.06,
-        "Clothing": 0.11,
-        "School": 0.09,
-        "Transportation": 0.16,
-        "Technology": 0.03,
-        "Money and Work": 0.13,
-        "Weapons": 0,
-        "Sports": 0.01,
-        "Art": 0.11,
-        "Religion": 0.2
-      },
-      "elements": {
-        "Fire": 0.05,
-        "Air": 0.05,
-        "Water": 0.11,
-        "Earth": 0.13
       }
     },
     "meta": {

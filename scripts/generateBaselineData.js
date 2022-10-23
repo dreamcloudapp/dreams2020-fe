@@ -25,6 +25,10 @@ const legends = [
     column: 4,
   },
   {
+    name: "Mary Journal",
+    column: 14,
+  },
+  {
     name: "Tita Journal",
     column: 18,
   },
@@ -37,10 +41,6 @@ const legends = [
     column: 10,
   },
   {
-    name: "Mary Journal",
-    column: 14,
-  },
-  {
     name: "Rose Journal",
     column: 22,
   },
@@ -48,8 +48,8 @@ const legends = [
 
 const palette = [
   "hsl(0, 90%, 64%)",
-  "hsl(205, 90%, 60%)",
   "hsl(270, 50%, 66%)",
+  "hsl(205, 90%, 60%)",
   "hsl(335, 68%, 74%)",
   "hsl(30, 90%, 62%)",
   "hsl(153, 60%, 50%)",
