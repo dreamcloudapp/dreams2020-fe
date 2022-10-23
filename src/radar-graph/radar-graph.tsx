@@ -1,16 +1,16 @@
 import { ContentCategory, RadarPersonData } from "@kannydennedy/dreams-2020-types";
 import { useMemo, useState } from "react";
-import RadarChart, { ChartData } from "react-svg-radar-chart";
-import "react-svg-radar-chart/build/css/index.css";
 import Legend from "../bubble-graph/legend";
 import { CollectionCheck } from "../ducks/ui";
 import useMediaQuery from "../hooks/useDimensions";
-
-type ChartDataWithNameAndCaptions = {
-  name: string;
-  chartData: ChartData[];
-  captions: { [key: string]: string };
-};
+import {
+  RadarChart as RadarVis,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  Tooltip,
+} from "recharts";
 
 const allRadarChartNames: ContentCategory[] = [
   "perception",
@@ -25,52 +25,12 @@ const allRadarChartNames: ContentCategory[] = [
 
 const CHART_MARGIN = 40;
 
-const radarChartOptions = {
-  dots: false,
-};
-
 type RadarGraphProps = {
   data: RadarPersonData[];
   width: number;
-  //   height: number;
-  //   padding: Padding;
-  //   handleMouseOver: (event: any, datum: any) => void;
-  //   onMouseOut: () => void;
 };
 
-// Data has this format:
-// const testdata: ChartData[] = [
-//   {
-//     data: {
-//       battery: 0.7,
-//       design: 0.8,
-//       useful: 0.9,
-//       speed: 0.67,
-//       weight: 0.8,
-//     },
-//     meta: { color: "blue" },
-//   },
-//   {
-//     data: {
-//       battery: 0.6,
-//       design: 0.85,
-//       useful: 0.5,
-//       speed: 0.6,
-//       weight: 0.7,
-//     },
-//     meta: { color: "red" },
-//   },
-// ];
-
-export function RadarGraph({
-  data,
-  width,
-}: //   width,
-//   height,
-//   handleMouseOver,
-//   onMouseOut,
-//   padding,
-RadarGraphProps) {
+export function RadarGraph({ data, width }: RadarGraphProps) {
   const { isMobile, isTablet, isSmallDesktop } = useMediaQuery();
 
   const numGraphsPerRow = isMobile ? 1 : isTablet ? 2 : isSmallDesktop ? 3 : 4;
@@ -89,36 +49,53 @@ RadarGraphProps) {
     })
   );
 
-  // The data that goes in the radars
-  // Basically, we're turning data based on people into data based on categories
-  // (the categories are the radar chart names)
-  const allRadarData = useMemo<ChartDataWithNameAndCaptions[]>(() => {
-    // const peopleToShow = showingPeople.filter(p => p.showing);
-    const ret: ChartDataWithNameAndCaptions[] = allRadarChartNames.map(
-      (chartCategory, i) => {
-        return {
-          name: chartCategory,
-          chartData: data
-            .filter((_, i) => showingPeople[i].checked)
-            .map((person, i) => {
-              return {
-                data: person.data[chartCategory],
-                meta: {
-                  color: person.meta.color,
-                },
-              };
-            }),
-          captions: Object.keys(data[0].data[chartCategory]).reduce((acc, curr) => {
-            return {
-              ...acc,
-              [curr]: curr,
-            };
-          }, {}),
-        };
-      }
-    );
-    return ret;
+  // We need to return an array of arrays, e.g.
+  // const x = [
+  //   {
+  //     title: "Perception",
+  //     radarData: [
+  //       {
+  //         subject: "Math",
+  //         mary: 120,
+  //         john: 110,
+  //         fullMark: 150,
+  //       },
+  //       {
+  //         subject: "Chinese",
+  //         mary: 120,
+  //         john: 110,
+  //         fullMark: 150,
+  //       },
+  //     ],
+  //   },
+  // ];
+  const rechartsRadarData = useMemo(() => {
+    return allRadarChartNames.map((chartCategory, i) => {
+      const name = chartCategory;
+      const activePeople = data.filter((_, i) => showingPeople[i].checked);
+
+      // Radar data is an array of objects, where each object is a radar segment
+      const radarData: any = Object.keys(activePeople[0].data[chartCategory]).map(
+        (key, i) => {
+          const ret = {
+            subject: key,
+            fullMark: 1,
+          };
+          activePeople.forEach((person, i) => {
+            (ret as any)[person.name] = person.data[chartCategory][key];
+          });
+          return ret;
+        }
+      );
+
+      return {
+        title: name,
+        radarData,
+      };
+    });
   }, [data, showingPeople]);
+
+  // console.log(rechartsRadarData);
 
   const handleCheck = (label: string) => {
     // If every label is checked
@@ -162,24 +139,44 @@ RadarGraphProps) {
     }
   };
 
-  // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
     <div style={{ paddingTop: 50 }}>
-      {allRadarData.map((d, i) => {
-        const { name: chartTitle } = d;
-        // Titlecase the chart title
-        const title = chartTitle[0].toUpperCase() + chartTitle.slice(1);
-
+      {rechartsRadarData.map((radar, i) => {
         return (
-          <div style={{ margin: CHART_MARGIN, display: "inline-block" }}>
-            <h3 style={{ fontWeight: "normal" }}>{title}</h3>
-            <RadarChart
-              key={i}
-              captions={d.captions}
-              data={d.chartData}
-              size={radarWidth}
-              options={radarChartOptions}
-            />
+          <div
+            style={{
+              margin: CHART_MARGIN,
+              display: "inline-block",
+            }}
+          >
+            <h3 style={{ fontWeight: "normal" }}>{radar.title}</h3>
+            <RadarVis
+              outerRadius={90}
+              width={radarWidth}
+              height={radarWidth}
+              data={radar.radarData}
+              onMouseEnter={x => {
+                console.log(x);
+              }}
+              style={{ margin: 0 }}
+            >
+              <PolarGrid />
+              <PolarAngleAxis dataKey="subject" />
+              <PolarRadiusAxis angle={90} domain={[0, 1]} />
+              {showingPeople.map((person, i) => {
+                return (
+                  <Radar
+                    name={person.label}
+                    dataKey={person.label}
+                    stroke={person.color}
+                    fill={person.color}
+                    fillOpacity={0.6}
+                  />
+                );
+              })}
+
+              <Tooltip />
+            </RadarVis>
           </div>
         );
       })}

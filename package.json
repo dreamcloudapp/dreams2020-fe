@@ -29,7 +29,7 @@
     "react-redux": "^8.0.1",
     "react-scripts": "5.0.0",
     "react-spring": "^9.4.4",
-    "react-svg-radar-chart": "^1.4.0",
+    "recharts": "^2.1.15",
     "redux-thunk": "^2.4.1",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.7.0",
