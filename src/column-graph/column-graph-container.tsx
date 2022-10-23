@@ -155,17 +155,6 @@ export function ColumnGraphContainer({
                 dispatch(setFocusedComparison(highMedLowComparisons[0]));
               }}
             />
-
-            {/* Label */}
-            <text
-              x={x + barWidth / 2}
-              y={y - 20}
-              textAnchor="middle"
-              fill="black"
-              fontSize="12px"
-            >
-              {monthNameFromIndex(d.month)}
-            </text>
           </g>
         );
       })}

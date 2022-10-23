@@ -229,7 +229,7 @@ function Axes({
       </text>
       {/* xAxisRightLabel */}
       <text
-        x={rightGraphEdge - 180}
+        x={rightGraphEdge - 210}
         y={height - padding.BOTTOM + BOTTOM_LABEL_PADDING}
         fontFamily="Calibri"
         fontSize="16"
