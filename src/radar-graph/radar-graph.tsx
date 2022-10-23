@@ -76,7 +76,8 @@ RadarGraphProps) {
     data.map((person, i) => {
       return {
         label: person.name,
-        checked: true,
+        // We'll just show "Baselines F" and "Tita Journal" for starters
+        checked: person.name === "Baselines F" || person.name === "Tita Journal",
         color: person.meta.color,
       };
     })
@@ -113,11 +114,51 @@ RadarGraphProps) {
     return ret;
   }, [data, showingPeople]);
 
-  console.log("allRadarData", allRadarData);
+  const handleCheck = (label: string) => {
+    // If every label is checked
+    // Uncheck everything except for the one that was clicked
+    if (showingPeople.every(p => p.checked)) {
+      setShowingPeople(
+        showingPeople.map(p => {
+          return {
+            ...p,
+            checked: p.label === label,
+          };
+        })
+      );
+    }
+    // If the last label is being unchecked
+    // Check everything
+    else if (
+      showingPeople.filter(p => p.checked).length === 1 &&
+      showingPeople.find(p => p.label === label)?.checked
+    ) {
+      setShowingPeople(
+        showingPeople.map(p => {
+          return {
+            ...p,
+            checked: true,
+          };
+        })
+      );
+    } else {
+      setShowingPeople(
+        showingPeople.map(p => {
+          if (p.label === label) {
+            return {
+              ...p,
+              checked: !p.checked,
+            };
+          }
+          return p;
+        })
+      );
+    }
+  };
 
   // const columnWidth = (width - (COLUMN_GAP * data.length - 1)) / data.length;
   return (
-    <div>
+    <div style={{ paddingTop: 50 }}>
       {allRadarData.map((d, i) => {
         return (
           <RadarChart
@@ -128,24 +169,7 @@ RadarGraphProps) {
           />
         );
       })}
-      <Legend
-        checkedCollections={showingPeople}
-        handleCheck={label => {
-          console.log(label);
-
-          setShowingPeople(
-            showingPeople.map(p => {
-              if (p.label === label) {
-                return {
-                  ...p,
-                  checked: !p.checked,
-                };
-              }
-              return p;
-            })
-          );
-        }}
-      />
+      <Legend checkedCollections={showingPeople} handleCheck={handleCheck} />
     </div>
   );
 }
