@@ -20,12 +20,12 @@
         "Family": 0.27,
         "Animals": 0.12,
         "Fantastic beings": 0.02,
-        "Male references": 0.4,
-        "Female references": 0.35000000000000003
+        "♂ references": 0.4,
+        "♀ references": 0.35000000000000003
       },
       "social interactions": {
         "Friendliness": 0.34,
-        "Physical aggression": 0.19,
+        "Aggression": 0.19,
         "Sexuality": 0.06
       },
       "movement": {
@@ -84,12 +84,12 @@
         "Family": 0.54,
         "Animals": 0.25,
         "Fantastic beings": 0.04,
-        "Male references": 0.67,
-        "Female references": 0.68
+        "♂ references": 0.67,
+        "♀ references": 0.68
       },
       "social interactions": {
         "Friendliness": 0.6,
-        "Physical aggression": 0.17,
+        "Aggression": 0.17,
         "Sexuality": 0.11
       },
       "movement": {
@@ -148,12 +148,12 @@
         "Family": 0.26,
         "Animals": 0.04,
         "Fantastic beings": 0.08,
-        "Male references": 0.26,
-        "Female references": 0.22
+        "♂ references": 0.26,
+        "♀ references": 0.22
       },
       "social interactions": {
         "Friendliness": 0.29,
-        "Physical aggression": 0.02,
+        "Aggression": 0.02,
         "Sexuality": 0.04
       },
       "movement": {
@@ -212,12 +212,12 @@
         "Family": 0.33,
         "Animals": 0.2,
         "Fantastic beings": 0.01,
-        "Male references": 0.41000000000000003,
-        "Female references": 0.45
+        "♂ references": 0.41000000000000003,
+        "♀ references": 0.45
       },
       "social interactions": {
         "Friendliness": 0.26,
-        "Physical aggression": 0.18,
+        "Aggression": 0.18,
         "Sexuality": 0.06
       },
       "movement": {
@@ -276,12 +276,12 @@
         "Family": 0.52,
         "Animals": 0.15,
         "Fantastic beings": 0.08,
-        "Male references": 0.54,
-        "Female references": 0.6900000000000001
+        "♂ references": 0.54,
+        "♀ references": 0.6900000000000001
       },
       "social interactions": {
         "Friendliness": 0.75,
-        "Physical aggression": 0.25,
+        "Aggression": 0.25,
         "Sexuality": 0.15
       },
       "movement": {
@@ -340,12 +340,12 @@
         "Family": 0.75,
         "Animals": 0.33,
         "Fantastic beings": 0.12,
-        "Male references": 0.87,
-        "Female references": 0.87
+        "♂ references": 0.87,
+        "♀ references": 0.87
       },
       "social interactions": {
         "Friendliness": 0.8300000000000001,
-        "Physical aggression": 0.34,
+        "Aggression": 0.34,
         "Sexuality": 0.21
       },
       "movement": {
@@ -404,12 +404,12 @@
         "Family": 0.4,
         "Animals": 0.13,
         "Fantastic beings": 0.02,
-        "Male references": 0.47000000000000003,
-        "Female references": 0.44
+        "♂ references": 0.47000000000000003,
+        "♀ references": 0.44
       },
       "social interactions": {
         "Friendliness": 0.46,
-        "Physical aggression": 0.12,
+        "Aggression": 0.12,
         "Sexuality": 0.04
       },
       "movement": {

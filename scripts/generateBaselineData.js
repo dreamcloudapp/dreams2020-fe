@@ -9,6 +9,12 @@ const EXCEL_DATA_RANGE = {
   sheetIndex: 0,
 };
 
+const replaceLabels = {
+  "Male references": "♂ references",
+  "Female references": "♀ references",
+  "Physical aggression": "Aggression",
+};
+
 const legends = [
   {
     name: "Baselines M",
@@ -114,9 +120,10 @@ try {
     //   console.log("xxxx", item);
     // });
     const legendData = sheetData[0].reduce((acc, row) => {
-      const item = row[0];
+      const rawItem = row[0];
+      const item = replaceLabels[rawItem] || rawItem;
       const value = (1 / 100) * row[legend.column];
-      const category = getCategoryForItem(item);
+      const category = getCategoryForItem(rawItem);
 
       // Sometimes a random row sneaks in if it has a weird filled cell somewhere
       if (!category) return acc;

@@ -23,6 +23,12 @@ const allRadarChartNames: ContentCategory[] = [
   "elements",
 ];
 
+const CHART_MARGIN = 30;
+
+const radarChartOptions = {
+  dots: false,
+};
+
 type RadarGraphProps = {
   data: RadarPersonData[];
   width: number;
@@ -70,7 +76,7 @@ RadarGraphProps) {
   const numGraphsPerRow = isMobile ? 1 : isTablet ? 2 : isSmallDesktop ? 3 : 4;
 
   // Dummy
-  const radarWidth = width / numGraphsPerRow;
+  const radarWidth = width / numGraphsPerRow - CHART_MARGIN * 2;
 
   const [showingPeople, setShowingPeople] = useState<CollectionCheck[]>(
     data.map((person, i) => {
@@ -161,12 +167,15 @@ RadarGraphProps) {
     <div style={{ paddingTop: 50 }}>
       {allRadarData.map((d, i) => {
         return (
-          <RadarChart
-            key={i}
-            captions={d.captions}
-            data={d.chartData}
-            size={radarWidth}
-          />
+          <div style={{ margin: CHART_MARGIN, display: "inline-block" }}>
+            <RadarChart
+              key={i}
+              captions={d.captions}
+              data={d.chartData}
+              size={radarWidth}
+              options={radarChartOptions}
+            />
+          </div>
         );
       })}
       <Legend checkedCollections={showingPeople} handleCheck={handleCheck} />
