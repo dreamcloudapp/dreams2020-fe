@@ -18,10 +18,10 @@ const Legend = ({ handleCheck, checkedCollections }: LegendProps) => {
           <div
             key={`legend-${i}`}
             style={{
-              display: "flex",
+              display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
-              margin: "10px 0px",
+              margin: "10px 10px",
             }}
           >
             <input

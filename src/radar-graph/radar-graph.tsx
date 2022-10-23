@@ -23,7 +23,7 @@ const allRadarChartNames: ContentCategory[] = [
   "elements",
 ];
 
-const CHART_MARGIN = 30;
+const CHART_MARGIN = 40;
 
 const radarChartOptions = {
   dots: false,
@@ -166,8 +166,13 @@ RadarGraphProps) {
   return (
     <div style={{ paddingTop: 50 }}>
       {allRadarData.map((d, i) => {
+        const { name: chartTitle } = d;
+        // Titlecase the chart title
+        const title = chartTitle[0].toUpperCase() + chartTitle.slice(1);
+
         return (
           <div style={{ margin: CHART_MARGIN, display: "inline-block" }}>
+            <h3 style={{ fontWeight: "normal" }}>{title}</h3>
             <RadarChart
               key={i}
               captions={d.captions}

@@ -17,8 +17,16 @@ const replaceLabels = {
 
 const legends = [
   {
+    name: "Baselines F",
+    column: 2,
+  },
+  {
     name: "Baselines M",
     column: 4,
+  },
+  {
+    name: "Tita Journal",
+    column: 18,
   },
   {
     name: "Ana Journal 2020",
@@ -33,24 +41,16 @@ const legends = [
     column: 14,
   },
   {
-    name: "Tita Journal",
-    column: 18,
-  },
-  {
     name: "Rose Journal",
     column: 22,
-  },
-  {
-    name: "Baselines F",
-    column: 2,
   },
 ];
 
 const palette = [
-  "blue",
-  "red",
-  "green",
-  "yellow",
+  "#DF766C",
+  "#B4E0DA",
+  "#E6C7A6",
+  "#F2E8C9",
   "orange",
   "purple",
   "pink",
