@@ -6,15 +6,14 @@ export type LegendOption = {
 };
 
 type LegendProps = {
-  options: LegendOption[];
   handleCheck: (labelToToggle: string) => void;
   checkedCollections: CollectionCheck[];
 };
 
-const Legend = ({ options, handleCheck, checkedCollections }: LegendProps) => {
+const Legend = ({ handleCheck, checkedCollections }: LegendProps) => {
   return (
     <div>
-      {options.map((option, i) => {
+      {checkedCollections.map((option, i) => {
         return (
           <div
             key={`legend-${i}`}

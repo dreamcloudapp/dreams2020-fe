@@ -51,6 +51,7 @@ export function BubbleGraphContainer({
     const checkedCollections: CollectionCheck[] = data.comparisonSets.map(s => ({
       label: s.label,
       checked: true,
+      color: s.color,
     }));
     dispatch(setCheckedCollections(checkedCollections));
   }, [dispatch, data.comparisonSets]);
@@ -105,11 +106,7 @@ export function BubbleGraphContainer({
 
       {/* Legend - don't show when there's a focused comparison */}
       {!focusedComparison && (
-        <Legend
-          options={data.comparisonSets.map(s => ({ label: s.label, color: s.color }))}
-          handleCheck={handleOnChange}
-          checkedCollections={checkedCollections}
-        />
+        <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
       )}
     </div>
   );

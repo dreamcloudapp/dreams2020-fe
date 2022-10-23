@@ -158,7 +158,7 @@ function App() {
         style={{
           width: "100%",
           position: "relative",
-          height: 600,
+          height: showingGraph === "radar" ? "auto" : 600,
           padding: frameWidth,
           maxWidth: maxWidth,
         }}

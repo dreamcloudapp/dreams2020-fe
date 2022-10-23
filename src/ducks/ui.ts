@@ -4,6 +4,7 @@ import { RootState } from "./root-reducer";
 
 export type CollectionCheck = {
   label: string;
+  color: string;
   checked: boolean;
 };
 

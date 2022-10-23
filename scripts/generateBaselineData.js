@@ -10,30 +10,30 @@ const EXCEL_DATA_RANGE = {
 };
 
 const legends = [
-  //   {
-  //     name: "Baselines M",
-  //     column: 4,
-  //   },
-  //   {
-  //     name: "Ana Journal 2020",
-  //     column: 6,
-  //   },
-  //   {
-  //     name: "Burgess Journal",
-  //     column: 10,
-  //   },
-  //   {
-  //     name: "Mary Journal",
-  //     column: 14,
-  //   },
+  {
+    name: "Baselines M",
+    column: 4,
+  },
+  {
+    name: "Ana Journal 2020",
+    column: 6,
+  },
+  {
+    name: "Burgess Journal",
+    column: 10,
+  },
+  {
+    name: "Mary Journal",
+    column: 14,
+  },
   {
     name: "Tita Journal",
     column: 18,
   },
-  //   {
-  //     name: "Rose Journal",
-  //     column: 22,
-  //   },
+  {
+    name: "Rose Journal",
+    column: 22,
+  },
   {
     name: "Baselines F",
     column: 2,
@@ -43,14 +43,14 @@ const legends = [
 const palette = [
   "blue",
   "red",
-  //   "green",
-  //   "yellow",
-  //   "orange",
-  //   "purple",
-  //   "pink",
-  //   "brown",
-  //   "grey",
-  //   "black",
+  "green",
+  "yellow",
+  "orange",
+  "purple",
+  "pink",
+  "brown",
+  "grey",
+  "black",
 ];
 
 const categories = {

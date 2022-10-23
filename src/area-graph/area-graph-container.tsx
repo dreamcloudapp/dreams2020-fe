@@ -41,6 +41,7 @@ export function AreaGraphContainer({
     const checkedCollections: CollectionCheck[] = columnDataSets.map(s => ({
       label: s.key,
       checked: true,
+      color: s.color,
     }));
     dispatch(setCheckedCollections(checkedCollections));
   }, [dispatch, columnDataSets]);
@@ -71,11 +72,7 @@ export function AreaGraphContainer({
       </div>
 
       {/* Legend */}
-      <Legend
-        options={columnDataSets.map(s => ({ label: s.key, color: s.color }))}
-        handleCheck={handleOnChange}
-        checkedCollections={checkedCollections}
-      />
+      <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
     </div>
   );
 }

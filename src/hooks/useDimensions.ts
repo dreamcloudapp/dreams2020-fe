@@ -1,6 +1,6 @@
 import React from "react";
 
-type MediaBoolean = "isTablet" | "isMobile";
+type MediaBoolean = "isTablet" | "isMobile" | "isSmallDesktop";
 
 type MediaQuery = { key: MediaBoolean; query: string };
 
@@ -9,6 +9,7 @@ export type MediaBooleanDict = {
 };
 
 const QUERIES: MediaQuery[] = [
+  { key: "isSmallDesktop", query: "screen and (max-width: 1350px)" },
   { key: "isTablet", query: "screen and (max-width: 1150px)" },
   { key: "isMobile", query: "screen and (max-width: 600px)" },
 ];
