@@ -47,16 +47,16 @@ const legends = [
 ];
 
 const palette = [
-  "#DF766C",
-  "#B4E0DA",
-  "#E6C7A6",
-  "#F2E8C9",
-  "orange",
-  "purple",
-  "pink",
-  "brown",
-  "grey",
-  "black",
+  "hsl(0, 90%, 64%)",
+  "hsl(205, 90%, 60%)",
+  "hsl(270, 50%, 66%)",
+  "hsl(335, 68%, 74%)",
+  "hsl(30, 90%, 62%)",
+  "hsl(153, 60%, 50%)",
+  "hsl(30, 35%, 61%)",
+  "hsl(183, 60%, 59%)",
+  "hsl(50, 90%, 59%)",
+  "hsl(0, 0%, 60%)",
 ];
 
 const categories = {

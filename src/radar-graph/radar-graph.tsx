@@ -83,7 +83,7 @@ RadarGraphProps) {
       return {
         label: person.name,
         // We'll just show "Baselines F" and "Tita Journal" for starters
-        checked: person.name === "Baselines F" || person.name === "Tita Journal",
+        checked: person.name === "Baselines F" || person.name === "Mary Journal",
         color: person.meta.color,
       };
     })

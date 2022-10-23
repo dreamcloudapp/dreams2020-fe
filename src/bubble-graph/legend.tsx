@@ -31,7 +31,9 @@ const Legend = ({ handleCheck, checkedCollections }: LegendProps) => {
               onChange={() => handleCheck(option.label)}
               style={{ marginRight: 10 }}
             />
-            <span style={{ color: option.color }}>{option.label}</span>
+            <span style={{ color: option.color, fontWeight: "bold" }}>
+              {option.label}
+            </span>
           </div>
         );
       })}
