@@ -42,6 +42,8 @@ const fileYearMap: { [key: string]: number } = {
 // We need to decide what the 'coloured collections' will be
 // E.g. Dreams 2020 and Control Set
 // We will decide the members of these collections (comparisons) based on date ranges
+
+// export type CollectionKey = "dreams2020" | "controlSet";
 export type CollectionKey = "dreams2020" | "controlSet";
 export type CollectionFinder = {
   key: CollectionKey;
@@ -183,17 +185,27 @@ const monthComparisonsCollection: GranularityComparisonCollection = getBroaderGr
   NUM_EXAMPLES_PER_COMPARISON
 );
 
+// TODO: We're just removing the control temporarily until it's ready
+const weekComparisonsCollectionFiltered = {
+  ...weekComparisonsCollection,
+  comparisonSets: [weekComparisonsCollection.comparisonSets[0]],
+};
+const monthComparisonsCollectionFiltered = {
+  ...monthComparisonsCollection,
+  comparisonSets: [monthComparisonsCollection.comparisonSets[0]],
+};
+
 // Write all the week data to file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/weekComparisons.json"),
-  JSON.stringify(weekComparisonsCollection),
+  JSON.stringify(weekComparisonsCollectionFiltered),
   "utf8"
 );
 
 // Write all the month data to file
 fs.writeFileSync(
   path.join(__dirname, "../public/data/monthComparisons.json"),
-  JSON.stringify(monthComparisonsCollection),
+  JSON.stringify(monthComparisonsCollectionFiltered),
   "utf8"
 );
 

@@ -6,10 +6,10 @@ import {
   selectActiveGranularity,
   selectCheckedCollections,
   setCheckedCollections,
-  toggleCollectionChecked,
+  // toggleCollectionChecked,
 } from "../ducks/ui";
 import { AreaGraph } from "./area-graph";
-import Legend from "../bubble-graph/legend";
+// import Legend from "../bubble-graph/legend";
 import { useDispatch } from "react-redux";
 import { Padding } from "../modules/ui-types";
 
@@ -46,9 +46,9 @@ export function AreaGraphContainer({
     dispatch(setCheckedCollections(checkedCollections));
   }, [dispatch, columnDataSets]);
 
-  const handleOnChange = (labelToToggle: string) => {
-    dispatch(toggleCollectionChecked(labelToToggle));
-  };
+  // const handleOnChange = (labelToToggle: string) => {
+  //   dispatch(toggleCollectionChecked(labelToToggle));
+  // };
 
   // Pad the max a little so the lines aren't always at the top of the chart
   const paddedMax = 0.022;
@@ -72,7 +72,7 @@ export function AreaGraphContainer({
       </div>
 
       {/* Legend */}
-      <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
+      {/* <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} /> */}
     </div>
   );
 }

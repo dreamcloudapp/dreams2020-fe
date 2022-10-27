@@ -101,7 +101,7 @@ export function AreaGraph({
         hasMidpointLine={true}
         yRange={[0, paddedMax]}
         xRange={[-179, 179]}
-        xAxisCenterLabel=""
+        xAxisCenterLabel="Dream-news time difference"
         numTicks={11}
         xTickModulo={10}
         xAxisFormat={d => {

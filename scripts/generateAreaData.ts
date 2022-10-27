@@ -186,16 +186,17 @@ const data: DifferenceByGranularity = {
         maxAverageSimilarity: maxAverageSimilarity2020,
       },
     },
-    {
-      key: CONTROL_SET_NAME,
-      color: ColorTheme.BLUE,
-      comparisons: {
-        differences: dayDifferencesControl.differences,
-        maxSimilarity: allData[CONTROL_SET].maxSimilarity,
-        minSimilarity: allData[CONTROL_SET].minSimilarity,
-        maxAverageSimilarity: maxAverageSimilarityControl,
-      },
-    },
+    // Not including control set for now
+    // {
+    //   key: CONTROL_SET_NAME,
+    //   color: ColorTheme.BLUE,
+    //   comparisons: {
+    //     differences: dayDifferencesControl.differences,
+    //     maxSimilarity: allData[CONTROL_SET].maxSimilarity,
+    //     minSimilarity: allData[CONTROL_SET].minSimilarity,
+    //     maxAverageSimilarity: maxAverageSimilarityControl,
+    //   },
+    // },
   ],
   week: [
     {
