@@ -54,6 +54,7 @@ const blankSimilarityExample: ExamplesWithSimilarityLevel = {
   high: { dreamId: "", newsId: "", score: 0, concepts: [] },
   medium: { dreamId: "", newsId: "", score: 0, concepts: [] },
   low: { dreamId: "", newsId: "", score: 0, concepts: [] },
+  indiscernible: { dreamId: "", newsId: "", score: 0, concepts: [] },
 };
 // By month
 const BUBBLE_DATA_FILE_MONTH = "../public/data/monthComparisons.json";

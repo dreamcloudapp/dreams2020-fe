@@ -6,8 +6,8 @@ import {
   ExamplesWithSimilarityLevel,
   ExampleRecordComparison,
 } from "@kannydennedy/dreams-2020-types";
-import { consolidateExampleList, consolidateWikipediaConceptList } from "./mergers";
 import { monthNameFromIndex } from "./time-helpers";
+import { SIMILARITY_CUTOFFS } from "../config";
 
 const VERY_LARGE_NUMBER = 999 * 999 * 999;
 // The maximum time index distance for a given granularity
@@ -214,10 +214,41 @@ function consolidateExamplesToExamplesWithSimilarityLevel(
 
   const sortedList = listWithRealThings.sort((a, b) => b.score - a.score);
 
-  // High is the top, low is the bottom, med is the one in the middle
+  // High is the top, low is the bottom
   const highEx = sortedList[0] || blankExample;
-  const lowEx = sortedList[sortedList.length - 1] || blankExample;
-  const mediumEx = sortedList[Math.floor(sortedList.length / 2)] || blankExample;
+  const indiscernibleEx = sortedList[sortedList.length - 1] || blankExample;
+
+  // To get the medium example
+  // We want to find the example that's 'just below' the high score cutoff
+  let mediumExIndex = 0;
+  for (let i = 0; i < sortedList.length; i++) {
+    if (sortedList[i].score < SIMILARITY_CUTOFFS.high) {
+      mediumExIndex = i;
+      break;
+    }
+  }
+  let mediumEx = sortedList[mediumExIndex];
+
+  // To get the low example
+  // We want to find the example that's 'just below' the medium score cutoff
+  let lowExIndex = 0;
+  for (let i = 0; i < sortedList.length; i++) {
+    if (sortedList[i].score < SIMILARITY_CUTOFFS.medium) {
+      lowExIndex = i;
+      break;
+    }
+  }
+  let lowEx = sortedList[lowExIndex];
+
+  // There's a problem here, some missing concepts?
+  if (!mediumEx) mediumEx = blankExample;
+  if (!lowEx) lowEx = blankExample;
+
+  if (!lowEx) {
+    console.log("wtf man", lowExIndex);
+    console.log(sortedList);
+    console.log("biglist", bigList);
+  }
 
   const high: ExampleRecordComparison = {
     ...highEx,
@@ -237,10 +268,17 @@ function consolidateExamplesToExamplesWithSimilarityLevel(
     newsId: mediumEx.newsId,
     concepts: mediumEx.concepts,
   };
+  const indiscernible: ExampleRecordComparison = {
+    ...indiscernibleEx,
+    dreamId: indiscernibleEx.dreamId,
+    newsId: indiscernibleEx.newsId,
+    concepts: indiscernibleEx.concepts,
+  };
 
   return {
     high,
     medium,
     low,
+    indiscernible,
   };
 }
