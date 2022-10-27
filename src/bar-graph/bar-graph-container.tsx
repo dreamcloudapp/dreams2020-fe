@@ -7,7 +7,7 @@ import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import "../App.css";
 import { XYAxis } from "../axes/xy-axis";
-import { prettyNumber } from "../modules/formatters";
+import { prettyNumber, toTitleCase } from "../modules/formatters";
 import { Column } from "../components/column";
 import { useDispatch } from "react-redux";
 import {
@@ -69,19 +69,24 @@ const renderTooltip = (d: DifferenceRecord) => {
   ];
 
   const similarityRows: TooltipRow[] = (similarityLevels || []).map((sLevel, i) => {
+    const simLevelLabel =
+      sLevel.similarityLevel === "medium"
+        ? "Indicative"
+        : toTitleCase(sLevel.similarityLevel);
     return {
-      key: `${sLevel.similarityLevel} similarity day pairs (>= ${sLevel.threshold}):`,
+      key: `${simLevelLabel} similarity pairs (>= ${sLevel.threshold}):`,
       value: prettyNumber(sLevel.percent, 1) + "%",
       keyColor: sLevel.color,
     };
   });
+  const similarityRowsReversed = [...similarityRows.reverse()];
 
   return (
     <Tooltip
       tipTitle={tooltipHeader}
       sections={[
         {
-          rows: [...mainRows, ...similarityRows],
+          rows: [...mainRows, ...similarityRowsReversed],
         },
       ]}
     />

@@ -11,18 +11,16 @@ const csv = require("csv-parser");
 // (source-dreams-news/all-dreams-final.csv)
 
 type DreamCsvRow = {
-  DreamId: string;
-  "Old DreamId": string;
+  ID: string;
   Title: string;
   Date: string;
-  Answer: string;
-  Respondent: string;
-  "Question Title": string;
+  Dream: string;
+  Dreamer: string;
 };
 
 const DREAM_MAX_LEN = 2000;
 
-const DREAMS_FILE_PATH = "../source-dreams-news/all-dreams-final.csv";
+const DREAMS_FILE_PATH = "../source-dreams-news/all-dreams-final-2020.csv";
 const dreamsFile = path.join(__dirname, DREAMS_FILE_PATH);
 
 const DREAMS_JSON_PATH = "../public/data/all-dreams-final.json";
@@ -39,13 +37,13 @@ fs.createReadStream(dreamsFile)
 
     // Turn into an array of SingleTextRecord
     const dreams: SingleTextRecord[] = results.map(dream => {
-      const isLongDream = dream.Answer.length > DREAM_MAX_LEN;
+      const isLongDream = dream.Dream.length > DREAM_MAX_LEN;
       const clippedDream = isLongDream
-        ? dream.Answer.slice(0, DREAM_MAX_LEN) + " (...)"
-        : dream.Answer;
+        ? dream.Dream.slice(0, DREAM_MAX_LEN) + " (...)"
+        : dream.Dream;
 
       return {
-        id: dream["Old DreamId"], // Todo: change to DreamId
+        id: dream.ID, // Todo: change to DreamId
         text: clippedDream,
         date: ukDateStringToDate(dream.Date),
       };

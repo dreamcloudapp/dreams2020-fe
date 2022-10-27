@@ -85,6 +85,7 @@ const blankSimilarityExample: ExamplesWithSimilarityLevel = {
   high: { dreamId: "", newsId: "", score: 0, concepts: [] },
   medium: { dreamId: "", newsId: "", score: 0, concepts: [] },
   low: { dreamId: "", newsId: "", score: 0, concepts: [] },
+  indiscernible: { dreamId: "", newsId: "", score: 0, concepts: [] },
 };
 
 export const defaultColumnGraphData: ColumnGraphData[] = [

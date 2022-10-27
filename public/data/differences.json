@@ -7,2162 +7,2162 @@
         "differences": [
           {
             "difference": -179,
-            "averageSimilarity": 0.014531565465775404,
+            "averageSimilarity": 0.015065476148128346,
             "recordCount": 187,
-            "numComparisons": 43451
+            "numComparisons": 49230
           },
           {
             "difference": -178,
-            "averageSimilarity": 0.014346838755319152,
+            "averageSimilarity": 0.014956345356914898,
             "recordCount": 188,
-            "numComparisons": 43928
+            "numComparisons": 50048
           },
           {
             "difference": -177,
-            "averageSimilarity": 0.01414477187671957,
+            "averageSimilarity": 0.014745713123280426,
             "recordCount": 189,
-            "numComparisons": 43067
+            "numComparisons": 49190
           },
           {
             "difference": -176,
-            "averageSimilarity": 0.014015707352631577,
+            "averageSimilarity": 0.014670082205789478,
             "recordCount": 190,
-            "numComparisons": 42736
+            "numComparisons": 48792
           },
           {
             "difference": -175,
-            "averageSimilarity": 0.014352549795811529,
+            "averageSimilarity": 0.014941409082198953,
             "recordCount": 191,
-            "numComparisons": 44130
+            "numComparisons": 50094
           },
           {
             "difference": -174,
-            "averageSimilarity": 0.014328307025000002,
+            "averageSimilarity": 0.01487992333697917,
             "recordCount": 192,
-            "numComparisons": 44023
+            "numComparisons": 49867
           },
           {
             "difference": -173,
-            "averageSimilarity": 0.014168672225906738,
+            "averageSimilarity": 0.014809362699999998,
             "recordCount": 193,
-            "numComparisons": 44947
+            "numComparisons": 50862
           },
           {
             "difference": -172,
-            "averageSimilarity": 0.014195010970618555,
+            "averageSimilarity": 0.014810400814948449,
             "recordCount": 194,
-            "numComparisons": 45063
-          },
-          {
-            "difference": -171,
-            "averageSimilarity": 0.014269257585641008,
-            "recordCount": 195,
-            "numComparisons": 45069
-          },
-          {
-            "difference": -170,
-            "averageSimilarity": 0.014310771117857137,
-            "recordCount": 196,
-            "numComparisons": 44727
-          },
-          {
-            "difference": -169,
-            "averageSimilarity": 0.014244950614213187,
-            "recordCount": 197,
-            "numComparisons": 44751
-          },
-          {
-            "difference": -168,
-            "averageSimilarity": 0.014329537716161623,
-            "recordCount": 198,
-            "numComparisons": 45251
-          },
-          {
-            "difference": -167,
-            "averageSimilarity": 0.014281750541206038,
-            "recordCount": 199,
-            "numComparisons": 46170
-          },
-          {
-            "difference": -166,
-            "averageSimilarity": 0.014306346330500002,
-            "recordCount": 200,
-            "numComparisons": 47232
-          },
-          {
-            "difference": -165,
-            "averageSimilarity": 0.014273587014427857,
-            "recordCount": 201,
-            "numComparisons": 47131
-          },
-          {
-            "difference": -164,
-            "averageSimilarity": 0.01442314084207921,
-            "recordCount": 202,
-            "numComparisons": 47046
-          },
-          {
-            "difference": -163,
-            "averageSimilarity": 0.014350928582758625,
-            "recordCount": 203,
-            "numComparisons": 46979
-          },
-          {
-            "difference": -162,
-            "averageSimilarity": 0.014331227897058822,
-            "recordCount": 204,
-            "numComparisons": 46963
-          },
-          {
-            "difference": -161,
-            "averageSimilarity": 0.014303245875609754,
-            "recordCount": 205,
-            "numComparisons": 47844
-          },
-          {
-            "difference": -160,
-            "averageSimilarity": 0.014312626461650482,
-            "recordCount": 206,
-            "numComparisons": 48460
-          },
-          {
-            "difference": -159,
-            "averageSimilarity": 0.014248523271497594,
-            "recordCount": 207,
-            "numComparisons": 48577
-          },
-          {
-            "difference": -158,
-            "averageSimilarity": 0.014209962254807694,
-            "recordCount": 208,
-            "numComparisons": 48990
-          },
-          {
-            "difference": -157,
-            "averageSimilarity": 0.014289470568899516,
-            "recordCount": 209,
-            "numComparisons": 48625
-          },
-          {
-            "difference": -156,
-            "averageSimilarity": 0.014282763931904767,
-            "recordCount": 210,
-            "numComparisons": 47714
-          },
-          {
-            "difference": -155,
-            "averageSimilarity": 0.01431310349620854,
-            "recordCount": 211,
-            "numComparisons": 48434
-          },
-          {
-            "difference": -154,
-            "averageSimilarity": 0.014432238820754726,
-            "recordCount": 212,
-            "numComparisons": 49158
-          },
-          {
-            "difference": -153,
-            "averageSimilarity": 0.014201665707511739,
-            "recordCount": 213,
-            "numComparisons": 49834
-          },
-          {
-            "difference": -152,
-            "averageSimilarity": 0.01435540267803738,
-            "recordCount": 214,
-            "numComparisons": 50613
-          },
-          {
-            "difference": -151,
-            "averageSimilarity": 0.014527844113488371,
-            "recordCount": 215,
-            "numComparisons": 50659
-          },
-          {
-            "difference": -150,
-            "averageSimilarity": 0.014419209471759264,
-            "recordCount": 216,
-            "numComparisons": 50159
-          },
-          {
-            "difference": -149,
-            "averageSimilarity": 0.014438759084331794,
-            "recordCount": 217,
-            "numComparisons": 49322
-          },
-          {
-            "difference": -148,
-            "averageSimilarity": 0.014320098979816516,
-            "recordCount": 218,
-            "numComparisons": 49361
-          },
-          {
-            "difference": -147,
-            "averageSimilarity": 0.014462176160273971,
-            "recordCount": 219,
-            "numComparisons": 49875
-          },
-          {
-            "difference": -146,
-            "averageSimilarity": 0.014316305908636352,
-            "recordCount": 220,
-            "numComparisons": 50805
-          },
-          {
-            "difference": -145,
-            "averageSimilarity": 0.014481785862443449,
-            "recordCount": 221,
-            "numComparisons": 51184
-          },
-          {
-            "difference": -144,
-            "averageSimilarity": 0.014546356013063066,
-            "recordCount": 222,
-            "numComparisons": 51287
-          },
-          {
-            "difference": -143,
-            "averageSimilarity": 0.014436553701345285,
-            "recordCount": 223,
-            "numComparisons": 51063
-          },
-          {
-            "difference": -142,
-            "averageSimilarity": 0.014432287450446423,
-            "recordCount": 224,
-            "numComparisons": 50599
-          },
-          {
-            "difference": -141,
-            "averageSimilarity": 0.014483658969777782,
-            "recordCount": 225,
-            "numComparisons": 50610
-          },
-          {
-            "difference": -140,
-            "averageSimilarity": 0.01449645921238938,
-            "recordCount": 226,
-            "numComparisons": 51733
-          },
-          {
-            "difference": -139,
-            "averageSimilarity": 0.014490948161233464,
-            "recordCount": 227,
-            "numComparisons": 52076
-          },
-          {
-            "difference": -138,
-            "averageSimilarity": 0.01463153854824561,
-            "recordCount": 228,
-            "numComparisons": 52835
-          },
-          {
-            "difference": -137,
-            "averageSimilarity": 0.014668825546288216,
-            "recordCount": 229,
-            "numComparisons": 52924
-          },
-          {
-            "difference": -136,
-            "averageSimilarity": 0.014623498460434793,
-            "recordCount": 230,
-            "numComparisons": 52665
-          },
-          {
-            "difference": -135,
-            "averageSimilarity": 0.014716435351948044,
-            "recordCount": 231,
-            "numComparisons": 52303
-          },
-          {
-            "difference": -134,
-            "averageSimilarity": 0.014556211065086203,
-            "recordCount": 232,
-            "numComparisons": 52213
-          },
-          {
-            "difference": -133,
-            "averageSimilarity": 0.014691748996995702,
-            "recordCount": 233,
-            "numComparisons": 53254
-          },
-          {
-            "difference": -132,
-            "averageSimilarity": 0.014649942397435892,
-            "recordCount": 234,
-            "numComparisons": 54270
-          },
-          {
-            "difference": -131,
-            "averageSimilarity": 0.014712533220000006,
-            "recordCount": 235,
-            "numComparisons": 54441
-          },
-          {
-            "difference": -130,
-            "averageSimilarity": 0.014857678648728813,
-            "recordCount": 236,
-            "numComparisons": 54608
-          },
-          {
-            "difference": -129,
-            "averageSimilarity": 0.014971448653164559,
-            "recordCount": 237,
-            "numComparisons": 53859
-          },
-          {
-            "difference": -128,
-            "averageSimilarity": 0.014758638652100847,
-            "recordCount": 238,
-            "numComparisons": 53960
-          },
-          {
-            "difference": -127,
-            "averageSimilarity": 0.014974663943933058,
-            "recordCount": 239,
-            "numComparisons": 53941
-          },
-          {
-            "difference": -126,
-            "averageSimilarity": 0.015098856572916663,
-            "recordCount": 240,
-            "numComparisons": 54479
-          },
-          {
-            "difference": -125,
-            "averageSimilarity": 0.014940352391701241,
-            "recordCount": 241,
-            "numComparisons": 55353
-          },
-          {
-            "difference": -124,
-            "averageSimilarity": 0.015009463973553714,
-            "recordCount": 242,
-            "numComparisons": 56030
-          },
-          {
-            "difference": -123,
-            "averageSimilarity": 0.015025209061316876,
-            "recordCount": 243,
-            "numComparisons": 56680
-          },
-          {
-            "difference": -122,
-            "averageSimilarity": 0.015243758272131145,
-            "recordCount": 244,
-            "numComparisons": 56158
-          },
-          {
-            "difference": -121,
-            "averageSimilarity": 0.015106060387755107,
-            "recordCount": 245,
-            "numComparisons": 55366
-          },
-          {
-            "difference": -120,
-            "averageSimilarity": 0.014975419564634147,
-            "recordCount": 246,
-            "numComparisons": 55768
-          },
-          {
-            "difference": -119,
-            "averageSimilarity": 0.015086711487854239,
-            "recordCount": 247,
-            "numComparisons": 56454
-          },
-          {
-            "difference": -118,
-            "averageSimilarity": 0.015096130236290329,
-            "recordCount": 248,
-            "numComparisons": 56806
-          },
-          {
-            "difference": -117,
-            "averageSimilarity": 0.015341781207228913,
-            "recordCount": 249,
-            "numComparisons": 57536
-          },
-          {
-            "difference": -116,
-            "averageSimilarity": 0.015183746727199998,
-            "recordCount": 250,
-            "numComparisons": 57699
-          },
-          {
-            "difference": -115,
-            "averageSimilarity": 0.015270606542629487,
-            "recordCount": 251,
-            "numComparisons": 56952
-          },
-          {
-            "difference": -114,
-            "averageSimilarity": 0.015216246019841255,
-            "recordCount": 252,
-            "numComparisons": 56530
-          },
-          {
-            "difference": -113,
-            "averageSimilarity": 0.015157150871146241,
-            "recordCount": 253,
-            "numComparisons": 57094
-          },
-          {
-            "difference": -112,
-            "averageSimilarity": 0.015324842648818903,
-            "recordCount": 254,
-            "numComparisons": 57807
-          },
-          {
-            "difference": -111,
-            "averageSimilarity": 0.01534617613568628,
-            "recordCount": 255,
-            "numComparisons": 58049
-          },
-          {
-            "difference": -110,
-            "averageSimilarity": 0.015339949708203134,
-            "recordCount": 256,
-            "numComparisons": 58987
-          },
-          {
-            "difference": -109,
-            "averageSimilarity": 0.015304859525680942,
-            "recordCount": 257,
-            "numComparisons": 58752
-          },
-          {
-            "difference": -108,
-            "averageSimilarity": 0.01543692576976745,
-            "recordCount": 258,
-            "numComparisons": 58522
-          },
-          {
-            "difference": -107,
-            "averageSimilarity": 0.015538780557528957,
-            "recordCount": 259,
-            "numComparisons": 57921
-          },
-          {
-            "difference": -106,
-            "averageSimilarity": 0.015246247621153848,
-            "recordCount": 260,
-            "numComparisons": 57848
-          },
-          {
-            "difference": -105,
-            "averageSimilarity": 0.015425007340996156,
-            "recordCount": 261,
-            "numComparisons": 59329
-          },
-          {
-            "difference": -104,
-            "averageSimilarity": 0.015393592200381686,
-            "recordCount": 262,
-            "numComparisons": 60219
-          },
-          {
-            "difference": -103,
-            "averageSimilarity": 0.01547275897110265,
-            "recordCount": 263,
-            "numComparisons": 60213
-          },
-          {
-            "difference": -102,
-            "averageSimilarity": 0.015435165201515154,
-            "recordCount": 264,
-            "numComparisons": 59768
-          },
-          {
-            "difference": -101,
-            "averageSimilarity": 0.015573052916603776,
-            "recordCount": 265,
-            "numComparisons": 59628
-          },
-          {
-            "difference": -100,
-            "averageSimilarity": 0.01547252359022556,
-            "recordCount": 266,
-            "numComparisons": 59434
-          },
-          {
-            "difference": -99,
-            "averageSimilarity": 0.015497235162921348,
-            "recordCount": 267,
-            "numComparisons": 59661
-          },
-          {
-            "difference": -98,
-            "averageSimilarity": 0.015635316413432833,
-            "recordCount": 268,
-            "numComparisons": 60978
-          },
-          {
-            "difference": -97,
-            "averageSimilarity": 0.015699214752044593,
-            "recordCount": 269,
-            "numComparisons": 62025
-          },
-          {
-            "difference": -96,
-            "averageSimilarity": 0.015596606827037044,
-            "recordCount": 270,
-            "numComparisons": 62236
-          },
-          {
-            "difference": -95,
-            "averageSimilarity": 0.0157027977221402,
-            "recordCount": 271,
-            "numComparisons": 62137
-          },
-          {
-            "difference": -94,
-            "averageSimilarity": 0.015702247373529404,
-            "recordCount": 272,
-            "numComparisons": 61406
-          },
-          {
-            "difference": -93,
-            "averageSimilarity": 0.01579287986373628,
-            "recordCount": 273,
-            "numComparisons": 61412
-          },
-          {
-            "difference": -92,
-            "averageSimilarity": 0.015662153808759138,
-            "recordCount": 274,
-            "numComparisons": 62070
-          },
-          {
-            "difference": -91,
-            "averageSimilarity": 0.015612074028363648,
-            "recordCount": 275,
-            "numComparisons": 63021
-          },
-          {
-            "difference": -90,
-            "averageSimilarity": 0.015913048784420274,
-            "recordCount": 276,
-            "numComparisons": 64287
-          },
-          {
-            "difference": -89,
-            "averageSimilarity": 0.01581562846064983,
-            "recordCount": 277,
-            "numComparisons": 64855
-          },
-          {
-            "difference": -88,
-            "averageSimilarity": 0.015753640664748207,
-            "recordCount": 278,
-            "numComparisons": 63650
-          },
-          {
-            "difference": -87,
-            "averageSimilarity": 0.015924714645878114,
-            "recordCount": 279,
-            "numComparisons": 63254
-          },
-          {
-            "difference": -86,
-            "averageSimilarity": 0.01595536173071432,
-            "recordCount": 280,
-            "numComparisons": 63422
-          },
-          {
-            "difference": -85,
-            "averageSimilarity": 0.015740897838434176,
-            "recordCount": 281,
-            "numComparisons": 64237
-          },
-          {
-            "difference": -84,
-            "averageSimilarity": 0.01590565658191488,
-            "recordCount": 282,
-            "numComparisons": 65851
-          },
-          {
-            "difference": -83,
-            "averageSimilarity": 0.015929435061484098,
-            "recordCount": 283,
-            "numComparisons": 66556
-          },
-          {
-            "difference": -82,
-            "averageSimilarity": 0.01576852927042253,
-            "recordCount": 284,
-            "numComparisons": 67419
-          },
-          {
-            "difference": -81,
-            "averageSimilarity": 0.015946714552631573,
-            "recordCount": 285,
-            "numComparisons": 66884
-          },
-          {
-            "difference": -80,
-            "averageSimilarity": 0.015859885554895124,
-            "recordCount": 286,
-            "numComparisons": 66366
-          },
-          {
-            "difference": -79,
-            "averageSimilarity": 0.015983132378048756,
-            "recordCount": 287,
-            "numComparisons": 66121
-          },
-          {
-            "difference": -78,
-            "averageSimilarity": 0.015861040726388873,
-            "recordCount": 288,
-            "numComparisons": 66708
-          },
-          {
-            "difference": -77,
-            "averageSimilarity": 0.01590245202110725,
-            "recordCount": 289,
-            "numComparisons": 68028
-          },
-          {
-            "difference": -76,
-            "averageSimilarity": 0.015919713827241375,
-            "recordCount": 290,
-            "numComparisons": 68825
-          },
-          {
-            "difference": -75,
-            "averageSimilarity": 0.015910764632646037,
-            "recordCount": 291,
-            "numComparisons": 70004
-          },
-          {
-            "difference": -74,
-            "averageSimilarity": 0.015907389911643845,
-            "recordCount": 292,
-            "numComparisons": 69575
-          },
-          {
-            "difference": -73,
-            "averageSimilarity": 0.01597814305460751,
-            "recordCount": 293,
-            "numComparisons": 69000
-          },
-          {
-            "difference": -72,
-            "averageSimilarity": 0.015919429902380943,
-            "recordCount": 294,
-            "numComparisons": 68840
-          },
-          {
-            "difference": -71,
-            "averageSimilarity": 0.015929683141694923,
-            "recordCount": 295,
-            "numComparisons": 69270
-          },
-          {
-            "difference": -70,
-            "averageSimilarity": 0.01591994260405406,
-            "recordCount": 296,
-            "numComparisons": 70672
-          },
-          {
-            "difference": -69,
-            "averageSimilarity": 0.015798822201683504,
-            "recordCount": 297,
-            "numComparisons": 71805
-          },
-          {
-            "difference": -68,
-            "averageSimilarity": 0.01588084835570468,
-            "recordCount": 298,
-            "numComparisons": 72106
-          },
-          {
-            "difference": -67,
-            "averageSimilarity": 0.016006323484280945,
-            "recordCount": 299,
-            "numComparisons": 70562
-          },
-          {
-            "difference": -66,
-            "averageSimilarity": 0.015964140103666688,
-            "recordCount": 300,
-            "numComparisons": 70778
-          },
-          {
-            "difference": -65,
-            "averageSimilarity": 0.015998143468770765,
-            "recordCount": 301,
-            "numComparisons": 71204
-          },
-          {
-            "difference": -64,
-            "averageSimilarity": 0.015961115920860927,
-            "recordCount": 302,
-            "numComparisons": 71371
-          },
-          {
-            "difference": -63,
-            "averageSimilarity": 0.0158805311217822,
-            "recordCount": 303,
-            "numComparisons": 72163
-          },
-          {
-            "difference": -62,
-            "averageSimilarity": 0.015937718827302636,
-            "recordCount": 304,
-            "numComparisons": 73276
-          },
-          {
-            "difference": -61,
-            "averageSimilarity": 0.016037874765573758,
-            "recordCount": 305,
-            "numComparisons": 73983
-          },
-          {
-            "difference": -60,
-            "averageSimilarity": 0.015926714811437922,
-            "recordCount": 306,
-            "numComparisons": 73251
-          },
-          {
-            "difference": -59,
-            "averageSimilarity": 0.015916485701302944,
-            "recordCount": 307,
-            "numComparisons": 72563
-          },
-          {
-            "difference": -58,
-            "averageSimilarity": 0.016066426016233756,
-            "recordCount": 308,
-            "numComparisons": 72605
-          },
-          {
-            "difference": -57,
-            "averageSimilarity": 0.016029209919093863,
-            "recordCount": 309,
-            "numComparisons": 72695
-          },
-          {
-            "difference": -56,
-            "averageSimilarity": 0.016145106600322572,
-            "recordCount": 310,
-            "numComparisons": 73913
-          },
-          {
-            "difference": -55,
-            "averageSimilarity": 0.016076834099356913,
-            "recordCount": 311,
-            "numComparisons": 75633
-          },
-          {
-            "difference": -54,
-            "averageSimilarity": 0.016216742344551276,
-            "recordCount": 312,
-            "numComparisons": 76068
-          },
-          {
-            "difference": -53,
-            "averageSimilarity": 0.016258266113099037,
-            "recordCount": 313,
-            "numComparisons": 74752
-          },
-          {
-            "difference": -52,
-            "averageSimilarity": 0.01607683682898091,
-            "recordCount": 314,
-            "numComparisons": 74293
-          },
-          {
-            "difference": -51,
-            "averageSimilarity": 0.01618342966761904,
-            "recordCount": 315,
-            "numComparisons": 74778
-          },
-          {
-            "difference": -50,
-            "averageSimilarity": 0.016015550415189893,
-            "recordCount": 316,
-            "numComparisons": 74447
-          },
-          {
-            "difference": -49,
-            "averageSimilarity": 0.016051281406624592,
-            "recordCount": 317,
-            "numComparisons": 75389
-          },
-          {
-            "difference": -48,
-            "averageSimilarity": 0.01606110535314463,
-            "recordCount": 318,
-            "numComparisons": 76450
-          },
-          {
-            "difference": -47,
-            "averageSimilarity": 0.016116948464576796,
-            "recordCount": 319,
-            "numComparisons": 76855
-          },
-          {
-            "difference": -46,
-            "averageSimilarity": 0.01607046526656251,
-            "recordCount": 320,
-            "numComparisons": 76125
-          },
-          {
-            "difference": -45,
-            "averageSimilarity": 0.01620801846292834,
-            "recordCount": 321,
-            "numComparisons": 76121
-          },
-          {
-            "difference": -44,
-            "averageSimilarity": 0.016312456114596273,
-            "recordCount": 322,
-            "numComparisons": 75668
-          },
-          {
-            "difference": -43,
-            "averageSimilarity": 0.016273804766873044,
-            "recordCount": 323,
-            "numComparisons": 76615
-          },
-          {
-            "difference": -42,
-            "averageSimilarity": 0.016196562075000007,
-            "recordCount": 324,
-            "numComparisons": 77305
-          },
-          {
-            "difference": -41,
-            "averageSimilarity": 0.016128549290461532,
-            "recordCount": 325,
-            "numComparisons": 78286
-          },
-          {
-            "difference": -40,
-            "averageSimilarity": 0.015988017807361966,
-            "recordCount": 326,
-            "numComparisons": 77413
-          },
-          {
-            "difference": -39,
-            "averageSimilarity": 0.016192058453822628,
-            "recordCount": 327,
-            "numComparisons": 77542
-          },
-          {
-            "difference": -38,
-            "averageSimilarity": 0.016033060054573167,
-            "recordCount": 328,
-            "numComparisons": 76534
-          },
-          {
-            "difference": -37,
-            "averageSimilarity": 0.016044602470516766,
-            "recordCount": 329,
-            "numComparisons": 76748
-          },
-          {
-            "difference": -36,
-            "averageSimilarity": 0.016155650229696974,
-            "recordCount": 330,
-            "numComparisons": 77281
-          },
-          {
-            "difference": -35,
-            "averageSimilarity": 0.015939100574622344,
-            "recordCount": 331,
-            "numComparisons": 77892
-          },
-          {
-            "difference": -34,
-            "averageSimilarity": 0.016209709534939776,
-            "recordCount": 332,
-            "numComparisons": 79467
-          },
-          {
-            "difference": -33,
-            "averageSimilarity": 0.016043172090090107,
-            "recordCount": 333,
-            "numComparisons": 79177
-          },
-          {
-            "difference": -32,
-            "averageSimilarity": 0.01599955431616768,
-            "recordCount": 334,
-            "numComparisons": 78418
-          },
-          {
-            "difference": -31,
-            "averageSimilarity": 0.015929642859104465,
-            "recordCount": 335,
-            "numComparisons": 77596
-          },
-          {
-            "difference": -30,
-            "averageSimilarity": 0.01613360965029763,
-            "recordCount": 336,
-            "numComparisons": 78407
-          },
-          {
-            "difference": -29,
-            "averageSimilarity": 0.01599710155163202,
-            "recordCount": 337,
-            "numComparisons": 78708
-          },
-          {
-            "difference": -28,
-            "averageSimilarity": 0.015882278519526623,
-            "recordCount": 338,
-            "numComparisons": 80157
-          },
-          {
-            "difference": -27,
-            "averageSimilarity": 0.01593269360147494,
-            "recordCount": 339,
-            "numComparisons": 80902
-          },
-          {
-            "difference": -26,
-            "averageSimilarity": 0.015907420843529405,
-            "recordCount": 340,
-            "numComparisons": 81051
-          },
-          {
-            "difference": -25,
-            "averageSimilarity": 0.015924158188563065,
-            "recordCount": 341,
-            "numComparisons": 81001
-          },
-          {
-            "difference": -24,
-            "averageSimilarity": 0.015920833028654966,
-            "recordCount": 342,
-            "numComparisons": 79446
-          },
-          {
-            "difference": -23,
-            "averageSimilarity": 0.01599725795947523,
-            "recordCount": 343,
-            "numComparisons": 79601
-          },
-          {
-            "difference": -22,
-            "averageSimilarity": 0.01592618321686048,
-            "recordCount": 344,
-            "numComparisons": 79697
-          },
-          {
-            "difference": -21,
-            "averageSimilarity": 0.01583688787594201,
-            "recordCount": 345,
-            "numComparisons": 80723
-          },
-          {
-            "difference": -20,
-            "averageSimilarity": 0.01582877859450866,
-            "recordCount": 346,
-            "numComparisons": 81700
-          },
-          {
-            "difference": -19,
-            "averageSimilarity": 0.01582264371930836,
-            "recordCount": 347,
-            "numComparisons": 82018
-          },
-          {
-            "difference": -18,
-            "averageSimilarity": 0.01599107335229888,
-            "recordCount": 348,
-            "numComparisons": 81013
-          },
-          {
-            "difference": -17,
-            "averageSimilarity": 0.015927075325501448,
-            "recordCount": 349,
-            "numComparisons": 80418
-          },
-          {
-            "difference": -16,
-            "averageSimilarity": 0.016014947771428582,
-            "recordCount": 350,
-            "numComparisons": 81635
-          },
-          {
-            "difference": -15,
-            "averageSimilarity": 0.015747843003133925,
-            "recordCount": 351,
-            "numComparisons": 81707
-          },
-          {
-            "difference": -14,
-            "averageSimilarity": 0.015827176901420468,
-            "recordCount": 352,
-            "numComparisons": 82120
-          },
-          {
-            "difference": -13,
-            "averageSimilarity": 0.015896037266855522,
-            "recordCount": 353,
-            "numComparisons": 83718
-          },
-          {
-            "difference": -12,
-            "averageSimilarity": 0.015750437789265534,
-            "recordCount": 354,
-            "numComparisons": 83833
-          },
-          {
-            "difference": -11,
-            "averageSimilarity": 0.01575241783661972,
-            "recordCount": 355,
-            "numComparisons": 82650
-          },
-          {
-            "difference": -10,
-            "averageSimilarity": 0.01580213203932584,
-            "recordCount": 356,
-            "numComparisons": 82186
-          },
-          {
-            "difference": -9,
-            "averageSimilarity": 0.01605150971876749,
-            "recordCount": 357,
-            "numComparisons": 82285
-          },
-          {
-            "difference": -8,
-            "averageSimilarity": 0.01600313952821226,
-            "recordCount": 358,
-            "numComparisons": 82857
-          },
-          {
-            "difference": -7,
-            "averageSimilarity": 0.015952421836490264,
-            "recordCount": 359,
-            "numComparisons": 83807
-          },
-          {
-            "difference": -6,
-            "averageSimilarity": 0.01598160161444445,
-            "recordCount": 360,
-            "numComparisons": 85032
-          },
-          {
-            "difference": -5,
-            "averageSimilarity": 0.015870225921052642,
-            "recordCount": 361,
-            "numComparisons": 85225
-          },
-          {
-            "difference": -4,
-            "averageSimilarity": 0.015855927904419913,
-            "recordCount": 362,
-            "numComparisons": 84232
-          },
-          {
-            "difference": -3,
-            "averageSimilarity": 0.015919251146556474,
-            "recordCount": 363,
-            "numComparisons": 83599
-          },
-          {
-            "difference": -2,
-            "averageSimilarity": 0.015887720531868123,
-            "recordCount": 364,
-            "numComparisons": 83682
-          },
-          {
-            "difference": -1,
-            "averageSimilarity": 0.01581382066328765,
-            "recordCount": 365,
-            "numComparisons": 83561
-          },
-          {
-            "difference": 0,
-            "averageSimilarity": 0.015952683694262292,
-            "recordCount": 366,
-            "numComparisons": 83637
-          },
-          {
-            "difference": 1,
-            "averageSimilarity": 0.015868605674794544,
-            "recordCount": 365,
-            "numComparisons": 85011
-          },
-          {
-            "difference": 2,
-            "averageSimilarity": 0.015773525510989008,
-            "recordCount": 364,
-            "numComparisons": 84898
-          },
-          {
-            "difference": 3,
-            "averageSimilarity": 0.015874491412396708,
-            "recordCount": 363,
-            "numComparisons": 84639
-          },
-          {
-            "difference": 4,
-            "averageSimilarity": 0.016001899615745854,
-            "recordCount": 362,
-            "numComparisons": 83354
-          },
-          {
-            "difference": 5,
-            "averageSimilarity": 0.015934029603601123,
-            "recordCount": 361,
-            "numComparisons": 83234
-          },
-          {
-            "difference": 6,
-            "averageSimilarity": 0.01597524579027779,
-            "recordCount": 360,
-            "numComparisons": 82562
-          },
-          {
-            "difference": 7,
-            "averageSimilarity": 0.01606891559693596,
-            "recordCount": 359,
-            "numComparisons": 83136
-          },
-          {
-            "difference": 8,
-            "averageSimilarity": 0.016086529813128494,
-            "recordCount": 358,
-            "numComparisons": 83927
-          },
-          {
-            "difference": 9,
-            "averageSimilarity": 0.015981018017647078,
-            "recordCount": 357,
-            "numComparisons": 83554
-          },
-          {
-            "difference": 10,
-            "averageSimilarity": 0.015997822861797743,
-            "recordCount": 356,
-            "numComparisons": 83011
-          },
-          {
-            "difference": 11,
-            "averageSimilarity": 0.016066128789859132,
-            "recordCount": 355,
-            "numComparisons": 81879
-          },
-          {
-            "difference": 12,
-            "averageSimilarity": 0.015959558204519792,
-            "recordCount": 354,
-            "numComparisons": 81875
-          },
-          {
-            "difference": 13,
-            "averageSimilarity": 0.016062876828611898,
-            "recordCount": 353,
-            "numComparisons": 81055
-          },
-          {
-            "difference": 14,
-            "averageSimilarity": 0.01613758124659091,
-            "recordCount": 352,
-            "numComparisons": 81366
-          },
-          {
-            "difference": 15,
-            "averageSimilarity": 0.016062737575498563,
-            "recordCount": 351,
-            "numComparisons": 81669
-          },
-          {
-            "difference": 16,
-            "averageSimilarity": 0.016052415671714282,
-            "recordCount": 350,
-            "numComparisons": 80965
-          },
-          {
-            "difference": 17,
-            "averageSimilarity": 0.015997488149283638,
-            "recordCount": 349,
-            "numComparisons": 79672
-          },
-          {
-            "difference": 18,
-            "averageSimilarity": 0.01626299942011493,
-            "recordCount": 348,
-            "numComparisons": 78806
-          },
-          {
-            "difference": 19,
-            "averageSimilarity": 0.01620007321008648,
-            "recordCount": 347,
-            "numComparisons": 78901
-          },
-          {
-            "difference": 20,
-            "averageSimilarity": 0.016188353533815047,
-            "recordCount": 346,
-            "numComparisons": 79128
-          },
-          {
-            "difference": 21,
-            "averageSimilarity": 0.016095126748405787,
-            "recordCount": 345,
-            "numComparisons": 79136
-          },
-          {
-            "difference": 22,
-            "averageSimilarity": 0.01613251501366279,
-            "recordCount": 344,
-            "numComparisons": 79477
-          },
-          {
-            "difference": 23,
-            "averageSimilarity": 0.01622742516443148,
-            "recordCount": 343,
-            "numComparisons": 79073
-          },
-          {
-            "difference": 24,
-            "averageSimilarity": 0.01621646007017543,
-            "recordCount": 342,
-            "numComparisons": 77631
-          },
-          {
-            "difference": 25,
-            "averageSimilarity": 0.01640276625337243,
-            "recordCount": 341,
-            "numComparisons": 76672
-          },
-          {
-            "difference": 26,
-            "averageSimilarity": 0.016181614124999986,
-            "recordCount": 340,
-            "numComparisons": 76861
-          },
-          {
-            "difference": 27,
-            "averageSimilarity": 0.016185527582595883,
-            "recordCount": 339,
-            "numComparisons": 77004
-          },
-          {
-            "difference": 28,
-            "averageSimilarity": 0.016163490444378707,
-            "recordCount": 338,
-            "numComparisons": 77203
-          },
-          {
-            "difference": 29,
-            "averageSimilarity": 0.016376017704451042,
-            "recordCount": 337,
-            "numComparisons": 77700
-          },
-          {
-            "difference": 30,
-            "averageSimilarity": 0.016225908179166686,
-            "recordCount": 336,
-            "numComparisons": 77485
-          },
-          {
-            "difference": 31,
-            "averageSimilarity": 0.016283449227761197,
-            "recordCount": 335,
-            "numComparisons": 76160
-          },
-          {
-            "difference": 32,
-            "averageSimilarity": 0.016236101299401187,
-            "recordCount": 334,
-            "numComparisons": 75373
-          },
-          {
-            "difference": 33,
-            "averageSimilarity": 0.01635096092012014,
-            "recordCount": 333,
-            "numComparisons": 75473
-          },
-          {
-            "difference": 34,
-            "averageSimilarity": 0.016295786829518072,
-            "recordCount": 332,
-            "numComparisons": 75715
-          },
-          {
-            "difference": 35,
-            "averageSimilarity": 0.01634336558459213,
-            "recordCount": 331,
-            "numComparisons": 76021
-          },
-          {
-            "difference": 36,
-            "averageSimilarity": 0.01624259071181816,
-            "recordCount": 330,
-            "numComparisons": 76670
-          },
-          {
-            "difference": 37,
-            "averageSimilarity": 0.016302797796960474,
-            "recordCount": 329,
-            "numComparisons": 76996
-          },
-          {
-            "difference": 38,
-            "averageSimilarity": 0.016341233462804864,
-            "recordCount": 328,
-            "numComparisons": 75629
-          },
-          {
-            "difference": 39,
-            "averageSimilarity": 0.01631801614556573,
-            "recordCount": 327,
-            "numComparisons": 74753
-          },
-          {
-            "difference": 40,
-            "averageSimilarity": 0.01628014562914112,
-            "recordCount": 326,
-            "numComparisons": 75162
-          },
-          {
-            "difference": 41,
-            "averageSimilarity": 0.016379179967384607,
-            "recordCount": 325,
-            "numComparisons": 75159
-          },
-          {
-            "difference": 42,
-            "averageSimilarity": 0.016356975834259255,
-            "recordCount": 324,
-            "numComparisons": 75228
-          },
-          {
-            "difference": 43,
-            "averageSimilarity": 0.016357339959752342,
-            "recordCount": 323,
-            "numComparisons": 75744
-          },
-          {
-            "difference": 44,
-            "averageSimilarity": 0.016330304922981365,
-            "recordCount": 322,
-            "numComparisons": 75320
-          },
-          {
-            "difference": 45,
-            "averageSimilarity": 0.01632353044984424,
-            "recordCount": 321,
-            "numComparisons": 73937
-          },
-          {
-            "difference": 46,
-            "averageSimilarity": 0.016525359395000012,
-            "recordCount": 320,
-            "numComparisons": 73674
-          },
-          {
-            "difference": 47,
-            "averageSimilarity": 0.016260778235736673,
-            "recordCount": 319,
-            "numComparisons": 73674
-          },
-          {
-            "difference": 48,
-            "averageSimilarity": 0.016391621065723273,
-            "recordCount": 318,
-            "numComparisons": 73763
-          },
-          {
-            "difference": 49,
-            "averageSimilarity": 0.0163802406873817,
-            "recordCount": 317,
-            "numComparisons": 73521
-          },
-          {
-            "difference": 50,
-            "averageSimilarity": 0.01643389309082279,
-            "recordCount": 316,
-            "numComparisons": 74050
-          },
-          {
-            "difference": 51,
-            "averageSimilarity": 0.01636847070539684,
-            "recordCount": 315,
-            "numComparisons": 73579
-          },
-          {
-            "difference": 52,
-            "averageSimilarity": 0.016317745442038227,
-            "recordCount": 314,
-            "numComparisons": 72355
-          },
-          {
-            "difference": 53,
-            "averageSimilarity": 0.01653040490926515,
-            "recordCount": 313,
-            "numComparisons": 71315
-          },
-          {
-            "difference": 54,
-            "averageSimilarity": 0.016502487948397426,
-            "recordCount": 312,
-            "numComparisons": 72061
-          },
-          {
-            "difference": 55,
-            "averageSimilarity": 0.016396930608038582,
-            "recordCount": 311,
-            "numComparisons": 71642
-          },
-          {
-            "difference": 56,
-            "averageSimilarity": 0.016496661416129016,
-            "recordCount": 310,
-            "numComparisons": 71549
-          },
-          {
-            "difference": 57,
-            "averageSimilarity": 0.016520232501941734,
-            "recordCount": 309,
-            "numComparisons": 72570
-          },
-          {
-            "difference": 58,
-            "averageSimilarity": 0.01657777904772727,
-            "recordCount": 308,
-            "numComparisons": 71826
-          },
-          {
-            "difference": 59,
-            "averageSimilarity": 0.016755844951791523,
-            "recordCount": 307,
-            "numComparisons": 70574
-          },
-          {
-            "difference": 60,
-            "averageSimilarity": 0.016515130620915003,
-            "recordCount": 306,
-            "numComparisons": 70257
-          },
-          {
-            "difference": 61,
-            "averageSimilarity": 0.01660471868196721,
-            "recordCount": 305,
-            "numComparisons": 70525
-          },
-          {
-            "difference": 62,
-            "averageSimilarity": 0.016798633411184222,
-            "recordCount": 304,
-            "numComparisons": 70444
-          },
-          {
-            "difference": 63,
-            "averageSimilarity": 0.01652378191089109,
-            "recordCount": 303,
-            "numComparisons": 70504
-          },
-          {
-            "difference": 64,
-            "averageSimilarity": 0.016572098936092704,
-            "recordCount": 302,
-            "numComparisons": 71198
-          },
-          {
-            "difference": 65,
-            "averageSimilarity": 0.016654987997009974,
-            "recordCount": 301,
-            "numComparisons": 70514
-          },
-          {
-            "difference": 66,
-            "averageSimilarity": 0.016694864286333332,
-            "recordCount": 300,
-            "numComparisons": 70025
-          },
-          {
-            "difference": 67,
-            "averageSimilarity": 0.016561580840802698,
-            "recordCount": 299,
-            "numComparisons": 69260
-          },
-          {
-            "difference": 68,
-            "averageSimilarity": 0.016557296307382553,
-            "recordCount": 298,
-            "numComparisons": 69417
-          },
-          {
-            "difference": 69,
-            "averageSimilarity": 0.016554623848148167,
-            "recordCount": 297,
-            "numComparisons": 69373
-          },
-          {
-            "difference": 70,
-            "averageSimilarity": 0.016337232809797316,
-            "recordCount": 296,
-            "numComparisons": 69172
-          },
-          {
-            "difference": 71,
-            "averageSimilarity": 0.01640602553050846,
-            "recordCount": 295,
-            "numComparisons": 69871
-          },
-          {
-            "difference": 72,
-            "averageSimilarity": 0.01647781367074829,
-            "recordCount": 294,
-            "numComparisons": 69610
-          },
-          {
-            "difference": 73,
-            "averageSimilarity": 0.016410886996245745,
-            "recordCount": 293,
-            "numComparisons": 68625
-          },
-          {
-            "difference": 74,
-            "averageSimilarity": 0.01636875084657535,
-            "recordCount": 292,
-            "numComparisons": 67538
-          },
-          {
-            "difference": 75,
-            "averageSimilarity": 0.016470690568384884,
-            "recordCount": 291,
-            "numComparisons": 68603
-          },
-          {
-            "difference": 76,
-            "averageSimilarity": 0.016599828201034495,
-            "recordCount": 290,
-            "numComparisons": 68707
-          },
-          {
-            "difference": 77,
-            "averageSimilarity": 0.016448508570242187,
-            "recordCount": 289,
-            "numComparisons": 68628
-          },
-          {
-            "difference": 78,
-            "averageSimilarity": 0.01637198341493056,
-            "recordCount": 288,
-            "numComparisons": 69114
-          },
-          {
-            "difference": 79,
-            "averageSimilarity": 0.016299729252961692,
-            "recordCount": 287,
-            "numComparisons": 68580
-          },
-          {
-            "difference": 80,
-            "averageSimilarity": 0.016525665483916093,
-            "recordCount": 286,
-            "numComparisons": 66950
-          },
-          {
-            "difference": 81,
-            "averageSimilarity": 0.01635162457122808,
-            "recordCount": 285,
-            "numComparisons": 66340
-          },
-          {
-            "difference": 82,
-            "averageSimilarity": 0.0164371409943662,
-            "recordCount": 284,
-            "numComparisons": 67236
-          },
-          {
-            "difference": 83,
-            "averageSimilarity": 0.01643984812932862,
-            "recordCount": 283,
-            "numComparisons": 66926
-          },
-          {
-            "difference": 84,
-            "averageSimilarity": 0.01647614487553193,
-            "recordCount": 282,
-            "numComparisons": 66719
-          },
-          {
-            "difference": 85,
-            "averageSimilarity": 0.016454784354092526,
-            "recordCount": 281,
-            "numComparisons": 67723
-          },
-          {
-            "difference": 86,
-            "averageSimilarity": 0.016537289670714304,
-            "recordCount": 280,
-            "numComparisons": 67667
-          },
-          {
-            "difference": 87,
-            "averageSimilarity": 0.01648818096523298,
-            "recordCount": 279,
-            "numComparisons": 66606
-          },
-          {
-            "difference": 88,
-            "averageSimilarity": 0.01647696478165467,
-            "recordCount": 278,
-            "numComparisons": 65166
-          },
-          {
-            "difference": 89,
-            "averageSimilarity": 0.016499094160649812,
-            "recordCount": 277,
-            "numComparisons": 65148
-          },
-          {
-            "difference": 90,
-            "averageSimilarity": 0.016628079857971025,
-            "recordCount": 276,
-            "numComparisons": 65434
-          },
-          {
-            "difference": 91,
-            "averageSimilarity": 0.016450035357090914,
-            "recordCount": 275,
-            "numComparisons": 65027
-          },
-          {
-            "difference": 92,
-            "averageSimilarity": 0.016487721016423373,
-            "recordCount": 274,
-            "numComparisons": 65854
-          },
-          {
-            "difference": 93,
-            "averageSimilarity": 0.016472206379120884,
-            "recordCount": 273,
-            "numComparisons": 65479
-          },
-          {
-            "difference": 94,
-            "averageSimilarity": 0.016390791612132354,
-            "recordCount": 272,
-            "numComparisons": 64244
-          },
-          {
-            "difference": 95,
-            "averageSimilarity": 0.016515137538007367,
-            "recordCount": 271,
-            "numComparisons": 62856
-          },
-          {
-            "difference": 96,
-            "averageSimilarity": 0.016447347438518514,
-            "recordCount": 270,
-            "numComparisons": 63643
-          },
-          {
-            "difference": 97,
-            "averageSimilarity": 0.016473519654275084,
-            "recordCount": 269,
-            "numComparisons": 62947
-          },
-          {
-            "difference": 98,
-            "averageSimilarity": 0.016494179017537296,
-            "recordCount": 268,
-            "numComparisons": 62647
-          },
-          {
-            "difference": 99,
-            "averageSimilarity": 0.016591122389513133,
-            "recordCount": 267,
-            "numComparisons": 63299
-          },
-          {
-            "difference": 100,
-            "averageSimilarity": 0.01655628226127818,
-            "recordCount": 266,
-            "numComparisons": 63256
-          },
-          {
-            "difference": 101,
-            "averageSimilarity": 0.016459172297735858,
-            "recordCount": 265,
-            "numComparisons": 61899
-          },
-          {
-            "difference": 102,
-            "averageSimilarity": 0.016627362671212124,
-            "recordCount": 264,
-            "numComparisons": 61222
-          },
-          {
-            "difference": 103,
-            "averageSimilarity": 0.01665774368441061,
-            "recordCount": 263,
-            "numComparisons": 61321
-          },
-          {
-            "difference": 104,
-            "averageSimilarity": 0.016582654993129768,
-            "recordCount": 262,
-            "numComparisons": 60378
-          },
-          {
-            "difference": 105,
-            "averageSimilarity": 0.016718575619157093,
-            "recordCount": 261,
-            "numComparisons": 60259
-          },
-          {
-            "difference": 106,
-            "averageSimilarity": 0.016675828812307694,
-            "recordCount": 260,
-            "numComparisons": 60626
-          },
-          {
-            "difference": 107,
-            "averageSimilarity": 0.016512699685714286,
-            "recordCount": 259,
-            "numComparisons": 60272
-          },
-          {
-            "difference": 108,
-            "averageSimilarity": 0.01662359918759689,
-            "recordCount": 258,
-            "numComparisons": 58881
-          },
-          {
-            "difference": 109,
-            "averageSimilarity": 0.016806252477431907,
-            "recordCount": 257,
-            "numComparisons": 58126
-          },
-          {
-            "difference": 110,
-            "averageSimilarity": 0.016781081612500005,
-            "recordCount": 256,
-            "numComparisons": 59024
-          },
-          {
-            "difference": 111,
-            "averageSimilarity": 0.01667481448549019,
-            "recordCount": 255,
-            "numComparisons": 58479
-          },
-          {
-            "difference": 112,
-            "averageSimilarity": 0.016653440807086597,
-            "recordCount": 254,
-            "numComparisons": 57789
-          },
-          {
-            "difference": 113,
-            "averageSimilarity": 0.016766443757707517,
-            "recordCount": 253,
-            "numComparisons": 58481
-          },
-          {
-            "difference": 114,
-            "averageSimilarity": 0.016618285788888888,
-            "recordCount": 252,
-            "numComparisons": 58257
-          },
-          {
-            "difference": 115,
-            "averageSimilarity": 0.016628615360956178,
-            "recordCount": 251,
-            "numComparisons": 57098
-          },
-          {
-            "difference": 116,
-            "averageSimilarity": 0.016747942040399973,
-            "recordCount": 250,
-            "numComparisons": 56121
-          },
-          {
-            "difference": 117,
-            "averageSimilarity": 0.016641494504819276,
-            "recordCount": 249,
-            "numComparisons": 56240
-          },
-          {
-            "difference": 118,
-            "averageSimilarity": 0.016556398306854875,
-            "recordCount": 248,
-            "numComparisons": 56144
-          },
-          {
-            "difference": 119,
-            "averageSimilarity": 0.016763532192712545,
-            "recordCount": 247,
-            "numComparisons": 56463
-          },
-          {
-            "difference": 120,
-            "averageSimilarity": 0.01675515114186991,
-            "recordCount": 246,
-            "numComparisons": 56908
-          },
-          {
-            "difference": 121,
-            "averageSimilarity": 0.01679313935387754,
-            "recordCount": 245,
-            "numComparisons": 57022
-          },
-          {
-            "difference": 122,
-            "averageSimilarity": 0.016792069082377077,
-            "recordCount": 244,
-            "numComparisons": 55770
-          },
-          {
-            "difference": 123,
-            "averageSimilarity": 0.0167923622580247,
-            "recordCount": 243,
-            "numComparisons": 54597
-          },
-          {
-            "difference": 124,
-            "averageSimilarity": 0.016835038050413233,
-            "recordCount": 242,
-            "numComparisons": 54658
-          },
-          {
-            "difference": 125,
-            "averageSimilarity": 0.016794033328630692,
-            "recordCount": 241,
-            "numComparisons": 55152
-          },
-          {
-            "difference": 126,
-            "averageSimilarity": 0.016973566967083336,
-            "recordCount": 240,
-            "numComparisons": 54475
-          },
-          {
-            "difference": 127,
-            "averageSimilarity": 0.017037753427615068,
-            "recordCount": 239,
-            "numComparisons": 55005
-          },
-          {
-            "difference": 128,
-            "averageSimilarity": 0.0169358253331933,
-            "recordCount": 238,
-            "numComparisons": 54457
-          },
-          {
-            "difference": 129,
-            "averageSimilarity": 0.016937091102109673,
-            "recordCount": 237,
-            "numComparisons": 53665
-          },
-          {
-            "difference": 130,
-            "averageSimilarity": 0.017023068112288122,
-            "recordCount": 236,
-            "numComparisons": 52730
-          },
-          {
-            "difference": 131,
-            "averageSimilarity": 0.016920055433617024,
-            "recordCount": 235,
-            "numComparisons": 53087
-          },
-          {
-            "difference": 132,
-            "averageSimilarity": 0.016901020788888884,
-            "recordCount": 234,
-            "numComparisons": 52938
-          },
-          {
-            "difference": 133,
-            "averageSimilarity": 0.016996160278969948,
-            "recordCount": 233,
-            "numComparisons": 52839
-          },
-          {
-            "difference": 134,
-            "averageSimilarity": 0.016972497398275842,
-            "recordCount": 232,
-            "numComparisons": 53169
-          },
-          {
-            "difference": 135,
-            "averageSimilarity": 0.016787641615584412,
-            "recordCount": 231,
-            "numComparisons": 52923
-          },
-          {
-            "difference": 136,
-            "averageSimilarity": 0.016820066512173906,
-            "recordCount": 230,
-            "numComparisons": 51873
-          },
-          {
-            "difference": 137,
-            "averageSimilarity": 0.016893145110480352,
-            "recordCount": 229,
-            "numComparisons": 50852
-          },
-          {
-            "difference": 138,
-            "averageSimilarity": 0.016803552878070185,
-            "recordCount": 228,
-            "numComparisons": 51325
-          },
-          {
-            "difference": 139,
-            "averageSimilarity": 0.016883553437004404,
-            "recordCount": 227,
-            "numComparisons": 51469
-          },
-          {
-            "difference": 140,
-            "averageSimilarity": 0.017076693048230077,
-            "recordCount": 226,
             "numComparisons": 51214
           },
           {
-            "difference": 141,
-            "averageSimilarity": 0.01702191940977778,
+            "difference": -171,
+            "averageSimilarity": 0.014832404058974355,
+            "recordCount": 195,
+            "numComparisons": 51366
+          },
+          {
+            "difference": -170,
+            "averageSimilarity": 0.014910931607142852,
+            "recordCount": 196,
+            "numComparisons": 51006
+          },
+          {
+            "difference": -169,
+            "averageSimilarity": 0.014844523947208116,
+            "recordCount": 197,
+            "numComparisons": 50936
+          },
+          {
+            "difference": -168,
+            "averageSimilarity": 0.014947950126262632,
+            "recordCount": 198,
+            "numComparisons": 51434
+          },
+          {
+            "difference": -167,
+            "averageSimilarity": 0.01490345742060302,
+            "recordCount": 199,
+            "numComparisons": 52326
+          },
+          {
+            "difference": -166,
+            "averageSimilarity": 0.014923923898000005,
+            "recordCount": 200,
+            "numComparisons": 53311
+          },
+          {
+            "difference": -165,
+            "averageSimilarity": 0.01488893820995025,
+            "recordCount": 201,
+            "numComparisons": 53238
+          },
+          {
+            "difference": -164,
+            "averageSimilarity": 0.015009540417326736,
+            "recordCount": 202,
+            "numComparisons": 53301
+          },
+          {
+            "difference": -163,
+            "averageSimilarity": 0.014981822373891618,
+            "recordCount": 203,
+            "numComparisons": 53264
+          },
+          {
+            "difference": -162,
+            "averageSimilarity": 0.01499816185392157,
+            "recordCount": 204,
+            "numComparisons": 53050
+          },
+          {
+            "difference": -161,
+            "averageSimilarity": 0.01496053999707318,
+            "recordCount": 205,
+            "numComparisons": 53977
+          },
+          {
+            "difference": -160,
+            "averageSimilarity": 0.014917161196116512,
+            "recordCount": 206,
+            "numComparisons": 54515
+          },
+          {
+            "difference": -159,
+            "averageSimilarity": 0.014857012767632847,
+            "recordCount": 207,
+            "numComparisons": 54830
+          },
+          {
+            "difference": -158,
+            "averageSimilarity": 0.014799831046634614,
+            "recordCount": 208,
+            "numComparisons": 55487
+          },
+          {
+            "difference": -157,
+            "averageSimilarity": 0.014849499706698565,
+            "recordCount": 209,
+            "numComparisons": 55339
+          },
+          {
+            "difference": -156,
+            "averageSimilarity": 0.014839245776666671,
+            "recordCount": 210,
+            "numComparisons": 54353
+          },
+          {
+            "difference": -155,
+            "averageSimilarity": 0.014897736264928923,
+            "recordCount": 211,
+            "numComparisons": 55109
+          },
+          {
+            "difference": -154,
+            "averageSimilarity": 0.014990404938679246,
+            "recordCount": 212,
+            "numComparisons": 55680
+          },
+          {
+            "difference": -153,
+            "averageSimilarity": 0.014783220453990607,
+            "recordCount": 213,
+            "numComparisons": 56267
+          },
+          {
+            "difference": -152,
+            "averageSimilarity": 0.014935825785981308,
+            "recordCount": 214,
+            "numComparisons": 57153
+          },
+          {
+            "difference": -151,
+            "averageSimilarity": 0.015104000978604653,
+            "recordCount": 215,
+            "numComparisons": 57379
+          },
+          {
+            "difference": -150,
+            "averageSimilarity": 0.014947225658796283,
+            "recordCount": 216,
+            "numComparisons": 57164
+          },
+          {
+            "difference": -149,
+            "averageSimilarity": 0.01502196408064517,
+            "recordCount": 217,
+            "numComparisons": 56321
+          },
+          {
+            "difference": -148,
+            "averageSimilarity": 0.014872319461009179,
+            "recordCount": 218,
+            "numComparisons": 56076
+          },
+          {
+            "difference": -147,
+            "averageSimilarity": 0.014993549454794515,
+            "recordCount": 219,
+            "numComparisons": 56623
+          },
+          {
+            "difference": -146,
+            "averageSimilarity": 0.014865116218181812,
+            "recordCount": 220,
+            "numComparisons": 57496
+          },
+          {
+            "difference": -145,
+            "averageSimilarity": 0.015020974118552041,
+            "recordCount": 221,
+            "numComparisons": 58039
+          },
+          {
+            "difference": -144,
+            "averageSimilarity": 0.015097590953603598,
+            "recordCount": 222,
+            "numComparisons": 58323
+          },
+          {
+            "difference": -143,
+            "averageSimilarity": 0.015014032503587425,
+            "recordCount": 223,
+            "numComparisons": 58416
+          },
+          {
+            "difference": -142,
+            "averageSimilarity": 0.01499868782901785,
+            "recordCount": 224,
+            "numComparisons": 57995
+          },
+          {
+            "difference": -141,
+            "averageSimilarity": 0.01503914844666667,
             "recordCount": 225,
-            "numComparisons": 51338
+            "numComparisons": 57728
+          },
+          {
+            "difference": -140,
+            "averageSimilarity": 0.015022695367256636,
+            "recordCount": 226,
+            "numComparisons": 58695
+          },
+          {
+            "difference": -139,
+            "averageSimilarity": 0.015025268708370043,
+            "recordCount": 227,
+            "numComparisons": 59069
+          },
+          {
+            "difference": -138,
+            "averageSimilarity": 0.01514621660745614,
+            "recordCount": 228,
+            "numComparisons": 59929
+          },
+          {
+            "difference": -137,
+            "averageSimilarity": 0.015192759151528387,
+            "recordCount": 229,
+            "numComparisons": 60258
+          },
+          {
+            "difference": -136,
+            "averageSimilarity": 0.015072343241739124,
+            "recordCount": 230,
+            "numComparisons": 59999
+          },
+          {
+            "difference": -135,
+            "averageSimilarity": 0.015218112423809525,
+            "recordCount": 231,
+            "numComparisons": 59681
+          },
+          {
+            "difference": -134,
+            "averageSimilarity": 0.015070098629310347,
+            "recordCount": 232,
+            "numComparisons": 59507
+          },
+          {
+            "difference": -133,
+            "averageSimilarity": 0.015215567821030052,
+            "recordCount": 233,
+            "numComparisons": 60392
+          },
+          {
+            "difference": -132,
+            "averageSimilarity": 0.015181408604273498,
+            "recordCount": 234,
+            "numComparisons": 61507
+          },
+          {
+            "difference": -131,
+            "averageSimilarity": 0.015226117355319155,
+            "recordCount": 235,
+            "numComparisons": 61831
+          },
+          {
+            "difference": -130,
+            "averageSimilarity": 0.015352638737288133,
+            "recordCount": 236,
+            "numComparisons": 62192
+          },
+          {
+            "difference": -129,
+            "averageSimilarity": 0.015442724755274272,
+            "recordCount": 237,
+            "numComparisons": 61633
+          },
+          {
+            "difference": -128,
+            "averageSimilarity": 0.015258690942436984,
+            "recordCount": 238,
+            "numComparisons": 61793
+          },
+          {
+            "difference": -127,
+            "averageSimilarity": 0.015425409215899582,
+            "recordCount": 239,
+            "numComparisons": 61595
+          },
+          {
+            "difference": -126,
+            "averageSimilarity": 0.015538515512083321,
+            "recordCount": 240,
+            "numComparisons": 62101
+          },
+          {
+            "difference": -125,
+            "averageSimilarity": 0.01541235953236515,
+            "recordCount": 241,
+            "numComparisons": 62810
+          },
+          {
+            "difference": -124,
+            "averageSimilarity": 0.015475460458677691,
+            "recordCount": 242,
+            "numComparisons": 63704
+          },
+          {
+            "difference": -123,
+            "averageSimilarity": 0.015468975425102883,
+            "recordCount": 243,
+            "numComparisons": 64541
+          },
+          {
+            "difference": -122,
+            "averageSimilarity": 0.015681373735655726,
+            "recordCount": 244,
+            "numComparisons": 64131
+          },
+          {
+            "difference": -121,
+            "averageSimilarity": 0.0155762902877551,
+            "recordCount": 245,
+            "numComparisons": 63393
+          },
+          {
+            "difference": -120,
+            "averageSimilarity": 0.015456140215040642,
+            "recordCount": 246,
+            "numComparisons": 63555
+          },
+          {
+            "difference": -119,
+            "averageSimilarity": 0.015576275630364365,
+            "recordCount": 247,
+            "numComparisons": 64339
+          },
+          {
+            "difference": -118,
+            "averageSimilarity": 0.015586436166129035,
+            "recordCount": 248,
+            "numComparisons": 64708
+          },
+          {
+            "difference": -117,
+            "averageSimilarity": 0.015747674949397602,
+            "recordCount": 249,
+            "numComparisons": 65403
+          },
+          {
+            "difference": -116,
+            "averageSimilarity": 0.015629011841599996,
+            "recordCount": 250,
+            "numComparisons": 65795
+          },
+          {
+            "difference": -115,
+            "averageSimilarity": 0.01573199032669323,
+            "recordCount": 251,
+            "numComparisons": 65238
+          },
+          {
+            "difference": -114,
+            "averageSimilarity": 0.015650461767063494,
+            "recordCount": 252,
+            "numComparisons": 64934
+          },
+          {
+            "difference": -113,
+            "averageSimilarity": 0.01564200164980239,
+            "recordCount": 253,
+            "numComparisons": 65378
+          },
+          {
+            "difference": -112,
+            "averageSimilarity": 0.015786168646456707,
+            "recordCount": 254,
+            "numComparisons": 65847
+          },
+          {
+            "difference": -111,
+            "averageSimilarity": 0.015826494589803928,
+            "recordCount": 255,
+            "numComparisons": 66300
+          },
+          {
+            "difference": -110,
+            "averageSimilarity": 0.015822377240234376,
+            "recordCount": 256,
+            "numComparisons": 67276
+          },
+          {
+            "difference": -109,
+            "averageSimilarity": 0.01579688488754864,
+            "recordCount": 257,
+            "numComparisons": 67180
+          },
+          {
+            "difference": -108,
+            "averageSimilarity": 0.015878580293798475,
+            "recordCount": 258,
+            "numComparisons": 67086
+          },
+          {
+            "difference": -107,
+            "averageSimilarity": 0.015994358013899604,
+            "recordCount": 259,
+            "numComparisons": 66591
+          },
+          {
+            "difference": -106,
+            "averageSimilarity": 0.01573189842,
+            "recordCount": 260,
+            "numComparisons": 66297
+          },
+          {
+            "difference": -105,
+            "averageSimilarity": 0.015911917326819937,
+            "recordCount": 261,
+            "numComparisons": 67528
+          },
+          {
+            "difference": -104,
+            "averageSimilarity": 0.015877914325572517,
+            "recordCount": 262,
+            "numComparisons": 68532
+          },
+          {
+            "difference": -103,
+            "averageSimilarity": 0.015957784872243343,
+            "recordCount": 263,
+            "numComparisons": 68812
+          },
+          {
+            "difference": -102,
+            "averageSimilarity": 0.015906794975757574,
+            "recordCount": 264,
+            "numComparisons": 68414
+          },
+          {
+            "difference": -101,
+            "averageSimilarity": 0.016036137003018865,
+            "recordCount": 265,
+            "numComparisons": 68451
+          },
+          {
+            "difference": -100,
+            "averageSimilarity": 0.015936529962406038,
+            "recordCount": 266,
+            "numComparisons": 68035
+          },
+          {
+            "difference": -99,
+            "averageSimilarity": 0.015956639813857688,
+            "recordCount": 267,
+            "numComparisons": 68053
+          },
+          {
+            "difference": -98,
+            "averageSimilarity": 0.016065170323880607,
+            "recordCount": 268,
+            "numComparisons": 69391
+          },
+          {
+            "difference": -97,
+            "averageSimilarity": 0.016128636964683987,
+            "recordCount": 269,
+            "numComparisons": 70569
+          },
+          {
+            "difference": -96,
+            "averageSimilarity": 0.01607077444962963,
+            "recordCount": 270,
+            "numComparisons": 70965
+          },
+          {
+            "difference": -95,
+            "averageSimilarity": 0.01611846477158673,
+            "recordCount": 271,
+            "numComparisons": 70886
+          },
+          {
+            "difference": -94,
+            "averageSimilarity": 0.01607956394044117,
+            "recordCount": 272,
+            "numComparisons": 70307
+          },
+          {
+            "difference": -93,
+            "averageSimilarity": 0.016178066020146535,
+            "recordCount": 273,
+            "numComparisons": 70365
+          },
+          {
+            "difference": -92,
+            "averageSimilarity": 0.016146799128102195,
+            "recordCount": 274,
+            "numComparisons": 70846
+          },
+          {
+            "difference": -91,
+            "averageSimilarity": 0.016037024266181796,
+            "recordCount": 275,
+            "numComparisons": 71814
+          },
+          {
+            "difference": -90,
+            "averageSimilarity": 0.016299834997463784,
+            "recordCount": 276,
+            "numComparisons": 72989
+          },
+          {
+            "difference": -89,
+            "averageSimilarity": 0.016285359549819488,
+            "recordCount": 277,
+            "numComparisons": 73491
+          },
+          {
+            "difference": -88,
+            "averageSimilarity": 0.01621327392446044,
+            "recordCount": 278,
+            "numComparisons": 72614
+          },
+          {
+            "difference": -87,
+            "averageSimilarity": 0.01637247317706093,
+            "recordCount": 279,
+            "numComparisons": 72219
+          },
+          {
+            "difference": -86,
+            "averageSimilarity": 0.01639620124571428,
+            "recordCount": 280,
+            "numComparisons": 72371
+          },
+          {
+            "difference": -85,
+            "averageSimilarity": 0.016189189114946604,
+            "recordCount": 281,
+            "numComparisons": 72856
+          },
+          {
+            "difference": -84,
+            "averageSimilarity": 0.01637232269468085,
+            "recordCount": 282,
+            "numComparisons": 74523
+          },
+          {
+            "difference": -83,
+            "averageSimilarity": 0.016375344790812724,
+            "recordCount": 283,
+            "numComparisons": 75219
+          },
+          {
+            "difference": -82,
+            "averageSimilarity": 0.016254327811267597,
+            "recordCount": 284,
+            "numComparisons": 75927
+          },
+          {
+            "difference": -81,
+            "averageSimilarity": 0.0163879368108772,
+            "recordCount": 285,
+            "numComparisons": 75507
+          },
+          {
+            "difference": -80,
+            "averageSimilarity": 0.016324522655244755,
+            "recordCount": 286,
+            "numComparisons": 75126
+          },
+          {
+            "difference": -79,
+            "averageSimilarity": 0.016403756393728215,
+            "recordCount": 287,
+            "numComparisons": 74823
+          },
+          {
+            "difference": -78,
+            "averageSimilarity": 0.01634281667812499,
+            "recordCount": 288,
+            "numComparisons": 75400
+          },
+          {
+            "difference": -77,
+            "averageSimilarity": 0.016369582589965386,
+            "recordCount": 289,
+            "numComparisons": 76413
+          },
+          {
+            "difference": -76,
+            "averageSimilarity": 0.016414240817931056,
+            "recordCount": 290,
+            "numComparisons": 77102
+          },
+          {
+            "difference": -75,
+            "averageSimilarity": 0.016312459215807575,
+            "recordCount": 291,
+            "numComparisons": 78247
+          },
+          {
+            "difference": -74,
+            "averageSimilarity": 0.016349641467808238,
+            "recordCount": 292,
+            "numComparisons": 78039
+          },
+          {
+            "difference": -73,
+            "averageSimilarity": 0.016472975821842997,
+            "recordCount": 293,
+            "numComparisons": 77805
+          },
+          {
+            "difference": -72,
+            "averageSimilarity": 0.016388867405442167,
+            "recordCount": 294,
+            "numComparisons": 77380
+          },
+          {
+            "difference": -71,
+            "averageSimilarity": 0.016372908673898293,
+            "recordCount": 295,
+            "numComparisons": 77781
+          },
+          {
+            "difference": -70,
+            "averageSimilarity": 0.016371762706756738,
+            "recordCount": 296,
+            "numComparisons": 79383
+          },
+          {
+            "difference": -69,
+            "averageSimilarity": 0.016302638253198633,
+            "recordCount": 297,
+            "numComparisons": 80242
+          },
+          {
+            "difference": -68,
+            "averageSimilarity": 0.01635023190100671,
+            "recordCount": 298,
+            "numComparisons": 80517
+          },
+          {
+            "difference": -67,
+            "averageSimilarity": 0.01645804195652176,
+            "recordCount": 299,
+            "numComparisons": 79061
+          },
+          {
+            "difference": -66,
+            "averageSimilarity": 0.016433351429333325,
+            "recordCount": 300,
+            "numComparisons": 79830
+          },
+          {
+            "difference": -65,
+            "averageSimilarity": 0.01647892392724254,
+            "recordCount": 301,
+            "numComparisons": 80154
+          },
+          {
+            "difference": -64,
+            "averageSimilarity": 0.016420650891721872,
+            "recordCount": 302,
+            "numComparisons": 80125
+          },
+          {
+            "difference": -63,
+            "averageSimilarity": 0.016391228494719457,
+            "recordCount": 303,
+            "numComparisons": 80817
+          },
+          {
+            "difference": -62,
+            "averageSimilarity": 0.01645508010098683,
+            "recordCount": 304,
+            "numComparisons": 81929
+          },
+          {
+            "difference": -61,
+            "averageSimilarity": 0.016511571424918024,
+            "recordCount": 305,
+            "numComparisons": 82843
+          },
+          {
+            "difference": -60,
+            "averageSimilarity": 0.016396211848692808,
+            "recordCount": 306,
+            "numComparisons": 82293
+          },
+          {
+            "difference": -59,
+            "averageSimilarity": 0.016382787390227995,
+            "recordCount": 307,
+            "numComparisons": 81472
+          },
+          {
+            "difference": -58,
+            "averageSimilarity": 0.016509647811688313,
+            "recordCount": 308,
+            "numComparisons": 81774
+          },
+          {
+            "difference": -57,
+            "averageSimilarity": 0.016462595234627845,
+            "recordCount": 309,
+            "numComparisons": 81644
+          },
+          {
+            "difference": -56,
+            "averageSimilarity": 0.016597572589032245,
+            "recordCount": 310,
+            "numComparisons": 82902
+          },
+          {
+            "difference": -55,
+            "averageSimilarity": 0.01650931638327974,
+            "recordCount": 311,
+            "numComparisons": 84413
+          },
+          {
+            "difference": -54,
+            "averageSimilarity": 0.01663735209391026,
+            "recordCount": 312,
+            "numComparisons": 85085
+          },
+          {
+            "difference": -53,
+            "averageSimilarity": 0.016652784971884972,
+            "recordCount": 313,
+            "numComparisons": 84002
+          },
+          {
+            "difference": -52,
+            "averageSimilarity": 0.016471447130254776,
+            "recordCount": 314,
+            "numComparisons": 83665
+          },
+          {
+            "difference": -51,
+            "averageSimilarity": 0.016608392397142843,
+            "recordCount": 315,
+            "numComparisons": 84051
+          },
+          {
+            "difference": -50,
+            "averageSimilarity": 0.0164856257851266,
+            "recordCount": 316,
+            "numComparisons": 83541
+          },
+          {
+            "difference": -49,
+            "averageSimilarity": 0.016500083713249195,
+            "recordCount": 317,
+            "numComparisons": 84535
+          },
+          {
+            "difference": -48,
+            "averageSimilarity": 0.016519819632075456,
+            "recordCount": 318,
+            "numComparisons": 85363
+          },
+          {
+            "difference": -47,
+            "averageSimilarity": 0.0165546173388715,
+            "recordCount": 319,
+            "numComparisons": 85733
+          },
+          {
+            "difference": -46,
+            "averageSimilarity": 0.016517851802187476,
+            "recordCount": 320,
+            "numComparisons": 85309
+          },
+          {
+            "difference": -45,
+            "averageSimilarity": 0.016592741532710276,
+            "recordCount": 321,
+            "numComparisons": 85398
+          },
+          {
+            "difference": -44,
+            "averageSimilarity": 0.016726836971428547,
+            "recordCount": 322,
+            "numComparisons": 84757
+          },
+          {
+            "difference": -43,
+            "averageSimilarity": 0.01666699858111454,
+            "recordCount": 323,
+            "numComparisons": 85613
+          },
+          {
+            "difference": -42,
+            "averageSimilarity": 0.016572246047839516,
+            "recordCount": 324,
+            "numComparisons": 86320
+          },
+          {
+            "difference": -41,
+            "averageSimilarity": 0.01656994178523078,
+            "recordCount": 325,
+            "numComparisons": 87231
+          },
+          {
+            "difference": -40,
+            "averageSimilarity": 0.016415969366871168,
+            "recordCount": 326,
+            "numComparisons": 86456
+          },
+          {
+            "difference": -39,
+            "averageSimilarity": 0.016624160703669743,
+            "recordCount": 327,
+            "numComparisons": 86672
+          },
+          {
+            "difference": -38,
+            "averageSimilarity": 0.01646181970853657,
+            "recordCount": 328,
+            "numComparisons": 85751
+          },
+          {
+            "difference": -37,
+            "averageSimilarity": 0.016438941096048643,
+            "recordCount": 329,
+            "numComparisons": 85772
+          },
+          {
+            "difference": -36,
+            "averageSimilarity": 0.01656106706666668,
+            "recordCount": 330,
+            "numComparisons": 86130
+          },
+          {
+            "difference": -35,
+            "averageSimilarity": 0.016499316785498486,
+            "recordCount": 331,
+            "numComparisons": 86825
+          },
+          {
+            "difference": -34,
+            "averageSimilarity": 0.016729924027409623,
+            "recordCount": 332,
+            "numComparisons": 88383
+          },
+          {
+            "difference": -33,
+            "averageSimilarity": 0.016553699578078084,
+            "recordCount": 333,
+            "numComparisons": 88112
+          },
+          {
+            "difference": -32,
+            "averageSimilarity": 0.01653895675179641,
+            "recordCount": 334,
+            "numComparisons": 87568
+          },
+          {
+            "difference": -31,
+            "averageSimilarity": 0.016511423254328382,
+            "recordCount": 335,
+            "numComparisons": 87085
+          },
+          {
+            "difference": -30,
+            "averageSimilarity": 0.01664373164434523,
+            "recordCount": 336,
+            "numComparisons": 87868
+          },
+          {
+            "difference": -29,
+            "averageSimilarity": 0.016562942936795284,
+            "recordCount": 337,
+            "numComparisons": 87922
+          },
+          {
+            "difference": -28,
+            "averageSimilarity": 0.01643862348905327,
+            "recordCount": 338,
+            "numComparisons": 89108
+          },
+          {
+            "difference": -27,
+            "averageSimilarity": 0.016448284563716803,
+            "recordCount": 339,
+            "numComparisons": 89752
+          },
+          {
+            "difference": -26,
+            "averageSimilarity": 0.016426744252647042,
+            "recordCount": 340,
+            "numComparisons": 90396
+          },
+          {
+            "difference": -25,
+            "averageSimilarity": 0.016493502316129026,
+            "recordCount": 341,
+            "numComparisons": 90502
+          },
+          {
+            "difference": -24,
+            "averageSimilarity": 0.016504379562280704,
+            "recordCount": 342,
+            "numComparisons": 88968
+          },
+          {
+            "difference": -23,
+            "averageSimilarity": 0.01654285722623906,
+            "recordCount": 343,
+            "numComparisons": 89022
+          },
+          {
+            "difference": -22,
+            "averageSimilarity": 0.016463635295930205,
+            "recordCount": 344,
+            "numComparisons": 89110
+          },
+          {
+            "difference": -21,
+            "averageSimilarity": 0.01633325520202895,
+            "recordCount": 345,
+            "numComparisons": 90185
+          },
+          {
+            "difference": -20,
+            "averageSimilarity": 0.01631770821069365,
+            "recordCount": 346,
+            "numComparisons": 90845
+          },
+          {
+            "difference": -19,
+            "averageSimilarity": 0.016322881742939457,
+            "recordCount": 347,
+            "numComparisons": 91280
+          },
+          {
+            "difference": -18,
+            "averageSimilarity": 0.016500881370114937,
+            "recordCount": 348,
+            "numComparisons": 90513
+          },
+          {
+            "difference": -17,
+            "averageSimilarity": 0.016437019354727803,
+            "recordCount": 349,
+            "numComparisons": 90278
+          },
+          {
+            "difference": -16,
+            "averageSimilarity": 0.01652389642028572,
+            "recordCount": 350,
+            "numComparisons": 91282
+          },
+          {
+            "difference": -15,
+            "averageSimilarity": 0.016349138970370377,
+            "recordCount": 351,
+            "numComparisons": 91409
+          },
+          {
+            "difference": -14,
+            "averageSimilarity": 0.01634415716562498,
+            "recordCount": 352,
+            "numComparisons": 91788
+          },
+          {
+            "difference": -13,
+            "averageSimilarity": 0.016366619694334294,
+            "recordCount": 353,
+            "numComparisons": 93377
+          },
+          {
+            "difference": -12,
+            "averageSimilarity": 0.01632037789293785,
+            "recordCount": 354,
+            "numComparisons": 93471
+          },
+          {
+            "difference": -11,
+            "averageSimilarity": 0.016287330237464783,
+            "recordCount": 355,
+            "numComparisons": 92549
+          },
+          {
+            "difference": -10,
+            "averageSimilarity": 0.016339037227808998,
+            "recordCount": 356,
+            "numComparisons": 91977
+          },
+          {
+            "difference": -9,
+            "averageSimilarity": 0.016542409693277298,
+            "recordCount": 357,
+            "numComparisons": 92110
+          },
+          {
+            "difference": -8,
+            "averageSimilarity": 0.0165371122907821,
+            "recordCount": 358,
+            "numComparisons": 92504
+          },
+          {
+            "difference": -7,
+            "averageSimilarity": 0.016434429928969364,
+            "recordCount": 359,
+            "numComparisons": 93489
+          },
+          {
+            "difference": -6,
+            "averageSimilarity": 0.016478395397499998,
+            "recordCount": 360,
+            "numComparisons": 94702
+          },
+          {
+            "difference": -5,
+            "averageSimilarity": 0.016387112266481985,
+            "recordCount": 361,
+            "numComparisons": 94874
+          },
+          {
+            "difference": -4,
+            "averageSimilarity": 0.016350455267679562,
+            "recordCount": 362,
+            "numComparisons": 94213
+          },
+          {
+            "difference": -3,
+            "averageSimilarity": 0.016406715892286507,
+            "recordCount": 363,
+            "numComparisons": 93853
+          },
+          {
+            "difference": -2,
+            "averageSimilarity": 0.01641914510329667,
+            "recordCount": 364,
+            "numComparisons": 93939
+          },
+          {
+            "difference": -1,
+            "averageSimilarity": 0.016378662444383543,
+            "recordCount": 365,
+            "numComparisons": 93547
+          },
+          {
+            "difference": 0,
+            "averageSimilarity": 0.016523471164754115,
+            "recordCount": 366,
+            "numComparisons": 93590
+          },
+          {
+            "difference": 1,
+            "averageSimilarity": 0.01642507536027395,
+            "recordCount": 365,
+            "numComparisons": 95100
+          },
+          {
+            "difference": 2,
+            "averageSimilarity": 0.01631208032417583,
+            "recordCount": 364,
+            "numComparisons": 94803
+          },
+          {
+            "difference": 3,
+            "averageSimilarity": 0.016347689207162546,
+            "recordCount": 363,
+            "numComparisons": 94607
+          },
+          {
+            "difference": 4,
+            "averageSimilarity": 0.0164894160635359,
+            "recordCount": 362,
+            "numComparisons": 93557
+          },
+          {
+            "difference": 5,
+            "averageSimilarity": 0.016358279285872575,
+            "recordCount": 361,
+            "numComparisons": 93292
+          },
+          {
+            "difference": 6,
+            "averageSimilarity": 0.01644461865194445,
+            "recordCount": 360,
+            "numComparisons": 92341
+          },
+          {
+            "difference": 7,
+            "averageSimilarity": 0.016569090625348178,
+            "recordCount": 359,
+            "numComparisons": 92942
+          },
+          {
+            "difference": 8,
+            "averageSimilarity": 0.016552106069273712,
+            "recordCount": 358,
+            "numComparisons": 93678
+          },
+          {
+            "difference": 9,
+            "averageSimilarity": 0.016459082552380926,
+            "recordCount": 357,
+            "numComparisons": 93414
+          },
+          {
+            "difference": 10,
+            "averageSimilarity": 0.016488645101966272,
+            "recordCount": 356,
+            "numComparisons": 92856
+          },
+          {
+            "difference": 11,
+            "averageSimilarity": 0.01658414590816899,
+            "recordCount": 355,
+            "numComparisons": 91981
+          },
+          {
+            "difference": 12,
+            "averageSimilarity": 0.016485241204519798,
+            "recordCount": 354,
+            "numComparisons": 91652
+          },
+          {
+            "difference": 13,
+            "averageSimilarity": 0.01651516486062325,
+            "recordCount": 353,
+            "numComparisons": 90549
+          },
+          {
+            "difference": 14,
+            "averageSimilarity": 0.016635050223295457,
+            "recordCount": 352,
+            "numComparisons": 91072
+          },
+          {
+            "difference": 15,
+            "averageSimilarity": 0.016540882719373207,
+            "recordCount": 351,
+            "numComparisons": 91271
+          },
+          {
+            "difference": 16,
+            "averageSimilarity": 0.016489949143428582,
+            "recordCount": 350,
+            "numComparisons": 90468
+          },
+          {
+            "difference": 17,
+            "averageSimilarity": 0.016459718096275052,
+            "recordCount": 349,
+            "numComparisons": 89519
+          },
+          {
+            "difference": 18,
+            "averageSimilarity": 0.016715851441666672,
+            "recordCount": 348,
+            "numComparisons": 88710
+          },
+          {
+            "difference": 19,
+            "averageSimilarity": 0.016579152616714696,
+            "recordCount": 347,
+            "numComparisons": 88724
+          },
+          {
+            "difference": 20,
+            "averageSimilarity": 0.016638719564739855,
+            "recordCount": 346,
+            "numComparisons": 88506
+          },
+          {
+            "difference": 21,
+            "averageSimilarity": 0.01653988063768116,
+            "recordCount": 345,
+            "numComparisons": 88574
+          },
+          {
+            "difference": 22,
+            "averageSimilarity": 0.016555396225872095,
+            "recordCount": 344,
+            "numComparisons": 88880
+          },
+          {
+            "difference": 23,
+            "averageSimilarity": 0.01668425776676387,
+            "recordCount": 343,
+            "numComparisons": 88674
+          },
+          {
+            "difference": 24,
+            "averageSimilarity": 0.01670330122280702,
+            "recordCount": 342,
+            "numComparisons": 87330
+          },
+          {
+            "difference": 25,
+            "averageSimilarity": 0.016819507153372458,
+            "recordCount": 341,
+            "numComparisons": 86454
+          },
+          {
+            "difference": 26,
+            "averageSimilarity": 0.016606484326764707,
+            "recordCount": 340,
+            "numComparisons": 86479
+          },
+          {
+            "difference": 27,
+            "averageSimilarity": 0.01662368824837759,
+            "recordCount": 339,
+            "numComparisons": 86442
+          },
+          {
+            "difference": 28,
+            "averageSimilarity": 0.01660311482337277,
+            "recordCount": 338,
+            "numComparisons": 86930
+          },
+          {
+            "difference": 29,
+            "averageSimilarity": 0.016768163341543022,
+            "recordCount": 337,
+            "numComparisons": 87027
+          },
+          {
+            "difference": 30,
+            "averageSimilarity": 0.01666647884940477,
+            "recordCount": 336,
+            "numComparisons": 86658
+          },
+          {
+            "difference": 31,
+            "averageSimilarity": 0.016739266790149247,
+            "recordCount": 335,
+            "numComparisons": 85643
+          },
+          {
+            "difference": 32,
+            "averageSimilarity": 0.01676880098023953,
+            "recordCount": 334,
+            "numComparisons": 84978
+          },
+          {
+            "difference": 33,
+            "averageSimilarity": 0.016793223020120113,
+            "recordCount": 333,
+            "numComparisons": 85004
+          },
+          {
+            "difference": 34,
+            "averageSimilarity": 0.01674408890572289,
+            "recordCount": 332,
+            "numComparisons": 85040
+          },
+          {
+            "difference": 35,
+            "averageSimilarity": 0.016819284461631417,
+            "recordCount": 331,
+            "numComparisons": 85448
+          },
+          {
+            "difference": 36,
+            "averageSimilarity": 0.016686513573636385,
+            "recordCount": 330,
+            "numComparisons": 86119
+          },
+          {
+            "difference": 37,
+            "averageSimilarity": 0.016741830604255305,
+            "recordCount": 329,
+            "numComparisons": 86135
+          },
+          {
+            "difference": 38,
+            "averageSimilarity": 0.016812863880487812,
+            "recordCount": 328,
+            "numComparisons": 84782
+          },
+          {
+            "difference": 39,
+            "averageSimilarity": 0.016752447516513752,
+            "recordCount": 327,
+            "numComparisons": 83909
+          },
+          {
+            "difference": 40,
+            "averageSimilarity": 0.0167014080177914,
+            "recordCount": 326,
+            "numComparisons": 84108
+          },
+          {
+            "difference": 41,
+            "averageSimilarity": 0.016811662118769246,
+            "recordCount": 325,
+            "numComparisons": 84106
+          },
+          {
+            "difference": 42,
+            "averageSimilarity": 0.016833405069444436,
+            "recordCount": 324,
+            "numComparisons": 84069
+          },
+          {
+            "difference": 43,
+            "averageSimilarity": 0.016807531849845233,
+            "recordCount": 323,
+            "numComparisons": 84476
+          },
+          {
+            "difference": 44,
+            "averageSimilarity": 0.01677068050031056,
+            "recordCount": 322,
+            "numComparisons": 84042
+          },
+          {
+            "difference": 45,
+            "averageSimilarity": 0.01679939190155763,
+            "recordCount": 321,
+            "numComparisons": 82949
+          },
+          {
+            "difference": 46,
+            "averageSimilarity": 0.016971936114062502,
+            "recordCount": 320,
+            "numComparisons": 82624
+          },
+          {
+            "difference": 47,
+            "averageSimilarity": 0.016768028628840123,
+            "recordCount": 319,
+            "numComparisons": 82369
+          },
+          {
+            "difference": 48,
+            "averageSimilarity": 0.016857581497169833,
+            "recordCount": 318,
+            "numComparisons": 82506
+          },
+          {
+            "difference": 49,
+            "averageSimilarity": 0.016855403595899023,
+            "recordCount": 317,
+            "numComparisons": 82215
+          },
+          {
+            "difference": 50,
+            "averageSimilarity": 0.016908334468037967,
+            "recordCount": 316,
+            "numComparisons": 82438
+          },
+          {
+            "difference": 51,
+            "averageSimilarity": 0.0167820853120635,
+            "recordCount": 315,
+            "numComparisons": 82176
+          },
+          {
+            "difference": 52,
+            "averageSimilarity": 0.016808917785031838,
+            "recordCount": 314,
+            "numComparisons": 80997
+          },
+          {
+            "difference": 53,
+            "averageSimilarity": 0.01697178632172525,
+            "recordCount": 313,
+            "numComparisons": 79996
+          },
+          {
+            "difference": 54,
+            "averageSimilarity": 0.017005703544551283,
+            "recordCount": 312,
+            "numComparisons": 80762
+          },
+          {
+            "difference": 55,
+            "averageSimilarity": 0.016873474807717028,
+            "recordCount": 311,
+            "numComparisons": 80303
+          },
+          {
+            "difference": 56,
+            "averageSimilarity": 0.016957094682903222,
+            "recordCount": 310,
+            "numComparisons": 80193
+          },
+          {
+            "difference": 57,
+            "averageSimilarity": 0.016936583546925555,
+            "recordCount": 309,
+            "numComparisons": 81099
+          },
+          {
+            "difference": 58,
+            "averageSimilarity": 0.017044838983116876,
+            "recordCount": 308,
+            "numComparisons": 80602
+          },
+          {
+            "difference": 59,
+            "averageSimilarity": 0.01716585891172637,
+            "recordCount": 307,
+            "numComparisons": 79490
+          },
+          {
+            "difference": 60,
+            "averageSimilarity": 0.01697501516862746,
+            "recordCount": 306,
+            "numComparisons": 79303
+          },
+          {
+            "difference": 61,
+            "averageSimilarity": 0.01702197184426229,
+            "recordCount": 305,
+            "numComparisons": 79282
+          },
+          {
+            "difference": 62,
+            "averageSimilarity": 0.01722452335164473,
+            "recordCount": 304,
+            "numComparisons": 79172
+          },
+          {
+            "difference": 63,
+            "averageSimilarity": 0.01692948014323432,
+            "recordCount": 303,
+            "numComparisons": 79255
+          },
+          {
+            "difference": 64,
+            "averageSimilarity": 0.016955473761258288,
+            "recordCount": 302,
+            "numComparisons": 79815
+          },
+          {
+            "difference": 65,
+            "averageSimilarity": 0.01707917408837207,
+            "recordCount": 301,
+            "numComparisons": 78930
+          },
+          {
+            "difference": 66,
+            "averageSimilarity": 0.017098773112999996,
+            "recordCount": 300,
+            "numComparisons": 78729
+          },
+          {
+            "difference": 67,
+            "averageSimilarity": 0.016965309124414716,
+            "recordCount": 299,
+            "numComparisons": 78047
+          },
+          {
+            "difference": 68,
+            "averageSimilarity": 0.016943190189932886,
+            "recordCount": 298,
+            "numComparisons": 78122
+          },
+          {
+            "difference": 69,
+            "averageSimilarity": 0.017005417474747462,
+            "recordCount": 297,
+            "numComparisons": 77875
+          },
+          {
+            "difference": 70,
+            "averageSimilarity": 0.01677642096385134,
+            "recordCount": 296,
+            "numComparisons": 77575
+          },
+          {
+            "difference": 71,
+            "averageSimilarity": 0.016817790566101696,
+            "recordCount": 295,
+            "numComparisons": 78207
+          },
+          {
+            "difference": 72,
+            "averageSimilarity": 0.016909892571768694,
+            "recordCount": 294,
+            "numComparisons": 78018
+          },
+          {
+            "difference": 73,
+            "averageSimilarity": 0.01685927799385669,
+            "recordCount": 293,
+            "numComparisons": 76916
+          },
+          {
+            "difference": 74,
+            "averageSimilarity": 0.016804831123972616,
+            "recordCount": 292,
+            "numComparisons": 76017
+          },
+          {
+            "difference": 75,
+            "averageSimilarity": 0.016922423590378016,
+            "recordCount": 291,
+            "numComparisons": 76990
+          },
+          {
+            "difference": 76,
+            "averageSimilarity": 0.017047779978620694,
+            "recordCount": 290,
+            "numComparisons": 76819
+          },
+          {
+            "difference": 77,
+            "averageSimilarity": 0.016819613162975783,
+            "recordCount": 289,
+            "numComparisons": 76649
+          },
+          {
+            "difference": 78,
+            "averageSimilarity": 0.016817941835069447,
+            "recordCount": 288,
+            "numComparisons": 76874
+          },
+          {
+            "difference": 79,
+            "averageSimilarity": 0.01681500606933798,
+            "recordCount": 287,
+            "numComparisons": 76143
+          },
+          {
+            "difference": 80,
+            "averageSimilarity": 0.016947429016083912,
+            "recordCount": 286,
+            "numComparisons": 74821
+          },
+          {
+            "difference": 81,
+            "averageSimilarity": 0.01683149967964913,
+            "recordCount": 285,
+            "numComparisons": 74231
+          },
+          {
+            "difference": 82,
+            "averageSimilarity": 0.01690468683556336,
+            "recordCount": 284,
+            "numComparisons": 74955
+          },
+          {
+            "difference": 83,
+            "averageSimilarity": 0.016878144766077744,
+            "recordCount": 283,
+            "numComparisons": 74417
+          },
+          {
+            "difference": 84,
+            "averageSimilarity": 0.01690924850177306,
+            "recordCount": 282,
+            "numComparisons": 74026
+          },
+          {
+            "difference": 85,
+            "averageSimilarity": 0.016932323789679717,
+            "recordCount": 281,
+            "numComparisons": 74855
+          },
+          {
+            "difference": 86,
+            "averageSimilarity": 0.017048573050714264,
+            "recordCount": 280,
+            "numComparisons": 74674
+          },
+          {
+            "difference": 87,
+            "averageSimilarity": 0.016898205755555576,
+            "recordCount": 279,
+            "numComparisons": 73871
+          },
+          {
+            "difference": 88,
+            "averageSimilarity": 0.016922085339568318,
+            "recordCount": 278,
+            "numComparisons": 72337
+          },
+          {
+            "difference": 89,
+            "averageSimilarity": 0.01689304543826711,
+            "recordCount": 277,
+            "numComparisons": 72167
+          },
+          {
+            "difference": 90,
+            "averageSimilarity": 0.017075952512681163,
+            "recordCount": 276,
+            "numComparisons": 72295
+          },
+          {
+            "difference": 91,
+            "averageSimilarity": 0.016906474780727272,
+            "recordCount": 275,
+            "numComparisons": 71778
+          },
+          {
+            "difference": 92,
+            "averageSimilarity": 0.016914150174817514,
+            "recordCount": 274,
+            "numComparisons": 72494
+          },
+          {
+            "difference": 93,
+            "averageSimilarity": 0.016879459245787536,
+            "recordCount": 273,
+            "numComparisons": 72122
+          },
+          {
+            "difference": 94,
+            "averageSimilarity": 0.01685004427205883,
+            "recordCount": 272,
+            "numComparisons": 71014
+          },
+          {
+            "difference": 95,
+            "averageSimilarity": 0.016922401500738,
+            "recordCount": 271,
+            "numComparisons": 70007
+          },
+          {
+            "difference": 96,
+            "averageSimilarity": 0.016900280749629612,
+            "recordCount": 270,
+            "numComparisons": 70705
+          },
+          {
+            "difference": 97,
+            "averageSimilarity": 0.01693193218921933,
+            "recordCount": 269,
+            "numComparisons": 69953
+          },
+          {
+            "difference": 98,
+            "averageSimilarity": 0.0169061907074627,
+            "recordCount": 268,
+            "numComparisons": 69670
+          },
+          {
+            "difference": 99,
+            "averageSimilarity": 0.01699364228651686,
+            "recordCount": 267,
+            "numComparisons": 69983
+          },
+          {
+            "difference": 100,
+            "averageSimilarity": 0.01694633642030074,
+            "recordCount": 266,
+            "numComparisons": 69871
+          },
+          {
+            "difference": 101,
+            "averageSimilarity": 0.016872153858490564,
+            "recordCount": 265,
+            "numComparisons": 68787
+          },
+          {
+            "difference": 102,
+            "averageSimilarity": 0.017052858222727278,
+            "recordCount": 264,
+            "numComparisons": 68209
+          },
+          {
+            "difference": 103,
+            "averageSimilarity": 0.017047655364638807,
+            "recordCount": 263,
+            "numComparisons": 68187
+          },
+          {
+            "difference": 104,
+            "averageSimilarity": 0.01702397607480915,
+            "recordCount": 262,
+            "numComparisons": 67287
+          },
+          {
+            "difference": 105,
+            "averageSimilarity": 0.017112263492337177,
+            "recordCount": 261,
+            "numComparisons": 67043
+          },
+          {
+            "difference": 106,
+            "averageSimilarity": 0.01714830954538461,
+            "recordCount": 260,
+            "numComparisons": 67431
+          },
+          {
+            "difference": 107,
+            "averageSimilarity": 0.016910878966795353,
+            "recordCount": 259,
+            "numComparisons": 67032
+          },
+          {
+            "difference": 108,
+            "averageSimilarity": 0.017071534877906976,
+            "recordCount": 258,
+            "numComparisons": 65680
+          },
+          {
+            "difference": 109,
+            "averageSimilarity": 0.017348961370817106,
+            "recordCount": 257,
+            "numComparisons": 65007
+          },
+          {
+            "difference": 110,
+            "averageSimilarity": 0.017169433731249996,
+            "recordCount": 256,
+            "numComparisons": 66106
+          },
+          {
+            "difference": 111,
+            "averageSimilarity": 0.017088373218431374,
+            "recordCount": 255,
+            "numComparisons": 65118
+          },
+          {
+            "difference": 112,
+            "averageSimilarity": 0.017079833333858284,
+            "recordCount": 254,
+            "numComparisons": 64527
+          },
+          {
+            "difference": 113,
+            "averageSimilarity": 0.017144965075889335,
+            "recordCount": 253,
+            "numComparisons": 64990
+          },
+          {
+            "difference": 114,
+            "averageSimilarity": 0.017112792622619055,
+            "recordCount": 252,
+            "numComparisons": 64697
+          },
+          {
+            "difference": 115,
+            "averageSimilarity": 0.01705087040039839,
+            "recordCount": 251,
+            "numComparisons": 64025
+          },
+          {
+            "difference": 116,
+            "averageSimilarity": 0.0171954092964,
+            "recordCount": 250,
+            "numComparisons": 63096
+          },
+          {
+            "difference": 117,
+            "averageSimilarity": 0.017163056958634532,
+            "recordCount": 249,
+            "numComparisons": 63054
+          },
+          {
+            "difference": 118,
+            "averageSimilarity": 0.017003578757258078,
+            "recordCount": 248,
+            "numComparisons": 62695
+          },
+          {
+            "difference": 119,
+            "averageSimilarity": 0.01716167456639676,
+            "recordCount": 247,
+            "numComparisons": 62925
+          },
+          {
+            "difference": 120,
+            "averageSimilarity": 0.01727363258292682,
+            "recordCount": 246,
+            "numComparisons": 63202
+          },
+          {
+            "difference": 121,
+            "averageSimilarity": 0.017251749780816332,
+            "recordCount": 245,
+            "numComparisons": 63428
+          },
+          {
+            "difference": 122,
+            "averageSimilarity": 0.01724288923647542,
+            "recordCount": 244,
+            "numComparisons": 62408
+          },
+          {
+            "difference": 123,
+            "averageSimilarity": 0.017305590374074063,
+            "recordCount": 243,
+            "numComparisons": 61352
+          },
+          {
+            "difference": 124,
+            "averageSimilarity": 0.017301947428925612,
+            "recordCount": 242,
+            "numComparisons": 61286
+          },
+          {
+            "difference": 125,
+            "averageSimilarity": 0.01725005294730291,
+            "recordCount": 241,
+            "numComparisons": 61579
+          },
+          {
+            "difference": 126,
+            "averageSimilarity": 0.01736542232041667,
+            "recordCount": 240,
+            "numComparisons": 60937
+          },
+          {
+            "difference": 127,
+            "averageSimilarity": 0.01740210021422593,
+            "recordCount": 239,
+            "numComparisons": 61152
+          },
+          {
+            "difference": 128,
+            "averageSimilarity": 0.017374197554201682,
+            "recordCount": 238,
+            "numComparisons": 60542
+          },
+          {
+            "difference": 129,
+            "averageSimilarity": 0.01735248553333331,
+            "recordCount": 237,
+            "numComparisons": 60059
+          },
+          {
+            "difference": 130,
+            "averageSimilarity": 0.01753112473559321,
+            "recordCount": 236,
+            "numComparisons": 59359
+          },
+          {
+            "difference": 131,
+            "averageSimilarity": 0.017361911190212746,
+            "recordCount": 235,
+            "numComparisons": 59098
+          },
+          {
+            "difference": 132,
+            "averageSimilarity": 0.0173775859897436,
+            "recordCount": 234,
+            "numComparisons": 58814
+          },
+          {
+            "difference": 133,
+            "averageSimilarity": 0.017449257074248936,
+            "recordCount": 233,
+            "numComparisons": 58816
+          },
+          {
+            "difference": 134,
+            "averageSimilarity": 0.017380832656896557,
+            "recordCount": 232,
+            "numComparisons": 58901
+          },
+          {
+            "difference": 135,
+            "averageSimilarity": 0.01725463335324676,
+            "recordCount": 231,
+            "numComparisons": 58730
+          },
+          {
+            "difference": 136,
+            "averageSimilarity": 0.017264915095217388,
+            "recordCount": 230,
+            "numComparisons": 57773
+          },
+          {
+            "difference": 137,
+            "averageSimilarity": 0.017337014967685593,
+            "recordCount": 229,
+            "numComparisons": 56670
+          },
+          {
+            "difference": 138,
+            "averageSimilarity": 0.017211123047807017,
+            "recordCount": 228,
+            "numComparisons": 56823
+          },
+          {
+            "difference": 139,
+            "averageSimilarity": 0.017287301137885472,
+            "recordCount": 227,
+            "numComparisons": 56697
+          },
+          {
+            "difference": 140,
+            "averageSimilarity": 0.017510148225221237,
+            "recordCount": 226,
+            "numComparisons": 56553
+          },
+          {
+            "difference": 141,
+            "averageSimilarity": 0.017511722320444432,
+            "recordCount": 225,
+            "numComparisons": 56432
           },
           {
             "difference": 142,
-            "averageSimilarity": 0.016952284341071443,
+            "averageSimilarity": 0.017395534817410727,
             "recordCount": 224,
-            "numComparisons": 51384
+            "numComparisons": 56535
           },
           {
             "difference": 143,
-            "averageSimilarity": 0.01717286080627803,
+            "averageSimilarity": 0.01758991915470852,
             "recordCount": 223,
-            "numComparisons": 49598
+            "numComparisons": 54889
           },
           {
             "difference": 144,
-            "averageSimilarity": 0.017095801063063087,
+            "averageSimilarity": 0.01746893255495494,
             "recordCount": 222,
-            "numComparisons": 48885
+            "numComparisons": 54158
           },
           {
             "difference": 145,
-            "averageSimilarity": 0.01711907852941176,
+            "averageSimilarity": 0.01756962514027151,
             "recordCount": 221,
-            "numComparisons": 49359
+            "numComparisons": 54371
           },
           {
             "difference": 146,
-            "averageSimilarity": 0.017109816735454537,
+            "averageSimilarity": 0.017552910081818217,
             "recordCount": 220,
-            "numComparisons": 49495
+            "numComparisons": 54236
           },
           {
             "difference": 147,
-            "averageSimilarity": 0.017048618652968035,
+            "averageSimilarity": 0.01750953507808219,
             "recordCount": 219,
-            "numComparisons": 49482
+            "numComparisons": 54293
           },
           {
             "difference": 148,
-            "averageSimilarity": 0.016979807404587172,
+            "averageSimilarity": 0.017382769972935787,
             "recordCount": 218,
-            "numComparisons": 49937
+            "numComparisons": 54663
           },
           {
             "difference": 149,
-            "averageSimilarity": 0.017068846560829503,
+            "averageSimilarity": 0.01743039527281107,
             "recordCount": 217,
-            "numComparisons": 49685
+            "numComparisons": 54537
           },
           {
             "difference": 150,
-            "averageSimilarity": 0.016878135737500008,
+            "averageSimilarity": 0.017263488227777794,
             "recordCount": 216,
-            "numComparisons": 48264
+            "numComparisons": 53182
           },
           {
             "difference": 151,
-            "averageSimilarity": 0.01708569235162791,
+            "averageSimilarity": 0.017479507610697675,
             "recordCount": 215,
-            "numComparisons": 47443
+            "numComparisons": 52228
           },
           {
             "difference": 152,
-            "averageSimilarity": 0.01686063411495328,
+            "averageSimilarity": 0.017383147296728952,
             "recordCount": 214,
-            "numComparisons": 47558
+            "numComparisons": 52392
           },
           {
             "difference": 153,
-            "averageSimilarity": 0.016977636907981215,
+            "averageSimilarity": 0.017447726914084517,
             "recordCount": 213,
-            "numComparisons": 47890
+            "numComparisons": 52730
           },
           {
             "difference": 154,
-            "averageSimilarity": 0.017025407588679247,
+            "averageSimilarity": 0.0174984119731132,
             "recordCount": 212,
-            "numComparisons": 47392
+            "numComparisons": 52281
           },
           {
             "difference": 155,
-            "averageSimilarity": 0.017118486997630335,
+            "averageSimilarity": 0.01752329401990521,
             "recordCount": 211,
-            "numComparisons": 48108
+            "numComparisons": 52808
           },
           {
             "difference": 156,
-            "averageSimilarity": 0.01704972451095238,
+            "averageSimilarity": 0.017523778038571424,
             "recordCount": 210,
-            "numComparisons": 48014
+            "numComparisons": 52680
           },
           {
             "difference": 157,
-            "averageSimilarity": 0.01687631882440192,
+            "averageSimilarity": 0.017239018415789478,
             "recordCount": 209,
-            "numComparisons": 46981
+            "numComparisons": 51770
           },
           {
             "difference": 158,
-            "averageSimilarity": 0.016930111321153837,
+            "averageSimilarity": 0.017418085072596148,
             "recordCount": 208,
-            "numComparisons": 46598
+            "numComparisons": 51403
           },
           {
             "difference": 159,
-            "averageSimilarity": 0.017025396403864735,
+            "averageSimilarity": 0.017484981525603856,
             "recordCount": 207,
-            "numComparisons": 47031
+            "numComparisons": 51847
           },
           {
             "difference": 160,
-            "averageSimilarity": 0.016780642997572825,
+            "averageSimilarity": 0.017271823468446593,
             "recordCount": 206,
-            "numComparisons": 46732
+            "numComparisons": 51502
           },
           {
             "difference": 161,
-            "averageSimilarity": 0.01689354935268295,
+            "averageSimilarity": 0.017271586254634153,
             "recordCount": 205,
-            "numComparisons": 46374
+            "numComparisons": 51220
           },
           {
             "difference": 162,
-            "averageSimilarity": 0.016746699226960784,
+            "averageSimilarity": 0.017193651296568645,
             "recordCount": 204,
-            "numComparisons": 46415
+            "numComparisons": 51401
           },
           {
             "difference": 163,
-            "averageSimilarity": 0.016813508832019715,
+            "averageSimilarity": 0.017268753018226595,
             "recordCount": 203,
-            "numComparisons": 45857
+            "numComparisons": 50784
           },
           {
             "difference": 164,
-            "averageSimilarity": 0.01692921000693069,
+            "averageSimilarity": 0.017348617595049503,
             "recordCount": 202,
-            "numComparisons": 45062
+            "numComparisons": 49994
           },
           {
             "difference": 165,
-            "averageSimilarity": 0.01686554438855721,
+            "averageSimilarity": 0.01735378401094526,
             "recordCount": 201,
-            "numComparisons": 43885
+            "numComparisons": 48887
           },
           {
             "difference": 166,
-            "averageSimilarity": 0.017031475833,
+            "averageSimilarity": 0.017563703808000004,
             "recordCount": 200,
-            "numComparisons": 44527
+            "numComparisons": 49204
           },
           {
             "difference": 167,
-            "averageSimilarity": 0.017196919373869343,
+            "averageSimilarity": 0.017708285211055278,
             "recordCount": 199,
-            "numComparisons": 45123
+            "numComparisons": 49781
           },
           {
             "difference": 168,
-            "averageSimilarity": 0.017063767878787852,
+            "averageSimilarity": 0.017528109917676775,
             "recordCount": 198,
-            "numComparisons": 44770
+            "numComparisons": 49740
           },
           {
             "difference": 169,
-            "averageSimilarity": 0.0170637444106599,
+            "averageSimilarity": 0.017498207444162445,
             "recordCount": 197,
-            "numComparisons": 44880
+            "numComparisons": 49835
           },
           {
             "difference": 170,
-            "averageSimilarity": 0.017036951114285718,
+            "averageSimilarity": 0.01754507564795919,
             "recordCount": 196,
-            "numComparisons": 44513
+            "numComparisons": 49365
           },
           {
             "difference": 171,
-            "averageSimilarity": 0.01725061006,
+            "averageSimilarity": 0.017655145557435914,
             "recordCount": 195,
-            "numComparisons": 43295
+            "numComparisons": 48131
           },
           {
             "difference": 172,
-            "averageSimilarity": 0.01714220593505153,
+            "averageSimilarity": 0.017595032769587612,
             "recordCount": 194,
-            "numComparisons": 42840
+            "numComparisons": 47610
           },
           {
             "difference": 173,
-            "averageSimilarity": 0.01723914999378237,
+            "averageSimilarity": 0.017619318966839357,
             "recordCount": 193,
-            "numComparisons": 43508
+            "numComparisons": 48344
           },
           {
             "difference": 174,
-            "averageSimilarity": 0.017109964455729168,
+            "averageSimilarity": 0.017622948528645845,
             "recordCount": 192,
-            "numComparisons": 43691
+            "numComparisons": 48350
           },
           {
             "difference": 175,
-            "averageSimilarity": 0.017043173612565438,
+            "averageSimilarity": 0.0173990798146597,
             "recordCount": 191,
-            "numComparisons": 43180
+            "numComparisons": 47908
           },
           {
             "difference": 176,
-            "averageSimilarity": 0.017105930032631576,
+            "averageSimilarity": 0.017499218714210535,
             "recordCount": 190,
-            "numComparisons": 43599
+            "numComparisons": 48299
           },
           {
             "difference": 177,
-            "averageSimilarity": 0.017239188440740738,
+            "averageSimilarity": 0.017582426345502642,
             "recordCount": 189,
-            "numComparisons": 43100
+            "numComparisons": 47645
           },
           {
             "difference": 178,
-            "averageSimilarity": 0.017220313847340414,
+            "averageSimilarity": 0.017634056370744677,
             "recordCount": 188,
-            "numComparisons": 42132
+            "numComparisons": 46601
           },
           {
             "difference": 179,
-            "averageSimilarity": 0.017246575459358312,
+            "averageSimilarity": 0.017664649982352943,
             "recordCount": 187,
-            "numComparisons": 41419
+            "numComparisons": 46043
           }
         ],
         "maxSimilarity": 0.10513652,
-        "minSimilarity": 0.0011917994,
-        "maxAverageSimilarity": 0.01725061006
+        "minSimilarity": 0.002508483,
+        "maxAverageSimilarity": 0.017708285211055278
       }
     },
     {

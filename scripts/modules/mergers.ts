@@ -6,6 +6,7 @@ import {
   ExamplesWithSimilarityLevel,
 } from "@kannydennedy/dreams-2020-types";
 import { linkToTitle } from "../modules/string-helpers";
+import { SIMILARITY_CUTOFFS } from "../config";
 
 // Take a big list of wikipedia concepts and consolidate them into a smaller list
 // First consolidate and sum the concepts with the same title
@@ -104,10 +105,31 @@ export const consolidateDreamNewsComparisonExampleList = (
 
   const sortedList = listWithRealThings.sort((a, b) => b.score - a.score);
 
-  // High is the top, low is the bottom, med is the one in the middle
+  // High is the top, indiscernible is the bottom
   const highEx = sortedList[0];
-  const lowEx = sortedList[sortedList.length - 1];
-  const mediumEx = sortedList[Math.floor(sortedList.length / 2)];
+  const indiscernibleEx = sortedList[sortedList.length - 1];
+
+  // To get the medium example
+  // We want to find the example that's 'just below' the high score cutoff
+  let mediumExIndex = 0;
+  for (let i = 0; i < sortedList.length; i++) {
+    if (sortedList[i].score < SIMILARITY_CUTOFFS.high) {
+      mediumExIndex = i;
+      break;
+    }
+  }
+  const mediumEx = sortedList[mediumExIndex];
+
+  // To get the low example
+  // We want to find the example that's 'just below' the medium score cutoff
+  let lowExIndex = 0;
+  for (let i = 0; i < sortedList.length; i++) {
+    if (sortedList[i].score < SIMILARITY_CUTOFFS.medium) {
+      lowExIndex = i;
+      break;
+    }
+  }
+  const lowEx = sortedList[lowExIndex];
 
   const high: ExampleRecordComparison = {
     dreamId: highEx.doc1Id,
@@ -127,10 +149,17 @@ export const consolidateDreamNewsComparisonExampleList = (
     concepts: cleanExampleList(lowEx.topConcepts),
     score: lowEx.score,
   };
+  const indiscernible: ExampleRecordComparison = {
+    dreamId: indiscernibleEx.doc1Id,
+    newsId: indiscernibleEx.doc2Id,
+    concepts: cleanExampleList(indiscernibleEx.topConcepts),
+    score: indiscernibleEx.score,
+  };
 
   return {
     high,
     medium,
     low,
+    indiscernible,
   };
 };

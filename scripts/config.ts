@@ -1,3 +1,5 @@
+import { SimilarityLevel } from "@kannydennedy/dreams-2020-types";
+
 // This is where the actual data is
 export const SRC_FOLDER = "../source-data-all";
 // These are just the names of the src files
@@ -17,3 +19,10 @@ export const NEWS_YEAR = 2020;
 // We just want to make sure there's some of each
 export const HIGH_SIMILARITY = 0.03;
 export const MEDIUM_SIMILARITY = 0.015;
+
+export const SIMILARITY_CUTOFFS: { [key in SimilarityLevel]: number } = {
+  high: 0.175,
+  medium: 0.07,
+  low: 0.05,
+  indiscernible: 0,
+};

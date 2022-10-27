@@ -10,14 +10,10 @@ import {
   NewsRecord,
   OptionalConceptScore,
 } from "@kannydennedy/dreams-2020-types";
-import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
-import { getSimilarityLevel } from "./modules/similarity";
+import { SIMILARITY_CUTOFFS, SET2020, SRC_FOLDER } from "./config";
 import { ColorTheme, SIMILARITY_COLORS } from "./modules/theme";
 import { getDifferenceInDays } from "./modules/time-helpers";
-import {
-  consolidateDreamNewsComparisonExampleList,
-  exampleListToTopConceptList,
-} from "./modules/mergers";
+import { consolidateDreamNewsComparisonExampleList } from "./modules/mergers";
 
 type NewsRecordWithDates = NewsRecord & {
   dreamDate: Date;
@@ -80,6 +76,7 @@ type IntermediaryDifferenceRecord = {
   totalLowSimilarity: number;
   totalMediumSimilarity: number;
   totalHighSimilarity: number;
+  totalIndiscernibleSimilarity: number;
   wikipediaConceptDict: { [key: string]: number };
   examples: ExampleDreamNewsComparison[];
   numComparisons: number;
@@ -125,6 +122,8 @@ const updateConceptDict = (
   }
 };
 
+console.log("Start basic bar processing");
+
 dataArr2020.forEach((record: NewsRecordWithDates, index) => {
   const { dreamDate, newsDate } = record;
 
@@ -138,8 +137,8 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
   // -1 means that the dream came before the news, but within one week
   const weekDiff = Math.floor(diff / 7);
 
-  // Work out the similarity level
-  const s = getSimilarityLevel(record.similarity);
+  const recordIndicativeScores = record.indicativeScores || record.moderateScores || 0;
+  const recordIndiscernibleScores = record.indiscernibleScores || 0;
 
   const key = `${weekDiff}`;
   const currWk = weekDict[key] ? { ...weekDict[key] } : undefined;
@@ -149,9 +148,10 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
       recordCount: 1,
       totalSimilarity: record.similarity,
       totalWordCount: record.wordCount,
-      totalHighSimilarity: s === "high" ? 1 : 0,
-      totalMediumSimilarity: s === "medium" ? 1 : 0,
-      totalLowSimilarity: s == "low" ? 1 : 0,
+      totalHighSimilarity: record.highScores,
+      totalMediumSimilarity: recordIndicativeScores,
+      totalLowSimilarity: record.lowScores,
+      totalIndiscernibleSimilarity: recordIndiscernibleScores,
       wikipediaConceptDict: updateConceptDict(undefined, record.topConcepts),
       examples: [...record.examples],
       numComparisons: record.numComparisons,
@@ -163,12 +163,11 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
       totalSimilarity: currWk.totalSimilarity + record.similarity,
       totalWordCount: currWk.totalWordCount + record.wordCount,
       numComparisons: currWk.numComparisons + record.numComparisons,
-      totalHighSimilarity:
-        s === "high" ? currWk.totalHighSimilarity + 1 : currWk.totalHighSimilarity,
-      totalMediumSimilarity:
-        s === "medium" ? currWk.totalMediumSimilarity + 1 : currWk.totalMediumSimilarity,
-      totalLowSimilarity:
-        s == "low" ? currWk.totalLowSimilarity + 1 : currWk.totalLowSimilarity,
+      totalHighSimilarity: currWk.totalHighSimilarity + record.highScores,
+      totalMediumSimilarity: currWk.totalMediumSimilarity + recordIndicativeScores,
+      totalLowSimilarity: currWk.totalLowSimilarity + record.lowScores,
+      totalIndiscernibleSimilarity:
+        currWk.totalIndiscernibleSimilarity + recordIndiscernibleScores,
       wikipediaConceptDict: updateConceptDict(
         currWk.wikipediaConceptDict,
         record.topConcepts
@@ -177,6 +176,8 @@ dataArr2020.forEach((record: NewsRecordWithDates, index) => {
     };
   }
 });
+
+console.log("Done basic bar processing");
 
 // Now we loop through again, and get the averages
 const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key => {
@@ -187,6 +188,7 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
     totalHighSimilarity,
     totalMediumSimilarity,
     totalLowSimilarity,
+    totalIndiscernibleSimilarity,
     numComparisons,
     examples,
   } = weekDict[key];
@@ -199,36 +201,47 @@ const weekData: DifferenceRecordWithExamples[] = Object.keys(weekDict).map(key =
   //   })
   // );
   // const topConcepts = consolidateWikipediaConceptList(allConcepts, 5);
-  const topConcepts = exampleListToTopConceptList(examples);
+
+  // We don't need to do this for now
+  // We're only showing the concepts for examples
+  // const topConcepts = exampleListToTopConceptList(examples);
+
   const exampleDict = consolidateDreamNewsComparisonExampleList(examples);
 
   const diff: DifferenceRecordWithExamples = {
     difference,
     recordCount,
-    topConcepts,
+    topConcepts: [],
     averageSimilarity: totalSimilarity / recordCount,
     examples: exampleDict,
     numComparisons: numComparisons,
     similarityLevels: [
       {
+        similarityLevel: "indiscernible",
+        color: SIMILARITY_COLORS.indiscernible,
+        percent: (100 / numComparisons) * totalIndiscernibleSimilarity,
+        threshold: SIMILARITY_CUTOFFS.indiscernible,
+        count: totalIndiscernibleSimilarity,
+      },
+      {
         similarityLevel: "low",
         color: SIMILARITY_COLORS.low,
-        percent: (100 / recordCount) * totalLowSimilarity,
-        threshold: 0,
+        percent: (100 / numComparisons) * totalLowSimilarity,
+        threshold: SIMILARITY_CUTOFFS.low,
         count: totalLowSimilarity,
       },
       {
         similarityLevel: "medium",
         color: SIMILARITY_COLORS.medium,
-        percent: (100 / recordCount) * totalMediumSimilarity,
-        threshold: MEDIUM_SIMILARITY,
+        percent: (100 / numComparisons) * totalMediumSimilarity,
+        threshold: SIMILARITY_CUTOFFS.medium,
         count: totalMediumSimilarity,
       },
       {
         similarityLevel: "high",
         color: SIMILARITY_COLORS.high,
-        percent: (100 / recordCount) * totalHighSimilarity,
-        threshold: HIGH_SIMILARITY,
+        percent: (100 / numComparisons) * totalHighSimilarity,
+        threshold: SIMILARITY_CUTOFFS.high,
         count: totalHighSimilarity,
       },
     ],
