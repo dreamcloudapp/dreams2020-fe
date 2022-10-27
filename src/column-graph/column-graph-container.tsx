@@ -42,6 +42,7 @@ const renderTooltip = (d: ColumnGraphData) => {
       keyColor: sLevel.color,
     };
   });
+  const similarityRowsReversed = [...similarityRows.reverse()];
 
   return (
     <Tooltip
@@ -57,7 +58,7 @@ const renderTooltip = (d: ColumnGraphData) => {
               key: "Total dream-news pairs compared:",
               value: prettyNumber(d.numComparisons, 0),
             },
-            ...similarityRows,
+            ...similarityRowsReversed,
           ],
         },
       ]}

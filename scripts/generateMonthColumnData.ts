@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 import { ColumnGraphData, DayRecord, NewsRecord } from "@kannydennedy/dreams-2020-types";
-import { HIGH_SIMILARITY, MEDIUM_SIMILARITY, SET2020, SRC_FOLDER } from "./config";
+import { SET2020, SRC_FOLDER, SIMILARITY_CUTOFFS } from "./config";
 import { SIMILARITY_COLORS } from "./modules/theme";
 import { consolidateDreamNewsComparisonExampleList } from "./modules/mergers";
 
@@ -66,25 +66,8 @@ const highestSimilarities: { [key: string]: number } = {};
 const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => {
   const dreamNewsMonth = record.newsDate.getMonth();
 
-  // We check if a particular dream day / news day combination
-  // Is 'high', 'medium', or 'low' similarity
-  const { similarity } = record;
-  const isHigh = similarity >= HIGH_SIMILARITY;
-  const isMedium = similarity >= MEDIUM_SIMILARITY && similarity < HIGH_SIMILARITY;
-  const isLow = similarity < MEDIUM_SIMILARITY;
-  const highSimilarityAddCount = isHigh ? 1 : 0;
-  const mediumSimilarityAddCount = isMedium ? 1 : 0;
-  const lowSimilarityAddCount = isLow ? 1 : 0;
-
-  // Update the highestSimilarity for this month
-  if (!highestSimilarities[dreamNewsMonth]) {
-    highestSimilarities[dreamNewsMonth] = similarity;
-  } else {
-    highestSimilarities[dreamNewsMonth] = Math.max(
-      highestSimilarities[dreamNewsMonth],
-      similarity
-    );
-  }
+  const recordIndicativeScores = record.indicativeScores || record.moderateScores || 0;
+  const recordIndiscernibleScores = record.indiscernibleScores || 0;
 
   // If the month is not in the accumulator, we add it
   if (!acc[dreamNewsMonth]) {
@@ -95,9 +78,10 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         totalSimilarity: record.similarity,
         count: 1,
         totalWordCount: record.wordCount,
-        highSimilarityCount: highSimilarityAddCount,
-        mediumSimilarityCount: mediumSimilarityAddCount,
-        lowSimilarityCount: lowSimilarityAddCount,
+        highSimilarityCount: record.highScores,
+        mediumSimilarityCount: recordIndicativeScores,
+        lowSimilarityCount: record.lowScores,
+        indiscernibleSimilarityCount: recordIndiscernibleScores,
         exampleDreamNewsComparisons: record.examples,
         numComparisons: record.numComparisons,
       },
@@ -112,12 +96,12 @@ const monthData = dataArr2020.reduce((acc: any, record: NewsRecordWithDates) => 
         count: acc[dreamNewsMonth].count + 1,
         numComparisons: acc[dreamNewsMonth].numComparisons + record.numComparisons,
         totalWordCount: acc[dreamNewsMonth].totalWordCount + record.wordCount,
-        highSimilarityCount:
-          acc[dreamNewsMonth].highSimilarityCount + highSimilarityAddCount,
+        highSimilarityCount: acc[dreamNewsMonth].highSimilarityCount + record.highScores,
         mediumSimilarityCount:
-          acc[dreamNewsMonth].mediumSimilarityCount + mediumSimilarityAddCount,
-        lowSimilarityCount:
-          acc[dreamNewsMonth].lowSimilarityCount + lowSimilarityAddCount,
+          acc[dreamNewsMonth].mediumSimilarityCount + recordIndicativeScores,
+        lowSimilarityCount: acc[dreamNewsMonth].lowSimilarityCount + record.lowScores,
+        indiscernibleSimilarityCount:
+          acc[dreamNewsMonth].indiscernibleSimilarityCount + recordIndiscernibleScores,
         exampleDreamNewsComparisons: [
           ...acc[dreamNewsMonth].exampleDreamNewsComparisons,
           ...record.examples,
@@ -137,6 +121,7 @@ const monthDataCleaned: ColumnGraphData[] = Object.values(monthData)
       highSimilarityCount,
       mediumSimilarityCount,
       lowSimilarityCount,
+      indiscernibleSimilarityCount,
       exampleDreamNewsComparisons,
       numComparisons,
     } = monthRecord;
@@ -156,24 +141,31 @@ const monthDataCleaned: ColumnGraphData[] = Object.values(monthData)
       examples: examplesWithSimilarityLevel,
       similarityLevels: [
         {
+          similarityLevel: "indiscernible",
+          color: SIMILARITY_COLORS.indiscernible,
+          percent: (100 / numComparisons) * indiscernibleSimilarityCount,
+          threshold: SIMILARITY_CUTOFFS.indiscernible,
+          count: lowSimilarityCount,
+        },
+        {
           similarityLevel: "low",
           color: SIMILARITY_COLORS.low,
-          percent: (100 / count) * lowSimilarityCount,
-          threshold: 0,
+          percent: (100 / numComparisons) * lowSimilarityCount,
+          threshold: SIMILARITY_CUTOFFS.low,
           count: lowSimilarityCount,
         },
         {
           similarityLevel: "medium",
           color: SIMILARITY_COLORS.medium,
-          percent: (100 / count) * mediumSimilarityCount,
-          threshold: MEDIUM_SIMILARITY,
+          percent: (100 / numComparisons) * mediumSimilarityCount,
+          threshold: SIMILARITY_CUTOFFS.medium,
           count: mediumSimilarityCount,
         },
         {
           similarityLevel: "high",
           color: SIMILARITY_COLORS.high,
-          percent: (100 / count) * highSimilarityCount,
-          threshold: HIGH_SIMILARITY,
+          percent: (100 / numComparisons) * highSimilarityCount,
+          threshold: SIMILARITY_CUTOFFS.high,
           count: lowSimilarityCount,
         },
       ],
