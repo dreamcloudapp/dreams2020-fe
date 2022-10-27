@@ -2,7 +2,7 @@ import {
   SingleTextRecord,
   SingleTextRecordDictionary,
 } from "@kannydennedy/dreams-2020-types";
-import { ukDateStringToDate } from "./modules/time-helpers";
+import { dateStringToDate } from "./modules/time-helpers";
 const fs = require("fs");
 const path = require("path");
 const csv = require("csv-parser");
@@ -45,7 +45,7 @@ fs.createReadStream(dreamsFile)
       return {
         id: dream.ID, // Todo: change to DreamId
         text: clippedDream,
-        date: ukDateStringToDate(dream.Date),
+        date: dateStringToDate(dream.Date),
       };
     });
 

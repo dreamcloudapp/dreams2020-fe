@@ -99,10 +99,16 @@ export const monthIndexFromDate = (date: Date | undefined): number => {
   return date.getMonth();
 };
 
-export const ukDateStringToDate = (dateString: string): Date => {
-  const dateParts = dateString.split("/");
-  const day = parseInt(dateParts[0]);
-  const month = parseInt(dateParts[1]) - 1;
-  const year = parseInt(dateParts[2]);
-  return new Date(year, month, day);
+export const dateStringToDate = (dateString: string): Date => {
+  // We'll assume if the date string includes a dash, it's in the format YYYY-MM-DD
+  // Otherwise, we'll assume it's in the format DD/MM/YYYY
+  if (dateString.includes("-")) {
+    return new Date(dateString);
+  } else {
+    const dateParts = dateString.split("/");
+    const day = parseInt(dateParts[0]);
+    const month = parseInt(dateParts[1]) - 1;
+    const year = parseInt(dateParts[2]);
+    return new Date(year, month, day);
+  }
 };
