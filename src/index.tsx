@@ -5,6 +5,12 @@ import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { GraphType } from "./ducks/ui";
+
+export type ChartOpts = {
+  activeChart?: GraphType;
+  showAll?: boolean;
+};
 
 declare global {
   interface Window {
@@ -12,13 +18,18 @@ declare global {
   }
 }
 
-window.embedDreamChart = function (htmlTagId: keyof HTMLElementTagNameMap) {
+window.embedDreamChart = function (
+  htmlTagId: keyof HTMLElementTagNameMap,
+  opts: ChartOpts = {}
+) {
+  const { activeChart, showAll } = opts;
+
   const el = document.querySelector(htmlTagId);
   const render = () => {
     ReactDOM.render(
       <React.StrictMode>
         <Provider store={store}>
-          <App />
+          <App activeChart={activeChart} showAll={showAll} />
         </Provider>
       </React.StrictMode>,
       el

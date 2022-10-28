@@ -157,8 +157,6 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
             ? 20
             : 8;
 
-        console.log(radar.radarData, "asekfhasdf");
-
         return (
           <div
             key={i}
@@ -185,6 +183,7 @@ export function RadarGraph({ data, width }: RadarGraphProps) {
               {showingPeople.map((person, i) => {
                 return (
                   <Radar
+                    key={i}
                     name={person.label}
                     dataKey={person.label}
                     stroke={person.color}

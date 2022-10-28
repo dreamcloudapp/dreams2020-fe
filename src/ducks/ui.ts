@@ -35,7 +35,7 @@ export type UIState = {
 const initialState: UIState = {
   activeGranularity: "day",
   checkedCollections: [],
-  showingGraph: "area",
+  showingGraph: "bar",
   focusedComparison: null,
   prevFocusedComparison: null,
   activeComparisonSet: [],

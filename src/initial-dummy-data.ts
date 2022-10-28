@@ -9,7 +9,7 @@ import {
 
 // Dummy data for bubbles
 // For when allComparisons hasn't loaded yet
-export const defaultData: GranularityComparisonCollection = {
+export const defaultBubbleData: GranularityComparisonCollection = {
   comparisonSets: [],
   maxSimilarity: 1,
   minSimilarity: 0,

@@ -1,8 +1,5 @@
 import { useEffect, useRef } from "react";
 import "./App.css";
-import { BubbleGraphContainer } from "./bubble-graph/bubble-graph-container";
-import { AreaGraphContainer } from "./area-graph/area-graph-container";
-import { ColumnGraphContainer } from "./column-graph/column-graph-container";
 import { useSelector } from "./ducks/root-reducer";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
 import {
@@ -30,21 +27,18 @@ import {
   setPrevFocusedComparison,
   setShowingGraph,
 } from "./ducks/ui";
-import { GranularityComparisonCollection } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import {
   defaultBarData,
   defaultColumnGraphData,
-  defaultData,
-  defaultDifferencesData,
   defaultRadarData,
 } from "./initial-dummy-data";
 import useComponentSize from "@rehooks/component-size";
 import { localPoint } from "@visx/event";
-import { BarGraphContainer } from "./bar-graph/bar-graph-container";
 import { Padding } from "./modules/ui-types";
 import { DreamNewsText } from "./dream-news-text/dream-news-text";
-import { RadarGraph } from "./radar-graph/radar-graph";
+import { ChartOpts } from ".";
+import AppInner from "./app-inner";
 
 const padding: Padding = {
   LEFT: 50,
@@ -89,10 +83,10 @@ function GraphTypeToggle({
   );
 }
 
-function App() {
+function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
-  const allComparisons = useSelector(selectComparisons);
+  const bubbleGraphData = useSelector(selectComparisons);
   const activeGranularity = useSelector(selectActiveGranularity);
   const showingGraph = useSelector(selectShowingGraph);
   const differencesData = useSelector(selectDifferences);
@@ -101,11 +95,6 @@ function App() {
   const radarData = useSelector(selectRadarData);
   const focusedComparison = useSelector(selectFocusedComparison);
 
-  const data: GranularityComparisonCollection = allComparisons
-    ? allComparisons[activeGranularity]
-    : defaultData;
-
-  const diffData = differencesData || defaultDifferencesData;
   const columnGraphData = columnData || defaultColumnGraphData;
   const barGraphData = barData || defaultBarData;
   const radarGraphData = radarData || defaultRadarData;
@@ -138,14 +127,19 @@ function App() {
 
   // Initial data fetch
   useEffect(() => {
-    dispatch<any>(fetchBubbleData());
     dispatch<any>(fetchAreaData());
+    dispatch<any>(fetchBubbleData());
     dispatch<any>(fetchColumnData());
     dispatch<any>(fetchBarData());
     dispatch<any>(fetchDreams());
     dispatch<any>(fetchNews());
     dispatch<any>(fetchRadarData());
   }, [dispatch]);
+
+  // Set the active chart based on props
+  useEffect(() => {
+    dispatch(setShowingGraph(activeChart));
+  }, [dispatch, activeChart]);
 
   const frameWidth = window.location.href.includes("localhost") ? 20 : 0;
   const maxWidth = window.location.href.includes("localhost")
@@ -172,54 +166,35 @@ function App() {
               style={{ height: "100%", width: "100%", position: "relative" }}
               ref={containerRef}
             >
-              <GraphTypeToggle
-                onSelectGraphType={setShowingGraph}
-                showingGraph={showingGraph}
-              />
+              {showAll && (
+                <GraphTypeToggle
+                  onSelectGraphType={setShowingGraph}
+                  showingGraph={showingGraph}
+                />
+              )}
+
               {(isLoading || !width || width < 1) && <div>Loading...</div>}
-              {!isLoading && showingGraph === "area" && (
-                <AreaGraphContainer
-                  data={diffData}
-                  width={width}
-                  height={height}
-                  handleMouseOver={handleMouseOver}
-                  onMouseOut={hideTooltip}
-                  padding={padding}
-                />
-              )}
-              {!isLoading && showingGraph === "bubble" && (
-                <BubbleGraphContainer
-                  data={data}
-                  width={width}
-                  height={height}
-                  handleMouseOver={handleMouseOver}
-                  onMouseOut={hideTooltip}
-                  padding={padding}
-                />
-              )}
-              {!isLoading && showingGraph === "column" && (
-                <ColumnGraphContainer
-                  data={columnGraphData}
-                  width={width}
-                  height={height}
-                  handleMouseOver={handleMouseOver}
-                  onMouseOut={hideTooltip}
-                  padding={padding}
-                />
-              )}
-              {!isLoading && showingGraph === "bar" && (
-                <BarGraphContainer
-                  data={barGraphData}
-                  width={width}
-                  height={height}
-                  handleMouseOver={handleMouseOver}
-                  onMouseOut={hideTooltip}
-                  padding={padding}
-                />
-              )}
-              {!isLoading && showingGraph === "radar" && (
-                <RadarGraph data={radarGraphData} width={width} />
-              )}
+              {!isLoading &&
+                bubbleGraphData &&
+                differencesData &&
+                columnGraphData &&
+                barGraphData &&
+                radarGraphData &&
+                activeGranularity && (
+                  <AppInner
+                    height={height}
+                    width={width}
+                    showingGraph={showingGraph}
+                    handleMouseOver={handleMouseOver}
+                    hideTooltip={hideTooltip}
+                    bubbleData={bubbleGraphData[activeGranularity]}
+                    diffData={differencesData}
+                    columnGraphData={columnGraphData}
+                    barGraphData={barGraphData}
+                    radarGraphData={radarGraphData}
+                    padding={padding}
+                  />
+                )}
             </div>
           </div>
         </div>

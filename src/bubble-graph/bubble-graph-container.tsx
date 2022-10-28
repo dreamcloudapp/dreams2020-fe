@@ -17,6 +17,7 @@ import {
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { Padding } from "../modules/ui-types";
+import { defaultBubbleData } from "../initial-dummy-data";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
@@ -33,13 +34,15 @@ const timeLabels: { key: Granularity; label: string }[] = [
 ];
 
 export function BubbleGraphContainer({
-  data,
+  data = defaultBubbleData,
   width,
   height,
   handleMouseOver,
   onMouseOut,
   padding,
 }: GraphProps) {
+  console.log("dat man", data);
+
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
   const checkedCollections = useSelector(selectCheckedCollections);

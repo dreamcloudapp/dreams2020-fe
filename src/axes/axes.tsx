@@ -101,7 +101,7 @@ function Axes({
         }
 
         return (
-          <g>
+          <g key={i}>
             <line
               x1={leftGraphEdge + i * xTickInterval + barOffset}
               x2={leftGraphEdge + i * xTickInterval + barOffset}
