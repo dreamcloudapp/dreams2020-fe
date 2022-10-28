@@ -52,6 +52,13 @@ const uiSlice = createSlice({
       state.checkedCollections = action.payload;
     },
     setShowingGraph(state, action: PayloadAction<GraphType>) {
+      // Some charts don't have some granularities :shrug:
+      if (action.payload === "bubble") {
+        state.activeGranularity = "month";
+      } else if (action.payload === "area") {
+        state.activeGranularity = "day";
+      }
+
       state.showingGraph = action.payload;
       // Also reset some things
       state.activeComparisonSet = [];
