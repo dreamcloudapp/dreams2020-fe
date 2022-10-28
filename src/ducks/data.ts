@@ -12,7 +12,9 @@ import {
   RadarPersonData,
 } from "@kannydennedy/dreams-2020-types";
 
-export type BigBigThing = { [key in Granularity]: GranularityComparisonCollection };
+export type ComparisonCollectionByGranularity = {
+  [key in Granularity]: GranularityComparisonCollection;
+};
 
 export type ComparisonSets = {
   granularity: Granularity;
@@ -30,7 +32,7 @@ export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number }
 
 export type DataState = {
   loading: boolean;
-  comparisons?: BigBigThing;
+  comparisons?: ComparisonCollectionByGranularity;
   differences?: DifferenceByGranularity;
   columnData?: ColumnGraphData[];
   barData?: DifferenceDisplayRecordWithExamples;
@@ -57,7 +59,7 @@ const dataSlice = createSlice({
     setLoading(state, action: PayloadAction<boolean>) {
       state.loading = action.payload;
     },
-    setComparisons(state, action: PayloadAction<BigBigThing>) {
+    setComparisons(state, action: PayloadAction<ComparisonCollectionByGranularity>) {
       state.comparisons = action.payload;
     },
     setDifferences(state, action: PayloadAction<DifferenceByGranularity>) {
@@ -86,7 +88,9 @@ export default dataSlice;
 // ----------------------------------------------------------------------------
 // Selectors
 
-export const selectComparisons = (state: RootState): BigBigThing | undefined => {
+export const selectComparisons = (
+  state: RootState
+): ComparisonCollectionByGranularity | undefined => {
   return state?.data.comparisons;
 };
 
@@ -174,12 +178,15 @@ export function fetchBubbleData(): AppThunk {
       })
     );
 
-    const allComparisonsMap: BigBigThing = allData.reduce((acc, curr, i) => {
-      return {
-        ...acc,
-        [files[i].granularity]: curr,
-      };
-    }, {} as BigBigThing);
+    const allComparisonsMap: ComparisonCollectionByGranularity = allData.reduce(
+      (acc, curr, i) => {
+        return {
+          ...acc,
+          [files[i].granularity]: curr,
+        };
+      },
+      {} as ComparisonCollectionByGranularity
+    );
 
     dispatch(dataSlice.actions.setComparisons(allComparisonsMap));
     dispatch(dataSlice.actions.setLoading(false));

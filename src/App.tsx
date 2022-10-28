@@ -28,11 +28,6 @@ import {
   setShowingGraph,
 } from "./ducks/ui";
 import { GraphType } from "./ducks/ui";
-import {
-  defaultBarData,
-  defaultColumnGraphData,
-  defaultRadarData,
-} from "./initial-dummy-data";
 import useComponentSize from "@rehooks/component-size";
 import { localPoint } from "@visx/event";
 import { Padding } from "./modules/ui-types";
@@ -94,10 +89,6 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
   const barData = useSelector(selectBarData);
   const radarData = useSelector(selectRadarData);
   const focusedComparison = useSelector(selectFocusedComparison);
-
-  const columnGraphData = columnData || defaultColumnGraphData;
-  const barGraphData = barData || defaultBarData;
-  const radarGraphData = radarData || defaultRadarData;
 
   // Get width and height
   const graphContainerRef = useRef<HTMLDivElement>(null);
@@ -177,9 +168,9 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
               {!isLoading &&
                 bubbleGraphData &&
                 differencesData &&
-                columnGraphData &&
-                barGraphData &&
-                radarGraphData &&
+                columnData &&
+                barData &&
+                radarData &&
                 activeGranularity && (
                   <AppInner
                     height={height}
@@ -189,9 +180,9 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
                     hideTooltip={hideTooltip}
                     bubbleData={bubbleGraphData[activeGranularity]}
                     diffData={differencesData}
-                    columnGraphData={columnGraphData}
-                    barGraphData={barGraphData}
-                    radarGraphData={radarGraphData}
+                    columnGraphData={columnData}
+                    barGraphData={barData}
+                    radarGraphData={radarData}
                     padding={padding}
                   />
                 )}

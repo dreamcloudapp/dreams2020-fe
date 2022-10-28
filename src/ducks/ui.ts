@@ -33,7 +33,7 @@ export type UIState = {
 };
 
 const initialState: UIState = {
-  activeGranularity: "day",
+  activeGranularity: "month",
   checkedCollections: [],
   showingGraph: "bar",
   focusedComparison: null,

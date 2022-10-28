@@ -52,7 +52,7 @@
 </head>
 
 <body>
-    <article id="smu-embed-instructions">
+    <article id="dreams2020-embed-instructions">
     <div class="instructions">
         <h1>This is the Dreams 2020 embed testing page.</h1>
         <p>We're going to embed the chart below.</p>
@@ -98,17 +98,18 @@
                 &lt;script&gt; window.embedDreamChart(&quot;#embed&quot;); &lt;/script&gt;
             </code>
             </p>
-            <p>The above function, <code>window.embedDreamChart</code>, accepts 1 parameter:
+            <p>The above function, <code>window.embedDreamChart</code>, accepts 2 parameters:
                 <ul>
                     <li>
 
                         A selector string (e.g.
                         <code>"#embed"</code>). This refers to the empty div you made.
                     </li>
-                    <!-- <li>
-                        Optionally, an options parameter to use the public version
-                        <code>{isPublic: true}</code> or <code>{isPublic: false}</code>. If you don't add this parameter, it will default to the community version.
-                    </li> -->
+                    <li>
+                        Optionally, an options parameter to elect which graph to show, and whether
+                        to allow toggling to other graphs. e.g:
+                        <code>{activeChart: "bubble", showAll: false}</code> If you don't add this parameter, it will default to the bar chart and toggleable.
+                    </li>
                 </ul>
             </p>
 
@@ -119,7 +120,7 @@
 <div id="embed"></div>
 
     <script>
-        window.embedDreamChart("#embed");
+        window.embedDreamChart("#embed", {activeChart: "area", showAll: false});
     </script>
 </body>
 
