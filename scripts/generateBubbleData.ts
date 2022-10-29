@@ -186,11 +186,11 @@ const monthComparisonsCollection: GranularityComparisonCollection = getBroaderGr
 );
 
 // TODO: We're just removing the control temporarily until it's ready
-const weekComparisonsCollectionFiltered = {
+const weekComparisonsCollectionFiltered: GranularityComparisonCollection = {
   ...weekComparisonsCollection,
   comparisonSets: [weekComparisonsCollection.comparisonSets[0]],
 };
-const monthComparisonsCollectionFiltered = {
+const monthComparisonsCollectionFiltered: GranularityComparisonCollection = {
   ...monthComparisonsCollection,
   comparisonSets: [monthComparisonsCollection.comparisonSets[0]],
 };

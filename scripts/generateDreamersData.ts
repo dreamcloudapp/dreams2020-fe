@@ -49,6 +49,41 @@ const dataArr2020: NewsRecordWithDates[] = files
   })
   .flat();
 
+// What we eventually want to return is a 'GranularityComparisonCollection'.
+// Everything needed for a given granularity
+// export type GranularityComparisonCollection = {
+//     granularity: Granularity;
+//     maxSimilarity: number;
+//     minSimilarity: number;
+//     maxWordCount: number;
+//     minWordCount: number;
+//     comparisonSets: ColoredSetWithinGranularity[];
+//  };
+
+// // The coloured sets within a granularity
+// export type ColoredSetWithinGranularity = {
+//     label: string;
+//     color: string;
+//     comparisons: ComparisonSet[];
+//   };
+
+// All the comparisons within a given "coloured set" in a granularity
+// I.e. in the case of a bubble chart, the bubbles
+// export type ComparisonSet = {
+//     id: string;
+//     granularity: Granularity; // "day", "week", "month", "year"
+//     label: string; // E.g. "March 2020 Dreams vs. April 2020 News"
+//     dreamCollection: CollectionParams;
+//     newsCollection: CollectionParams;
+//     score: number;
+//     wordCount: number;
+//     examples: ExampleRecordComparison[];
+//     similarityExamples?: ExamplesWithSimilarityLevel;
+//     concepts: WikipediaConcept[];
+//     numComparisons: number; // Number of individual comparisons used. We can actually calculate this by multiplying dreamSetSize * recordSize
+//     numDayComparisons: number; // The basic unit of comparison is a day, so this is the number of days that were compared
+//   };
+
 //   Write the data to a file
 const outputFile = path.join(__dirname, "../public/data/newsy-dreamers.json");
 fs.writeFileSync(outputFile, JSON.stringify(dataArr2020, null, 2));
