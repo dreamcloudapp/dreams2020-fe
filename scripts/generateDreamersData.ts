@@ -6,12 +6,61 @@ import { SET2020, DREAMERS_SRC_FOLDER, SIMILARITY_CUTOFFS } from "./config";
 import { SIMILARITY_COLORS } from "./modules/theme";
 import { consolidateDreamNewsComparisonExampleList } from "./modules/mergers";
 import { isEmptyFile } from "./modules/file-helpers";
+import { truncateString } from "./modules/string-helpers";
+const csv = require("csv-parser");
 
 type NewsRecordWithDates = NewsRecord & {
   dreamDate: Date;
   newsDate: Date;
   numComparisons: number;
 };
+
+const DREAM_MAX_LEN = 2000;
+
+//////////////////////////////////////////
+// Read CSV files and convert to JSON
+//////////////////////////////////////////
+
+// We need to parse the Dreamers CSV first
+// So we know which dreams belong to which dreamers
+const DREAMS_FILE_PATH = "../source-dreams-news/newsy-dreams.csv";
+const dreamsFile = path.join(__dirname, DREAMS_FILE_PATH);
+type DreamerCsvRow = {
+  ID: string;
+  Title: string;
+  Date: string;
+  Dream: string;
+  Dreamer: string;
+  "Dreamer alias": string;
+  "2020 reference": string;
+  "Real Date": string;
+};
+
+// Read the all-dreams-final.json file to get the real ids
+const DREAMS_JSON_PATH = "../public/data/all-dreams-final.json";
+const dreamsJsonPath = path.join(__dirname, DREAMS_JSON_PATH);
+const allDreams = require(dreamsJsonPath);
+
+const results: DreamerCsvRow[] = [];
+
+fs.createReadStream(dreamsFile)
+  .pipe(csv())
+  .on("data", (data: DreamerCsvRow) => {
+    const truncatedData = {
+      ...data,
+      ID: findRealId(data.Dream, allDreams),
+      Dream: truncateString(data.Dream, DREAM_MAX_LEN),
+    };
+    results.push(truncatedData);
+  })
+  .on("end", () => {
+    console.log("Parsed CSV file");
+
+    //   Write the data to a file
+    const outputFile = path.join(__dirname, "../public/data/newsy-dreamers.json");
+    fs.writeFileSync(outputFile, JSON.stringify(results, null, 2));
+    console.log(`Month column data written to ${outputFile}`);
+  });
 
 console.log("Generating dreamers data...");
 
@@ -84,9 +133,24 @@ const dataArr2020: NewsRecordWithDates[] = files
 //     numDayComparisons: number; // The basic unit of comparison is a day, so this is the number of days that were compared
 //   };
 
-//   Write the data to a file
-const outputFile = path.join(__dirname, "../public/data/newsy-dreamers.json");
-fs.writeFileSync(outputFile, JSON.stringify(dataArr2020, null, 2));
-console.log(`Month column data written to ${outputFile}`);
+//////////////////////////////////////////
+// Helper functions
+//////////////////////////////////////////
+
+function findRealId(dreamText: string, allDreams: any): string {
+  const allDreamsArr = Object.values(allDreams);
+  const dream = allDreamsArr.find(dream => {
+    // To reduce errors, let's take a substring from 20 to 50
+    // (dream as any).text === dreamText
+    return (dream as any).text.substring(20, 50) === dreamText.substring(20, 50);
+  });
+  if (dream) {
+    return (dream as any).id as string;
+  } else {
+    console.log("Missing dream: ", truncateString(dreamText, 100));
+    // Generate a random integer between 1 and 100000000
+    return (Math.floor(Math.random() * 100000000) * -1).toString();
+  }
+}
 
 export {};
