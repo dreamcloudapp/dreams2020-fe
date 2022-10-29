@@ -8,7 +8,7 @@ export type CollectionCheck = {
   checked: boolean;
 };
 
-export type GraphType = "column" | "bubble" | "area" | "bar" | "radar";
+export type GraphType = "months" | "bubble" | "area" | "bar";
 
 export type VisComparison = {
   x: number;

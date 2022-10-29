@@ -90,7 +90,7 @@ export function BubbleGraph({
         yRange={[0, paddedMax]}
         xRange={xDomain}
         numTicks={7}
-        xAxisCenterLabel=""
+        xAxisCenterLabel="Dream-news time difference"
         xAxisFormat={d => {
           const plural = Math.abs(d) > 1 ? "s" : "";
           if (d === 0) {

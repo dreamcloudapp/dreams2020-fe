@@ -129,7 +129,7 @@ export function BarGraphContainer({
         hasMidpointLine={false}
         yRange={[0, paddedMax]}
         xRange={[-numBars / 2, numBars / 2]}
-        xAxisCenterLabel=""
+        xAxisCenterLabel="Dream-news time difference"
         numTicks={11}
         barWidth={barWidth}
         barGap={BAR_GAP}

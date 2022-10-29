@@ -101,7 +101,7 @@ export function ColumnGraphContainer({
         padding={padding}
         xAxisLeftLabel=""
         xAxisRightLabel=""
-        xAxisCenterLabel="Month of 2020"
+        xAxisCenterLabel="Months of 2020"
         yRange={[0, maxSimilarity]}
         xRange={[0, data.length]}
         numTicks={5}

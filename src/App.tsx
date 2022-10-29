@@ -14,8 +14,6 @@ import {
   fetchBarData,
   fetchDreams,
   fetchNews,
-  selectRadarData,
-  fetchRadarData,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
@@ -34,6 +32,7 @@ import { Padding } from "./modules/ui-types";
 import { DreamNewsText } from "./dream-news-text/dream-news-text";
 import { ChartOpts } from ".";
 import AppInner from "./app-inner";
+import { toTitleCase } from "./modules/formatters";
 
 const padding: Padding = {
   LEFT: 50,
@@ -42,7 +41,7 @@ const padding: Padding = {
   BOTTOM: 100,
 };
 
-const graphtypes: GraphType[] = ["area", "bar", "bubble", "column", "radar"];
+const graphtypes: GraphType[] = ["area", "bar", "bubble", "months"];
 
 function GraphTypeToggle({
   onSelectGraphType,
@@ -71,7 +70,7 @@ function GraphTypeToggle({
           }}
           className={graphType === showingGraph ? "selected" : ""}
         >
-          {graphType}
+          {toTitleCase(graphType)}
         </button>
       ))}
     </div>
@@ -87,7 +86,6 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
   const differencesData = useSelector(selectDifferences);
   const columnData = useSelector(selectColumnData);
   const barData = useSelector(selectBarData);
-  const radarData = useSelector(selectRadarData);
   const focusedComparison = useSelector(selectFocusedComparison);
 
   // Get width and height
@@ -124,7 +122,6 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
     dispatch<any>(fetchBarData());
     dispatch<any>(fetchDreams());
     dispatch<any>(fetchNews());
-    dispatch<any>(fetchRadarData());
   }, [dispatch]);
 
   // Set the active chart based on props
@@ -143,7 +140,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
         style={{
           width: "100%",
           position: "relative",
-          height: showingGraph === "radar" ? "auto" : 600,
+          height: 600,
           padding: frameWidth,
           maxWidth: maxWidth,
         }}
@@ -170,7 +167,6 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
                 differencesData &&
                 columnData &&
                 barData &&
-                radarData &&
                 activeGranularity && (
                   <AppInner
                     height={height}
@@ -182,7 +178,6 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
                     diffData={differencesData}
                     columnGraphData={columnData}
                     barGraphData={barData}
-                    radarGraphData={radarData}
                     padding={padding}
                   />
                 )}

@@ -7,12 +7,10 @@ import {
   DifferenceByGranularity,
   DifferenceDisplayRecordWithExamples,
   GranularityComparisonCollection,
-  RadarPersonData,
 } from "@kannydennedy/dreams-2020-types";
 import { GraphType } from "./ducks/ui";
 import { BarGraphContainer } from "./bar-graph/bar-graph-container";
 import { Padding } from "./modules/ui-types";
-import { RadarGraph } from "./radar-graph/radar-graph";
 
 type AppInnerProps = {
   showingGraph: GraphType;
@@ -24,7 +22,6 @@ type AppInnerProps = {
   diffData: DifferenceByGranularity;
   columnGraphData: ColumnGraphData[];
   barGraphData: DifferenceDisplayRecordWithExamples;
-  radarGraphData: RadarPersonData[];
   padding: Padding;
 };
 
@@ -38,7 +35,6 @@ function AppInner({
   diffData,
   columnGraphData,
   barGraphData,
-  radarGraphData,
   padding,
 }: AppInnerProps) {
   return (
@@ -63,7 +59,7 @@ function AppInner({
           padding={padding}
         />
       )}
-      {showingGraph === "column" && (
+      {showingGraph === "months" && (
         <ColumnGraphContainer
           data={columnGraphData}
           width={width}
@@ -83,7 +79,6 @@ function AppInner({
           padding={padding}
         />
       )}
-      {showingGraph === "radar" && <RadarGraph data={radarGraphData} width={width} />}
     </>
   );
 }
