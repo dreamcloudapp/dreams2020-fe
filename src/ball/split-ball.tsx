@@ -5,6 +5,7 @@ import { AnimatedText } from "./animated-text";
 import { AnimatedLine } from "./animated-line";
 import { changeHslLightness } from "../modules/colorHelpers";
 import { AnimatedLabel } from "./animated-label";
+import { truncateText } from "../modules/formatters";
 
 type SplitBallProps = {
   stroke: string;
@@ -232,9 +233,9 @@ export const SplitBall = ({
                 startPoint={[endX, endY]}
                 endPoint={[endX, ySpreadStart + i * spreadInterval]}
                 fill={fill}
-                conceptText={concept}
+                conceptText={truncateText(concept, 65)}
                 key={i}
-                fontSize={18}
+                fontSize={14}
                 fontWeight={500}
                 rectWidth={textRectWidth}
                 rectHeight={rectHeight}

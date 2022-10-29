@@ -15,3 +15,12 @@ export const toTitleCase = (str: string): string => {
     txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
   );
 };
+
+// Truncate text to x characters
+export const truncateText = (text: string, length: number): string => {
+  if (text.length > length) {
+    return text.substring(0, length) + "...";
+  } else {
+    return text;
+  }
+};

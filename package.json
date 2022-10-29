@@ -44,6 +44,7 @@
     "bubbledata": "npx ts-node scripts/generateBubbleData.ts",
     "bardata": "npx ts-node scripts/generateBarData.ts",
     "areadata": "npx ts-node scripts/generateAreaData.ts",
+    "dreamersdata": "npx ts-node scripts/generateDreamersData.ts",
     "monthcolumns": "npx ts-node scripts/generateMonthColumnData.ts",
     "parse-dreams": "npx ts-node scripts/parseDreams.ts",
     "parse-news": "npx ts-node scripts/parseNews.ts",

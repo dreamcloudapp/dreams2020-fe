@@ -27,7 +27,7 @@ export const AnimatedText = ({
 }: AnimatedTextProps) => {
   const [startX, startY] = startPoint;
   const [endX, endY] = endPoint;
-  const textOffset = fontSize * 1.1;
+  const textOffset = fontSize * 1.5;
 
   const moveTextSpringRef = useSpringRef();
   const moveRectSpringRef = useSpringRef();

@@ -2,6 +2,8 @@ import { SimilarityLevel } from "@kannydennedy/dreams-2020-types";
 
 // This is where the actual data is
 export const SRC_FOLDER = "../source-data-all";
+export const DREAMERS_SRC_FOLDER = "../source-data-dreamers";
+
 // These are just the names of the src files
 // When they're first processed by Sheldon on the backend
 export const SET2020 = "./all-dreams-final-2020.csv";

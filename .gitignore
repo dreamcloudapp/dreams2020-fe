@@ -5,6 +5,7 @@
 
 # Source directories, this is a lot of data
 /source-data-all/*
+/source-data-dreamers/*
 /data-samples/*
 
 # Not sure what this is
