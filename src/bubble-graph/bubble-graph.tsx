@@ -181,7 +181,6 @@ export function BubbleGraph({
                 ) {
                   return;
                 }
-
                 dispatch(setActiveComparisonSet(highMedLowComparisons));
                 dispatch(setFocusedComparison(highMedLowComparisons[0]));
               }}

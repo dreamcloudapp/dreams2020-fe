@@ -135,7 +135,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
     : "90rem";
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%" }} className="dreams-2020-chart">
       <div
         style={{
           width: "100%",
