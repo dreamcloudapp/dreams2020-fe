@@ -19,13 +19,17 @@ export function Tooltip({ tipTitle, sections }: TooltipProps) {
   return (
     <div style={{ fontWeight: "normal" }}>
       {tipTitle && (
-        <h4 style={{ fontWeight: "bold", textDecoration: "underline" }}>{tipTitle}</h4>
+        <h4 style={{ fontWeight: "bold", textDecoration: "underline", fontSize: 14 }}>
+          {tipTitle}
+        </h4>
       )}
       {sections.map((section, i) => {
         return (
           <div key={i}>
             {section.sectionTitle && (
-              <h5 style={{ fontWeight: "bold", color: section.sectionColor }}>
+              <h5
+                style={{ fontWeight: "bold", color: section.sectionColor, fontSize: 13 }}
+              >
                 {section.sectionTitle}
               </h5>
             )}

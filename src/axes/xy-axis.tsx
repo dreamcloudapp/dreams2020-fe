@@ -63,8 +63,8 @@ export function XYAxis({
         granularity={activeGranularity}
         maxTimeDistance={1}
         yAxisTopLabel="Similarity"
-        xAxisRightLabel={xAxisRightLabel}
-        xAxisLeftLabel={xAxisLeftLabel}
+        xAxisRightLabel={width < 900 ? "" : xAxisRightLabel}
+        xAxisLeftLabel={width < 900 ? "" : xAxisLeftLabel}
         xAxisCenterLabel={xAxisCenterLabel}
         yRange={yRange}
         xRange={xRange}
