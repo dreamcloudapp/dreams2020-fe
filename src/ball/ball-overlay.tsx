@@ -27,6 +27,7 @@ export function BallOverlay({
   focusedComparison,
   prevFocusedComparison,
   header,
+  activeComparisonSet,
 }: BallOverlayProps) {
   const dispatch = useDispatch();
 
@@ -98,7 +99,7 @@ export function BallOverlay({
         />
       )}
 
-      {focusedComparison && (
+      {focusedComparison && activeComparisonSet.length > 1 && (
         <ChevronRight
           fill={ColorTheme.BLUE}
           x={width - 50}

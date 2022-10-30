@@ -21,7 +21,7 @@ import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
 import { ColorTheme, RED_SIMILARITY_COLORS, SIMILARITY_COLORS } from "../modules/theme";
 import { XYAxis } from "../axes/xy-axis";
-import { Tooltip, TooltipRow, TooltipSection } from "../tooltip/tooltip-inner";
+import { Tooltip, TooltipRow } from "../tooltip/tooltip-inner";
 import { toTitleCase } from "../modules/formatters";
 
 type BubbleGraphProps = {
