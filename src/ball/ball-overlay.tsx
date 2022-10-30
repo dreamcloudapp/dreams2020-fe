@@ -33,7 +33,6 @@ export function BallOverlay({
   // If we have dream and news ids, it's a special thing
   // We're comparing one dream and one news, not a set of them
   const dreamId = focusedComparison?.dreamId || "";
-  const newsId = focusedComparison?.newsId || "";
   const hasDreamId = !!dreamId;
   //   const isSingleComparison: boolean = hasDreamId && hasNewsId;
 
