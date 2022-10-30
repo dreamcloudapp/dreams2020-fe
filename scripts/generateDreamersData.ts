@@ -3,7 +3,6 @@ const path = require("path");
 const { isDotFile } = require("./modules/file-helpers");
 import {
   ColoredSetWithinGranularity,
-  ColumnGraphData,
   ComparisonSet,
   DayRecord,
   ExampleDreamNewsComparison,
@@ -11,11 +10,9 @@ import {
   NewsRecord,
   SingleTextRecord,
 } from "@kannydennedy/dreams-2020-types";
-import { SET2020, DREAMERS_SRC_FOLDER, SIMILARITY_CUTOFFS, palette } from "./config";
-import { SIMILARITY_COLORS } from "./modules/theme";
-import { consolidateDreamNewsComparisonExampleList } from "./modules/mergers";
+import { DREAMERS_SRC_FOLDER, SIMILARITY_CUTOFFS, palette } from "./config";
 import { isEmptyFile } from "./modules/file-helpers";
-import { truncateString } from "./modules/string-helpers";
+import { linkToTitle, truncateString } from "./modules/string-helpers";
 const { dayIndexFromDate } = require("./modules/time-helpers");
 const csv = require("csv-parser");
 
@@ -60,13 +57,17 @@ const newsJsonPath = path.join(__dirname, NEWS_JSON_PATH);
 const allNews: { [key: string]: SingleTextRecord } = require(newsJsonPath);
 
 const results: DreamerCsvRowWithRealId[] = [];
+let fakeIdToRealId: { [key: string]: string } = {};
 
 fs.createReadStream(dreamsFile)
   .pipe(csv())
   .on("data", (data: DreamerCsvRow) => {
+    const realId = findRealId(data.Dream, allDreams);
+    fakeIdToRealId[data.ID] = realId;
+
     const truncatedData = {
       ...data,
-      realId: findRealId(data.Dream, allDreams),
+      realId: realId,
       Dream: truncateString(data.Dream, DREAM_MAX_LEN),
     };
     // For now, we're only interested in 2020 dreams.
@@ -201,6 +202,9 @@ fs.createReadStream(dreamsFile)
         const newsDate = new Date(newsRecord.date);
         const newsDateIndex = dayIndexFromDate(newsDate);
 
+        // console.log(example.doc1Id, "alsekjfds");
+        // console.log(findRealId(example.doc1Id, allDreams), "real id");
+
         const totalCharCount = (dreamRecord.text + newsRecord.text).length;
 
         const comp: ComparisonSet = {
@@ -214,10 +218,10 @@ fs.createReadStream(dreamsFile)
           similarityExamples: {
             high: {
               score: example.score,
-              dreamId: findRealId(example.doc1Id, allDreams),
+              dreamId: fakeIdToRealId[example.doc1Id],
               newsId: example.doc2Id,
               concepts: example.topConcepts.map(x => ({
-                title: x.concept,
+                title: linkToTitle(x.concept),
                 score: x.score,
               })),
             },
