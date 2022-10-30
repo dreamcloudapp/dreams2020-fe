@@ -1,5 +1,5 @@
 [context.production.environment]
-     PUBLIC_URL = "https://dreams-2020-wordsearch.netlify.app/"
+     PUBLIC_URL = "https://dreams-2020.netlify.app/"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
