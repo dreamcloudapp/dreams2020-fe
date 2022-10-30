@@ -28,3 +28,14 @@ export const SIMILARITY_CUTOFFS: { [key in SimilarityLevel]: number } = {
   low: 0.05,
   indiscernible: 0,
 };
+
+export const palette = [
+  "#eb524d",
+  "#fac69a",
+  "#90caca",
+  "#b68a07",
+  "#3e683a",
+  "#40647a",
+  "#a80f0f",
+  "#2c2c2c",
+];

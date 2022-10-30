@@ -23,7 +23,7 @@ export type ComparisonSets = {
 // The maximum time index distance for a given granularity
 // E.g. month: 6 would be 6 months
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
-  day: 2,
+  day: 180,
   week: 3,
   month: 6,
   year: 30,
@@ -35,6 +35,7 @@ export type DataState = {
   differences?: DifferenceByGranularity;
   columnData?: ColumnGraphData[];
   barData?: DifferenceDisplayRecordWithExamples;
+  dreamersData?: GranularityComparisonCollection;
   dreams?: SingleTextRecordDictionary;
   news?: SingleTextRecordDictionary;
 };
@@ -45,6 +46,7 @@ const initialState: DataState = {
   differences: undefined,
   columnData: undefined,
   barData: undefined,
+  dreamersData: undefined,
   dreams: undefined,
   news: undefined,
 };
@@ -67,6 +69,9 @@ const dataSlice = createSlice({
     },
     setBarData(state, action: PayloadAction<DifferenceDisplayRecordWithExamples>) {
       state.barData = action.payload;
+    },
+    setDreamersData(state, action: PayloadAction<GranularityComparisonCollection>) {
+      state.dreamersData = action.payload;
     },
     setDreams(state, action: PayloadAction<SingleTextRecordDictionary>) {
       state.dreams = action.payload;
@@ -102,6 +107,12 @@ export const selectBarData = (
   state: RootState
 ): DifferenceDisplayRecordWithExamples | undefined => {
   return state?.data.barData;
+};
+
+export const selectDreamersData = (
+  state: RootState
+): GranularityComparisonCollection | undefined => {
+  return state?.data.dreamersData;
 };
 
 export const selectDreams = (
@@ -186,6 +197,7 @@ export function fetchBubbleData(): AppThunk {
 const differencesFile = "differences.json";
 const columnFile = "month-columns.json";
 const barFile = "bar-data.json";
+const dreamersFile = "newsy-dreamers.json";
 const dreamsFile = "all-dreams-final.json";
 const newsFile = "all-news-final.json";
 
@@ -224,6 +236,19 @@ export function fetchBarData(): AppThunk {
     const data = await response.json();
 
     dispatch(dataSlice.actions.setBarData(data));
+    dispatch(dataSlice.actions.setLoading(false));
+  };
+}
+
+// Loads dreamers data from the file
+export function fetchDreamersData(): AppThunk {
+  return async (dispatch: Dispatch) => {
+    dispatch(dataSlice.actions.setLoading(true));
+
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/${dreamersFile}`);
+    const data = await response.json();
+
+    dispatch(dataSlice.actions.setDreamersData(data));
     dispatch(dataSlice.actions.setLoading(false));
   };
 }

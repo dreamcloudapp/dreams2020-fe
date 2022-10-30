@@ -22,6 +22,7 @@ type AppInnerProps = {
   diffData: DifferenceByGranularity;
   columnGraphData: ColumnGraphData[];
   barGraphData: DifferenceDisplayRecordWithExamples;
+  dreamersData: GranularityComparisonCollection;
   padding: Padding;
 };
 
@@ -36,6 +37,7 @@ function AppInner({
   columnGraphData,
   barGraphData,
   padding,
+  dreamersData,
 }: AppInnerProps) {
   return (
     <>
@@ -52,6 +54,16 @@ function AppInner({
       {showingGraph === "bubble" && (
         <BubbleGraphContainer
           data={bubbleData}
+          width={width}
+          height={height}
+          handleMouseOver={handleMouseOver}
+          onMouseOut={hideTooltip}
+          padding={padding}
+        />
+      )}
+      {showingGraph === "dreamers" && (
+        <BubbleGraphContainer
+          data={dreamersData}
           width={width}
           height={height}
           handleMouseOver={handleMouseOver}

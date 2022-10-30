@@ -62,7 +62,10 @@ export function BubbleGraph({
   const activeGranularity = useSelector(selectActiveGranularity);
   const activeComparisonSet = useSelector(selectActiveComparisonSet);
 
-  const paddedMax = activeGranularity === "month" ? 0.028 : 0.035;
+  // Hardcoding based on knowledge of data:(
+  // Ideally this would be a function of the data itself
+  const paddedMax =
+    activeGranularity === "month" ? 0.028 : activeGranularity === "week" ? 0.035 : 0.7;
 
   // Domain & range for the x-axis
   const xDomain = getXDomain(activeGranularity);
@@ -90,7 +93,7 @@ export function BubbleGraph({
         hasMidpointLine={true}
         yRange={[0, paddedMax]}
         xRange={xDomain}
-        numTicks={7}
+        xTickModulo={activeGranularity === "day" ? 20 : 1}
         xAxisCenterLabel="Dream-news time difference"
         xAxisFormat={d => {
           const plural = Math.abs(d) > 1 ? "s" : "";

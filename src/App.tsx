@@ -14,6 +14,8 @@ import {
   fetchBarData,
   fetchDreams,
   fetchNews,
+  selectDreamersData,
+  fetchDreamersData,
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
@@ -41,7 +43,7 @@ const padding: Padding = {
   BOTTOM: 100,
 };
 
-const graphtypes: GraphType[] = ["area", "bar", "bubble", "months"];
+const graphtypes: GraphType[] = ["area", "bar", "bubble", "months", "dreamers"];
 
 function GraphTypeToggle({
   onSelectGraphType,
@@ -63,13 +65,13 @@ function GraphTypeToggle({
             dispatch<any>(onSelectGraphType(graphType));
             if (graphType === "area") {
               dispatch<any>(setActiveGranularity("day"));
-              dispatch<any>(setFocusedComparison(null));
-              dispatch<any>(setPrevFocusedComparison(null));
+            } else if (graphType === "dreamers") {
+              dispatch<any>(setActiveGranularity("day"));
             } else {
               dispatch<any>(setActiveGranularity("month"));
-              dispatch<any>(setFocusedComparison(null));
-              dispatch<any>(setPrevFocusedComparison(null));
             }
+            dispatch<any>(setFocusedComparison(null));
+            dispatch<any>(setPrevFocusedComparison(null));
           }}
           className={graphType === showingGraph ? "selected" : ""}
         >
@@ -89,6 +91,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
   const differencesData = useSelector(selectDifferences);
   const columnData = useSelector(selectColumnData);
   const barData = useSelector(selectBarData);
+  const dreamersData = useSelector(selectDreamersData);
   const focusedComparison = useSelector(selectFocusedComparison);
 
   // Get width and height
@@ -123,6 +126,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
     dispatch<any>(fetchBubbleData());
     dispatch<any>(fetchColumnData());
     dispatch<any>(fetchBarData());
+    dispatch<any>(fetchDreamersData());
     dispatch<any>(fetchDreams());
     dispatch<any>(fetchNews());
   }, [dispatch]);
@@ -170,6 +174,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
                 differencesData &&
                 columnData &&
                 barData &&
+                dreamersData &&
                 activeGranularity && (
                   <AppInner
                     height={height}
@@ -181,6 +186,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
                     diffData={differencesData}
                     columnGraphData={columnData}
                     barGraphData={barData}
+                    dreamersData={dreamersData}
                     padding={padding}
                   />
                 )}

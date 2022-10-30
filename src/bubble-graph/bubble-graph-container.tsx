@@ -14,9 +14,12 @@ import {
   selectCheckedCollections,
   selectFocusedComparison,
   selectPrevFocusedComparison,
+  selectShowingGraph,
+  toggleCollectionChecked,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { Padding } from "../modules/ui-types";
+import Legend from "./legend";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
@@ -45,6 +48,7 @@ export function BubbleGraphContainer({
   const checkedCollections = useSelector(selectCheckedCollections);
   const focusedComparison = useSelector(selectFocusedComparison);
   const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
+  const showingGraph = useSelector(selectShowingGraph);
 
   // Set checked collections on mount
   useEffect(() => {
@@ -61,9 +65,9 @@ export function BubbleGraphContainer({
 
   const maxTimeDistance = MILLISECONDS_IN_YEAR;
 
-  // const handleOnChange = (labelToToggle: string) => {
-  //   dispatch(toggleCollectionChecked(labelToToggle));
-  // };
+  const handleOnChange = (labelToToggle: string) => {
+    dispatch(toggleCollectionChecked(labelToToggle));
+  };
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
@@ -83,7 +87,7 @@ export function BubbleGraphContainer({
           />
         )}
         {/* Select active time period - don't show when there's a focused comparison */}
-        {!focusedComparison && (
+        {!focusedComparison && showingGraph === "bubble" && (
           <div style={{ position: "absolute", left: 100, top: 0 }}>
             <span>View: </span>
             {timeLabels.map(({ key, label }) => {
@@ -105,9 +109,9 @@ export function BubbleGraphContainer({
       </div>
 
       {/* Legend - don't show when there's a focused comparison */}
-      {/* {!focusedComparison && (
+      {!focusedComparison && showingGraph === "dreamers" && (
         <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
-      )} */}
+      )}
     </div>
   );
 }
