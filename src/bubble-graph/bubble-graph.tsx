@@ -79,7 +79,8 @@ export function BubbleGraph({
 
   // Size of the balls is determined by the number of comparisons
   // Should also take into account graph dimensions
-  const maxComparisons = activeGranularity === "week" ? 30000 : 350000;
+  const maxComparisons =
+    activeGranularity === "month" ? 350000 : activeGranularity === "week" ? 30000 : 1000;
   const scaleBallSize = scaleLinear()
     .domain([0, maxComparisons])
     .range([0, height / 50]);

@@ -201,6 +201,8 @@ fs.createReadStream(dreamsFile)
         const newsDate = new Date(newsRecord.date);
         const newsDateIndex = dayIndexFromDate(newsDate);
 
+        const totalCharCount = (dreamRecord.text + newsRecord.text).length;
+
         const comp: ComparisonSet = {
           id: `newsy-dream-${i}`,
           granularity: "day",
@@ -220,9 +222,12 @@ fs.createReadStream(dreamsFile)
               })),
             },
           },
-          wordCount: 0,
-          numComparisons: 1,
-          numDayComparisons: 0,
+          // Bla these are used in a strange way
+          // We just need something to set the bubble size with here
+          // Since there's only one 'comparison' in each bubble
+          wordCount: totalCharCount,
+          numComparisons: totalCharCount,
+          numDayComparisons: totalCharCount,
           dreamCollection: {
             label: "",
             timePeriod: {
