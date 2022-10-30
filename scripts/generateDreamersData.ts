@@ -13,7 +13,7 @@ import {
 } from "@kannydennedy/dreams-2020-types";
 import { DREAMERS_SRC_FOLDER, SIMILARITY_CUTOFFS, palette } from "./config";
 import { isEmptyFile } from "./modules/file-helpers";
-import { linkToTitle, truncateString } from "./modules/string-helpers";
+import { linkToTitle, truncateString, wordCount } from "./modules/string-helpers";
 const { dayIndexFromDate } = require("./modules/time-helpers");
 const csv = require("csv-parser");
 
@@ -40,7 +40,7 @@ type DreamerCsvRow = {
   Dream: string;
   Dreamer: string;
   "Dreamer alias": string;
-  "2020 reference": string;
+  "2020 Reference": string;
   "Real Date": string;
 };
 type DreamerCsvRowWithRealId = DreamerCsvRow & {
@@ -211,10 +211,11 @@ fs.createReadStream(dreamsFile)
         const newsDate = new Date(newsRecord.date);
         const newsDateIndex = dayIndexFromDate(newsDate);
 
-        // console.log(example.doc1Id, "alsekjfds");
-        // console.log(findRealId(example.doc1Id, allDreams), "real id");
+        const originalRow = findResultByRealId(realDreamId, results);
 
-        const totalCharCount = (dreamRecord.text + newsRecord.text).length;
+        const reference2020 = originalRow ? originalRow["2020 Reference"] : "Not defined";
+
+        const totalWordCount = wordCount(dreamRecord.text + newsRecord.text);
 
         const similarityKey: SimilarityLevel = getSimilarityLevel(example.score);
 
@@ -224,6 +225,7 @@ fs.createReadStream(dreamsFile)
           label: dreamerAlias + " example dream", // TODO
           score: example.score,
           dreamerAlias: dreamerAlias,
+          reference2020: reference2020,
           examples: [],
           concepts: [],
           similarityExamples: {
@@ -240,9 +242,9 @@ fs.createReadStream(dreamsFile)
           // Bla these are used in a strange way
           // We just need something to set the bubble size with here
           // Since there's only one 'comparison' in each bubble
-          wordCount: totalCharCount,
-          numComparisons: totalCharCount,
-          numDayComparisons: totalCharCount,
+          wordCount: totalWordCount,
+          numComparisons: totalWordCount,
+          numDayComparisons: totalWordCount,
           dreamCollection: {
             label: "",
             timePeriod: {
@@ -310,6 +312,15 @@ function findRealId(dreamText: string, allDreams: any): string {
     // Generate a random integer between 1 and 100000000
     // return (Math.floor(Math.random() * 100000000) * -1).toString();
   }
+}
+
+// Find a result by realId
+function findResultByRealId(
+  realId: string,
+  results: DreamerCsvRowWithRealId[]
+): DreamerCsvRowWithRealId | undefined {
+  const found = results.find(result => result.realId === realId);
+  return found;
 }
 
 // Get similarity level from score

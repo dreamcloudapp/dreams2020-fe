@@ -81,7 +81,7 @@ export function BubbleGraph({
   // Size of the balls is determined by the number of comparisons
   // Should also take into account graph dimensions
   const maxComparisons =
-    activeGranularity === "month" ? 350000 : activeGranularity === "week" ? 30000 : 3000;
+    activeGranularity === "month" ? 350000 : activeGranularity === "week" ? 30000 : 550;
   const heightRatio = activeGranularity === "day" ? 40 : 50;
   const scaleBallSize = scaleLinear()
     .domain([0, maxComparisons])
@@ -151,9 +151,23 @@ export function BubbleGraph({
                     Math.abs(index1 - index2) > 1 ? "s" : ""
                   } ${index1 - index2 > 0 ? "after" : "before"} the news`,
                 };
+                const wordCountRow: TooltipRow = {
+                  key: "Dream + News word count:",
+                  value: `${comparison.wordCount.toLocaleString()} words`,
+                };
+                const possibleCorrelationRow: TooltipRow = {
+                  key: "Possible news correlation:",
+                  value: comparison.reference2020 || "Not defined",
+                };
+
                 const tooltipRows =
                   activeGranularity === "day"
-                    ? [similarityRow, timeDifferenceRow]
+                    ? [
+                        similarityRow,
+                        timeDifferenceRow,
+                        wordCountRow,
+                        possibleCorrelationRow,
+                      ]
                     : [similarityRow, comparisonsRow];
 
                 (handleMouseOver as any)(

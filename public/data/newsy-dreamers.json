@@ -15,6 +15,7 @@
           "label": "Charlene example dream",
           "score": 0.068682656,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -46,9 +47,9 @@
               ]
             }
           },
-          "wordCount": 1034,
-          "numComparisons": 1034,
-          "numDayComparisons": 1034,
+          "wordCount": 177,
+          "numComparisons": 177,
+          "numDayComparisons": 177,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -72,6 +73,7 @@
           "label": "Charlene example dream",
           "score": 0.06930221,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -103,9 +105,9 @@
               ]
             }
           },
-          "wordCount": 2564,
-          "numComparisons": 2564,
-          "numDayComparisons": 2564,
+          "wordCount": 499,
+          "numComparisons": 499,
+          "numDayComparisons": 499,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -129,6 +131,7 @@
           "label": "Charlene example dream",
           "score": 0.05069577,
           "dreamerAlias": "Charlene",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -160,9 +163,9 @@
               ]
             }
           },
-          "wordCount": 2616,
-          "numComparisons": 2616,
-          "numDayComparisons": 2616,
+          "wordCount": 492,
+          "numComparisons": 492,
+          "numDayComparisons": 492,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -186,6 +189,7 @@
           "label": "Charlene example dream",
           "score": 0.07495421,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -217,9 +221,9 @@
               ]
             }
           },
-          "wordCount": 2564,
-          "numComparisons": 2564,
-          "numDayComparisons": 2564,
+          "wordCount": 479,
+          "numComparisons": 479,
+          "numDayComparisons": 479,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -243,6 +247,7 @@
           "label": "Charlene example dream",
           "score": 0.08882672,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -274,9 +279,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 497,
+          "numComparisons": 497,
+          "numDayComparisons": 497,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -300,6 +305,7 @@
           "label": "Charlene example dream",
           "score": 0.07278849,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -331,9 +337,9 @@
               ]
             }
           },
-          "wordCount": 2318,
-          "numComparisons": 2318,
-          "numDayComparisons": 2318,
+          "wordCount": 409,
+          "numComparisons": 409,
+          "numDayComparisons": 409,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -357,6 +363,7 @@
           "label": "Charlene example dream",
           "score": 0.08858307,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -388,9 +395,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 499,
+          "numComparisons": 499,
+          "numDayComparisons": 499,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -414,6 +421,7 @@
           "label": "Charlene example dream",
           "score": 0.19281068,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -445,9 +453,9 @@
               ]
             }
           },
-          "wordCount": 2544,
-          "numComparisons": 2544,
-          "numDayComparisons": 2544,
+          "wordCount": 497,
+          "numComparisons": 497,
+          "numDayComparisons": 497,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -471,6 +479,7 @@
           "label": "Charlene example dream",
           "score": 0.10382396,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -502,9 +511,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 519,
+          "numComparisons": 519,
+          "numDayComparisons": 519,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -528,6 +537,7 @@
           "label": "Charlene example dream",
           "score": 0.22926189,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -559,9 +569,9 @@
               ]
             }
           },
-          "wordCount": 2358,
-          "numComparisons": 2358,
-          "numDayComparisons": 2358,
+          "wordCount": 449,
+          "numComparisons": 449,
+          "numDayComparisons": 449,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -585,6 +595,7 @@
           "label": "Charlene example dream",
           "score": 0.06896798,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -616,9 +627,9 @@
               ]
             }
           },
-          "wordCount": 926,
-          "numComparisons": 926,
-          "numDayComparisons": 926,
+          "wordCount": 157,
+          "numComparisons": 157,
+          "numDayComparisons": 157,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -642,6 +653,7 @@
           "label": "Charlene example dream",
           "score": 0.27095282,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -673,9 +685,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 482,
+          "numComparisons": 482,
+          "numDayComparisons": 482,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -699,6 +711,7 @@
           "label": "Charlene example dream",
           "score": 0.22620709,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -730,9 +743,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 518,
+          "numComparisons": 518,
+          "numDayComparisons": 518,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -756,6 +769,7 @@
           "label": "Charlene example dream",
           "score": 0.08015035,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -787,9 +801,9 @@
               ]
             }
           },
-          "wordCount": 2095,
-          "numComparisons": 2095,
-          "numDayComparisons": 2095,
+          "wordCount": 396,
+          "numComparisons": 396,
+          "numDayComparisons": 396,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -813,6 +827,7 @@
           "label": "Charlene example dream",
           "score": 0.21508501,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -844,9 +859,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 502,
+          "numComparisons": 502,
+          "numDayComparisons": 502,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -870,6 +885,7 @@
           "label": "Charlene example dream",
           "score": 0.18187445,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -901,9 +917,9 @@
               ]
             }
           },
-          "wordCount": 2564,
-          "numComparisons": 2564,
-          "numDayComparisons": 2564,
+          "wordCount": 483,
+          "numComparisons": 483,
+          "numDayComparisons": 483,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -927,6 +943,7 @@
           "label": "Charlene example dream",
           "score": 0.050522797,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -958,9 +975,9 @@
               ]
             }
           },
-          "wordCount": 1049,
-          "numComparisons": 1049,
-          "numDayComparisons": 1049,
+          "wordCount": 174,
+          "numComparisons": 174,
+          "numDayComparisons": 174,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -984,6 +1001,7 @@
           "label": "Charlene example dream",
           "score": 0.25056994,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1015,9 +1033,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 509,
+          "numComparisons": 509,
+          "numDayComparisons": 509,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1041,6 +1059,7 @@
           "label": "Charlene example dream",
           "score": 0.17401977,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1072,9 +1091,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 513,
+          "numComparisons": 513,
+          "numDayComparisons": 513,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1098,6 +1117,7 @@
           "label": "Charlene example dream",
           "score": 0.2155961,
           "dreamerAlias": "Charlene",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1129,9 +1149,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 501,
+          "numComparisons": 501,
+          "numDayComparisons": 501,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1155,6 +1175,7 @@
           "label": "Charlene example dream",
           "score": 0.146712,
           "dreamerAlias": "Charlene",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1186,9 +1207,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 507,
+          "numComparisons": 507,
+          "numDayComparisons": 507,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1212,6 +1233,7 @@
           "label": "Charlene example dream",
           "score": 0.17585455,
           "dreamerAlias": "Charlene",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1243,9 +1265,9 @@
               ]
             }
           },
-          "wordCount": 1622,
-          "numComparisons": 1622,
-          "numDayComparisons": 1622,
+          "wordCount": 284,
+          "numComparisons": 284,
+          "numDayComparisons": 284,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1269,6 +1291,7 @@
           "label": "Charlene example dream",
           "score": 0.15749663,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1300,9 +1323,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 469,
+          "numComparisons": 469,
+          "numDayComparisons": 469,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1326,6 +1349,7 @@
           "label": "Charlene example dream",
           "score": 0.20089963,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1357,9 +1381,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 478,
+          "numComparisons": 478,
+          "numDayComparisons": 478,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1383,6 +1407,7 @@
           "label": "Charlene example dream",
           "score": 0.2556172,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1414,9 +1439,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 500,
+          "numComparisons": 500,
+          "numDayComparisons": 500,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1440,6 +1465,7 @@
           "label": "Charlene example dream",
           "score": 0.25468212,
           "dreamerAlias": "Charlene",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1471,9 +1497,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 492,
+          "numComparisons": 492,
+          "numDayComparisons": 492,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1497,6 +1523,7 @@
           "label": "Charlene example dream",
           "score": 0.13390125,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1528,9 +1555,9 @@
               ]
             }
           },
-          "wordCount": 2597,
-          "numComparisons": 2597,
-          "numDayComparisons": 2597,
+          "wordCount": 506,
+          "numComparisons": 506,
+          "numDayComparisons": 506,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1554,6 +1581,7 @@
           "label": "Charlene example dream",
           "score": 0.07385442,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1585,9 +1613,9 @@
               ]
             }
           },
-          "wordCount": 2597,
-          "numComparisons": 2597,
-          "numDayComparisons": 2597,
+          "wordCount": 494,
+          "numComparisons": 494,
+          "numDayComparisons": 494,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1611,6 +1639,7 @@
           "label": "Charlene example dream",
           "score": 0.18815038,
           "dreamerAlias": "Charlene",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1642,9 +1671,9 @@
               ]
             }
           },
-          "wordCount": 2588,
-          "numComparisons": 2588,
-          "numDayComparisons": 2588,
+          "wordCount": 460,
+          "numComparisons": 460,
+          "numDayComparisons": 460,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1668,6 +1697,7 @@
           "label": "Charlene example dream",
           "score": 0.1458092,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1699,9 +1729,9 @@
               ]
             }
           },
-          "wordCount": 2715,
-          "numComparisons": 2715,
-          "numDayComparisons": 2715,
+          "wordCount": 506,
+          "numComparisons": 506,
+          "numDayComparisons": 506,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1725,6 +1755,7 @@
           "label": "Charlene example dream",
           "score": 0.099142574,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1756,9 +1787,9 @@
               ]
             }
           },
-          "wordCount": 625,
-          "numComparisons": 625,
-          "numDayComparisons": 625,
+          "wordCount": 119,
+          "numComparisons": 119,
+          "numDayComparisons": 119,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1782,6 +1813,7 @@
           "label": "Charlene example dream",
           "score": 0.1478968,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1813,9 +1845,9 @@
               ]
             }
           },
-          "wordCount": 2597,
-          "numComparisons": 2597,
-          "numDayComparisons": 2597,
+          "wordCount": 485,
+          "numComparisons": 485,
+          "numDayComparisons": 485,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1839,6 +1871,7 @@
           "label": "Charlene example dream",
           "score": 0.105323054,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1870,9 +1903,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 475,
+          "numComparisons": 475,
+          "numDayComparisons": 475,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1896,6 +1929,7 @@
           "label": "Charlene example dream",
           "score": 0.12048494,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1927,9 +1961,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 478,
+          "numComparisons": 478,
+          "numDayComparisons": 478,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1953,6 +1987,7 @@
           "label": "Charlene example dream",
           "score": 0.198903,
           "dreamerAlias": "Charlene",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -1984,9 +2019,9 @@
               ]
             }
           },
-          "wordCount": 2298,
-          "numComparisons": 2298,
-          "numDayComparisons": 2298,
+          "wordCount": 430,
+          "numComparisons": 430,
+          "numDayComparisons": 430,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2010,6 +2045,7 @@
           "label": "Charlene example dream",
           "score": 0.21241416,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2041,9 +2077,9 @@
               ]
             }
           },
-          "wordCount": 2648,
-          "numComparisons": 2648,
-          "numDayComparisons": 2648,
+          "wordCount": 492,
+          "numComparisons": 492,
+          "numDayComparisons": 492,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2067,6 +2103,7 @@
           "label": "Charlene example dream",
           "score": 0.16672039,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2098,9 +2135,9 @@
               ]
             }
           },
-          "wordCount": 1673,
-          "numComparisons": 1673,
-          "numDayComparisons": 1673,
+          "wordCount": 318,
+          "numComparisons": 318,
+          "numDayComparisons": 318,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2124,6 +2161,7 @@
           "label": "Charlene example dream",
           "score": 0.11657785,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2155,9 +2193,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 500,
+          "numComparisons": 500,
+          "numDayComparisons": 500,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2181,6 +2219,7 @@
           "label": "Charlene example dream",
           "score": 0.101035796,
           "dreamerAlias": "Charlene",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2212,9 +2251,9 @@
               ]
             }
           },
-          "wordCount": 2561,
-          "numComparisons": 2561,
-          "numDayComparisons": 2561,
+          "wordCount": 477,
+          "numComparisons": 477,
+          "numDayComparisons": 477,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2238,6 +2277,7 @@
           "label": "Charlene example dream",
           "score": 0.16679835,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2269,9 +2309,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 488,
+          "numComparisons": 488,
+          "numDayComparisons": 488,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2295,6 +2335,7 @@
           "label": "Charlene example dream",
           "score": 0.116544716,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2326,9 +2367,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 490,
+          "numComparisons": 490,
+          "numDayComparisons": 490,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2352,6 +2393,7 @@
           "label": "Charlene example dream",
           "score": 0.36406207,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2383,9 +2425,9 @@
               ]
             }
           },
-          "wordCount": 2607,
-          "numComparisons": 2607,
-          "numDayComparisons": 2607,
+          "wordCount": 501,
+          "numComparisons": 501,
+          "numDayComparisons": 501,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2409,6 +2451,7 @@
           "label": "Charlene example dream",
           "score": 0.093960606,
           "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2440,9 +2483,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 495,
+          "numComparisons": 495,
+          "numDayComparisons": 495,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2472,6 +2515,7 @@
           "label": "Cinnamon example dream",
           "score": 0.12757209,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2503,9 +2547,9 @@
               ]
             }
           },
-          "wordCount": 2609,
-          "numComparisons": 2609,
-          "numDayComparisons": 2609,
+          "wordCount": 504,
+          "numComparisons": 504,
+          "numDayComparisons": 504,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2529,6 +2573,7 @@
           "label": "Cinnamon example dream",
           "score": 0.11054521,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2560,9 +2605,9 @@
               ]
             }
           },
-          "wordCount": 2597,
-          "numComparisons": 2597,
-          "numDayComparisons": 2597,
+          "wordCount": 487,
+          "numComparisons": 487,
+          "numDayComparisons": 487,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2586,6 +2631,7 @@
           "label": "Cinnamon example dream",
           "score": 0.20910285,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2617,9 +2663,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 496,
+          "numComparisons": 496,
+          "numDayComparisons": 496,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2643,6 +2689,7 @@
           "label": "Cinnamon example dream",
           "score": 0.26349634,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2674,9 +2721,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 506,
+          "numComparisons": 506,
+          "numDayComparisons": 506,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2700,6 +2747,7 @@
           "label": "Cinnamon example dream",
           "score": 0.2992023,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2731,9 +2779,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 499,
+          "numComparisons": 499,
+          "numDayComparisons": 499,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2757,6 +2805,7 @@
           "label": "Cinnamon example dream",
           "score": 0.1396863,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2788,9 +2837,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 493,
+          "numComparisons": 493,
+          "numDayComparisons": 493,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2814,6 +2863,7 @@
           "label": "Cinnamon example dream",
           "score": 0.14504118,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2845,9 +2895,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 487,
+          "numComparisons": 487,
+          "numDayComparisons": 487,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2871,6 +2921,7 @@
           "label": "Cinnamon example dream",
           "score": 0.28867766,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2902,9 +2953,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 502,
+          "numComparisons": 502,
+          "numDayComparisons": 502,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2928,6 +2979,7 @@
           "label": "Cinnamon example dream",
           "score": 0.06986693,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -2959,9 +3011,9 @@
               ]
             }
           },
-          "wordCount": 2561,
-          "numComparisons": 2561,
-          "numDayComparisons": 2561,
+          "wordCount": 495,
+          "numComparisons": 495,
+          "numDayComparisons": 495,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -2985,6 +3037,7 @@
           "label": "Cinnamon example dream",
           "score": 0.26820126,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3016,9 +3069,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 489,
+          "numComparisons": 489,
+          "numDayComparisons": 489,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3042,6 +3095,7 @@
           "label": "Cinnamon example dream",
           "score": 0.28410217,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3073,9 +3127,9 @@
               ]
             }
           },
-          "wordCount": 2689,
-          "numComparisons": 2689,
-          "numDayComparisons": 2689,
+          "wordCount": 489,
+          "numComparisons": 489,
+          "numDayComparisons": 489,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3099,6 +3153,7 @@
           "label": "Cinnamon example dream",
           "score": 0.22501549,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3130,9 +3185,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 494,
+          "numComparisons": 494,
+          "numDayComparisons": 494,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3156,6 +3211,7 @@
           "label": "Cinnamon example dream",
           "score": 0.15576148,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3187,9 +3243,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 495,
+          "numComparisons": 495,
+          "numDayComparisons": 495,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3213,6 +3269,7 @@
           "label": "Cinnamon example dream",
           "score": 0.4137852,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3244,9 +3301,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 509,
+          "numComparisons": 509,
+          "numDayComparisons": 509,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3270,6 +3327,7 @@
           "label": "Cinnamon example dream",
           "score": 0.27669555,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3301,9 +3359,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 502,
+          "numComparisons": 502,
+          "numDayComparisons": 502,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3327,6 +3385,7 @@
           "label": "Cinnamon example dream",
           "score": 0.29769036,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3358,9 +3417,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 516,
+          "numComparisons": 516,
+          "numDayComparisons": 516,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3384,6 +3443,7 @@
           "label": "Cinnamon example dream",
           "score": 0.2244843,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3415,9 +3475,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 484,
+          "numComparisons": 484,
+          "numDayComparisons": 484,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3441,6 +3501,7 @@
           "label": "Cinnamon example dream",
           "score": 0.21508357,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3472,9 +3533,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 512,
+          "numComparisons": 512,
+          "numDayComparisons": 512,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3498,6 +3559,7 @@
           "label": "Cinnamon example dream",
           "score": 0.2931882,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3529,9 +3591,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 487,
+          "numComparisons": 487,
+          "numDayComparisons": 487,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3555,6 +3617,7 @@
           "label": "Cinnamon example dream",
           "score": 0.12671989,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3586,9 +3649,9 @@
               ]
             }
           },
-          "wordCount": 2625,
-          "numComparisons": 2625,
-          "numDayComparisons": 2625,
+          "wordCount": 501,
+          "numComparisons": 501,
+          "numDayComparisons": 501,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3612,6 +3675,7 @@
           "label": "Cinnamon example dream",
           "score": 0.23439352,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3643,9 +3707,9 @@
               ]
             }
           },
-          "wordCount": 2306,
-          "numComparisons": 2306,
-          "numDayComparisons": 2306,
+          "wordCount": 442,
+          "numComparisons": 442,
+          "numDayComparisons": 442,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3669,6 +3733,7 @@
           "label": "Cinnamon example dream",
           "score": 0.15806071,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3700,9 +3765,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 477,
+          "numComparisons": 477,
+          "numDayComparisons": 477,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3726,6 +3791,7 @@
           "label": "Cinnamon example dream",
           "score": 0.064681314,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3757,9 +3823,9 @@
               ]
             }
           },
-          "wordCount": 2561,
-          "numComparisons": 2561,
-          "numDayComparisons": 2561,
+          "wordCount": 495,
+          "numComparisons": 495,
+          "numDayComparisons": 495,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3783,6 +3849,7 @@
           "label": "Cinnamon example dream",
           "score": 0.19658461,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3814,9 +3881,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 471,
+          "numComparisons": 471,
+          "numDayComparisons": 471,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3840,6 +3907,7 @@
           "label": "Cinnamon example dream",
           "score": 0.23149748,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3871,9 +3939,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 499,
+          "numComparisons": 499,
+          "numDayComparisons": 499,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3897,6 +3965,7 @@
           "label": "Cinnamon example dream",
           "score": 0.3685848,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3928,9 +3997,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 494,
+          "numComparisons": 494,
+          "numDayComparisons": 494,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -3954,6 +4023,7 @@
           "label": "Cinnamon example dream",
           "score": 0.26703143,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -3985,9 +4055,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 493,
+          "numComparisons": 493,
+          "numDayComparisons": 493,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4011,6 +4081,7 @@
           "label": "Cinnamon example dream",
           "score": 0.21905461,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4042,9 +4113,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 493,
+          "numComparisons": 493,
+          "numDayComparisons": 493,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4068,6 +4139,7 @@
           "label": "Cinnamon example dream",
           "score": 0.12806246,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4099,9 +4171,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 488,
+          "numComparisons": 488,
+          "numDayComparisons": 488,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4125,6 +4197,7 @@
           "label": "Cinnamon example dream",
           "score": 0.21443728,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4156,9 +4229,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 491,
+          "numComparisons": 491,
+          "numDayComparisons": 491,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4182,6 +4255,7 @@
           "label": "Cinnamon example dream",
           "score": 0.13881628,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4213,9 +4287,9 @@
               ]
             }
           },
-          "wordCount": 2675,
-          "numComparisons": 2675,
-          "numDayComparisons": 2675,
+          "wordCount": 495,
+          "numComparisons": 495,
+          "numDayComparisons": 495,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4239,6 +4313,7 @@
           "label": "Cinnamon example dream",
           "score": 0.25920558,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4270,9 +4345,9 @@
               ]
             }
           },
-          "wordCount": 1863,
-          "numComparisons": 1863,
-          "numDayComparisons": 1863,
+          "wordCount": 345,
+          "numComparisons": 345,
+          "numDayComparisons": 345,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4296,6 +4371,7 @@
           "label": "Cinnamon example dream",
           "score": 0.2744123,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4327,9 +4403,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 498,
+          "numComparisons": 498,
+          "numDayComparisons": 498,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4353,6 +4429,7 @@
           "label": "Cinnamon example dream",
           "score": 0.124983706,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4384,9 +4461,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 492,
+          "numComparisons": 492,
+          "numDayComparisons": 492,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4410,6 +4487,7 @@
           "label": "Cinnamon example dream",
           "score": 0.15575595,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4441,9 +4519,9 @@
               ]
             }
           },
-          "wordCount": 2675,
-          "numComparisons": 2675,
-          "numDayComparisons": 2675,
+          "wordCount": 518,
+          "numComparisons": 518,
+          "numDayComparisons": 518,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4467,6 +4545,7 @@
           "label": "Cinnamon example dream",
           "score": 0.2744074,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4498,9 +4577,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 505,
+          "numComparisons": 505,
+          "numDayComparisons": 505,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4524,6 +4603,7 @@
           "label": "Cinnamon example dream",
           "score": 0.16654399,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4555,9 +4635,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 499,
+          "numComparisons": 499,
+          "numDayComparisons": 499,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4581,6 +4661,7 @@
           "label": "Cinnamon example dream",
           "score": 0.12727112,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4612,9 +4693,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 508,
+          "numComparisons": 508,
+          "numDayComparisons": 508,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4638,6 +4719,7 @@
           "label": "Cinnamon example dream",
           "score": 0.2616265,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4669,9 +4751,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 483,
+          "numComparisons": 483,
+          "numDayComparisons": 483,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4695,6 +4777,7 @@
           "label": "Cinnamon example dream",
           "score": 0.13049912,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4726,9 +4809,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 519,
+          "numComparisons": 519,
+          "numDayComparisons": 519,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4752,6 +4835,7 @@
           "label": "Cinnamon example dream",
           "score": 0.21792358,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4783,9 +4867,9 @@
               ]
             }
           },
-          "wordCount": 1860,
-          "numComparisons": 1860,
-          "numDayComparisons": 1860,
+          "wordCount": 335,
+          "numComparisons": 335,
+          "numDayComparisons": 335,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4809,6 +4893,7 @@
           "label": "Cinnamon example dream",
           "score": 0.3472143,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4840,9 +4925,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 508,
+          "numComparisons": 508,
+          "numDayComparisons": 508,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4866,6 +4951,7 @@
           "label": "Cinnamon example dream",
           "score": 0.076137535,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4897,9 +4983,9 @@
               ]
             }
           },
-          "wordCount": 2561,
-          "numComparisons": 2561,
-          "numDayComparisons": 2561,
+          "wordCount": 483,
+          "numComparisons": 483,
+          "numDayComparisons": 483,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4923,6 +5009,7 @@
           "label": "Cinnamon example dream",
           "score": 0.09371563,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -4954,9 +5041,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 472,
+          "numComparisons": 472,
+          "numDayComparisons": 472,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -4980,6 +5067,7 @@
           "label": "Cinnamon example dream",
           "score": 0.1674487,
           "dreamerAlias": "Cinnamon",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5011,9 +5099,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 496,
+          "numComparisons": 496,
+          "numDayComparisons": 496,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5043,6 +5131,7 @@
           "label": "Harmony example dream",
           "score": 0.49134028,
           "dreamerAlias": "Harmony",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5074,9 +5163,9 @@
               ]
             }
           },
-          "wordCount": 1432,
-          "numComparisons": 1432,
-          "numDayComparisons": 1432,
+          "wordCount": 266,
+          "numComparisons": 266,
+          "numDayComparisons": 266,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5100,6 +5189,7 @@
           "label": "Harmony example dream",
           "score": 0.31939456,
           "dreamerAlias": "Harmony",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5131,9 +5221,9 @@
               ]
             }
           },
-          "wordCount": 932,
-          "numComparisons": 932,
-          "numDayComparisons": 932,
+          "wordCount": 175,
+          "numComparisons": 175,
+          "numDayComparisons": 175,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5157,6 +5247,7 @@
           "label": "Harmony example dream",
           "score": 0.6513922,
           "dreamerAlias": "Harmony",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5188,9 +5279,9 @@
               ]
             }
           },
-          "wordCount": 1018,
-          "numComparisons": 1018,
-          "numDayComparisons": 1018,
+          "wordCount": 187,
+          "numComparisons": 187,
+          "numDayComparisons": 187,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5214,6 +5305,7 @@
           "label": "Harmony example dream",
           "score": 0.23194747,
           "dreamerAlias": "Harmony",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5245,9 +5337,9 @@
               ]
             }
           },
-          "wordCount": 1843,
-          "numComparisons": 1843,
-          "numDayComparisons": 1843,
+          "wordCount": 351,
+          "numComparisons": 351,
+          "numDayComparisons": 351,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5271,6 +5363,7 @@
           "label": "Harmony example dream",
           "score": 0.16004954,
           "dreamerAlias": "Harmony",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5302,9 +5395,9 @@
               ]
             }
           },
-          "wordCount": 1682,
-          "numComparisons": 1682,
-          "numDayComparisons": 1682,
+          "wordCount": 314,
+          "numComparisons": 314,
+          "numDayComparisons": 314,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5328,6 +5421,7 @@
           "label": "Harmony example dream",
           "score": 0.65706575,
           "dreamerAlias": "Harmony",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5359,9 +5453,9 @@
               ]
             }
           },
-          "wordCount": 1161,
-          "numComparisons": 1161,
-          "numDayComparisons": 1161,
+          "wordCount": 208,
+          "numComparisons": 208,
+          "numDayComparisons": 208,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5391,6 +5485,7 @@
           "label": "Jenn example dream",
           "score": 0.25140813,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5422,9 +5517,9 @@
               ]
             }
           },
-          "wordCount": 1472,
-          "numComparisons": 1472,
-          "numDayComparisons": 1472,
+          "wordCount": 247,
+          "numComparisons": 247,
+          "numDayComparisons": 247,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5448,6 +5543,7 @@
           "label": "Jenn example dream",
           "score": 0.2496998,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5479,9 +5575,9 @@
               ]
             }
           },
-          "wordCount": 1816,
-          "numComparisons": 1816,
-          "numDayComparisons": 1816,
+          "wordCount": 352,
+          "numComparisons": 352,
+          "numDayComparisons": 352,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5505,6 +5601,7 @@
           "label": "Jenn example dream",
           "score": 0.32921675,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5536,9 +5633,9 @@
               ]
             }
           },
-          "wordCount": 1951,
-          "numComparisons": 1951,
-          "numDayComparisons": 1951,
+          "wordCount": 372,
+          "numComparisons": 372,
+          "numDayComparisons": 372,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5562,6 +5659,7 @@
           "label": "Jenn example dream",
           "score": 0.200333,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5593,9 +5691,9 @@
               ]
             }
           },
-          "wordCount": 2568,
-          "numComparisons": 2568,
-          "numDayComparisons": 2568,
+          "wordCount": 478,
+          "numComparisons": 478,
+          "numDayComparisons": 478,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5619,6 +5717,7 @@
           "label": "Jenn example dream",
           "score": 0.21853107,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5650,9 +5749,9 @@
               ]
             }
           },
-          "wordCount": 659,
-          "numComparisons": 659,
-          "numDayComparisons": 659,
+          "wordCount": 118,
+          "numComparisons": 118,
+          "numDayComparisons": 118,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5676,6 +5775,7 @@
           "label": "Jenn example dream",
           "score": 0.19541502,
           "dreamerAlias": "Jenn",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5707,9 +5807,9 @@
               ]
             }
           },
-          "wordCount": 2546,
-          "numComparisons": 2546,
-          "numDayComparisons": 2546,
+          "wordCount": 480,
+          "numComparisons": 480,
+          "numDayComparisons": 480,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5733,6 +5833,7 @@
           "label": "Jenn example dream",
           "score": 0.20334557,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5764,9 +5865,9 @@
               ]
             }
           },
-          "wordCount": 1238,
-          "numComparisons": 1238,
-          "numDayComparisons": 1238,
+          "wordCount": 234,
+          "numComparisons": 234,
+          "numDayComparisons": 234,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5790,6 +5891,7 @@
           "label": "Jenn example dream",
           "score": 0.23665786,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5821,9 +5923,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 517,
+          "numComparisons": 517,
+          "numDayComparisons": 517,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5847,6 +5949,7 @@
           "label": "Jenn example dream",
           "score": 0.10015419,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5878,9 +5981,9 @@
               ]
             }
           },
-          "wordCount": 1278,
-          "numComparisons": 1278,
-          "numDayComparisons": 1278,
+          "wordCount": 225,
+          "numComparisons": 225,
+          "numDayComparisons": 225,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5904,6 +6007,7 @@
           "label": "Jenn example dream",
           "score": 0.29420516,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5935,9 +6039,9 @@
               ]
             }
           },
-          "wordCount": 1732,
-          "numComparisons": 1732,
-          "numDayComparisons": 1732,
+          "wordCount": 314,
+          "numComparisons": 314,
+          "numDayComparisons": 314,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -5961,6 +6065,7 @@
           "label": "Jenn example dream",
           "score": 0.3006212,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -5992,9 +6097,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 509,
+          "numComparisons": 509,
+          "numDayComparisons": 509,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6018,6 +6123,7 @@
           "label": "Jenn example dream",
           "score": 0.20161141,
           "dreamerAlias": "Jenn",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6049,9 +6155,9 @@
               ]
             }
           },
-          "wordCount": 2343,
-          "numComparisons": 2343,
-          "numDayComparisons": 2343,
+          "wordCount": 461,
+          "numComparisons": 461,
+          "numDayComparisons": 461,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6075,6 +6181,7 @@
           "label": "Jenn example dream",
           "score": 0.250021,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6106,9 +6213,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 502,
+          "numComparisons": 502,
+          "numDayComparisons": 502,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6132,6 +6239,7 @@
           "label": "Jenn example dream",
           "score": 0.14373656,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6163,9 +6271,9 @@
               ]
             }
           },
-          "wordCount": 1357,
-          "numComparisons": 1357,
-          "numDayComparisons": 1357,
+          "wordCount": 242,
+          "numComparisons": 242,
+          "numDayComparisons": 242,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6189,6 +6297,7 @@
           "label": "Jenn example dream",
           "score": 0.25716013,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6220,9 +6329,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 473,
+          "numComparisons": 473,
+          "numDayComparisons": 473,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6246,6 +6355,7 @@
           "label": "Jenn example dream",
           "score": 0.18197209,
           "dreamerAlias": "Jenn",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6277,9 +6387,9 @@
               ]
             }
           },
-          "wordCount": 1217,
-          "numComparisons": 1217,
-          "numDayComparisons": 1217,
+          "wordCount": 213,
+          "numComparisons": 213,
+          "numDayComparisons": 213,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6303,6 +6413,7 @@
           "label": "Jenn example dream",
           "score": 0.07351489,
           "dreamerAlias": "Jenn",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6334,9 +6445,9 @@
               ]
             }
           },
-          "wordCount": 971,
-          "numComparisons": 971,
-          "numDayComparisons": 971,
+          "wordCount": 165,
+          "numComparisons": 165,
+          "numDayComparisons": 165,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6360,6 +6471,7 @@
           "label": "Jenn example dream",
           "score": 0.23604713,
           "dreamerAlias": "Jenn",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6391,9 +6503,9 @@
               ]
             }
           },
-          "wordCount": 2219,
-          "numComparisons": 2219,
-          "numDayComparisons": 2219,
+          "wordCount": 417,
+          "numComparisons": 417,
+          "numDayComparisons": 417,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6417,6 +6529,7 @@
           "label": "Jenn example dream",
           "score": 0.19349213,
           "dreamerAlias": "Jenn",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6448,9 +6561,9 @@
               ]
             }
           },
-          "wordCount": 1943,
-          "numComparisons": 1943,
-          "numDayComparisons": 1943,
+          "wordCount": 342,
+          "numComparisons": 342,
+          "numDayComparisons": 342,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6474,6 +6587,7 @@
           "label": "Jenn example dream",
           "score": 0.25955904,
           "dreamerAlias": "Jenn",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6505,9 +6619,9 @@
               ]
             }
           },
-          "wordCount": 1838,
-          "numComparisons": 1838,
-          "numDayComparisons": 1838,
+          "wordCount": 337,
+          "numComparisons": 337,
+          "numDayComparisons": 337,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6531,6 +6645,7 @@
           "label": "Jenn example dream",
           "score": 0.22459796,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6562,9 +6677,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 476,
+          "numComparisons": 476,
+          "numDayComparisons": 476,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6588,6 +6703,7 @@
           "label": "Jenn example dream",
           "score": 0.18152659,
           "dreamerAlias": "Jenn",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6619,9 +6735,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 510,
+          "numComparisons": 510,
+          "numDayComparisons": 510,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6645,6 +6761,7 @@
           "label": "Jenn example dream",
           "score": 0.26076737,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6676,9 +6793,9 @@
               ]
             }
           },
-          "wordCount": 2208,
-          "numComparisons": 2208,
-          "numDayComparisons": 2208,
+          "wordCount": 423,
+          "numComparisons": 423,
+          "numDayComparisons": 423,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6702,6 +6819,7 @@
           "label": "Jenn example dream",
           "score": 0.3596312,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6733,9 +6851,9 @@
               ]
             }
           },
-          "wordCount": 2654,
-          "numComparisons": 2654,
-          "numDayComparisons": 2654,
+          "wordCount": 492,
+          "numComparisons": 492,
+          "numDayComparisons": 492,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6759,6 +6877,7 @@
           "label": "Jenn example dream",
           "score": 0.30450007,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6790,9 +6909,9 @@
               ]
             }
           },
-          "wordCount": 1075,
-          "numComparisons": 1075,
-          "numDayComparisons": 1075,
+          "wordCount": 170,
+          "numComparisons": 170,
+          "numDayComparisons": 170,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6816,6 +6935,7 @@
           "label": "Jenn example dream",
           "score": 0.25312012,
           "dreamerAlias": "Jenn",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6847,9 +6967,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 504,
+          "numComparisons": 504,
+          "numDayComparisons": 504,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6873,6 +6993,7 @@
           "label": "Jenn example dream",
           "score": 0.29040572,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6904,9 +7025,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 479,
+          "numComparisons": 479,
+          "numDayComparisons": 479,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6930,6 +7051,7 @@
           "label": "Jenn example dream",
           "score": 0.16617766,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -6961,9 +7083,9 @@
               ]
             }
           },
-          "wordCount": 1454,
-          "numComparisons": 1454,
-          "numDayComparisons": 1454,
+          "wordCount": 269,
+          "numComparisons": 269,
+          "numDayComparisons": 269,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -6987,6 +7109,7 @@
           "label": "Jenn example dream",
           "score": 0.25902742,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7018,9 +7141,9 @@
               ]
             }
           },
-          "wordCount": 2073,
-          "numComparisons": 2073,
-          "numDayComparisons": 2073,
+          "wordCount": 383,
+          "numComparisons": 383,
+          "numDayComparisons": 383,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7044,6 +7167,7 @@
           "label": "Jenn example dream",
           "score": 0.3105682,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7075,9 +7199,9 @@
               ]
             }
           },
-          "wordCount": 2027,
-          "numComparisons": 2027,
-          "numDayComparisons": 2027,
+          "wordCount": 379,
+          "numComparisons": 379,
+          "numDayComparisons": 379,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7101,6 +7225,7 @@
           "label": "Jenn example dream",
           "score": 0.25856483,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7132,9 +7257,9 @@
               ]
             }
           },
-          "wordCount": 2630,
-          "numComparisons": 2630,
-          "numDayComparisons": 2630,
+          "wordCount": 500,
+          "numComparisons": 500,
+          "numDayComparisons": 500,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7158,6 +7283,7 @@
           "label": "Jenn example dream",
           "score": 0.33265266,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7189,9 +7315,9 @@
               ]
             }
           },
-          "wordCount": 1255,
-          "numComparisons": 1255,
-          "numDayComparisons": 1255,
+          "wordCount": 215,
+          "numComparisons": 215,
+          "numDayComparisons": 215,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7215,6 +7341,7 @@
           "label": "Jenn example dream",
           "score": 0.22734249,
           "dreamerAlias": "Jenn",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7246,9 +7373,9 @@
               ]
             }
           },
-          "wordCount": 1354,
-          "numComparisons": 1354,
-          "numDayComparisons": 1354,
+          "wordCount": 229,
+          "numComparisons": 229,
+          "numDayComparisons": 229,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7272,6 +7399,7 @@
           "label": "Jenn example dream",
           "score": 0.21931924,
           "dreamerAlias": "Jenn",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7303,9 +7431,9 @@
               ]
             }
           },
-          "wordCount": 2193,
-          "numComparisons": 2193,
-          "numDayComparisons": 2193,
+          "wordCount": 406,
+          "numComparisons": 406,
+          "numDayComparisons": 406,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7329,6 +7457,7 @@
           "label": "Jenn example dream",
           "score": 0.09988819,
           "dreamerAlias": "Jenn",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7360,9 +7489,9 @@
               ]
             }
           },
-          "wordCount": 1642,
-          "numComparisons": 1642,
-          "numDayComparisons": 1642,
+          "wordCount": 295,
+          "numComparisons": 295,
+          "numDayComparisons": 295,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7386,6 +7515,7 @@
           "label": "Jenn example dream",
           "score": 0.19691832,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7417,9 +7547,9 @@
               ]
             }
           },
-          "wordCount": 2502,
-          "numComparisons": 2502,
-          "numDayComparisons": 2502,
+          "wordCount": 460,
+          "numComparisons": 460,
+          "numDayComparisons": 460,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7443,6 +7573,7 @@
           "label": "Jenn example dream",
           "score": 0.43767294,
           "dreamerAlias": "Jenn",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7474,9 +7605,9 @@
               ]
             }
           },
-          "wordCount": 1748,
-          "numComparisons": 1748,
-          "numDayComparisons": 1748,
+          "wordCount": 327,
+          "numComparisons": 327,
+          "numDayComparisons": 327,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7500,6 +7631,7 @@
           "label": "Jenn example dream",
           "score": 0.15313375,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7531,9 +7663,9 @@
               ]
             }
           },
-          "wordCount": 2604,
-          "numComparisons": 2604,
-          "numDayComparisons": 2604,
+          "wordCount": 492,
+          "numComparisons": 492,
+          "numDayComparisons": 492,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7557,6 +7689,7 @@
           "label": "Jenn example dream",
           "score": 0.07522514,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7588,9 +7721,9 @@
               ]
             }
           },
-          "wordCount": 692,
-          "numComparisons": 692,
-          "numDayComparisons": 692,
+          "wordCount": 115,
+          "numComparisons": 115,
+          "numDayComparisons": 115,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7614,6 +7747,7 @@
           "label": "Jenn example dream",
           "score": 0.45509756,
           "dreamerAlias": "Jenn",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7645,9 +7779,9 @@
               ]
             }
           },
-          "wordCount": 1084,
-          "numComparisons": 1084,
-          "numDayComparisons": 1084,
+          "wordCount": 172,
+          "numComparisons": 172,
+          "numDayComparisons": 172,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7677,6 +7811,7 @@
           "label": "Jennifer example dream",
           "score": 0.2850881,
           "dreamerAlias": "Jennifer",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7708,9 +7843,9 @@
               ]
             }
           },
-          "wordCount": 1371,
-          "numComparisons": 1371,
-          "numDayComparisons": 1371,
+          "wordCount": 262,
+          "numComparisons": 262,
+          "numDayComparisons": 262,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7734,6 +7869,7 @@
           "label": "Jennifer example dream",
           "score": 0.28455836,
           "dreamerAlias": "Jennifer",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7765,9 +7901,9 @@
               ]
             }
           },
-          "wordCount": 2632,
-          "numComparisons": 2632,
-          "numDayComparisons": 2632,
+          "wordCount": 441,
+          "numComparisons": 441,
+          "numDayComparisons": 441,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7791,6 +7927,7 @@
           "label": "Jennifer example dream",
           "score": 0.23668824,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7822,9 +7959,9 @@
               ]
             }
           },
-          "wordCount": 1254,
-          "numComparisons": 1254,
-          "numDayComparisons": 1254,
+          "wordCount": 227,
+          "numComparisons": 227,
+          "numDayComparisons": 227,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7848,6 +7985,7 @@
           "label": "Jennifer example dream",
           "score": 0.36176187,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7879,9 +8017,9 @@
               ]
             }
           },
-          "wordCount": 1477,
-          "numComparisons": 1477,
-          "numDayComparisons": 1477,
+          "wordCount": 274,
+          "numComparisons": 274,
+          "numDayComparisons": 274,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7905,6 +8043,7 @@
           "label": "Jennifer example dream",
           "score": 0.22557807,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7936,9 +8075,9 @@
               ]
             }
           },
-          "wordCount": 1381,
-          "numComparisons": 1381,
-          "numDayComparisons": 1381,
+          "wordCount": 246,
+          "numComparisons": 246,
+          "numDayComparisons": 246,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -7962,6 +8101,7 @@
           "label": "Jennifer example dream",
           "score": 0.19055119,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -7993,9 +8133,9 @@
               ]
             }
           },
-          "wordCount": 1611,
-          "numComparisons": 1611,
-          "numDayComparisons": 1611,
+          "wordCount": 290,
+          "numComparisons": 290,
+          "numDayComparisons": 290,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8019,6 +8159,7 @@
           "label": "Jennifer example dream",
           "score": 0.32191733,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8050,9 +8191,9 @@
               ]
             }
           },
-          "wordCount": 2017,
-          "numComparisons": 2017,
-          "numDayComparisons": 2017,
+          "wordCount": 373,
+          "numComparisons": 373,
+          "numDayComparisons": 373,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8076,6 +8217,7 @@
           "label": "Jennifer example dream",
           "score": 0.17645952,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8107,9 +8249,9 @@
               ]
             }
           },
-          "wordCount": 1643,
-          "numComparisons": 1643,
-          "numDayComparisons": 1643,
+          "wordCount": 298,
+          "numComparisons": 298,
+          "numDayComparisons": 298,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8133,6 +8275,7 @@
           "label": "Jennifer example dream",
           "score": 0.23309688,
           "dreamerAlias": "Jennifer",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8164,9 +8307,9 @@
               ]
             }
           },
-          "wordCount": 2530,
-          "numComparisons": 2530,
-          "numDayComparisons": 2530,
+          "wordCount": 472,
+          "numComparisons": 472,
+          "numDayComparisons": 472,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8196,6 +8339,7 @@
           "label": "Kellee example dream",
           "score": 0.21054171,
           "dreamerAlias": "Kellee",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8227,9 +8371,9 @@
               ]
             }
           },
-          "wordCount": 795,
-          "numComparisons": 795,
-          "numDayComparisons": 795,
+          "wordCount": 131,
+          "numComparisons": 131,
+          "numDayComparisons": 131,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8253,6 +8397,7 @@
           "label": "Kellee example dream",
           "score": 0.13368602,
           "dreamerAlias": "Kellee",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8284,9 +8429,9 @@
               ]
             }
           },
-          "wordCount": 1369,
-          "numComparisons": 1369,
-          "numDayComparisons": 1369,
+          "wordCount": 266,
+          "numComparisons": 266,
+          "numDayComparisons": 266,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8310,6 +8455,7 @@
           "label": "Kellee example dream",
           "score": 0.42371795,
           "dreamerAlias": "Kellee",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8341,9 +8487,9 @@
               ]
             }
           },
-          "wordCount": 207,
-          "numComparisons": 207,
-          "numDayComparisons": 207,
+          "wordCount": 39,
+          "numComparisons": 39,
+          "numDayComparisons": 39,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8367,6 +8513,7 @@
           "label": "Kellee example dream",
           "score": 0.09253229,
           "dreamerAlias": "Kellee",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8398,9 +8545,9 @@
               ]
             }
           },
-          "wordCount": 1214,
-          "numComparisons": 1214,
-          "numDayComparisons": 1214,
+          "wordCount": 210,
+          "numComparisons": 210,
+          "numDayComparisons": 210,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8424,6 +8571,7 @@
           "label": "Kellee example dream",
           "score": 0.14126964,
           "dreamerAlias": "Kellee",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8455,9 +8603,9 @@
               ]
             }
           },
-          "wordCount": 940,
-          "numComparisons": 940,
-          "numDayComparisons": 940,
+          "wordCount": 169,
+          "numComparisons": 169,
+          "numDayComparisons": 169,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8481,6 +8629,7 @@
           "label": "Kellee example dream",
           "score": 0.08014367,
           "dreamerAlias": "Kellee",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8512,9 +8661,9 @@
               ]
             }
           },
-          "wordCount": 733,
-          "numComparisons": 733,
-          "numDayComparisons": 733,
+          "wordCount": 136,
+          "numComparisons": 136,
+          "numDayComparisons": 136,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8544,6 +8693,7 @@
           "label": "Meg example dream",
           "score": 0.08440822,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8575,9 +8725,9 @@
               ]
             }
           },
-          "wordCount": 880,
-          "numComparisons": 880,
-          "numDayComparisons": 880,
+          "wordCount": 160,
+          "numComparisons": 160,
+          "numDayComparisons": 160,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8601,6 +8751,7 @@
           "label": "Meg example dream",
           "score": 0.13400842,
           "dreamerAlias": "Meg",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8632,9 +8783,9 @@
               ]
             }
           },
-          "wordCount": 848,
-          "numComparisons": 848,
-          "numDayComparisons": 848,
+          "wordCount": 149,
+          "numComparisons": 149,
+          "numDayComparisons": 149,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8658,6 +8809,7 @@
           "label": "Meg example dream",
           "score": 0.47494718,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8689,9 +8841,9 @@
               ]
             }
           },
-          "wordCount": 1841,
-          "numComparisons": 1841,
-          "numDayComparisons": 1841,
+          "wordCount": 348,
+          "numComparisons": 348,
+          "numDayComparisons": 348,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8715,6 +8867,7 @@
           "label": "Meg example dream",
           "score": 0.30254462,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8746,9 +8899,9 @@
               ]
             }
           },
-          "wordCount": 1294,
-          "numComparisons": 1294,
-          "numDayComparisons": 1294,
+          "wordCount": 245,
+          "numComparisons": 245,
+          "numDayComparisons": 245,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8772,6 +8925,7 @@
           "label": "Meg example dream",
           "score": 0.14481898,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8803,9 +8957,9 @@
               ]
             }
           },
-          "wordCount": 1087,
-          "numComparisons": 1087,
-          "numDayComparisons": 1087,
+          "wordCount": 187,
+          "numComparisons": 187,
+          "numDayComparisons": 187,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8829,6 +8983,7 @@
           "label": "Meg example dream",
           "score": 0.3148461,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8860,9 +9015,9 @@
               ]
             }
           },
-          "wordCount": 1432,
-          "numComparisons": 1432,
-          "numDayComparisons": 1432,
+          "wordCount": 270,
+          "numComparisons": 270,
+          "numDayComparisons": 270,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8886,6 +9041,7 @@
           "label": "Meg example dream",
           "score": 0.19404122,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8917,9 +9073,9 @@
               ]
             }
           },
-          "wordCount": 1961,
-          "numComparisons": 1961,
-          "numDayComparisons": 1961,
+          "wordCount": 365,
+          "numComparisons": 365,
+          "numDayComparisons": 365,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -8943,6 +9099,7 @@
           "label": "Meg example dream",
           "score": 0.1276639,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -8974,9 +9131,9 @@
               ]
             }
           },
-          "wordCount": 1040,
-          "numComparisons": 1040,
-          "numDayComparisons": 1040,
+          "wordCount": 195,
+          "numComparisons": 195,
+          "numDayComparisons": 195,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9000,6 +9157,7 @@
           "label": "Meg example dream",
           "score": 0.120068446,
           "dreamerAlias": "Meg",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9031,9 +9189,9 @@
               ]
             }
           },
-          "wordCount": 1005,
-          "numComparisons": 1005,
-          "numDayComparisons": 1005,
+          "wordCount": 187,
+          "numComparisons": 187,
+          "numDayComparisons": 187,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9057,6 +9215,7 @@
           "label": "Meg example dream",
           "score": 0.26084512,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9088,9 +9247,9 @@
               ]
             }
           },
-          "wordCount": 2430,
-          "numComparisons": 2430,
-          "numDayComparisons": 2430,
+          "wordCount": 472,
+          "numComparisons": 472,
+          "numDayComparisons": 472,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9114,6 +9273,7 @@
           "label": "Meg example dream",
           "score": 0.45511186,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9145,9 +9305,9 @@
               ]
             }
           },
-          "wordCount": 1431,
-          "numComparisons": 1431,
-          "numDayComparisons": 1431,
+          "wordCount": 249,
+          "numComparisons": 249,
+          "numDayComparisons": 249,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9171,6 +9331,7 @@
           "label": "Meg example dream",
           "score": 0.15818813,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9202,9 +9363,9 @@
               ]
             }
           },
-          "wordCount": 1064,
-          "numComparisons": 1064,
-          "numDayComparisons": 1064,
+          "wordCount": 175,
+          "numComparisons": 175,
+          "numDayComparisons": 175,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9228,6 +9389,7 @@
           "label": "Meg example dream",
           "score": 0.16206768,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9259,9 +9421,9 @@
               ]
             }
           },
-          "wordCount": 1027,
-          "numComparisons": 1027,
-          "numDayComparisons": 1027,
+          "wordCount": 186,
+          "numComparisons": 186,
+          "numDayComparisons": 186,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9285,6 +9447,7 @@
           "label": "Meg example dream",
           "score": 0.13822739,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9316,9 +9479,9 @@
               ]
             }
           },
-          "wordCount": 1251,
-          "numComparisons": 1251,
-          "numDayComparisons": 1251,
+          "wordCount": 237,
+          "numComparisons": 237,
+          "numDayComparisons": 237,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9342,6 +9505,7 @@
           "label": "Meg example dream",
           "score": 0.20255663,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9373,9 +9537,9 @@
               ]
             }
           },
-          "wordCount": 1262,
-          "numComparisons": 1262,
-          "numDayComparisons": 1262,
+          "wordCount": 234,
+          "numComparisons": 234,
+          "numDayComparisons": 234,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9399,6 +9563,7 @@
           "label": "Meg example dream",
           "score": 0.19522732,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9430,9 +9595,9 @@
               ]
             }
           },
-          "wordCount": 1824,
-          "numComparisons": 1824,
-          "numDayComparisons": 1824,
+          "wordCount": 343,
+          "numComparisons": 343,
+          "numDayComparisons": 343,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9456,6 +9621,7 @@
           "label": "Meg example dream",
           "score": 0.28777286,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9487,9 +9653,9 @@
               ]
             }
           },
-          "wordCount": 1242,
-          "numComparisons": 1242,
-          "numDayComparisons": 1242,
+          "wordCount": 247,
+          "numComparisons": 247,
+          "numDayComparisons": 247,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9513,6 +9679,7 @@
           "label": "Meg example dream",
           "score": 0.17887382,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9544,9 +9711,9 @@
               ]
             }
           },
-          "wordCount": 2138,
-          "numComparisons": 2138,
-          "numDayComparisons": 2138,
+          "wordCount": 419,
+          "numComparisons": 419,
+          "numDayComparisons": 419,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9570,6 +9737,7 @@
           "label": "Meg example dream",
           "score": 0.2266026,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9601,9 +9769,9 @@
               ]
             }
           },
-          "wordCount": 1035,
-          "numComparisons": 1035,
-          "numDayComparisons": 1035,
+          "wordCount": 179,
+          "numComparisons": 179,
+          "numDayComparisons": 179,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9627,6 +9795,7 @@
           "label": "Meg example dream",
           "score": 0.16124524,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9658,9 +9827,9 @@
               ]
             }
           },
-          "wordCount": 2619,
-          "numComparisons": 2619,
-          "numDayComparisons": 2619,
+          "wordCount": 488,
+          "numComparisons": 488,
+          "numDayComparisons": 488,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9684,6 +9853,7 @@
           "label": "Meg example dream",
           "score": 0.28714788,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9715,9 +9885,9 @@
               ]
             }
           },
-          "wordCount": 2212,
-          "numComparisons": 2212,
-          "numDayComparisons": 2212,
+          "wordCount": 440,
+          "numComparisons": 440,
+          "numDayComparisons": 440,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9741,6 +9911,7 @@
           "label": "Meg example dream",
           "score": 0.25511056,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9772,9 +9943,9 @@
               ]
             }
           },
-          "wordCount": 880,
-          "numComparisons": 880,
-          "numDayComparisons": 880,
+          "wordCount": 170,
+          "numComparisons": 170,
+          "numDayComparisons": 170,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9798,6 +9969,7 @@
           "label": "Meg example dream",
           "score": 0.37326083,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9829,9 +10001,9 @@
               ]
             }
           },
-          "wordCount": 611,
-          "numComparisons": 611,
-          "numDayComparisons": 611,
+          "wordCount": 121,
+          "numComparisons": 121,
+          "numDayComparisons": 121,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9855,6 +10027,7 @@
           "label": "Meg example dream",
           "score": 0.38768283,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9886,9 +10059,9 @@
               ]
             }
           },
-          "wordCount": 315,
-          "numComparisons": 315,
-          "numDayComparisons": 315,
+          "wordCount": 60,
+          "numComparisons": 60,
+          "numDayComparisons": 60,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9912,6 +10085,7 @@
           "label": "Meg example dream",
           "score": 0.26413828,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -9943,9 +10117,9 @@
               ]
             }
           },
-          "wordCount": 948,
-          "numComparisons": 948,
-          "numDayComparisons": 948,
+          "wordCount": 183,
+          "numComparisons": 183,
+          "numDayComparisons": 183,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -9969,6 +10143,7 @@
           "label": "Meg example dream",
           "score": 0.22841479,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10000,9 +10175,9 @@
               ]
             }
           },
-          "wordCount": 1206,
-          "numComparisons": 1206,
-          "numDayComparisons": 1206,
+          "wordCount": 221,
+          "numComparisons": 221,
+          "numDayComparisons": 221,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10026,6 +10201,7 @@
           "label": "Meg example dream",
           "score": 0.09076546,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10057,9 +10233,9 @@
               ]
             }
           },
-          "wordCount": 1028,
-          "numComparisons": 1028,
-          "numDayComparisons": 1028,
+          "wordCount": 185,
+          "numComparisons": 185,
+          "numDayComparisons": 185,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10083,6 +10259,7 @@
           "label": "Meg example dream",
           "score": 0.5511875,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10114,9 +10291,9 @@
               ]
             }
           },
-          "wordCount": 1255,
-          "numComparisons": 1255,
-          "numDayComparisons": 1255,
+          "wordCount": 238,
+          "numComparisons": 238,
+          "numDayComparisons": 238,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10140,6 +10317,7 @@
           "label": "Meg example dream",
           "score": 0.17055547,
           "dreamerAlias": "Meg",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10171,9 +10349,9 @@
               ]
             }
           },
-          "wordCount": 1355,
-          "numComparisons": 1355,
-          "numDayComparisons": 1355,
+          "wordCount": 239,
+          "numComparisons": 239,
+          "numDayComparisons": 239,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10197,6 +10375,7 @@
           "label": "Meg example dream",
           "score": 0.49539375,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10228,9 +10407,9 @@
               ]
             }
           },
-          "wordCount": 1183,
-          "numComparisons": 1183,
-          "numDayComparisons": 1183,
+          "wordCount": 210,
+          "numComparisons": 210,
+          "numDayComparisons": 210,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10254,6 +10433,7 @@
           "label": "Meg example dream",
           "score": 0.1802661,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10285,9 +10465,9 @@
               ]
             }
           },
-          "wordCount": 731,
-          "numComparisons": 731,
-          "numDayComparisons": 731,
+          "wordCount": 117,
+          "numComparisons": 117,
+          "numDayComparisons": 117,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10311,6 +10491,7 @@
           "label": "Meg example dream",
           "score": 0.16676341,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10342,9 +10523,9 @@
               ]
             }
           },
-          "wordCount": 1265,
-          "numComparisons": 1265,
-          "numDayComparisons": 1265,
+          "wordCount": 237,
+          "numComparisons": 237,
+          "numDayComparisons": 237,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10368,6 +10549,7 @@
           "label": "Meg example dream",
           "score": 0.21310158,
           "dreamerAlias": "Meg",
+          "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10399,9 +10581,9 @@
               ]
             }
           },
-          "wordCount": 1757,
-          "numComparisons": 1757,
-          "numDayComparisons": 1757,
+          "wordCount": 332,
+          "numComparisons": 332,
+          "numDayComparisons": 332,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10425,6 +10607,7 @@
           "label": "Meg example dream",
           "score": 0.13888578,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10456,9 +10639,9 @@
               ]
             }
           },
-          "wordCount": 1269,
-          "numComparisons": 1269,
-          "numDayComparisons": 1269,
+          "wordCount": 239,
+          "numComparisons": 239,
+          "numDayComparisons": 239,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10482,6 +10665,7 @@
           "label": "Meg example dream",
           "score": 0.12856326,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10513,9 +10697,9 @@
               ]
             }
           },
-          "wordCount": 842,
-          "numComparisons": 842,
-          "numDayComparisons": 842,
+          "wordCount": 151,
+          "numComparisons": 151,
+          "numDayComparisons": 151,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10539,6 +10723,7 @@
           "label": "Meg example dream",
           "score": 0.28039864,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10570,9 +10755,9 @@
               ]
             }
           },
-          "wordCount": 1487,
-          "numComparisons": 1487,
-          "numDayComparisons": 1487,
+          "wordCount": 274,
+          "numComparisons": 274,
+          "numDayComparisons": 274,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10596,6 +10781,7 @@
           "label": "Meg example dream",
           "score": 0.35676444,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10627,9 +10813,9 @@
               ]
             }
           },
-          "wordCount": 2279,
-          "numComparisons": 2279,
-          "numDayComparisons": 2279,
+          "wordCount": 436,
+          "numComparisons": 436,
+          "numDayComparisons": 436,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10653,6 +10839,7 @@
           "label": "Meg example dream",
           "score": 0.5806835,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10684,9 +10871,9 @@
               ]
             }
           },
-          "wordCount": 1480,
-          "numComparisons": 1480,
-          "numDayComparisons": 1480,
+          "wordCount": 266,
+          "numComparisons": 266,
+          "numDayComparisons": 266,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10710,6 +10897,7 @@
           "label": "Meg example dream",
           "score": 0.27447233,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10741,9 +10929,9 @@
               ]
             }
           },
-          "wordCount": 2053,
-          "numComparisons": 2053,
-          "numDayComparisons": 2053,
+          "wordCount": 390,
+          "numComparisons": 390,
+          "numDayComparisons": 390,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10767,6 +10955,7 @@
           "label": "Meg example dream",
           "score": 0.41514575,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10798,9 +10987,9 @@
               ]
             }
           },
-          "wordCount": 1290,
-          "numComparisons": 1290,
-          "numDayComparisons": 1290,
+          "wordCount": 230,
+          "numComparisons": 230,
+          "numDayComparisons": 230,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10824,6 +11013,7 @@
           "label": "Meg example dream",
           "score": 0.15432635,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10855,9 +11045,9 @@
               ]
             }
           },
-          "wordCount": 2018,
-          "numComparisons": 2018,
-          "numDayComparisons": 2018,
+          "wordCount": 384,
+          "numComparisons": 384,
+          "numDayComparisons": 384,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10881,6 +11071,7 @@
           "label": "Meg example dream",
           "score": 0.2874386,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10912,9 +11103,9 @@
               ]
             }
           },
-          "wordCount": 2081,
-          "numComparisons": 2081,
-          "numDayComparisons": 2081,
+          "wordCount": 389,
+          "numComparisons": 389,
+          "numDayComparisons": 389,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10938,6 +11129,7 @@
           "label": "Meg example dream",
           "score": 0.31838024,
           "dreamerAlias": "Meg",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -10969,9 +11161,9 @@
               ]
             }
           },
-          "wordCount": 1225,
-          "numComparisons": 1225,
-          "numDayComparisons": 1225,
+          "wordCount": 207,
+          "numComparisons": 207,
+          "numDayComparisons": 207,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -10995,6 +11187,7 @@
           "label": "Meg example dream",
           "score": 0.27202207,
           "dreamerAlias": "Meg",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11026,9 +11219,9 @@
               ]
             }
           },
-          "wordCount": 2074,
-          "numComparisons": 2074,
-          "numDayComparisons": 2074,
+          "wordCount": 392,
+          "numComparisons": 392,
+          "numDayComparisons": 392,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11058,6 +11251,7 @@
           "label": "Edward example dream",
           "score": 0.13569479,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11089,9 +11283,9 @@
               ]
             }
           },
-          "wordCount": 763,
-          "numComparisons": 763,
-          "numDayComparisons": 763,
+          "wordCount": 129,
+          "numComparisons": 129,
+          "numDayComparisons": 129,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11115,6 +11309,7 @@
           "label": "Edward example dream",
           "score": 0.10318057,
           "dreamerAlias": "Edward",
+          "reference2020": "politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11146,9 +11341,9 @@
               ]
             }
           },
-          "wordCount": 1173,
-          "numComparisons": 1173,
-          "numDayComparisons": 1173,
+          "wordCount": 188,
+          "numComparisons": 188,
+          "numDayComparisons": 188,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11172,6 +11367,7 @@
           "label": "Edward example dream",
           "score": 0.1334908,
           "dreamerAlias": "Edward",
+          "reference2020": "politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11203,9 +11399,9 @@
               ]
             }
           },
-          "wordCount": 1269,
-          "numComparisons": 1269,
-          "numDayComparisons": 1269,
+          "wordCount": 224,
+          "numComparisons": 224,
+          "numDayComparisons": 224,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11229,6 +11425,7 @@
           "label": "Edward example dream",
           "score": 0.42280257,
           "dreamerAlias": "Edward",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11260,9 +11457,9 @@
               ]
             }
           },
-          "wordCount": 847,
-          "numComparisons": 847,
-          "numDayComparisons": 847,
+          "wordCount": 137,
+          "numComparisons": 137,
+          "numDayComparisons": 137,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11286,6 +11483,7 @@
           "label": "Edward example dream",
           "score": 0.23330468,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11317,9 +11515,9 @@
               ]
             }
           },
-          "wordCount": 1081,
-          "numComparisons": 1081,
-          "numDayComparisons": 1081,
+          "wordCount": 195,
+          "numComparisons": 195,
+          "numDayComparisons": 195,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11343,6 +11541,7 @@
           "label": "Edward example dream",
           "score": 0.24942999,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11374,9 +11573,9 @@
               ]
             }
           },
-          "wordCount": 1379,
-          "numComparisons": 1379,
-          "numDayComparisons": 1379,
+          "wordCount": 236,
+          "numComparisons": 236,
+          "numDayComparisons": 236,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11400,6 +11599,7 @@
           "label": "Edward example dream",
           "score": 0.09686273,
           "dreamerAlias": "Edward",
+          "reference2020": "politics, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11431,9 +11631,9 @@
               ]
             }
           },
-          "wordCount": 899,
-          "numComparisons": 899,
-          "numDayComparisons": 899,
+          "wordCount": 159,
+          "numComparisons": 159,
+          "numDayComparisons": 159,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11457,6 +11657,7 @@
           "label": "Edward example dream",
           "score": 0.40695852,
           "dreamerAlias": "Edward",
+          "reference2020": "politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11488,9 +11689,9 @@
               ]
             }
           },
-          "wordCount": 903,
-          "numComparisons": 903,
-          "numDayComparisons": 903,
+          "wordCount": 141,
+          "numComparisons": 141,
+          "numDayComparisons": 141,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11514,6 +11715,7 @@
           "label": "Edward example dream",
           "score": 0.14879864,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11545,9 +11747,9 @@
               ]
             }
           },
-          "wordCount": 894,
-          "numComparisons": 894,
-          "numDayComparisons": 894,
+          "wordCount": 164,
+          "numComparisons": 164,
+          "numDayComparisons": 164,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11571,6 +11773,7 @@
           "label": "Edward example dream",
           "score": 0.17578182,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11602,9 +11805,9 @@
               ]
             }
           },
-          "wordCount": 944,
-          "numComparisons": 944,
-          "numDayComparisons": 944,
+          "wordCount": 158,
+          "numComparisons": 158,
+          "numDayComparisons": 158,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11628,6 +11831,7 @@
           "label": "Edward example dream",
           "score": 0.26243332,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11659,9 +11863,9 @@
               ]
             }
           },
-          "wordCount": 825,
-          "numComparisons": 825,
-          "numDayComparisons": 825,
+          "wordCount": 133,
+          "numComparisons": 133,
+          "numDayComparisons": 133,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11685,6 +11889,7 @@
           "label": "Edward example dream",
           "score": 0.17848396,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11716,9 +11921,9 @@
               ]
             }
           },
-          "wordCount": 725,
-          "numComparisons": 725,
-          "numDayComparisons": 725,
+          "wordCount": 123,
+          "numComparisons": 123,
+          "numDayComparisons": 123,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11742,6 +11947,7 @@
           "label": "Edward example dream",
           "score": 0.39622766,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11773,9 +11979,9 @@
               ]
             }
           },
-          "wordCount": 792,
-          "numComparisons": 792,
-          "numDayComparisons": 792,
+          "wordCount": 141,
+          "numComparisons": 141,
+          "numDayComparisons": 141,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11799,6 +12005,7 @@
           "label": "Edward example dream",
           "score": 0.26355162,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11830,9 +12037,9 @@
               ]
             }
           },
-          "wordCount": 2130,
-          "numComparisons": 2130,
-          "numDayComparisons": 2130,
+          "wordCount": 387,
+          "numComparisons": 387,
+          "numDayComparisons": 387,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11856,6 +12063,7 @@
           "label": "Edward example dream",
           "score": 0.13726,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11887,9 +12095,9 @@
               ]
             }
           },
-          "wordCount": 1050,
-          "numComparisons": 1050,
-          "numDayComparisons": 1050,
+          "wordCount": 175,
+          "numComparisons": 175,
+          "numDayComparisons": 175,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11913,6 +12121,7 @@
           "label": "Edward example dream",
           "score": 0.5591357,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -11944,9 +12153,9 @@
               ]
             }
           },
-          "wordCount": 861,
-          "numComparisons": 861,
-          "numDayComparisons": 861,
+          "wordCount": 158,
+          "numComparisons": 158,
+          "numDayComparisons": 158,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -11970,6 +12179,7 @@
           "label": "Edward example dream",
           "score": 0.27657357,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12001,9 +12211,9 @@
               ]
             }
           },
-          "wordCount": 1378,
-          "numComparisons": 1378,
-          "numDayComparisons": 1378,
+          "wordCount": 234,
+          "numComparisons": 234,
+          "numDayComparisons": 234,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12027,6 +12237,7 @@
           "label": "Edward example dream",
           "score": 0.5043978,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12058,9 +12269,9 @@
               ]
             }
           },
-          "wordCount": 996,
-          "numComparisons": 996,
-          "numDayComparisons": 996,
+          "wordCount": 158,
+          "numComparisons": 158,
+          "numDayComparisons": 158,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12084,6 +12295,7 @@
           "label": "Edward example dream",
           "score": 0.10814627,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12115,9 +12327,9 @@
               ]
             }
           },
-          "wordCount": 906,
-          "numComparisons": 906,
-          "numDayComparisons": 906,
+          "wordCount": 136,
+          "numComparisons": 136,
+          "numDayComparisons": 136,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12141,6 +12353,7 @@
           "label": "Edward example dream",
           "score": 0.16819379,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12172,9 +12385,9 @@
               ]
             }
           },
-          "wordCount": 1005,
-          "numComparisons": 1005,
-          "numDayComparisons": 1005,
+          "wordCount": 174,
+          "numComparisons": 174,
+          "numDayComparisons": 174,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12198,6 +12411,7 @@
           "label": "Edward example dream",
           "score": 0.16794027,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12229,9 +12443,9 @@
               ]
             }
           },
-          "wordCount": 918,
-          "numComparisons": 918,
-          "numDayComparisons": 918,
+          "wordCount": 152,
+          "numComparisons": 152,
+          "numDayComparisons": 152,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12255,6 +12469,7 @@
           "label": "Edward example dream",
           "score": 0.40809405,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12286,9 +12501,9 @@
               ]
             }
           },
-          "wordCount": 1006,
-          "numComparisons": 1006,
-          "numDayComparisons": 1006,
+          "wordCount": 177,
+          "numComparisons": 177,
+          "numDayComparisons": 177,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12312,6 +12527,7 @@
           "label": "Edward example dream",
           "score": 0.24224938,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12343,9 +12559,9 @@
               ]
             }
           },
-          "wordCount": 944,
-          "numComparisons": 944,
-          "numDayComparisons": 944,
+          "wordCount": 163,
+          "numComparisons": 163,
+          "numDayComparisons": 163,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12369,6 +12585,7 @@
           "label": "Edward example dream",
           "score": 0.1878459,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12400,9 +12617,9 @@
               ]
             }
           },
-          "wordCount": 1240,
-          "numComparisons": 1240,
-          "numDayComparisons": 1240,
+          "wordCount": 212,
+          "numComparisons": 212,
+          "numDayComparisons": 212,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12426,6 +12643,7 @@
           "label": "Edward example dream",
           "score": 0.2877219,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12457,9 +12675,9 @@
               ]
             }
           },
-          "wordCount": 1031,
-          "numComparisons": 1031,
-          "numDayComparisons": 1031,
+          "wordCount": 178,
+          "numComparisons": 178,
+          "numDayComparisons": 178,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12483,6 +12701,7 @@
           "label": "Edward example dream",
           "score": 0.15373924,
           "dreamerAlias": "Edward",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12514,9 +12733,9 @@
               ]
             }
           },
-          "wordCount": 1421,
-          "numComparisons": 1421,
-          "numDayComparisons": 1421,
+          "wordCount": 253,
+          "numComparisons": 253,
+          "numDayComparisons": 253,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12540,6 +12759,7 @@
           "label": "Edward example dream",
           "score": 0.3055133,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12571,9 +12791,9 @@
               ]
             }
           },
-          "wordCount": 928,
-          "numComparisons": 928,
-          "numDayComparisons": 928,
+          "wordCount": 155,
+          "numComparisons": 155,
+          "numDayComparisons": 155,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12597,6 +12817,7 @@
           "label": "Edward example dream",
           "score": 0.104717486,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic, environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12628,9 +12849,9 @@
               ]
             }
           },
-          "wordCount": 794,
-          "numComparisons": 794,
-          "numDayComparisons": 794,
+          "wordCount": 147,
+          "numComparisons": 147,
+          "numDayComparisons": 147,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12654,6 +12875,7 @@
           "label": "Edward example dream",
           "score": 0.15345292,
           "dreamerAlias": "Edward",
+          "reference2020": "BLM",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12685,9 +12907,9 @@
               ]
             }
           },
-          "wordCount": 1574,
-          "numComparisons": 1574,
-          "numDayComparisons": 1574,
+          "wordCount": 283,
+          "numComparisons": 283,
+          "numDayComparisons": 283,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12711,6 +12933,7 @@
           "label": "Edward example dream",
           "score": 0.075315796,
           "dreamerAlias": "Edward",
+          "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12742,9 +12965,9 @@
               ]
             }
           },
-          "wordCount": 752,
-          "numComparisons": 752,
-          "numDayComparisons": 752,
+          "wordCount": 129,
+          "numComparisons": 129,
+          "numDayComparisons": 129,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12768,6 +12991,7 @@
           "label": "Edward example dream",
           "score": 0.17137389,
           "dreamerAlias": "Edward",
+          "reference2020": "politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12799,9 +13023,9 @@
               ]
             }
           },
-          "wordCount": 1525,
-          "numComparisons": 1525,
-          "numDayComparisons": 1525,
+          "wordCount": 258,
+          "numComparisons": 258,
+          "numDayComparisons": 258,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12825,6 +13049,7 @@
           "label": "Edward example dream",
           "score": 0.106535465,
           "dreamerAlias": "Edward",
+          "reference2020": "politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12856,9 +13081,9 @@
               ]
             }
           },
-          "wordCount": 980,
-          "numComparisons": 980,
-          "numDayComparisons": 980,
+          "wordCount": 171,
+          "numComparisons": 171,
+          "numDayComparisons": 171,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12882,6 +13107,7 @@
           "label": "Edward example dream",
           "score": 0.32024866,
           "dreamerAlias": "Edward",
+          "reference2020": "pandemic ",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12913,9 +13139,9 @@
               ]
             }
           },
-          "wordCount": 1004,
-          "numComparisons": 1004,
-          "numDayComparisons": 1004,
+          "wordCount": 178,
+          "numComparisons": 178,
+          "numDayComparisons": 178,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -12939,6 +13165,7 @@
           "label": "Edward example dream",
           "score": 0.1123489,
           "dreamerAlias": "Edward",
+          "reference2020": "politics",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
@@ -12970,9 +13197,9 @@
               ]
             }
           },
-          "wordCount": 1054,
-          "numComparisons": 1054,
-          "numDayComparisons": 1054,
+          "wordCount": 167,
+          "numComparisons": 167,
+          "numDayComparisons": 167,
           "dreamCollection": {
             "label": "",
             "timePeriod": {

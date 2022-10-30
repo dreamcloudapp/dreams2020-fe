@@ -10,3 +10,8 @@ export const truncateString = (text: string, maxChars: number): string => {
   }
   return text.slice(0, maxChars) + "...";
 };
+
+// Get word count of a string
+export const wordCount = (text: string): number => {
+  return text.split(" ").length;
+};
