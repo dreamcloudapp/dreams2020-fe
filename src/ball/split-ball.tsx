@@ -53,7 +53,7 @@ export const SplitBall = ({
   const startFocus: Focus = isFocused ? "unfocused" : "focused";
   const endFocus: Focus = isFocused ? "focused" : "unfocused";
 
-  const ballSpreadPercentage = 0.8;
+  const ballSpreadPercentage = 0.7;
   const ballDistance = Math.floor(graphWidth * ballSpreadPercentage);
   const textRectWidth = Math.floor(graphWidth * 0.45);
   const lineLength = ballDistance / 2;
@@ -89,18 +89,18 @@ export const SplitBall = ({
       moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
       moveTextIntoPlace: { x: endX, y: endY },
       leftBallMove: {
-        transform: "translateX(-15%) scale(0.5) translateY(50%)",
+        transform: "translateX(-10%) scale(0.5) translateY(50%)",
         stroke: stroke,
       },
       leftBallLabelMove: {
-        transform: "translateX(7%) translateY(51%)",
+        transform: "translateX(12%) translateY(51%)",
       },
       rightBallMove: {
-        transform: "translateX(63%) scale(0.5) translateY(50%)",
+        transform: "translateX(58%) scale(0.5) translateY(50%)",
         stroke: stroke,
       },
       rightBallLabelMove: {
-        transform: "translateX(86%) translateY(51%)",
+        transform: "translateX(81%) translateY(51%)",
       },
       conceptsLabelMove: {
         transform: "translateX(-21%) translateY(20%)",
@@ -195,6 +195,9 @@ export const SplitBall = ({
   const ySpreadStart = endY - ySpread / 2;
   const spreadInterval = ySpread / (topCommonConcepts.length - 1);
 
+  const truncateLength =
+    graphWidth > 1200 ? 65 : graphWidth > 1000 ? 55 : graphWidth > 800 ? 45 : 35;
+
   return (
     <>
       {isFocused &&
@@ -233,7 +236,7 @@ export const SplitBall = ({
                 startPoint={[endX, endY]}
                 endPoint={[endX, ySpreadStart + i * spreadInterval]}
                 fill={fill}
-                conceptText={truncateText(concept, 55)}
+                conceptText={truncateText(concept, truncateLength)}
                 key={i}
                 fontSize={14}
                 fontWeight={500}

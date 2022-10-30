@@ -60,7 +60,7 @@ export function BallOverlay({
           startPoint={[prevFocusedComparison.x, prevFocusedComparison.y]}
           endPoint={[width / 2, height / 2]}
           startRadius={prevFocusedComparison.startRadius}
-          endRadius={Math.floor(height / 4)}
+          endRadius={Math.floor(height / 6)}
           stroke={changeHslLightness(prevFocusedComparison.color, -10)}
           strokeWidth={LINE_WIDTH}
           fill={prevFocusedComparison.color}
@@ -80,7 +80,7 @@ export function BallOverlay({
           startPoint={[focusedComparison.x, focusedComparison.y]}
           endPoint={[width / 2, height / 2]}
           startRadius={focusedComparison.startRadius}
-          endRadius={Math.floor(height / 4)}
+          endRadius={Math.floor(height / 6)}
           stroke={changeHslLightness(focusedComparison.color, -10)}
           strokeWidth={LINE_WIDTH}
           fill={focusedComparison.color}
