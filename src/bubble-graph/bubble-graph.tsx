@@ -21,7 +21,7 @@ import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
 import { ColorTheme, RED_SIMILARITY_COLORS, SIMILARITY_COLORS } from "../modules/theme";
 import { XYAxis } from "../axes/xy-axis";
-import { Tooltip } from "../tooltip/tooltip-inner";
+import { Tooltip, TooltipRow, TooltipSection } from "../tooltip/tooltip-inner";
 import { toTitleCase } from "../modules/formatters";
 
 type BubbleGraphProps = {
@@ -69,6 +69,7 @@ export function BubbleGraph({
 
   // Domain & range for the x-axis
   const xDomain = getXDomain(activeGranularity);
+
   const xRange = [0, width - padding.LEFT - padding.RIGHT];
 
   const scaleY = scaleLinear()
@@ -94,6 +95,7 @@ export function BubbleGraph({
         hasMidpointLine={true}
         yRange={[0, paddedMax]}
         xRange={xDomain}
+        numTicks={7}
         xTickModulo={activeGranularity === "day" ? 20 : 1}
         xAxisCenterLabel="Dream-news time difference"
         xAxisFormat={d => {
@@ -117,6 +119,12 @@ export function BubbleGraph({
           const endY = scaleY(score);
           const endX = padding.LEFT + scaleXDiscrete(index1 - index2);
 
+          console.log(
+            `Index 1: ${index1}, Index 2: ${index2}, scaleXDiscrete: ${scaleXDiscrete(
+              index1 - index2
+            )}`
+          );
+
           return (
             <Bubble
               startPoint={startPoint}
@@ -127,22 +135,29 @@ export function BubbleGraph({
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
               onMouseOver={e => {
+                const similarityRow: TooltipRow = {
+                  key:
+                    activeGranularity === "day"
+                      ? "Dream/news similarity:"
+                      : "Average similarity:",
+                  value: comparison.score.toFixed(5),
+                };
+                const comparisonsRow: TooltipRow = {
+                  key: "Total dream-news pairs compared:",
+                  value: comparison.numComparisons.toLocaleString(),
+                };
+                const tooltipRows =
+                  activeGranularity === "day"
+                    ? [similarityRow]
+                    : [similarityRow, comparisonsRow];
+
                 (handleMouseOver as any)(
                   e,
                   <Tooltip
                     tipTitle={comparison.label}
                     sections={[
                       {
-                        rows: [
-                          {
-                            key: "Average similarity:",
-                            value: comparison.score.toFixed(5),
-                          },
-                          {
-                            key: "Total dream-news pairs compared:",
-                            value: comparison.numComparisons.toLocaleString(),
-                          },
-                        ],
+                        rows: tooltipRows,
                       },
                     ]}
                   />
