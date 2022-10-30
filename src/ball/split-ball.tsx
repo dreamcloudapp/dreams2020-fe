@@ -55,7 +55,7 @@ export const SplitBall = ({
 
   const ballSpreadPercentage = 0.8;
   const ballDistance = Math.floor(graphWidth * ballSpreadPercentage);
-  const textRectWidth = Math.floor(graphWidth * 0.5);
+  const textRectWidth = Math.floor(graphWidth * 0.45);
   const lineLength = ballDistance / 2;
 
   const outlineShade = changeHslLightness(fill, -10);
@@ -89,18 +89,18 @@ export const SplitBall = ({
       moveIntoPlace: { cx: endX, cy: endY, r: endRadius },
       moveTextIntoPlace: { x: endX, y: endY },
       leftBallMove: {
-        transform: "translateX(-21%) scale(0.7) translateY(20%)",
+        transform: "translateX(-15%) scale(0.5) translateY(50%)",
         stroke: stroke,
       },
       leftBallLabelMove: {
-        transform: "translateX(11%) translateY(50%)",
-      },
-      rightBallLabelMove: {
-        transform: "translateX(84%) translateY(50%)",
+        transform: "translateX(7%) translateY(51%)",
       },
       rightBallMove: {
-        transform: "translateX(51%) scale(0.7) translateY(20%)",
+        transform: "translateX(63%) scale(0.5) translateY(50%)",
         stroke: stroke,
+      },
+      rightBallLabelMove: {
+        transform: "translateX(86%) translateY(51%)",
       },
       conceptsLabelMove: {
         transform: "translateX(-21%) translateY(20%)",
@@ -233,7 +233,7 @@ export const SplitBall = ({
                 startPoint={[endX, endY]}
                 endPoint={[endX, ySpreadStart + i * spreadInterval]}
                 fill={fill}
-                conceptText={truncateText(concept, 65)}
+                conceptText={truncateText(concept, 55)}
                 key={i}
                 fontSize={14}
                 fontWeight={500}

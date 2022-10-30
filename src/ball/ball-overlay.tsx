@@ -35,11 +35,10 @@ export function BallOverlay({
   const dreamId = focusedComparison?.dreamId || "";
   const newsId = focusedComparison?.newsId || "";
   const hasDreamId = !!dreamId;
-  const hasNewsId = !!newsId;
   //   const isSingleComparison: boolean = hasDreamId && hasNewsId;
 
   const textLeft = hasDreamId ? "Dream" : "Dreams";
-  const textRight = hasNewsId ? "News Item" : "News";
+  const textRight = "News";
 
   return (
     <>
