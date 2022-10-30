@@ -72,7 +72,7 @@ fs.createReadStream(dreamsFile)
     };
     // For now, we're only interested in 2020 dreams.
     // We can deal with the rest later
-    if (truncatedData.ID) {
+    if (realId) {
       results.push(truncatedData);
     }
   })
@@ -183,10 +183,12 @@ fs.createReadStream(dreamsFile)
       // We turn all the examples into ComparisonSet objects
       const comparisonSets: ComparisonSet[] = examples.map((example, i) => {
         // We need to get the dream date and news date for the example
-        const dreamId = findRealId(example.doc1Id, allDreams);
-        const dreamRecord = allDreams[dreamId];
+        const realDreamId = fakeIdToRealId[example.doc1Id];
+        const dreamRecord = allDreams[realDreamId];
         if (!dreamRecord) {
-          console.log("No dream record found for", dreamId);
+          console.log(
+            `No dream record found for fakeId: "${example.doc1Id}", realId "${realDreamId}"`
+          );
         }
         const dreamDate = new Date(dreamRecord.date);
         const dreamDateIndex = dayIndexFromDate(dreamDate);

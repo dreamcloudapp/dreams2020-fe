@@ -81,7 +81,7 @@ export function BubbleGraph({
   // Size of the balls is determined by the number of comparisons
   // Should also take into account graph dimensions
   const maxComparisons =
-    activeGranularity === "month" ? 350000 : activeGranularity === "week" ? 30000 : 1000;
+    activeGranularity === "month" ? 350000 : activeGranularity === "week" ? 30000 : 3000;
   const scaleBallSize = scaleLinear()
     .domain([0, maxComparisons])
     .range([0, height / 50]);
@@ -119,12 +119,6 @@ export function BubbleGraph({
           const endY = scaleY(score);
           const endX = padding.LEFT + scaleXDiscrete(index1 - index2);
 
-          console.log(
-            `Index 1: ${index1}, Index 2: ${index2}, scaleXDiscrete: ${scaleXDiscrete(
-              index1 - index2
-            )}`
-          );
-
           return (
             <Bubble
               startPoint={startPoint}
@@ -146,9 +140,15 @@ export function BubbleGraph({
                   key: "Total dream-news pairs compared:",
                   value: comparison.numComparisons.toLocaleString(),
                 };
+                const timeDifferenceRow: TooltipRow = {
+                  key: "Time difference:",
+                  value: `Dream day ${index1}, news day ${index2}: ${
+                    index1 - index2
+                  } ${activeGranularity}${Math.abs(index1 - index2) > 1 ? "s" : ""}`,
+                };
                 const tooltipRows =
                   activeGranularity === "day"
-                    ? [similarityRow]
+                    ? [similarityRow, timeDifferenceRow]
                     : [similarityRow, comparisonsRow];
 
                 (handleMouseOver as any)(
