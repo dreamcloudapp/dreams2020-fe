@@ -153,7 +153,14 @@ function uniqueStringArr(arr: string[]): string[] {
 // Extract all the unique IDs from an array of ExamplesWithSimilarityLevel
 function exampleSetsToIdSet(exampleSets: ExamplesWithSimilarityLevel[]): string[] {
   const ids = exampleSets.reduce((acc, examples) => {
-    return [...acc, examples.high.newsId, examples.low.newsId, examples.medium.newsId];
+    const examplesToAdd: string[] = [
+      examples.high?.newsId,
+      examples.medium?.newsId,
+      examples.low?.newsId,
+      examples.indiscernible?.newsId,
+    ].filter(x => typeof x === "string") as string[];
+
+    return [...acc, ...examplesToAdd];
   }, [] as string[]);
   // Make sure they're unique
   const idsUnique = uniqueStringArr(ids);
