@@ -82,9 +82,10 @@ export function BubbleGraph({
   // Should also take into account graph dimensions
   const maxComparisons =
     activeGranularity === "month" ? 350000 : activeGranularity === "week" ? 30000 : 3000;
+  const heightRatio = activeGranularity === "day" ? 40 : 50;
   const scaleBallSize = scaleLinear()
     .domain([0, maxComparisons])
-    .range([0, height / 50]);
+    .range([0, height / heightRatio]);
 
   return (
     <svg width={width} height={height}>
@@ -132,7 +133,7 @@ export function BubbleGraph({
                 const similarityRow: TooltipRow = {
                   key:
                     activeGranularity === "day"
-                      ? "Dream/news similarity:"
+                      ? "Dream-news similarity:"
                       : "Average similarity:",
                   value: comparison.score.toFixed(5),
                 };
@@ -142,9 +143,9 @@ export function BubbleGraph({
                 };
                 const timeDifferenceRow: TooltipRow = {
                   key: "Time difference:",
-                  value: `Dream day ${index1}, news day ${index2}: ${
-                    index1 - index2
-                  } ${activeGranularity}${Math.abs(index1 - index2) > 1 ? "s" : ""}`,
+                  value: `Dream ${Math.abs(index1 - index2)} ${activeGranularity}${
+                    Math.abs(index1 - index2) > 1 ? "s" : ""
+                  } ${index1 - index2 > 0 ? "after" : "before"} the news`,
                 };
                 const tooltipRows =
                   activeGranularity === "day"
