@@ -18,7 +18,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.068682656,
               "dreamId": "32",
               "newsId": "4469",
@@ -75,7 +75,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.06930221,
               "dreamId": "85",
               "newsId": "5773",
@@ -132,7 +132,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.05069577,
               "dreamId": "236",
               "newsId": "5113",
@@ -189,7 +189,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.07495421,
               "dreamId": "349",
               "newsId": "5773",
@@ -246,7 +246,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.08882672,
               "dreamId": "393",
               "newsId": "5391",
@@ -303,7 +303,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.07278849,
               "dreamId": "403",
               "newsId": "5773",
@@ -360,7 +360,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.08858307,
               "dreamId": "404",
               "newsId": "5391",
@@ -474,7 +474,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.10382396,
               "dreamId": "492",
               "newsId": "4255",
@@ -588,7 +588,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.06896798,
               "dreamId": "512",
               "newsId": "1994",
@@ -759,7 +759,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.08015035,
               "dreamId": "568",
               "newsId": "4296",
@@ -930,7 +930,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.050522797,
               "dreamId": "635",
               "newsId": "4362",
@@ -1044,7 +1044,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.17401977,
               "dreamId": "730",
               "newsId": "4255",
@@ -1158,7 +1158,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.146712,
               "dreamId": "938",
               "newsId": "5391",
@@ -1272,7 +1272,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15749663,
               "dreamId": "958",
               "newsId": "4255",
@@ -1500,7 +1500,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13390125,
               "dreamId": "1071",
               "newsId": "564",
@@ -1557,7 +1557,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.07385442,
               "dreamId": "1081",
               "newsId": "564",
@@ -1671,7 +1671,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1458092,
               "dreamId": "1177",
               "newsId": "2992",
@@ -1728,7 +1728,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.099142574,
               "dreamId": "1254",
               "newsId": "8369",
@@ -1785,7 +1785,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1478968,
               "dreamId": "1286",
               "newsId": "564",
@@ -1842,7 +1842,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.105323054,
               "dreamId": "1465",
               "newsId": "5391",
@@ -1899,7 +1899,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.12048494,
               "dreamId": "1515",
               "newsId": "5391",
@@ -2070,7 +2070,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16672039,
               "dreamId": "1550",
               "newsId": "8623",
@@ -2127,7 +2127,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.11657785,
               "dreamId": "1657",
               "newsId": "5391",
@@ -2184,7 +2184,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.101035796,
               "dreamId": "1689",
               "newsId": "8616",
@@ -2241,7 +2241,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16679835,
               "dreamId": "1714",
               "newsId": "4255",
@@ -2298,7 +2298,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.116544716,
               "dreamId": "1924",
               "newsId": "5391",
@@ -2412,7 +2412,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.093960606,
               "dreamId": "2141",
               "newsId": "5391",
@@ -2475,7 +2475,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.12757209,
               "dreamId": "283",
               "newsId": "840",
@@ -2532,7 +2532,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.11054521,
               "dreamId": "311",
               "newsId": "564",
@@ -2760,7 +2760,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1396863,
               "dreamId": "425",
               "newsId": "5391",
@@ -2817,7 +2817,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.14504118,
               "dreamId": "430",
               "newsId": "5391",
@@ -2931,7 +2931,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.06986693,
               "dreamId": "473",
               "newsId": "8616",
@@ -3159,7 +3159,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15576148,
               "dreamId": "676",
               "newsId": "4255",
@@ -3558,7 +3558,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.12671989,
               "dreamId": "897",
               "newsId": "4434",
@@ -3672,7 +3672,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15806071,
               "dreamId": "956",
               "newsId": "4255",
@@ -3729,7 +3729,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "low": {
               "score": 0.064681314,
               "dreamId": "973",
               "newsId": "8616",
@@ -4071,7 +4071,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.12806246,
               "dreamId": "1256",
               "newsId": "4255",
@@ -4185,7 +4185,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13881628,
               "dreamId": "1385",
               "newsId": "4536",
@@ -4356,7 +4356,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.124983706,
               "dreamId": "1431",
               "newsId": "5391",
@@ -4413,7 +4413,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15575595,
               "dreamId": "1603",
               "newsId": "4536",
@@ -4527,7 +4527,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16654399,
               "dreamId": "1650",
               "newsId": "4255",
@@ -4584,7 +4584,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.12727112,
               "dreamId": "1733",
               "newsId": "5391",
@@ -4698,7 +4698,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13049912,
               "dreamId": "1757",
               "newsId": "4255",
@@ -4869,7 +4869,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.076137535,
               "dreamId": "2053",
               "newsId": "8616",
@@ -4926,7 +4926,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.09371563,
               "dreamId": "2080",
               "newsId": "5391",
@@ -4983,7 +4983,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1674487,
               "dreamId": "2131",
               "newsId": "4255",
@@ -5274,7 +5274,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16004954,
               "dreamId": "1241",
               "newsId": "1170",
@@ -5850,7 +5850,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.10015419,
               "dreamId": "439",
               "newsId": "10967",
@@ -6135,7 +6135,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.14373656,
               "dreamId": "710",
               "newsId": "1935",
@@ -6306,7 +6306,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.07351489,
               "dreamId": "919",
               "newsId": "2531",
@@ -6933,7 +6933,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16617766,
               "dreamId": "1447",
               "newsId": "2926",
@@ -7332,7 +7332,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.09988819,
               "dreamId": "1827",
               "newsId": "5773",
@@ -7503,7 +7503,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15313375,
               "dreamId": "1965",
               "newsId": "5391",
@@ -7560,7 +7560,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.07522514,
               "dreamId": "1969",
               "newsId": "12660",
@@ -8256,7 +8256,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13368602,
               "dreamId": "457",
               "newsId": "10931",
@@ -8370,7 +8370,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.09253229,
               "dreamId": "644",
               "newsId": "10198",
@@ -8427,7 +8427,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.14126964,
               "dreamId": "857",
               "newsId": "4255",
@@ -8484,7 +8484,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.08014367,
               "dreamId": "1332",
               "newsId": "4834",
@@ -8547,7 +8547,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.08440822,
               "dreamId": "138",
               "newsId": "5773",
@@ -8604,7 +8604,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13400842,
               "dreamId": "352",
               "newsId": "9287",
@@ -8775,7 +8775,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.14481898,
               "dreamId": "444",
               "newsId": "2245",
@@ -8946,7 +8946,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1276639,
               "dreamId": "554",
               "newsId": "2147",
@@ -9003,7 +9003,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.120068446,
               "dreamId": "590",
               "newsId": "9314",
@@ -9174,7 +9174,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15818813,
               "dreamId": "891",
               "newsId": "796",
@@ -9231,7 +9231,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16206768,
               "dreamId": "995",
               "newsId": "13945",
@@ -9288,7 +9288,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13822739,
               "dreamId": "1034",
               "newsId": "4255",
@@ -9630,7 +9630,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16124524,
               "dreamId": "1377",
               "newsId": "13527",
@@ -10029,7 +10029,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.09076546,
               "dreamId": "1703",
               "newsId": "8574",
@@ -10143,7 +10143,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.17055547,
               "dreamId": "1726",
               "newsId": "796",
@@ -10314,7 +10314,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16676341,
               "dreamId": "1794",
               "newsId": "4255",
@@ -10428,7 +10428,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13888578,
               "dreamId": "1840",
               "newsId": "4255",
@@ -10485,7 +10485,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.12856326,
               "dreamId": "1942",
               "newsId": "15656",
@@ -10827,7 +10827,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15432635,
               "dreamId": "2130",
               "newsId": "5773",
@@ -11061,7 +11061,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13569479,
               "dreamId": "11",
               "newsId": "8683",
@@ -11118,7 +11118,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.10318057,
               "dreamId": "62",
               "newsId": "14265",
@@ -11175,7 +11175,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1334908,
               "dreamId": "70",
               "newsId": "5113",
@@ -11403,7 +11403,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.09686273,
               "dreamId": "343",
               "newsId": "2562",
@@ -11517,7 +11517,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.14879864,
               "dreamId": "364",
               "newsId": "10408",
@@ -11859,7 +11859,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.13726,
               "dreamId": "480",
               "newsId": "4255",
@@ -12087,7 +12087,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.10814627,
               "dreamId": "565",
               "newsId": "4360",
@@ -12144,7 +12144,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16819379,
               "dreamId": "578",
               "newsId": "4255",
@@ -12201,7 +12201,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.16794027,
               "dreamId": "709",
               "newsId": "5651",
@@ -12486,7 +12486,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15373924,
               "dreamId": "936",
               "newsId": "4018",
@@ -12600,7 +12600,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.104717486,
               "dreamId": "1121",
               "newsId": "8429",
@@ -12657,7 +12657,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.15345292,
               "dreamId": "1208",
               "newsId": "4255",
@@ -12714,7 +12714,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.075315796,
               "dreamId": "1446",
               "newsId": "10315",
@@ -12771,7 +12771,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.17137389,
               "dreamId": "1868",
               "newsId": "8113",
@@ -12828,7 +12828,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.106535465,
               "dreamId": "1870",
               "newsId": "3645",
@@ -12942,7 +12942,7 @@
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
+            "medium": {
               "score": 0.1123489,
               "dreamId": "1951",
               "newsId": "9802",

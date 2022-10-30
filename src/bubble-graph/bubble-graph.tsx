@@ -206,7 +206,9 @@ export function BubbleGraph({
                 // Don't do anything if there are no examples
                 if (
                   !comparison.similarityExamples ||
-                  !comparison.similarityExamples.high?.score
+                  (!comparison.similarityExamples.high?.score &&
+                    !comparison.similarityExamples.medium?.score &&
+                    !comparison.similarityExamples.low?.score)
                 ) {
                   return;
                 }

@@ -8,6 +8,7 @@ import {
   ExampleDreamNewsComparison,
   GranularityComparisonCollection,
   NewsRecord,
+  SimilarityLevel,
   SingleTextRecord,
 } from "@kannydennedy/dreams-2020-types";
 import { DREAMERS_SRC_FOLDER, SIMILARITY_CUTOFFS, palette } from "./config";
@@ -215,6 +216,8 @@ fs.createReadStream(dreamsFile)
 
         const totalCharCount = (dreamRecord.text + newsRecord.text).length;
 
+        const similarityKey: SimilarityLevel = getSimilarityLevel(example.score);
+
         const comp: ComparisonSet = {
           id: `newsy-dream-${i}`,
           granularity: "day",
@@ -224,7 +227,7 @@ fs.createReadStream(dreamsFile)
           examples: [],
           concepts: [],
           similarityExamples: {
-            high: {
+            [similarityKey]: {
               score: example.score,
               dreamId: fakeIdToRealId[example.doc1Id],
               newsId: example.doc2Id,
@@ -306,6 +309,25 @@ function findRealId(dreamText: string, allDreams: any): string {
     return "";
     // Generate a random integer between 1 and 100000000
     // return (Math.floor(Math.random() * 100000000) * -1).toString();
+  }
+}
+
+// Get similarity level from score
+// const SIMILARITY_CUTOFFS = {
+//   high: 0.175,
+//   medium: 0.07,
+//   low: 0.05,
+//   indiscernible: 0,
+// };
+function getSimilarityLevel(score: number): SimilarityLevel {
+  if (score >= 0.175) {
+    return "high";
+  } else if (score >= 0.07) {
+    return "medium";
+  } else if (score >= 0.05) {
+    return "low";
+  } else {
+    return "indiscernible";
   }
 }
 
