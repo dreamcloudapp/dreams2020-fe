@@ -24,14 +24,6 @@ button.selected {
   color: white;
 }
 
-/* TODO */
-.graph-type-toggle {
-  position: absolute;
-  right: 0;
-  padding: 0 20px;
-  z-index: 1;
-}
-
 .invisible-column {
   fill: transparent;
 }

@@ -52,7 +52,10 @@ function GraphTypeToggle({
 }) {
   const dispatch = useDispatch();
   return (
-    <div className="graph-type-toggle">
+    <div
+      className="graph-type-toggle"
+      style={{ position: "absolute", right: 0, padding: "0 20px", zIndex: 1 }}
+    >
       {graphtypes.map(graphType => (
         <button
           key={graphType}
