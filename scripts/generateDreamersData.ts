@@ -126,7 +126,12 @@ fs.createReadStream(dreamsFile)
     const goodExamples: ExampleDreamNewsComparison[] = dreamersDataArray
       .map(x => x.examples)
       .flat()
-      .filter(x => x.score >= SIMILARITY_CUTOFFS.high)
+      // Keep some semblance of similarity
+      .filter(x => x.score >= SIMILARITY_CUTOFFS.low)
+      // We only want things already in our news file for now
+      // TODO, but we're cutting down on space which is good
+      // const existsInNews = allNews[curr.doc2Id];
+      .filter(x => allNews[x.doc2Id])
       .map(x => {
         return {
           ...x,
@@ -140,12 +145,13 @@ fs.createReadStream(dreamsFile)
       goodExamples.reduce((acc, curr) => {
         if (acc[curr.doc1Id]) {
           if (acc[curr.doc1Id].score < curr.score) {
-            acc[curr.doc1Id] = curr;
+            return { ...acc, [curr.doc1Id]: curr };
+          } else {
+            return acc;
           }
         } else {
-          acc[curr.doc1Id] = curr;
+          return { ...acc, [curr.doc1Id]: curr };
         }
-        return acc;
       }, {} as { [key: string]: ExampleDreamNewsComparison });
 
     const bestExamples: ExampleDreamNewsComparison[] = Object.values(dreamIdToExampleMap);

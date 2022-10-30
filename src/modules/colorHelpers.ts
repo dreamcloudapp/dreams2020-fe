@@ -11,7 +11,10 @@ export const changeHslLightness = (hslColor: string, change: number): string => 
 
   const lightness = parts[2];
   const lightnessNumber = parseInt(lightness.replace("%)", ""));
-  const newNumber = lightnessNumber + change;
+  let newNumber = lightnessNumber + change;
+  if (newNumber > 100) {
+    newNumber = 95;
+  }
   const sanitisedNumber = clamp(newNumber, 0, 100);
   return `${parts[0]} ${[parts[1]]} ${sanitisedNumber}%)`;
 };

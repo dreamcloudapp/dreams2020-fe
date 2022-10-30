@@ -120,12 +120,16 @@ export function BubbleGraph({
           const endY = scaleY(score);
           const endX = padding.LEFT + scaleXDiscrete(index1 - index2);
 
+          const inCheckedCollection = checkedCollections.find(
+            c => c.label === comparisonSet.label
+          )?.checked;
+
           return (
             <Bubble
               startPoint={startPoint}
               endPoint={[endX, endY]}
               key={i}
-              r={scaleBallSize(numComparisons)}
+              r={inCheckedCollection ? scaleBallSize(numComparisons) : 0}
               stroke={changeHslLightness(comparisonSet.color, -10)}
               strokeWidth={LINE_WIDTH}
               fill={comparisonSet.color}
@@ -142,7 +146,7 @@ export function BubbleGraph({
                   value: comparison.numComparisons.toLocaleString(),
                 };
                 const timeDifferenceRow: TooltipRow = {
-                  key: "Time difference:",
+                  key: "Time:",
                   value: `Dream ${Math.abs(index1 - index2)} ${activeGranularity}${
                     Math.abs(index1 - index2) > 1 ? "s" : ""
                   } ${index1 - index2 > 0 ? "after" : "before"} the news`,
@@ -185,7 +189,11 @@ export function BubbleGraph({
                     x: endX,
                     y: endY,
                     index: i,
-                    color: colorTheme[level as SimilarityLevel],
+                    // TODO: quick hacks
+                    color:
+                      activeGranularity === "day"
+                        ? comparisonSet.color
+                        : colorTheme[level as SimilarityLevel],
                     concepts: comparison.concepts.map(c => c.title),
                     startRadius: scaleBallSize(numComparisons),
                     label: `${toTitleCase(level)} similarity example`,
