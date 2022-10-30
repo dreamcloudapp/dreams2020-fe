@@ -1,8 +1,2 @@
 [context.production.environment]
      PUBLIC_URL = "https://dreams-2020.netlify.app/"
-
-[[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
