@@ -12,7 +12,7 @@ import {
   setFocusedComparison,
   VisComparison,
 } from "../ducks/ui";
-import { prettyNumber } from "../modules/formatters";
+import { prettyNumber, toTitleCase } from "../modules/formatters";
 import { monthNameFromIndex } from "../modules/time-helpers";
 import { Padding } from "../modules/ui-types";
 import { ColumnGraphData, SimilarityLevel } from "@kannydennedy/dreams-2020-types";
@@ -146,7 +146,7 @@ export function ColumnGraphContainer({
                     color: SIMILARITY_COLORS[level as SimilarityLevel],
                     concepts: comparison.concepts.map(c => c.title),
                     startRadius,
-                    label: `Example ${level} similarity comparison`,
+                    label: `${toTitleCase(level)} similarity example`,
                     dreamId: comparison.dreamId,
                     newsId: comparison.newsId,
                     subLabel: "",

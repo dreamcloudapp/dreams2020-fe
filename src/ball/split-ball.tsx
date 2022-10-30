@@ -191,7 +191,7 @@ export const SplitBall = ({
 
   useChain(refOrder, animationOrder);
 
-  const ySpread = graphHeight * 0.5;
+  const ySpread = graphHeight * 0.4;
   const ySpreadStart = endY - ySpread / 2;
   const spreadInterval = ySpread / (topCommonConcepts.length - 1);
 
@@ -295,12 +295,12 @@ export const SplitBall = ({
         <>
           <AnimatedLabel
             startPoint={[endX, endY]}
-            endPoint={[endX, endY - 250]}
+            endPoint={[endX, endY - 200]}
             fill={fill}
             label={headerLabel}
-            fontSize={18}
+            fontSize={16}
             fontWeight={500}
-            rectWidth={500}
+            rectWidth={textRectWidth}
             rectHeight={rectHeight}
             outlineShade={fill}
             textColor={"white"}

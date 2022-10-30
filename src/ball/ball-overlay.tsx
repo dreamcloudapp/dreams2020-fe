@@ -112,10 +112,10 @@ export function BallOverlay({
       {focusedComparison && header && (
         <text
           x={width / 2}
-          y={20}
+          y={70}
           textAnchor="middle"
           dominantBaseline="central"
-          //   fontSize={20}
+          fontSize={16}
           //   fontWeight="bold"
           fontStyle={"italic"}
         >

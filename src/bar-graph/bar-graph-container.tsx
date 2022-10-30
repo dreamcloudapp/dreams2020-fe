@@ -188,7 +188,7 @@ export function BarGraphContainer({
                   color: SIMILARITY_COLORS[level as SimilarityLevel],
                   concepts: comparison.concepts.map(c => c.title),
                   startRadius,
-                  label: `Example ${level} similarity comparison`,
+                  label: `${toTitleCase(level)} similarity example`,
                   dreamId: comparison.dreamId,
                   newsId: comparison.newsId,
                   subLabel,

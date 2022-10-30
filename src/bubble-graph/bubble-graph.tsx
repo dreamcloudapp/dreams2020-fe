@@ -22,6 +22,7 @@ import { BallOverlay } from "../ball/ball-overlay";
 import { ColorTheme, RED_SIMILARITY_COLORS, SIMILARITY_COLORS } from "../modules/theme";
 import { XYAxis } from "../axes/xy-axis";
 import { Tooltip } from "../tooltip/tooltip-inner";
+import { toTitleCase } from "../modules/formatters";
 
 type BubbleGraphProps = {
   data: GranularityComparisonCollection;
@@ -167,7 +168,7 @@ export function BubbleGraph({
                     color: colorTheme[level as SimilarityLevel],
                     concepts: comparison.concepts.map(c => c.title),
                     startRadius: scaleBallSize(numComparisons),
-                    label: `Example ${level} similarity comparison`,
+                    label: `${toTitleCase(level)} similarity example`,
                     dreamId: comparison.dreamId,
                     newsId: comparison.newsId,
                     subLabel: "testing",
