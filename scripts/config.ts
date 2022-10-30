@@ -30,12 +30,12 @@ export const SIMILARITY_CUTOFFS: { [key in SimilarityLevel]: number } = {
 };
 
 export const palette = [
-  "#eb524d",
-  "#fac69a",
-  "#90caca",
-  "#b68a07",
-  "#3e683a",
-  "#40647a",
-  "#a80f0f",
-  "#2c2c2c",
+  "hsl(2, 80%, 61%)",
+  "hsl(28, 91%, 79%)",
+  "hsl(180, 35%, 68%)",
+  "hsl(45, 93%, 37%)",
+  "hsl(115, 28%, 32%)",
+  "hsl(203, 31%, 36%)",
+  "hsl(0, 84%, 36%)",
+  "hsl(0, 0%, 17%)",
 ];

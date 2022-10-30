@@ -23,7 +23,7 @@ export type ComparisonSets = {
 // The maximum time index distance for a given granularity
 // E.g. month: 6 would be 6 months
 export const MAX_DISTANCE_BETWEEN_TIME_PERIODS: { [key in Granularity]: number } = {
-  day: 180,
+  day: 365,
   week: 3,
   month: 6,
   year: 30,

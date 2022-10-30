@@ -7,7 +7,7 @@
   "comparisonSets": [
     {
       "label": "Charlene",
-      "color": "#eb524d",
+      "color": "hsl(2, 80%, 61%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -925,7 +925,7 @@
     },
     {
       "label": "Cinnamon",
-      "color": "#fac69a",
+      "color": "hsl(28, 91%, 79%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -2641,7 +2641,7 @@
     },
     {
       "label": "Harmony",
-      "color": "#90caca",
+      "color": "hsl(180, 35%, 68%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -2989,7 +2989,7 @@
     },
     {
       "label": "Jenn",
-      "color": "#b68a07",
+      "color": "hsl(45, 93%, 37%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -5218,7 +5218,7 @@
     },
     {
       "label": "Jennifer",
-      "color": "#3e683a",
+      "color": "hsl(115, 28%, 32%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -5737,7 +5737,7 @@
     },
     {
       "label": "Kellee",
-      "color": "#40647a",
+      "color": "hsl(203, 31%, 36%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -5971,7 +5971,7 @@
     },
     {
       "label": "Meg",
-      "color": "#a80f0f",
+      "color": "hsl(0, 84%, 36%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -7972,7 +7972,7 @@
     },
     {
       "label": "Edward",
-      "color": "#2c2c2c",
+      "color": "hsl(0, 0%, 17%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
