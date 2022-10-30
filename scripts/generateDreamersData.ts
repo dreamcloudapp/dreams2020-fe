@@ -35,30 +35,47 @@ type DreamerCsvRow = {
   "2020 reference": string;
   "Real Date": string;
 };
+type DreamerCsvRowWithRealId = DreamerCsvRow & {
+  realId: string;
+};
 
 // Read the all-dreams-final.json file to get the real ids
 const DREAMS_JSON_PATH = "../public/data/all-dreams-final.json";
 const dreamsJsonPath = path.join(__dirname, DREAMS_JSON_PATH);
 const allDreams = require(dreamsJsonPath);
 
-const results: DreamerCsvRow[] = [];
+const results: DreamerCsvRowWithRealId[] = [];
 
 fs.createReadStream(dreamsFile)
   .pipe(csv())
   .on("data", (data: DreamerCsvRow) => {
     const truncatedData = {
       ...data,
-      ID: findRealId(data.Dream, allDreams),
+      realId: findRealId(data.Dream, allDreams),
       Dream: truncateString(data.Dream, DREAM_MAX_LEN),
     };
-    results.push(truncatedData);
+    // For now, we're only interested in 2020 dreams.
+    // We can deal with the rest later
+    if (truncatedData.ID) {
+      results.push(truncatedData);
+    }
   })
   .on("end", () => {
     console.log("Parsed CSV file");
 
+    // Group the results by dreamer alias
+    const dreamers = results.reduce((acc: any, dream: DreamerCsvRow) => {
+      const dreamerAlias = dream["Dreamer alias"];
+      if (!acc[dreamerAlias]) {
+        acc[dreamerAlias] = [];
+      }
+      acc[dreamerAlias].push(dream);
+      return acc;
+    }, {});
+
     //   Write the data to a file
     const outputFile = path.join(__dirname, "../public/data/newsy-dreamers.json");
-    fs.writeFileSync(outputFile, JSON.stringify(results, null, 2));
+    fs.writeFileSync(outputFile, JSON.stringify(dreamers, null, 2));
     console.log(`Month column data written to ${outputFile}`);
   });
 
@@ -148,8 +165,9 @@ function findRealId(dreamText: string, allDreams: any): string {
     return (dream as any).id as string;
   } else {
     console.log("Missing dream: ", truncateString(dreamText, 100));
+    return "";
     // Generate a random integer between 1 and 100000000
-    return (Math.floor(Math.random() * 100000000) * -1).toString();
+    // return (Math.floor(Math.random() * 100000000) * -1).toString();
   }
 }
 
