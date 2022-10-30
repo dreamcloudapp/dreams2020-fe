@@ -132,6 +132,7 @@ export function BarGraphContainer({
         xAxisCenterLabel="Dream-news time difference"
         numTicks={11}
         barWidth={barWidth}
+        xTickModulo={width < 1000 ? 2 : 1}
         barGap={BAR_GAP}
         xAxisFormat={d => {
           // If d is 0, it's 'within 1 week after the news', so it's 1

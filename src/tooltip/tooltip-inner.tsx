@@ -17,7 +17,7 @@ type TooltipProps = {
 
 export function Tooltip({ tipTitle, sections }: TooltipProps) {
   return (
-    <div>
+    <div style={{ fontWeight: "normal" }}>
       {tipTitle && (
         <h4 style={{ fontWeight: "bold", textDecoration: "underline" }}>{tipTitle}</h4>
       )}

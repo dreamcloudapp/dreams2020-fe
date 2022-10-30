@@ -103,7 +103,7 @@ export function AreaGraph({
         xRange={[-179, 179]}
         xAxisCenterLabel="Dream-news time difference"
         numTicks={11}
-        xTickModulo={10}
+        xTickModulo={width < 1000 ? 20 : 10}
         xAxisFormat={d => {
           if (d === 0) {
             return "Same day";
