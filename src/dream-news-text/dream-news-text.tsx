@@ -14,7 +14,7 @@ const headingStyle: React.CSSProperties = {
   textAlign: "center",
   fontFamily: "Century Gothic",
   fontWeight: 400,
-  fontSize: "1rem",
+  fontSize: 16,
   margin: "0.5rem 0",
 };
 
@@ -22,7 +22,7 @@ const subHeadingStyle: React.CSSProperties = {
   textAlign: "center",
   fontFamily: "Century Gothic",
   fontWeight: 400,
-  fontSize: "0.9rem",
+  fontSize: 14,
   fontStyle: "italic",
 };
 
