@@ -7,7 +7,7 @@ import { Padding } from "../modules/ui-types";
 import { scaleLinear } from "d3";
 import "../App.css";
 import { XYAxis } from "../axes/xy-axis";
-import { prettyNumber, toTitleCase } from "../modules/formatters";
+import { formatSimilarityLabel, prettyNumber, toTitleCase } from "../modules/formatters";
 import { Column } from "../components/column";
 import { useDispatch } from "react-redux";
 import {
@@ -188,7 +188,9 @@ export function BarGraphContainer({
                   color: SIMILARITY_COLORS[level as SimilarityLevel],
                   concepts: comparison.concepts.map(c => c.title),
                   startRadius,
-                  label: `${toTitleCase(level)} similarity example`,
+                  label: `${formatSimilarityLabel(
+                    level as SimilarityLevel
+                  )} similarity example`,
                   dreamId: comparison.dreamId,
                   newsId: comparison.newsId,
                   subLabel,

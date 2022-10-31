@@ -1,3 +1,5 @@
+import { SimilarityLevel } from "@kannydennedy/dreams-2020-types";
+
 export const prettyNumber = (n: number, decimals: number): string => {
   if (n === 0) {
     return "0";
@@ -14,6 +16,16 @@ export const toTitleCase = (str: string): string => {
     /\w\S*/g,
     txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
   );
+};
+
+// Format similarity level
+export const formatSimilarityLabel = (similarity: SimilarityLevel): string => {
+  switch (similarity) {
+    case "medium":
+      return "Indicative";
+    default:
+      return toTitleCase(similarity);
+  }
 };
 
 // Truncate text to x characters
