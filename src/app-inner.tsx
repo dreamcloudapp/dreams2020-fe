@@ -61,7 +61,6 @@ function AppInner({
           handleMouseOver={handleMouseOver}
           onMouseOut={hideTooltip}
           padding={padding}
-          activeLegends={activeLegends}
         />
       )}
       {showingGraph === "dreamers" && (
@@ -72,7 +71,6 @@ function AppInner({
           handleMouseOver={handleMouseOver}
           onMouseOut={hideTooltip}
           padding={padding}
-          activeLegends={activeLegends}
         />
       )}
       {showingGraph === "months" && (

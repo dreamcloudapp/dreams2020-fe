@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-// import Legend from "./legend";
 import { BubbleGraph } from "./bubble-graph";
 import { MILLISECONDS_IN_YEAR } from "../modules/constants";
 import { Granularity } from "../../types/type";
@@ -8,19 +6,12 @@ import { useSelector } from "../ducks/root-reducer";
 import {
   selectActiveGranularity,
   setActiveGranularity,
-  setCheckedCollections,
-  CollectionCheck,
-  // toggleCollectionChecked,
-  selectCheckedCollections,
   selectFocusedComparison,
   selectPrevFocusedComparison,
   selectShowingGraph,
-  toggleCollectionChecked,
-  GraphType,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { Padding } from "../modules/ui-types";
-import Legend from "./legend";
 
 type GraphProps = {
   data: GranularityComparisonCollection;
@@ -29,7 +20,6 @@ type GraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
   onMouseOut: () => void;
   padding: Padding;
-  activeLegends?: { [key in GraphType]?: string[] };
 };
 
 const timeLabels: { key: Granularity; label: string }[] = [
@@ -44,40 +34,18 @@ export function BubbleGraphContainer({
   handleMouseOver,
   onMouseOut,
   padding,
-  activeLegends,
 }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
-  const checkedCollections = useSelector(selectCheckedCollections);
+
   const focusedComparison = useSelector(selectFocusedComparison);
   const prevFocusedComparison = useSelector(selectPrevFocusedComparison);
   const showingGraph = useSelector(selectShowingGraph);
-
-  // Set checked collections on mount
-  useEffect(() => {
-    const hasDefaultCheckedCollections = activeLegends && activeLegends[showingGraph];
-
-    const checkedCollections: CollectionCheck[] = data.comparisonSets.map(s => {
-      const checked = hasDefaultCheckedCollections
-        ? !!activeLegends[showingGraph]?.includes(s.label)
-        : true;
-      return {
-        label: s.label,
-        checked: checked,
-        color: s.color,
-      };
-    });
-    dispatch(setCheckedCollections(checkedCollections));
-  }, [dispatch, data.comparisonSets, showingGraph, activeLegends]);
 
   // We only show comparisons that fall within this range
   // const [maxTimeDistance, setMaxTimeDistance] = useState<number>(MILLISECONDS_IN_YEAR);
 
   const maxTimeDistance = MILLISECONDS_IN_YEAR;
-
-  const handleOnChange = (labelToToggle: string) => {
-    dispatch(toggleCollectionChecked(labelToToggle));
-  };
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
@@ -85,7 +53,6 @@ export function BubbleGraphContainer({
         {width > 0 && height > 0 && (
           <BubbleGraph
             data={data}
-            checkedCollections={checkedCollections}
             maxTimeDistance={maxTimeDistance}
             width={width}
             height={height}
@@ -117,11 +84,6 @@ export function BubbleGraphContainer({
           </div>
         )}
       </div>
-
-      {/* Legend - don't show when there's a focused comparison */}
-      {!focusedComparison && showingGraph === "dreamers" && (
-        <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
-      )}
     </div>
   );
 }

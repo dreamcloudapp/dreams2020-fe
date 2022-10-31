@@ -19,13 +19,17 @@ import {
 } from "./ducks/data";
 import { useDispatch } from "react-redux";
 import {
+  CollectionCheck,
   selectActiveGranularity,
+  selectCheckedCollections,
   selectFocusedComparison,
   selectShowingGraph,
   setActiveGranularity,
+  setCheckedCollections,
   setFocusedComparison,
   setPrevFocusedComparison,
   setShowingGraph,
+  toggleCollectionChecked,
 } from "./ducks/ui";
 import { GraphType } from "./ducks/ui";
 import useComponentSize from "@rehooks/component-size";
@@ -35,6 +39,7 @@ import { DreamNewsText } from "./dream-news-text/dream-news-text";
 import { ChartOpts } from ".";
 import AppInner from "./app-inner";
 import { toTitleCase } from "./modules/formatters";
+import Legend from "./bubble-graph/legend";
 
 const padding: Padding = {
   LEFT: 50,
@@ -93,6 +98,7 @@ function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpt
   const barData = useSelector(selectBarData);
   const dreamersData = useSelector(selectDreamersData);
   const focusedComparison = useSelector(selectFocusedComparison);
+  const checkedCollections = useSelector(selectCheckedCollections);
 
   // Get width and height
   const graphContainerRef = useRef<HTMLDivElement>(null);
@@ -136,10 +142,53 @@ function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpt
     dispatch(setShowingGraph(activeChart));
   }, [dispatch, activeChart]);
 
+  // Set checked collections on mount
+  // This is a bit of a mess, TODO: clean up
+  // This doesn't relate to some chart types
+  useEffect(() => {
+    const hasDefaultCheckedCollections = activeLegends && activeLegends[showingGraph];
+
+    if (dreamersData && showingGraph === "dreamers") {
+      const checkedCollections: CollectionCheck[] = dreamersData.comparisonSets.map(s => {
+        const checked = hasDefaultCheckedCollections
+          ? !!activeLegends[showingGraph]?.includes(s.label)
+          : true;
+        return {
+          label: s.label,
+          checked: checked,
+          color: s.color,
+        };
+      });
+      dispatch(setCheckedCollections(checkedCollections));
+    } else if (bubbleGraphData && bubbleGraphData[activeGranularity]) {
+      const checkedCollections: CollectionCheck[] = bubbleGraphData[
+        activeGranularity
+      ].comparisonSets.map(s => {
+        return {
+          label: s.label,
+          checked: true,
+          color: s.color,
+        };
+      });
+      dispatch(setCheckedCollections(checkedCollections));
+    }
+  }, [
+    dispatch,
+    dreamersData,
+    showingGraph,
+    activeLegends,
+    activeGranularity,
+    bubbleGraphData,
+  ]);
+
   const frameWidth = window.location.href.includes("localhost") ? 20 : 0;
   const maxWidth = window.location.href.includes("localhost")
     ? "calc(100% - 40px)"
     : "90rem";
+
+  const handleOnChange = (labelToToggle: string) => {
+    dispatch(toggleCollectionChecked(labelToToggle));
+  };
 
   return (
     <div style={{ width: "100%" }} className="dreams-2020-chart">
@@ -212,6 +261,10 @@ function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpt
         <div style={{ padding: frameWidth, maxWidth: maxWidth }}>
           <DreamNewsText focusedComparison={focusedComparison} />
         </div>
+      )}
+      {/* Legend - don't show when there's a focused comparison */}
+      {!focusedComparison && showingGraph === "dreamers" && (
+        <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
       )}
     </div>
   );

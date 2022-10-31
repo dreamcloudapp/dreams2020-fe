@@ -11,11 +11,11 @@ import {
 import { useSelector } from "../ducks/root-reducer";
 import {
   selectActiveGranularity,
-  CollectionCheck,
   VisComparison,
   setFocusedComparison,
   selectActiveComparisonSet,
   setActiveComparisonSet,
+  selectCheckedCollections,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { BallOverlay } from "../ball/ball-overlay";
@@ -30,7 +30,6 @@ type BubbleGraphProps = {
   width: number;
   height: number;
   handleMouseOver: (event: any, datum: any) => void;
-  checkedCollections: CollectionCheck[];
   hideTooltip: () => void;
   focusedComparison: VisComparison | null;
   prevFocusedComparison: VisComparison | null;
@@ -53,7 +52,6 @@ export function BubbleGraph({
   hideTooltip,
   focusedComparison,
   prevFocusedComparison,
-  checkedCollections,
   padding,
 }: BubbleGraphProps) {
   const dispatch = useDispatch();
@@ -61,6 +59,7 @@ export function BubbleGraph({
   // We need to know the active granularity to determine the scale
   const activeGranularity = useSelector(selectActiveGranularity);
   const activeComparisonSet = useSelector(selectActiveComparisonSet);
+  const checkedCollections = useSelector(selectCheckedCollections);
 
   // Hardcoding based on knowledge of data:(
   // Ideally this would be a function of the data itself
