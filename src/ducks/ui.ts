@@ -55,7 +55,7 @@ const uiSlice = createSlice({
       // Some charts don't have some granularities :shrug:
       if (action.payload === "bubble") {
         state.activeGranularity = "month";
-      } else if (action.payload === "area") {
+      } else if (action.payload === "area" || action.payload === "dreamers") {
         state.activeGranularity = "day";
       }
 
