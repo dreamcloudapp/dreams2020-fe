@@ -165,7 +165,8 @@ fs.createReadStream(dreamsFile)
         const dreamerAlias = results.find(x => x.ID === curr.doc1Id)?.["Dreamer alias"];
 
         // If we don't have an alias, we can't do anything
-        // Not sure if there's a problem here, only happens once
+        // This happens when a dream has been filtered out
+        // Because it's outside the date range
         if (!dreamerAlias) {
           console.log("No dreamer alias found for", curr.doc1Id);
           return acc;
