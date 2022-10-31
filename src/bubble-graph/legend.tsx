@@ -12,7 +12,7 @@ type LegendProps = {
 
 const Legend = ({ handleCheck, checkedCollections }: LegendProps) => {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       {checkedCollections.map((option, i) => {
         return (
           <div
