@@ -11,6 +11,7 @@ export type ChartOpts = {
   activeChart?: GraphType;
   showAll?: boolean;
   activeLegends?: { [key in GraphType]?: string[] };
+  toggleableCharts?: GraphType[];
 };
 
 declare global {
@@ -23,7 +24,7 @@ window.embedDreamChart = function (
   htmlTagId: keyof HTMLElementTagNameMap,
   opts: ChartOpts = {}
 ) {
-  const { activeChart, showAll, activeLegends } = opts;
+  const { activeChart, showAll, activeLegends, toggleableCharts } = opts;
 
   const el = document.querySelector(htmlTagId);
   const render = () => {
@@ -34,6 +35,7 @@ window.embedDreamChart = function (
             activeChart={activeChart}
             showAll={showAll}
             activeLegends={activeLegends}
+            toggleableCharts={toggleableCharts}
           />
         </Provider>
       </React.StrictMode>,

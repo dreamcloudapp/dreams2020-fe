@@ -53,9 +53,11 @@ const graphtypes: GraphType[] = ["area", "bar", "bubble", "months", "dreamers"];
 function GraphTypeToggle({
   onSelectGraphType,
   showingGraph,
+  toggleableCharts = graphtypes,
 }: {
   onSelectGraphType: (graphType: GraphType) => void;
   showingGraph: GraphType;
+  toggleableCharts?: GraphType[];
 }) {
   const dispatch = useDispatch();
   return (
@@ -63,31 +65,38 @@ function GraphTypeToggle({
       className="graph-type-toggle"
       style={{ position: "absolute", right: 0, padding: "0 20px", zIndex: 1 }}
     >
-      {graphtypes.map(graphType => (
-        <button
-          key={graphType}
-          onClick={() => {
-            dispatch<any>(onSelectGraphType(graphType));
-            if (graphType === "area") {
-              dispatch<any>(setActiveGranularity("day"));
-            } else if (graphType === "dreamers") {
-              dispatch<any>(setActiveGranularity("day"));
-            } else {
-              dispatch<any>(setActiveGranularity("month"));
-            }
-            dispatch<any>(setFocusedComparison(null));
-            dispatch<any>(setPrevFocusedComparison(null));
-          }}
-          className={graphType === showingGraph ? "selected" : ""}
-        >
-          {toTitleCase(graphType)}
-        </button>
-      ))}
+      {graphtypes
+        .filter(graphType => toggleableCharts.includes(graphType))
+        .map(graphType => (
+          <button
+            key={graphType}
+            onClick={() => {
+              dispatch<any>(onSelectGraphType(graphType));
+              if (graphType === "area") {
+                dispatch<any>(setActiveGranularity("day"));
+              } else if (graphType === "dreamers") {
+                dispatch<any>(setActiveGranularity("day"));
+              } else {
+                dispatch<any>(setActiveGranularity("month"));
+              }
+              dispatch<any>(setFocusedComparison(null));
+              dispatch<any>(setPrevFocusedComparison(null));
+            }}
+            className={graphType === showingGraph ? "selected" : ""}
+          >
+            {toTitleCase(graphType)}
+          </button>
+        ))}
     </div>
   );
 }
 
-function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpts) {
+function App({
+  activeChart = "bubble",
+  showAll = true,
+  activeLegends,
+  toggleableCharts,
+}: ChartOpts) {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const bubbleGraphData = useSelector(selectComparisons);
@@ -214,6 +223,7 @@ function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpt
                 <GraphTypeToggle
                   onSelectGraphType={setShowingGraph}
                   showingGraph={showingGraph}
+                  toggleableCharts={toggleableCharts}
                 />
               )}
 

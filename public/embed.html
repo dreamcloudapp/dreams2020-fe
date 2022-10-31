@@ -73,7 +73,7 @@
                 &lt;script&gt; window.embedDreamChart(&quot;#embed&quot;); &lt;/script&gt;
             </code>
             </p>
-            <p>The above function, <code>window.embedDreamChart</code>, accepts 3 parameters:
+            <p>The above function, <code>window.embedDreamChart</code>, accepts 2 parameters:
                 <ul>
                     <li>
 
@@ -81,13 +81,11 @@
                         <code>"#embed"</code>). This refers to the empty div you made.
                     </li>
                     <li>
-                        Optionally, an options parameter to elect which graph to show, and whether
-                        to allow toggling to other graphs. e.g:
-                        <code>{activeChart: "area", showAll: true}</code> If you don't add this parameter, it will default to the bar chart and toggleable.
+                        Optionally, an options parameter to elect which graph to show, whether
+                        to allow toggling to other graphs, which things are default active (only works for bubble charts right now), and which charts are accessible.  e.g:
+                        <code>{activeChart: "area", showAll: true, activeLegends: {dreamers: ["Freya", "Edward"]}, toggleableCharts: ["bubble", "dreamers"]}</code> If you don't add this parameter, it will default to the bar chart and toggleable.
                     </li>
                     <li>
-                        Optionally, an options parameter to elect which things are default active (only works for bubble charts right now).
-                        <code>{activeChart: "dreamers", showAll: false, activeLegends: {dreamers: ["Freya", "Edward"]}}</code> If you don't add this parameter, it will default to the bar chart and toggleable.
                     </li>
                 </ul>
             </p>
@@ -103,7 +101,7 @@
 </article>
 
     <script>
-        window.embedDreamChart("#embed", {activeChart: "dreamers", showAll: true, activeLegends: {dreamers: ["Freya", "Edward"]}});
+        window.embedDreamChart("#embed", {activeChart: "dreamers", showAll: true, activeLegends: {dreamers: ["Freya", "Edward"]}, toggleableCharts: ["bubble", "dreamers"]});
     </script>
 </body>
 
