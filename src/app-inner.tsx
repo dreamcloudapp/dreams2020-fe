@@ -24,6 +24,7 @@ type AppInnerProps = {
   barGraphData: DifferenceDisplayRecordWithExamples;
   dreamersData: GranularityComparisonCollection;
   padding: Padding;
+  activeLegends?: { [key in GraphType]?: string[] };
 };
 
 function AppInner({
@@ -38,6 +39,7 @@ function AppInner({
   barGraphData,
   padding,
   dreamersData,
+  activeLegends,
 }: AppInnerProps) {
   return (
     <>
@@ -59,6 +61,7 @@ function AppInner({
           handleMouseOver={handleMouseOver}
           onMouseOut={hideTooltip}
           padding={padding}
+          activeLegends={activeLegends}
         />
       )}
       {showingGraph === "dreamers" && (
@@ -69,6 +72,7 @@ function AppInner({
           handleMouseOver={handleMouseOver}
           onMouseOut={hideTooltip}
           padding={padding}
+          activeLegends={activeLegends}
         />
       )}
       {showingGraph === "months" && (

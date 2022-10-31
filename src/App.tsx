@@ -82,7 +82,7 @@ function GraphTypeToggle({
   );
 }
 
-function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
+function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpts) {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const bubbleGraphData = useSelector(selectComparisons);
@@ -188,6 +188,7 @@ function App({ activeChart = "bubble", showAll = true }: ChartOpts) {
                     barGraphData={barData}
                     dreamersData={dreamersData}
                     padding={padding}
+                    activeLegends={activeLegends}
                   />
                 )}
             </div>

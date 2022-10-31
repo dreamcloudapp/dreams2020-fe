@@ -10,6 +10,7 @@ import { GraphType } from "./ducks/ui";
 export type ChartOpts = {
   activeChart?: GraphType;
   showAll?: boolean;
+  activeLegends?: { [key in GraphType]?: string[] };
 };
 
 declare global {
@@ -22,14 +23,18 @@ window.embedDreamChart = function (
   htmlTagId: keyof HTMLElementTagNameMap,
   opts: ChartOpts = {}
 ) {
-  const { activeChart, showAll } = opts;
+  const { activeChart, showAll, activeLegends } = opts;
 
   const el = document.querySelector(htmlTagId);
   const render = () => {
     ReactDOM.render(
       <React.StrictMode>
         <Provider store={store}>
-          <App activeChart={activeChart} showAll={showAll} />
+          <App
+            activeChart={activeChart}
+            showAll={showAll}
+            activeLegends={activeLegends}
+          />
         </Provider>
       </React.StrictMode>,
       el

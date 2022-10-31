@@ -16,6 +16,7 @@ import {
   selectPrevFocusedComparison,
   selectShowingGraph,
   toggleCollectionChecked,
+  GraphType,
 } from "../ducks/ui";
 import { useDispatch } from "react-redux";
 import { Padding } from "../modules/ui-types";
@@ -28,6 +29,7 @@ type GraphProps = {
   handleMouseOver: (event: any, datum: any) => void;
   onMouseOut: () => void;
   padding: Padding;
+  activeLegends?: { [key in GraphType]?: string[] };
 };
 
 const timeLabels: { key: Granularity; label: string }[] = [
@@ -42,6 +44,7 @@ export function BubbleGraphContainer({
   handleMouseOver,
   onMouseOut,
   padding,
+  activeLegends,
 }: GraphProps) {
   const dispatch = useDispatch();
   const activeGranularity = useSelector(selectActiveGranularity);
@@ -52,13 +55,20 @@ export function BubbleGraphContainer({
 
   // Set checked collections on mount
   useEffect(() => {
-    const checkedCollections: CollectionCheck[] = data.comparisonSets.map(s => ({
-      label: s.label,
-      checked: true,
-      color: s.color,
-    }));
+    const hasDefaultCheckedCollections = activeLegends && activeLegends[showingGraph];
+
+    const checkedCollections: CollectionCheck[] = data.comparisonSets.map(s => {
+      const checked = hasDefaultCheckedCollections
+        ? !!activeLegends[showingGraph]?.includes(s.label)
+        : true;
+      return {
+        label: s.label,
+        checked: checked,
+        color: s.color,
+      };
+    });
     dispatch(setCheckedCollections(checkedCollections));
-  }, [dispatch, data.comparisonSets]);
+  }, [dispatch, data.comparisonSets, showingGraph, activeLegends]);
 
   // We only show comparisons that fall within this range
   // const [maxTimeDistance, setMaxTimeDistance] = useState<number>(MILLISECONDS_IN_YEAR);
