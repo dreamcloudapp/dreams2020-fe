@@ -208,9 +208,11 @@ function App({ activeChart = "bubble", showAll = true, activeLegends }: ChartOpt
           </TooltipInPortal>
         )}
       </div>
-      <div style={{ padding: frameWidth, maxWidth: maxWidth }}>
-        <DreamNewsText focusedComparison={focusedComparison} />
-      </div>
+      {focusedComparison && (
+        <div style={{ padding: frameWidth, maxWidth: maxWidth }}>
+          <DreamNewsText focusedComparison={focusedComparison} />
+        </div>
+      )}
     </div>
   );
 }
