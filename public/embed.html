@@ -45,7 +45,7 @@
                     &lt;script
                     src=&quot;https://dreams-2020.netlify.app/static/js/main.js&quot;&gt;&lt;/script&gt;
             </code>
-                <br>
+                </br>
                 <code>
                     &lt;link rel=&quot;stylesheet&quot;
                     href=&quot;https://dreams-2020.netlify.app/static/css/main.css&quot;
@@ -74,7 +74,7 @@
                 &lt;script&gt; window.embedDreamChart(&quot;#embed&quot;); &lt;/script&gt;
             </code>
             </p>
-            <p>The above function, <code>window.embedDreamChart</code>, accepts 2 parameters:
+            <p>The above function, <code>window.embedDreamChart</code>, accepts 3 parameters:
                 <ul>
                     <li>
 
@@ -86,6 +86,10 @@
                         to allow toggling to other graphs. e.g:
                         <code>{activeChart: "area", showAll: true}</code> If you don't add this parameter, it will default to the bar chart and toggleable.
                     </li>
+                    <li>
+                        Optionally, an options parameter to elect which things are default active (only works for bubble charts right now).
+                        <code>{activeChart: "dreamers", showAll: false, activeLegends: {dreamers: ["Charlene", "Harmony"]}}</code> If you don't add this parameter, it will default to the bar chart and toggleable.
+                    </li>
                 </ul>
             </p>
 
@@ -96,7 +100,7 @@
 <div id="embed"></div>
 
     <script>
-        window.embedDreamChart("#embed", {activeChart: "bubble", showAll: false});
+        window.embedDreamChart("#embed", {activeChart: "dreamers", showAll: false, activeLegends: {dreamers: ["Charlene", "Harmony"]}});
     </script>
 </body>
 
