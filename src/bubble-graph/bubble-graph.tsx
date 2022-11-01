@@ -150,10 +150,10 @@ export function BubbleGraph({
                     Math.abs(index1 - index2) > 1 ? "s" : ""
                   } ${index1 - index2 > 0 ? "after" : "before"} the news`,
                 };
-                const wordCountRow: TooltipRow = {
-                  key: "Dream + News word count:",
-                  value: `${comparison.wordCount.toLocaleString()} words`,
-                };
+                // const wordCountRow: TooltipRow = {
+                //   key: "Dream + News word count:",
+                //   value: `${comparison.wordCount.toLocaleString()} words`,
+                // };
                 const possibleCorrelationRow: TooltipRow = {
                   key: "Possible news correlation:",
                   value: comparison.reference2020 || "Not defined",
@@ -164,7 +164,7 @@ export function BubbleGraph({
                     ? [
                         similarityRow,
                         timeDifferenceRow,
-                        wordCountRow,
+                        // wordCountRow,
                         possibleCorrelationRow,
                       ]
                     : [similarityRow, comparisonsRow];
