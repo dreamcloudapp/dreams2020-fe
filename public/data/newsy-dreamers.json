@@ -6,15 +6,15 @@
   "minWordCount": 0,
   "comparisonSets": [
     {
-      "label": "Freya",
+      "label": "Charlene",
       "color": "hsl(2, 80%, 61%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.068682656,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -70,44 +70,44 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.06930221,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.146633,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "low": {
-              "score": 0.06930221,
+            "medium": {
+              "score": 0.146633,
               "dreamId": "85",
-              "newsId": "5773",
+              "newsId": "4255",
               "concepts": [
                 {
-                  "title": "It (2017 film)",
-                  "score": 604.0616
+                  "title": "Kaidan Restaurant",
+                  "score": 24956668
                 },
                 {
-                  "title": "John Mellencamp",
-                  "score": 352.1674
+                  "title": "List of performances on Top of the Pops",
+                  "score": 10229576
                 },
                 {
-                  "title": "Trump administration communication during the COVID-19 pandemic",
-                  "score": 300.1004
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 9392722
                 },
                 {
-                  "title": "GEICO advertising campaigns",
-                  "score": 295.17905
+                  "title": "List of Red vs. Blue episodes",
+                  "score": 7622993
                 },
                 {
-                  "title": "Søren Kierkegaard",
-                  "score": 240.369
+                  "title": "Escape the Night",
+                  "score": 6148917.5
                 }
               ]
             }
           },
-          "wordCount": 499,
-          "numComparisons": 499,
-          "numDayComparisons": 499,
+          "wordCount": 511,
+          "numComparisons": 511,
+          "numDayComparisons": 511,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -121,51 +121,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 146
+              "index": 110
             }
           }
         },
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.05069577,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.24495816,
+          "dreamerAlias": "Charlene",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "low": {
-              "score": 0.05069577,
+            "high": {
+              "score": 0.24495816,
               "dreamId": "236",
-              "newsId": "5113",
+              "newsId": "4255",
               "concepts": [
                 {
-                  "title": "List of The Office (American TV series) characters",
-                  "score": 601.6458
+                  "title": "Kaidan Restaurant",
+                  "score": 132590.88
                 },
                 {
-                  "title": "List of Clannad characters",
-                  "score": 248.55954
+                  "title": "List of performances on Top of the Pops",
+                  "score": 67765.1
+                },
+                {
+                  "title": "Child development stages",
+                  "score": 66954.555
+                },
+                {
+                  "title": "List of The Big Bang Theory and Young Sheldon characters",
+                  "score": 64433.867
                 },
                 {
                   "title": "Rishtey (TV series)",
-                  "score": 216.5681
-                },
-                {
-                  "title": "List of Orange Is the New Black characters",
-                  "score": 212.46346
-                },
-                {
-                  "title": "The Royal Today",
-                  "score": 206.12561
+                  "score": 62154.63
                 }
               ]
             }
           },
-          "wordCount": 492,
-          "numComparisons": 492,
-          "numDayComparisons": 492,
+          "wordCount": 489,
+          "numComparisons": 489,
+          "numDayComparisons": 489,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -179,51 +179,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 131
+              "index": 110
             }
           }
         },
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.07495421,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.119315356,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
             "medium": {
-              "score": 0.07495421,
+              "score": 0.119315356,
               "dreamId": "349",
-              "newsId": "5773",
+              "newsId": "4255",
               "concepts": [
                 {
-                  "title": "It (2017 film)",
-                  "score": 610.3447
+                  "title": "List of performances on Top of the Pops",
+                  "score": 6276826.5
                 },
                 {
-                  "title": "John Mellencamp",
-                  "score": 358.36536
+                  "title": "List of 90210 characters",
+                  "score": 2681529.8
                 },
                 {
-                  "title": "GEICO advertising campaigns",
-                  "score": 309.67065
+                  "title": "Kaidan Restaurant",
+                  "score": 1701001.6
                 },
                 {
-                  "title": "Trump administration communication during the COVID-19 pandemic",
-                  "score": 308.90497
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 1312950.5
                 },
                 {
-                  "title": "Søren Kierkegaard",
-                  "score": 246.28163
+                  "title": "List of Red vs. Blue episodes",
+                  "score": 1116075.1
                 }
               ]
             }
           },
-          "wordCount": 479,
-          "numComparisons": 479,
-          "numDayComparisons": 479,
+          "wordCount": 491,
+          "numComparisons": 491,
+          "numDayComparisons": 491,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -237,44 +237,44 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 146
+              "index": 110
             }
           }
         },
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.08882672,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.14575963,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
             "medium": {
-              "score": 0.08882672,
+              "score": 0.14575963,
               "dreamId": "393",
               "newsId": "5391",
               "concepts": [
                 {
-                  "title": "List of The Young and the Restless characters (2000s)",
-                  "score": 314.1162
+                  "title": "Kaidan Restaurant",
+                  "score": 3176264.5
                 },
                 {
-                  "title": "List of The Office (American TV series) characters",
-                  "score": 224.55348
+                  "title": "Child development stages",
+                  "score": 1172136.4
                 },
                 {
-                  "title": "List of Dawson's Creek episodes",
-                  "score": 222.4058
+                  "title": "List of Supernatural characters",
+                  "score": 648099.6
                 },
                 {
-                  "title": "Susan Kennedy",
-                  "score": 206.36816
+                  "title": "List of Orange Is the New Black characters",
+                  "score": 631581.8
                 },
                 {
-                  "title": "Dating",
-                  "score": 201.50937
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 529942.1
                 }
               ]
             }
@@ -302,50 +302,166 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.07278849,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.24835312,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "medium": {
-              "score": 0.07278849,
+            "high": {
+              "score": 0.24835312,
               "dreamId": "403",
-              "newsId": "5773",
+              "newsId": "2831",
               "concepts": [
                 {
-                  "title": "It (2017 film)",
-                  "score": 604.0616
+                  "title": "Malaysian movement control order",
+                  "score": 1277.1133
                 },
                 {
-                  "title": "John Mellencamp",
-                  "score": 352.1674
+                  "title": "COVID-19 pandemic in Israel",
+                  "score": 1174.9814
                 },
                 {
-                  "title": "Trump administration communication during the COVID-19 pandemic",
-                  "score": 300.1004
+                  "title": "COVID-19 pandemic in Sweden",
+                  "score": 1068.4845
                 },
                 {
-                  "title": "GEICO advertising campaigns",
-                  "score": 295.17905
+                  "title": "COVID-19 lockdowns",
+                  "score": 1031.5886
                 },
                 {
-                  "title": "Søren Kierkegaard",
-                  "score": 240.369
+                  "title": "Mental health during the COVID-19 pandemic",
+                  "score": 1026.3467
                 }
               ]
             }
           },
-          "wordCount": 409,
-          "numComparisons": 409,
-          "numDayComparisons": 409,
+          "wordCount": 422,
+          "numComparisons": 422,
+          "numDayComparisons": 422,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
               "index": 77
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 70
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-6",
+          "granularity": "day",
+          "label": "Charlene example dream",
+          "score": 0.34153476,
+          "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.34153476,
+              "dreamId": "404",
+              "newsId": "2992",
+              "concepts": [
+                {
+                  "title": "Glossary of nautical terms",
+                  "score": 1623034.2
+                },
+                {
+                  "title": "Boat building",
+                  "score": 204058.75
+                },
+                {
+                  "title": "Longship",
+                  "score": 90819.24
+                },
+                {
+                  "title": "Vasa (ship)",
+                  "score": 50674.492
+                },
+                {
+                  "title": "Kiteboarding",
+                  "score": 49390.59
+                }
+              ]
+            }
+          },
+          "wordCount": 518,
+          "numComparisons": 518,
+          "numDayComparisons": 518,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 77
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 74
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-7",
+          "granularity": "day",
+          "label": "Charlene example dream",
+          "score": 0.13300407,
+          "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "medium": {
+              "score": 0.13300407,
+              "dreamId": "438",
+              "newsId": "5773",
+              "concepts": [
+                {
+                  "title": "It (2017 film)",
+                  "score": 1146.0718
+                },
+                {
+                  "title": "Cyborg (DC Comics)",
+                  "score": 637.59045
+                },
+                {
+                  "title": "Kaidan Restaurant",
+                  "score": 612.1422
+                },
+                {
+                  "title": "List of Dawson's Creek episodes",
+                  "score": 398.73938
+                },
+                {
+                  "title": "Mental health during the COVID-19 pandemic",
+                  "score": 384.02936
+                }
+              ]
+            }
+          },
+          "wordCount": 228,
+          "numComparisons": 228,
+          "numDayComparisons": 228,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 83
             }
           },
           "newsCollection": {
@@ -358,168 +474,52 @@
           }
         },
         {
-          "id": "newsy-dream-6",
+          "id": "newsy-dream-8",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.08858307,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.14222008,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
             "medium": {
-              "score": 0.08858307,
-              "dreamId": "404",
-              "newsId": "5391",
-              "concepts": [
-                {
-                  "title": "List of The Young and the Restless characters (2000s)",
-                  "score": 317.62463
-                },
-                {
-                  "title": "List of The Office (American TV series) characters",
-                  "score": 227.37248
-                },
-                {
-                  "title": "List of Dawson's Creek episodes",
-                  "score": 224.96729
-                },
-                {
-                  "title": "Susan Kennedy",
-                  "score": 209.36284
-                },
-                {
-                  "title": "Dating",
-                  "score": 198.43324
-                }
-              ]
-            }
-          },
-          "wordCount": 499,
-          "numComparisons": 499,
-          "numDayComparisons": 499,
-          "dreamCollection": {
-            "label": "",
-            "timePeriod": {
-              "granularity": "day",
-              "identifier": "",
-              "index": 77
-            }
-          },
-          "newsCollection": {
-            "label": "",
-            "timePeriod": {
-              "granularity": "day",
-              "identifier": "",
-              "index": 137
-            }
-          }
-        },
-        {
-          "id": "newsy-dream-7",
-          "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.19281068,
-          "dreamerAlias": "Freya",
-          "reference2020": "pandemic",
-          "examples": [],
-          "concepts": [],
-          "similarityExamples": {
-            "high": {
-              "score": 0.19281068,
+              "score": 0.14222008,
               "dreamId": "451",
-              "newsId": "4018",
+              "newsId": "4255",
               "concepts": [
                 {
-                  "title": "Plastic pollution",
-                  "score": 2209.031
+                  "title": "Escape the Night",
+                  "score": 314733.53
                 },
                 {
-                  "title": "Marine debris",
-                  "score": 1790.5248
+                  "title": "Kaidan Restaurant",
+                  "score": 200036.73
                 },
                 {
-                  "title": "Marine plastic pollution",
-                  "score": 1425.8046
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 135123.6
                 },
                 {
-                  "title": "Field ration",
-                  "score": 1215.2106
+                  "title": "All Creatures Great and Small (1978 TV series)",
+                  "score": 80805.45
                 },
                 {
-                  "title": "Phase-out of lightweight plastic bags",
-                  "score": 954.4139
+                  "title": "Child development stages",
+                  "score": 71371.555
                 }
               ]
             }
           },
-          "wordCount": 497,
-          "numComparisons": 497,
-          "numDayComparisons": 497,
+          "wordCount": 515,
+          "numComparisons": 515,
+          "numDayComparisons": 515,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
               "index": 85
-            }
-          },
-          "newsCollection": {
-            "label": "",
-            "timePeriod": {
-              "granularity": "day",
-              "identifier": "",
-              "index": 103
-            }
-          }
-        },
-        {
-          "id": "newsy-dream-8",
-          "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.10382396,
-          "dreamerAlias": "Freya",
-          "reference2020": "pandemic",
-          "examples": [],
-          "concepts": [],
-          "similarityExamples": {
-            "medium": {
-              "score": 0.10382396,
-              "dreamId": "492",
-              "newsId": "4255",
-              "concepts": [
-                {
-                  "title": "List of Dawson's Creek episodes",
-                  "score": 743.3648
-                },
-                {
-                  "title": "Rishtey (TV series)",
-                  "score": 576.6979
-                },
-                {
-                  "title": "Bigg Boss (Hindi season 5)",
-                  "score": 559.4682
-                },
-                {
-                  "title": "Pinocchio: The Series",
-                  "score": 555.77716
-                },
-                {
-                  "title": "Kaidan Restaurant",
-                  "score": 449.06635
-                }
-              ]
-            }
-          },
-          "wordCount": 519,
-          "numComparisons": 519,
-          "numDayComparisons": 519,
-          "dreamCollection": {
-            "label": "",
-            "timePeriod": {
-              "granularity": "day",
-              "identifier": "",
-              "index": 92
             }
           },
           "newsCollection": {
@@ -534,44 +534,102 @@
         {
           "id": "newsy-dream-9",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.22926189,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.1297731,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
-              "score": 0.22926189,
-              "dreamId": "498",
-              "newsId": "6889",
+            "medium": {
+              "score": 0.1297731,
+              "dreamId": "492",
+              "newsId": "5391",
               "concepts": [
                 {
-                  "title": "Escape the Night",
-                  "score": 687.9286
+                  "title": "Kaidan Restaurant",
+                  "score": 225676.33
                 },
                 {
-                  "title": "Professional wrestling double-team maneuvers",
-                  "score": 615.2195
+                  "title": "Dalton Gang",
+                  "score": 38539.863
                 },
                 {
-                  "title": "List of 90210 characters",
-                  "score": 600.0427
+                  "title": "List of Dawson's Creek episodes",
+                  "score": 30566.857
                 },
                 {
-                  "title": "Robert Sugden",
-                  "score": 597.1005
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 20380.664
                 },
                 {
-                  "title": "List of EastEnders characters (2014)",
-                  "score": 575.4797
+                  "title": "List of Red vs. Blue episodes",
+                  "score": 17533.635
                 }
               ]
             }
           },
-          "wordCount": 449,
-          "numComparisons": 449,
-          "numDayComparisons": 449,
+          "wordCount": 514,
+          "numComparisons": 514,
+          "numDayComparisons": 514,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 92
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 137
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-10",
+          "granularity": "day",
+          "label": "Charlene example dream",
+          "score": 0.1257442,
+          "dreamerAlias": "Charlene",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "medium": {
+              "score": 0.1257442,
+              "dreamId": "498",
+              "newsId": "5391",
+              "concepts": [
+                {
+                  "title": "Kaidan Restaurant",
+                  "score": 7009024
+                },
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 4365909
+                },
+                {
+                  "title": "Child development stages",
+                  "score": 1019630.9
+                },
+                {
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 766861.56
+                },
+                {
+                  "title": "List of Orange Is the New Black characters",
+                  "score": 641803
+                }
+              ]
+            }
+          },
+          "wordCount": 487,
+          "numComparisons": 487,
+          "numDayComparisons": 487,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -585,44 +643,44 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 171
+              "index": 137
             }
           }
         },
         {
-          "id": "newsy-dream-10",
+          "id": "newsy-dream-11",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.06896798,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.067102894,
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
             "low": {
-              "score": 0.06896798,
+              "score": 0.067102894,
               "dreamId": "512",
               "newsId": "1994",
               "concepts": [
                 {
-                  "title": "Yellowstone National Park",
-                  "score": 1445.8652
+                  "title": "Elk",
+                  "score": 1076.7465
                 },
                 {
-                  "title": "Elk",
-                  "score": 1057.2473
+                  "title": "Antelope Island",
+                  "score": 962.96783
                 },
                 {
                   "title": "Sawtooth National Forest",
                   "score": 733.1567
                 },
                 {
-                  "title": "List of national parks of the United States",
-                  "score": 707.86676
+                  "title": "Cowboy",
+                  "score": 716.4851
                 },
                 {
-                  "title": "Cowboy",
-                  "score": 707.168
+                  "title": "List of national parks of the United States",
+                  "score": 707.86676
                 }
               ]
             }
@@ -648,39 +706,39 @@
           }
         },
         {
-          "id": "newsy-dream-11",
+          "id": "newsy-dream-12",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.27095282,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.20605804,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
             "high": {
-              "score": 0.27095282,
+              "score": 0.20605804,
               "dreamId": "539",
               "newsId": "4255",
               "concepts": [
                 {
+                  "title": "Escape the Night",
+                  "score": 915752
+                },
+                {
+                  "title": "List of 90210 characters",
+                  "score": 867007.56
+                },
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 797473.75
+                },
+                {
                   "title": "Pinocchio: The Series",
-                  "score": 2961.8032
+                  "score": 756757
                 },
                 {
-                  "title": "Chi's Sweet Home",
-                  "score": 1578.6342
-                },
-                {
-                  "title": "Kaidan Restaurant",
-                  "score": 1423.2555
-                },
-                {
-                  "title": "GEICO advertising campaigns",
-                  "score": 1368.3536
-                },
-                {
-                  "title": "Rishtey (TV series)",
-                  "score": 1324.4673
+                  "title": "Child development stages",
+                  "score": 605175.44
                 }
               ]
             }
@@ -706,46 +764,46 @@
           }
         },
         {
-          "id": "newsy-dream-12",
+          "id": "newsy-dream-13",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.22620709,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.10225356,
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
-              "score": 0.22620709,
+            "medium": {
+              "score": 0.10225356,
               "dreamId": "551",
-              "newsId": "4255",
+              "newsId": "5391",
               "concepts": [
                 {
                   "title": "Kaidan Restaurant",
-                  "score": 4250.132
+                  "score": 327209472
+                },
+                {
+                  "title": "Diné Bahaneʼ",
+                  "score": 44223920
+                },
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 33592060
                 },
                 {
                   "title": "Escape the Night",
-                  "score": 2433.4128
+                  "score": 6155806.5
                 },
                 {
-                  "title": "The Royal Today",
-                  "score": 2397.3713
-                },
-                {
-                  "title": "List of American comedy films",
-                  "score": 2187.2905
-                },
-                {
-                  "title": "The Dancing Water, the Singing Apple, and the Speaking Bird",
-                  "score": 1974.1802
+                  "title": "List of 90210 characters",
+                  "score": 3377570.2
                 }
               ]
             }
           },
-          "wordCount": 518,
-          "numComparisons": 518,
-          "numDayComparisons": 518,
+          "wordCount": 513,
+          "numComparisons": 513,
+          "numDayComparisons": 513,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -759,51 +817,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 110
+              "index": 137
             }
           }
         },
         {
-          "id": "newsy-dream-13",
+          "id": "newsy-dream-14",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.08015035,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.4298807,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "medium": {
-              "score": 0.08015035,
+            "high": {
+              "score": 0.4298807,
               "dreamId": "568",
-              "newsId": "4296",
+              "newsId": "4707",
               "concepts": [
                 {
+                  "title": "Dalton Gang",
+                  "score": 2825.4038
+                },
+                {
                   "title": "Kaidan Restaurant",
-                  "score": 464.22986
+                  "score": 2082.5073
                 },
                 {
-                  "title": "101 Dalmatian Street",
-                  "score": 352.30838
+                  "title": "List of Red vs. Blue episodes",
+                  "score": 1448.849
                 },
                 {
-                  "title": "List of individual dogs",
-                  "score": 320.40247
+                  "title": "List of angels in Supernatural",
+                  "score": 1417.6714
                 },
                 {
-                  "title": "To Kill a Mockingbird",
-                  "score": 280.2395
-                },
-                {
-                  "title": "Wan Wan Celeb Soreyuke! Tetsunoshin",
-                  "score": 262.0605
+                  "title": "Passenger pigeon",
+                  "score": 1346.982
                 }
               ]
             }
           },
-          "wordCount": 396,
-          "numComparisons": 396,
-          "numDayComparisons": 396,
+          "wordCount": 390,
+          "numComparisons": 390,
+          "numDayComparisons": 390,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -817,51 +875,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 111
+              "index": 121
             }
           }
         },
         {
-          "id": "newsy-dream-14",
+          "id": "newsy-dream-15",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.21508501,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.122348085,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
-              "score": 0.21508501,
+            "medium": {
+              "score": 0.122348085,
               "dreamId": "576",
-              "newsId": "4255",
+              "newsId": "5391",
               "concepts": [
                 {
-                  "title": "List of 90210 characters",
-                  "score": 13182.643
-                },
-                {
-                  "title": "GEICO advertising campaigns",
-                  "score": 10086.41
-                },
-                {
                   "title": "Kaidan Restaurant",
-                  "score": 8348.398
+                  "score": 6207544.5
                 },
                 {
-                  "title": "Poirot's Early Cases",
-                  "score": 7713.6265
+                  "title": "List of The Idolmaster characters",
+                  "score": 978064.06
                 },
                 {
-                  "title": "Escape the Night",
-                  "score": 5874.8574
+                  "title": "Diné Bahaneʼ",
+                  "score": 947340.4
+                },
+                {
+                  "title": "List of Orange Is the New Black characters",
+                  "score": 900361.44
+                },
+                {
+                  "title": "List of 90210 characters",
+                  "score": 643543.2
                 }
               ]
             }
           },
-          "wordCount": 502,
-          "numComparisons": 502,
-          "numDayComparisons": 502,
+          "wordCount": 497,
+          "numComparisons": 497,
+          "numDayComparisons": 497,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -875,51 +933,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 110
+              "index": 137
             }
           }
         },
         {
-          "id": "newsy-dream-15",
+          "id": "newsy-dream-16",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.18187445,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.3417944,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
             "high": {
-              "score": 0.18187445,
+              "score": 0.3417944,
               "dreamId": "583",
-              "newsId": "5773",
+              "newsId": "2992",
               "concepts": [
                 {
-                  "title": "Escape the Night",
-                  "score": 2327.5955
+                  "title": "Glossary of nautical terms",
+                  "score": 3249383
                 },
                 {
-                  "title": "GEICO advertising campaigns",
-                  "score": 2228.077
+                  "title": "Kiteboarding",
+                  "score": 201058.38
                 },
                 {
-                  "title": "List of Orange Is the New Black characters",
-                  "score": 2004.727
+                  "title": "Pinocchio: The Series",
+                  "score": 82476.24
                 },
                 {
-                  "title": "List of performances on Top of the Pops",
-                  "score": 1698.9015
+                  "title": "Maritime history of California",
+                  "score": 77563.59
                 },
                 {
-                  "title": "List of Madagascar (franchise) characters",
-                  "score": 1442.4651
+                  "title": "Boat building",
+                  "score": 71613.266
                 }
               ]
             }
           },
-          "wordCount": 483,
-          "numComparisons": 483,
-          "numDayComparisons": 483,
+          "wordCount": 509,
+          "numComparisons": 509,
+          "numDayComparisons": 509,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -933,51 +991,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 146
+              "index": 74
             }
           }
         },
         {
-          "id": "newsy-dream-16",
+          "id": "newsy-dream-17",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.050522797,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.26998645,
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "low": {
-              "score": 0.050522797,
+            "high": {
+              "score": 0.26998645,
               "dreamId": "635",
-              "newsId": "4362",
+              "newsId": "7531",
               "concepts": [
                 {
-                  "title": "Tyson Foods",
-                  "score": 745.70935
+                  "title": "List of ecoregions in North America (CEC)",
+                  "score": 3499.4097
                 },
                 {
-                  "title": "Impact of the COVID-19 pandemic on education",
-                  "score": 661.08405
+                  "title": "Green Belt Movement",
+                  "score": 3386.4119
                 },
                 {
-                  "title": "Cargill",
-                  "score": 561.3337
+                  "title": "Climate change mitigation",
+                  "score": 3164.166
                 },
                 {
-                  "title": "Radiation effects from the Fukushima Daiichi nuclear disaster",
-                  "score": 325.6139
+                  "title": "Reforestation",
+                  "score": 3044.9055
                 },
                 {
-                  "title": "List of nuclear whistleblowers",
-                  "score": 295.57373
+                  "title": "Deforestation",
+                  "score": 2533.6812
                 }
               ]
             }
           },
-          "wordCount": 174,
-          "numComparisons": 174,
-          "numDayComparisons": 174,
+          "wordCount": 182,
+          "numComparisons": 182,
+          "numDayComparisons": 182,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -991,51 +1049,51 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 112
+              "index": 185
             }
           }
         },
         {
-          "id": "newsy-dream-17",
+          "id": "newsy-dream-18",
           "granularity": "day",
-          "label": "Freya example dream",
-          "score": 0.25056994,
-          "dreamerAlias": "Freya",
+          "label": "Charlene example dream",
+          "score": 0.114052914,
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
           "similarityExamples": {
-            "high": {
-              "score": 0.25056994,
+            "medium": {
+              "score": 0.114052914,
               "dreamId": "677",
-              "newsId": "4255",
+              "newsId": "5391",
               "concepts": [
                 {
                   "title": "Kaidan Restaurant",
-                  "score": 39679.008
+                  "score": 72178072
                 },
                 {
-                  "title": "GEICO advertising campaigns",
-                  "score": 37748.21
+                  "title": "List of performances on Top of the Pops",
+                  "score": 7151762.5
+                },
+                {
+                  "title": "List of Supernatural characters",
+                  "score": 5762729.5
                 },
                 {
                   "title": "List of Desperate Housewives characters",
-                  "score": 17828.596
+                  "score": 4247073
                 },
                 {
-                  "title": "List of 90210 characters",
-                  "score": 11510.606
-                },
-                {
-                  "title": "List of Neighbours characters (2008)",
-                  "score": 10126.335
+                  "title": "GEICO advertising campaigns",
+                  "score": 3110411.5
                 }
               ]
             }
           },
-          "wordCount": 509,
-          "numComparisons": 509,
-          "numDayComparisons": 509,
+          "wordCount": 504,
+          "numComparisons": 504,
+          "numDayComparisons": 504,
           "dreamCollection": {
             "label": "",
             "timePeriod": {
@@ -1049,16 +1107,16 @@
             "timePeriod": {
               "granularity": "day",
               "identifier": "",
-              "index": 110
+              "index": 137
             }
           }
         },
         {
-          "id": "newsy-dream-18",
+          "id": "newsy-dream-19",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.17401977,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -1112,11 +1170,11 @@
           }
         },
         {
-          "id": "newsy-dream-19",
+          "id": "newsy-dream-20",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.2155961,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -1170,11 +1228,11 @@
           }
         },
         {
-          "id": "newsy-dream-20",
+          "id": "newsy-dream-21",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.146712,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -1228,11 +1286,11 @@
           }
         },
         {
-          "id": "newsy-dream-21",
+          "id": "newsy-dream-22",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.17585455,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -1286,11 +1344,11 @@
           }
         },
         {
-          "id": "newsy-dream-22",
+          "id": "newsy-dream-23",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.15749663,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -1344,11 +1402,11 @@
           }
         },
         {
-          "id": "newsy-dream-23",
+          "id": "newsy-dream-24",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.20089963,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1402,11 +1460,11 @@
           }
         },
         {
-          "id": "newsy-dream-24",
+          "id": "newsy-dream-25",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.2556172,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1460,11 +1518,11 @@
           }
         },
         {
-          "id": "newsy-dream-25",
+          "id": "newsy-dream-26",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.25468212,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -1518,11 +1576,11 @@
           }
         },
         {
-          "id": "newsy-dream-26",
+          "id": "newsy-dream-27",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.13390125,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1576,11 +1634,11 @@
           }
         },
         {
-          "id": "newsy-dream-27",
+          "id": "newsy-dream-28",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.07385442,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1634,11 +1692,11 @@
           }
         },
         {
-          "id": "newsy-dream-28",
+          "id": "newsy-dream-29",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.18815038,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -1692,11 +1750,11 @@
           }
         },
         {
-          "id": "newsy-dream-29",
+          "id": "newsy-dream-30",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.1458092,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1750,11 +1808,11 @@
           }
         },
         {
-          "id": "newsy-dream-30",
+          "id": "newsy-dream-31",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.099142574,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1808,11 +1866,11 @@
           }
         },
         {
-          "id": "newsy-dream-31",
+          "id": "newsy-dream-32",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.1478968,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1866,11 +1924,11 @@
           }
         },
         {
-          "id": "newsy-dream-32",
+          "id": "newsy-dream-33",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.105323054,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1924,11 +1982,11 @@
           }
         },
         {
-          "id": "newsy-dream-33",
+          "id": "newsy-dream-34",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.12048494,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -1982,11 +2040,11 @@
           }
         },
         {
-          "id": "newsy-dream-34",
+          "id": "newsy-dream-35",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.198903,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -2040,11 +2098,11 @@
           }
         },
         {
-          "id": "newsy-dream-35",
+          "id": "newsy-dream-36",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.21241416,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2098,11 +2156,11 @@
           }
         },
         {
-          "id": "newsy-dream-36",
+          "id": "newsy-dream-37",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.16672039,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2156,11 +2214,11 @@
           }
         },
         {
-          "id": "newsy-dream-37",
+          "id": "newsy-dream-38",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.11657785,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2214,11 +2272,11 @@
           }
         },
         {
-          "id": "newsy-dream-38",
+          "id": "newsy-dream-39",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.101035796,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -2272,11 +2330,11 @@
           }
         },
         {
-          "id": "newsy-dream-39",
+          "id": "newsy-dream-40",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.16679835,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2330,11 +2388,11 @@
           }
         },
         {
-          "id": "newsy-dream-40",
+          "id": "newsy-dream-41",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.116544716,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2388,11 +2446,11 @@
           }
         },
         {
-          "id": "newsy-dream-41",
+          "id": "newsy-dream-42",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.36406207,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2446,11 +2504,11 @@
           }
         },
         {
-          "id": "newsy-dream-42",
+          "id": "newsy-dream-43",
           "granularity": "day",
-          "label": "Freya example dream",
+          "label": "Charlene example dream",
           "score": 0.093960606,
-          "dreamerAlias": "Freya",
+          "dreamerAlias": "Charlene",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2506,15 +2564,15 @@
       ]
     },
     {
-      "label": "Rose",
+      "label": "Cinnamon",
       "color": "hsl(28, 91%, 79%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.12757209,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2570,9 +2628,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.11054521,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2628,9 +2686,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.20910285,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -2686,9 +2744,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.26349634,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -2744,9 +2802,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.2992023,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2802,9 +2860,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.1396863,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2860,9 +2918,9 @@
         {
           "id": "newsy-dream-6",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.14504118,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2918,9 +2976,9 @@
         {
           "id": "newsy-dream-7",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.28867766,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -2976,9 +3034,9 @@
         {
           "id": "newsy-dream-8",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.06986693,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3034,9 +3092,9 @@
         {
           "id": "newsy-dream-9",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.26820126,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -3092,9 +3150,9 @@
         {
           "id": "newsy-dream-10",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.28410217,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -3150,9 +3208,9 @@
         {
           "id": "newsy-dream-11",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.22501549,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3208,9 +3266,9 @@
         {
           "id": "newsy-dream-12",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.15576148,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3266,9 +3324,9 @@
         {
           "id": "newsy-dream-13",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.4137852,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -3324,9 +3382,9 @@
         {
           "id": "newsy-dream-14",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.27669555,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3382,9 +3440,9 @@
         {
           "id": "newsy-dream-15",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.29769036,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3440,9 +3498,9 @@
         {
           "id": "newsy-dream-16",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.2244843,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -3498,9 +3556,9 @@
         {
           "id": "newsy-dream-17",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.21508357,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3556,9 +3614,9 @@
         {
           "id": "newsy-dream-18",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.2931882,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3614,9 +3672,9 @@
         {
           "id": "newsy-dream-19",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.12671989,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -3672,9 +3730,9 @@
         {
           "id": "newsy-dream-20",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.23439352,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -3730,9 +3788,9 @@
         {
           "id": "newsy-dream-21",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.15806071,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -3788,9 +3846,9 @@
         {
           "id": "newsy-dream-22",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.064681314,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -3846,9 +3904,9 @@
         {
           "id": "newsy-dream-23",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.19658461,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -3904,9 +3962,9 @@
         {
           "id": "newsy-dream-24",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.23149748,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -3962,9 +4020,9 @@
         {
           "id": "newsy-dream-25",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.3685848,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4020,9 +4078,9 @@
         {
           "id": "newsy-dream-26",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.26703143,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -4078,9 +4136,9 @@
         {
           "id": "newsy-dream-27",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.21905461,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -4136,9 +4194,9 @@
         {
           "id": "newsy-dream-28",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.12806246,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -4194,9 +4252,9 @@
         {
           "id": "newsy-dream-29",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.21443728,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -4252,9 +4310,9 @@
         {
           "id": "newsy-dream-30",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.13881628,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -4310,9 +4368,9 @@
         {
           "id": "newsy-dream-31",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.25920558,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4368,9 +4426,9 @@
         {
           "id": "newsy-dream-32",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.2744123,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4426,9 +4484,9 @@
         {
           "id": "newsy-dream-33",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.124983706,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -4484,9 +4542,9 @@
         {
           "id": "newsy-dream-34",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.15575595,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -4542,9 +4600,9 @@
         {
           "id": "newsy-dream-35",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.2744074,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4600,9 +4658,9 @@
         {
           "id": "newsy-dream-36",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.16654399,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -4658,9 +4716,9 @@
         {
           "id": "newsy-dream-37",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.12727112,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4716,9 +4774,9 @@
         {
           "id": "newsy-dream-38",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.2616265,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -4774,9 +4832,9 @@
         {
           "id": "newsy-dream-39",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.13049912,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4832,9 +4890,9 @@
         {
           "id": "newsy-dream-40",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.21792358,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4890,9 +4948,9 @@
         {
           "id": "newsy-dream-41",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.3472143,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -4948,9 +5006,9 @@
         {
           "id": "newsy-dream-42",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.076137535,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -5006,9 +5064,9 @@
         {
           "id": "newsy-dream-43",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.09371563,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5064,9 +5122,9 @@
         {
           "id": "newsy-dream-44",
           "granularity": "day",
-          "label": "Rose example dream",
+          "label": "Cinnamon example dream",
           "score": 0.1674487,
-          "dreamerAlias": "Rose",
+          "dreamerAlias": "Cinnamon",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5122,15 +5180,15 @@
       ]
     },
     {
-      "label": "Mary",
+      "label": "Harmony",
       "color": "hsl(180, 35%, 68%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Mary example dream",
+          "label": "Harmony example dream",
           "score": 0.49134028,
-          "dreamerAlias": "Mary",
+          "dreamerAlias": "Harmony",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5186,9 +5244,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Mary example dream",
+          "label": "Harmony example dream",
           "score": 0.31939456,
-          "dreamerAlias": "Mary",
+          "dreamerAlias": "Harmony",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5244,9 +5302,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Mary example dream",
+          "label": "Harmony example dream",
           "score": 0.6513922,
-          "dreamerAlias": "Mary",
+          "dreamerAlias": "Harmony",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -5302,9 +5360,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Mary example dream",
+          "label": "Harmony example dream",
           "score": 0.23194747,
-          "dreamerAlias": "Mary",
+          "dreamerAlias": "Harmony",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -5360,9 +5418,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Mary example dream",
+          "label": "Harmony example dream",
           "score": 0.16004954,
-          "dreamerAlias": "Mary",
+          "dreamerAlias": "Harmony",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5418,9 +5476,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Mary example dream",
+          "label": "Harmony example dream",
           "score": 0.65706575,
-          "dreamerAlias": "Mary",
+          "dreamerAlias": "Harmony",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5476,15 +5534,15 @@
       ]
     },
     {
-      "label": "Ana",
+      "label": "Jenn",
       "color": "hsl(45, 93%, 37%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.25140813,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5540,9 +5598,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.2496998,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5598,9 +5656,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.32921675,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5656,9 +5714,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.200333,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5714,9 +5772,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.21853107,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5772,9 +5830,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.19541502,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -5830,9 +5888,9 @@
         {
           "id": "newsy-dream-6",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.20334557,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5888,9 +5946,9 @@
         {
           "id": "newsy-dream-7",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.23665786,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -5946,9 +6004,9 @@
         {
           "id": "newsy-dream-8",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.10015419,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6004,9 +6062,9 @@
         {
           "id": "newsy-dream-9",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.29420516,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6062,9 +6120,9 @@
         {
           "id": "newsy-dream-10",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.3006212,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6120,9 +6178,9 @@
         {
           "id": "newsy-dream-11",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.20161141,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -6178,9 +6236,9 @@
         {
           "id": "newsy-dream-12",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.250021,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6236,9 +6294,9 @@
         {
           "id": "newsy-dream-13",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.14373656,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6294,9 +6352,9 @@
         {
           "id": "newsy-dream-14",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.25716013,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6352,9 +6410,9 @@
         {
           "id": "newsy-dream-15",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.18197209,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -6410,9 +6468,9 @@
         {
           "id": "newsy-dream-16",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.07351489,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -6468,9 +6526,9 @@
         {
           "id": "newsy-dream-17",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.23604713,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -6526,9 +6584,9 @@
         {
           "id": "newsy-dream-18",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.19349213,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -6584,9 +6642,9 @@
         {
           "id": "newsy-dream-19",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.25955904,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -6642,9 +6700,9 @@
         {
           "id": "newsy-dream-20",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.22459796,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6700,9 +6758,9 @@
         {
           "id": "newsy-dream-21",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.18152659,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -6758,9 +6816,9 @@
         {
           "id": "newsy-dream-22",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.26076737,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6816,9 +6874,9 @@
         {
           "id": "newsy-dream-23",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.3596312,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6874,9 +6932,9 @@
         {
           "id": "newsy-dream-24",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.30450007,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -6932,9 +6990,9 @@
         {
           "id": "newsy-dream-25",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.25312012,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -6990,9 +7048,9 @@
         {
           "id": "newsy-dream-26",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.29040572,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7048,9 +7106,9 @@
         {
           "id": "newsy-dream-27",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.16617766,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7106,9 +7164,9 @@
         {
           "id": "newsy-dream-28",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.25902742,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7164,9 +7222,9 @@
         {
           "id": "newsy-dream-29",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.3105682,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7222,9 +7280,9 @@
         {
           "id": "newsy-dream-30",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.25856483,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7280,9 +7338,9 @@
         {
           "id": "newsy-dream-31",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.33265266,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7338,9 +7396,9 @@
         {
           "id": "newsy-dream-32",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.22734249,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -7396,9 +7454,9 @@
         {
           "id": "newsy-dream-33",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.21931924,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -7454,9 +7512,9 @@
         {
           "id": "newsy-dream-34",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.09988819,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -7512,9 +7570,9 @@
         {
           "id": "newsy-dream-35",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.19691832,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7570,9 +7628,9 @@
         {
           "id": "newsy-dream-36",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.43767294,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "environment",
           "examples": [],
           "concepts": [],
@@ -7628,9 +7686,9 @@
         {
           "id": "newsy-dream-37",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.15313375,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7686,9 +7744,9 @@
         {
           "id": "newsy-dream-38",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.07522514,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7744,9 +7802,9 @@
         {
           "id": "newsy-dream-39",
           "granularity": "day",
-          "label": "Ana example dream",
+          "label": "Jenn example dream",
           "score": 0.45509756,
-          "dreamerAlias": "Ana",
+          "dreamerAlias": "Jenn",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7802,15 +7860,15 @@
       ]
     },
     {
-      "label": "Tita",
+      "label": "Jennifer",
       "color": "hsl(115, 28%, 32%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.2850881,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7866,9 +7924,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.28455836,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -7924,9 +7982,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.23668824,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -7982,9 +8040,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.36176187,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8040,9 +8098,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.22557807,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8098,9 +8156,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.19055119,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8156,9 +8214,9 @@
         {
           "id": "newsy-dream-6",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.32191733,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8214,9 +8272,9 @@
         {
           "id": "newsy-dream-7",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.17645952,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8272,9 +8330,9 @@
         {
           "id": "newsy-dream-8",
           "granularity": "day",
-          "label": "Tita example dream",
+          "label": "Jennifer example dream",
           "score": 0.23309688,
-          "dreamerAlias": "Tita",
+          "dreamerAlias": "Jennifer",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8330,15 +8388,15 @@
       ]
     },
     {
-      "label": "Burgess",
+      "label": "Kellee",
       "color": "hsl(203, 31%, 36%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Kellee example dream",
           "score": 0.21054171,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Kellee",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8394,9 +8452,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Kellee example dream",
           "score": 0.13368602,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Kellee",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8452,9 +8510,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Kellee example dream",
           "score": 0.42371795,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Kellee",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8510,9 +8568,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Kellee example dream",
           "score": 0.09253229,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Kellee",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8568,9 +8626,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Kellee example dream",
           "score": 0.14126964,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Kellee",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8626,9 +8684,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Kellee example dream",
           "score": 0.08014367,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Kellee",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8684,15 +8742,15 @@
       ]
     },
     {
-      "label": "Vera",
-      "color": "hsl(0, 84%, 36%)",
+      "label": "Meg",
+      "color": "hsl(0, 0%, 17%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.08440822,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8748,9 +8806,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.13400842,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -8806,9 +8864,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.47494718,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8864,9 +8922,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.30254462,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8922,9 +8980,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.14481898,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8980,9 +9038,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.3148461,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9038,9 +9096,9 @@
         {
           "id": "newsy-dream-6",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.19404122,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9096,9 +9154,9 @@
         {
           "id": "newsy-dream-7",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.1276639,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9154,9 +9212,9 @@
         {
           "id": "newsy-dream-8",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.120068446,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -9212,9 +9270,9 @@
         {
           "id": "newsy-dream-9",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.26084512,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -9270,9 +9328,9 @@
         {
           "id": "newsy-dream-10",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.45511186,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9328,9 +9386,9 @@
         {
           "id": "newsy-dream-11",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.15818813,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -9386,9 +9444,9 @@
         {
           "id": "newsy-dream-12",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.16206768,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -9444,9 +9502,9 @@
         {
           "id": "newsy-dream-13",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.13822739,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9502,9 +9560,9 @@
         {
           "id": "newsy-dream-14",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.20255663,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -9560,9 +9618,9 @@
         {
           "id": "newsy-dream-15",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.19522732,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -9618,9 +9676,9 @@
         {
           "id": "newsy-dream-16",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.28777286,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9676,9 +9734,9 @@
         {
           "id": "newsy-dream-17",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.17887382,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9734,9 +9792,9 @@
         {
           "id": "newsy-dream-18",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.2266026,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9792,9 +9850,9 @@
         {
           "id": "newsy-dream-19",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.16124524,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -9850,9 +9908,9 @@
         {
           "id": "newsy-dream-20",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.28714788,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9908,9 +9966,9 @@
         {
           "id": "newsy-dream-21",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.25511056,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -9966,9 +10024,9 @@
         {
           "id": "newsy-dream-22",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.37326083,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10024,9 +10082,9 @@
         {
           "id": "newsy-dream-23",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.38768283,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10082,9 +10140,9 @@
         {
           "id": "newsy-dream-24",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.26413828,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10140,9 +10198,9 @@
         {
           "id": "newsy-dream-25",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.22841479,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10198,9 +10256,9 @@
         {
           "id": "newsy-dream-26",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.09076546,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10256,9 +10314,9 @@
         {
           "id": "newsy-dream-27",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.5511875,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -10314,9 +10372,9 @@
         {
           "id": "newsy-dream-28",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.17055547,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -10372,9 +10430,9 @@
         {
           "id": "newsy-dream-29",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.49539375,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10430,9 +10488,9 @@
         {
           "id": "newsy-dream-30",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.1802661,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10488,9 +10546,9 @@
         {
           "id": "newsy-dream-31",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.16676341,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10546,9 +10604,9 @@
         {
           "id": "newsy-dream-32",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.21310158,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "election",
           "examples": [],
           "concepts": [],
@@ -10604,9 +10662,9 @@
         {
           "id": "newsy-dream-33",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.13888578,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10662,9 +10720,9 @@
         {
           "id": "newsy-dream-34",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.12856326,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10720,9 +10778,9 @@
         {
           "id": "newsy-dream-35",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.28039864,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10778,9 +10836,9 @@
         {
           "id": "newsy-dream-36",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.35676444,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -10836,9 +10894,9 @@
         {
           "id": "newsy-dream-37",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.5806835,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10894,9 +10952,9 @@
         {
           "id": "newsy-dream-38",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.27447233,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -10952,9 +11010,9 @@
         {
           "id": "newsy-dream-39",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.41514575,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -11010,9 +11068,9 @@
         {
           "id": "newsy-dream-40",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.15432635,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -11068,9 +11126,9 @@
         {
           "id": "newsy-dream-41",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.2874386,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -11126,9 +11184,9 @@
         {
           "id": "newsy-dream-42",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.31838024,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -11184,9 +11242,9 @@
         {
           "id": "newsy-dream-43",
           "granularity": "day",
-          "label": "Vera example dream",
+          "label": "Meg example dream",
           "score": 0.27202207,
-          "dreamerAlias": "Vera",
+          "dreamerAlias": "Meg",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -11243,7 +11301,7 @@
     },
     {
       "label": "Edward",
-      "color": "hsl(0, 0%, 17%)",
+      "color": "hsl(0, 84%, 36%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -13214,6 +13272,1236 @@
               "granularity": "day",
               "identifier": "",
               "index": 237
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bob",
+      "color": "hsl(135, 35%, 70%)",
+      "comparisons": [
+        {
+          "id": "newsy-dream-0",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.21826127,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.21826127,
+              "dreamId": "120",
+              "newsId": "4255",
+              "concepts": [
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 4630.4565
+                },
+                {
+                  "title": "Chi's Sweet Home",
+                  "score": 2425.5813
+                },
+                {
+                  "title": "List of The Originals characters",
+                  "score": 2227.7595
+                },
+                {
+                  "title": "List of Supernatural characters",
+                  "score": 2110.4822
+                },
+                {
+                  "title": "List of Teen Wolf characters",
+                  "score": 1773.4004
+                }
+              ]
+            }
+          },
+          "wordCount": 449,
+          "numComparisons": 449,
+          "numDayComparisons": 449,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 16
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 110
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-1",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.220159,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.220159,
+              "dreamId": "195",
+              "newsId": "8473",
+              "concepts": [
+                {
+                  "title": "1983 Pacific hurricane season",
+                  "score": 2374.766
+                },
+                {
+                  "title": "Hurricane Betsy",
+                  "score": 2308.0952
+                },
+                {
+                  "title": "Hurricane Matthew",
+                  "score": 2253.3223
+                },
+                {
+                  "title": "1915 Galveston hurricane",
+                  "score": 1799.9009
+                },
+                {
+                  "title": "Hurricane Sandy",
+                  "score": 1669.7478
+                }
+              ]
+            }
+          },
+          "wordCount": 266,
+          "numComparisons": 266,
+          "numDayComparisons": 266,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 32
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 206
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-2",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.34609315,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.34609315,
+              "dreamId": "702",
+              "newsId": "9291",
+              "concepts": [
+                {
+                  "title": "2019–20 Australian bushfire season",
+                  "score": 4219.5195
+                },
+                {
+                  "title": "2020 Western United States wildfire season",
+                  "score": 3405.3813
+                },
+                {
+                  "title": "2020 Atlantic hurricane season",
+                  "score": 3165.7266
+                },
+                {
+                  "title": "List of ecoregions in North America (CEC)",
+                  "score": 3083.1194
+                },
+                {
+                  "title": "2011 Super Outbreak",
+                  "score": 2999.263
+                }
+              ]
+            }
+          },
+          "wordCount": 308,
+          "numComparisons": 308,
+          "numDayComparisons": 308,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 122
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 227
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-3",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.17816037,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.17816037,
+              "dreamId": "585",
+              "newsId": "10931",
+              "concepts": [
+                {
+                  "title": "Diné Bahaneʼ",
+                  "score": 210809.05
+                },
+                {
+                  "title": "Dalton Gang",
+                  "score": 204132.5
+                },
+                {
+                  "title": "Kaidan Restaurant",
+                  "score": 157111.23
+                },
+                {
+                  "title": "List of The Young and the Restless characters (2000s)",
+                  "score": 82117.73
+                },
+                {
+                  "title": "Crime SuspenStories",
+                  "score": 66220.914
+                }
+              ]
+            }
+          },
+          "wordCount": 493,
+          "numComparisons": 493,
+          "numDayComparisons": 493,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 106
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 263
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-4",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.16750832,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "medium": {
+              "score": 0.16750832,
+              "dreamId": "624",
+              "newsId": "4536",
+              "concepts": [
+                {
+                  "title": "List of Supernatural characters",
+                  "score": 1611.5896
+                },
+                {
+                  "title": "List of wrongful convictions in the United States",
+                  "score": 1358.7329
+                },
+                {
+                  "title": "Penal Code (Singapore)",
+                  "score": 818.40607
+                },
+                {
+                  "title": "Pulmonary embolism",
+                  "score": 786.06415
+                },
+                {
+                  "title": "List of kidnappings",
+                  "score": 726.1117
+                }
+              ]
+            }
+          },
+          "wordCount": 170,
+          "numComparisons": 170,
+          "numDayComparisons": 170,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 111
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 117
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-5",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.17089918,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "medium": {
+              "score": 0.17089918,
+              "dreamId": "630",
+              "newsId": "4536",
+              "concepts": [
+                {
+                  "title": "List of Supernatural characters",
+                  "score": 122284.91
+                },
+                {
+                  "title": "Pinocchio: The Series",
+                  "score": 66015.766
+                },
+                {
+                  "title": "List of The Walking Dead (TV series) characters",
+                  "score": 44200.816
+                },
+                {
+                  "title": "Professor X",
+                  "score": 40204.324
+                },
+                {
+                  "title": "List of characters in mythology novels by Rick Riordan",
+                  "score": 34720.453
+                }
+              ]
+            }
+          },
+          "wordCount": 193,
+          "numComparisons": 193,
+          "numDayComparisons": 193,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 111
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 117
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-6",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.30371925,
+          "dreamerAlias": "Bob",
+          "reference2020": "BLM",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.30371925,
+              "dreamId": "650",
+              "newsId": "8213",
+              "concepts": [
+                {
+                  "title": "COVID-19 pandemic in Hong Kong",
+                  "score": 1086.7181
+                },
+                {
+                  "title": "COVID-19 pandemic in Texas",
+                  "score": 1064.247
+                },
+                {
+                  "title": "COVID-19 pandemic in Nevada",
+                  "score": 757.48596
+                },
+                {
+                  "title": "COVID-19 pandemic in New York City",
+                  "score": 707.41504
+                },
+                {
+                  "title": "COVID-19 pandemic in Pennsylvania",
+                  "score": 704.4817
+                }
+              ]
+            }
+          },
+          "wordCount": 219,
+          "numComparisons": 219,
+          "numDayComparisons": 219,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 115
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 201
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-7",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.35600457,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.35600457,
+              "dreamId": "1280",
+              "newsId": "12521",
+              "concepts": [
+                {
+                  "title": "Impact of the COVID-19 pandemic on religion",
+                  "score": 1178.1221
+                },
+                {
+                  "title": "Face masks during the COVID-19 pandemic",
+                  "score": 1174.5837
+                },
+                {
+                  "title": "Face masks during the COVID-19 pandemic in the United States",
+                  "score": 1034.2452
+                },
+                {
+                  "title": "Carnival in the Netherlands",
+                  "score": 660.51013
+                },
+                {
+                  "title": "N95 respirator",
+                  "score": 637.9992
+                }
+              ]
+            }
+          },
+          "wordCount": 176,
+          "numComparisons": 176,
+          "numDayComparisons": 176,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 220
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 293
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-8",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.41891938,
+          "dreamerAlias": "Bob",
+          "reference2020": "politics",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.41891938,
+              "dreamId": "1328",
+              "newsId": "8370",
+              "concepts": [
+                {
+                  "title": "Racial views of Donald Trump",
+                  "score": 2749.2551
+                },
+                {
+                  "title": "Trump administration communication during the COVID-19 pandemic",
+                  "score": 2542.0198
+                },
+                {
+                  "title": "Twitter",
+                  "score": 1922.1631
+                },
+                {
+                  "title": "Donald Trump 2016 presidential campaign",
+                  "score": 1881.3337
+                },
+                {
+                  "title": "Social media use by Donald Trump",
+                  "score": 1864.3785
+                }
+              ]
+            }
+          },
+          "wordCount": 266,
+          "numComparisons": 266,
+          "numDayComparisons": 266,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 229
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 204
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-9",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.23260146,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.23260146,
+              "dreamId": "1439",
+              "newsId": "11756",
+              "concepts": [
+                {
+                  "title": "Face masks during the COVID-19 pandemic in the United States",
+                  "score": 2187.6267
+                },
+                {
+                  "title": "Face masks during the COVID-19 pandemic",
+                  "score": 1761.9823
+                },
+                {
+                  "title": "COVID-19 pandemic in Hong Kong",
+                  "score": 1156.3798
+                },
+                {
+                  "title": "Trump administration communication during the COVID-19 pandemic",
+                  "score": 1061.8054
+                },
+                {
+                  "title": "COVID-19 pandemic in Nevada",
+                  "score": 1036.3116
+                }
+              ]
+            }
+          },
+          "wordCount": 182,
+          "numComparisons": 182,
+          "numDayComparisons": 182,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 245
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 278
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-10",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.1900668,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.1900668,
+              "dreamId": "1485",
+              "newsId": "3353",
+              "concepts": [
+                {
+                  "title": "Economic impact of the COVID-19 pandemic in the United States",
+                  "score": 5527.2104
+                },
+                {
+                  "title": "Walmart",
+                  "score": 4209.545
+                },
+                {
+                  "title": "Kroger",
+                  "score": 2841.4675
+                },
+                {
+                  "title": "Supermarket",
+                  "score": 2252.779
+                },
+                {
+                  "title": "Grocery store",
+                  "score": 2246.6921
+                }
+              ]
+            }
+          },
+          "wordCount": 200,
+          "numComparisons": 200,
+          "numDayComparisons": 200,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 252
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 84
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-11",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.6448087,
+          "dreamerAlias": "Bob",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.6448087,
+              "dreamId": "1656",
+              "newsId": "13995",
+              "concepts": [
+                {
+                  "title": "COVID-19",
+                  "score": 71010.625
+                },
+                {
+                  "title": "Trump administration communication during the COVID-19 pandemic",
+                  "score": 39469.953
+                },
+                {
+                  "title": "White House COVID-19 outbreak",
+                  "score": 20451.34
+                },
+                {
+                  "title": "COVID-19 pandemic in Sweden",
+                  "score": 17495.688
+                },
+                {
+                  "title": "British government response to the COVID-19 pandemic",
+                  "score": 17072.63
+                }
+              ]
+            }
+          },
+          "wordCount": 517,
+          "numComparisons": 517,
+          "numDayComparisons": 517,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 274
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 325
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-12",
+          "granularity": "day",
+          "label": "Bob example dream",
+          "score": 0.33954763,
+          "dreamerAlias": "Bob",
+          "reference2020": "BLM",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.33954763,
+              "dreamId": "1793",
+              "newsId": "11553",
+              "concepts": [
+                {
+                  "title": "2020s in political history",
+                  "score": 2233.9856
+                },
+                {
+                  "title": "2011 Egyptian revolution",
+                  "score": 2002.9609
+                },
+                {
+                  "title": "Second American Civil War",
+                  "score": 1974.3473
+                },
+                {
+                  "title": "Donald Trump photo op at St. John's Church",
+                  "score": 1864.145
+                },
+                {
+                  "title": "George Floyd protests",
+                  "score": 1827.7095
+                }
+              ]
+            }
+          },
+          "wordCount": 168,
+          "numComparisons": 168,
+          "numDayComparisons": 168,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 292
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 274
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "Melvin",
+      "color": "hsl(15, 30%, 60%)",
+      "comparisons": [
+        {
+          "id": "newsy-dream-0",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.5282112,
+          "dreamerAlias": "Melvin",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.5282112,
+              "dreamId": "1999",
+              "newsId": "9036",
+              "concepts": [
+                {
+                  "title": "COVID-19 pandemic in Michigan",
+                  "score": 1635.5258
+                },
+                {
+                  "title": "COVID-19 pandemic in Pennsylvania",
+                  "score": 1352.8425
+                },
+                {
+                  "title": "COVID-19 pandemic in Ohio",
+                  "score": 1296.3353
+                },
+                {
+                  "title": "COVID-19 pandemic in Nevada",
+                  "score": 1244.0137
+                },
+                {
+                  "title": "Education in the United States",
+                  "score": 1221.8285
+                }
+              ]
+            }
+          },
+          "wordCount": 201,
+          "numComparisons": 201,
+          "numDayComparisons": 201,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 329
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 220
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-1",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.4202052,
+          "dreamerAlias": "Melvin",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.4202052,
+              "dreamId": "1159",
+              "newsId": "4346",
+              "concepts": [
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 9890.374
+                },
+                {
+                  "title": "Kaidan Restaurant",
+                  "score": 3011.3965
+                },
+                {
+                  "title": "CTrain",
+                  "score": 2793.389
+                },
+                {
+                  "title": "Transportation in South Florida",
+                  "score": 2578.5784
+                },
+                {
+                  "title": "Green Line (MBTA)",
+                  "score": 2535.0837
+                }
+              ]
+            }
+          },
+          "wordCount": 469,
+          "numComparisons": 469,
+          "numDayComparisons": 469,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 200
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 112
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-2",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.13567932,
+          "dreamerAlias": "Melvin",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "medium": {
+              "score": 0.13567932,
+              "dreamId": "1247",
+              "newsId": "5391",
+              "concepts": [
+                {
+                  "title": "Kaidan Restaurant",
+                  "score": 432472.9
+                },
+                {
+                  "title": "Bigg Boss (Hindi season 5)",
+                  "score": 52576.4
+                },
+                {
+                  "title": "List of Dawson's Creek episodes",
+                  "score": 48593.297
+                },
+                {
+                  "title": "List of 90210 characters",
+                  "score": 37891.586
+                },
+                {
+                  "title": "Best of Luck Nikki",
+                  "score": 24517.406
+                }
+              ]
+            }
+          },
+          "wordCount": 500,
+          "numComparisons": 500,
+          "numDayComparisons": 500,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 214
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 137
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-3",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.39584017,
+          "dreamerAlias": "Melvin",
+          "reference2020": "pandemic",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.39584017,
+              "dreamId": "1864",
+              "newsId": "3885",
+              "concepts": [
+                {
+                  "title": "Destroyed in Seconds",
+                  "score": 13134.015
+                },
+                {
+                  "title": "List of bus routes in Queens",
+                  "score": 8870.618
+                },
+                {
+                  "title": "IND Eighth Avenue Line",
+                  "score": 8676.159
+                },
+                {
+                  "title": "History of the New York City Subway",
+                  "score": 8234.984
+                },
+                {
+                  "title": "California Trail",
+                  "score": 8007.023
+                }
+              ]
+            }
+          },
+          "wordCount": 471,
+          "numComparisons": 471,
+          "numDayComparisons": 471,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 303
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 99
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-4",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.34352046,
+          "dreamerAlias": "Melvin",
+          "reference2020": "BLM",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.34352046,
+              "dreamId": "998",
+              "newsId": "13743",
+              "concepts": [
+                {
+                  "title": "Columbia River",
+                  "score": 4276.5054
+                },
+                {
+                  "title": "Klamath River",
+                  "score": 3224.1968
+                },
+                {
+                  "title": "Central Valley Project",
+                  "score": 2439.996
+                },
+                {
+                  "title": "Dam removal",
+                  "score": 2279.907
+                },
+                {
+                  "title": "Sacramento River",
+                  "score": 2167.4653
+                }
+              ]
+            }
+          },
+          "wordCount": 255,
+          "numComparisons": 255,
+          "numDayComparisons": 255,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 171
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 320
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-5",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.29733568,
+          "dreamerAlias": "Melvin",
+          "reference2020": "BLM",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.29733568,
+              "dreamId": "2095",
+              "newsId": "4255",
+              "concepts": [
+                {
+                  "title": "List of Mad Men characters",
+                  "score": 14826.608
+                },
+                {
+                  "title": "List of Dawson's Creek episodes",
+                  "score": 4324.8804
+                },
+                {
+                  "title": "List of The Big Bang Theory and Young Sheldon characters",
+                  "score": 3719.6697
+                },
+                {
+                  "title": "Rishtey (TV series)",
+                  "score": 3689.8113
+                },
+                {
+                  "title": "List of Gilmore Girls characters",
+                  "score": 3646.5332
+                }
+              ]
+            }
+          },
+          "wordCount": 441,
+          "numComparisons": 441,
+          "numDayComparisons": 441,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 346
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 110
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-6",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.29743892,
+          "dreamerAlias": "Melvin",
+          "reference2020": "politics",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "high": {
+              "score": 0.29743892,
+              "dreamId": "13",
+              "newsId": "4255",
+              "concepts": [
+                {
+                  "title": "Nicomachean Ethics",
+                  "score": 7291.9814
+                },
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 6058.9565
+                },
+                {
+                  "title": "List of The Shield characters",
+                  "score": 5200.734
+                },
+                {
+                  "title": "List of Orange Is the New Black characters",
+                  "score": 4122.3857
+                },
+                {
+                  "title": "List of The Office (American TV series) characters",
+                  "score": 4122.216
+                }
+              ]
+            }
+          },
+          "wordCount": 494,
+          "numComparisons": 494,
+          "numDayComparisons": 494,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 1
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 110
+            }
+          }
+        },
+        {
+          "id": "newsy-dream-7",
+          "granularity": "day",
+          "label": "Melvin example dream",
+          "score": 0.11296921,
+          "dreamerAlias": "Melvin",
+          "reference2020": "politics",
+          "examples": [],
+          "concepts": [],
+          "similarityExamples": {
+            "medium": {
+              "score": 0.11296921,
+              "dreamId": "2090",
+              "newsId": "14235",
+              "concepts": [
+                {
+                  "title": "Diné Bahaneʼ",
+                  "score": 222457.86
+                },
+                {
+                  "title": "Kaidan Restaurant",
+                  "score": 116748.2
+                },
+                {
+                  "title": "List of performances on Top of the Pops",
+                  "score": 87506.94
+                },
+                {
+                  "title": "Destroyed in Seconds",
+                  "score": 50013.438
+                },
+                {
+                  "title": "Plasterwork",
+                  "score": 31282.316
+                }
+              ]
+            }
+          },
+          "wordCount": 482,
+          "numComparisons": 482,
+          "numDayComparisons": 482,
+          "dreamCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 345
+            }
+          },
+          "newsCollection": {
+            "label": "",
+            "timePeriod": {
+              "granularity": "day",
+              "identifier": "",
+              "index": 332
             }
           }
         }
