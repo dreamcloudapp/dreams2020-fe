@@ -211,7 +211,7 @@ function App({
         }}
       >
         <div
-          className="App"
+          className="chart-app-2020"
           style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
         >
           <div style={{ height: "100%", width: "100%" }} ref={graphContainerRef}>
