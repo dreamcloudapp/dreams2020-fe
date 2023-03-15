@@ -89,6 +89,7 @@ function Axes({
         y2={height - padding.BOTTOM}
         stroke={strokeColor}
         strokeWidth={strokeWidth}
+        id={"axes__x-axis"}
       />
       {/* x-axis ticks */}
       {/* We use xRange and numTicksX */}
@@ -135,6 +136,7 @@ function Axes({
         y2={bottomGraphEdge}
         stroke={strokeColor}
         strokeWidth={strokeWidth}
+        id={"axes__y-axis"}
       />
       {/* y-axis ticks */}
       {[...Array(numTicks)].map((_, i) => {
@@ -148,6 +150,7 @@ function Axes({
               y2={y}
               stroke={strokeColor}
               strokeWidth={strokeWidth}
+              className={"axes__y-axis-tick"}
             />
             {/* background lines */}
             <line
@@ -158,6 +161,7 @@ function Axes({
               stroke={"#ccc"}
               strokeWidth={strokeWidth}
               strokeDasharray="2,2"
+              className="axes__y-axis-line"
             />
             {/* label */}
             <text

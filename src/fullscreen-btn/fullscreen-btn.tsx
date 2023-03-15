@@ -8,7 +8,11 @@ type FullScreenButtonProps = {
 
 export function FullScreenButton({ isFullscreen, onClick }: FullScreenButtonProps): any {
   return (
-    <button className="fullscreen-btn" onClick={onClick}>
+    <button
+      className="fullscreen-btn"
+      onClick={onClick}
+      style={{ position: "absolute", bottom: 5, right: 15, zIndex: 1 }}
+    >
       {isFullscreen ? (
         <ContractFullscreen height={20} width={20} />
       ) : (
