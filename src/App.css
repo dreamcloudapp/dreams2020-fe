@@ -48,6 +48,15 @@ button.selected {
   box-sizing: border-box;
 }
 
+/* Apparently this is a different pseudo element, go figure */
+#dreams-2020-chart::backdrop {
+  background-color: #fff;
+}
+
+#dreams-2020-chart:fullscreen {
+  background-color: #fff;
+}
+
 .dream-news-text__wrapper {
   box-sizing: border-box;
 }
