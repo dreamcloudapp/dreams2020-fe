@@ -103,6 +103,7 @@ function App({
   showAll = true,
   activeLegends,
   toggleableCharts,
+  darkMode,
 }: ChartOpts) {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
@@ -115,6 +116,10 @@ function App({
   const dreamersData = useSelector(selectDreamersData);
   const focusedComparison = useSelector(selectFocusedComparison);
   const checkedCollections = useSelector(selectCheckedCollections);
+
+  useEffect(() => {
+    console.log("Dark mode in chart: ", darkMode);
+  }, [darkMode]);
 
   // FULLSCREEN THINGS
   // Detect browser

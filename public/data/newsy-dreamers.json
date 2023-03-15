@@ -7,7 +7,7 @@
   "comparisonSets": [
     {
       "label": "Freya",
-      "color": "hsl(2, 80%, 61%)",
+      "color": "hsl(10, 80%, 61%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -2565,7 +2565,7 @@
     },
     {
       "label": "Rose",
-      "color": "hsl(28, 91%, 79%)",
+      "color": "hsl(28, 91%, 70%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -5181,7 +5181,7 @@
     },
     {
       "label": "Mary",
-      "color": "hsl(180, 35%, 68%)",
+      "color": "hsl(190, 35%, 68%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -7861,7 +7861,7 @@
     },
     {
       "label": "Tita",
-      "color": "hsl(115, 28%, 32%)",
+      "color": "hsl(115, 28%, 42%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -8389,7 +8389,7 @@
     },
     {
       "label": "Burgess",
-      "color": "hsl(203, 31%, 36%)",
+      "color": "hsl(203, 31%, 46%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -8743,7 +8743,7 @@
     },
     {
       "label": "Vera",
-      "color": "hsl(0, 0%, 17%)",
+      "color": "hsl(0, 0%, 57%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -11301,7 +11301,7 @@
     },
     {
       "label": "Edward",
-      "color": "hsl(0, 84%, 36%)",
+      "color": "hsl(340, 84%, 40%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -13279,7 +13279,7 @@
     },
     {
       "label": "Bob",
-      "color": "hsl(135, 35%, 70%)",
+      "color": "hsl(135, 35%, 67%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
