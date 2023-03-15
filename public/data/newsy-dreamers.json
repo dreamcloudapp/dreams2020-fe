@@ -2565,7 +2565,7 @@
     },
     {
       "label": "Rose",
-      "color": "hsl(28, 91%, 70%)",
+      "color": "hsl(28, 91%, 65%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -5181,7 +5181,7 @@
     },
     {
       "label": "Mary",
-      "color": "hsl(190, 35%, 68%)",
+      "color": "hsl(190, 35%, 60%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
@@ -13279,7 +13279,7 @@
     },
     {
       "label": "Bob",
-      "color": "hsl(135, 35%, 67%)",
+      "color": "hsl(135, 35%, 63%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",

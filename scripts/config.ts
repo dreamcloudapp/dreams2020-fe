@@ -31,14 +31,14 @@ export const SIMILARITY_CUTOFFS: { [key in SimilarityLevel]: number } = {
 
 export const palette = [
   "hsl(10, 80%, 61%)",
-  "hsl(28, 91%, 70%)",
-  "hsl(190, 35%, 68%)",
+  "hsl(28, 91%, 65%)",
+  "hsl(190, 35%, 60%)",
   "hsl(45, 93%, 37%)",
   "hsl(115, 28%, 42%)",
   "hsl(203, 31%, 46%)",
   "hsl(0, 0%, 57%)",
   "hsl(340, 84%, 40%)",
-  "hsl(135, 35%, 67%)",
+  "hsl(135, 35%, 63%)",
   "hsl(15, 30%, 60%)",
   "hsl(280, 30%, 60%)",
   "hsl(270, 10%, 70%)",
