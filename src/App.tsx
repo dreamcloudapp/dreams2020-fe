@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { useSelector } from "./ducks/root-reducer";
 import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
@@ -40,6 +40,9 @@ import { ChartOpts } from ".";
 import AppInner from "./app-inner";
 import { toTitleCase } from "./modules/formatters";
 import Legend from "./bubble-graph/legend";
+import { FullScreenButton } from "./fullscreen-btn/fullscreen-btn";
+import screenfull from "screenfull";
+import { detect } from "detect-browser";
 
 const padding: Padding = {
   LEFT: 50,
@@ -47,6 +50,10 @@ const padding: Padding = {
   TOP: 60,
   BOTTOM: 100,
 };
+
+const APP_ID = "dreams-2020-chart";
+export const DREAM_NEWS_TEXT_AREA_HEIGHT = 300;
+export const FULLSCREEN_BOTTOM_PADDING = 40;
 
 const graphtypes: GraphType[] = ["area", "bar", "bubble", "months", "dreamers"];
 
@@ -108,6 +115,25 @@ function App({
   const dreamersData = useSelector(selectDreamersData);
   const focusedComparison = useSelector(selectFocusedComparison);
   const checkedCollections = useSelector(selectCheckedCollections);
+
+  // FULLSCREEN THINGS
+  // Detect browser
+  // Fullscreen button is disabled for ios
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const browser = detect();
+  const isIos = browser?.os === "iOS";
+  const canFullscreen = !isIos;
+
+  const toggleFullscreen = () => {
+    const elem = document.getElementById(APP_ID);
+    const isScreenfull = screenfull.isEnabled && screenfull.isFullscreen;
+    setIsFullscreen(!isScreenfull);
+    if (elem) {
+      if (screenfull.isEnabled) {
+        screenfull.toggle(elem);
+      }
+    }
+  };
 
   // Get width and height
   const graphContainerRef = useRef<HTMLDivElement>(null);
@@ -190,24 +216,34 @@ function App({
     bubbleGraphData,
   ]);
 
-  const frameWidth = window.location.href.includes("localhost") ? 20 : 0;
-  const maxWidth = window.location.href.includes("localhost")
-    ? "calc(100% - 40px)"
-    : "90rem";
+  const frameWidth = window.location.href.includes("localhost") || isFullscreen ? 10 : 0;
+  const maxWidth =
+    window.location.href.includes("localhost") || isFullscreen
+      ? "calc(100% - 40px)"
+      : "90rem";
 
   const handleOnChange = (labelToToggle: string) => {
     dispatch(toggleCollectionChecked(labelToToggle));
   };
 
   return (
-    <div style={{ width: "100%" }} className="dreams-2020-chart">
+    <div
+      style={{ paddingBottom: canFullscreen ? FULLSCREEN_BOTTOM_PADDING : 0 }}
+      id={APP_ID}
+      className={APP_ID}
+    >
       <div
         style={{
           width: "100%",
           position: "relative",
-          height: 600,
+          height: isFullscreen
+            ? `calc(100vh - ${DREAM_NEWS_TEXT_AREA_HEIGHT + FULLSCREEN_BOTTOM_PADDING}px)`
+            : 600,
           padding: frameWidth,
           maxWidth: maxWidth,
+          margin: "0 auto",
+          // display: "flex",
+          // alignItems: "flex-end",
         }}
       >
         <div
@@ -268,13 +304,23 @@ function App({
         )}
       </div>
       {focusedComparison && (
-        <div style={{ padding: frameWidth, maxWidth: maxWidth }}>
+        <div
+          className="dream-news-text__wrapper"
+          style={{
+            padding: frameWidth,
+            maxWidth: maxWidth,
+            height: DREAM_NEWS_TEXT_AREA_HEIGHT,
+          }}
+        >
           <DreamNewsText focusedComparison={focusedComparison} />
         </div>
       )}
       {/* Legend - don't show when there's a focused comparison */}
       {!focusedComparison && showingGraph === "dreamers" && (
         <Legend handleCheck={handleOnChange} checkedCollections={checkedCollections} />
+      )}
+      {canFullscreen && (
+        <FullScreenButton isFullscreen={isFullscreen} onClick={toggleFullscreen} />
       )}
     </div>
   );

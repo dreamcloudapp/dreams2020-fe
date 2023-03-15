@@ -5,6 +5,7 @@ import { SingleTextRecord } from "@kannydennedy/dreams-2020-types";
 import useMediaQuery from "../hooks/useDimensions";
 import { prettyDate } from "../modules/time-helpers";
 import React from "react";
+import { DREAM_NEWS_TEXT_AREA_HEIGHT, FULLSCREEN_BOTTOM_PADDING } from "../App";
 
 type DreamNewsTextProps = {
   focusedComparison: VisComparison | null;
@@ -63,9 +64,10 @@ export function DreamNewsText({ focusedComparison }: DreamNewsTextProps) {
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
         columnGap: 40,
-        height: 300,
+        height: DREAM_NEWS_TEXT_AREA_HEIGHT - FULLSCREEN_BOTTOM_PADDING,
         fontFamily: "Calibri",
         fontWeight: 500,
+        paddingBottom: 20,
       }}
     >
       {isSingleComparison && (
