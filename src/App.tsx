@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { useSelector } from "./ducks/root-reducer";
-import { useTooltip, useTooltipInPortal } from "@visx/tooltip";
+import { useTooltip, TooltipWithBounds } from "@visx/tooltip";
 import {
   fetchBubbleData,
   selectComparisons,
@@ -143,15 +143,6 @@ function App({
   const { tooltipData, tooltipLeft, tooltipTop, tooltipOpen, showTooltip, hideTooltip } =
     useTooltip();
 
-  // If you don't want to use a Portal, simply replace `TooltipInPortal` below with
-  // `Tooltip` or `TooltipWithBounds` and remove `containerRef`
-  const { containerRef, TooltipInPortal } = useTooltipInPortal({
-    // use TooltipWithBounds
-    detectBounds: true,
-    // when tooltip containers are scrolled, this will correctly update the Tooltip position
-    scroll: true,
-  });
-
   const handleMouseOver = (event: any, datum: any) => {
     const coords = localPoint(event.target.ownerSVGElement, event);
     showTooltip({
@@ -251,10 +242,7 @@ function App({
           style={{ height: "100%", width: "100%", border: "1px solid #EEE" }}
         >
           <div style={{ height: "100%", width: "100%" }} ref={graphContainerRef}>
-            <div
-              style={{ height: "100%", width: "100%", position: "relative" }}
-              ref={containerRef}
-            >
+            <div style={{ height: "100%", width: "100%", position: "relative" }}>
               {showAll && (
                 <GraphTypeToggle
                   onSelectGraphType={setShowingGraph}
@@ -291,16 +279,11 @@ function App({
         </div>
 
         {tooltipOpen && (
-          <TooltipInPortal
-            // set this to random so it correctly updates with parent bounds
-            key={Math.random()}
-            top={tooltipTop}
-            left={tooltipLeft}
-          >
+          <TooltipWithBounds top={tooltipTop} left={tooltipLeft}>
             <div style={{ maxWidth: 300, fontFamily: "Lato", fontWeight: 400 }}>
-              <strong>{tooltipData}</strong>
+              {tooltipData}
             </div>
-          </TooltipInPortal>
+          </TooltipWithBounds>
         )}
       </div>
       {focusedComparison && (
