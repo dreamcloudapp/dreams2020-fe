@@ -219,7 +219,10 @@ function App({
 
   return (
     <div
-      style={{ paddingBottom: canFullscreen ? FULLSCREEN_BOTTOM_PADDING : 0 }}
+      style={{
+        paddingBottom: canFullscreen ? FULLSCREEN_BOTTOM_PADDING : 0,
+        position: "relative",
+      }}
       id={APP_ID}
       className={APP_ID}
     >
