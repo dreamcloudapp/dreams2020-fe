@@ -8388,15 +8388,15 @@
       ]
     },
     {
-      "label": "Burgess",
+      "label": "Phoenix",
       "color": "hsl(203, 31%, 46%)",
       "comparisons": [
         {
           "id": "newsy-dream-0",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Phoenix example dream",
           "score": 0.21054171,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Phoenix",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8452,9 +8452,9 @@
         {
           "id": "newsy-dream-1",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Phoenix example dream",
           "score": 0.13368602,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Phoenix",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8510,9 +8510,9 @@
         {
           "id": "newsy-dream-2",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Phoenix example dream",
           "score": 0.42371795,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Phoenix",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8568,9 +8568,9 @@
         {
           "id": "newsy-dream-3",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Phoenix example dream",
           "score": 0.09253229,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Phoenix",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
@@ -8626,9 +8626,9 @@
         {
           "id": "newsy-dream-4",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Phoenix example dream",
           "score": 0.14126964,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Phoenix",
           "reference2020": "BLM",
           "examples": [],
           "concepts": [],
@@ -8684,9 +8684,9 @@
         {
           "id": "newsy-dream-5",
           "granularity": "day",
-          "label": "Burgess example dream",
+          "label": "Phoenix example dream",
           "score": 0.08014367,
-          "dreamerAlias": "Burgess",
+          "dreamerAlias": "Phoenix",
           "reference2020": "pandemic",
           "examples": [],
           "concepts": [],
